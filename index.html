@@ -16,7 +16,6 @@
     --accent:#d4af6a;
     --accent-soft:#3a3320;
     --whatsapp:#25D366;
-    --danger:#e0555f;
     --radius:14px;
     --shadow:0 10px 30px rgba(0,0,0,.35);
     font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
@@ -43,7 +42,7 @@
   .brand small{color:var(--text-dim);font-size:.8rem;}
 
   .search-wrap{
-    flex:1 1 280px;max-width:440px;position:relative;
+    flex:1 1 320px;max-width:480px;position:relative;
   }
   .search-wrap input{
     width:100%;padding:12px 16px 12px 42px;border-radius:999px;
@@ -57,33 +56,6 @@
   }
 
   .counter{color:var(--text-dim);font-size:.85rem;white-space:nowrap;}
-
-  .header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-
-  .icon-btn{
-    width:42px;height:42px;border-radius:50%;flex-shrink:0;
-    background:var(--bg-soft);border:1px solid var(--border);color:var(--text-dim);
-    display:flex;align-items:center;justify-content:center;cursor:pointer;
-    transition:all .15s;
-  }
-  .icon-btn:hover{color:var(--text);border-color:var(--accent);}
-  .icon-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;}
-
-  .cart-btn{
-    position:relative;flex-shrink:0;
-    display:flex;align-items:center;gap:8px;
-    background:var(--whatsapp);color:#ffffff;font-weight:800;
-    border:none;border-radius:999px;padding:11px 20px 11px 18px;
-    cursor:pointer;font-size:.9rem;transition:filter .15s, transform .12s;
-  }
-  .cart-btn:hover{filter:brightness(1.08);}
-  .cart-btn:active{transform:scale(.97);}
-  .cart-badge{
-    position:absolute;top:-6px;right:-6px;background:#ffffff;color:var(--whatsapp);
-    font-size:.7rem;font-weight:800;min-width:20px;height:20px;border-radius:999px;
-    display:flex;align-items:center;justify-content:center;padding:0 5px;
-    border:2px solid var(--bg);
-  }
 
   /* ---------- FILTERS ---------- */
   .filters{
@@ -102,7 +74,7 @@
   main{max-width:1200px;margin:0 auto;padding:24px 20px 60px;}
   .grid{
     display:grid;gap:18px;
-    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
   }
   .card{
     background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
@@ -137,27 +109,14 @@
     min-height:2.3em;
   }
   .card-ean{color:var(--text-dim);font-size:.72rem;letter-spacing:.3px;}
-  .card-price{margin-top:2px;font-size:1.05rem;font-weight:700;color:var(--accent);}
-
-  .cart-controls{display:flex;flex-direction:column;gap:6px;margin-top:6px;padding-top:10px;border-top:1px solid var(--border);}
-  .cart-row-btns{display:flex;gap:6px;}
-  .cart-mini-btn{
-    flex:1;padding:8px 6px;border-radius:8px;border:1px solid var(--border);
-    background:var(--bg-soft);color:var(--text);font-size:.72rem;font-weight:700;
-    cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:4px;
-  }
-  .cart-mini-btn.add{border-color:var(--whatsapp);color:var(--whatsapp);}
-  .cart-mini-btn.add:hover{background:rgba(37,211,102,.12);}
-  .cart-mini-btn.remove:hover{border-color:var(--danger);color:var(--danger);}
-  .cart-qty-tag{text-align:center;font-size:.72rem;color:var(--text-dim);}
-  .cart-qty-tag b{color:var(--accent);}
+  .card-price{margin-top:auto;padding-top:6px;font-size:1.05rem;font-weight:700;color:var(--accent);}
 
   .empty-state{
     grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-dim);
   }
   .empty-state svg{width:52px;height:52px;stroke:var(--text-dim);margin-bottom:12px;}
 
-  /* ---------- MODAL BASE ---------- */
+  /* ---------- MODAL ---------- */
   .overlay{
     position:fixed;inset:0;background:rgba(6,7,10,.75);backdrop-filter:blur(3px);
     display:none;align-items:center;justify-content:center;z-index:100;padding:20px;
@@ -206,94 +165,10 @@
   .btn-whatsapp:hover{filter:brightness(1.08);}
   .btn-close{background:transparent;border:1px solid var(--border);color:var(--text-dim);}
   .btn-close:hover{color:var(--text);border-color:var(--accent);}
-  .btn-auto{width:auto;padding:10px 18px;}
 
   footer{
     text-align:center;color:var(--text-dim);font-size:.8rem;padding:30px 20px 40px;border-top:1px solid var(--border);
   }
-
-  /* ---------- LOGIN ---------- */
-  .login-form{display:flex;flex-direction:column;gap:14px;padding:34px 26px 28px;}
-  .login-form h2{margin:0 0 2px;font-size:1.15rem;}
-  .login-form p{margin:0 0 6px;color:var(--text-dim);font-size:.8rem;}
-  .field label{font-size:.78rem;color:var(--text-dim);display:block;margin-bottom:6px;}
-  .field input{
-    width:100%;padding:11px 14px;border-radius:8px;border:1px solid var(--border);
-    background:var(--bg-soft);color:var(--text);font-size:.92rem;
-  }
-  .field input:focus{outline:none;border-color:var(--accent);}
-  .login-error{color:var(--danger);font-size:.82rem;display:none;}
-
-  /* ---------- ADMIN PANEL ---------- */
-  .admin-body{padding:26px;}
-  .admin-body h2{margin:0 0 4px;font-size:1.2rem;}
-  .admin-note{color:var(--text-dim);font-size:.8rem;margin:0 0 22px;}
-  .admin-section-title{font-size:.9rem;margin:0 0 10px;color:var(--text);font-weight:700;}
-  .price-input{
-    width:100%;padding:9px 10px;border-radius:8px;border:1px solid var(--border);
-    background:var(--bg-soft);color:var(--text);font-size:.85rem;
-  }
-  .price-input:focus{outline:none;border-color:var(--accent);}
-  .admin-list{max-height:360px;overflow-y:auto;border:1px solid var(--border);border-radius:12px;padding:4px 14px;}
-  .admin-row{
-    display:grid;grid-template-columns:auto 1fr 110px 50px;gap:12px;align-items:center;
-    padding:12px 0;border-bottom:1px solid var(--border);
-  }
-  .admin-row:last-child{border-bottom:none;}
-  .admin-row img{width:44px;height:44px;object-fit:contain;background:#10131a;border-radius:8px;padding:4px;}
-  .admin-row .p-name{font-size:.8rem;font-weight:600;line-height:1.25;}
-  .admin-row .p-ean{font-size:.68rem;color:var(--text-dim);margin-top:2px;}
-  .admin-row.disabled-row .p-name{color:var(--text-dim);text-decoration:line-through;}
-
-  .switch{position:relative;display:inline-block;width:42px;height:24px;flex-shrink:0;}
-  .switch input{opacity:0;width:0;height:0;position:absolute;}
-  .slider-toggle{
-    position:absolute;cursor:pointer;inset:0;background:#3a3f4d;border-radius:999px;transition:.2s;
-  }
-  .slider-toggle:before{
-    content:"";position:absolute;height:18px;width:18px;left:3px;bottom:3px;
-    background:#fff;border-radius:50%;transition:.2s;
-  }
-  .switch input:checked + .slider-toggle{background:var(--whatsapp);}
-  .switch input:checked + .slider-toggle:before{transform:translateX(18px);}
-
-  .admin-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
-
-  /* ---------- CART MODAL ---------- */
-  .cart-header{padding:26px 26px 0;}
-  .cart-header h2{margin:0;font-size:1.2rem;}
-  .cart-list{display:flex;flex-direction:column;padding:10px 26px 0;}
-  .cart-item{
-    display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);
-  }
-  .cart-item img{width:56px;height:56px;object-fit:contain;background:#10131a;border-radius:10px;padding:6px;flex-shrink:0;}
-  .cart-item-info{flex:1;min-width:0;}
-  .cart-item-name{font-size:.85rem;font-weight:600;line-height:1.3;}
-  .cart-item-price{font-size:.76rem;color:var(--text-dim);margin:2px 0 8px;}
-  .qty-control{display:flex;align-items:center;gap:10px;}
-  .qty-btn{
-    width:26px;height:26px;border-radius:6px;border:1px solid var(--border);background:var(--bg-soft);
-    color:var(--text);cursor:pointer;font-weight:700;display:flex;align-items:center;justify-content:center;
-  }
-  .qty-btn:hover{border-color:var(--accent);}
-  .qty-val{min-width:18px;text-align:center;font-weight:700;font-size:.85rem;}
-  .cart-item-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0;}
-  .cart-item-total{font-weight:700;color:var(--accent);font-size:.88rem;white-space:nowrap;}
-  .cart-remove{color:var(--text-dim);cursor:pointer;font-size:1.15rem;padding:2px;background:none;border:none;}
-  .cart-remove:hover{color:var(--danger);}
-  .cart-summary{padding:20px 26px 26px;display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--border);margin-top:10px;}
-  .cart-total-row{display:flex;justify-content:space-between;align-items:center;font-size:1.15rem;font-weight:800;}
-  .cart-total-row span:last-child{color:var(--accent);}
-  .cart-empty{padding:60px 26px;text-align:center;color:var(--text-dim);}
-
-  /* ---------- TOAST ---------- */
-  .toast-wrap{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none;}
-  .toast{
-    background:#1f2430;border:1px solid var(--border);color:var(--text);
-    padding:12px 20px;border-radius:10px;font-size:.85rem;box-shadow:var(--shadow);
-    opacity:0;transform:translateY(10px);transition:all .25s ease;
-  }
-  .toast.show{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -308,16 +183,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input id="searchInput" type="text" placeholder="Buscar por nombre o código EAN..." autocomplete="off">
     </div>
-    <div class="header-actions">
-      <div class="counter" id="counter"></div>
-      <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      </button>
-      <button class="cart-btn" id="cartBtn">
-        🛒 <span>Carrito</span>
-        <span class="cart-badge" id="cartBadge">0</span>
-      </button>
-    </div>
+    <div class="counter" id="counter"></div>
   </div>
   <div class="filters" id="filters"></div>
 </header>
@@ -326,9 +192,8 @@
   <div class="grid" id="grid"></div>
 </main>
 
-<footer>Catálogo generado automáticamente a partir de la planilla de precios · Distre</footer>
+<footer>CATALOGO GENERADO POR MOST-SERVICES, contacto EZEQUIEL: 2915663645</footer>
 
-<!-- ================= MODAL PRODUCTO ================= -->
 <div class="overlay" id="overlay">
   <div class="modal" id="modal">
     <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
@@ -342,15 +207,6 @@
           <div><b>EAN:</b> <span id="modalEan"></span></div>
           <div><b>Marca:</b> <span id="modalBrand"></span></div>
         </div>
-
-        <div class="cart-controls" style="border-top:none;margin-top:0;padding-top:0;">
-          <div class="cart-row-btns">
-            <button class="cart-mini-btn add" id="modalAddCart">➕ Agregar al carrito</button>
-            <button class="cart-mini-btn remove" id="modalRemoveCart">➖ Quitar del carrito</button>
-          </div>
-          <div class="cart-qty-tag">En tu carrito: <b id="modalCartQty">0</b></div>
-        </div>
-
         <div class="modal-actions">
           <a class="btn btn-whatsapp" id="modalWhatsapp" href="#" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.24 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
@@ -363,81 +219,12 @@
   </div>
 </div>
 
-<!-- ================= MODAL LOGIN ADMIN ================= -->
-<div class="overlay" id="loginOverlay">
-  <div class="modal" style="max-width:380px;">
-    <button class="modal-close" id="loginClose" aria-label="Cerrar">✕</button>
-    <div class="login-form">
-      <h2>Panel de administración</h2>
-      <p>Ingresá tus credenciales para gestionar el catálogo.</p>
-      <div class="field">
-        <label>Usuario</label>
-        <input type="text" id="loginUser" autocomplete="username">
-      </div>
-      <div class="field">
-        <label>Contraseña</label>
-        <input type="password" id="loginPass" autocomplete="current-password">
-      </div>
-      <div class="login-error" id="loginError">Usuario o contraseña incorrectos.</div>
-      <button class="btn" style="background:var(--accent);color:#1a1a1a;" id="loginSubmit">Ingresar</button>
-    </div>
-  </div>
-</div>
-
-<!-- ================= MODAL ADMIN ================= -->
-<div class="overlay" id="adminOverlay">
-  <div class="modal" style="max-width:720px;">
-    <button class="modal-close" id="adminClose" aria-label="Cerrar">✕</button>
-    <div class="admin-body">
-      <h2>Panel de administración</h2>
-      <p class="admin-note">Los cambios se guardan en este navegador y se aplican de inmediato en el catálogo.</p>
-
-      <div style="margin-bottom:26px;">
-        <div class="admin-section-title">Número de WhatsApp (formato internacional, sin +)</div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <input type="text" id="adminWhatsapp" class="price-input" style="flex:1;min-width:180px;">
-          <button class="btn btn-whatsapp btn-auto" id="saveWhatsapp">Guardar</button>
-        </div>
-      </div>
-
-      <div class="admin-section-title">Productos (precio y visibilidad en el catálogo)</div>
-      <div class="admin-list" id="adminProductList"></div>
-
-      <div class="admin-actions">
-        <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
-        <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
-        <button class="btn btn-close btn-auto" id="logoutBtn" style="margin-left:auto;">Cerrar sesión</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================= MODAL CARRITO ================= -->
-<div class="overlay" id="cartOverlay">
-  <div class="modal" style="max-width:560px;">
-    <button class="modal-close" id="cartClose" aria-label="Cerrar">✕</button>
-    <div class="cart-header"><h2>Tu carrito</h2></div>
-    <div class="cart-list" id="cartList"></div>
-    <div class="cart-summary">
-      <div class="cart-total-row"><span>Total del pedido</span><span id="cartTotal">$ 0</span></div>
-      <a class="btn btn-whatsapp" id="sendOrderBtn" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
-      <button class="btn btn-close" id="clearCartBtn">Vaciar carrito</button>
-    </div>
-  </div>
-</div>
-
-<div class="toast-wrap" id="toastWrap"></div>
-
 <script>
 /* ======================================================
-   CONFIGURACIÓN BASE
+   CONFIGURACIÓN
    ====================================================== */
-const DEFAULT_WHATSAPP = "5492915663645"; // número por defecto (editable desde el panel admin)
-const ADMIN_USER = "admin";
-const ADMIN_PASS = "editor2026";
-// Nota: esta es una protección simple del lado del cliente, pensada para
-// evitar ediciones accidentales, no para seguridad real (el código fuente
-// es visible para cualquiera que inspeccione la página).
+// Número de WhatsApp editable (formato internacional, sin +, sin espacios)
+const WHATSAPP_NUMBER = "5492915663645";
 
 const GENERIC_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
 <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>
@@ -453,189 +240,154 @@ const GENERIC_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
 
 /* ======================================================
    DATOS DE PRODUCTOS (extraídos del CSV Padoc 15-4)
+   Imágenes: obtenidas de las fichas oficiales de fábrica
+   (boos.com.ar / tascani.com.ar) o de distribuidoras
+   autorizadas cuando la marca no publica ficha propia.
+   Cuando no se encontró imagen verificable se usa el
+   placeholder "Sin foto disponible".
    ====================================================== */
 const PRODUCTS = [
-  { ean:"7798332024292", name:"MOCHILA BOOS ELIXIR Nº14", price:52273,
+  {
+    ean:"7798332024292", name:"MOCHILA BOOS ELIXIR Nº14", price:52273,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/3-8b9395ceeb36037a7617745369212140-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332024285", name:"MOCHILA BOOS ELIXIR Nº21", price:52273,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332024285", name:"MOCHILA BOOS ELIXIR Nº21", price:52273,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/5-fcf1d85a2ef68b476e17745368776919-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332024933", name:"MOCHILA BOOS ELIXIR Nº28", price:52273,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332024933", name:"MOCHILA BOOS ELIXIR Nº28", price:52273,
     img:GENERIC_IMG,
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332022014", name:"BOOS CAJA ACQUA EDP 100 ML + DEO 150 ML", price:29942,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332022014", name:"BOOS CAJA ACQUA EDP 100 ML + DEO 150 ML", price:29942,
     img:"https://cdn.batitienda.com/baticloud/images/product_picture_9e4653f057864d309c7cdf1d01e7e158_638968163792720254_0_m.jpeg",
-    brand:"Boos", cat:"Estuche" },
-  { ean:"7798332022021", name:"BOOS CAJA BLACK EDP 100 ML + DEO 150 ML", price:29942,
+    brand:"Boos", cat:"Estuche"
+  },
+  {
+    ean:"7798332022021", name:"BOOS CAJA BLACK EDP 100 ML + DEO 150 ML", price:29942,
     img:GENERIC_IMG,
-    brand:"Boos", cat:"Estuche" },
-  { ean:"7798332022038", name:"BOOS CAJA RED EDP 100 ML + DEO 150 ML", price:29942,
+    brand:"Boos", cat:"Estuche"
+  },
+  {
+    ean:"7798332022038", name:"BOOS CAJA RED EDP 100 ML + DEO 150 ML", price:29942,
     img:"https://sandraselmaonline.com.ar/wp-content/uploads/2025/01/boos-red-for-men.jpg",
-    brand:"Boos", cat:"Estuche" },
-  { ean:"7798332024308", name:"BOOS NECESER SIGNATURE BLACK EDP 100 ML", price:37807,
+    brand:"Boos", cat:"Estuche"
+  },
+  {
+    ean:"7798332024308", name:"BOOS NECESER SIGNATURE BLACK EDP 100 ML", price:37807,
     img:GENERIC_IMG,
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332024315", name:"BOOS NECESER SIGNATURE PRIVE EDP 100 ML", price:37807,
+    brand:"Boos", cat:"Neceser"
+  },
+  {
+    ean:"7798332024315", name:"BOOS NECESER SIGNATURE PRIVE EDP 100 ML", price:37807,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/signature_prive-2-1810x2048-d0b76b276ddbf9aec417495428642944-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025251", name:"BOOS NECESER INTENSE EDP 60 ML + DEO", price:37157,
+    brand:"Boos", cat:"Neceser"
+  },
+  {
+    ean:"7798332025251", name:"BOOS NECESER INTENSE EDP 60 ML + DEO", price:37157,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intenseweb211-d3b547c91375baf59915629540743347-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025268", name:"BOOS NECESER INTENSE NIGHT EDP 60 ML + DEO", price:37157,
+    brand:"Boos", cat:"Neceser"
+  },
+  {
+    ean:"7798332025268", name:"BOOS NECESER INTENSE NIGHT EDP 60 ML + DEO", price:37157,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intensenightweb1-12cc1976391c3ad8ab15629541003273-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025275", name:"BOOS NECESER INTENSE BLUE EDP 60 ML + DEO", price:37157,
+    brand:"Boos", cat:"Neceser"
+  },
+  {
+    ean:"7798332025275", name:"BOOS NECESER INTENSE BLUE EDP 60 ML + DEO", price:37157,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/blueweb1-9a60281d6872e6e18715629541222618-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025282", name:"BOOS NECESER INTENSE ATTRACTION EDP 60 ML + DEO", price:37157,
+    brand:"Boos", cat:"Neceser"
+  },
+  {
+    ean:"7798332025282", name:"BOOS NECESER INTENSE ATTRACTION EDP 60 ML + DEO", price:37157,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/edp_boos_intense_attraction_1000x1000-1c4a87f76aa2f7754217528445712964-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025336", name:"MOCHILA BOOS INTENSE + EDP 90 ML", price:44733,
+    brand:"Boos", cat:"Neceser"
+  },
+  {
+    ean:"7798332025336", name:"MOCHILA BOOS INTENSE + EDP 90 ML", price:44733,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intenseweb211-d3b547c91375baf59915629540743347-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332025343", name:"MOCHILA BOOS INTENSE NIGHT + EDP 90 ML", price:44733,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332025343", name:"MOCHILA BOOS INTENSE NIGHT + EDP 90 ML", price:44733,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intensenightweb1-12cc1976391c3ad8ab15629541003273-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332025350", name:"MOCHILA BOOS INTENSE BLUE + EDP 90 ML", price:44733,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332025350", name:"MOCHILA BOOS INTENSE BLUE + EDP 90 ML", price:44733,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/blueweb1-9a60281d6872e6e18715629541222618-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332025367", name:"MOCHILA BOOS INTENSE ATTRACTION + EDP 90 ML", price:44733,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332025367", name:"MOCHILA BOOS INTENSE ATTRACTION + EDP 90 ML", price:44733,
     img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/edp_boos_intense_attraction_1000x1000-1c4a87f76aa2f7754217528445712964-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332024353", name:"WPC NECESER LEGEND EDP 120 ML + DEO 150 ML", price:44625,
+    brand:"Boos", cat:"Mochila"
+  },
+  {
+    ean:"7798332024353", name:"WPC NECESER LEGEND EDP 120 ML + DEO 150 ML", price:44625,
     img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332024360", name:"WPC NECESER LEGEND SPIRIT EDP 120 ML + DEO 150 ML", price:44625,
+    brand:"WPC", cat:"Neceser"
+  },
+  {
+    ean:"7798332024360", name:"WPC NECESER LEGEND SPIRIT EDP 120 ML + DEO 150 ML", price:44625,
     img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332025299", name:"WPC NECESER RED EDP 60 ML + DEO 150 ML", price:34091,
+    brand:"WPC", cat:"Neceser"
+  },
+  {
+    ean:"7798332025299", name:"WPC NECESER RED EDP 60 ML + DEO 150 ML", price:34091,
     img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332025305", name:"WPC NECESER BLACK EDP 60 ML + DEO 150 ML", price:34091,
+    brand:"WPC", cat:"Neceser"
+  },
+  {
+    ean:"7798332025305", name:"WPC NECESER BLACK EDP 60 ML + DEO 150 ML", price:34091,
     img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332025312", name:"WPC NECESER BLUE EDP 60 ML + DEO 150 ML", price:34091,
+    brand:"WPC", cat:"Neceser"
+  },
+  {
+    ean:"7798332025312", name:"WPC NECESER BLUE EDP 60 ML + DEO 150 ML", price:34091,
     img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332024384", name:"TASCANI NECESER DISTINTO EDP 100 ML", price:31818,
+    brand:"WPC", cat:"Neceser"
+  },
+  {
+    ean:"7798332024384", name:"TASCANI NECESER DISTINTO EDP 100 ML", price:31818,
     img:"https://tascani.vtexassets.com/arquivos/ids/182034-800-auto?v=638635608787130000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" },
-  { ean:"7798332024377", name:"TASCANI NECESER UNICO EDP 100 ML", price:31818,
+    brand:"Tascani", cat:"Neceser"
+  },
+  {
+    ean:"7798332024377", name:"TASCANI NECESER UNICO EDP 100 ML", price:31818,
     img:"https://tascani.vtexassets.com/arquivos/ids/182032-800-auto?v=638635605440500000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" },
-  { ean:"7798332024391", name:"TASCANI NECESER SINGULAR EDP 100 ML", price:31818,
+    brand:"Tascani", cat:"Neceser"
+  },
+  {
+    ean:"7798332024391", name:"TASCANI NECESER SINGULAR EDP 100 ML", price:31818,
     img:"https://tascani.vtexassets.com/arquivos/ids/182031-800-auto?v=638635604187700000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" },
-  { ean:"7798332024407", name:"TASCANI NECESER ACTITUD EDP 100 ML", price:31818,
+    brand:"Tascani", cat:"Neceser"
+  },
+  {
+    ean:"7798332024407", name:"TASCANI NECESER ACTITUD EDP 100 ML", price:31818,
     img:"https://tascani.vtexassets.com/arquivos/ids/182033-800-auto?v=638635606854600000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" }
+    brand:"Tascani", cat:"Neceser"
+  }
 ];
-
-/* ======================================================
-   PERSISTENCIA (localStorage con respaldo en memoria)
-   ====================================================== */
-const memoryStore = {};
-function storageGet(key){
-  try{ return localStorage.getItem(key); }
-  catch(e){ return (key in memoryStore) ? memoryStore[key] : null; }
-}
-function storageSet(key, value){
-  try{ localStorage.setItem(key, value); }
-  catch(e){ memoryStore[key] = value; }
-}
-
-/* ======================================================
-   ESTADO
-   ====================================================== */
-let overrides = {};        // { ean: { price, enabled } }
-let cart = {};              // { ean: qty }
-let whatsappNumber = DEFAULT_WHATSAPP;
-let isAdmin = false;
-let currentModalEan = null;
-
-function loadState(){
-  try{ overrides = JSON.parse(storageGet('distre_overrides')) || {}; }catch(e){ overrides = {}; }
-  try{ cart = JSON.parse(storageGet('distre_cart')) || {}; }catch(e){ cart = {}; }
-  whatsappNumber = storageGet('distre_whatsapp') || DEFAULT_WHATSAPP;
-}
-function saveOverrides(){ storageSet('distre_overrides', JSON.stringify(overrides)); }
-function saveCart(){ storageSet('distre_cart', JSON.stringify(cart)); }
-function saveWhatsappNumber(){ storageSet('distre_whatsapp', whatsappNumber); }
-
-function getEffective(p){
-  const o = overrides[p.ean] || {};
-  const price = Number.isFinite(o.price) ? o.price : p.price;
-  const enabled = typeof o.enabled === 'boolean' ? o.enabled : true;
-  return { ...p, price, enabled };
-}
 
 /* ======================================================
    UTILIDADES
    ====================================================== */
 function formatPrice(n){
-  return "$ " + Math.round(n).toLocaleString("es-AR");
+  return "$ " + n.toLocaleString("es-AR");
 }
+
 function onImgError(img){
   img.onerror = null;
   img.src = GENERIC_IMG;
 }
-function showToast(msg){
-  const wrap = document.getElementById('toastWrap');
-  const t = document.createElement('div');
-  t.className = 'toast';
-  t.textContent = msg;
-  wrap.appendChild(t);
-  requestAnimationFrame(()=>t.classList.add('show'));
-  setTimeout(()=>{
-    t.classList.remove('show');
-    setTimeout(()=>t.remove(), 300);
-  }, 2200);
-}
-function openOverlayEl(el){ el.classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeOverlayEl(el){ el.classList.remove('open'); document.body.style.overflow = ''; }
 
 /* ======================================================
-   CARRITO
-   ====================================================== */
-function cartQty(ean){ return cart[ean] || 0; }
-function cartCount(){ return Object.values(cart).reduce((a,b)=>a+b,0); }
-
-function addToCart(ean){
-  cart[ean] = (cart[ean] || 0) + 1;
-  saveCart();
-  updateCartUI();
-  showToast('Agregado al carrito (+1)');
-}
-function removeFromCart(ean){
-  if(!cart[ean] || cart[ean] <= 0){
-    showToast('Ya no está en tu carrito');
-    return;
-  }
-  cart[ean] -= 1;
-  if(cart[ean] <= 0) delete cart[ean];
-  saveCart();
-  updateCartUI();
-}
-function setCartQty(ean, qty){
-  if(qty <= 0){ delete cart[ean]; } else { cart[ean] = qty; }
-  saveCart();
-  updateCartUI();
-}
-function clearCart(){
-  cart = {};
-  saveCart();
-  updateCartUI();
-}
-function updateCartUI(){
-  document.getElementById('cartBadge').textContent = cartCount();
-  renderGrid();
-  if(document.getElementById('modalAddCart')) updateModalCartQty();
-  if(cartOverlay.classList.contains('open')) renderCartModal();
-}
-
-/* ======================================================
-   RENDER CATÁLOGO
+   RENDER
    ====================================================== */
 const grid = document.getElementById('grid');
 const counter = document.getElementById('counter');
@@ -645,9 +397,7 @@ const filtersEl = document.getElementById('filters');
 let activeCat = "Todos";
 
 function buildFilters(){
-  const visible = PRODUCTS.map(getEffective).filter(p=>p.enabled);
-  const cats = ["Todos", ...new Set(visible.map(p => p.cat))];
-  if(!cats.includes(activeCat)) activeCat = "Todos";
+  const cats = ["Todos", ...new Set(PRODUCTS.map(p => p.cat))];
   filtersEl.innerHTML = cats.map(c =>
     `<div class="chip ${c === activeCat ? 'active' : ''}" data-cat="${c}">${c}</div>`
   ).join('');
@@ -662,8 +412,7 @@ function buildFilters(){
 
 function renderGrid(){
   const q = searchInput.value.trim().toLowerCase();
-  const visible = PRODUCTS.map(getEffective).filter(p => p.enabled);
-  const filtered = visible.filter(p => {
+  const filtered = PRODUCTS.filter(p => {
     const matchesQuery = !q || p.name.toLowerCase().includes(q) || p.ean.includes(q);
     const matchesCat = activeCat === "Todos" || p.cat === activeCat;
     return matchesQuery && matchesCat;
@@ -680,9 +429,7 @@ function renderGrid(){
     return;
   }
 
-  grid.innerHTML = filtered.map(p => {
-    const qty = cartQty(p.ean);
-    return `
+  grid.innerHTML = filtered.map((p, i) => `
     <div class="card" data-ean="${p.ean}">
       <div class="card-img">
         <span class="badge">${p.cat}</span>
@@ -692,36 +439,17 @@ function renderGrid(){
         <div class="card-name">${p.name}</div>
         <div class="card-ean">EAN ${p.ean}</div>
         <div class="card-price">${formatPrice(p.price)}</div>
-        <div class="cart-controls">
-          <div class="cart-row-btns">
-            <button class="cart-mini-btn add" data-action="add" data-ean="${p.ean}">➕ Agregar</button>
-            <button class="cart-mini-btn remove" data-action="remove" data-ean="${p.ean}">➖ Quitar</button>
-          </div>
-          <div class="cart-qty-tag">En tu carrito: <b>${qty}</b></div>
-        </div>
       </div>
     </div>
-  `;
-  }).join('');
+  `).join('');
 
   grid.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', (e) => {
-      if(e.target.closest('.cart-controls')) return;
-      openModal(card.dataset.ean);
-    });
-  });
-  grid.querySelectorAll('.cart-mini-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const ean = btn.dataset.ean;
-      if(btn.dataset.action === 'add') addToCart(ean);
-      else removeFromCart(ean);
-    });
+    card.addEventListener('click', () => openModal(card.dataset.ean));
   });
 }
 
 /* ======================================================
-   MODAL PRODUCTO
+   MODAL
    ====================================================== */
 const overlay = document.getElementById('overlay');
 const modalImg = document.getElementById('modalImg');
@@ -733,11 +461,8 @@ const modalCat = document.getElementById('modalCat');
 const modalWhatsapp = document.getElementById('modalWhatsapp');
 
 function openModal(ean){
-  const base = PRODUCTS.find(x => x.ean === ean);
-  if(!base) return;
-  const p = getEffective(base);
-  if(!p.enabled) return;
-  currentModalEan = ean;
+  const p = PRODUCTS.find(x => x.ean === ean);
+  if(!p) return;
 
   modalImg.src = p.img;
   modalImg.alt = p.name;
@@ -749,261 +474,32 @@ function openModal(ean){
   modalCat.textContent = p.cat;
 
   const msg = encodeURIComponent(`Hola, quiero consultar por: ${p.name} (EAN ${p.ean}) - ${formatPrice(p.price)}`);
-  modalWhatsapp.href = `https://wa.me/${whatsappNumber}?text=${msg}`;
+  modalWhatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
 
-  updateModalCartQty();
-  openOverlayEl(overlay);
-}
-function updateModalCartQty(){
-  const el = document.getElementById('modalCartQty');
-  if(el) el.textContent = cartQty(currentModalEan);
-}
-document.getElementById('modalAddCart').addEventListener('click', () => {
-  if(currentModalEan) addToCart(currentModalEan);
-});
-document.getElementById('modalRemoveCart').addEventListener('click', () => {
-  if(currentModalEan) removeFromCart(currentModalEan);
-});
-document.getElementById('modalClose').addEventListener('click', () => closeOverlayEl(overlay));
-document.getElementById('modalCloseBtn').addEventListener('click', () => closeOverlayEl(overlay));
-
-/* ======================================================
-   LOGIN ADMIN
-   ====================================================== */
-const loginOverlay = document.getElementById('loginOverlay');
-const adminOverlay = document.getElementById('adminOverlay');
-const cartOverlay = document.getElementById('cartOverlay');
-
-document.getElementById('adminIconBtn').addEventListener('click', () => {
-  if(isAdmin){ openAdminPanel(); }
-  else{
-    openOverlayEl(loginOverlay);
-    document.getElementById('loginUser').focus();
-  }
-});
-document.getElementById('loginClose').addEventListener('click', () => closeOverlayEl(loginOverlay));
-
-function attemptLogin(){
-  const u = document.getElementById('loginUser').value.trim();
-  const p = document.getElementById('loginPass').value;
-  const errorEl = document.getElementById('loginError');
-  if(u === ADMIN_USER && p === ADMIN_PASS){
-    isAdmin = true;
-    errorEl.style.display = 'none';
-    document.getElementById('loginUser').value = '';
-    document.getElementById('loginPass').value = '';
-    closeOverlayEl(loginOverlay);
-    openAdminPanel();
-  }else{
-    errorEl.style.display = 'block';
-  }
-}
-document.getElementById('loginSubmit').addEventListener('click', attemptLogin);
-document.getElementById('loginPass').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
-document.getElementById('loginUser').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
-
-/* ======================================================
-   PANEL ADMIN
-   ====================================================== */
-function openAdminPanel(){
-  document.getElementById('adminWhatsapp').value = whatsappNumber;
-  renderAdminList();
-  openOverlayEl(adminOverlay);
-}
-document.getElementById('adminClose').addEventListener('click', () => closeOverlayEl(adminOverlay));
-document.getElementById('logoutBtn').addEventListener('click', () => {
-  isAdmin = false;
-  closeOverlayEl(adminOverlay);
-  showToast('Sesión cerrada');
-});
-
-function renderAdminList(){
-  const list = document.getElementById('adminProductList');
-  list.innerHTML = PRODUCTS.map(p => {
-    const eff = getEffective(p);
-    return `
-    <div class="admin-row ${eff.enabled ? '' : 'disabled-row'}">
-      <img src="${p.img}" alt="" onerror="onImgError(this)">
-      <div>
-        <div class="p-name">${p.name}</div>
-        <div class="p-ean">EAN ${p.ean}</div>
-      </div>
-      <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${eff.price}" min="0" step="1">
-      <label class="switch">
-        <input type="checkbox" class="admin-enabled" data-ean="${p.ean}" ${eff.enabled ? 'checked' : ''}>
-        <span class="slider-toggle"></span>
-      </label>
-    </div>`;
-  }).join('');
-
-  list.querySelectorAll('.admin-price').forEach(inp => {
-    inp.addEventListener('change', () => {
-      const ean = inp.dataset.ean;
-      const val = parseInt(inp.value, 10);
-      if(!overrides[ean]) overrides[ean] = {};
-      overrides[ean].price = Number.isFinite(val) ? val : undefined;
-      saveOverrides();
-      renderGrid();
-      showToast('Precio actualizado');
-    });
-  });
-  list.querySelectorAll('.admin-enabled').forEach(chk => {
-    chk.addEventListener('change', () => {
-      const ean = chk.dataset.ean;
-      if(!overrides[ean]) overrides[ean] = {};
-      overrides[ean].enabled = chk.checked;
-      saveOverrides();
-      chk.closest('.admin-row').classList.toggle('disabled-row', !chk.checked);
-      buildFilters();
-      renderGrid();
-    });
-  });
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 
-document.getElementById('saveWhatsapp').addEventListener('click', () => {
-  const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
-  if(val.length < 8){ showToast('Número inválido'); return; }
-  whatsappNumber = val;
-  saveWhatsappNumber();
-  showToast('Número de WhatsApp actualizado');
-});
-
-document.getElementById('resetConfig').addEventListener('click', () => {
-  if(!confirm('¿Restablecer precios, productos habilitados y WhatsApp a los valores originales?')) return;
-  overrides = {};
-  whatsappNumber = DEFAULT_WHATSAPP;
-  saveOverrides();
-  saveWhatsappNumber();
-  document.getElementById('adminWhatsapp').value = whatsappNumber;
-  renderAdminList();
-  buildFilters();
-  renderGrid();
-  showToast('Valores restablecidos');
-});
-
-document.getElementById('exportConfig').addEventListener('click', () => {
-  const data = { overrides, whatsapp: whatsappNumber, exportedAt: new Date().toISOString() };
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url; a.download = 'distre-config.json';
-  a.click();
-  URL.revokeObjectURL(url);
-  showToast('Configuración exportada');
-});
-
-/* ======================================================
-   MODAL CARRITO
-   ====================================================== */
-document.getElementById('cartBtn').addEventListener('click', () => {
-  renderCartModal();
-  openOverlayEl(cartOverlay);
-});
-document.getElementById('cartClose').addEventListener('click', () => closeOverlayEl(cartOverlay));
-document.getElementById('clearCartBtn').addEventListener('click', () => {
-  if(Object.keys(cart).length === 0) return;
-  if(!confirm('¿Vaciar el carrito?')) return;
-  clearCart();
-  renderCartModal();
-});
-document.getElementById('sendOrderBtn').addEventListener('click', (e) => {
-  if(Object.keys(cart).length === 0){ e.preventDefault(); return; }
-  showToast('Abriendo WhatsApp...');
-});
-
-function buildOrderMessage(entries, total){
-  const lines = ['Pedido - Catálogo Distre', ''];
-  entries.forEach(([ean, qty]) => {
-    const base = PRODUCTS.find(p => p.ean === ean);
-    if(!base) return;
-    const eff = getEffective(base);
-    const lineTotal = eff.price * qty;
-    lines.push(`${qty}, ${eff.name}, ${formatPrice(lineTotal)}`);
-  });
-  lines.push('');
-  lines.push(`TOTAL DEL PEDIDO ${formatPrice(total)}`);
-  return lines.join('\n');
+function closeModal(){
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
-function renderCartModal(){
-  const list = document.getElementById('cartList');
-  const sendBtn = document.getElementById('sendOrderBtn');
-  const entries = Object.entries(cart).filter(([ean, qty]) => qty > 0);
-
-  if(entries.length === 0){
-    list.innerHTML = `<div class="cart-empty">Tu carrito está vacío.</div>`;
-    document.getElementById('cartTotal').textContent = formatPrice(0);
-    sendBtn.style.pointerEvents = 'none';
-    sendBtn.style.opacity = '.5';
-    return;
-  }
-  sendBtn.style.pointerEvents = '';
-  sendBtn.style.opacity = '';
-
-  let total = 0;
-  list.innerHTML = entries.map(([ean, qty]) => {
-    const base = PRODUCTS.find(p => p.ean === ean);
-    if(!base) return '';
-    const eff = getEffective(base);
-    const lineTotal = eff.price * qty;
-    total += lineTotal;
-    return `
-    <div class="cart-item" data-ean="${ean}">
-      <img src="${eff.img}" alt="" onerror="onImgError(this)">
-      <div class="cart-item-info">
-        <div class="cart-item-name">${eff.name}</div>
-        <div class="cart-item-price">${formatPrice(eff.price)} c/u</div>
-        <div class="qty-control">
-          <button class="qty-btn" data-act="dec" data-ean="${ean}">−</button>
-          <span class="qty-val">${qty}</span>
-          <button class="qty-btn" data-act="inc" data-ean="${ean}">+</button>
-        </div>
-      </div>
-      <div class="cart-item-right">
-        <div class="cart-item-total">${formatPrice(lineTotal)}</div>
-        <button class="cart-remove" data-act="del" data-ean="${ean}" title="Quitar">🗑</button>
-      </div>
-    </div>`;
-  }).join('');
-
-  document.getElementById('cartTotal').textContent = formatPrice(total);
-
-  list.querySelectorAll('[data-act]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const ean = btn.dataset.ean;
-      const act = btn.dataset.act;
-      if(act === 'inc') addToCart(ean);
-      else if(act === 'dec') removeFromCart(ean);
-      else if(act === 'del') setCartQty(ean, 0);
-      renderCartModal();
-    });
-  });
-
-  sendBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildOrderMessage(entries, total))}`;
-}
-
-/* ======================================================
-   CIERRE GENÉRICO DE MODALES (click afuera / ESC)
-   ====================================================== */
-[overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
-  ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => {
+  if(e.target === overlay) closeModal();
 });
 document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape'){
-    [overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
-      if(ov.classList.contains('open')) closeOverlayEl(ov);
-    });
-  }
+  if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
 });
 
 /* ======================================================
    INIT
    ====================================================== */
 searchInput.addEventListener('input', renderGrid);
-loadState();
 buildFilters();
 renderGrid();
-document.getElementById('cartBadge').textContent = cartCount();
 </script>
 </body>
 </html>
