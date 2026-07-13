@@ -233,12 +233,11 @@
   .login-form h2{margin:0 0 2px;font-size:1.15rem;}
   .login-form p{margin:0 0 6px;color:var(--text-dim);font-size:.8rem;}
   .field label{font-size:.78rem;color:var(--text-dim);display:block;margin-bottom:6px;}
-  .field input, .field select, .field textarea{
+  .field input{
     width:100%;padding:11px 14px;border-radius:8px;border:1px solid var(--border);
-    background:var(--bg-soft);color:var(--text);font-size:.92rem;font-family:inherit;
+    background:var(--bg-soft);color:var(--text);font-size:.92rem;
   }
-  .field textarea{resize:vertical;min-height:60px;}
-  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--accent);}
+  .field input:focus{outline:none;border-color:var(--accent);}
   .login-error{color:var(--danger);font-size:.82rem;display:none;}
 
   /* ---------- ADMIN PANEL ---------- */
@@ -275,19 +274,6 @@
   .switch input:checked + .slider-toggle:before{transform:translateX(18px);}
 
   .admin-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
-
-  /* ---------- FORM STYLES ---------- */
-  .form-group{margin-bottom:16px;}
-  .form-group label{display:block;font-size:.78rem;color:var(--text-dim);margin-bottom:6px;font-weight:600;}
-  .form-group input, .form-group select, .form-group textarea{width:100%;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media(max-width:600px){.form-row{grid-template-columns:1fr;}}
-  .img-preview{
-    width:100px;height:100px;border:1px solid var(--border);border-radius:8px;
-    background:#10131a;display:flex;align-items:center;justify-content:center;overflow:hidden;
-    margin-top:8px;
-  }
-  .img-preview img{max-width:100%;max-height:100%;object-fit:contain;}
 
   /* ---------- CART MODAL ---------- */
   .cart-header{padding:26px 26px 0;}
@@ -341,7 +327,7 @@
     <div class="header-actions">
       <div class="counter" id="counter"></div>
       <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21M9.59 9a2 2 0 1 0-3.83 0 2 2 0 0 0 3.83 0z"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
       </button>
       <button class="cart-btn" id="cartBtn">
         🛒 <span>Carrito</span>
@@ -352,7 +338,6 @@
   <div class="tabs-row">
     <button class="tab-btn active" data-tab="distre" id="tabBtnDistre">Distre</button>
     <button class="tab-btn" data-tab="algabo" id="tabBtnAlgabo">ALGABO</button>
-    <button class="tab-btn" data-tab="saphirus" id="tabBtnSaphirus">SAPHIRUS</button>
   </div>
   <div class="filters" id="filters"></div>
 </header>
@@ -361,7 +346,7 @@
   <div class="grid" id="grid"></div>
 </main>
 
-<footer>Catálogo generado por MOST SERVICES - Contacto Ezequiel: 291 5663645 · Distre</footer>
+<footer>Catálogo generado por MOST-Services - Contacto: Ezequiel 2915663645</footer>
 
 <!-- ================= MODAL PRODUCTO ================= -->
 <div class="overlay" id="overlay">
@@ -388,7 +373,7 @@
 
         <div class="modal-actions">
           <a class="btn btn-whatsapp" id="modalWhatsapp" href="#" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.88 9.88 0 0 0 12.04 2m0 18.26h-.01a8.2 8.2 0 0 1-4.19-1.08l-.3-.18-3.1.81.83-3.04-.2-.31a8.2 8.2 0 0 1 1.24-13.5 8.2 8.2 0 0 1 11.6 7.35 8.2 8.2 0 0 1-8.23 8.2m4.5-6.16c-.25-.12-1.47-.73-1.7-.81-.23-.09-.4-.14-.56.14-.17.28-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.26-.41.09-.17.05-.31-.02-.43-.07-.12-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42-.15 0-.31 0-.48 0-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02 0 1.2.87 2.34 1 2.5.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.24 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
             Consultar por WhatsApp
           </a>
           <button class="btn btn-close" id="modalCloseBtn">Cerrar</button>
@@ -439,107 +424,14 @@
       <div class="admin-tabs">
         <button class="tab-btn active" data-tab="distre" id="adminTabBtnDistre">Distre</button>
         <button class="tab-btn" data-tab="algabo" id="adminTabBtnAlgabo">ALGABO</button>
-        <button class="tab-btn" data-tab="saphirus" id="adminTabBtnSaphirus">SAPHIRUS</button>
       </div>
       <div class="admin-list" id="adminProductList"></div>
 
       <div class="admin-actions">
-        <button class="btn btn-whatsapp btn-auto" id="addProductBtn" style="margin-right:auto;">➕ Agregar producto</button>
         <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
         <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
-        <button class="btn btn-close btn-auto" id="logoutBtn">Cerrar sesión</button>
+        <button class="btn btn-close btn-auto" id="logoutBtn" style="margin-left:auto;">Cerrar sesión</button>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================= MODAL AGREGAR PRODUCTO ================= -->
-<div class="overlay" id="addProductOverlay">
-  <div class="modal" style="max-width:600px;">
-    <button class="modal-close" id="addProductClose" aria-label="Cerrar">✕</button>
-    <div class="admin-body">
-      <h2>Agregar nuevo producto</h2>
-      <p class="admin-note">Completa todos los campos obligatorios para agregar el producto.</p>
-
-      <form id="addProductForm" style="display:flex;flex-direction:column;gap:16px;">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Código EAN *</label>
-            <input type="text" id="formEan" placeholder="7798332024292" required>
-          </div>
-          <div class="form-group">
-            <label>Precio *</label>
-            <input type="number" id="formPrice" placeholder="0" min="0" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Descripción/Nombre *</label>
-          <input type="text" id="formName" placeholder="Nombre del producto" required>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Marca</label>
-            <input type="text" id="formBrand" placeholder="Marca o fabricante">
-          </div>
-          <div class="form-group">
-            <label>Categoría *</label>
-            <select id="formCategory" required>
-              <option value="">Seleccionar...</option>
-              <option value="Mochila">Mochila</option>
-              <option value="Estuche">Estuche</option>
-              <option value="Neceser">Neceser</option>
-              <option value="Go To Be">Go To Be</option>
-              <option value="Polo">Polo</option>
-              <option value="Baby">Baby</option>
-              <option value="Kids">Kids</option>
-              <option value="Hombre">Hombre</option>
-              <option value="Skin Care">Skin Care</option>
-              <option value="Talcos y Pies">Talcos y Pies</option>
-              <option value="Cuidado Bucal">Cuidado Bucal</option>
-              <option value="Jabones">Jabones</option>
-              <option value="Higiene y Desinfección">Higiene y Desinfección</option>
-              <option value="Quitaesmaltes">Quitaesmaltes</option>
-              <option value="Cuidado Capilar">Cuidado Capilar</option>
-              <option value="Cuidado Personal">Cuidado Personal</option>
-              <option value="Colonias">Colonias</option>
-              <option value="Repelentes">Repelentes</option>
-              <option value="Limpieza y Hogar">Limpieza y Hogar</option>
-              <option value="Sally">Sally</option>
-              <option value="Licencias">Licencias</option>
-              <option value="Cuidado Femenino">Cuidado Femenino</option>
-              <option value="Mascotas">Mascotas</option>
-              <option value="Cocoa Beach">Cocoa Beach</option>
-              <option value="Otros">Otros</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Selecciona la pestaña *</label>
-          <select id="formTab" required>
-            <option value="">Seleccionar...</option>
-            <option value="distre">Distre</option>
-            <option value="algabo">ALGABO</option>
-            <option value="saphirus">SAPHIRUS</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Imagen (URL o archivo)</label>
-          <div style="display:flex;gap:10px;margin-bottom:10px;">
-            <input type="text" id="formImageUrl" placeholder="https://ejemplo.com/imagen.webp" style="flex:1;">
-          </div>
-          <input type="file" id="formImageFile" accept="image/*">
-          <div class="img-preview" id="imgPreview"></div>
-        </div>
-
-        <div style="display:flex;gap:10px;margin-top:20px;">
-          <button type="submit" class="btn btn-whatsapp" style="flex:1;">✓ Agregar producto</button>
-          <button type="button" class="btn btn-close" id="addProductCancelBtn" style="flex:1;">Cancelar</button>
-        </div>
-      </form>
     </div>
   </div>
 </div>
@@ -560,6 +452,990 @@
 
 <div class="toast-wrap" id="toastWrap"></div>
 
-<script src="script.js"></script>
+<script>
+/* ======================================================
+   CONFIGURACIÓN BASE
+   ====================================================== */
+const DEFAULT_WHATSAPP = "5492915663645"; // número por defecto (editable desde el panel admin)
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "editor2026";
+// Nota: esta es una protección simple del lado del cliente, pensada para
+// evitar ediciones accidentales, no para seguridad real (el código fuente
+// es visible para cualquiera que inspeccione la página).
+
+const GENERIC_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
+<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>
+  <rect width='400' height='400' fill='#10131a'/>
+  <g fill='none' stroke='#3a3f4d' stroke-width='2'>
+    <rect x='110' y='90' width='180' height='220' rx='14'/>
+    <circle cx='200' cy='170' r='34'/>
+    <path d='M150 270 L250 270'/>
+    <path d='M160 250 L240 250'/>
+  </g>
+  <text x='200' y='340' font-family='Segoe UI, sans-serif' font-size='17' fill='#6b7180' text-anchor='middle'>Sin foto disponible</text>
+</svg>`);
+
+/* ======================================================
+   DATOS DE PRODUCTOS (extraídos del CSV Padoc 15-4)
+   ====================================================== */
+const PRODUCTS_DISTRE = [
+  { ean:"7798332024292", name:"MOCHILA BOOS ELIXIR Nº14", price:52273,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/3-8b9395ceeb36037a7617745369212140-1024-1024.webp",
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332024285", name:"MOCHILA BOOS ELIXIR Nº21", price:52273,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/5-fcf1d85a2ef68b476e17745368776919-1024-1024.webp",
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332024933", name:"MOCHILA BOOS ELIXIR Nº28", price:52273,
+    img:GENERIC_IMG,
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332022014", name:"BOOS CAJA ACQUA EDP 100 ML + DEO 150 ML", price:29942,
+    img:"https://cdn.batitienda.com/baticloud/images/product_picture_9e4653f057864d309c7cdf1d01e7e158_638968163792720254_0_m.jpeg",
+    brand:"Boos", cat:"Estuche" },
+  { ean:"7798332022021", name:"BOOS CAJA BLACK EDP 100 ML + DEO 150 ML", price:29942,
+    img:GENERIC_IMG,
+    brand:"Boos", cat:"Estuche" },
+  { ean:"7798332022038", name:"BOOS CAJA RED EDP 100 ML + DEO 150 ML", price:29942,
+    img:"https://sandraselmaonline.com.ar/wp-content/uploads/2025/01/boos-red-for-men.jpg",
+    brand:"Boos", cat:"Estuche" },
+  { ean:"7798332024308", name:"BOOS NECESER SIGNATURE BLACK EDP 100 ML", price:37807,
+    img:GENERIC_IMG,
+    brand:"Boos", cat:"Neceser" },
+  { ean:"7798332024315", name:"BOOS NECESER SIGNATURE PRIVE EDP 100 ML", price:37807,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/signature_prive-2-1810x2048-d0b76b276ddbf9aec417495428642944-1024-1024.webp",
+    brand:"Boos", cat:"Neceser" },
+  { ean:"7798332025251", name:"BOOS NECESER INTENSE EDP 60 ML + DEO", price:37157,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intenseweb211-d3b547c91375baf59915629540743347-1024-1024.webp",
+    brand:"Boos", cat:"Neceser" },
+  { ean:"7798332025268", name:"BOOS NECESER INTENSE NIGHT EDP 60 ML + DEO", price:37157,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intensenightweb1-12cc1976391c3ad8ab15629541003273-1024-1024.webp",
+    brand:"Boos", cat:"Neceser" },
+  { ean:"7798332025275", name:"BOOS NECESER INTENSE BLUE EDP 60 ML + DEO", price:37157,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/blueweb1-9a60281d6872e6e18715629541222618-1024-1024.webp",
+    brand:"Boos", cat:"Neceser" },
+  { ean:"7798332025282", name:"BOOS NECESER INTENSE ATTRACTION EDP 60 ML + DEO", price:37157,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/edp_boos_intense_attraction_1000x1000-1c4a87f76aa2f7754217528445712964-1024-1024.webp",
+    brand:"Boos", cat:"Neceser" },
+  { ean:"7798332025336", name:"MOCHILA BOOS INTENSE + EDP 90 ML", price:44733,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intenseweb211-d3b547c91375baf59915629540743347-1024-1024.webp",
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332025343", name:"MOCHILA BOOS INTENSE NIGHT + EDP 90 ML", price:44733,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intensenightweb1-12cc1976391c3ad8ab15629541003273-1024-1024.webp",
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332025350", name:"MOCHILA BOOS INTENSE BLUE + EDP 90 ML", price:44733,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/blueweb1-9a60281d6872e6e18715629541222618-1024-1024.webp",
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332025367", name:"MOCHILA BOOS INTENSE ATTRACTION + EDP 90 ML", price:44733,
+    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/edp_boos_intense_attraction_1000x1000-1c4a87f76aa2f7754217528445712964-1024-1024.webp",
+    brand:"Boos", cat:"Mochila" },
+  { ean:"7798332024353", name:"WPC NECESER LEGEND EDP 120 ML + DEO 150 ML", price:44625,
+    img:GENERIC_IMG,
+    brand:"WPC", cat:"Neceser" },
+  { ean:"7798332024360", name:"WPC NECESER LEGEND SPIRIT EDP 120 ML + DEO 150 ML", price:44625,
+    img:GENERIC_IMG,
+    brand:"WPC", cat:"Neceser" },
+  { ean:"7798332025299", name:"WPC NECESER RED EDP 60 ML + DEO 150 ML", price:34091,
+    img:GENERIC_IMG,
+    brand:"WPC", cat:"Neceser" },
+  { ean:"7798332025305", name:"WPC NECESER BLACK EDP 60 ML + DEO 150 ML", price:34091,
+    img:GENERIC_IMG,
+    brand:"WPC", cat:"Neceser" },
+  { ean:"7798332025312", name:"WPC NECESER BLUE EDP 60 ML + DEO 150 ML", price:34091,
+    img:GENERIC_IMG,
+    brand:"WPC", cat:"Neceser" },
+  { ean:"7798332024384", name:"TASCANI NECESER DISTINTO EDP 100 ML", price:31818,
+    img:"https://tascani.vtexassets.com/arquivos/ids/182034-800-auto?v=638635608787130000&width=800&height=auto&aspect=true",
+    brand:"Tascani", cat:"Neceser" },
+  { ean:"7798332024377", name:"TASCANI NECESER UNICO EDP 100 ML", price:31818,
+    img:"https://tascani.vtexassets.com/arquivos/ids/182032-800-auto?v=638635605440500000&width=800&height=auto&aspect=true",
+    brand:"Tascani", cat:"Neceser" },
+  { ean:"7798332024391", name:"TASCANI NECESER SINGULAR EDP 100 ML", price:31818,
+    img:"https://tascani.vtexassets.com/arquivos/ids/182031-800-auto?v=638635604187700000&width=800&height=auto&aspect=true",
+    brand:"Tascani", cat:"Neceser" },
+  { ean:"7798332024407", name:"TASCANI NECESER ACTITUD EDP 100 ML", price:31818,
+    img:"https://tascani.vtexassets.com/arquivos/ids/182033-800-auto?v=638635606854600000&width=800&height=auto&aspect=true",
+    brand:"Tascani", cat:"Neceser" }
+];
+
+/* ======================================================
+   PRODUCTOS ALGABO (pestaña 2) — extraídos del listado
+   CODESCAN-DISTRE. Imágenes reales confirmadas contra
+   tienda.algabo.com (verificadas por EAN); el resto usa
+   el placeholder "Sin foto disponible" — ver nota al
+   final de la conversación sobre cómo completarlas.
+   ====================================================== */
+const PRODUCTS_ALGABO = [
+  { ean:"7791274201868", name:"GO TO BE BODY MIST CHILL NOT BORING 250", price:12100, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201851", name:"GO TO BE BODY MIST GLOW IN PROGRESS 250", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201875", name:"GO TO BE BODY MIST THE PLOT TWIST 250", price:12100, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201936", name:"GO TO BE BODY BUTTER CREAM CHILL NOT BORING 240", price:10000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201929", name:"GO TO BE BODY BUTTER CREAM GLOW IN PROGRESS 240", price:10000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201943", name:"GO TO BE BODY BUTTER THE PLOT TWIST 240", price:10000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201912", name:"GO TO BE BODY CREAM ILUMINADORA GLOW 240", price:10000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201899", name:"GO TO BE BODY CREAM CHILL NOT BORING 340", price:6400, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201882", name:"GO TO BE BODY CREAM GLOW IN PROGRESS 340", price:6400, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201905", name:"GO TO BE BODY CREAM THE PLOT TWIST 340", price:6400, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201967", name:"GO TO BE SET CHILL NOT BORING", price:25000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274201950", name:"GO TO BE SET THE PLOT TWIST", price:25000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274202377", name:"GO TO BE SET GLOW IN PROGRESS", price:25000, img:GENERIC_IMG, brand:"ALGABO", cat:"Go To Be" },
+  { ean:"7791274202049", name:"POLO DEO FEM BLOOM AURA 127", price:3900, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202032", name:"POLO DEO FEM VELVET 127", price:3900, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202018", name:"POLO DEO MASC ELIXIR 150", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202025", name:"POLO DEO MASC OCEAN WOOD 150", price:4300, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274201981", name:"POLO PERFUME FEM BLOOM AURA 100", price:21500, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274201974", name:"POLO PERFUME FEM VELVET 100", price:21500, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274201998", name:"POLO PERFUME MASC ELIXIR 100", price:21500, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202001", name:"POLO PERFUME MASC OCEAN WOOD 100", price:21500, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202063", name:"POLO SET EDP 50 + DEO VELVET", price:24100, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202056", name:"POLO SET EDP 50 + DEO ELIXIR", price:24100, img:GENERIC_IMG, brand:"ALGABO", cat:"Polo" },
+  { ean:"7791274202261", name:"ALGABO SPRAY FIJADOR FUERT 180", price:4000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274202254", name:"ALGABO SPRAY FIJ EXTRA FUE 180", price:4000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274202230", name:"ALGABO SPRAY FIJADOR FUERT 390", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274202247", name:"ALGABO SPRAY FIJ EXTRA FUE 390", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274001567", name:"BABY ACEITE 200", price:4100, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200908", name:"BABY ACEITE 355", price:5600, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274000119", name:"BABY COLONIA DULCES MIMOS 125", price:3000, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-colonia-x200-ml-dulces-mimos-77912741922341-e9ebd8bc001c214abc16565165956426-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274192234", name:"BABY COLONIA DULCES MIMOS 200", price:null, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-colonia-x200-ml-dulces-mimos-77912741922341-e9ebd8bc001c214abc16565165956426-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274192241", name:"BABY COLONIA SUAVE BRISA 200", price:3600, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274196546", name:"BABY FECULA TALQUERA 200", price:4000, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274198557", name:"BABY FECULA DP 200", price:3500, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200663", name:"BABY OLEO CALCAREO 500", price:4900, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200649", name:"BABY OLEO CALCAREO DP 500", price:4400, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200656", name:"BABY OLEO CALCAREO EP 900", price:7200, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200144", name:"BABY SET COLONIA 125 + SH 200", price:8100, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200670", name:"BABY HISOPOS BOX 30+6 GRATIS", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274201011", name:"BABY HISOPOS PAPEL ECO BOX 24", price:1700, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274202070", name:"BABY JABON DE GLICERINA 80", price:1000, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274197307", name:"BABY JABÓN BARRA ESTUCHE 80", price:1200, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274198434", name:"BABY JABON BARRA FPK 80", price:1000, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200151", name:"BABY SHAMPOO MANZANILLA 200", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274192319", name:"BABY SHAMPOO EXTRA SUAVE 200", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274196508", name:"BABY SHAMPOO MANZANILLA 444", price:4100, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274192326", name:"BABY SHAMPOO EXTRA SUAVE 444", price:4100, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200687", name:"BABY ACO EXTRA SUAVE 444", price:4100, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200694", name:"BABY ACO MANZANILLA 444", price:4100, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274000393", name:"BABY SHAMPOO MANZANILLA 755", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274000386", name:"BABY SHAMPOO EXTRA SUAVE 755", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274198243", name:"BABY JAB LÍQ C/VÁLVULA 200", price:3300, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200700", name:"BABY JAB LIQ DP 200", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274197017", name:"BABY WIPES 20", price:1200, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274197024", name:"BABY WIPES 48", price:2600, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274198786", name:"BABY WIPES 3 X 48 15% OFF", price:6700, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274197031", name:"BABY WIPES 80", price:3500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274199387", name:"BABY WIPES 100 C/TAPA", price:4700, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200533", name:"BABY NATURAL WIPES 48", price:3200, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274200540", name:"BABY NATURAL WIPES 80", price:4700, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274201325", name:"BABY ALGODÓN PRECORTADO 100", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274201318", name:"BABY PAÑOS ALGODÓN 40", price:2500, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274201400", name:"BABY PAÑOS ALGODÓN 50", price:4200, img:GENERIC_IMG, brand:"ALGABO", cat:"Baby" },
+  { ean:"7791274087622", name:"KIDS SHAMPOO CHICLE 350", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274192593", name:"KIDS SHAMPOO MELOCOTÓN 350", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274087615", name:"KIDS SHAMPOO SANDÍA DULCE 350", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274004391", name:"KIDS ACO SANDÍA DULCE 350", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274199899", name:"KIDS ZERO SH PIOJOS 500", price:5200, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274199905", name:"KIDS ZERO ACO PIOJOS 500", price:5200, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274199912", name:"KIDS ZERO LOCIÓN 100", price:9000, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274191930", name:"ALGABO MEN AFTER SHAVE 120", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Hombre" },
+  { ean:"7791274197451", name:"ALGABO MEN CREMA P AFEITAR 150", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Hombre" },
+  { ean:"7791274200878", name:"ALGABO MEN CR AFEITAR POMO 177", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Hombre" },
+  { ean:"7791274000928", name:"ALGABO MEN ESPUMA AFEITAR 200", price:4000, img:GENERIC_IMG, brand:"ALGABO", cat:"Hombre" },
+  { ean:"7791274192883", name:"ALGABO MEN ESPUMA AFEITAR 415", price:5400, img:GENERIC_IMG, brand:"ALGABO", cat:"Hombre" },
+  { ean:"7791274198137", name:"ALGABO MEN TALCO 120", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Hombre" },
+  { ean:"7791274201790", name:"ALGABO ROLL ON MEN 60", price:1400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274190490", name:"ALGABO GEL EXT BRILLO GOTA 150", price:2300, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274089190", name:"ALGABO GEL EF. HÚMEDO GOTA 150", price:2300, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274087547", name:"ALGABO GEL EXT FUERTE 150", price:2300, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196447", name:"ALGABO GEL EXT BRILLO POMO 150", price:2000, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196430", name:"ALGABO GEL EF. HÚMEDO POMO 150", price:2000, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196454", name:"ALGABO GEL EXT FUERTE POMO 150", price:2000, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274189340", name:"ALGABO GEL EXT BRILLO POMO 200", price:2200, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274189326", name:"ALGABO GEL EF. HÚMEDO POMO 200", price:2200, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274189333", name:"ALGABO GEL EXT FUERTE POMO 200", price:2200, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196294", name:"ALGABO GEL EXT BRILLO POTE 350", price:3100, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196287", name:"ALGABO GEL EF. HÚMEDO POTE 350", price:3100, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196300", name:"ALGABO GEL EXT FUERTE POTE 350", price:3100, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274189197", name:"ALGABO GEL EXT BRILLO 475", price:3500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274189371", name:"ALGABO GEL EF. HÚMEDO 475", price:3500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274189388", name:"ALGABO GEL EXT FUERTE 475", price:3500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196331", name:"ALGABO GEL EXT FUERTE 500", price:4500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274003110", name:"ALGABO FOOT 60", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274187742", name:"ALGABO FOOT 100", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274009532", name:"ALGABO FOOT 200", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274196416", name:"ALGABO FOOT DP 200", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274004360", name:"ALGABO FOOT MUJER 60", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274004377", name:"ALGABO FOOT MUJER 100", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274200038", name:"ALGABO FOOT ANTIBACTERIAL 100", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274200045", name:"ALGABO FOOT ANTIBACTERIAL 200", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198113", name:"ALGABO TALCO CLÁSICO 120", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198045", name:"ALGABO TALCO CLÁSICO 180", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198052", name:"ALGABO TALCO CLÁSICO DP 200", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198120", name:"ALGABO TALCO SOFT ROSA 120", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198069", name:"ALGABO TALCO SOFT ROSA 180", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198076", name:"ALGABO TALCO SOFT ROSA DP 200", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274003202", name:"ALGABO FOOT ATT P/CALZADO 153", price:3200, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274000546", name:"ALGABO FOOT ATT P/PIES 153", price:3200, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274200885", name:"ALGABO FOOT ATT ANTIBAC 153", price:3200, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274003578", name:"ALGABO NATURAL FÉCULA 250", price:3600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274003554", name:"ALGABO NATURAL FÉCULA DP 250", price:3100, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274188367", name:"ALGABO TALCO PERF VIOLETS 250", price:2500, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274188350", name:"ALGABO TALCO PERF FLORAL 250", price:2500, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274196461", name:"ALGABO TALCO PERF BOLSITA 200", price:1700, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274196478", name:"ALGABO TALCO PERF BOLSITA 400", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274198793", name:"ALGABO ENJUAGUE BUCAL 250", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274196485", name:"ALGABO ENJUAGUE BUCAL 500", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274201585", name:"ALGABO HILO DENTAL C/ MANGO MENTOL X 25", price:1800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274201592", name:"ALGABO HILO DENTAL C/ MANGO MENTOL X 50", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274201660", name:"ALGABO SPRAY BUCAL ANTIBAC 60 CAJA EXH", price:2100, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274201653", name:"ALGABO ENJ BUCAL ANTIBAC 250", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274201646", name:"ALGABO ENJ BUCAL ANTIBAC 500", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274200847", name:"ALGABO ENJ BUCAL S/ALCOHOL 250", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274200854", name:"ALGABO ENJ BUCAL S/ALCOHOL 500", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Bucal" },
+  { ean:"7791274199554", name:"ALGABO JAB LIQ COCO Y MIEL 221", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274198458", name:"ALGABO JAB LIQ COCOMIEL DP 220", price:1200, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274199561", name:"ALGABO JAB LIQ KAR-AGU 221", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274198465", name:"ALGABO JAB LIQ KAR-AGU DP 220", price:1200, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274193408", name:"ALGABO JAB LIQ CITRUS 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274196010", name:"ALGABO JAB LIQ CITRUS DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274199516", name:"ALGABO JAB LIQ CITRUS EP 900", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000713", name:"ALGABO JAB LIQ COCONUT 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000737", name:"ALGABO JAB LIQ COCONUT DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000485", name:"ALGABO JAB LIQ CREMOSO 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000577", name:"ALGABO JAB LIQ CREMOSO DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274193415", name:"ALGABO JAB LIQ FLORAL RAIN 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274196003", name:"ALGABO JAB LIQ FLO RAIN DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274199530", name:"ALGABO JAB LIQ FLORAL EP 900", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000584", name:"ALGABO JAB LIQ FLOWER MIX 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000492", name:"ALGABO JAB LIQ FLOWER DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000720", name:"ALGABO JAB LIQ FTOS BOSQUE 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000744", name:"ALGABO JAB LIQ F BOSQUE DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274193392", name:"ALGABO JAB LIQ GREEN TEA 300", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274196041", name:"ALGABO JAB LIQ GREEN TEA DP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274199523", name:"ALGABO JAB LIQ GREEN TEA EP 900", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000874", name:"ALGABO JAB LIQ ANTIBAC 300", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274000881", name:"ALGABO JAB LIQ ANTIBAC DP 300", price:2200, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274199547", name:"ALGABO JAB LIQ ANTIBAC EP 900", price:4300, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274003608", name:"ULTRA SANITI GEL HOLDER 30", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Higiene y Desinfección" },
+  { ean:"7791274196515", name:"ULTRA SANITI GEL 75", price:2100, img:GENERIC_IMG, brand:"ALGABO", cat:"Higiene y Desinfección" },
+  { ean:"7791274200243", name:"ULTRA SANITI GEL 250", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Higiene y Desinfección" },
+  { ean:"7791274196539", name:"ULTRA SANITI GEL 750", price:4800, img:GENERIC_IMG, brand:"ALGABO", cat:"Higiene y Desinfección" },
+  { ean:"7791274199288", name:"ULTRA SANIT SPRAY 125", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Higiene y Desinfección" },
+  { ean:"7791274202148", name:"ALGABO JAB TOCADOR FLOWER MIX 80", price:700, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202131", name:"ALGABO JAB TOCADOR FLOWER MIX 3X80", price:2100, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202155", name:"ALGABO JAB TOCADOR CREAM 80", price:700, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202124", name:"ALGABO JAB TOCADOR CREAM PACK 3X80", price:2100, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202087", name:"ALGABO JAB GLICERINA FLORAL RAIN 90", price:900, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202100", name:"ALGABO JAB GLICERINA FLORAL RAIN PACK 3X90", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202094", name:"ALGABO JAB GLICERINA GREEN TEA 90", price:900, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274202117", name:"ALGABO JAB GLICERINA GREEN TEA PACK 3X90", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Jabones" },
+  { ean:"7791274005299", name:"ALGABO QUITA C/KERATINA 50", price:1100, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005275", name:"ALGABO QUITA FORTALECEDOR 50", price:1100, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005282", name:"ALGABO QUITA HUMECTANTE 50", price:1100, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005329", name:"ALGABO QUITA C/KERATINA 100", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005305", name:"ALGABO QUITA FORTALECEDOR 100", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005312", name:"ALGABO QUITA HUMECTANTE 100", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274201158", name:"ALGABO QUITA C/KERATINA 200", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274201134", name:"ALGABO QUITA FORTALECEDOR 200", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274201141", name:"ALGABO QUITA HUMECTANTE 200", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274198144", name:"ALGABO QUITA XTREME PROF 100", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274199882", name:"ALGABO QUITA BLACK 100", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005206", name:"ALGABO QUITA C/DOSIFICADOR 120", price:3500, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7791274005060", name:"ALGABO QUITA EXPRESS 75", price:3100, img:GENERIC_IMG, brand:"ALGABO", cat:"Quitaesmaltes" },
+  { ean:"7790000000904", name:"ALGABO CARE ESPONJA FLOR", price:1700, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201684", name:"ALGABO CARE ESPONJA GUANTE", price:3700, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201714", name:"ALGABO CARE ESPONJA ESPUMA", price:3700, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201721", name:"ALGABO CARE ESPONJA EXFOLIANTE", price:5100, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201707", name:"ALGABO CARE ESPONJA MANOPLA", price:3700, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201691", name:"ALGABO CARE ESPONJA VEGETAL", price:5100, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274198571", name:"ALGABO AGUA MICELAR DOSIF 120", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274199943", name:"ALGABO AGUA MICELAR 200", price:4000, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201110", name:"ALGABO AGUA MICELAR 400", price:5400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201295", name:"ALGABO AGUA MICELAR GLOW 200", price:4300, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201301", name:"ALGABO AGUA MICELAR GLOW 400", price:6200, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274198564", name:"ALGABO WIPES MICELARES 25", price:2500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274197512", name:"ALGABO DISCOS DESMAQ 80", price:2100, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201561", name:"ALGABO DISCOS 2 X 80 20% OFF", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274197710", name:"ALGABO WIPES DESMAQ 25", price:2000, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-640-0.webp", brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274197963", name:"ALGABO POMPONES DE ALGODÓN 50", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201332", name:"ALGABO ALGODÓN PREMIUM 75", price:1400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201349", name:"ALGABO ALGODÓN PREMIUM 150", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274200861", name:"ST VALLEY HISOPOS TUBO 100", price:1400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274005237", name:"ALGABO HISOPOS TUBO 100", price:1700, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274199653", name:"ALGABO HISOPOS ZIPPER 125", price:1400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274199660", name:"ALGABO HISOPOS TUBO 125", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274005251", name:"ALGABO HISOPOS TUBO 150", price:2200, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274200618", name:"ALGABO HISOPOS PAPEL 100", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201578", name:"ALGABO HISOPOS BAMBÚ ZIPPER 125", price:1100, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274197871", name:"ALGABO BAÑO NATURAL POMO 200", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274009365", name:"ALGABO BAÑO NATURAL ARGAN 350", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274197864", name:"ALGABO BARRO VEGETAL POMO 200", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274087004", name:"ALGABO BARRO VEGETAL POTE 350", price:3800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274005121", name:"ALGABO CREMA PEINAR ARGÁN 300", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274190131", name:"ALGABO CREMA PEINAR RIZADO 300", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274001482", name:"ALGABO CREMA PEINAR KERAT 300", price:2800, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274202346", name:"ALGABO AC 0% OLIVA Y ARGÁN EP 300", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274202339", name:"ALGABO ACO 0% ACAÍ Y ROMERO EP 300", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274202322", name:"ALGABO ACO 0% AVOCADO Y ARGÁN EP 300", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274202360", name:"ALGABO SH 0% ACAÍ Y ROMERO EP 300", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274202315", name:"ALGABO SH 0% AVOCADO Y ARGÁN EP 300", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274202353", name:"ALGABO SH 0% OLIVA Y ARGÁN EP 300", price:1900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274200571", name:"ALGABO SH 0% AÇAÍ Y ROMERO 750", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274200588", name:"ALGABO SH 0% OLIVA Y ARGÁN 750", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274201356", name:"ALGABO SH 0% AVOCADO Y ARGÁN 750", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274200595", name:"ALGABO AC 0% AÇAÍ Y ROMERO 750", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274200601", name:"ALGABO AC 0% OLIVA Y ARGÁN 750", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274201363", name:"ALGABO AC 0% AVOCADO Y ARGÁN 750", price:3400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196959", name:"ALGABO SH AGUAC Y ARGÁN EP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196980", name:"ALGABO AC AGUAC Y ARGÁN EP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198632", name:"ALGABO SH AGUACATE Y ARGÁN 400", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198663", name:"ALGABO ACO AGUAC Y ARGÁN 400", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198151", name:"ALGABO SH AGUACATE Y ARGÁN 930", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198182", name:"ALGABO AC AGUACATE Y ARGÁN 930", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274199431", name:"ALGABO SH AGUAC Y ARGÁN EP 930", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274199479", name:"ALGABO AC AGUAC Y ARGÁN EP 930", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196973", name:"ALGABO SH MANZ Y MAGNO EP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274197000", name:"ALGABO AC MANZ Y MAGNO EP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198618", name:"ALGABO SH MANZ Y MAGNOA 400", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198649", name:"ALGABO ACO MANZ Y MAGNOLIA 400", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198175", name:"ALGABO SH MANZ Y MAGNOLIA 930", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198205", name:"ALGABO AC MANZ Y MAGNOLIA 930", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274199455", name:"ALGABO SH MANZ Y MAGNO EP 930", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274199493", name:"ALGABO AC MANZ Y MAGN EP 930", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196966", name:"ALGABO SH COCO Y LECHE EP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274196997", name:"ALGABO AC COCO Y LECHE EP 300", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198625", name:"ALGABO SH COCO Y LECHE 400", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198656", name:"ALGABO ACO COCO Y LECHE 400", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198168", name:"ALGABO SH COCO Y LECHE 930", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198199", name:"ALGABO AC COCO Y LECHE 930", price:2700, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274199448", name:"ALGABO SH COCO Y MIEL EP 930", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274199486", name:"ALGABO ACO COCO Y LECHE EP 930", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198212", name:"SH+AC AGUACATE Y ARGAN 930 + PROMO", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198229", name:"SH+ACO COCO Y LECHE 930 + PROMO", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274198236", name:"SH+ACO MANZ Y MAGN 930 + PROMO", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Capilar" },
+  { ean:"7791274201639", name:"ALGABO ROLL ON FRESH & BEAUTY 60", price:1400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274201622", name:"ALGABO ROLL ON PURE & SOFT 60", price:1400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274005114", name:"ALGABO CREMA MANOS Y UÑAS 90", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274004407", name:"ALGABO CREMA AVENA-KARITÉ 200", price:3100, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274004414", name:"ALGABO CREMA MIEL-ALMENDRA 200", price:3100, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274004421", name:"ALGABO CREMA ALOE-MANZ 200", price:3100, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274004711", name:"ALGABO CREMA AVENA-KARITÉ 400", price:4400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274004728", name:"ALGABO CREMA MIEL-ALMENDRA 400", price:4400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274004704", name:"ALGABO CREMA ALOE-MANZ 400", price:4400, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274201509", name:"ALGABO CREM FACIAL ANTIAGE 100", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274201516", name:"ALGABO CREM FACIAL HUMECT 100", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Personal" },
+  { ean:"7791274201073", name:"SET MUJER CREMA 90 + BS 125", price:7100, img:GENERIC_IMG, brand:"ALGABO", cat:"Skin Care" },
+  { ean:"7791274087134", name:"ALGABO COLONIA AMBRE 500", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Colonias" },
+  { ean:"7791274000317", name:"ALGABO COLONIA LAVANDA 500", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Colonias" },
+  { ean:"7791274009242", name:"ALGABO COLONIA INGLESA 500", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Colonias" },
+  { ean:"7791274201615", name:"ALGABO COLONIA LILY GARDEN 400", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Colonias" },
+  { ean:"7791274201608", name:"ALGABO COLONIA BLUSH PETALS 400", price:5700, img:GENERIC_IMG, brand:"ALGABO", cat:"Colonias" },
+  { ean:"7791274201394", name:"VAIS REPELENTE BABY POMO 100", price:6700, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274197062", name:"VAIS REPELEN SPRAY CAJA EXH 60", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274200274", name:"VAIS REPELENTE SPRAY 120", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274195952", name:"VAIS REPELENTE SPRAY 200 ML", price:3600, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274198755", name:"VAIS REPELENTE KIDS SPRAY 200", price:3900, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274199585", name:"GEL DE DUCHA 350", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Otros" },
+  { ean:"7791274197079", name:"VAIS REPELENTE EXTREME 200", price:5400, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274200915", name:"VAIS KIDS REPELENTE POMO 100", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274201523", name:"VAIS REPELENTE CREMA POMO 100", price:2500, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274201479", name:"VAIS REPE CREMA 8G CAJA EXH 24", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274005152", name:"VAIS REPELENTE CREMA PLUS 200", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274200175", name:"VAIS REPELENTE EN AEROSOL 140", price:3500, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274201370", name:"VAIS REPELENT EXT AEROSOL 140", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Repelentes" },
+  { ean:"7791274197840", name:"VAIS PERF TELA CÁLIDA PRIM 250", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274197857", name:"VAIS PERF TELA SUAVE BRISA 250", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274198779", name:"VAIS PERF CÁLIDA PRIM DP 250", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274198762", name:"VAIS PERF SUAVE BRISA DP 250", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274000621", name:"VAIS PERF TELA CÁLIDA PRIM 500", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274000645", name:"VAIS PERF SUAVE BRISA 500", price:4500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274000652", name:"VAIS PERF CÁLIDA PRIM DP 500", price:3500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274000676", name:"VAIS PERF SUAVE BRISA DP 500", price:3500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200434", name:"VAIS PERF DULCES MIMOS DP 500", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274088780", name:"VAIS LIMPIAVIDRIOS GATILLO 500", price:2500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200939", name:"VAIS LIMPIAVIDRIOS DP 500", price:1300, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200281", name:"VAIS LIMPIAVIDRIOS EP 900", price:2100, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274190360", name:"VAIS ANTIGRASA GATILLO 500", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200922", name:"VAIS ANTIGRASA DP 500", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200298", name:"VAIS ANTIGRASA EP 900", price:2300, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200311", name:"VAIS BAÑO GATILLO 500", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200946", name:"VAIS BAÑO DP 500", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200304", name:"VAIS BAÑO EP 900", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200366", name:"VAIS LIMPIADOR LAVANDA 900", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200373", name:"VAIS LIMPIADOR CÍTRICO 900", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200342", name:"VAIS LIMPIADOR FR PRIMAV 900", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200359", name:"VAIS LIMP POMPOMES ALGODÓN 900", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274088995", name:"VAIS APRESTO GATILLO 500", price:3300, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200953", name:"VAIS APRESTO DP 500", price:1700, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200960", name:"VAIS APRESTO EP 900", price:2900, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200335", name:"VAIS DETERG LAVAVAJILLA EP 800", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200328", name:"VAIS JAB LIQ BAJA ESP EP 800", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Limpieza y Hogar" },
+  { ean:"7791274200892", name:"KIDS 10 JAB LIQ BT 300", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274202452", name:"KIDS 10 BODY SPLASH 125", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274202445", name:"KIDS 10 SET BSPLASH 125 + BATH TOYS 300", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274200748", name:"KIDS JABÓN LÍQUIDO DP 300", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Kids" },
+  { ean:"7791274199684", name:"SALLY ALCOHOL EN GEL POCKET 60", price:2400, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274200472", name:"SALLY ALCOHOL GEL PERF 75", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274197994", name:"SALLY UNICORNIO ESP BAÑO 350", price:12100, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274192661", name:"SALLY COLONIA 50", price:5600, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274003943", name:"SALLY COLONIA 100", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274200465", name:"SALLY BODY SPLASH 125", price:5300, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274193804", name:"SALLY SET SH 200 + COLONIA 125", price:8900, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274200809", name:"SALLY UNICORNIO 2 EN 1 250", price:3000, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274201004", name:"SALLY JAB LIQ BT 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Sally" },
+  { ean:"7791274199813", name:"ZOMBIES COLONIA 125 ML", price:5300, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274199820", name:"ZOMBIES SET SPLASH 125 + SHAMP", price:8900, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201233", name:"TURTLES JAB LIQ BT SURTIDO 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201189", name:"PAW PATROL BODY SPLASH 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201202", name:"PAW PATROL SET BS 125 + SH 200", price:9800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201196", name:"PAW PATROL JAB LIQ BT 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201271", name:"PAW PATROL CHASE SET SH + ESPONJA", price:12100, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201288", name:"PAW PATROL SKYE SET SH + ESPONJA", price:12100, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201424", name:"PAW PATROL CHASE SH 3 EN 1 3D 300", price:14300, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201417", name:"PAW PATROL SKYE SH 3 EN 1 3D 300", price:14300, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274001321", name:"HELLO KITTY BS ALEGRIA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274001314", name:"HELLO KITTY KUROMI BS DULZURA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274200830", name:"HELLO KITTY JAB LIQ BT 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274198489", name:"HELLO KITTY SET BS 125 + SH 200", price:9800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274005022", name:"FROZEN BODY SPLASH ELSA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274198472", name:"FROZEN SET BS 125 + SH 200", price:9800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274199202", name:"FROZEN SANITI HOLDER 30", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274198908", name:"STARS WARS YODA JAB LIQ 500", price:12600, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274200816", name:"STAR WARS JAB LIQ BT 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274199875", name:"STAR WARS COLONIA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274197970", name:"SPIDERMAN COLONIA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274198366", name:"SPIDERMAN SET BS 125 + SH 200", price:9800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274002649", name:"AVENGERS CAP AMERI COLONIA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274002625", name:"AVENGERS HULK COLONIA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274002632", name:"AVENGERS IRON MAN COLONIA 125", price:6000, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274197178", name:"AVENGERS SURTID JAB LIQ BT 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274198373", name:"SPIDERMAN SHAMPOO 2D 350", price:4100, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/spider-man-shampoo-2en1-x350-ml-spider-man-7791274198373-f5462fddca686ffb2c17031623551784-640-0.webp", brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274197987", name:"SPIDERMAN JAB LIQ BT 300", price:6800, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274199189", name:"SPIDERMAN SANITI HOLDER 30", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Licencias" },
+  { ean:"7791274201547", name:"ASANA COPA MENSTRUAL S T2 C/POTE", price:15000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Femenino" },
+  { ean:"7791274201554", name:"ASANA COPA MENSTRUAL L T3 C/POTE", price:15000, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Femenino" },
+  { ean:"7791274202209", name:"ASANA COPA MENSTRUAL L T3 C/ESTUCHE", price:11900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Femenino" },
+  { ean:"7791274202193", name:"ASANA COPA MENSTRUAL S T2 C/ESTUCHE", price:11900, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Femenino" },
+  { ean:"7791274202186", name:"ASANA JABÓN ÍNTIMO 250", price:4300, img:GENERIC_IMG, brand:"ALGABO", cat:"Cuidado Femenino" },
+  { ean:"7791274200557", name:"GREENWOOD ACO PERRO & GATO 500", price:4800, img:GENERIC_IMG, brand:"ALGABO", cat:"Mascotas" },
+  { ean:"7791274200489", name:"GREENWOOD SH PERRO & GATO 500", price:4800, img:GENERIC_IMG, brand:"ALGABO", cat:"Mascotas" },
+  { ean:"7791274201837", name:"COCOA LIP BALM BLISTER", price:5500, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274197789", name:"COCOA PROT SOLAR POMO 130 F50", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274201844", name:"COCOA PROT SOLAR POCKET F50 50", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274201097", name:"COCOA PS FACIAL COLOR F50 60", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274201080", name:"COCOA PS FACIAL F50 60", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274201059", name:"COCOA AEROSOL INV FPS 30 170", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274201042", name:"COCOA AEROSOL INV FPS 50 170", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274200625", name:"COCOA SPRAY INV FPS 50 120", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" },
+  { ean:"7791274199424", name:"COCOA CREMA HID AUTOBRONC 130", price:null, img:GENERIC_IMG, brand:"ALGABO", cat:"Cocoa Beach" }
+];
+
+/* ======================================================
+   PERSISTENCIA (localStorage con respaldo en memoria)
+   ====================================================== */
+const memoryStore = {};
+function storageGet(key){
+  try{ return localStorage.getItem(key); }
+  catch(e){ return (key in memoryStore) ? memoryStore[key] : null; }
+}
+function storageSet(key, value){
+  try{ localStorage.setItem(key, value); }
+  catch(e){ memoryStore[key] = value; }
+}
+
+/* ======================================================
+   ESTADO
+   ====================================================== */
+let overrides = {};        // { ean: { price, enabled } }
+let cart = {};              // { ean: qty }
+let whatsappNumber = DEFAULT_WHATSAPP;
+let isAdmin = false;
+let currentModalEan = null;
+let activeTab = 'distre';   // 'distre' | 'algabo'
+
+function getActiveProducts(){
+  return activeTab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
+}
+function findBaseProduct(ean){
+  return PRODUCTS_DISTRE.find(p => p.ean === ean) || PRODUCTS_ALGABO.find(p => p.ean === ean);
+}
+
+function loadState(){
+  try{ overrides = JSON.parse(storageGet('distre_overrides')) || {}; }catch(e){ overrides = {}; }
+  try{ cart = JSON.parse(storageGet('distre_cart')) || {}; }catch(e){ cart = {}; }
+  whatsappNumber = storageGet('distre_whatsapp') || DEFAULT_WHATSAPP;
+}
+function saveOverrides(){ storageSet('distre_overrides', JSON.stringify(overrides)); }
+function saveCart(){ storageSet('distre_cart', JSON.stringify(cart)); }
+function saveWhatsappNumber(){ storageSet('distre_whatsapp', whatsappNumber); }
+
+function getEffective(p){
+  const o = overrides[p.ean] || {};
+  const price = Number.isFinite(o.price) ? o.price : p.price;
+  const enabled = typeof o.enabled === 'boolean' ? o.enabled : true;
+  return { ...p, price, enabled };
+}
+
+/* ======================================================
+   UTILIDADES
+   ====================================================== */
+function formatPrice(n){
+  return "$ " + Math.round(n).toLocaleString("es-AR");
+}
+function onImgError(img){
+  img.onerror = null;
+  img.src = GENERIC_IMG;
+}
+function showToast(msg){
+  const wrap = document.getElementById('toastWrap');
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  wrap.appendChild(t);
+  requestAnimationFrame(()=>t.classList.add('show'));
+  setTimeout(()=>{
+    t.classList.remove('show');
+    setTimeout(()=>t.remove(), 300);
+  }, 2200);
+}
+function openOverlayEl(el){ el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeOverlayEl(el){ el.classList.remove('open'); document.body.style.overflow = ''; }
+
+/* ======================================================
+   CARRITO
+   ====================================================== */
+function cartQty(ean){ return cart[ean] || 0; }
+function cartCount(){ return Object.values(cart).reduce((a,b)=>a+b,0); }
+
+function addToCart(ean){
+  cart[ean] = (cart[ean] || 0) + 1;
+  saveCart();
+  updateCartUI();
+  showToast('Agregado al carrito (+1)');
+}
+function removeFromCart(ean){
+  if(!cart[ean] || cart[ean] <= 0){
+    showToast('Ya no está en tu carrito');
+    return;
+  }
+  cart[ean] -= 1;
+  if(cart[ean] <= 0) delete cart[ean];
+  saveCart();
+  updateCartUI();
+}
+function setCartQty(ean, qty){
+  if(qty <= 0){ delete cart[ean]; } else { cart[ean] = qty; }
+  saveCart();
+  updateCartUI();
+}
+function clearCart(){
+  cart = {};
+  saveCart();
+  updateCartUI();
+}
+function updateCartUI(){
+  document.getElementById('cartBadge').textContent = cartCount();
+  renderGrid();
+  if(document.getElementById('modalAddCart')) updateModalCartQty();
+  if(cartOverlay.classList.contains('open')) renderCartModal();
+}
+
+/* ======================================================
+   RENDER CATÁLOGO
+   ====================================================== */
+const grid = document.getElementById('grid');
+const counter = document.getElementById('counter');
+const searchInput = document.getElementById('searchInput');
+const filtersEl = document.getElementById('filters');
+
+let activeCat = "Todos";
+
+function buildFilters(){
+  const visible = getActiveProducts().map(getEffective).filter(p=>p.enabled);
+  const cats = ["Todos", ...new Set(visible.map(p => p.cat))];
+  if(!cats.includes(activeCat)) activeCat = "Todos";
+  filtersEl.innerHTML = cats.map(c =>
+    `<div class="chip ${c === activeCat ? 'active' : ''}" data-cat="${c}">${c}</div>`
+  ).join('');
+  filtersEl.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      activeCat = chip.dataset.cat;
+      buildFilters();
+      renderGrid();
+    });
+  });
+}
+
+function renderGrid(){
+  const q = searchInput.value.trim().toLowerCase();
+  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled);
+  const filtered = visible.filter(p => {
+    const matchesQuery = !q || p.name.toLowerCase().includes(q) || p.ean.includes(q);
+    const matchesCat = activeCat === "Todos" || p.cat === activeCat;
+    return matchesQuery && matchesCat;
+  });
+
+  counter.textContent = filtered.length + (filtered.length === 1 ? " producto" : " productos");
+
+  if(filtered.length === 0){
+    grid.innerHTML = `
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <div>No se encontraron productos para tu búsqueda.</div>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const qty = cartQty(p.ean);
+    const hasPrice = p.price !== null && p.price !== undefined;
+    const priceHtml = hasPrice
+      ? `<div class="card-price">${formatPrice(p.price)}</div>`
+      : `<div class="price-consult">Consultar precio</div>`;
+    const cartHtml = hasPrice
+      ? `<div class="cart-controls">
+          <div class="cart-row-btns">
+            <button class="cart-mini-btn add" data-action="add" data-ean="${p.ean}">➕ Agregar</button>
+            <button class="cart-mini-btn remove" data-action="remove" data-ean="${p.ean}">➖ Quitar</button>
+          </div>
+          <div class="cart-qty-tag">En tu carrito: <b>${qty}</b></div>
+        </div>`
+      : `<div class="cart-controls"><div class="cart-qty-tag">Consultá disponibilidad por WhatsApp</div></div>`;
+    return `
+    <div class="card" data-ean="${p.ean}">
+      <div class="card-img">
+        <span class="badge">${p.cat}</span>
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="onImgError(this)">
+      </div>
+      <div class="card-body">
+        <div class="card-name">${p.name}</div>
+        <div class="card-ean">EAN ${p.ean}</div>
+        ${priceHtml}
+        ${cartHtml}
+      </div>
+    </div>
+  `;
+  }).join('');
+
+  grid.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if(e.target.closest('.cart-controls')) return;
+      openModal(card.dataset.ean);
+    });
+  });
+  grid.querySelectorAll('.cart-mini-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const ean = btn.dataset.ean;
+      if(btn.dataset.action === 'add') addToCart(ean);
+      else removeFromCart(ean);
+    });
+  });
+}
+
+/* ======================================================
+   MODAL PRODUCTO
+   ====================================================== */
+const overlay = document.getElementById('overlay');
+const modalImg = document.getElementById('modalImg');
+const modalName = document.getElementById('modalName');
+const modalPrice = document.getElementById('modalPrice');
+const modalEan = document.getElementById('modalEan');
+const modalBrand = document.getElementById('modalBrand');
+const modalCat = document.getElementById('modalCat');
+const modalWhatsapp = document.getElementById('modalWhatsapp');
+
+function openModal(ean){
+  const base = findBaseProduct(ean);
+  if(!base) return;
+  const p = getEffective(base);
+  if(!p.enabled) return;
+  currentModalEan = ean;
+  const hasPrice = p.price !== null && p.price !== undefined;
+
+  modalImg.src = p.img;
+  modalImg.alt = p.name;
+  modalImg.onerror = () => onImgError(modalImg);
+  modalName.textContent = p.name;
+  modalPrice.textContent = hasPrice ? formatPrice(p.price) : "Consultar precio";
+  modalPrice.classList.toggle('price-consult-modal', !hasPrice);
+  modalEan.textContent = p.ean;
+  modalBrand.textContent = p.brand;
+  modalCat.textContent = p.cat;
+
+  const msg = encodeURIComponent(`Hola, quiero consultar por: ${p.name} (EAN ${p.ean})${hasPrice ? ' - ' + formatPrice(p.price) : ''}`);
+  modalWhatsapp.href = `https://wa.me/${whatsappNumber}?text=${msg}`;
+
+  document.getElementById('modalCartControls').style.display = hasPrice ? '' : 'none';
+
+  updateModalCartQty();
+  openOverlayEl(overlay);
+}
+function updateModalCartQty(){
+  const el = document.getElementById('modalCartQty');
+  if(el) el.textContent = cartQty(currentModalEan);
+}
+document.getElementById('modalAddCart').addEventListener('click', () => {
+  if(currentModalEan) addToCart(currentModalEan);
+});
+document.getElementById('modalRemoveCart').addEventListener('click', () => {
+  if(currentModalEan) removeFromCart(currentModalEan);
+});
+document.getElementById('modalClose').addEventListener('click', () => closeOverlayEl(overlay));
+document.getElementById('modalCloseBtn').addEventListener('click', () => closeOverlayEl(overlay));
+
+/* ======================================================
+   LOGIN ADMIN
+   ====================================================== */
+const loginOverlay = document.getElementById('loginOverlay');
+const adminOverlay = document.getElementById('adminOverlay');
+const cartOverlay = document.getElementById('cartOverlay');
+
+document.getElementById('adminIconBtn').addEventListener('click', () => {
+  if(isAdmin){ openAdminPanel(); }
+  else{
+    openOverlayEl(loginOverlay);
+    document.getElementById('loginUser').focus();
+  }
+});
+document.getElementById('loginClose').addEventListener('click', () => closeOverlayEl(loginOverlay));
+
+function attemptLogin(){
+  const u = document.getElementById('loginUser').value.trim();
+  const p = document.getElementById('loginPass').value;
+  const errorEl = document.getElementById('loginError');
+  if(u === ADMIN_USER && p === ADMIN_PASS){
+    isAdmin = true;
+    errorEl.style.display = 'none';
+    document.getElementById('loginUser').value = '';
+    document.getElementById('loginPass').value = '';
+    closeOverlayEl(loginOverlay);
+    openAdminPanel();
+  }else{
+    errorEl.style.display = 'block';
+  }
+}
+document.getElementById('loginSubmit').addEventListener('click', attemptLogin);
+document.getElementById('loginPass').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
+document.getElementById('loginUser').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
+
+/* ======================================================
+   PANEL ADMIN
+   ====================================================== */
+function openAdminPanel(){
+  document.getElementById('adminWhatsapp').value = whatsappNumber;
+  renderAdminList();
+  openOverlayEl(adminOverlay);
+}
+document.getElementById('adminClose').addEventListener('click', () => closeOverlayEl(adminOverlay));
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  isAdmin = false;
+  closeOverlayEl(adminOverlay);
+  showToast('Sesión cerrada');
+});
+
+function renderAdminList(){
+  const list = document.getElementById('adminProductList');
+  document.querySelectorAll('.admin-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
+  list.innerHTML = getActiveProducts().map(p => {
+    const eff = getEffective(p);
+    const priceVal = (eff.price === null || eff.price === undefined) ? '' : eff.price;
+    return `
+    <div class="admin-row ${eff.enabled ? '' : 'disabled-row'}">
+      <img src="${p.img}" alt="" onerror="onImgError(this)">
+      <div>
+        <div class="p-name">${p.name}</div>
+        <div class="p-ean">EAN ${p.ean}</div>
+      </div>
+      <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${priceVal}" placeholder="Consultar" min="0" step="1">
+      <label class="switch">
+        <input type="checkbox" class="admin-enabled" data-ean="${p.ean}" ${eff.enabled ? 'checked' : ''}>
+        <span class="slider-toggle"></span>
+      </label>
+    </div>`;
+  }).join('');
+
+  list.querySelectorAll('.admin-price').forEach(inp => {
+    inp.addEventListener('change', () => {
+      const ean = inp.dataset.ean;
+      const val = parseInt(inp.value, 10);
+      if(!overrides[ean]) overrides[ean] = {};
+      overrides[ean].price = Number.isFinite(val) ? val : undefined;
+      saveOverrides();
+      renderGrid();
+      showToast('Precio actualizado');
+    });
+  });
+  list.querySelectorAll('.admin-enabled').forEach(chk => {
+    chk.addEventListener('change', () => {
+      const ean = chk.dataset.ean;
+      if(!overrides[ean]) overrides[ean] = {};
+      overrides[ean].enabled = chk.checked;
+      saveOverrides();
+      chk.closest('.admin-row').classList.toggle('disabled-row', !chk.checked);
+      buildFilters();
+      renderGrid();
+    });
+  });
+}
+
+document.getElementById('saveWhatsapp').addEventListener('click', () => {
+  const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
+  if(val.length < 8){ showToast('Número inválido'); return; }
+  whatsappNumber = val;
+  saveWhatsappNumber();
+  showToast('Número de WhatsApp actualizado');
+});
+
+document.getElementById('resetConfig').addEventListener('click', () => {
+  if(!confirm('¿Restablecer precios, productos habilitados y WhatsApp a los valores originales?')) return;
+  overrides = {};
+  whatsappNumber = DEFAULT_WHATSAPP;
+  saveOverrides();
+  saveWhatsappNumber();
+  document.getElementById('adminWhatsapp').value = whatsappNumber;
+  renderAdminList();
+  buildFilters();
+  renderGrid();
+  showToast('Valores restablecidos');
+});
+
+document.getElementById('exportConfig').addEventListener('click', () => {
+  const data = { overrides, whatsapp: whatsappNumber, exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'distre-config.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Configuración exportada');
+});
+
+/* ======================================================
+   MODAL CARRITO
+   ====================================================== */
+document.getElementById('cartBtn').addEventListener('click', () => {
+  renderCartModal();
+  openOverlayEl(cartOverlay);
+});
+document.getElementById('cartClose').addEventListener('click', () => closeOverlayEl(cartOverlay));
+document.getElementById('clearCartBtn').addEventListener('click', () => {
+  if(Object.keys(cart).length === 0) return;
+  if(!confirm('¿Vaciar el carrito?')) return;
+  clearCart();
+  renderCartModal();
+});
+document.getElementById('sendOrderBtn').addEventListener('click', (e) => {
+  if(Object.keys(cart).length === 0){ e.preventDefault(); return; }
+  showToast('Abriendo WhatsApp...');
+});
+
+function buildOrderMessage(entries, total){
+  const lines = ['Pedido - Catálogo Distre', ''];
+  entries.forEach(([ean, qty]) => {
+    const base = findBaseProduct(ean);
+    if(!base) return;
+    const eff = getEffective(base);
+    const lineTotal = eff.price * qty;
+    lines.push(`${qty}, ${eff.name}, ${formatPrice(lineTotal)}`);
+  });
+  lines.push('');
+  lines.push(`TOTAL DEL PEDIDO ${formatPrice(total)}`);
+  return lines.join('\n');
+}
+
+function renderCartModal(){
+  const list = document.getElementById('cartList');
+  const sendBtn = document.getElementById('sendOrderBtn');
+  const entries = Object.entries(cart).filter(([ean, qty]) => qty > 0);
+
+  if(entries.length === 0){
+    list.innerHTML = `<div class="cart-empty">Tu carrito está vacío.</div>`;
+    document.getElementById('cartTotal').textContent = formatPrice(0);
+    sendBtn.style.pointerEvents = 'none';
+    sendBtn.style.opacity = '.5';
+    return;
+  }
+  sendBtn.style.pointerEvents = '';
+  sendBtn.style.opacity = '';
+
+  let total = 0;
+  list.innerHTML = entries.map(([ean, qty]) => {
+    const base = findBaseProduct(ean);
+    if(!base) return '';
+    const eff = getEffective(base);
+    const lineTotal = eff.price * qty;
+    total += lineTotal;
+    return `
+    <div class="cart-item" data-ean="${ean}">
+      <img src="${eff.img}" alt="" onerror="onImgError(this)">
+      <div class="cart-item-info">
+        <div class="cart-item-name">${eff.name}</div>
+        <div class="cart-item-price">${formatPrice(eff.price)} c/u</div>
+        <div class="qty-control">
+          <button class="qty-btn" data-act="dec" data-ean="${ean}">−</button>
+          <span class="qty-val">${qty}</span>
+          <button class="qty-btn" data-act="inc" data-ean="${ean}">+</button>
+        </div>
+      </div>
+      <div class="cart-item-right">
+        <div class="cart-item-total">${formatPrice(lineTotal)}</div>
+        <button class="cart-remove" data-act="del" data-ean="${ean}" title="Quitar">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('cartTotal').textContent = formatPrice(total);
+
+  list.querySelectorAll('[data-act]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ean = btn.dataset.ean;
+      const act = btn.dataset.act;
+      if(act === 'inc') addToCart(ean);
+      else if(act === 'dec') removeFromCart(ean);
+      else if(act === 'del') setCartQty(ean, 0);
+      renderCartModal();
+    });
+  });
+
+  sendBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildOrderMessage(entries, total))}`;
+}
+
+/* ======================================================
+   CIERRE GENÉRICO DE MODALES (click afuera / ESC)
+   ====================================================== */
+[overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
+  ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
+});
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape'){
+    [overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
+      if(ov.classList.contains('open')) closeOverlayEl(ov);
+    });
+  }
+});
+
+/* ======================================================
+   PESTAÑAS (Distre / ALGABO)
+   ====================================================== */
+function setActiveTab(tab){
+  activeTab = tab;
+  activeCat = "Todos";
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  searchInput.value = '';
+  buildFilters();
+  renderGrid();
+  if(isAdmin && adminOverlay.classList.contains('open')) renderAdminList();
+}
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
+});
+
+/* ======================================================
+   INIT
+   ====================================================== */
+searchInput.addEventListener('input', renderGrid);
+loadState();
+buildFilters();
+renderGrid();
+document.getElementById('cartBadge').textContent = cartCount();
+</script>
 </body>
 </html>
