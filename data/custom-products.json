@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "ean": "779839995431",
+      "name": "001PERFUME PRUEBA",
+      "price": 205000,
+      "tab": "algabo",
+      "cat": "Baby",
+      "img": "images/uploads/779839995431.webp",
+      "brand": "ALGABO"
+    }
+  ]
+}
