@@ -310,6 +310,70 @@
     opacity:0;transform:translateY(10px);transition:all .25s ease;
   }
   .toast.show{opacity:1;transform:translateY(0);}
+
+  /* ---------- SESSION INDICATOR ---------- */
+  .session-info{
+    display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-dim);
+    padding:6px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg-soft);
+  }
+  .session-info .session-user{color:var(--accent);font-weight:700;}
+  .session-info .session-role{
+    font-size:.65rem;text-transform:uppercase;letter-spacing:.5px;
+    padding:2px 7px;border-radius:999px;font-weight:700;
+    background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);
+  }
+  .session-info .session-role.user-role{background:rgba(37,211,102,.12);color:var(--whatsapp);border-color:var(--whatsapp);}
+
+  /* ---------- ADMIN TABS (users section) ---------- */
+  .admin-section{margin-bottom:28px;}
+  .admin-section-header{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    margin-bottom:14px;flex-wrap:wrap;
+  }
+  .admin-section-header h3{margin:0;font-size:1rem;}
+
+  /* ---------- USER TABLE ---------- */
+  .user-table{width:100%;border-collapse:collapse;}
+  .user-table th{
+    text-align:left;padding:10px 12px;font-size:.72rem;text-transform:uppercase;
+    letter-spacing:.5px;color:var(--text-dim);border-bottom:2px solid var(--border);
+    font-weight:700;
+  }
+  .user-table td{
+    padding:12px;border-bottom:1px solid var(--border);font-size:.85rem;
+    vertical-align:middle;
+  }
+  .user-table tr:last-child td{border-bottom:none;}
+  .user-table .user-actions{display:flex;gap:6px;}
+  .user-table .btn-sm{
+    padding:6px 12px;border-radius:8px;border:1px solid var(--border);
+    background:var(--bg-soft);color:var(--text-dim);font-size:.75rem;font-weight:700;
+    cursor:pointer;transition:all .15s;white-space:nowrap;
+  }
+  .user-table .btn-sm:hover{color:var(--text);border-color:var(--accent);}
+  .user-table .btn-sm.danger:hover{border-color:var(--danger);color:var(--danger);}
+  .user-table .btn-sm.edit{border-color:var(--accent);color:var(--accent);}
+
+  .role-badge{
+    display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;
+    padding:3px 8px;border-radius:999px;letter-spacing:.4px;
+  }
+  .role-badge.admin{background:rgba(212,175,106,.15);color:var(--accent);border:1px solid var(--accent);}
+  .role-badge.usuario{background:rgba(37,211,102,.1);color:var(--whatsapp);border:1px solid var(--whatsapp);}
+
+  .user-empty{text-align:center;padding:30px;color:var(--text-dim);font-size:.85rem;}
+
+  /* ---------- USER FORM MODAL ---------- */
+  .user-form{display:flex;flex-direction:column;gap:14px;padding:34px 26px 28px;}
+  .user-form h2{margin:0 0 4px;font-size:1.15rem;}
+  .user-form .field select{
+    width:100%;padding:11px 14px;border-radius:8px;border:1px solid var(--border);
+    background:var(--bg-soft);color:var(--text);font-size:.92rem;
+    appearance:auto;
+  }
+  .user-form .field select:focus{outline:none;border-color:var(--accent);}
+  .form-error{color:var(--danger);font-size:.82rem;display:none;margin-top:-6px;}
+  .form-success{color:var(--whatsapp);font-size:.82rem;display:none;margin-top:-6px;}
 </style>
 </head>
 <body>
@@ -326,6 +390,13 @@
     </div>
     <div class="header-actions">
       <div class="counter" id="counter"></div>
+      <div class="session-info" id="sessionInfo" style="display:none;">
+        <span class="session-user" id="sessionUser"></span>
+        <span class="session-role" id="sessionRole"></span>
+        <button class="icon-btn" id="sessionLogout" title="Cerrar sesión" style="width:28px;height:28px;">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
       <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
       </button>
@@ -410,26 +481,50 @@
     <button class="modal-close" id="adminClose" aria-label="Cerrar">✕</button>
     <div class="admin-body">
       <h2>Panel de administración</h2>
-      <p class="admin-note">Los cambios se guardan en este navegador y se aplican de inmediato en el catálogo.</p>
+      <p class="admin-note" id="adminWelcome"></p>
 
-      <div style="margin-bottom:26px;">
-        <div class="admin-section-title">Número de WhatsApp (formato internacional, sin +)</div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <input type="text" id="adminWhatsapp" class="price-input" style="flex:1;min-width:180px;">
-          <button class="btn btn-whatsapp btn-auto" id="saveWhatsapp">Guardar</button>
+      <div class="admin-section-tabs" style="display:flex;gap:8px;margin-bottom:22px;">
+        <button class="tab-btn active" data-admin-tab="productos" id="adminTabProductos">Productos</button>
+        <button class="tab-btn" data-admin-tab="usuarios" id="adminTabUsuarios">Usuarios</button>
+      </div>
+
+      <!-- ====== SECCIÓN PRODUCTOS ====== -->
+      <div id="adminSectionProductos">
+        <div style="margin-bottom:26px;">
+          <div class="admin-section-title">Número de WhatsApp (formato internacional, sin +)</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <input type="text" id="adminWhatsapp" class="price-input" style="flex:1;min-width:180px;">
+            <button class="btn btn-whatsapp btn-auto" id="saveWhatsapp">Guardar</button>
+          </div>
+        </div>
+
+        <div class="admin-section-title">Productos (precio y visibilidad en el catálogo)</div>
+        <div class="admin-tabs">
+          <button class="tab-btn active" data-tab="distre" id="adminTabBtnDistre">Distre</button>
+          <button class="tab-btn" data-tab="algabo" id="adminTabBtnAlgabo">ALGABO</button>
+        </div>
+        <div class="admin-list" id="adminProductList"></div>
+
+        <div class="admin-actions">
+          <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
+          <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
         </div>
       </div>
 
-      <div class="admin-section-title">Productos (precio y visibilidad en el catálogo)</div>
-      <div class="admin-tabs">
-        <button class="tab-btn active" data-tab="distre" id="adminTabBtnDistre">Distre</button>
-        <button class="tab-btn" data-tab="algabo" id="adminTabBtnAlgabo">ALGABO</button>
+      <!-- ====== SECCIÓN USUARIOS ====== -->
+      <div id="adminSectionUsuarios" style="display:none;">
+        <div class="admin-section">
+          <div class="admin-section-header">
+            <h3>Usuarios registrados</h3>
+            <button class="btn btn-whatsapp btn-auto" id="addUserBtn">+ Nuevo usuario</button>
+          </div>
+          <div id="userListContainer">
+            <div class="user-empty">Cargando usuarios...</div>
+          </div>
+        </div>
       </div>
-      <div class="admin-list" id="adminProductList"></div>
 
-      <div class="admin-actions">
-        <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
-        <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
+      <div class="admin-actions" style="margin-top:22px;">
         <button class="btn btn-close btn-auto" id="logoutBtn" style="margin-left:auto;">Cerrar sesión</button>
       </div>
     </div>
@@ -450,15 +545,91 @@
   </div>
 </div>
 
+<!-- ================= MODAL FORMULARIO USUARIO ================= -->
+<div class="overlay" id="userFormOverlay">
+  <div class="modal" style="max-width:420px;">
+    <button class="modal-close" id="userFormClose" aria-label="Cerrar">✕</button>
+    <div class="user-form">
+      <h2 id="userFormTitle">Nuevo usuario</h2>
+      <input type="hidden" id="userFormId">
+      <div class="field">
+        <label>Nombre de usuario</label>
+        <input type="text" id="userFormUsername" autocomplete="off" placeholder="Ej: juan123">
+      </div>
+      <div class="field" id="userFormPasswordWrap">
+        <label id="userFormPassLabel">Contraseña</label>
+        <input type="password" id="userFormPassword" autocomplete="new-password" placeholder="Mínimo 6 caracteres">
+      </div>
+      <div class="field">
+        <label>Rol</label>
+        <select id="userFormRole">
+          <option value="usuario">Usuario</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </div>
+      <div class="form-error" id="userFormError"></div>
+      <div class="form-success" id="userFormSuccess"></div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-close btn-auto" id="userFormCancelBtn">Cancelar</button>
+        <button class="btn btn-auto" style="background:var(--accent);color:#1a1a1a;flex:1;" id="userFormSubmit">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
 /* ======================================================
    CONFIGURACIÓN BASE
    ====================================================== */
-const DEFAULT_WHATSAPP = "5492915663645"; // número por defecto (editable desde el panel admin)
-const ADMIN_USER = "admin";
-const ADMIN_PASS = "editor2026";
+const DEFAULT_WHATSAPP = "5492915663645";
+const API_URL = 'api/';
+
+async function apiRequest(endpoint, options = {}) {
+  const url = API_URL + endpoint;
+  const config = { credentials: 'same-origin', ...options };
+  if (config.body && typeof config.body === 'object' && !(config.body instanceof FormData)) {
+    config.body = JSON.stringify(config.body);
+    config.headers = { 'Content-Type': 'application/json', ...(config.headers || {}) };
+  }
+  const res = await fetch(url, config);
+  const data = await res.json();
+  if (!data.ok) throw new Error(data.error || 'Error del servidor');
+  return data;
+}
+
+async function apiLogin(username, password) {
+  return apiRequest('auth.php?action=login', { method: 'POST', body: { username, password } });
+}
+async function apiLogout() {
+  return apiRequest('auth.php?action=logout', { method: 'POST' });
+}
+async function apiCheckSession() {
+  try { return await apiRequest('auth.php?action=check'); }
+  catch { return { logged_in: false }; }
+}
+async function apiGetUsers() {
+  return apiRequest('users.php');
+}
+async function apiCreateUser(data) {
+  return apiRequest('users.php', { method: 'POST', body: data });
+}
+async function apiUpdateUser(data) {
+  return apiRequest('users.php', { method: 'PUT', body: data });
+}
+async function apiDeleteUser(id) {
+  return apiRequest('users.php?id=' + id, { method: 'DELETE' });
+}
+async function apiGetUserConfig(username) {
+  const qs = username ? '?username=' + encodeURIComponent(username) : '';
+  return apiRequest('user-config.php' + qs);
+}
+async function apiSaveUserConfig(config, username) {
+  const body = { ...config };
+  if (username) body.username = username;
+  return apiRequest('user-config.php', { method: 'POST', body });
+}
 // Nota: esta es una protección simple del lado del cliente, pensada para
 // evitar ediciones accidentales, no para seguridad real (el código fuente
 // es visible para cualquiera que inspeccione la página).
@@ -946,7 +1117,6 @@ function storageSet(key, value){
 let overrides = {};        // { ean: { price, enabled } }
 let cart = {};              // { ean: qty }
 let whatsappNumber = DEFAULT_WHATSAPP;
-let isAdmin = false;
 let currentModalEan = null;
 let activeTab = 'distre';   // 'distre' | 'algabo'
 
@@ -1182,14 +1352,16 @@ document.getElementById('modalClose').addEventListener('click', () => closeOverl
 document.getElementById('modalCloseBtn').addEventListener('click', () => closeOverlayEl(overlay));
 
 /* ======================================================
-   LOGIN ADMIN
+   LOGIN ADMIN (vía API PHP)
    ====================================================== */
 const loginOverlay = document.getElementById('loginOverlay');
 const adminOverlay = document.getElementById('adminOverlay');
 const cartOverlay = document.getElementById('cartOverlay');
 
+let currentUser = null;
+
 document.getElementById('adminIconBtn').addEventListener('click', () => {
-  if(isAdmin){ openAdminPanel(); }
+  if(currentUser){ openAdminPanel(); }
   else{
     openOverlayEl(loginOverlay);
     document.getElementById('loginUser').focus();
@@ -1197,18 +1369,22 @@ document.getElementById('adminIconBtn').addEventListener('click', () => {
 });
 document.getElementById('loginClose').addEventListener('click', () => closeOverlayEl(loginOverlay));
 
-function attemptLogin(){
+async function attemptLogin(){
   const u = document.getElementById('loginUser').value.trim();
   const p = document.getElementById('loginPass').value;
   const errorEl = document.getElementById('loginError');
-  if(u === ADMIN_USER && p === ADMIN_PASS){
-    isAdmin = true;
+  try {
+    const res = await apiLogin(u, p);
+    currentUser = { username: res.username, role: res.role };
     errorEl.style.display = 'none';
     document.getElementById('loginUser').value = '';
     document.getElementById('loginPass').value = '';
     closeOverlayEl(loginOverlay);
+    updateSessionUI();
+    loadUserConfigAndRender();
     openAdminPanel();
-  }else{
+  } catch(e) {
+    errorEl.textContent = e.message || 'Usuario o contraseña incorrectos.';
     errorEl.style.display = 'block';
   }
 }
@@ -1216,19 +1392,101 @@ document.getElementById('loginSubmit').addEventListener('click', attemptLogin);
 document.getElementById('loginPass').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
 document.getElementById('loginUser').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
 
+async function checkSession(){
+  try {
+    const res = await apiCheckSession();
+    if(res.logged_in){
+      currentUser = { username: res.username, role: res.role };
+      updateSessionUI();
+      loadUserConfigAndRender();
+    }
+  } catch(e) { /* not logged in */ }
+}
+
+function updateSessionUI(){
+  const info = document.getElementById('sessionInfo');
+  const btn = document.getElementById('adminIconBtn');
+  if(currentUser){
+    info.style.display = 'flex';
+    document.getElementById('sessionUser').textContent = currentUser.username;
+    const roleEl = document.getElementById('sessionRole');
+    roleEl.textContent = currentUser.role === 'admin' ? 'Admin' : 'Usuario';
+    roleEl.className = 'session-role' + (currentUser.role !== 'admin' ? ' user-role' : '');
+    btn.title = currentUser.role === 'admin' ? 'Panel de administración' : 'Mi perfil';
+  } else {
+    info.style.display = 'none';
+    btn.title = 'Iniciar sesión';
+  }
+}
+
+document.getElementById('sessionLogout').addEventListener('click', async () => {
+  try { await apiLogout(); } catch(e) {}
+  currentUser = null;
+  updateSessionUI();
+  if(adminOverlay.classList.contains('open')) closeOverlayEl(adminOverlay);
+  showToast('Sesión cerrada');
+});
+
+/* ======================================================
+   CONFIGURACIÓN POR USUARIO (vía API)
+   ====================================================== */
+async function loadUserConfigAndRender(){
+  if(!currentUser) return;
+  try {
+    const res = await apiGetUserConfig(currentUser.username);
+    const cfg = res.config || {};
+    overrides = cfg.overrides || {};
+    whatsappNumber = cfg.whatsapp || DEFAULT_WHATSAPP;
+    renderGrid();
+    buildFilters();
+  } catch(e) { /* keep defaults */ }
+}
+
+async function saveCurrentConfig(){
+  if(!currentUser) return;
+  try {
+    await apiSaveUserConfig({ overrides, whatsapp: whatsappNumber }, currentUser.username);
+  } catch(e) { showToast('Error al guardar configuración'); }
+}
+
 /* ======================================================
    PANEL ADMIN
    ====================================================== */
 function openAdminPanel(){
   document.getElementById('adminWhatsapp').value = whatsappNumber;
+  const welcomeEl = document.getElementById('adminWelcome');
+  if(currentUser){
+    welcomeEl.textContent = `Sesión de ${currentUser.username} (${currentUser.role}). Los cambios se guardan en el servidor.`;
+  }
+  document.getElementById('adminSectionProductos').style.display = '';
+  document.getElementById('adminSectionUsuarios').style.display = 'none';
+  document.querySelectorAll('[data-admin-tab]').forEach(b => b.classList.toggle('active', b.dataset.adminTab === 'productos'));
+  if(currentUser && currentUser.role === 'admin'){
+    document.getElementById('adminTabUsuarios').style.display = '';
+  } else {
+    document.getElementById('adminTabUsuarios').style.display = 'none';
+  }
   renderAdminList();
   openOverlayEl(adminOverlay);
 }
 document.getElementById('adminClose').addEventListener('click', () => closeOverlayEl(adminOverlay));
-document.getElementById('logoutBtn').addEventListener('click', () => {
-  isAdmin = false;
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+  try { await apiLogout(); } catch(e) {}
+  currentUser = null;
+  updateSessionUI();
   closeOverlayEl(adminOverlay);
   showToast('Sesión cerrada');
+});
+
+/* --- Admin section tabs --- */
+document.querySelectorAll('[data-admin-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.adminTab;
+    document.querySelectorAll('[data-admin-tab]').forEach(b => b.classList.toggle('active', b.dataset.adminTab === tab));
+    document.getElementById('adminSectionProductos').style.display = tab === 'productos' ? '' : 'none';
+    document.getElementById('adminSectionUsuarios').style.display = tab === 'usuarios' ? '' : 'none';
+    if(tab === 'usuarios' && currentUser && currentUser.role === 'admin') loadUsersList();
+  });
 });
 
 function renderAdminList(){
@@ -1258,7 +1516,7 @@ function renderAdminList(){
       const val = parseInt(inp.value, 10);
       if(!overrides[ean]) overrides[ean] = {};
       overrides[ean].price = Number.isFinite(val) ? val : undefined;
-      saveOverrides();
+      saveCurrentConfig();
       renderGrid();
       showToast('Precio actualizado');
     });
@@ -1268,7 +1526,7 @@ function renderAdminList(){
       const ean = chk.dataset.ean;
       if(!overrides[ean]) overrides[ean] = {};
       overrides[ean].enabled = chk.checked;
-      saveOverrides();
+      saveCurrentConfig();
       chk.closest('.admin-row').classList.toggle('disabled-row', !chk.checked);
       buildFilters();
       renderGrid();
@@ -1280,16 +1538,15 @@ document.getElementById('saveWhatsapp').addEventListener('click', () => {
   const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
   if(val.length < 8){ showToast('Número inválido'); return; }
   whatsappNumber = val;
-  saveWhatsappNumber();
+  saveCurrentConfig();
   showToast('Número de WhatsApp actualizado');
 });
 
-document.getElementById('resetConfig').addEventListener('click', () => {
+document.getElementById('resetConfig').addEventListener('click', async () => {
   if(!confirm('¿Restablecer precios, productos habilitados y WhatsApp a los valores originales?')) return;
   overrides = {};
   whatsappNumber = DEFAULT_WHATSAPP;
-  saveOverrides();
-  saveWhatsappNumber();
+  await saveCurrentConfig();
   document.getElementById('adminWhatsapp').value = whatsappNumber;
   renderAdminList();
   buildFilters();
@@ -1307,6 +1564,142 @@ document.getElementById('exportConfig').addEventListener('click', () => {
   URL.revokeObjectURL(url);
   showToast('Configuración exportada');
 });
+
+/* ======================================================
+   GESTIÓN DE USUARIOS (Admin)
+   ====================================================== */
+let allUsers = [];
+
+async function loadUsersList(){
+  const container = document.getElementById('userListContainer');
+  try {
+    const res = await apiGetUsers();
+    allUsers = res.users || [];
+    renderUsersList();
+  } catch(e) {
+    container.innerHTML = `<div class="user-empty">Error: ${e.message}</div>`;
+  }
+}
+
+function renderUsersList(){
+  const container = document.getElementById('userListContainer');
+  if(allUsers.length === 0){
+    container.innerHTML = '<div class="user-empty">No hay usuarios registrados.</div>';
+    return;
+  }
+  const rows = allUsers.map(u => `
+    <tr>
+      <td><strong>${escHtml(u.username)}</strong></td>
+      <td><span class="role-badge ${u.role}">${u.role}</span></td>
+      <td>${new Date(u.created_at).toLocaleDateString('es-AR')}</td>
+      <td class="user-actions">
+        <button class="btn-sm edit" data-uid="${u.id}" data-action="edit">✏️ Editar</button>
+        ${u.username !== 'admin' ? `<button class="btn-sm danger" data-uid="${u.id}" data-uname="${escHtml(u.username)}" data-action="delete">🗑 Eliminar</button>` : ''}
+      </td>
+    </tr>
+  `).join('');
+
+  container.innerHTML = `
+    <table class="user-table">
+      <thead><tr><th>Usuario</th><th>Rol</th><th>Creado</th><th>Acciones</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+
+  container.querySelectorAll('[data-action="edit"]').forEach(btn => {
+    btn.addEventListener('click', () => openEditUserForm(btn.dataset.uid));
+  });
+  container.querySelectorAll('[data-action="delete"]').forEach(btn => {
+    btn.addEventListener('click', () => deleteUser(btn.dataset.uid, btn.dataset.uname));
+  });
+}
+
+document.getElementById('addUserBtn').addEventListener('click', () => openNewUserForm());
+
+function openNewUserForm(){
+  document.getElementById('userFormTitle').textContent = 'Nuevo usuario';
+  document.getElementById('userFormId').value = '';
+  document.getElementById('userFormUsername').value = '';
+  document.getElementById('userFormUsername').disabled = false;
+  document.getElementById('userFormPassword').value = '';
+  document.getElementById('userFormPasswordWrap').style.display = '';
+  document.getElementById('userFormPassLabel').textContent = 'Contraseña';
+  document.getElementById('userFormRole').value = 'usuario';
+  document.getElementById('userFormError').style.display = 'none';
+  document.getElementById('userFormSuccess').style.display = 'none';
+  openOverlayEl(document.getElementById('userFormOverlay'));
+}
+
+function openEditUserForm(uid){
+  const u = allUsers.find(x => x.id === uid);
+  if(!u) return;
+  document.getElementById('userFormTitle').textContent = 'Editar usuario';
+  document.getElementById('userFormId').value = u.id;
+  document.getElementById('userFormUsername').value = u.username;
+  document.getElementById('userFormUsername').disabled = true;
+  document.getElementById('userFormPassword').value = '';
+  document.getElementById('userFormPasswordWrap').style.display = '';
+  document.getElementById('userFormPassLabel').textContent = 'Nueva contraseña (dejar vacío para no cambiar)';
+  document.getElementById('userFormRole').value = u.role;
+  document.getElementById('userFormError').style.display = 'none';
+  document.getElementById('userFormSuccess').style.display = 'none';
+  openOverlayEl(document.getElementById('userFormOverlay'));
+}
+
+document.getElementById('userFormClose').addEventListener('click', () => closeOverlayEl(document.getElementById('userFormOverlay')));
+document.getElementById('userFormCancelBtn').addEventListener('click', () => closeOverlayEl(document.getElementById('userFormOverlay')));
+
+document.getElementById('userFormSubmit').addEventListener('click', async () => {
+  const errEl = document.getElementById('userFormError');
+  const okEl  = document.getElementById('userFormSuccess');
+  errEl.style.display = 'none';
+  okEl.style.display = 'none';
+
+  const id       = document.getElementById('userFormId').value;
+  const username = document.getElementById('userFormUsername').value.trim();
+  const password = document.getElementById('userFormPassword').value;
+  const role     = document.getElementById('userFormRole').value;
+
+  try {
+    if(!id){
+      if(!username || !password){
+        throw new Error('Usuario y contraseña son obligatorios');
+      }
+      await apiCreateUser({ username, password, role });
+      okEl.textContent = 'Usuario creado exitosamente';
+      okEl.style.display = 'block';
+    } else {
+      const payload = { id, role };
+      if(password) payload.password = password;
+      await apiUpdateUser(payload);
+      okEl.textContent = 'Usuario actualizado';
+      okEl.style.display = 'block';
+    }
+    setTimeout(() => {
+      closeOverlayEl(document.getElementById('userFormOverlay'));
+      loadUsersList();
+    }, 800);
+  } catch(e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+});
+
+async function deleteUser(uid, uname){
+  if(!confirm(`¿Eliminar el usuario "${uname}"? Esta acción no se puede deshacer.`)) return;
+  try {
+    await apiDeleteUser(uid);
+    showToast('Usuario eliminado');
+    loadUsersList();
+  } catch(e) {
+    showToast('Error: ' + e.message);
+  }
+}
+
+function escHtml(s){
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
 
 /* ======================================================
    MODAL CARRITO
@@ -1401,12 +1794,12 @@ function renderCartModal(){
 /* ======================================================
    CIERRE GENÉRICO DE MODALES (click afuera / ESC)
    ====================================================== */
-[overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
+[overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay')].forEach(ov => {
   ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
 });
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape'){
-    [overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
+    [overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay')].forEach(ov => {
       if(ov.classList.contains('open')) closeOverlayEl(ov);
     });
   }
@@ -1418,13 +1811,13 @@ document.addEventListener('keydown', (e) => {
 function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tabs-row .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
   buildFilters();
   renderGrid();
-  if(isAdmin && adminOverlay.classList.contains('open')) renderAdminList();
+  if(currentUser && adminOverlay.classList.contains('open')) renderAdminList();
 }
-document.querySelectorAll('.tab-btn').forEach(btn => {
+document.querySelectorAll('.tabs-row .tab-btn').forEach(btn => {
   btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
 });
 
@@ -1436,6 +1829,7 @@ loadState();
 buildFilters();
 renderGrid();
 document.getElementById('cartBadge').textContent = cartCount();
+checkSession();
 </script>
 </body>
 </html>
