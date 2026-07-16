@@ -593,8 +593,18 @@ async function apiRequest(endpoint, options = {}) {
     config.body = JSON.stringify(config.body);
     config.headers = { 'Content-Type': 'application/json', ...(config.headers || {}) };
   }
-  const res = await fetch(url, config);
-  const data = await res.json();
+  let res;
+  try {
+    res = await fetch(url, config);
+  } catch(e) {
+    throw new Error('No se pudo conectar con el servidor PHP. Verificá que el hosting tenga PHP habilitado.');
+  }
+  let data;
+  try {
+    data = await res.json();
+  } catch(e) {
+    throw new Error('El servidor no devolvió JSON válido (HTTP ' + res.status + '). Verificá que PHP esté funcionando.');
+  }
   if (!data.ok) throw new Error(data.error || 'Error del servidor');
   return data;
 }
@@ -1373,6 +1383,11 @@ async function attemptLogin(){
   const u = document.getElementById('loginUser').value.trim();
   const p = document.getElementById('loginPass').value;
   const errorEl = document.getElementById('loginError');
+  if(!u || !p){
+    errorEl.textContent = 'Ingresá usuario y contraseña.';
+    errorEl.style.display = 'block';
+    return;
+  }
   try {
     const res = await apiLogin(u, p);
     currentUser = { username: res.username, role: res.role };
@@ -1400,7 +1415,9 @@ async function checkSession(){
       updateSessionUI();
       loadUserConfigAndRender();
     }
-  } catch(e) { /* not logged in */ }
+  } catch(e) {
+    console.warn('API no disponible:', e.message);
+  }
 }
 
 function updateSessionUI(){

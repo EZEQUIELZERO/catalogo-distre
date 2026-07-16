@@ -1,12 +1,19 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
+    ini_set('session.cookie_httponly', 1);
+    ini_set('session.use_strict_mode', 1);
     session_set_cookie_params([
         'lifetime' => 86400,
-        'path' => '/',
-        'httponly' => true,
+        'path'     => '/',
+        'httponly'  => true,
         'samesite' => 'Lax'
     ]);
-    session_start();
+    @session_start();
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        http_response_code(500);
+        echo json_encode(['ok' => false, 'error' => 'No se pudo iniciar la sesión PHP. Verificá la configuración del servidor.']);
+        exit;
+    }
 }
 
 header('Content-Type: application/json; charset=utf-8');
