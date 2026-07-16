@@ -8,6 +8,15 @@
       "cat": "Baby",
       "img": "images/uploads/779839995431.webp",
       "brand": "ALGABO"
+    },
+    {
+      "ean": "777983333333",
+      "name": "0001-LOLA",
+      "price": 42000,
+      "tab": "distre",
+      "cat": "Mochila",
+      "img": "images/uploads/777983333333.png",
+      "brand": "Distre"
     }
   ]
 }
