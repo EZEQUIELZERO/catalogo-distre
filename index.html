@@ -505,6 +505,17 @@
         </div>
         <div class="admin-list" id="adminProductList"></div>
 
+        <div class="admin-section" style="margin-top:22px;">
+          <div class="admin-section-header">
+            <h3>Productos agregados</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button class="btn btn-whatsapp btn-auto" id="addProductBtn">+ Agregar producto</button>
+              <button class="btn btn-close btn-auto" id="importCsvBtn">📄 Importar CSV</button>
+            </div>
+          </div>
+          <div id="serverProductList"></div>
+        </div>
+
         <div class="admin-actions">
           <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
           <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
@@ -577,6 +588,87 @@
   </div>
 </div>
 
+<!-- ================= MODAL FORMULARIO PRODUCTO ================= -->
+<div class="overlay" id="productFormOverlay">
+  <div class="modal" style="max-width:500px;">
+    <button class="modal-close" id="productFormClose" aria-label="Cerrar">✕</button>
+    <div class="user-form">
+      <h2 id="productFormTitle">Agregar producto</h2>
+      <input type="hidden" id="productFormId">
+      <div class="field">
+        <label>Código EAN</label>
+        <input type="text" id="productFormEan" placeholder="Ej: 7791234567890" maxlength="20">
+      </div>
+      <div class="field">
+        <label>Descripción</label>
+        <input type="text" id="productFormName" placeholder="Nombre del producto">
+      </div>
+      <div class="field">
+        <label>Precio</label>
+        <input type="number" id="productFormPrice" placeholder="0" min="0" step="1">
+      </div>
+      <div class="field">
+        <label>Marca</label>
+        <input type="text" id="productFormBrand" placeholder="Ej: Distre, ALGABO, Otro">
+      </div>
+      <div class="field">
+        <label>Categoría</label>
+        <input type="text" id="productFormCat" placeholder="Ej: Perfumes, Cuidado Personal">
+      </div>
+      <div class="field">
+        <label>Pestaña</label>
+        <select id="productFormTab">
+          <option value="distre">Distre</option>
+          <option value="algabo">ALGABO</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Imagen (URL o archivo)</label>
+        <input type="text" id="productFormImgUrl" placeholder="https://ejemplo.com/imagen.jpg" style="margin-bottom:8px;">
+        <input type="file" id="productFormImgFile" accept="image/*" style="font-size:.85rem;">
+        <div id="productFormImgPreview" style="margin-top:8px;display:none;">
+          <img src="" alt="Preview" style="max-width:120px;max-height:120px;border-radius:8px;border:1px solid var(--border);">
+        </div>
+      </div>
+      <div class="form-error" id="productFormError"></div>
+      <div class="form-success" id="productFormSuccess"></div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-close btn-auto" id="productFormCancelBtn">Cancelar</button>
+        <button class="btn btn-auto" style="background:var(--accent);color:#1a1a1a;flex:1;" id="productFormSubmit">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL IMPORTAR CSV ================= -->
+<div class="overlay" id="csvImportOverlay">
+  <div class="modal" style="max-width:520px;">
+    <button class="modal-close" id="csvImportClose" aria-label="Cerrar">✕</button>
+    <div class="user-form">
+      <h2>Importar productos desde CSV</h2>
+      <p style="color:var(--text-dim);font-size:.85rem;margin-top:-6px;">Formato: EAN, DESCRIPCION, PRECIO, URL_IMAGEN (separado por coma, una fila por producto)</p>
+      <div class="field">
+        <label>Pestaña destino</label>
+        <select id="csvImportTab">
+          <option value="distre">Distre</option>
+          <option value="algabo">ALGABO</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Archivo CSV</label>
+        <input type="file" id="csvImportFile" accept=".csv,text/csv">
+      </div>
+      <div class="form-error" id="csvImportError"></div>
+      <div class="form-success" id="csvImportSuccess"></div>
+      <div id="csvImportPreview" style="margin:10px 0;max-height:200px;overflow-y:auto;font-size:.8rem;"></div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-close btn-auto" id="csvImportCancelBtn">Cancelar</button>
+        <button class="btn btn-auto" style="background:var(--accent);color:#1a1a1a;flex:1;" id="csvImportSubmit">Importar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
@@ -639,6 +731,38 @@ async function apiSaveUserConfig(config, username) {
   const body = { ...config };
   if (username) body.username = username;
   return apiRequest('user-config.php', { method: 'POST', body });
+}
+
+let serverProducts = [];
+
+async function apiGetProducts() {
+  return apiRequest('products.php');
+}
+async function apiCreateProduct(data) {
+  return apiRequest('products.php', { method: 'POST', body: data });
+}
+async function apiUpdateProduct(data) {
+  return apiRequest('products.php', { method: 'PUT', body: data });
+}
+async function apiDeleteProduct(id) {
+  return apiRequest('products.php?id=' + id, { method: 'DELETE' });
+}
+async function apiUploadImage(file, ean) {
+  const fd = new FormData();
+  fd.append('image', file);
+  fd.append('ean', ean);
+  const res = await fetch(API_URL + 'upload.php', { method: 'POST', body: fd, credentials: 'same-origin' });
+  const data = await res.json();
+  if (!data.ok) throw new Error(data.error || 'Error al subir imagen');
+  return data;
+}
+async function loadServerProducts() {
+  try {
+    const res = await apiGetProducts();
+    serverProducts = res.products || [];
+  } catch(e) {
+    serverProducts = [];
+  }
 }
 // Nota: esta es una protección simple del lado del cliente, pensada para
 // evitar ediciones accidentales, no para seguridad real (el código fuente
@@ -1131,9 +1255,13 @@ let currentModalEan = null;
 let activeTab = 'distre';   // 'distre' | 'algabo'
 
 function getActiveProducts(){
-  return activeTab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
+  const builtIn = activeTab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
+  const custom = serverProducts.filter(p => p.tab === activeTab);
+  return [...builtIn, ...custom];
 }
 function findBaseProduct(ean){
+  const inServer = serverProducts.find(p => p.ean === ean);
+  if (inServer) return inServer;
   return PRODUCTS_DISTRE.find(p => p.ean === ean) || PRODUCTS_ALGABO.find(p => p.ean === ean);
 }
 
@@ -1414,6 +1542,7 @@ async function checkSession(){
       currentUser = { username: res.username, role: res.role };
       updateSessionUI();
       loadUserConfigAndRender();
+      loadServerProducts();
     }
   } catch(e) {
     console.warn('API no disponible:', e.message);
@@ -1549,6 +1678,7 @@ function renderAdminList(){
       renderGrid();
     });
   });
+  renderServerProducts();
 }
 
 document.getElementById('saveWhatsapp').addEventListener('click', () => {
@@ -1719,8 +1849,246 @@ function escHtml(s){
 }
 
 /* ======================================================
+   GESTIÓN DE PRODUCTOS (Admin - API)
+   ====================================================== */
+function renderServerProducts(){
+  const container = document.getElementById('serverProductList');
+  const current = serverProducts.filter(p => p.tab === activeTab);
+  if(current.length === 0){
+    container.innerHTML = '<div style="color:var(--text-dim);padding:12px 0;font-size:.9rem;">No hay productos agregados en esta pestaña.</div>';
+    return;
+  }
+  container.innerHTML = current.map(p => `
+    <div class="admin-row">
+      <img src="${p.img || GENERIC_IMG}" alt="" onerror="onImgError(this)">
+      <div style="flex:1;min-width:0;">
+        <div class="p-name">${escHtml(p.name)}</div>
+        <div class="p-ean">EAN ${escHtml(p.ean)} · ${escHtml(p.brand || '')} · ${escHtml(p.cat || '')}</div>
+        ${p.price !== null ? `<div class="p-price">${formatPrice(p.price)}</div>` : '<div class="p-price" style="color:var(--text-dim);">Consultar</div>'}
+      </div>
+      <div style="display:flex;gap:6px;flex-shrink:0;">
+        <button class="btn-sm edit" data-pid="${p.id}" data-action="edit-product">✏️</button>
+        <button class="btn-sm danger" data-pid="${p.id}" data-action="delete-product">🗑</button>
+      </div>
+    </div>
+  `).join('');
+
+  container.querySelectorAll('[data-action="edit-product"]').forEach(btn => {
+    btn.addEventListener('click', () => openEditProductForm(btn.dataset.pid));
+  });
+  container.querySelectorAll('[data-action="delete-product"]').forEach(btn => {
+    btn.addEventListener('click', () => deleteServerProduct(btn.dataset.pid));
+  });
+}
+
+function openNewProductForm(){
+  document.getElementById('productFormTitle').textContent = 'Agregar producto';
+  document.getElementById('productFormId').value = '';
+  document.getElementById('productFormEan').value = '';
+  document.getElementById('productFormEan').disabled = false;
+  document.getElementById('productFormName').value = '';
+  document.getElementById('productFormPrice').value = '';
+  document.getElementById('productFormBrand').value = '';
+  document.getElementById('productFormCat').value = '';
+  document.getElementById('productFormTab').value = activeTab;
+  document.getElementById('productFormImgUrl').value = '';
+  document.getElementById('productFormImgFile').value = '';
+  document.getElementById('productFormImgPreview').style.display = 'none';
+  document.getElementById('productFormError').style.display = 'none';
+  document.getElementById('productFormSuccess').style.display = 'none';
+  openOverlayEl(document.getElementById('productFormOverlay'));
+}
+
+function openEditProductForm(pid){
+  const p = serverProducts.find(x => x.id === pid);
+  if(!p) return;
+  document.getElementById('productFormTitle').textContent = 'Editar producto';
+  document.getElementById('productFormId').value = p.id;
+  document.getElementById('productFormEan').value = p.ean;
+  document.getElementById('productFormEan').disabled = true;
+  document.getElementById('productFormName').value = p.name;
+  document.getElementById('productFormPrice').value = p.price !== null ? p.price : '';
+  document.getElementById('productFormBrand').value = p.brand || '';
+  document.getElementById('productFormCat').value = p.cat || '';
+  document.getElementById('productFormTab').value = p.tab;
+  document.getElementById('productFormImgUrl').value = p.img || '';
+  document.getElementById('productFormImgFile').value = '';
+  if(p.img){
+    document.getElementById('productFormImgPreview').querySelector('img').src = p.img;
+    document.getElementById('productFormImgPreview').style.display = '';
+  } else {
+    document.getElementById('productFormImgPreview').style.display = 'none';
+  }
+  document.getElementById('productFormError').style.display = 'none';
+  document.getElementById('productFormSuccess').style.display = 'none';
+  openOverlayEl(document.getElementById('productFormOverlay'));
+}
+
+document.getElementById('productFormClose').addEventListener('click', () => closeOverlayEl(document.getElementById('productFormOverlay')));
+document.getElementById('productFormCancelBtn').addEventListener('click', () => closeOverlayEl(document.getElementById('productFormOverlay')));
+
+document.getElementById('productFormImgFile').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if(!file) return;
+  const preview = document.getElementById('productFormImgPreview');
+  preview.querySelector('img').src = URL.createObjectURL(file);
+  preview.style.display = '';
+});
+
+document.getElementById('productFormSubmit').addEventListener('click', async () => {
+  const errEl = document.getElementById('productFormError');
+  const okEl  = document.getElementById('productFormSuccess');
+  errEl.style.display = 'none';
+  okEl.style.display = 'none';
+
+  const id    = document.getElementById('productFormId').value;
+  const ean   = document.getElementById('productFormEan').value.trim();
+  const name  = document.getElementById('productFormName').value.trim();
+  const price = document.getElementById('productFormPrice').value;
+  const brand = document.getElementById('productFormBrand').value.trim();
+  const cat   = document.getElementById('productFormCat').value.trim();
+  const tab   = document.getElementById('productFormTab').value;
+  const imgUrl   = document.getElementById('productFormImgUrl').value.trim();
+  const imgFile  = document.getElementById('productFormImgFile').files[0];
+
+  try {
+    if(!ean || !name) throw new Error('EAN y Descripción son obligatorios');
+
+    let img = imgUrl;
+    if(imgFile){
+      const uploadRes = await apiUploadImage(imgFile, ean);
+      img = uploadRes.url;
+    }
+
+    const payload = {
+      ean, name, brand, cat, tab,
+      price: price !== '' ? parseInt(price, 10) : null,
+      img: img || ''
+    };
+
+    if(id){
+      payload.id = id;
+      await apiUpdateProduct(payload);
+      okEl.textContent = 'Producto actualizado';
+    } else {
+      await apiCreateProduct(payload);
+      okEl.textContent = 'Producto creado';
+    }
+    okEl.style.display = 'block';
+    await loadServerProducts();
+    renderServerProducts();
+    renderAdminList();
+    buildFilters();
+    renderGrid();
+    setTimeout(() => closeOverlayEl(document.getElementById('productFormOverlay')), 800);
+  } catch(e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+});
+
+async function deleteServerProduct(pid){
+  const p = serverProducts.find(x => x.id === pid);
+  if(!p) return;
+  if(!confirm(`¿Eliminar "${p.name}"? Esta acción no se puede deshacer.`)) return;
+  try {
+    await apiDeleteProduct(pid);
+    showToast('Producto eliminado');
+    await loadServerProducts();
+    renderServerProducts();
+    renderAdminList();
+    buildFilters();
+    renderGrid();
+  } catch(e) {
+    showToast('Error: ' + e.message);
+  }
+}
+
+/* --- Botones agregar / importar --- */
+document.getElementById('addProductBtn').addEventListener('click', openNewProductForm);
+document.getElementById('importCsvBtn').addEventListener('click', () => {
+  document.getElementById('csvImportTab').value = activeTab;
+  document.getElementById('csvImportFile').value = '';
+  document.getElementById('csvImportError').style.display = 'none';
+  document.getElementById('csvImportSuccess').style.display = 'none';
+  document.getElementById('csvImportPreview').innerHTML = '';
+  openOverlayEl(document.getElementById('csvImportOverlay'));
+});
+document.getElementById('csvImportClose').addEventListener('click', () => closeOverlayEl(document.getElementById('csvImportOverlay')));
+document.getElementById('csvImportCancelBtn').addEventListener('click', () => closeOverlayEl(document.getElementById('csvImportOverlay')));
+
+document.getElementById('csvImportSubmit').addEventListener('click', async () => {
+  const errEl = document.getElementById('csvImportError');
+  const okEl  = document.getElementById('csvImportSuccess');
+  const preview = document.getElementById('csvImportPreview');
+  errEl.style.display = 'none';
+  okEl.style.display = 'none';
+  preview.innerHTML = '';
+
+  const file = document.getElementById('csvImportFile').files[0];
+  const tab  = document.getElementById('csvImportTab').value;
+  if(!file){ errEl.textContent = 'Seleccioná un archivo CSV'; errEl.style.display = 'block'; return; }
+
+  try {
+    const text = await file.text();
+    const lines = text.split(/\r?\n/).filter(l => l.trim() !== '');
+    if(lines.length === 0) throw new Error('El archivo está vacío');
+
+    const rows = [];
+    let errors = [];
+    for(let i = 0; i < lines.length; i++){
+      const parts = lines[i].split(',').map(s => s.trim().replace(/^"|"$/g, ''));
+      if(parts.length < 3){ errors.push(`Fila ${i+1}: necesita al menos EAN, Descripción, Precio`); continue; }
+      const [ean, name, priceStr, img] = parts;
+      if(!ean || !name){ errors.push(`Fila ${i+1}: EAN y Descripción son obligatorios`); continue; }
+      const price = priceStr ? parseInt(priceStr, 10) : null;
+      rows.push({ ean, name, price: Number.isFinite(price) ? price : null, img: img || '' });
+    }
+
+    if(rows.length === 0) throw new Error('No se encontraron productos válidos:\n' + errors.join('\n'));
+
+    let created = 0, skipped = 0;
+    for(const r of rows){
+      try {
+        await apiCreateProduct({ ...r, brand: '', cat: '', tab });
+        created++;
+      } catch(e) {
+        if(e.message.includes('Ya existe')) skipped++;
+        else throw e;
+      }
+    }
+
+    preview.innerHTML = `<div style="color:var(--text-dim);">Creados: <b>${created}</b> · Omitidos (duplicados): <b>${skipped}</b></div>`;
+    if(errors.length) preview.innerHTML += `<div style="color:var(--danger);margin-top:6px;">${errors.join('<br>')}</div>`;
+
+    okEl.textContent = `${created} producto(s) importado(s)`;
+    okEl.style.display = 'block';
+    await loadServerProducts();
+    renderServerProducts();
+    renderAdminList();
+    buildFilters();
+    renderGrid();
+  } catch(e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+});
+
+/* ======================================================
    MODAL CARRITO
    ====================================================== */
+document.querySelectorAll('.admin-tabs .tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeTab = btn.dataset.tab;
+    document.querySelectorAll('.admin-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
+    document.querySelectorAll('.tabs-row .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
+    searchInput.value = '';
+    buildFilters();
+    renderAdminList();
+    renderGrid();
+  });
+});
+
 document.getElementById('cartBtn').addEventListener('click', () => {
   renderCartModal();
   openOverlayEl(cartOverlay);
@@ -1811,12 +2179,12 @@ function renderCartModal(){
 /* ======================================================
    CIERRE GENÉRICO DE MODALES (click afuera / ESC)
    ====================================================== */
-[overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay')].forEach(ov => {
+[overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay'), document.getElementById('productFormOverlay'), document.getElementById('csvImportOverlay')].forEach(ov => {
   ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
 });
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape'){
-    [overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay')].forEach(ov => {
+    [overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay'), document.getElementById('productFormOverlay'), document.getElementById('csvImportOverlay')].forEach(ov => {
       if(ov.classList.contains('open')) closeOverlayEl(ov);
     });
   }
@@ -1845,6 +2213,7 @@ searchInput.addEventListener('input', renderGrid);
 loadState();
 buildFilters();
 renderGrid();
+loadServerProducts();
 document.getElementById('cartBadge').textContent = cartCount();
 checkSession();
 </script>

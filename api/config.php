@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
+ini_set('display_errors', 0);
+
 if (session_status() === PHP_SESSION_NONE) {
     ini_set('session.cookie_httponly', 1);
     ini_set('session.use_strict_mode', 1);
@@ -9,23 +12,21 @@ if (session_status() === PHP_SESSION_NONE) {
         'samesite' => 'Lax'
     ]);
     @session_start();
-    if (session_status() !== PHP_SESSION_ACTIVE) {
-        http_response_code(500);
-        echo json_encode(['ok' => false, 'error' => 'No se pudo iniciar la sesión PHP. Verificá la configuración del servidor.']);
-        exit;
-    }
 }
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
-$BASE_DIR   = dirname(__DIR__);
-$DATA_DIR   = $BASE_DIR . '/data';
-$USERS_FILE = $DATA_DIR . '/users.json';
+$BASE_DIR    = dirname(__DIR__);
+$DATA_DIR    = $BASE_DIR . '/data';
+$USERS_FILE  = $DATA_DIR . '/users.json';
 $CONFIGS_DIR = $DATA_DIR . '/user-configs';
+$PRODUCTS_FILE = $DATA_DIR . '/products.json';
+$IMAGES_DIR  = $DATA_DIR . '/products/images';
 
-if (!is_dir($DATA_DIR)) mkdir($DATA_DIR, 0755, true);
-if (!is_dir($CONFIGS_DIR)) mkdir($CONFIGS_DIR, 0755, true);
+@mkdir($DATA_DIR, 0755, true);
+@mkdir($CONFIGS_DIR, 0755, true);
+@mkdir($IMAGES_DIR, 0755, true);
 
 function readJSON($path) {
     if (!file_exists($path)) return null;
@@ -114,6 +115,17 @@ function seedAdmin() {
     ];
     saveUsers([$admin]);
     saveUserConfig('admin', ['overrides' => [], 'whatsapp' => '']);
+}
+
+function loadProducts() {
+    global $PRODUCTS_FILE;
+    $products = readJSON($PRODUCTS_FILE);
+    return is_array($products) ? $products : [];
+}
+
+function saveProducts($products) {
+    global $PRODUCTS_FILE;
+    return writeJSON($PRODUCTS_FILE, $products);
 }
 
 seedAdmin();
