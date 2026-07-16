@@ -274,6 +274,15 @@
   .switch input:checked + .slider-toggle:before{transform:translateX(18px);}
 
   .admin-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
+  .admin-subnav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px;border-bottom:1px solid var(--border);padding-bottom:14px;}
+  .admin-subnav-btn{
+    padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:transparent;
+    color:var(--text-dim);font-size:.8rem;font-weight:700;cursor:pointer;transition:all .15s;
+  }
+  .admin-subnav-btn:hover{color:var(--text);}
+  .admin-subnav-btn.active{background:var(--accent);color:#1a1a1a;border-color:var(--accent);}
+  .admin-section .field{margin-top:0;}
+  .admin-section code{background:var(--bg-soft);padding:2px 6px;border-radius:5px;font-size:.85em;color:var(--accent);}
 
   /* ---------- CART MODAL ---------- */
   .cart-header{padding:26px 26px 0;}
@@ -310,70 +319,6 @@
     opacity:0;transform:translateY(10px);transition:all .25s ease;
   }
   .toast.show{opacity:1;transform:translateY(0);}
-
-  /* ---------- SESSION INDICATOR ---------- */
-  .session-info{
-    display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-dim);
-    padding:6px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg-soft);
-  }
-  .session-info .session-user{color:var(--accent);font-weight:700;}
-  .session-info .session-role{
-    font-size:.65rem;text-transform:uppercase;letter-spacing:.5px;
-    padding:2px 7px;border-radius:999px;font-weight:700;
-    background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);
-  }
-  .session-info .session-role.user-role{background:rgba(37,211,102,.12);color:var(--whatsapp);border-color:var(--whatsapp);}
-
-  /* ---------- ADMIN TABS (users section) ---------- */
-  .admin-section{margin-bottom:28px;}
-  .admin-section-header{
-    display:flex;align-items:center;justify-content:space-between;gap:10px;
-    margin-bottom:14px;flex-wrap:wrap;
-  }
-  .admin-section-header h3{margin:0;font-size:1rem;}
-
-  /* ---------- USER TABLE ---------- */
-  .user-table{width:100%;border-collapse:collapse;}
-  .user-table th{
-    text-align:left;padding:10px 12px;font-size:.72rem;text-transform:uppercase;
-    letter-spacing:.5px;color:var(--text-dim);border-bottom:2px solid var(--border);
-    font-weight:700;
-  }
-  .user-table td{
-    padding:12px;border-bottom:1px solid var(--border);font-size:.85rem;
-    vertical-align:middle;
-  }
-  .user-table tr:last-child td{border-bottom:none;}
-  .user-table .user-actions{display:flex;gap:6px;}
-  .user-table .btn-sm{
-    padding:6px 12px;border-radius:8px;border:1px solid var(--border);
-    background:var(--bg-soft);color:var(--text-dim);font-size:.75rem;font-weight:700;
-    cursor:pointer;transition:all .15s;white-space:nowrap;
-  }
-  .user-table .btn-sm:hover{color:var(--text);border-color:var(--accent);}
-  .user-table .btn-sm.danger:hover{border-color:var(--danger);color:var(--danger);}
-  .user-table .btn-sm.edit{border-color:var(--accent);color:var(--accent);}
-
-  .role-badge{
-    display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;
-    padding:3px 8px;border-radius:999px;letter-spacing:.4px;
-  }
-  .role-badge.admin{background:rgba(212,175,106,.15);color:var(--accent);border:1px solid var(--accent);}
-  .role-badge.usuario{background:rgba(37,211,102,.1);color:var(--whatsapp);border:1px solid var(--whatsapp);}
-
-  .user-empty{text-align:center;padding:30px;color:var(--text-dim);font-size:.85rem;}
-
-  /* ---------- USER FORM MODAL ---------- */
-  .user-form{display:flex;flex-direction:column;gap:14px;padding:34px 26px 28px;}
-  .user-form h2{margin:0 0 4px;font-size:1.15rem;}
-  .user-form .field select{
-    width:100%;padding:11px 14px;border-radius:8px;border:1px solid var(--border);
-    background:var(--bg-soft);color:var(--text);font-size:.92rem;
-    appearance:auto;
-  }
-  .user-form .field select:focus{outline:none;border-color:var(--accent);}
-  .form-error{color:var(--danger);font-size:.82rem;display:none;margin-top:-6px;}
-  .form-success{color:var(--whatsapp);font-size:.82rem;display:none;margin-top:-6px;}
 </style>
 </head>
 <body>
@@ -390,13 +335,6 @@
     </div>
     <div class="header-actions">
       <div class="counter" id="counter"></div>
-      <div class="session-info" id="sessionInfo" style="display:none;">
-        <span class="session-user" id="sessionUser"></span>
-        <span class="session-role" id="sessionRole"></span>
-        <button class="icon-btn" id="sessionLogout" title="Cerrar sesión" style="width:28px;height:28px;">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        </button>
-      </div>
       <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
       </button>
@@ -417,7 +355,7 @@
   <div class="grid" id="grid"></div>
 </main>
 
-<footer>Catálogo generado por Most Services - Contacto: Ezequiel 2915663645/footer>
+<footer>Catálogo generado automáticamente a partir de la planilla de precios · Distre</footer>
 
 <!-- ================= MODAL PRODUCTO ================= -->
 <div class="overlay" id="overlay">
@@ -477,19 +415,21 @@
 
 <!-- ================= MODAL ADMIN ================= -->
 <div class="overlay" id="adminOverlay">
-  <div class="modal" style="max-width:720px;">
+  <div class="modal" style="max-width:780px;">
     <button class="modal-close" id="adminClose" aria-label="Cerrar">✕</button>
     <div class="admin-body">
       <h2>Panel de administración</h2>
-      <p class="admin-note" id="adminWelcome"></p>
+      <p class="admin-note">Los cambios de precio/visibilidad se guardan en este navegador. Los productos nuevos y las imágenes subidas se guardan directamente en el repositorio de GitHub.</p>
 
-      <div class="admin-section-tabs" style="display:flex;gap:8px;margin-bottom:22px;">
-        <button class="tab-btn active" data-admin-tab="productos" id="adminTabProductos">Productos</button>
-        <button class="tab-btn" data-admin-tab="usuarios" id="adminTabUsuarios">Usuarios</button>
+      <div class="admin-subnav">
+        <button class="admin-subnav-btn active" data-section="general">General</button>
+        <button class="admin-subnav-btn" data-section="products">Productos</button>
+        <button class="admin-subnav-btn" data-section="addproduct">Agregar producto</button>
+        <button class="admin-subnav-btn" data-section="importcsv">Importar CSV</button>
       </div>
 
-      <!-- ====== SECCIÓN PRODUCTOS ====== -->
-      <div id="adminSectionProductos">
+      <!-- ---------- SECCIÓN GENERAL ---------- -->
+      <div class="admin-section" id="adminSectionGeneral">
         <div style="margin-bottom:26px;">
           <div class="admin-section-title">Número de WhatsApp (formato internacional, sin +)</div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
@@ -498,44 +438,74 @@
           </div>
         </div>
 
+        <div style="margin-bottom:10px;">
+          <div class="admin-section-title">Repositorio de GitHub</div>
+          <p class="admin-note">Necesario para poder agregar productos e imágenes nuevas desde este panel. El catálogo (<code>catalog.html</code>) debe estar en la raíz del repositorio.</p>
+          <div class="field"><label>Repositorio (usuario/nombre-repo)</label>
+            <input type="text" id="ghRepo" class="price-input" placeholder="ezequielzero/catalogo-distre"></div>
+          <div class="field" style="margin-top:10px;"><label>Rama</label>
+            <input type="text" id="ghBranch" class="price-input" placeholder="main"></div>
+          <div class="field" style="margin-top:10px;"><label>Token de acceso personal (fine-grained, permiso Contents: Read and write)</label>
+            <input type="password" id="ghToken" class="price-input" placeholder="github_pat_..."></div>
+          <button class="btn btn-whatsapp btn-auto" id="saveGithubConfig" style="margin-top:12px;">Guardar configuración de GitHub</button>
+          <p class="admin-note" style="margin-top:10px;">⚠️ Este token le da permiso de escritura a tu repositorio y queda guardado solo en este navegador. No lo compartas ni lo cargues en un dispositivo que no sea de confianza. Generá un token "fine-grained" (github.com → Settings → Developer settings → Fine-grained tokens) limitado únicamente a este repositorio, con permiso "Contents: Read and write" y nada más.</p>
+        </div>
+      </div>
+
+      <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
+      <div class="admin-section" id="adminSectionProducts" style="display:none;">
         <div class="admin-section-title">Productos (precio y visibilidad en el catálogo)</div>
         <div class="admin-tabs">
           <button class="tab-btn active" data-tab="distre" id="adminTabBtnDistre">Distre</button>
           <button class="tab-btn" data-tab="algabo" id="adminTabBtnAlgabo">ALGABO</button>
         </div>
         <div class="admin-list" id="adminProductList"></div>
-
-        <div class="admin-section" style="margin-top:22px;">
-          <div class="admin-section-header">
-            <h3>Productos agregados</h3>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;">
-              <button class="btn btn-whatsapp btn-auto" id="addProductBtn">+ Agregar producto</button>
-              <button class="btn btn-close btn-auto" id="importCsvBtn">📄 Importar CSV</button>
-            </div>
-          </div>
-          <div id="serverProductList"></div>
-        </div>
-
-        <div class="admin-actions">
-          <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
-          <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
-        </div>
       </div>
 
-      <!-- ====== SECCIÓN USUARIOS ====== -->
-      <div id="adminSectionUsuarios" style="display:none;">
-        <div class="admin-section">
-          <div class="admin-section-header">
-            <h3>Usuarios registrados</h3>
-            <button class="btn btn-whatsapp btn-auto" id="addUserBtn">+ Nuevo usuario</button>
-          </div>
-          <div id="userListContainer">
-            <div class="user-empty">Cargando usuarios...</div>
-          </div>
+      <!-- ---------- SECCIÓN AGREGAR PRODUCTO ---------- -->
+      <div class="admin-section" id="adminSectionAddProduct" style="display:none;">
+        <div class="admin-section-title">Agregar producto nuevo</div>
+        <div class="field"><label>Código EAN</label><input type="text" id="npEan" class="price-input" inputmode="numeric"></div>
+        <div class="field" style="margin-top:10px;"><label>Descripción</label><input type="text" id="npName" class="price-input"></div>
+        <div class="field" style="margin-top:10px;"><label>Precio (dejar vacío = "Consultar precio")</label><input type="number" id="npPrice" class="price-input" min="0" step="1"></div>
+        <div class="field" style="margin-top:10px;"><label>Pestaña</label>
+          <select id="npTab" class="price-input">
+            <option value="distre">Distre</option>
+            <option value="algabo" selected>ALGABO</option>
+          </select>
         </div>
+        <div class="field" style="margin-top:10px;"><label>Categoría</label>
+          <select id="npCatSelect" class="price-input"></select>
+          <input type="text" id="npCatNew" class="price-input" placeholder="Nombre de la nueva categoría" style="margin-top:8px;display:none;">
+        </div>
+        <div class="field" style="margin-top:10px;">
+          <label>Imagen — pegá una URL o subí un archivo (se guarda en <code>images/uploads/{EAN}</code>)</label>
+          <input type="text" id="npImgUrl" class="price-input" placeholder="https://...">
+          <input type="file" id="npImgFile" accept="image/*" class="price-input" style="margin-top:8px;padding:8px;">
+        </div>
+        <button class="btn btn-whatsapp btn-auto" id="addProductBtn" style="margin-top:16px;">Agregar producto</button>
+        <p class="admin-note" id="addProductStatus"></p>
       </div>
 
-      <div class="admin-actions" style="margin-top:22px;">
+      <!-- ---------- SECCIÓN IMPORTAR CSV ---------- -->
+      <div class="admin-section" id="adminSectionImportCsv" style="display:none;">
+        <div class="admin-section-title">Importar productos desde CSV</div>
+        <p class="admin-note">El archivo debe tener encabezado en la primera fila con las columnas, en este orden: <b>CODIGO EAN, DESCRIPCION, PRECIO, URL DE LA IMAGEN</b>.</p>
+        <div class="field"><label>Pestaña destino</label>
+          <select id="csvTab" class="price-input">
+            <option value="distre">Distre</option>
+            <option value="algabo" selected>ALGABO</option>
+          </select>
+        </div>
+        <div class="field" style="margin-top:10px;"><label>Categoría para todos los productos importados</label><input type="text" id="csvCat" class="price-input" placeholder="Ej: Nuevos ingresos"></div>
+        <div class="field" style="margin-top:10px;"><label>Archivo CSV</label><input type="file" id="csvFile" accept=".csv" class="price-input" style="padding:8px;"></div>
+        <button class="btn btn-whatsapp btn-auto" id="importCsvBtn" style="margin-top:16px;">Importar CSV</button>
+        <p class="admin-note" id="importCsvStatus"></p>
+      </div>
+
+      <div class="admin-actions">
+        <button class="btn btn-close btn-auto" id="exportConfig">⬇ Exportar configuración</button>
+        <button class="btn btn-close btn-auto" id="resetConfig">↺ Restablecer valores de fábrica</button>
         <button class="btn btn-close btn-auto" id="logoutBtn" style="margin-left:auto;">Cerrar sesión</button>
       </div>
     </div>
@@ -556,214 +526,15 @@
   </div>
 </div>
 
-<!-- ================= MODAL FORMULARIO USUARIO ================= -->
-<div class="overlay" id="userFormOverlay">
-  <div class="modal" style="max-width:420px;">
-    <button class="modal-close" id="userFormClose" aria-label="Cerrar">✕</button>
-    <div class="user-form">
-      <h2 id="userFormTitle">Nuevo usuario</h2>
-      <input type="hidden" id="userFormId">
-      <div class="field">
-        <label>Nombre de usuario</label>
-        <input type="text" id="userFormUsername" autocomplete="off" placeholder="Ej: juan123">
-      </div>
-      <div class="field" id="userFormPasswordWrap">
-        <label id="userFormPassLabel">Contraseña</label>
-        <input type="password" id="userFormPassword" autocomplete="new-password" placeholder="Mínimo 6 caracteres">
-      </div>
-      <div class="field">
-        <label>Rol</label>
-        <select id="userFormRole">
-          <option value="usuario">Usuario</option>
-          <option value="admin">Administrador</option>
-        </select>
-      </div>
-      <div class="form-error" id="userFormError"></div>
-      <div class="form-success" id="userFormSuccess"></div>
-      <div style="display:flex;gap:10px;">
-        <button class="btn btn-close btn-auto" id="userFormCancelBtn">Cancelar</button>
-        <button class="btn btn-auto" style="background:var(--accent);color:#1a1a1a;flex:1;" id="userFormSubmit">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================= MODAL FORMULARIO PRODUCTO ================= -->
-<div class="overlay" id="productFormOverlay">
-  <div class="modal" style="max-width:500px;">
-    <button class="modal-close" id="productFormClose" aria-label="Cerrar">✕</button>
-    <div class="user-form">
-      <h2 id="productFormTitle">Agregar producto</h2>
-      <input type="hidden" id="productFormId">
-      <div class="field">
-        <label>Código EAN</label>
-        <input type="text" id="productFormEan" placeholder="Ej: 7791234567890" maxlength="20">
-      </div>
-      <div class="field">
-        <label>Descripción</label>
-        <input type="text" id="productFormName" placeholder="Nombre del producto">
-      </div>
-      <div class="field">
-        <label>Precio</label>
-        <input type="number" id="productFormPrice" placeholder="0" min="0" step="1">
-      </div>
-      <div class="field">
-        <label>Marca</label>
-        <input type="text" id="productFormBrand" placeholder="Ej: Distre, ALGABO, Otro">
-      </div>
-      <div class="field">
-        <label>Categoría</label>
-        <input type="text" id="productFormCat" placeholder="Ej: Perfumes, Cuidado Personal">
-      </div>
-      <div class="field">
-        <label>Pestaña</label>
-        <select id="productFormTab">
-          <option value="distre">Distre</option>
-          <option value="algabo">ALGABO</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Imagen (URL o archivo)</label>
-        <input type="text" id="productFormImgUrl" placeholder="https://ejemplo.com/imagen.jpg" style="margin-bottom:8px;">
-        <input type="file" id="productFormImgFile" accept="image/*" style="font-size:.85rem;">
-        <div id="productFormImgPreview" style="margin-top:8px;display:none;">
-          <img src="" alt="Preview" style="max-width:120px;max-height:120px;border-radius:8px;border:1px solid var(--border);">
-        </div>
-      </div>
-      <div class="form-error" id="productFormError"></div>
-      <div class="form-success" id="productFormSuccess"></div>
-      <div style="display:flex;gap:10px;">
-        <button class="btn btn-close btn-auto" id="productFormCancelBtn">Cancelar</button>
-        <button class="btn btn-auto" style="background:var(--accent);color:#1a1a1a;flex:1;" id="productFormSubmit">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================= MODAL IMPORTAR CSV ================= -->
-<div class="overlay" id="csvImportOverlay">
-  <div class="modal" style="max-width:520px;">
-    <button class="modal-close" id="csvImportClose" aria-label="Cerrar">✕</button>
-    <div class="user-form">
-      <h2>Importar productos desde CSV</h2>
-      <p style="color:var(--text-dim);font-size:.85rem;margin-top:-6px;">Formato: EAN, DESCRIPCION, PRECIO, URL_IMAGEN (separado por coma, una fila por producto)</p>
-      <div class="field">
-        <label>Pestaña destino</label>
-        <select id="csvImportTab">
-          <option value="distre">Distre</option>
-          <option value="algabo">ALGABO</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Archivo CSV</label>
-        <input type="file" id="csvImportFile" accept=".csv,text/csv">
-      </div>
-      <div class="form-error" id="csvImportError"></div>
-      <div class="form-success" id="csvImportSuccess"></div>
-      <div id="csvImportPreview" style="margin:10px 0;max-height:200px;overflow-y:auto;font-size:.8rem;"></div>
-      <div style="display:flex;gap:10px;">
-        <button class="btn btn-close btn-auto" id="csvImportCancelBtn">Cancelar</button>
-        <button class="btn btn-auto" style="background:var(--accent);color:#1a1a1a;flex:1;" id="csvImportSubmit">Importar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
 /* ======================================================
    CONFIGURACIÓN BASE
    ====================================================== */
-const DEFAULT_WHATSAPP = "5492915663645";
-const API_URL = 'api/';
-
-async function apiRequest(endpoint, options = {}) {
-  const url = API_URL + endpoint;
-  const config = { credentials: 'same-origin', ...options };
-  if (config.body && typeof config.body === 'object' && !(config.body instanceof FormData)) {
-    config.body = JSON.stringify(config.body);
-    config.headers = { 'Content-Type': 'application/json', ...(config.headers || {}) };
-  }
-  let res;
-  try {
-    res = await fetch(url, config);
-  } catch(e) {
-    throw new Error('No se pudo conectar con el servidor PHP. Verificá que el hosting tenga PHP habilitado.');
-  }
-  let data;
-  try {
-    data = await res.json();
-  } catch(e) {
-    throw new Error('El servidor no devolvió JSON válido (HTTP ' + res.status + '). Verificá que PHP esté funcionando.');
-  }
-  if (!data.ok) throw new Error(data.error || 'Error del servidor');
-  return data;
-}
-
-async function apiLogin(username, password) {
-  return apiRequest('auth.php?action=login', { method: 'POST', body: { username, password } });
-}
-async function apiLogout() {
-  return apiRequest('auth.php?action=logout', { method: 'POST' });
-}
-async function apiCheckSession() {
-  try { return await apiRequest('auth.php?action=check'); }
-  catch { return { logged_in: false }; }
-}
-async function apiGetUsers() {
-  return apiRequest('users.php');
-}
-async function apiCreateUser(data) {
-  return apiRequest('users.php', { method: 'POST', body: data });
-}
-async function apiUpdateUser(data) {
-  return apiRequest('users.php', { method: 'PUT', body: data });
-}
-async function apiDeleteUser(id) {
-  return apiRequest('users.php?id=' + id, { method: 'DELETE' });
-}
-async function apiGetUserConfig(username) {
-  const qs = username ? '?username=' + encodeURIComponent(username) : '';
-  return apiRequest('user-config.php' + qs);
-}
-async function apiSaveUserConfig(config, username) {
-  const body = { ...config };
-  if (username) body.username = username;
-  return apiRequest('user-config.php', { method: 'POST', body });
-}
-
-let serverProducts = [];
-
-async function apiGetProducts() {
-  return apiRequest('products.php');
-}
-async function apiCreateProduct(data) {
-  return apiRequest('products.php', { method: 'POST', body: data });
-}
-async function apiUpdateProduct(data) {
-  return apiRequest('products.php', { method: 'PUT', body: data });
-}
-async function apiDeleteProduct(id) {
-  return apiRequest('products.php?id=' + id, { method: 'DELETE' });
-}
-async function apiUploadImage(file, ean) {
-  const fd = new FormData();
-  fd.append('image', file);
-  fd.append('ean', ean);
-  const res = await fetch(API_URL + 'upload.php', { method: 'POST', body: fd, credentials: 'same-origin' });
-  const data = await res.json();
-  if (!data.ok) throw new Error(data.error || 'Error al subir imagen');
-  return data;
-}
-async function loadServerProducts() {
-  try {
-    const res = await apiGetProducts();
-    serverProducts = res.products || [];
-  } catch(e) {
-    serverProducts = [];
-  }
-}
+const DEFAULT_WHATSAPP = "5492915663645"; // número por defecto (editable desde el panel admin)
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "editor2026";
 // Nota: esta es una protección simple del lado del cliente, pensada para
 // evitar ediciones accidentales, no para seguridad real (el código fuente
 // es visible para cualquiera que inspeccione la página).
@@ -964,7 +735,7 @@ const PRODUCTS_ALGABO = [
   { ean:"7791274196331", name:"ALGABO GEL EXT FUERTE 500", price:4500, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-640-0.webp", brand:"ALGABO", cat:"Cuidado Capilar" },
   { ean:"7791274003110", name:"ALGABO FOOT 60", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
   { ean:"7791274187742", name:"ALGABO FOOT 100", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
-  { ean:"7791274009532", name:"ALGABO FOOT 200", price:2600, img:"https://acdn-us.mitiendanube.com/stores/001/130/470/products/dsc030871-919390fcf57850f63916572097028057-640-0.webp", brand:"ALGABO", cat:"Talcos y Pies" },
+  { ean:"7791274009532", name:"ALGABO FOOT 200", price:2600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
   { ean:"7791274196416", name:"ALGABO FOOT DP 200", price:2000, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
   { ean:"7791274004360", name:"ALGABO FOOT MUJER 60", price:1500, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
   { ean:"7791274004377", name:"ALGABO FOOT MUJER 100", price:1600, img:GENERIC_IMG, brand:"ALGABO", cat:"Talcos y Pies" },
@@ -1251,18 +1022,30 @@ function storageSet(key, value){
 let overrides = {};        // { ean: { price, enabled } }
 let cart = {};              // { ean: qty }
 let whatsappNumber = DEFAULT_WHATSAPP;
+let isAdmin = false;
 let currentModalEan = null;
 let activeTab = 'distre';   // 'distre' | 'algabo'
 
 function getActiveProducts(){
-  const builtIn = activeTab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
-  const custom = serverProducts.filter(p => p.tab === activeTab);
-  return [...builtIn, ...custom];
+  return activeTab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
+}
+function getProductsForTab(tab){
+  return tab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
 }
 function findBaseProduct(ean){
-  const inServer = serverProducts.find(p => p.ean === ean);
-  if (inServer) return inServer;
   return PRODUCTS_DISTRE.find(p => p.ean === ean) || PRODUCTS_ALGABO.find(p => p.ean === ean);
+}
+function getGithubConfig(){
+  return {
+    repo: storageGet('distre_gh_repo') || '',
+    branch: storageGet('distre_gh_branch') || 'main',
+    token: storageGet('distre_gh_token') || ''
+  };
+}
+function saveGithubConfigTo(repo, branch, token){
+  storageSet('distre_gh_repo', repo);
+  storageSet('distre_gh_branch', branch || 'main');
+  storageSet('distre_gh_token', token);
 }
 
 function loadState(){
@@ -1305,6 +1088,96 @@ function showToast(msg){
 }
 function openOverlayEl(el){ el.classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeOverlayEl(el){ el.classList.remove('open'); document.body.style.overflow = ''; }
+
+/* ======================================================
+   INTEGRACIÓN CON GITHUB (agregar productos / imágenes)
+   El catálogo lee, además de los productos incluidos en
+   este archivo, un JSON opcional del propio repositorio:
+   data/custom-products.json. El panel admin escribe ahí
+   (y en images/uploads/) usando la API de contenidos de
+   GitHub, autenticada con un token que ingresa el admin.
+   ====================================================== */
+const GITHUB_API = "https://api.github.com";
+const CUSTOM_PRODUCTS_PATH = "data/custom-products.json";
+
+function utf8ToBase64(str){
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function base64ToUtf8(b64){
+  return decodeURIComponent(escape(atob(b64.replace(/\n/g, ''))));
+}
+function fileToBase64(file){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+    reader.onerror = () => reject(new Error('No se pudo leer el archivo'));
+    reader.readAsDataURL(file);
+  });
+}
+async function githubGetFile(path){
+  const { repo, branch, token } = getGithubConfig();
+  if(!repo || !token) throw new Error('Configurá el repositorio y el token de GitHub en la sección General.');
+  const res = await fetch(`${GITHUB_API}/repos/${repo}/contents/${path}?ref=${encodeURIComponent(branch)}`, {
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
+  });
+  if(res.status === 404) return null;
+  if(!res.ok) throw new Error(`GitHub respondió ${res.status} al leer ${path}`);
+  return res.json();
+}
+async function githubPutFile(path, contentBase64, message, sha){
+  const { repo, branch, token } = getGithubConfig();
+  if(!repo || !token) throw new Error('Configurá el repositorio y el token de GitHub en la sección General.');
+  const body = { message, content: contentBase64, branch };
+  if(sha) body.sha = sha;
+  const res = await fetch(`${GITHUB_API}/repos/${repo}/contents/${path}`, {
+    method: 'PUT',
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if(!res.ok){
+    let msg = `GitHub respondió ${res.status}`;
+    try{ const err = await res.json(); if(err.message) msg = err.message; }catch(e){}
+    throw new Error(msg);
+  }
+  return res.json();
+}
+async function loadCustomProductsData(){
+  const existing = await githubGetFile(CUSTOM_PRODUCTS_PATH);
+  if(!existing) return { data: { products: [] }, sha: null };
+  let data;
+  try{ data = JSON.parse(base64ToUtf8(existing.content)); }catch(e){ data = { products: [] }; }
+  if(!Array.isArray(data.products)) data.products = [];
+  return { data, sha: existing.sha };
+}
+async function saveCustomProductsData(data, sha, message){
+  const contentBase64 = utf8ToBase64(JSON.stringify(data, null, 2));
+  await githubPutFile(CUSTOM_PRODUCTS_PATH, contentBase64, message, sha);
+}
+function mergeCustomProductLocally(entry){
+  const target = getProductsForTab(entry.tab);
+  const idx = target.findIndex(p => p.ean === entry.ean);
+  const productObj = {
+    ean: entry.ean, name: entry.name,
+    price: (typeof entry.price === 'number' && Number.isFinite(entry.price)) ? entry.price : null,
+    img: entry.img || GENERIC_IMG,
+    brand: entry.brand || (entry.tab === 'distre' ? 'Distre' : 'ALGABO'),
+    cat: entry.cat || 'Otros'
+  };
+  if(idx >= 0) target[idx] = productObj; else target.push(productObj);
+}
+async function loadCustomProducts(){
+  try{
+    const res = await fetch('./' + CUSTOM_PRODUCTS_PATH, { cache: 'no-store' });
+    if(!res.ok) return;
+    const data = await res.json();
+    (data.products || []).forEach(p => {
+      if(!p.ean || !p.name) return;
+      mergeCustomProductLocally({ ...p, tab: p.tab === 'distre' ? 'distre' : 'algabo' });
+    });
+  }catch(e){
+    /* El archivo todavía no existe en el repo, o no se pudo leer: seguimos con el catálogo base. */
+  }
+}
 
 /* ======================================================
    CARRITO
@@ -1490,16 +1363,14 @@ document.getElementById('modalClose').addEventListener('click', () => closeOverl
 document.getElementById('modalCloseBtn').addEventListener('click', () => closeOverlayEl(overlay));
 
 /* ======================================================
-   LOGIN ADMIN (vía API PHP)
+   LOGIN ADMIN
    ====================================================== */
 const loginOverlay = document.getElementById('loginOverlay');
 const adminOverlay = document.getElementById('adminOverlay');
 const cartOverlay = document.getElementById('cartOverlay');
 
-let currentUser = null;
-
 document.getElementById('adminIconBtn').addEventListener('click', () => {
-  if(currentUser){ openAdminPanel(); }
+  if(isAdmin){ openAdminPanel(); }
   else{
     openOverlayEl(loginOverlay);
     document.getElementById('loginUser').focus();
@@ -1507,27 +1378,18 @@ document.getElementById('adminIconBtn').addEventListener('click', () => {
 });
 document.getElementById('loginClose').addEventListener('click', () => closeOverlayEl(loginOverlay));
 
-async function attemptLogin(){
+function attemptLogin(){
   const u = document.getElementById('loginUser').value.trim();
   const p = document.getElementById('loginPass').value;
   const errorEl = document.getElementById('loginError');
-  if(!u || !p){
-    errorEl.textContent = 'Ingresá usuario y contraseña.';
-    errorEl.style.display = 'block';
-    return;
-  }
-  try {
-    const res = await apiLogin(u, p);
-    currentUser = { username: res.username, role: res.role };
+  if(u === ADMIN_USER && p === ADMIN_PASS){
+    isAdmin = true;
     errorEl.style.display = 'none';
     document.getElementById('loginUser').value = '';
     document.getElementById('loginPass').value = '';
     closeOverlayEl(loginOverlay);
-    updateSessionUI();
-    loadUserConfigAndRender();
     openAdminPanel();
-  } catch(e) {
-    errorEl.textContent = e.message || 'Usuario o contraseña incorrectos.';
+  }else{
     errorEl.style.display = 'block';
   }
 }
@@ -1535,104 +1397,41 @@ document.getElementById('loginSubmit').addEventListener('click', attemptLogin);
 document.getElementById('loginPass').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
 document.getElementById('loginUser').addEventListener('keydown', (e) => { if(e.key === 'Enter') attemptLogin(); });
 
-async function checkSession(){
-  try {
-    const res = await apiCheckSession();
-    if(res.logged_in){
-      currentUser = { username: res.username, role: res.role };
-      updateSessionUI();
-      loadUserConfigAndRender();
-      loadServerProducts();
-    }
-  } catch(e) {
-    console.warn('API no disponible:', e.message);
-  }
-}
-
-function updateSessionUI(){
-  const info = document.getElementById('sessionInfo');
-  const btn = document.getElementById('adminIconBtn');
-  if(currentUser){
-    info.style.display = 'flex';
-    document.getElementById('sessionUser').textContent = currentUser.username;
-    const roleEl = document.getElementById('sessionRole');
-    roleEl.textContent = currentUser.role === 'admin' ? 'Admin' : 'Usuario';
-    roleEl.className = 'session-role' + (currentUser.role !== 'admin' ? ' user-role' : '');
-    btn.title = currentUser.role === 'admin' ? 'Panel de administración' : 'Mi perfil';
-  } else {
-    info.style.display = 'none';
-    btn.title = 'Iniciar sesión';
-  }
-}
-
-document.getElementById('sessionLogout').addEventListener('click', async () => {
-  try { await apiLogout(); } catch(e) {}
-  currentUser = null;
-  updateSessionUI();
-  if(adminOverlay.classList.contains('open')) closeOverlayEl(adminOverlay);
-  showToast('Sesión cerrada');
-});
-
-/* ======================================================
-   CONFIGURACIÓN POR USUARIO (vía API)
-   ====================================================== */
-async function loadUserConfigAndRender(){
-  if(!currentUser) return;
-  try {
-    const res = await apiGetUserConfig(currentUser.username);
-    const cfg = res.config || {};
-    overrides = cfg.overrides || {};
-    whatsappNumber = cfg.whatsapp || DEFAULT_WHATSAPP;
-    renderGrid();
-    buildFilters();
-  } catch(e) { /* keep defaults */ }
-}
-
-async function saveCurrentConfig(){
-  if(!currentUser) return;
-  try {
-    await apiSaveUserConfig({ overrides, whatsapp: whatsappNumber }, currentUser.username);
-  } catch(e) { showToast('Error al guardar configuración'); }
-}
-
 /* ======================================================
    PANEL ADMIN
    ====================================================== */
 function openAdminPanel(){
   document.getElementById('adminWhatsapp').value = whatsappNumber;
-  const welcomeEl = document.getElementById('adminWelcome');
-  if(currentUser){
-    welcomeEl.textContent = `Sesión de ${currentUser.username} (${currentUser.role}). Los cambios se guardan en el servidor.`;
-  }
-  document.getElementById('adminSectionProductos').style.display = '';
-  document.getElementById('adminSectionUsuarios').style.display = 'none';
-  document.querySelectorAll('[data-admin-tab]').forEach(b => b.classList.toggle('active', b.dataset.adminTab === 'productos'));
-  if(currentUser && currentUser.role === 'admin'){
-    document.getElementById('adminTabUsuarios').style.display = '';
-  } else {
-    document.getElementById('adminTabUsuarios').style.display = 'none';
-  }
+  const gh = getGithubConfig();
+  document.getElementById('ghRepo').value = gh.repo;
+  document.getElementById('ghBranch').value = gh.branch;
+  document.getElementById('ghToken').value = gh.token;
   renderAdminList();
+  populateCategorySelect();
+  switchAdminSection('general');
   openOverlayEl(adminOverlay);
 }
 document.getElementById('adminClose').addEventListener('click', () => closeOverlayEl(adminOverlay));
-document.getElementById('logoutBtn').addEventListener('click', async () => {
-  try { await apiLogout(); } catch(e) {}
-  currentUser = null;
-  updateSessionUI();
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  isAdmin = false;
   closeOverlayEl(adminOverlay);
   showToast('Sesión cerrada');
 });
 
-/* --- Admin section tabs --- */
-document.querySelectorAll('[data-admin-tab]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tab = btn.dataset.adminTab;
-    document.querySelectorAll('[data-admin-tab]').forEach(b => b.classList.toggle('active', b.dataset.adminTab === tab));
-    document.getElementById('adminSectionProductos').style.display = tab === 'productos' ? '' : 'none';
-    document.getElementById('adminSectionUsuarios').style.display = tab === 'usuarios' ? '' : 'none';
-    if(tab === 'usuarios' && currentUser && currentUser.role === 'admin') loadUsersList();
-  });
+/* Sub-navegación del panel admin */
+const ADMIN_SECTION_IDS = {
+  general: 'adminSectionGeneral',
+  products: 'adminSectionProducts',
+  addproduct: 'adminSectionAddProduct',
+  importcsv: 'adminSectionImportCsv'
+};
+function switchAdminSection(section){
+  document.querySelectorAll('.admin-subnav-btn').forEach(b => b.classList.toggle('active', b.dataset.section === section));
+  Object.values(ADMIN_SECTION_IDS).forEach(id => { document.getElementById(id).style.display = 'none'; });
+  document.getElementById(ADMIN_SECTION_IDS[section]).style.display = '';
+}
+document.querySelectorAll('.admin-subnav-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchAdminSection(btn.dataset.section));
 });
 
 function renderAdminList(){
@@ -1662,7 +1461,7 @@ function renderAdminList(){
       const val = parseInt(inp.value, 10);
       if(!overrides[ean]) overrides[ean] = {};
       overrides[ean].price = Number.isFinite(val) ? val : undefined;
-      saveCurrentConfig();
+      saveOverrides();
       renderGrid();
       showToast('Precio actualizado');
     });
@@ -1672,28 +1471,176 @@ function renderAdminList(){
       const ean = chk.dataset.ean;
       if(!overrides[ean]) overrides[ean] = {};
       overrides[ean].enabled = chk.checked;
-      saveCurrentConfig();
+      saveOverrides();
       chk.closest('.admin-row').classList.toggle('disabled-row', !chk.checked);
       buildFilters();
       renderGrid();
     });
   });
-  renderServerProducts();
 }
 
 document.getElementById('saveWhatsapp').addEventListener('click', () => {
   const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
   if(val.length < 8){ showToast('Número inválido'); return; }
   whatsappNumber = val;
-  saveCurrentConfig();
+  saveWhatsappNumber();
   showToast('Número de WhatsApp actualizado');
 });
 
-document.getElementById('resetConfig').addEventListener('click', async () => {
+document.getElementById('saveGithubConfig').addEventListener('click', () => {
+  const repo = document.getElementById('ghRepo').value.trim().replace(/^https?:\/\/github\.com\//i, '').replace(/\/$/, '');
+  const branch = document.getElementById('ghBranch').value.trim() || 'main';
+  const token = document.getElementById('ghToken').value.trim();
+  if(!/^[\w.-]+\/[\w.-]+$/.test(repo)){ showToast('Repositorio inválido. Formato: usuario/repositorio'); return; }
+  saveGithubConfigTo(repo, branch, token);
+  document.getElementById('ghRepo').value = repo;
+  populateCategorySelect();
+  showToast('Configuración de GitHub guardada');
+});
+
+/* ---------- AGREGAR PRODUCTO ---------- */
+function populateCategorySelect(){
+  const tab = document.getElementById('npTab').value;
+  const sel = document.getElementById('npCatSelect');
+  const cats = [...new Set(getProductsForTab(tab).map(p => p.cat))].sort();
+  sel.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('') + `<option value="__new__">+ Nueva categoría...</option>`;
+  document.getElementById('npCatNew').style.display = 'none';
+}
+document.getElementById('npTab').addEventListener('change', populateCategorySelect);
+document.getElementById('npCatSelect').addEventListener('change', () => {
+  document.getElementById('npCatNew').style.display = document.getElementById('npCatSelect').value === '__new__' ? '' : 'none';
+});
+
+document.getElementById('addProductBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('addProductStatus');
+  const ean = document.getElementById('npEan').value.trim();
+  const name = document.getElementById('npName').value.trim();
+  const priceRaw = document.getElementById('npPrice').value;
+  const price = priceRaw === '' ? null : parseInt(priceRaw, 10);
+  const tab = document.getElementById('npTab').value;
+  const catSel = document.getElementById('npCatSelect').value;
+  const cat = catSel === '__new__' ? (document.getElementById('npCatNew').value.trim() || 'Otros') : (catSel || 'Otros');
+  const imgUrl = document.getElementById('npImgUrl').value.trim();
+  const imgFile = document.getElementById('npImgFile').files[0];
+
+  if(!ean || !/^\d{6,14}$/.test(ean)){ statusEl.textContent = '❌ Ingresá un código EAN válido (solo números).'; return; }
+  if(!name){ statusEl.textContent = '❌ Ingresá una descripción.'; return; }
+  if(findBaseProduct(ean)){ statusEl.textContent = '❌ Ese EAN ya existe en el catálogo. Para editarlo, usá la sección "Productos".'; return; }
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
+
+  statusEl.textContent = 'Guardando...';
+  document.getElementById('addProductBtn').disabled = true;
+  try{
+    let imgPath = imgUrl;
+    if(imgFile){
+      const base64 = await fileToBase64(imgFile);
+      const ext = (imgFile.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
+      const path = `images/uploads/${ean}.${ext}`;
+      await githubPutFile(path, base64, `Agregar imagen producto ${ean}`, null);
+      imgPath = path;
+    }
+
+    const { data, sha } = await loadCustomProductsData();
+    const entry = { ean, name, price, tab, cat, img: imgPath || '', brand: tab === 'distre' ? 'Distre' : 'ALGABO' };
+    const idx = data.products.findIndex(p => p.ean === ean);
+    if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+    await saveCustomProductsData(data, sha, `Agregar producto ${ean} - ${name}`);
+
+    mergeCustomProductLocally(entry);
+    buildFilters();
+    renderGrid();
+    renderAdminList();
+
+    statusEl.textContent = '✅ Producto guardado en GitHub. Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.';
+    ['npEan','npName','npPrice','npCatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('npImgFile').value = '';
+    populateCategorySelect();
+  }catch(e){
+    statusEl.textContent = '❌ Error: ' + e.message;
+  }finally{
+    document.getElementById('addProductBtn').disabled = false;
+  }
+});
+
+/* ---------- IMPORTAR CSV ---------- */
+function parseCsvLine(line){
+  const result = [];
+  let cur = '', inQuotes = false;
+  for(let i = 0; i < line.length; i++){
+    const c = line[i];
+    if(inQuotes){
+      if(c === '"'){
+        if(line[i+1] === '"'){ cur += '"'; i++; } else { inQuotes = false; }
+      }else cur += c;
+    }else{
+      if(c === '"') inQuotes = true;
+      else if(c === ','){ result.push(cur); cur = ''; }
+      else cur += c;
+    }
+  }
+  result.push(cur);
+  return result;
+}
+
+document.getElementById('importCsvBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('importCsvStatus');
+  const file = document.getElementById('csvFile').files[0];
+  if(!file){ statusEl.textContent = '❌ Elegí un archivo CSV.'; return; }
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
+
+  const tab = document.getElementById('csvTab').value;
+  const cat = document.getElementById('csvCat').value.trim() || 'Otros';
+
+  statusEl.textContent = 'Leyendo archivo...';
+  document.getElementById('importCsvBtn').disabled = true;
+  try{
+    const text = await file.text();
+    const lines = text.split(/\r?\n/).filter(l => l.trim().length);
+    const rows = lines.slice(1).map(parseCsvLine);
+
+    statusEl.textContent = 'Sincronizando con GitHub...';
+    const { data, sha } = await loadCustomProductsData();
+    let count = 0;
+    const newEntries = [];
+    rows.forEach(cols => {
+      const ean = (cols[0] || '').trim();
+      const name = (cols[1] || '').trim();
+      const priceRaw = (cols[2] || '').trim().replace(/\./g, '').replace(',', '.');
+      const price = priceRaw === '' ? null : Math.round(parseFloat(priceRaw));
+      const img = (cols[3] || '').trim();
+      if(!ean || !/^\d{6,14}$/.test(ean) || !name) return;
+      const entry = { ean, name, price: Number.isFinite(price) ? price : null, tab, cat, img, brand: tab === 'distre' ? 'Distre' : 'ALGABO' };
+      const idx = data.products.findIndex(p => p.ean === ean);
+      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      newEntries.push(entry);
+      count++;
+    });
+
+    if(count === 0){ statusEl.textContent = '❌ No se encontraron filas válidas en el CSV.'; return; }
+
+    await saveCustomProductsData(data, sha, `Importar CSV (${count} productos)`);
+    newEntries.forEach(mergeCustomProductLocally);
+    buildFilters();
+    renderGrid();
+    renderAdminList();
+
+    statusEl.textContent = `✅ Se importaron ${count} productos a GitHub. Puede tardar uno o dos minutos en publicarse.`;
+    document.getElementById('csvFile').value = '';
+  }catch(e){
+    statusEl.textContent = '❌ Error: ' + e.message;
+  }finally{
+    document.getElementById('importCsvBtn').disabled = false;
+  }
+});
+
+document.getElementById('resetConfig').addEventListener('click', () => {
   if(!confirm('¿Restablecer precios, productos habilitados y WhatsApp a los valores originales?')) return;
   overrides = {};
   whatsappNumber = DEFAULT_WHATSAPP;
-  await saveCurrentConfig();
+  saveOverrides();
+  saveWhatsappNumber();
   document.getElementById('adminWhatsapp').value = whatsappNumber;
   renderAdminList();
   buildFilters();
@@ -1713,382 +1660,8 @@ document.getElementById('exportConfig').addEventListener('click', () => {
 });
 
 /* ======================================================
-   GESTIÓN DE USUARIOS (Admin)
-   ====================================================== */
-let allUsers = [];
-
-async function loadUsersList(){
-  const container = document.getElementById('userListContainer');
-  try {
-    const res = await apiGetUsers();
-    allUsers = res.users || [];
-    renderUsersList();
-  } catch(e) {
-    container.innerHTML = `<div class="user-empty">Error: ${e.message}</div>`;
-  }
-}
-
-function renderUsersList(){
-  const container = document.getElementById('userListContainer');
-  if(allUsers.length === 0){
-    container.innerHTML = '<div class="user-empty">No hay usuarios registrados.</div>';
-    return;
-  }
-  const rows = allUsers.map(u => `
-    <tr>
-      <td><strong>${escHtml(u.username)}</strong></td>
-      <td><span class="role-badge ${u.role}">${u.role}</span></td>
-      <td>${new Date(u.created_at).toLocaleDateString('es-AR')}</td>
-      <td class="user-actions">
-        <button class="btn-sm edit" data-uid="${u.id}" data-action="edit">✏️ Editar</button>
-        ${u.username !== 'admin' ? `<button class="btn-sm danger" data-uid="${u.id}" data-uname="${escHtml(u.username)}" data-action="delete">🗑 Eliminar</button>` : ''}
-      </td>
-    </tr>
-  `).join('');
-
-  container.innerHTML = `
-    <table class="user-table">
-      <thead><tr><th>Usuario</th><th>Rol</th><th>Creado</th><th>Acciones</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>`;
-
-  container.querySelectorAll('[data-action="edit"]').forEach(btn => {
-    btn.addEventListener('click', () => openEditUserForm(btn.dataset.uid));
-  });
-  container.querySelectorAll('[data-action="delete"]').forEach(btn => {
-    btn.addEventListener('click', () => deleteUser(btn.dataset.uid, btn.dataset.uname));
-  });
-}
-
-document.getElementById('addUserBtn').addEventListener('click', () => openNewUserForm());
-
-function openNewUserForm(){
-  document.getElementById('userFormTitle').textContent = 'Nuevo usuario';
-  document.getElementById('userFormId').value = '';
-  document.getElementById('userFormUsername').value = '';
-  document.getElementById('userFormUsername').disabled = false;
-  document.getElementById('userFormPassword').value = '';
-  document.getElementById('userFormPasswordWrap').style.display = '';
-  document.getElementById('userFormPassLabel').textContent = 'Contraseña';
-  document.getElementById('userFormRole').value = 'usuario';
-  document.getElementById('userFormError').style.display = 'none';
-  document.getElementById('userFormSuccess').style.display = 'none';
-  openOverlayEl(document.getElementById('userFormOverlay'));
-}
-
-function openEditUserForm(uid){
-  const u = allUsers.find(x => x.id === uid);
-  if(!u) return;
-  document.getElementById('userFormTitle').textContent = 'Editar usuario';
-  document.getElementById('userFormId').value = u.id;
-  document.getElementById('userFormUsername').value = u.username;
-  document.getElementById('userFormUsername').disabled = true;
-  document.getElementById('userFormPassword').value = '';
-  document.getElementById('userFormPasswordWrap').style.display = '';
-  document.getElementById('userFormPassLabel').textContent = 'Nueva contraseña (dejar vacío para no cambiar)';
-  document.getElementById('userFormRole').value = u.role;
-  document.getElementById('userFormError').style.display = 'none';
-  document.getElementById('userFormSuccess').style.display = 'none';
-  openOverlayEl(document.getElementById('userFormOverlay'));
-}
-
-document.getElementById('userFormClose').addEventListener('click', () => closeOverlayEl(document.getElementById('userFormOverlay')));
-document.getElementById('userFormCancelBtn').addEventListener('click', () => closeOverlayEl(document.getElementById('userFormOverlay')));
-
-document.getElementById('userFormSubmit').addEventListener('click', async () => {
-  const errEl = document.getElementById('userFormError');
-  const okEl  = document.getElementById('userFormSuccess');
-  errEl.style.display = 'none';
-  okEl.style.display = 'none';
-
-  const id       = document.getElementById('userFormId').value;
-  const username = document.getElementById('userFormUsername').value.trim();
-  const password = document.getElementById('userFormPassword').value;
-  const role     = document.getElementById('userFormRole').value;
-
-  try {
-    if(!id){
-      if(!username || !password){
-        throw new Error('Usuario y contraseña son obligatorios');
-      }
-      await apiCreateUser({ username, password, role });
-      okEl.textContent = 'Usuario creado exitosamente';
-      okEl.style.display = 'block';
-    } else {
-      const payload = { id, role };
-      if(password) payload.password = password;
-      await apiUpdateUser(payload);
-      okEl.textContent = 'Usuario actualizado';
-      okEl.style.display = 'block';
-    }
-    setTimeout(() => {
-      closeOverlayEl(document.getElementById('userFormOverlay'));
-      loadUsersList();
-    }, 800);
-  } catch(e) {
-    errEl.textContent = e.message;
-    errEl.style.display = 'block';
-  }
-});
-
-async function deleteUser(uid, uname){
-  if(!confirm(`¿Eliminar el usuario "${uname}"? Esta acción no se puede deshacer.`)) return;
-  try {
-    await apiDeleteUser(uid);
-    showToast('Usuario eliminado');
-    loadUsersList();
-  } catch(e) {
-    showToast('Error: ' + e.message);
-  }
-}
-
-function escHtml(s){
-  const d = document.createElement('div');
-  d.textContent = s;
-  return d.innerHTML;
-}
-
-/* ======================================================
-   GESTIÓN DE PRODUCTOS (Admin - API)
-   ====================================================== */
-function renderServerProducts(){
-  const container = document.getElementById('serverProductList');
-  const current = serverProducts.filter(p => p.tab === activeTab);
-  if(current.length === 0){
-    container.innerHTML = '<div style="color:var(--text-dim);padding:12px 0;font-size:.9rem;">No hay productos agregados en esta pestaña.</div>';
-    return;
-  }
-  container.innerHTML = current.map(p => `
-    <div class="admin-row">
-      <img src="${p.img || GENERIC_IMG}" alt="" onerror="onImgError(this)">
-      <div style="flex:1;min-width:0;">
-        <div class="p-name">${escHtml(p.name)}</div>
-        <div class="p-ean">EAN ${escHtml(p.ean)} · ${escHtml(p.brand || '')} · ${escHtml(p.cat || '')}</div>
-        ${p.price !== null ? `<div class="p-price">${formatPrice(p.price)}</div>` : '<div class="p-price" style="color:var(--text-dim);">Consultar</div>'}
-      </div>
-      <div style="display:flex;gap:6px;flex-shrink:0;">
-        <button class="btn-sm edit" data-pid="${p.id}" data-action="edit-product">✏️</button>
-        <button class="btn-sm danger" data-pid="${p.id}" data-action="delete-product">🗑</button>
-      </div>
-    </div>
-  `).join('');
-
-  container.querySelectorAll('[data-action="edit-product"]').forEach(btn => {
-    btn.addEventListener('click', () => openEditProductForm(btn.dataset.pid));
-  });
-  container.querySelectorAll('[data-action="delete-product"]').forEach(btn => {
-    btn.addEventListener('click', () => deleteServerProduct(btn.dataset.pid));
-  });
-}
-
-function openNewProductForm(){
-  document.getElementById('productFormTitle').textContent = 'Agregar producto';
-  document.getElementById('productFormId').value = '';
-  document.getElementById('productFormEan').value = '';
-  document.getElementById('productFormEan').disabled = false;
-  document.getElementById('productFormName').value = '';
-  document.getElementById('productFormPrice').value = '';
-  document.getElementById('productFormBrand').value = '';
-  document.getElementById('productFormCat').value = '';
-  document.getElementById('productFormTab').value = activeTab;
-  document.getElementById('productFormImgUrl').value = '';
-  document.getElementById('productFormImgFile').value = '';
-  document.getElementById('productFormImgPreview').style.display = 'none';
-  document.getElementById('productFormError').style.display = 'none';
-  document.getElementById('productFormSuccess').style.display = 'none';
-  openOverlayEl(document.getElementById('productFormOverlay'));
-}
-
-function openEditProductForm(pid){
-  const p = serverProducts.find(x => x.id === pid);
-  if(!p) return;
-  document.getElementById('productFormTitle').textContent = 'Editar producto';
-  document.getElementById('productFormId').value = p.id;
-  document.getElementById('productFormEan').value = p.ean;
-  document.getElementById('productFormEan').disabled = true;
-  document.getElementById('productFormName').value = p.name;
-  document.getElementById('productFormPrice').value = p.price !== null ? p.price : '';
-  document.getElementById('productFormBrand').value = p.brand || '';
-  document.getElementById('productFormCat').value = p.cat || '';
-  document.getElementById('productFormTab').value = p.tab;
-  document.getElementById('productFormImgUrl').value = p.img || '';
-  document.getElementById('productFormImgFile').value = '';
-  if(p.img){
-    document.getElementById('productFormImgPreview').querySelector('img').src = p.img;
-    document.getElementById('productFormImgPreview').style.display = '';
-  } else {
-    document.getElementById('productFormImgPreview').style.display = 'none';
-  }
-  document.getElementById('productFormError').style.display = 'none';
-  document.getElementById('productFormSuccess').style.display = 'none';
-  openOverlayEl(document.getElementById('productFormOverlay'));
-}
-
-document.getElementById('productFormClose').addEventListener('click', () => closeOverlayEl(document.getElementById('productFormOverlay')));
-document.getElementById('productFormCancelBtn').addEventListener('click', () => closeOverlayEl(document.getElementById('productFormOverlay')));
-
-document.getElementById('productFormImgFile').addEventListener('change', (e) => {
-  const file = e.target.files[0];
-  if(!file) return;
-  const preview = document.getElementById('productFormImgPreview');
-  preview.querySelector('img').src = URL.createObjectURL(file);
-  preview.style.display = '';
-});
-
-document.getElementById('productFormSubmit').addEventListener('click', async () => {
-  const errEl = document.getElementById('productFormError');
-  const okEl  = document.getElementById('productFormSuccess');
-  errEl.style.display = 'none';
-  okEl.style.display = 'none';
-
-  const id    = document.getElementById('productFormId').value;
-  const ean   = document.getElementById('productFormEan').value.trim();
-  const name  = document.getElementById('productFormName').value.trim();
-  const price = document.getElementById('productFormPrice').value;
-  const brand = document.getElementById('productFormBrand').value.trim();
-  const cat   = document.getElementById('productFormCat').value.trim();
-  const tab   = document.getElementById('productFormTab').value;
-  const imgUrl   = document.getElementById('productFormImgUrl').value.trim();
-  const imgFile  = document.getElementById('productFormImgFile').files[0];
-
-  try {
-    if(!ean || !name) throw new Error('EAN y Descripción son obligatorios');
-
-    let img = imgUrl;
-    if(imgFile){
-      const uploadRes = await apiUploadImage(imgFile, ean);
-      img = uploadRes.url;
-    }
-
-    const payload = {
-      ean, name, brand, cat, tab,
-      price: price !== '' ? parseInt(price, 10) : null,
-      img: img || ''
-    };
-
-    if(id){
-      payload.id = id;
-      await apiUpdateProduct(payload);
-      okEl.textContent = 'Producto actualizado';
-    } else {
-      await apiCreateProduct(payload);
-      okEl.textContent = 'Producto creado';
-    }
-    okEl.style.display = 'block';
-    await loadServerProducts();
-    renderServerProducts();
-    renderAdminList();
-    buildFilters();
-    renderGrid();
-    setTimeout(() => closeOverlayEl(document.getElementById('productFormOverlay')), 800);
-  } catch(e) {
-    errEl.textContent = e.message;
-    errEl.style.display = 'block';
-  }
-});
-
-async function deleteServerProduct(pid){
-  const p = serverProducts.find(x => x.id === pid);
-  if(!p) return;
-  if(!confirm(`¿Eliminar "${p.name}"? Esta acción no se puede deshacer.`)) return;
-  try {
-    await apiDeleteProduct(pid);
-    showToast('Producto eliminado');
-    await loadServerProducts();
-    renderServerProducts();
-    renderAdminList();
-    buildFilters();
-    renderGrid();
-  } catch(e) {
-    showToast('Error: ' + e.message);
-  }
-}
-
-/* --- Botones agregar / importar --- */
-document.getElementById('addProductBtn').addEventListener('click', openNewProductForm);
-document.getElementById('importCsvBtn').addEventListener('click', () => {
-  document.getElementById('csvImportTab').value = activeTab;
-  document.getElementById('csvImportFile').value = '';
-  document.getElementById('csvImportError').style.display = 'none';
-  document.getElementById('csvImportSuccess').style.display = 'none';
-  document.getElementById('csvImportPreview').innerHTML = '';
-  openOverlayEl(document.getElementById('csvImportOverlay'));
-});
-document.getElementById('csvImportClose').addEventListener('click', () => closeOverlayEl(document.getElementById('csvImportOverlay')));
-document.getElementById('csvImportCancelBtn').addEventListener('click', () => closeOverlayEl(document.getElementById('csvImportOverlay')));
-
-document.getElementById('csvImportSubmit').addEventListener('click', async () => {
-  const errEl = document.getElementById('csvImportError');
-  const okEl  = document.getElementById('csvImportSuccess');
-  const preview = document.getElementById('csvImportPreview');
-  errEl.style.display = 'none';
-  okEl.style.display = 'none';
-  preview.innerHTML = '';
-
-  const file = document.getElementById('csvImportFile').files[0];
-  const tab  = document.getElementById('csvImportTab').value;
-  if(!file){ errEl.textContent = 'Seleccioná un archivo CSV'; errEl.style.display = 'block'; return; }
-
-  try {
-    const text = await file.text();
-    const lines = text.split(/\r?\n/).filter(l => l.trim() !== '');
-    if(lines.length === 0) throw new Error('El archivo está vacío');
-
-    const rows = [];
-    let errors = [];
-    for(let i = 0; i < lines.length; i++){
-      const parts = lines[i].split(',').map(s => s.trim().replace(/^"|"$/g, ''));
-      if(parts.length < 3){ errors.push(`Fila ${i+1}: necesita al menos EAN, Descripción, Precio`); continue; }
-      const [ean, name, priceStr, img] = parts;
-      if(!ean || !name){ errors.push(`Fila ${i+1}: EAN y Descripción son obligatorios`); continue; }
-      const price = priceStr ? parseInt(priceStr, 10) : null;
-      rows.push({ ean, name, price: Number.isFinite(price) ? price : null, img: img || '' });
-    }
-
-    if(rows.length === 0) throw new Error('No se encontraron productos válidos:\n' + errors.join('\n'));
-
-    let created = 0, skipped = 0;
-    for(const r of rows){
-      try {
-        await apiCreateProduct({ ...r, brand: '', cat: '', tab });
-        created++;
-      } catch(e) {
-        if(e.message.includes('Ya existe')) skipped++;
-        else throw e;
-      }
-    }
-
-    preview.innerHTML = `<div style="color:var(--text-dim);">Creados: <b>${created}</b> · Omitidos (duplicados): <b>${skipped}</b></div>`;
-    if(errors.length) preview.innerHTML += `<div style="color:var(--danger);margin-top:6px;">${errors.join('<br>')}</div>`;
-
-    okEl.textContent = `${created} producto(s) importado(s)`;
-    okEl.style.display = 'block';
-    await loadServerProducts();
-    renderServerProducts();
-    renderAdminList();
-    buildFilters();
-    renderGrid();
-  } catch(e) {
-    errEl.textContent = e.message;
-    errEl.style.display = 'block';
-  }
-});
-
-/* ======================================================
    MODAL CARRITO
    ====================================================== */
-document.querySelectorAll('.admin-tabs .tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    activeTab = btn.dataset.tab;
-    document.querySelectorAll('.admin-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
-    document.querySelectorAll('.tabs-row .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
-    searchInput.value = '';
-    buildFilters();
-    renderAdminList();
-    renderGrid();
-  });
-});
-
 document.getElementById('cartBtn').addEventListener('click', () => {
   renderCartModal();
   openOverlayEl(cartOverlay);
@@ -2179,12 +1752,12 @@ function renderCartModal(){
 /* ======================================================
    CIERRE GENÉRICO DE MODALES (click afuera / ESC)
    ====================================================== */
-[overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay'), document.getElementById('productFormOverlay'), document.getElementById('csvImportOverlay')].forEach(ov => {
+[overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
   ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
 });
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape'){
-    [overlay, loginOverlay, adminOverlay, cartOverlay, document.getElementById('userFormOverlay'), document.getElementById('productFormOverlay'), document.getElementById('csvImportOverlay')].forEach(ov => {
+    [overlay, loginOverlay, adminOverlay, cartOverlay].forEach(ov => {
       if(ov.classList.contains('open')) closeOverlayEl(ov);
     });
   }
@@ -2196,13 +1769,13 @@ document.addEventListener('keydown', (e) => {
 function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
-  document.querySelectorAll('.tabs-row .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
   buildFilters();
   renderGrid();
-  if(currentUser && adminOverlay.classList.contains('open')) renderAdminList();
+  if(isAdmin && adminOverlay.classList.contains('open')) renderAdminList();
 }
-document.querySelectorAll('.tabs-row .tab-btn').forEach(btn => {
+document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
 });
 
@@ -2210,12 +1783,13 @@ document.querySelectorAll('.tabs-row .tab-btn').forEach(btn => {
    INIT
    ====================================================== */
 searchInput.addEventListener('input', renderGrid);
-loadState();
-buildFilters();
-renderGrid();
-loadServerProducts();
-document.getElementById('cartBadge').textContent = cartCount();
-checkSession();
+(async function init(){
+  loadState();
+  await loadCustomProducts();
+  buildFilters();
+  renderGrid();
+  document.getElementById('cartBadge').textContent = cartCount();
+})();
 </script>
 </body>
 </html>
