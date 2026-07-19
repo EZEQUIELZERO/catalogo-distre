@@ -17,6 +17,16 @@
       "cat": "Mochila",
       "img": "images/uploads/777983333333.png",
       "brand": "Distre"
+    },
+    {
+      "ean": "7798332024333",
+      "name": "PERFUMES DE VICTORIAS - 001",
+      "price": 99600,
+      "tab": "distre",
+      "cat": "PERFUMES PREMIUM",
+      "subcat": "PERFUMES COMARCA",
+      "img": "https://i.etsystatic.com/32071240/r/il/16f6c0/5379480261/il_570xN.5379480261_f6ir.jpg",
+      "brand": "Distre"
     }
   ]
 }
