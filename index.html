@@ -98,6 +98,19 @@
   .tab-btn:hover{color:var(--text);}
   .tab-btn.active{background:var(--card);color:var(--accent);border-color:var(--accent);}
   .admin-tabs{display:flex;gap:8px;margin-bottom:18px;}
+  .admin-tab-item{
+    display:flex;align-items:center;gap:10px;padding:10px 14px;
+    border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);margin-bottom:8px;
+  }
+  .admin-tab-item .tab-name{flex:1;font-weight:600;font-size:.9rem;}
+  .admin-tab-item .tab-id{color:var(--text-dim);font-size:.75rem;font-family:monospace;}
+  .admin-tab-item.builtin{opacity:.6;}
+  .admin-tab-item .tab-action{
+    padding:5px 10px;border-radius:6px;border:1px solid var(--border);
+    background:var(--bg-soft);color:var(--text-dim);font-size:.75rem;cursor:pointer;
+  }
+  .admin-tab-item .tab-action:hover{border-color:var(--accent);color:var(--text);}
+  .admin-tab-item .tab-action.danger:hover{border-color:var(--danger);color:var(--danger);}
 
   /* ---------- FILTERS ---------- */
   .filters{
@@ -111,6 +124,17 @@
   }
   .chip:hover{color:var(--text);border-color:var(--accent);}
   .chip.active{background:var(--accent);color:#1a1a1a;border-color:var(--accent);font-weight:600;}
+  .subfilters{
+    max-width:1200px;margin:8px auto 0;padding:0 20px;
+    display:flex;gap:6px;flex-wrap:wrap;
+  }
+  .chip-sm{
+    padding:5px 10px;border-radius:999px;border:1px solid var(--border);
+    background:var(--bg-soft);color:var(--text-dim);font-size:.76rem;cursor:pointer;
+    transition:all .15s;user-select:none;
+  }
+  .chip-sm:hover{color:var(--text);border-color:var(--accent);}
+  .chip-sm.active{background:var(--accent);color:#1a1a1a;border-color:var(--accent);font-weight:600;}
 
   /* ---------- GRID ---------- */
   main{max-width:1200px;margin:0 auto;padding:24px 20px 60px;}
@@ -427,11 +451,9 @@
       </button>
     </div>
   </div>
-  <div class="tabs-row">
-    <button class="tab-btn active" data-tab="distre" id="tabBtnDistre">Distre</button>
-    <button class="tab-btn" data-tab="algabo" id="tabBtnAlgabo">ALGABO</button>
-  </div>
+  <div class="tabs-row" id="tabsRow"></div>
   <div class="filters" id="filters"></div>
+  <div class="subfilters" id="subfilters"></div>
 </header>
 
 <main>
@@ -553,6 +575,7 @@
         <button class="admin-subnav-btn active" data-section="general">General</button>
         <button class="admin-subnav-btn" data-section="products">Productos</button>
         <button class="admin-subnav-btn" data-section="addproduct">Agregar producto</button>
+        <button class="admin-subnav-btn" data-section="tabs">Pestañas</button>
         <button class="admin-subnav-btn" data-section="importcsv">Importar CSV</button>
       </div>
 
@@ -583,10 +606,7 @@
       <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
       <div class="admin-section" id="adminSectionProducts" style="display:none;">
         <div class="admin-section-title">Productos (precio y visibilidad en el catálogo)</div>
-        <div class="admin-tabs">
-          <button class="tab-btn active" data-tab="distre" id="adminTabBtnDistre">Distre</button>
-          <button class="tab-btn" data-tab="algabo" id="adminTabBtnAlgabo">ALGABO</button>
-        </div>
+        <div class="admin-tabs" id="adminTabsRow"></div>
         <div class="admin-list" id="adminProductList"></div>
       </div>
 
@@ -597,14 +617,15 @@
         <div class="field" style="margin-top:10px;"><label>Descripción</label><input type="text" id="npName" class="price-input"></div>
         <div class="field" style="margin-top:10px;"><label>Precio (dejar vacío = "Consultar precio")</label><input type="number" id="npPrice" class="price-input" min="0" step="1"></div>
         <div class="field" style="margin-top:10px;"><label>Pestaña</label>
-          <select id="npTab" class="price-input">
-            <option value="distre">Distre</option>
-            <option value="algabo" selected>ALGABO</option>
-          </select>
+          <select id="npTab" class="price-input"></select>
         </div>
         <div class="field" style="margin-top:10px;"><label>Categoría</label>
           <select id="npCatSelect" class="price-input"></select>
           <input type="text" id="npCatNew" class="price-input" placeholder="Nombre de la nueva categoría" style="margin-top:8px;display:none;">
+        </div>
+        <div class="field" style="margin-top:10px;"><label>Subcategoría (opcional)</label>
+          <select id="npSubcatSelect" class="price-input"></select>
+          <input type="text" id="npSubcatNew" class="price-input" placeholder="Nombre de la nueva subcategoría" style="margin-top:8px;display:none;">
         </div>
         <div class="field" style="margin-top:10px;">
           <label>Imagen — pegá una URL o subí un archivo (se guarda en <code>images/uploads/{EAN}</code>)</label>
@@ -615,15 +636,27 @@
         <p class="admin-note" id="addProductStatus"></p>
       </div>
 
+      <!-- ---------- SECCIÓN PESTAÑAS ---------- -->
+      <div class="admin-section" id="adminSectionTabs" style="display:none;">
+        <div class="admin-section-title">Gestionar pestañas (marcas)</div>
+        <p class="admin-note">Creá, renombrá o eliminá pestañas. Las pestañas nuevas se guardan en el repositorio de GitHub y están disponibles para todos los visitantes.</p>
+        <div id="adminTabList"></div>
+        <div style="margin-top:18px;border-top:1px solid var(--border);padding-top:16px;">
+          <div class="admin-section-title">Crear nueva pestaña</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <input type="text" id="newTabName" class="price-input" placeholder="Nombre de la pestaña" style="flex:1;min-width:180px;">
+            <button class="btn btn-whatsapp btn-auto" id="createTabBtn">Crear pestaña</button>
+          </div>
+          <p class="admin-note" id="tabStatus"></p>
+        </div>
+      </div>
+
       <!-- ---------- SECCIÓN IMPORTAR CSV ---------- -->
       <div class="admin-section" id="adminSectionImportCsv" style="display:none;">
         <div class="admin-section-title">Importar productos desde CSV</div>
         <p class="admin-note">El archivo debe tener encabezado en la primera fila con las columnas, en este orden: <b>CODIGO EAN, DESCRIPCION, PRECIO, URL DE LA IMAGEN</b>.</p>
         <div class="field"><label>Pestaña destino</label>
-          <select id="csvTab" class="price-input">
-            <option value="distre">Distre</option>
-            <option value="algabo" selected>ALGABO</option>
-          </select>
+          <select id="csvTab" class="price-input"></select>
         </div>
         <div class="field" style="margin-top:10px;"><label>Categoría para todos los productos importados</label><input type="text" id="csvCat" class="price-input" placeholder="Ej: Nuevos ingresos"></div>
         <div class="field" style="margin-top:10px;"><label>Archivo CSV</label><input type="file" id="csvFile" accept=".csv" class="price-input" style="padding:8px;"></div>
@@ -1145,6 +1178,35 @@ function storageSet(key, value){
 }
 
 /* ======================================================
+   TAB REGISTRY (pestañas dinámicas)
+   ====================================================== */
+const TAB_REGISTRY = {
+  distre: { id:'distre', name:'Distre', builtIn:true, products:PRODUCTS_DISTRE },
+  algabo: { id:'algabo', name:'ALGABO', builtIn:true, products:PRODUCTS_ALGABO }
+};
+let customTabs = [];
+
+function getAllTabs(){
+  return [...Object.values(TAB_REGISTRY), ...customTabs];
+}
+function getTabById(id){
+  return getAllTabs().find(t => t.id === id);
+}
+function getTabProducts(id){
+  const t = TAB_REGISTRY[id];
+  if(t) return t.products;
+  const ct = customTabs.find(t => t.id === id);
+  return ct ? ct.products : [];
+}
+function findBaseProduct(ean){
+  for(const t of getAllTabs()){
+    const found = t.products.find(p => p.ean === ean);
+    if(found) return found;
+  }
+  return null;
+}
+
+/* ======================================================
    ESTADO
    ====================================================== */
 let overrides = {};        // { ean: { price, enabled } }
@@ -1152,17 +1214,12 @@ let cart = {};              // { ean: qty }
 let whatsappNumber = DEFAULT_WHATSAPP;
 let isAdmin = false;
 let currentModalEan = null;
-let activeTab = 'distre';   // 'distre' | 'algabo'
+let activeTab = 'distre';
+let activeSubcat = 'Todos';
 
-function getActiveProducts(){
-  return activeTab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
-}
-function getProductsForTab(tab){
-  return tab === 'distre' ? PRODUCTS_DISTRE : PRODUCTS_ALGABO;
-}
-function findBaseProduct(ean){
-  return PRODUCTS_DISTRE.find(p => p.ean === ean) || PRODUCTS_ALGABO.find(p => p.ean === ean);
-}
+function getActiveProducts(){ return getTabProducts(activeTab); }
+function getProductsForTab(tab){ return getTabProducts(tab); }
+
 function getGithubConfig(){
   return {
     repo: storageGet('distre_gh_repo') || '',
@@ -1227,6 +1284,7 @@ function closeOverlayEl(el){ el.classList.remove('open'); document.body.style.ov
    ====================================================== */
 const GITHUB_API = "https://api.github.com";
 const CUSTOM_PRODUCTS_PATH = "data/custom-products.json";
+const CUSTOM_TABS_PATH = "data/custom-tabs.json";
 
 function utf8ToBase64(str){
   return btoa(unescape(encodeURIComponent(str)));
@@ -1283,13 +1341,17 @@ async function saveCustomProductsData(data, sha, message){
 }
 function mergeCustomProductLocally(entry){
   const target = getProductsForTab(entry.tab);
+  if(!target) return;
   const idx = target.findIndex(p => p.ean === entry.ean);
+  const tabInfo = getTabById(entry.tab);
+  const defaultBrand = tabInfo ? tabInfo.name : entry.tab;
   const productObj = {
     ean: entry.ean, name: entry.name,
     price: (typeof entry.price === 'number' && Number.isFinite(entry.price)) ? entry.price : null,
     img: entry.img || GENERIC_IMG,
-    brand: entry.brand || (entry.tab === 'distre' ? 'Distre' : 'ALGABO'),
-    cat: entry.cat || 'Otros'
+    brand: entry.brand || defaultBrand,
+    cat: entry.cat || 'Otros',
+    subcat: entry.subcat || ''
   };
   if(idx >= 0) target[idx] = productObj; else target.push(productObj);
 }
@@ -1300,11 +1362,40 @@ async function loadCustomProducts(){
     const data = await res.json();
     (data.products || []).forEach(p => {
       if(!p.ean || !p.name) return;
-      mergeCustomProductLocally({ ...p, tab: p.tab === 'distre' ? 'distre' : 'algabo' });
+      const tab = p.tab || 'algabo';
+      mergeCustomProductLocally({ ...p, tab });
     });
   }catch(e){
     /* El archivo todavía no existe en el repo, o no se pudo leer: seguimos con el catálogo base. */
   }
+}
+
+/* ======================================================
+   PESTAÑAS PERSONALIZADAS (GitHub API)
+   ====================================================== */
+async function loadCustomTabs(){
+  try{
+    const res = await fetch('./' + CUSTOM_TABS_PATH, { cache: 'no-store' });
+    if(!res.ok) return;
+    const data = await res.json();
+    (data.tabs || []).forEach(t => {
+      if(!t.id || !t.name) return;
+      if(TAB_REGISTRY[t.id]) return;
+      customTabs.push({ id: t.id, name: t.name, builtIn: false, products: [] });
+    });
+  }catch(e){}
+}
+async function loadCustomTabsData(){
+  const existing = await githubGetFile(CUSTOM_TABS_PATH);
+  if(!existing) return { data: { tabs: [] }, sha: null };
+  let data;
+  try{ data = JSON.parse(base64ToUtf8(existing.content)); }catch(e){ data = { tabs: [] }; }
+  if(!Array.isArray(data.tabs)) data.tabs = [];
+  return { data, sha: existing.sha };
+}
+async function saveCustomTabsData(data, sha, message){
+  const contentBase64 = utf8ToBase64(JSON.stringify(data, null, 2));
+  await githubPutFile(CUSTOM_TABS_PATH, contentBase64, message, sha);
 }
 
 /* ======================================================
@@ -1353,6 +1444,7 @@ const grid = document.getElementById('grid');
 const counter = document.getElementById('counter');
 const searchInput = document.getElementById('searchInput');
 const filtersEl = document.getElementById('filters');
+const subfiltersEl = document.getElementById('subfilters');
 
 let activeCat = "Todos";
 
@@ -1366,7 +1458,35 @@ function buildFilters(){
   filtersEl.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       activeCat = chip.dataset.cat;
+      activeSubcat = 'Todos';
       buildFilters();
+      renderGrid();
+    });
+  });
+  buildSubfilters();
+}
+
+function buildSubfilters(){
+  if(activeCat === 'Todos'){
+    subfiltersEl.innerHTML = '';
+    return;
+  }
+  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && p.cat === activeCat);
+  const subcats = [...new Set(visible.map(p => p.subcat).filter(s => s && s.trim()))];
+  if(subcats.length === 0){
+    subfiltersEl.innerHTML = '';
+    activeSubcat = 'Todos';
+    return;
+  }
+  const allSub = ["Todos", ...subcats];
+  if(!allSub.includes(activeSubcat)) activeSubcat = 'Todos';
+  subfiltersEl.innerHTML = allSub.map(s =>
+    `<div class="chip-sm ${s === activeSubcat ? 'active' : ''}" data-subcat="${s}">${s}</div>`
+  ).join('');
+  subfiltersEl.querySelectorAll('.chip-sm').forEach(chip => {
+    chip.addEventListener('click', () => {
+      activeSubcat = chip.dataset.subcat;
+      buildSubfilters();
       renderGrid();
     });
   });
@@ -1378,7 +1498,8 @@ function renderGrid(){
   const filtered = visible.filter(p => {
     const matchesQuery = !q || p.name.toLowerCase().includes(q) || p.ean.includes(q);
     const matchesCat = activeCat === "Todos" || p.cat === activeCat;
-    return matchesQuery && matchesCat;
+    const matchesSubcat = activeSubcat === "Todos" || p.subcat === activeSubcat;
+    return matchesQuery && matchesCat && matchesSubcat;
   });
 
   counter.textContent = filtered.length + (filtered.length === 1 ? " producto" : " productos");
@@ -1410,7 +1531,7 @@ function renderGrid(){
     return `
     <div class="card" data-ean="${p.ean}">
       <div class="card-img">
-        <span class="badge">${p.cat}</span>
+        <span class="badge">${p.subcat ? p.cat + ' · ' + p.subcat : p.cat}</span>
         <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="onImgError(this)">
       </div>
       <div class="card-body">
@@ -1467,7 +1588,7 @@ function openModal(ean){
   modalPrice.classList.toggle('price-consult-modal', !hasPrice);
   modalEan.textContent = p.ean;
   modalBrand.textContent = p.brand;
-  modalCat.textContent = p.cat;
+  modalCat.textContent = p.subcat ? p.cat + ' · ' + p.subcat : p.cat;
 
   const msg = encodeURIComponent(`Hola, quiero consultar por: ${p.name} (EAN ${p.ean})${hasPrice ? ' - ' + formatPrice(p.price) : ''}`);
   modalWhatsapp.href = `https://wa.me/${whatsappNumber}?text=${msg}`;
@@ -1535,7 +1656,9 @@ function openAdminPanel(){
   document.getElementById('ghBranch').value = gh.branch;
   document.getElementById('ghToken').value = gh.token;
   renderAdminList();
+  renderTabs();
   populateCategorySelect();
+  renderAdminTabList();
   switchAdminSection('general');
   openOverlayEl(adminOverlay);
 }
@@ -1551,6 +1674,7 @@ const ADMIN_SECTION_IDS = {
   general: 'adminSectionGeneral',
   products: 'adminSectionProducts',
   addproduct: 'adminSectionAddProduct',
+  tabs: 'adminSectionTabs',
   importcsv: 'adminSectionImportCsv'
 };
 function switchAdminSection(section){
@@ -1633,10 +1757,34 @@ function populateCategorySelect(){
   const cats = [...new Set(getProductsForTab(tab).map(p => p.cat))].sort();
   sel.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('') + `<option value="__new__">+ Nueva categoría...</option>`;
   document.getElementById('npCatNew').style.display = 'none';
+  document.getElementById('npSubcatNew').style.display = 'none';
+  populateSubcategorySelect();
+}
+function populateSubcategorySelect(){
+  const tab = document.getElementById('npTab').value;
+  const cat = document.getElementById('npCatSelect').value;
+  const sel = document.getElementById('npSubcatSelect');
+  if(!cat || cat === '__new__' || cat === 'Todos'){
+    sel.innerHTML = `<option value="">— Sin subcategoría —</option><option value="__new__">+ Nueva subcategoría...</option>`;
+  } else {
+    const subcats = [...new Set(
+      getProductsForTab(tab)
+        .filter(p => p.cat === cat && p.subcat && p.subcat.trim())
+        .map(p => p.subcat)
+    )].sort();
+    sel.innerHTML = subcats.map(s => `<option value="${s}">${s}</option>`).join('')
+      + `<option value="">— Sin subcategoría —</option>`
+      + `<option value="__new__">+ Nueva subcategoría...</option>`;
+  }
+  document.getElementById('npSubcatNew').style.display = 'none';
 }
 document.getElementById('npTab').addEventListener('change', populateCategorySelect);
 document.getElementById('npCatSelect').addEventListener('change', () => {
   document.getElementById('npCatNew').style.display = document.getElementById('npCatSelect').value === '__new__' ? '' : 'none';
+  populateSubcategorySelect();
+});
+document.getElementById('npSubcatSelect').addEventListener('change', () => {
+  document.getElementById('npSubcatNew').style.display = document.getElementById('npSubcatSelect').value === '__new__' ? '' : 'none';
 });
 
 document.getElementById('addProductBtn').addEventListener('click', async () => {
@@ -1648,6 +1796,8 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
   const tab = document.getElementById('npTab').value;
   const catSel = document.getElementById('npCatSelect').value;
   const cat = catSel === '__new__' ? (document.getElementById('npCatNew').value.trim() || 'Otros') : (catSel || 'Otros');
+  const subcatSel = document.getElementById('npSubcatSelect').value;
+  const subcat = subcatSel === '__new__' ? (document.getElementById('npSubcatNew').value.trim() || '') : (subcatSel || '');
   const imgUrl = document.getElementById('npImgUrl').value.trim();
   const imgFile = document.getElementById('npImgFile').files[0];
 
@@ -1670,7 +1820,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
     }
 
     const { data, sha } = await loadCustomProductsData();
-    const entry = { ean, name, price, tab, cat, img: imgPath || '', brand: tab === 'distre' ? 'Distre' : 'ALGABO' };
+    const entry = { ean, name, price, tab, cat, subcat, img: imgPath || '', brand: getTabById(tab)?.name || tab };
     const idx = data.products.findIndex(p => p.ean === ean);
     if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
     await saveCustomProductsData(data, sha, `Agregar producto ${ean} - ${name}`);
@@ -1681,7 +1831,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
     renderAdminList();
 
     statusEl.textContent = '✅ Producto guardado en GitHub. Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.';
-    ['npEan','npName','npPrice','npCatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
+    ['npEan','npName','npPrice','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('npImgFile').value = '';
     populateCategorySelect();
   }catch(e){
@@ -1739,7 +1889,7 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
       const price = priceRaw === '' ? null : Math.round(parseFloat(priceRaw));
       const img = (cols[3] || '').trim();
       if(!ean || !/^\d{6,14}$/.test(ean) || !name) return;
-      const entry = { ean, name, price: Number.isFinite(price) ? price : null, tab, cat, img, brand: tab === 'distre' ? 'Distre' : 'ALGABO' };
+      const entry = { ean, name, price: Number.isFinite(price) ? price : null, tab, cat, img, brand: getTabById(tab)?.name || tab };
       const idx = data.products.findIndex(p => p.ean === ean);
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       newEntries.push(entry);
@@ -1785,6 +1935,104 @@ document.getElementById('exportConfig').addEventListener('click', () => {
   a.click();
   URL.revokeObjectURL(url);
   showToast('Configuración exportada');
+});
+
+/* ======================================================
+   GESTIÓN DE PESTAÑAS (CRUD via GitHub)
+   ====================================================== */
+function renderAdminTabList(){
+  const container = document.getElementById('adminTabList');
+  const tabs = getAllTabs();
+  container.innerHTML = tabs.map(t => {
+    const productCount = t.products ? t.products.length : 0;
+    if(t.builtIn){
+      return `<div class="admin-tab-item builtin">
+        <div>
+          <div class="tab-name">${t.name}</div>
+          <div class="tab-id">${t.id} · ${productCount} productos (incorporada)</div>
+        </div>
+      </div>`;
+    }
+    return `<div class="admin-tab-item">
+      <div style="flex:1;">
+        <div class="tab-name">${t.name}</div>
+        <div class="tab-id">${t.id} · ${productCount} productos</div>
+      </div>
+      <button class="tab-action" data-action="rename" data-tab-id="${t.id}">Renombrar</button>
+      <button class="tab-action danger" data-action="delete" data-tab-id="${t.id}">Eliminar</button>
+    </div>`;
+  }).join('');
+
+  container.querySelectorAll('.tab-action').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const tabId = btn.dataset.tabId;
+      const action = btn.dataset.action;
+      if(action === 'rename'){
+        const tab = customTabs.find(t => t.id === tabId);
+        if(!tab) return;
+        const newName = prompt('Nuevo nombre para la pestaña:', tab.name);
+        if(!newName || newName.trim() === '' || newName.trim() === tab.name) return;
+        tab.name = newName.trim();
+        try{
+          const { data, sha } = await loadCustomTabsData();
+          const idx = data.tabs.findIndex(t => t.id === tabId);
+          if(idx >= 0) data.tabs[idx].name = tab.name;
+          await saveCustomTabsData(data, sha, `Renombrar pestaña ${tabId} a ${tab.name}`);
+          renderAdminTabList();
+          renderTabs();
+          showToast('Pestaña renombrada');
+        }catch(e){ showToast('Error: ' + e.message); }
+      } else if(action === 'delete'){
+        const tab = customTabs.find(t => t.id === tabId);
+        if(!tab) return;
+        if(!confirm(`¿Eliminar la pestaña "${tab.name}"? Los productos no se eliminan, solo se desvinculan de esta pestaña.`)) return;
+        customTabs = customTabs.filter(t => t.id !== tabId);
+        try{
+          const { data, sha } = await loadCustomTabsData();
+          data.tabs = data.tabs.filter(t => t.id !== tabId);
+          await saveCustomTabsData(data, sha, `Eliminar pestaña ${tabId}`);
+          if(activeTab === tabId) setActiveTab('distre');
+          renderAdminTabList();
+          renderTabs();
+          renderGrid();
+          showToast('Pestaña eliminada');
+        }catch(e){ showToast('Error: ' + e.message); }
+      }
+    });
+  });
+}
+
+document.getElementById('createTabBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('tabStatus');
+  const name = document.getElementById('newTabName').value.trim();
+  if(!name){ statusEl.textContent = '❌ Ingresá un nombre para la pestaña.'; return; }
+  const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  if(!id){ statusEl.textContent = '❌ Nombre inválido.'; return; }
+  if(getTabById(id)){
+    statusEl.textContent = '❌ Ya existe una pestaña con ese nombre/id.';
+    return;
+  }
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
+
+  statusEl.textContent = 'Guardando...';
+  document.getElementById('createTabBtn').disabled = true;
+  try{
+    customTabs.push({ id, name, builtIn: false, products: [] });
+    const { data, sha } = await loadCustomTabsData();
+    data.tabs.push({ id, name });
+    await saveCustomTabsData(data, sha, `Crear pestaña "${name}"`);
+    document.getElementById('newTabName').value = '';
+    renderAdminTabList();
+    renderTabs();
+    renderTabSelects();
+    statusEl.textContent = `✅ Pestaña "${name}" creada.`;
+  }catch(e){
+    statusEl.textContent = '❌ Error: ' + e.message;
+    customTabs = customTabs.filter(t => t.id !== id);
+  }finally{
+    document.getElementById('createTabBtn').disabled = false;
+  }
 });
 
 /* ======================================================
@@ -1892,20 +2140,48 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ======================================================
-   PESTAÑAS (Distre / ALGABO)
+   PESTAÑAS (rendering dinámico)
    ====================================================== */
+function renderTabs(){
+  const tabs = getAllTabs();
+  document.getElementById('tabsRow').innerHTML = tabs.map(t =>
+    `<button class="tab-btn ${t.id === activeTab ? 'active' : ''}" data-tab="${t.id}">${t.name}</button>`
+  ).join('');
+  document.getElementById('tabsRow').querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
+  });
+  if(isAdmin){
+    document.getElementById('adminTabsRow').innerHTML = tabs.map(t =>
+      `<button class="tab-btn ${t.id === activeTab ? 'active' : ''}" data-tab="${t.id}">${t.name}</button>`
+    ).join('');
+    document.getElementById('adminTabsRow').querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
+    });
+  }
+  renderTabSelects();
+}
+
+function renderTabSelects(){
+  const tabs = getAllTabs();
+  const npTab = document.getElementById('npTab');
+  const csvTab = document.getElementById('csvTab');
+  const options = tabs.map(t => `<option value="${t.id}">${t.name}</option>`).join('');
+  npTab.innerHTML = options;
+  csvTab.innerHTML = options;
+  if(!tabs.find(t => t.id === npTab.value)) npTab.value = tabs[0]?.id || '';
+  if(!tabs.find(t => t.id === csvTab.value)) csvTab.value = tabs[0]?.id || '';
+}
+
 function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
+  activeSubcat = "Todos";
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
   buildFilters();
   renderGrid();
   if(isAdmin && adminOverlay.classList.contains('open')) renderAdminList();
 }
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
-});
 
 /* ======================================================
    MODAL PRESENTACIÓN DISTRIBUIDORA
@@ -1940,7 +2216,9 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 searchInput.addEventListener('input', renderGrid);
 (async function init(){
   loadState();
+  await loadCustomTabs();
   await loadCustomProducts();
+  renderTabs();
   buildFilters();
   renderGrid();
   document.getElementById('cartBadge').textContent = cartCount();
