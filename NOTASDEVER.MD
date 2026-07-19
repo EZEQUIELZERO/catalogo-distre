@@ -109,3 +109,9 @@ pestañas se pueden renombrar y eliminar desde el panel admin, igual que las
 personalizadas. Se agregó protección para evitar eliminar la última pestaña restante.
 Archivos: index.html (renderAdminTabList sin distinción builtIn, TAB_REGISTRY
 sin propiedad builtIn, handlers rename/delete universales)
+
+### #014 - Crear NOTASDEVER.MD con estructura y historial
+Se creó el archivo de notas de versión con la estructura completa del proyecto,
+resumen técnico y el historial detallado de los 13 cambios anteriores numerados
+desde #001. Cada entry incluye descripción del cambio y archivos afectados.
+Archivos: NOTASDEVER.MD (nuevo)
