@@ -115,3 +115,16 @@ Se creó el archivo de notas de versión con la estructura completa del proyecto
 resumen técnico y el historial detallado de los 13 cambios anteriores numerados
 desde #001. Cada entry incluye descripción del cambio y archivos afectados.
 Archivos: NOTASDEVER.MD (nuevo)
+
+### #015 - Editar producto desde el panel admin (solo con sesión admin)
+Se agregó un botón "✏ Editar" en cada fila de la sección "Productos" del panel
+admin (visible únicamente con la sesión de admin iniciada). Abre un modal para
+modificar todos los valores del producto: descripción, precio, marca, pestaña,
+categoría, subcategoría e imagen (URL o archivo). El EAN se mantiene fijo como
+identificador. Los cambios se guardan en el repositorio via GitHub API
+(data/custom-products.json) y se aplican para todos los visitantes. Al editar un
+producto del catálogo base, se crea una entrada custom que lo sobrescribe al cargar.
+Se mejoró mergeCustomProductLocally para remover el producto de otras pestañas
+cuando se cambia de pestaña, evitando duplicados.
+Archivos: index.html (modal #editOverlay, openEditProductModal,
+saveEditProduct, botón editar en renderAdminList, mergeCustomProductLocally)
