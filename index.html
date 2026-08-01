@@ -1345,7 +1345,8 @@ async function githubGetFile(path){
   const { repo, branch, token } = getGithubConfig();
   if(!repo || !token) throw new Error('Configurá el repositorio y el token de GitHub en la sección General.');
   const res = await fetch(`${GITHUB_API}/repos/${repo}/contents/${path}?ref=${encodeURIComponent(branch)}`, {
-    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    cache: 'no-store'
   });
   if(res.status === 404) return null;
   if(!res.ok) throw new Error(`GitHub respondió ${res.status} al leer ${path}`);
@@ -1440,6 +1441,43 @@ async function loadCustomTabsData(){
 async function saveCustomTabsData(data, sha, message){
   const contentBase64 = utf8ToBase64(JSON.stringify(data, null, 2));
   await githubPutFile(CUSTOM_TABS_PATH, contentBase64, message, sha);
+}
+
+function isShaConflictError(e){
+  return /does not match/i.test(e.message) || /409/i.test(e.message);
+}
+
+/* Lee los datos, aplica mutate(data) y guarda. Si el PUT falla por conflicto
+   de sha (otra edición concurrente), vuelve a leer datos frescos y reintenta. */
+async function updateCustomProducts(mutate, message, maxRetries = 3){
+  let lastError;
+  for(let attempt = 0; attempt < maxRetries; attempt++){
+    try{
+      const { data, sha } = await loadCustomProductsData();
+      const result = mutate(data) || data;
+      await saveCustomProductsData(result, sha, message);
+      return result;
+    }catch(e){
+      lastError = e;
+      if(!isShaConflictError(e) || attempt >= maxRetries - 1) throw e;
+    }
+  }
+  throw lastError;
+}
+async function updateCustomTabs(mutate, message, maxRetries = 3){
+  let lastError;
+  for(let attempt = 0; attempt < maxRetries; attempt++){
+    try{
+      const { data, sha } = await loadCustomTabsData();
+      const result = mutate(data) || data;
+      await saveCustomTabsData(result, sha, message);
+      return result;
+    }catch(e){
+      lastError = e;
+      if(!isShaConflictError(e) || attempt >= maxRetries - 1) throw e;
+    }
+  }
+  throw lastError;
 }
 
 /* ======================================================
@@ -1868,11 +1906,12 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
       imgPath = path;
     }
 
-    const { data, sha } = await loadCustomProductsData();
     const entry = { ean, name, price, tab, cat, subcat, img: imgPath || '', brand: getTabById(tab)?.name || tab };
-    const idx = data.products.findIndex(p => p.ean === ean);
-    if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
-    await saveCustomProductsData(data, sha, `Agregar producto ${ean} - ${name}`);
+    await updateCustomProducts((data) => {
+      const idx = data.products.findIndex(p => p.ean === ean);
+      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      return data;
+    }, `Agregar producto ${ean} - ${name}`);
 
     mergeCustomProductLocally(entry);
     buildFilters();
@@ -1992,11 +2031,12 @@ async function saveEditProduct(){
       imgPath = path;
     }
 
-    const { data, sha } = await loadCustomProductsData();
     const entry = { ean, name, price, tab, cat, subcat, img: imgPath, brand: brand || (getTabById(tab)?.name || tab) };
-    const idx = data.products.findIndex(p => p.ean === ean);
-    if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
-    await saveCustomProductsData(data, sha, `Editar producto ${ean} - ${name}`);
+    await updateCustomProducts((data) => {
+      const idx = data.products.findIndex(p => p.ean === ean);
+      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      return data;
+    }, `Editar producto ${ean} - ${name}`);
 
     getAllTabs().forEach(t => {
       if(t.id !== tab) t.products = t.products.filter(p => p.ean !== ean);
@@ -2065,8 +2105,6 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
     const rows = lines.slice(1).map(parseCsvLine);
 
     statusEl.textContent = 'Sincronizando con GitHub...';
-    const { data, sha } = await loadCustomProductsData();
-    let count = 0;
     const newEntries = [];
     rows.forEach(cols => {
       const ean = (cols[0] || '').trim();
@@ -2075,22 +2113,24 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
       const price = priceRaw === '' ? null : Math.round(parseFloat(priceRaw));
       const img = (cols[3] || '').trim();
       if(!ean || !/^\d{6,14}$/.test(ean) || !name) return;
-      const entry = { ean, name, price: Number.isFinite(price) ? price : null, tab, cat, img, brand: getTabById(tab)?.name || tab };
-      const idx = data.products.findIndex(p => p.ean === ean);
-      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
-      newEntries.push(entry);
-      count++;
+      newEntries.push({ ean, name, price: Number.isFinite(price) ? price : null, tab, cat, img, brand: getTabById(tab)?.name || tab });
     });
 
-    if(count === 0){ statusEl.textContent = '❌ No se encontraron filas válidas en el CSV.'; return; }
+    if(newEntries.length === 0){ statusEl.textContent = '❌ No se encontraron filas válidas en el CSV.'; return; }
 
-    await saveCustomProductsData(data, sha, `Importar CSV (${count} productos)`);
+    await updateCustomProducts((data) => {
+      newEntries.forEach(entry => {
+        const idx = data.products.findIndex(p => p.ean === entry.ean);
+        if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      });
+      return data;
+    }, `Importar CSV (${newEntries.length} productos)`);
     newEntries.forEach(mergeCustomProductLocally);
     buildFilters();
     renderGrid();
     renderAdminList();
 
-    statusEl.textContent = `✅ Se importaron ${count} productos a GitHub. Puede tardar uno o dos minutos en publicarse.`;
+    statusEl.textContent = `✅ Se importaron ${newEntries.length} productos a GitHub. Puede tardar uno o dos minutos en publicarse.`;
     document.getElementById('csvFile').value = '';
   }catch(e){
     statusEl.textContent = '❌ Error: ' + e.message;
@@ -2152,11 +2192,12 @@ function renderAdminTabList(){
         if(!newName || newName.trim() === '' || newName.trim() === tab.name) return;
         tab.name = newName.trim();
         try{
-          const { data, sha } = await loadCustomTabsData();
-          const idx = data.tabs.findIndex(t => t.id === tabId);
-          const entry = { id: tabId, name: tab.name };
-          if(idx >= 0) data.tabs[idx] = entry; else data.tabs.push(entry);
-          await saveCustomTabsData(data, sha, `Renombrar pestaña ${tabId} a ${tab.name}`);
+          await updateCustomTabs((data) => {
+            const idx = data.tabs.findIndex(t => t.id === tabId);
+            const entry = { id: tabId, name: tab.name };
+            if(idx >= 0) data.tabs[idx] = entry; else data.tabs.push(entry);
+            return data;
+          }, `Renombrar pestaña ${tabId} a ${tab.name}`);
           renderAdminTabList();
           renderTabs();
           showToast('Pestaña renombrada');
@@ -2173,9 +2214,10 @@ function renderAdminTabList(){
           customTabs = customTabs.filter(t => t.id !== tabId);
         }
         try{
-          const { data, sha } = await loadCustomTabsData();
-          data.tabs = data.tabs.filter(t => t.id !== tabId);
-          await saveCustomTabsData(data, sha, `Eliminar pestaña ${tabId}`);
+          await updateCustomTabs((data) => {
+            data.tabs = data.tabs.filter(t => t.id !== tabId);
+            return data;
+          }, `Eliminar pestaña ${tabId}`);
           if(activeTab === tabId){
             const remaining = getAllTabs();
             setActiveTab(remaining[0]?.id || 'distre');
@@ -2207,9 +2249,10 @@ document.getElementById('createTabBtn').addEventListener('click', async () => {
   document.getElementById('createTabBtn').disabled = true;
   try{
     customTabs.push({ id, name, products: [] });
-    const { data, sha } = await loadCustomTabsData();
-    data.tabs.push({ id, name });
-    await saveCustomTabsData(data, sha, `Crear pestaña "${name}"`);
+    await updateCustomTabs((data) => {
+      data.tabs.push({ id, name });
+      return data;
+    }, `Crear pestaña "${name}"`);
     document.getElementById('newTabName').value = '';
     renderAdminTabList();
     renderTabs();

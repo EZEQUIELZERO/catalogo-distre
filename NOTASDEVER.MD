@@ -128,3 +128,17 @@ Se mejoró mergeCustomProductLocally para remover el producto de otras pestañas
 cuando se cambia de pestaña, evitando duplicados.
 Archivos: index.html (modal #editOverlay, openEditProductModal,
 saveEditProduct, botón editar en renderAdminList, mergeCustomProductLocally)
+
+### #016 - Fix: error "does not match" al guardar/editar productos en GitHub
+Se corrigió el error intermitente `data/custom-products.json does not match <sha>`
+(conflicto 409 de la API de contenidos de GitHub) al guardar productos.
+Causa: el GET del archivo se hacía sin `cache: 'no-store'`, por lo que el
+navegador podía devolver un sha viejo (de antes del guardado anterior) al hacer
+ediciones seguidas, y el PUT fallaba. Además no había reintento ante conflictos.
+Fix: se agregó `cache: 'no-store'` al fetch de githubGetFile, y se crearon los
+helpers `updateCustomProducts` y `updateCustomTabs` que releen los datos frescos
+y reintentan (hasta 3 veces) cuando el PUT falla por conflicto de sha. Los 6
+puntos de guardado (agregar/editar producto, importar CSV, crear/renombrar/
+eliminar pestaña) se refactorizaron para usar estos helpers.
+Archivos: index.html (githubGetFile, updateCustomProducts, updateCustomTabs,
+addProductBtn, saveEditProduct, importCsvBtn, renderAdminTabList, createTabBtn)
