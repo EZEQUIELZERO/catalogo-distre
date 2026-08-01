@@ -26,6 +26,7 @@ catalogo-distre/
 - **Admin**: Panel con login simple (admin/editor2026), sección General, Productos, Agregar producto, Pestañas, Importar CSV
 - **Pestañas**: Sistema dinámico con TAB_REGISTRY — distre, algabo, y personalizadas
 - **Filtros**: Categoría + subcategoría dependiente, búsqueda por nombre/EAN
+- **Admin page**: El panel de administración es una página completa (no popup) con menú lateral y área de contenido amplia
 
 ---
 
@@ -142,3 +143,24 @@ puntos de guardado (agregar/editar producto, importar CSV, crear/renombrar/
 eliminar pestaña) se refactorizaron para usar estos helpers.
 Archivos: index.html (githubGetFile, updateCustomProducts, updateCustomTabs,
 addProductBtn, saveEditProduct, importCsvBtn, renderAdminTabList, createTabBtn)
+
+### #017 - Panel admin como página completa + botón habilitar todos + descripción breve
+Tres mejoras en el panel de administración y el catálogo:
+1. El panel de administración dejó de ser un popup/modal y ahora es una página
+   completa a pantalla completa. Se reemplazó el overlay (#adminOverlay) por
+   .admin-page con menú de opciones vertical en la sidebar izquierda (General,
+   Productos, Agregar producto, Pestañas, Importar CSV) y área de administración
+   ancha a la derecha (.admin-main, max-width 1240px). Se agregó botón
+   "← Volver al catálogo" y se mantuvo "Cerrar sesión". El admin ya no se cierra
+   por click afuera ni ESC.
+2. Botón de acceso rápido en la sección Productos (#toggleAllBtn) para habilitar
+   o deshabilitar todos los productos del tab activo a la vez. El botón muestra
+   "✓ Habilitar todos" o "✕ Deshabilitar todos" según el estado actual del tab.
+3. Campo "Descripción breve (opcional)" (desc) en el formulario de Agregar
+   producto (#npDesc) y en el modal de Editar producto (#editDesc). La descripción
+   se guarda en el repositorio con el producto y se muestra a los visitantes en la
+   tarjeta del catálogo (.card-desc, truncada a 2 líneas) y en el modal del
+   producto (#modalDesc).
+Archivos: index.html (HTML/CSS .admin-page, openAdminPanel, closeAdminPage,
+renderAdminList + toggleAllBtn, npDesc/editDesc, mergeCustomProductLocally,
+renderGrid .card-desc, modalDesc, NOTASDEVER.MD)
