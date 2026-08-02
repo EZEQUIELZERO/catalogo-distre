@@ -14,8 +14,9 @@ catalogo-distre/
 ├── data/
 │   ├── custom-products.json      Productos agregados via panel admin (GitHub API)
 │   └── custom-tabs.json          Pestañas/marcas personalizadas (GitHub API)
-└── images/
-    └── uploads/                  Imágenes de productos subidas via admin (GitHub API)
+├── images/
+│   ├── FONDOHTML.webp              Fondo de pantalla optimizado (parallax)
+│   └── uploads/                  Imágenes de productos subidas via admin (GitHub API)
 ```
 
 ## Resumen técnico
@@ -164,3 +165,20 @@ Tres mejoras en el panel de administración y el catálogo:
 Archivos: index.html (HTML/CSS .admin-page, openAdminPanel, closeAdminPage,
 renderAdminList + toggleAllBtn, npDesc/editDesc, mergeCustomProductLocally,
 renderGrid .card-desc, modalDesc, NOTASDEVER.MD)
+
+### #018 - Fondo de pantalla con imagen FONDOHTML + efecto parallax
+Se agregó la imagen RECURSOS/FONDOHTML.png como fondo de la página web con
+movimiento suave al hacer scroll (parallax).
+1. Se optimizó la imagen original (PNG 1366x768, ~1.6 MB) a WebP comprimido
+   (images/FONDOHTML.webp, ~30 KB) usando Pillow con calidad 80. El original
+   se mantiene en la carpeta RECURSOS fuera del repo.
+2. Nueva capa fija .bg-parallax (#bgParallax) insertada al inicio de <body> con
+   la imagen en background center/cover y z-index:-1. Tiene una capa oscura
+   sutil (::after con rgba(15,17,21,.45)) para legibilidad. El background base
+   se movió de body a html y body quedó transparente para que la capa negativa
+   quede visible (evita el solapamiento por stacking context).
+3. Movimiento parallax en JS: listener de scroll pasivo + requestAnimationFrame
+   que desplaza la capa con transform: translateY(min(scrollY * 0.3, 110px)),
+   factor sutil con tope para no descubrir bordes en scrolls largos.
+Archivos: index.html (div #bgParallax, CSS .bg-parallax, html/body background,
+updateParallax/requestParallax), images/FONDOHTML.webp (nuevo), NOTASDEVER.MD

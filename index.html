@@ -22,8 +22,20 @@
     font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);}
-  body{min-height:100vh;}
+  html,body{margin:0;padding:0;color:var(--text);}
+  html{background:var(--bg);}
+  body{min-height:100vh;background:transparent;}
+
+  /* ---------- FONDO PARALLAX ---------- */
+  .bg-parallax{
+    position:fixed;inset:-25% 0;z-index:-1;
+    background:url('images/FONDOHTML.webp') center/cover no-repeat;
+    will-change:transform;
+  }
+  .bg-parallax::after{
+    content:"";position:absolute;inset:0;
+    background:rgba(15,17,21,.45);
+  }
 
   /* ---------- HEADER ---------- */
   header{
@@ -479,6 +491,9 @@
 </style>
 </head>
 <body>
+
+<!-- ================= FONDO PARALLAX ================= -->
+<div class="bg-parallax" id="bgParallax" aria-hidden="true"></div>
 
 <header>
   <div class="header-inner">
@@ -2539,6 +2554,24 @@ function setActiveTab(tab){
 })();
 
 /* ======================================================
+   FONDO PARALLAX
+   ====================================================== */
+const bgParallax = document.getElementById('bgParallax');
+let parallaxRaf = null;
+function updateParallax(){
+  parallaxRaf = null;
+  const shift = Math.min(window.scrollY * 0.3, 110);
+  bgParallax.style.transform = `translateY(${shift}px)`;
+}
+function requestParallax(){
+  if(parallaxRaf === null){
+    parallaxRaf = requestAnimationFrame(updateParallax);
+  }
+}
+window.addEventListener('scroll', requestParallax, { passive: true });
+window.addEventListener('resize', requestParallax, { passive: true });
+
+/* ======================================================
    INIT
    ====================================================== */
 searchInput.addEventListener('input', renderGrid);
@@ -2550,6 +2583,7 @@ searchInput.addEventListener('input', renderGrid);
   buildFilters();
   renderGrid();
   document.getElementById('cartBadge').textContent = cartCount();
+  requestParallax();
 })();
 </script>
 </body>
