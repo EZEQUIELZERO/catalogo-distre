@@ -207,3 +207,21 @@ Archivos: index.html (variables --btn-*, clases .btn-gold/.btn-green/.btn-gray/
 .cart-mini-btn, .btn-whatsapp, .btn-close, .admin-edit-btn, .admin-subnav-btn,
 .qty-btn, .distri-btn, .pres-btn-wa, .pres-btn-email, loginSubmit),
 NOTASDEVER.MD
+
+### #020 - Título "Catálogo" y eliminación de la pestaña "Distre"
+1. El título de la página cambió de "Catálogo Distre" a solo "Catálogo":
+   <title> y <h1> ahora muestran únicamente "Catálogo" (se quitó el span
+   "Distre" del encabezado).
+2. Se eliminó por completo la pestaña "Distre":
+   - Se borró el array PRODUCTS_DISTRE (25 productos) y su comentario del
+     código fuente.
+   - Se quitó la entrada `distre` de TAB_REGISTRY; ahora el registro base solo
+     contiene la pestaña "algabo".
+   - El tab activo por defecto pasó de 'distre' a 'algabo' (let activeTab), y
+     los fallbacks de findProductTab y de la eliminación de pestañas ahora
+     usan 'algabo'.
+Las claves de localStorage con prefijo `distre_*` (configuración de GitHub,
+overrides, carrito, WhatsApp) y el nombre del repo en el placeholder del admin
+se mantienen porque son internos de la app, no la pestaña ni el título.
+Archivos: index.html (title, h1, PRODUCTS_DISTRE eliminado, TAB_REGISTRY,
+activeTab, findProductTab, fallback eliminar pestaña), NOTASDEVER.MD

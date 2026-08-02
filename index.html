@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo Distre</title>
+<title>Catálogo</title>
 <style>
   :root{
     --bg:#0f1115;
@@ -563,7 +563,7 @@
 <header>
   <div class="header-inner">
     <div class="brand">
-      <h1>Catálogo <span>Distre</span></h1>
+      <h1>Catálogo</h1>
       <small>Perfumería &amp; distribución · consultá por WhatsApp</small>
     </div>
     <div class="search-wrap">
@@ -897,84 +897,6 @@ const GENERIC_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(`
 /* ======================================================
    DATOS DE PRODUCTOS (extraídos del CSV Padoc 15-4)
    ====================================================== */
-const PRODUCTS_DISTRE = [
-  { ean:"7798332024292", name:"MOCHILA BOOS ELIXIR Nº14", price:52273,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/3-8b9395ceeb36037a7617745369212140-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332024285", name:"MOCHILA BOOS ELIXIR Nº21", price:52273,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/5-fcf1d85a2ef68b476e17745368776919-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332024933", name:"MOCHILA BOOS ELIXIR Nº28", price:52273,
-    img:GENERIC_IMG,
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332022014", name:"BOOS CAJA ACQUA EDP 100 ML + DEO 150 ML", price:29942,
-    img:"https://cdn.batitienda.com/baticloud/images/product_picture_9e4653f057864d309c7cdf1d01e7e158_638968163792720254_0_m.jpeg",
-    brand:"Boos", cat:"Estuche" },
-  { ean:"7798332022021", name:"BOOS CAJA BLACK EDP 100 ML + DEO 150 ML", price:29942,
-    img:GENERIC_IMG,
-    brand:"Boos", cat:"Estuche" },
-  { ean:"7798332022038", name:"BOOS CAJA RED EDP 100 ML + DEO 150 ML", price:29942,
-    img:"https://sandraselmaonline.com.ar/wp-content/uploads/2025/01/boos-red-for-men.jpg",
-    brand:"Boos", cat:"Estuche" },
-  { ean:"7798332024308", name:"BOOS NECESER SIGNATURE BLACK EDP 100 ML", price:37807,
-    img:GENERIC_IMG,
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332024315", name:"BOOS NECESER SIGNATURE PRIVE EDP 100 ML", price:37807,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/signature_prive-2-1810x2048-d0b76b276ddbf9aec417495428642944-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025251", name:"BOOS NECESER INTENSE EDP 60 ML + DEO", price:37157,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intenseweb211-d3b547c91375baf59915629540743347-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025268", name:"BOOS NECESER INTENSE NIGHT EDP 60 ML + DEO", price:37157,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intensenightweb1-12cc1976391c3ad8ab15629541003273-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025275", name:"BOOS NECESER INTENSE BLUE EDP 60 ML + DEO", price:37157,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/blueweb1-9a60281d6872e6e18715629541222618-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025282", name:"BOOS NECESER INTENSE ATTRACTION EDP 60 ML + DEO", price:37157,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/edp_boos_intense_attraction_1000x1000-1c4a87f76aa2f7754217528445712964-1024-1024.webp",
-    brand:"Boos", cat:"Neceser" },
-  { ean:"7798332025336", name:"MOCHILA BOOS INTENSE + EDP 90 ML", price:44733,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intenseweb211-d3b547c91375baf59915629540743347-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332025343", name:"MOCHILA BOOS INTENSE NIGHT + EDP 90 ML", price:44733,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/intensenightweb1-12cc1976391c3ad8ab15629541003273-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332025350", name:"MOCHILA BOOS INTENSE BLUE + EDP 90 ML", price:44733,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/blueweb1-9a60281d6872e6e18715629541222618-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332025367", name:"MOCHILA BOOS INTENSE ATTRACTION + EDP 90 ML", price:44733,
-    img:"https://dcdn-us.mitiendanube.com/stores/001/024/956/products/edp_boos_intense_attraction_1000x1000-1c4a87f76aa2f7754217528445712964-1024-1024.webp",
-    brand:"Boos", cat:"Mochila" },
-  { ean:"7798332024353", name:"WPC NECESER LEGEND EDP 120 ML + DEO 150 ML", price:44625,
-    img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332024360", name:"WPC NECESER LEGEND SPIRIT EDP 120 ML + DEO 150 ML", price:44625,
-    img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332025299", name:"WPC NECESER RED EDP 60 ML + DEO 150 ML", price:34091,
-    img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332025305", name:"WPC NECESER BLACK EDP 60 ML + DEO 150 ML", price:34091,
-    img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332025312", name:"WPC NECESER BLUE EDP 60 ML + DEO 150 ML", price:34091,
-    img:GENERIC_IMG,
-    brand:"WPC", cat:"Neceser" },
-  { ean:"7798332024384", name:"TASCANI NECESER DISTINTO EDP 100 ML", price:31818,
-    img:"https://tascani.vtexassets.com/arquivos/ids/182034-800-auto?v=638635608787130000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" },
-  { ean:"7798332024377", name:"TASCANI NECESER UNICO EDP 100 ML", price:31818,
-    img:"https://tascani.vtexassets.com/arquivos/ids/182032-800-auto?v=638635605440500000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" },
-  { ean:"7798332024391", name:"TASCANI NECESER SINGULAR EDP 100 ML", price:31818,
-    img:"https://tascani.vtexassets.com/arquivos/ids/182031-800-auto?v=638635604187700000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" },
-  { ean:"7798332024407", name:"TASCANI NECESER ACTITUD EDP 100 ML", price:31818,
-    img:"https://tascani.vtexassets.com/arquivos/ids/182033-800-auto?v=638635606854600000&width=800&height=auto&aspect=true",
-    brand:"Tascani", cat:"Neceser" }
-];
-
 /* ======================================================
    PRODUCTOS ALGABO (pestaña 2) — extraídos del listado
    CODESCAN-DISTRE. Imágenes reales confirmadas contra
@@ -1363,7 +1285,6 @@ function storageSet(key, value){
    TAB REGISTRY (pestañas dinámicas)
    ====================================================== */
 const TAB_REGISTRY = {
-  distre: { id:'distre', name:'Distre', products:PRODUCTS_DISTRE },
   algabo: { id:'algabo', name:'ALGABO', products:PRODUCTS_ALGABO }
 };
 let customTabs = [];
@@ -1396,7 +1317,7 @@ let cart = {};              // { ean: qty }
 let whatsappNumber = DEFAULT_WHATSAPP;
 let isAdmin = false;
 let currentModalEan = null;
-let activeTab = 'distre';
+let activeTab = 'algabo';
 let activeSubcat = 'Todos';
 
 function getActiveProducts(){ return getTabProducts(activeTab); }
@@ -2108,7 +2029,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
 let editingEan = null;
 
 function findProductTab(ean){
-  return getAllTabs().find(t => t.products.some(p => p.ean === ean))?.id || 'distre';
+  return getAllTabs().find(t => t.products.some(p => p.ean === ean))?.id || 'algabo';
 }
 
 function openEditProductModal(ean){
@@ -2397,7 +2318,7 @@ function renderAdminTabList(){
           }, `Eliminar pestaña ${tabId}`);
           if(activeTab === tabId){
             const remaining = getAllTabs();
-            setActiveTab(remaining[0]?.id || 'distre');
+            setActiveTab(remaining[0]?.id || 'algabo');
           }
           renderAdminTabList();
           renderTabs();
