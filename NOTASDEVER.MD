@@ -182,3 +182,28 @@ movimiento suave al hacer scroll (parallax).
    factor sutil con tope para no descubrir bordes en scrolls largos.
 Archivos: index.html (div #bgParallax, CSS .bg-parallax, html/body background,
 updateParallax/requestParallax), images/FONDOHTML.webp (nuevo), NOTASDEVER.MD
+
+### #019 - Estilo de botones con la paleta paletadecoloresbotones.jpeg
+Se tomó como referencia la imagen RECURSOS/paletadecoloresbotones.jpeg y se
+aplicó su estilo SOLO a los botones (no a otros elementos). La paleta define
+tres familias con gradiente vertical (claro arriba → oscuro abajo) y borde
+inferior oscuro estilo "chiseled":
+1. DORADO (activos/CTA): gradiente #cfbe9d → #c5a669 → #b69250, borde #8a7248,
+   texto oscuro con sombra clara. Se aplica a estados activos: .tab-btn.active,
+   .chip.active, .chip-sm.active, .admin-subnav-btn.active y al botón de Ingresar
+   del login (btn-gold).
+2. VERDE (acciones de carrito/WhatsApp): gradiente #73bd89 → #4fa968 → #186732,
+   borde #186732, texto blanco. Se aplica a .cart-btn, .btn-whatsapp,
+   .cart-mini-btn.add y .pres-btn-wa.
+3. GRIS (neutros/cerrar) y OSCURO (fondo): gris #9fa1a1 → #8c8c8c → #717171
+   (btn-close, admin-edit-btn, pres-btn-email); oscuro #4a4846 → #3b3a39 →
+   #2e2e2e (tab-btn inactivos, chips, qty-btn, tab-action, cart-mini-btn.remove,
+   admin-subnav-btn inactivos, distri-btn).
+Los botones usan text-shadow para lectura (clara en tonos oscuros, oscura en
+tonos claros) y box-shadow inset superior/inferior para el acabado de la paleta.
+Se crearon clases utilitarias .btn-gold/.btn-green/.btn-gray/.btn-dark en CSS.
+Archivos: index.html (variables --btn-*, clases .btn-gold/.btn-green/.btn-gray/
+.btn-dark, estilos de .cart-btn, .tab-btn, .chip, .chip-sm, .tab-action,
+.cart-mini-btn, .btn-whatsapp, .btn-close, .admin-edit-btn, .admin-subnav-btn,
+.qty-btn, .distri-btn, .pres-btn-wa, .pres-btn-email, loginSubmit),
+NOTASDEVER.MD
