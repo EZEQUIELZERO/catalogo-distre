@@ -73,8 +73,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML -  PISTACHO",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/20250804-textil-pistacho-caramel-sf-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -82,8 +82,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML -  ERBA",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hTMKp-tLjSjvryFqXxnoQRF6-8DjRbzALBlXmGaK9A&s=10",
       "brand": "SAPHIRUS"
     },
     {
@@ -91,8 +91,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Limon",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6jeNpT6OArwQx-E5rYC9kYzu_UpshMvySCXoqy6NoKg&s=10",
       "brand": "SAPHIRUS"
     },
     {
@@ -100,8 +100,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Citrus",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-citrus-1.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -109,8 +109,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Uva",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-uva-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -118,8 +118,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bubblegum",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-bubblegum-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -127,8 +127,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Indiana",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-indiana.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -136,8 +136,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Flores Blancas",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-flores-blancas-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -145,19 +145,17 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Vainilla",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-vainilla-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680080",
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Cony",
-      "desc": "",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "subcat": "",
-      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-cony.jpg",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-cony-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -165,8 +163,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lavanda",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-lavanda.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -174,8 +172,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Tropical",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-tropical-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -183,8 +181,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Coco - Vai",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -192,8 +190,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Rosas",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-4067acae428aab067b17302110660616-480-0.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -201,8 +199,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Violetas",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-violetas.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -210,8 +208,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Etiqueta",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-etiqueta-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -219,8 +217,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Amour",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/Textil-Amour.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -228,8 +226,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Patio",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://borcas.com.ar/wp-content/uploads/2025/10/AROMATIZANTE-TEXTIL-PATIO-250ML.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -237,8 +235,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lola",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://cdn.batitienda.com/baticloud/images/product_picture_d7a8031854c745d7847c29088c3732e3_638826653288907942_0_m.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -246,8 +244,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Rocio",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-rocio.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -255,8 +253,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Guarana",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-guarana.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -264,8 +262,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Hawai",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-cc2d999ba8cfa84cb817308105849049-1024-1024.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -273,8 +271,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Blue",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://dixlimpieza.com/wp-content/uploads/2024/12/SAPHIRUS-TEXTIL-BLUE-X-250-CC.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -282,8 +280,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Papaya",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -291,8 +289,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Daniel",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -300,8 +298,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Faren",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://borcas.com.ar/wp-content/uploads/2025/10/AROMATIZANTE-TEXTIL-FAREN-250ML.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -309,8 +307,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Linah",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-linah-fi-feed-1.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -318,8 +316,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bebe",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://http2.mlstatic.com/D_NQ_NP_716566-MLA111564221156_062026-O.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -327,8 +325,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Pink",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatizarmayorista.com.ar/sistema/fotos/productos/00000007_00000417_G_17315208596734e95bb0961.png",
       "brand": "SAPHIRUS"
     },
     {
@@ -336,8 +334,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Tokyo",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -345,8 +343,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Angel",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-angel-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -354,8 +352,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - One Million",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://cdn.batitienda.com/baticloud/images/product_picture_76a6047724c94bb0b48a2854efe7f535_638826652257153523_0_m.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -363,8 +361,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Nina",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-730dd498917abd7e9817302111563734-1024-1024.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -372,8 +370,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lady",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lady-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -381,8 +379,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Apolo",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-apolo-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -390,8 +388,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Jazmin",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-jazmin.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -399,8 +397,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Green",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://cdn.batitienda.com/baticloud/images/product_picture_4375b38852d346ecb20c3f23ee63ab20_637986911351028992_0_m.png",
       "brand": "SAPHIRUS"
     },
     {
@@ -408,8 +406,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bamboo",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -417,8 +415,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Flowers",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -426,8 +424,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Duvet",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-duvet-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -435,8 +433,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Polo",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-polo-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -444,8 +442,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Invicto",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2025/02/20250218-textil-invicto-legend-sf-sapfirus.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -453,8 +451,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Man",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-man-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -462,8 +460,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Apple",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -471,8 +469,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Mery",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://cdn.batitienda.com/baticloud/images/product_picture_7814ab9f976940baa4e9698a32ec6a62_638826662742984017_0_m.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -480,8 +478,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Paula",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-paula-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -489,8 +487,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Magnolia Y Fresias",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-magnolia-y-fresias.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -498,8 +496,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Verbena",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-verbena-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -507,8 +505,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Maracuya",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-maracuya-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -516,8 +514,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Pitanga",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-c27898cf01b20eb4a417302112355443-1024-1024.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -525,8 +523,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Cristóbal",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-cristobal-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -534,8 +532,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bella",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
@@ -543,8 +541,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lilas",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lilas-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -552,8 +550,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Naranja Pimienta",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-naranja-pimienta.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -561,8 +559,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Wanted",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-wanted-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -570,8 +568,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Beauty",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-beauty-fi-feed.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -579,8 +577,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Oriente",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-oriente-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -588,8 +586,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Marino",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-marino-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -597,8 +595,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Olympic",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-olympic-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -606,8 +604,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lucy",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lucy-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -615,8 +613,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Male",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-man-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -624,8 +622,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - New York",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-new-york.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -633,8 +631,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Limon Dulce y Vainilla",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://http2.mlstatic.com/D_NQ_NP_676227-MLA112208987882_062026-O.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -642,8 +640,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Palace",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-palace-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -651,8 +649,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Antitabaco",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-antitabaco.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -660,8 +658,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Cereza Malbec",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-cereza-malbec.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -669,8 +667,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Adventure",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/textil-adventure.png",
       "brand": "SAPHIRUS"
     },
     {
@@ -678,8 +676,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Pomelo Rosado",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/20240730-pomelo-rosado-textil-sin-fondo.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -687,8 +685,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - XS",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-pure-xs-fi-feed-1.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -696,8 +694,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Ghost",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-ghost-fi-feed-1.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -705,8 +703,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Due",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://camoga.ar/media/catalog/product/cache/17183a23c5d57b885c9e1f3d66234d68/l/u/lua.png",
       "brand": "SAPHIRUS"
     },
     {
@@ -714,8 +712,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bad Man",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-bad-man-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -723,8 +721,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Opium",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-opium-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -732,8 +730,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Frutilla",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://borcas.com.ar/wp-content/uploads/2025/11/AROMATIZANTE-TEXTIL-FRUTILLA-250ML.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -741,8 +739,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Teakwood",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-teakwood-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -750,8 +748,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Frutos Patagonicos",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://borcas.com.ar/wp-content/uploads/2025/10/AROMATIZANTE-TEXTIL-FRUTOS-PATAGONICOS-250ML.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -759,8 +757,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Yourself",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/textil-saphirus-yourself-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -768,8 +766,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Peonias y Cedro",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2024/09/20240911-textil-peonias-y-cedro-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -777,8 +775,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Hypnotic Scent",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/textil-saphirus-hypnotic-scent-fi-feed.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -786,8 +784,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Sándalo y Violetas",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2023/09/Saphirus-Textiles-Sandalos-y-Violetas.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -795,8 +793,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Flores Silvestres",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/flores-silvestres-1.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -804,8 +802,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Petalos de Orquideas",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2023/09/Saphirus-Textiles-Petalos-de-Orquideas.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -813,8 +811,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Clean Cotton",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/07/saphirus-home-spray-clean-cotton.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -822,8 +820,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Breeze",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2025/02/20250220-textil-breeze-sf-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -831,8 +829,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Sandia Pepino",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromania.com.ar/wp-content/uploads/2025/01/Saphirus-textil-sandia-pepino.jpeg",
       "brand": "SAPHIRUS"
     },
     {
@@ -840,8 +838,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Fresias & Bergamota",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2024/09/20240911-textil-fresias-y-bergamota-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -849,8 +847,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Black",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/06/textil-black-xs-saphirus-1.png",
       "brand": "SAPHIRUS"
     },
     {
@@ -858,8 +856,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Invicto Legend",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2025/02/20250218-textil-invicto-legend-sf-sapfirus.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -867,8 +865,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Salvaje",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/12/20241210-textil-salvaje-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -876,8 +874,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Fama",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/08/20240812-textil-fama-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -885,8 +883,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Scandal Fem",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/08/20240812-textil-scandal-fem-saphirus.jpg.webp",
       "brand": "SAPHIRUS"
     },
     {
@@ -894,8 +892,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Scandal Man",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/06/textil-scandal-man-saphirus.png",
       "brand": "SAPHIRUS"
     },
     {
@@ -903,8 +901,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Good Woman",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/12/20241210-textil-good-woman-saphirus.jpg",
       "brand": "SAPHIRUS"
     },
     {
@@ -912,8 +910,8 @@
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bergamota y Cedro",
       "price": 5100,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
+      "cat": "TEXTIL 250 ML",
+      "img": "ERROR",
       "brand": "SAPHIRUS"
     },
     {
