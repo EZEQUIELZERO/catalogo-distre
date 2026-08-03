@@ -230,3 +230,23 @@ activeTab, findProductTab, fallback eliminar pestaña), NOTASDEVER.MD
 Se agregó la versión "v2.0.1" en el footer del catálogo, resaltada en dorado
 (accent) con la clase .ver para mantener el estilo visual del tema oscuro.
 Archivos: index.html (footer, CSS footer .ver), NOTASDEVER.MD
+
+### #022 - Paleta azul y blanca para la pestaña SAPHIRUS
+Se implementó un tema de color propio para la pestaña SAPHIRUS: al ingresar a
+esa pestaña, toda la página cambia a una paleta azul y blanco (frescura y
+calidad), y al salir de ella vuelve al tema oscuro original.
+- Nuevo bloque CSS "PALETA SAPHIRUS" con override de variables del tema:
+  fondo azul muy claro (#eef4fb), tarjetas blancas (#ffffff), texto azul
+  oscuro (#10233a), acento azul (#1a6fd8) y gradientes de botones azules.
+  También ajusta header blanco, velo del parallax, bordes de botones activos,
+  fondos de imágenes y campos de formulario.
+- El tema se activa con el atributo `data-tab-theme="saphirus"` en <html>,
+  seteado en setActiveTab() cuando la pestaña activa es 'saphirus' y limpiado
+  al cambiar a cualquier otra pestaña. Los selectores usan
+  [data-tab-theme="saphirus"] (genéricos) para que el override de variables
+  aplique también al fondo base del documento (html).
+- La paleta aplica a todo el sitio mientras la pestaña esté activa (incluye
+  panel admin y modales), y se restaura el tema oscuro al volver a ALGABO u
+  otra pestaña.
+Archivos: index.html (CSS PALETA SAPHIRUS, setActiveTab data-tab-theme),
+NOTASDEVER.MD

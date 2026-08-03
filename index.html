@@ -49,6 +49,55 @@
   html{background:var(--bg);}
   body{min-height:100vh;background:transparent;}
 
+  /* ---------- PALETA SAPHIRUS (azul y blanco) ---------- */
+  [data-tab-theme="saphirus"]{
+    --bg:#eef4fb;
+    --bg-soft:#e0ecf8;
+    --card:#ffffff;
+    --card-hover:#f3f8fe;
+    --border:#c6d9ec;
+    --text:#10233a;
+    --text-dim:#55708c;
+    --accent:#1a6fd8;
+    --accent-soft:#d5e6fa;
+    --shadow:0 10px 30px rgba(26,111,216,.14);
+    --btn-gold-top:#64aef4;
+    --btn-gold-mid:#2e85e6;
+    --btn-gold-bot:#1a6fd8;
+    --btn-green-top:#5fb0f5;
+    --btn-green-mid:#2e85e6;
+    --btn-green-bot:#145eaf;
+    --btn-gray-top:#e8eef5;
+    --btn-gray-mid:#ccd9e6;
+    --btn-gray-bot:#a9bccf;
+    --btn-dark-top:#c9d9e8;
+    --btn-dark-mid:#a3b9ce;
+    --btn-dark-bot:#7f98b2;
+  }
+  [data-tab-theme="saphirus"] .bg-parallax::after{background:rgba(238,244,251,.68);}
+  [data-tab-theme="saphirus"] header{
+    background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(255,255,255,.9));
+    border-bottom-color:var(--border);
+  }
+  [data-tab-theme="saphirus"] .btn-gold{border-color:#145eaf;}
+  [data-tab-theme="saphirus"] .btn-green{border-color:#145eaf;}
+  [data-tab-theme="saphirus"] .btn-gray{border-color:#9db2c6;}
+  [data-tab-theme="saphirus"] .btn-dark{border-color:#6d87a1;}
+  [data-tab-theme="saphirus"] .tab-btn.active{border-color:#145eaf;}
+  [data-tab-theme="saphirus"] .chip.active{border-color:#145eaf;}
+  [data-tab-theme="saphirus"] .chip-sm.active{border-color:#145eaf;}
+  [data-tab-theme="saphirus"] .admin-subnav-btn.active{border-color:#145eaf;}
+  [data-tab-theme="saphirus"] .card-img{background:#eaf1f9;}
+  [data-tab-theme="saphirus"] .modal-img{background:#eaf1f9;}
+  [data-tab-theme="saphirus"] .admin-row img{background:#eaf1f9;}
+  [data-tab-theme="saphirus"] .cart-item img{background:#eaf1f9;}
+  [data-tab-theme="saphirus"] .search-wrap input{background:#ffffff;}
+  [data-tab-theme="saphirus"] .icon-btn{background:#ffffff;}
+  [data-tab-theme="saphirus"] .admin-tab-item{background:#ffffff;}
+  [data-tab-theme="saphirus"] .field input{background:#ffffff;}
+  [data-tab-theme="saphirus"] .toast{background:#ffffff;border-color:var(--border);}
+  [data-tab-theme="saphirus"] .cart-badge{border-color:#eef4fb;}
+
   /* ---------- FONDO PARALLAX ---------- */
   .bg-parallax{
     position:fixed;inset:-25% 0;z-index:-1;
@@ -2506,6 +2555,7 @@ function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
   activeSubcat = "Todos";
+  document.documentElement.dataset.tabTheme = (tab === 'saphirus') ? 'saphirus' : '';
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
   buildFilters();
