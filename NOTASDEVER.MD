@@ -225,3 +225,8 @@ overrides, carrito, WhatsApp) y el nombre del repo en el placeholder del admin
 se mantienen porque son internos de la app, no la pestaña ni el título.
 Archivos: index.html (title, h1, PRODUCTS_DISTRE eliminado, TAB_REGISTRY,
 activeTab, findProductTab, fallback eliminar pestaña), NOTASDEVER.MD
+
+### #021 - Versión 2.0.1 en el pie del catálogo
+Se agregó la versión "v2.0.1" en el footer del catálogo, resaltada en dorado
+(accent) con la clase .ver para mantener el estilo visual del tema oscuro.
+Archivos: index.html (footer, CSS footer .ver), NOTASDEVER.MD
