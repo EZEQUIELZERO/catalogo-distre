@@ -98,6 +98,59 @@
   [data-tab-theme="saphirus"] .toast{background:#ffffff;border-color:var(--border);}
   [data-tab-theme="saphirus"] .cart-badge{border-color:#eef4fb;}
 
+  /* ---------- PALETA SANDRA MARZZAN (malva y blanco) ---------- */
+  /* Colores extraídos de https://www.sandramarzzan.com.ar (2026-08-03):
+     --accent-color #66435a (púrpura principal), --main-background #ffffff,
+     --institutional-background #f7f1f1 (malva claro), --institutional-foreground #5c3b49,
+     --header-desktop-nav-background #858889 (gris). */
+  [data-tab-theme="sandramarzzan"]{
+    --bg:#f7f1f1;
+    --bg-soft:#efe6e9;
+    --card:#ffffff;
+    --card-hover:#faf5f7;
+    --border:#e0d0d6;
+    --text:#5c3b49;
+    --text-dim:#8a6d7d;
+    --accent:#66435a;
+    --accent-soft:#eadfe4;
+    --shadow:0 10px 30px rgba(102,67,90,.14);
+    --btn-gold-top:#9d7a8d;
+    --btn-gold-mid:#7d5569;
+    --btn-gold-bot:#66435a;
+    --btn-green-top:#9d7a8d;
+    --btn-green-mid:#7d5569;
+    --btn-green-bot:#54354a;
+    --btn-gray-top:#f1eaec;
+    --btn-gray-mid:#e0d3d8;
+    --btn-gray-bot:#c4aeb7;
+    --btn-dark-top:#c9b4bd;
+    --btn-dark-mid:#a98c98;
+    --btn-dark-bot:#8a6d7d;
+  }
+  [data-tab-theme="sandramarzzan"] .bg-parallax::after{background:rgba(247,241,241,.72);}
+  [data-tab-theme="sandramarzzan"] header{
+    background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.92));
+    border-bottom-color:var(--border);
+  }
+  [data-tab-theme="sandramarzzan"] .btn-gold{border-color:#54354a;}
+  [data-tab-theme="sandramarzzan"] .btn-green{border-color:#54354a;}
+  [data-tab-theme="sandramarzzan"] .btn-gray{border-color:#c4aeb7;}
+  [data-tab-theme="sandramarzzan"] .btn-dark{border-color:#8a6d7d;}
+  [data-tab-theme="sandramarzzan"] .tab-btn.active{border-color:#66435a;}
+  [data-tab-theme="sandramarzzan"] .chip.active{border-color:#66435a;}
+  [data-tab-theme="sandramarzzan"] .chip-sm.active{border-color:#66435a;}
+  [data-tab-theme="sandramarzzan"] .admin-subnav-btn.active{border-color:#66435a;}
+  [data-tab-theme="sandramarzzan"] .card-img{background:#f4ecef;}
+  [data-tab-theme="sandramarzzan"] .modal-img{background:#f4ecef;}
+  [data-tab-theme="sandramarzzan"] .admin-row img{background:#f4ecef;}
+  [data-tab-theme="sandramarzzan"] .cart-item img{background:#f4ecef;}
+  [data-tab-theme="sandramarzzan"] .search-wrap input{background:#ffffff;}
+  [data-tab-theme="sandramarzzan"] .icon-btn{background:#ffffff;}
+  [data-tab-theme="sandramarzzan"] .admin-tab-item{background:#ffffff;}
+  [data-tab-theme="sandramarzzan"] .field input{background:#ffffff;}
+  [data-tab-theme="sandramarzzan"] .toast{background:#ffffff;border-color:var(--border);}
+  [data-tab-theme="sandramarzzan"] .cart-badge{border-color:#f7f1f1;}
+
   /* ---------- FONDO PARALLAX ---------- */
   .bg-parallax{
     position:fixed;inset:-25% 0;z-index:-1;
@@ -2555,7 +2608,8 @@ function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
   activeSubcat = "Todos";
-  document.documentElement.dataset.tabTheme = (tab === 'saphirus') ? 'saphirus' : '';
+  const TAB_THEMES = {'saphirus':'saphirus','sandra-marzzan':'sandramarzzan'};
+  document.documentElement.dataset.tabTheme = TAB_THEMES[tab] || '';
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
   buildFilters();

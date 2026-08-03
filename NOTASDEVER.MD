@@ -250,3 +250,25 @@ calidad), y al salir de ella vuelve al tema oscuro original.
   otra pestaña.
 Archivos: index.html (CSS PALETA SAPHIRUS, setActiveTab data-tab-theme),
 NOTASDEVER.MD
+
+### #023 - Paleta malva y blanco para la pestaña SANDRA MARZZAN
+Se implementó un tema de color propio para la pestaña SANDRA MARZZAN con la
+paleta extraída del sitio oficial de la marca (https://www.sandramarzzan.com.ar,
+revisado el 2026-08-03): al ingresar a esa pestaña, toda la página cambia a una
+paleta malva/púrpura y blanco (calidad y distinción de la marca), y al salir de
+ella vuelve al tema oscuro original.
+- Colores reales del sitio usados: --accent-color #66435a (púrpura principal de
+  la marca, botones/footer), --main-background #ffffff (fondo blanco),
+  --institutional-background #f7f1f1 (malva claro para fondos),
+  --institutional-foreground #5c3b49 (púrpura oscuro para texto).
+- Nuevo bloque CSS "PALETA SANDRA MARZZAN" con override de variables del tema:
+  fondo malva claro (#f7f1f1), tarjetas blancas (#ffffff), texto púrpura oscuro
+  (#5c3b49), acento púrpura (#66435a) y gradientes de botones en tonos malva.
+  Ajusta header blanco, velo del parallax, bordes de botones activos, fondos de
+  imágenes y campos de formulario (mismo patrón que SAPHIRUS).
+- El tema se activa con el atributo `data-tab-theme="sandramarzzan"` en <html>,
+  seteado en setActiveTab() mediante el mapa TAB_THEMES
+  ({'saphirus':'saphirus','sandra-marzzan':'sandramarzzan'}), lo que hace que
+  agregar temas a futuro sea solo sumar una entrada al mapa + un bloque CSS.
+Archivos: index.html (CSS PALETA SANDRA MARZZAN, TAB_THEMES en setActiveTab),
+NOTASDEVER.MD
