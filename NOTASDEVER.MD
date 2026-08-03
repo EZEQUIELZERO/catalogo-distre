@@ -272,3 +272,25 @@ ella vuelve al tema oscuro original.
   agregar temas a futuro sea solo sumar una entrada al mapa + un bloque CSS.
 Archivos: index.html (CSS PALETA SANDRA MARZZAN, TAB_THEMES en setActiveTab),
 NOTASDEVER.MD
+
+### #024 - Paleta azul índigo y blanco para la pestaña ALGABO
+Se implementó un tema de color propio para la pestaña ALGABO con la paleta
+extraída del sitio oficial de la marca (https://algabo.com, revisado el
+2026-08-03): al ingresar a esa pestaña, toda la página cambia a una paleta
+azul índigo/blanco con acentos fucsia (identidad de la marca), y al salir de
+ella vuelve al tema oscuro original.
+- Colores reales del sitio usados: h2 #001b71 (azul índigo, color principal de
+  la marca), links #cc3366 (fucsia/magenta), fondo #ffffff, texto #333333.
+- Nuevo bloque CSS "PALETA ALGABO" con override de variables del tema: fondo
+  azul hielo (#f2f6fc), tarjetas blancas (#ffffff), texto azul marino
+  (#12224a), acento índigo (#001b71), gradientes de botones azules y bordes de
+  elementos activos en fucsia (#cc3366). Ajusta header blanco, velo del
+  parallax, fondos de imágenes y campos de formulario (mismo patrón que
+  SAPHIRUS y SANDRA MARZZAN).
+- ALGABO es la pestaña inicial del catálogo, así que el tema también se aplica
+  al cargar la página: se refactorizó el mapa TAB_THEMES a nivel global y se
+  creó la función applyTabTheme() (usa activeTab), llamada tanto en
+  setActiveTab() como en init() tras el primer render. Agregar un tema nuevo a
+  futuro = entrada en TAB_THEMES + bloque CSS + (si es la inicial) nada más.
+Archivos: index.html (CSS PALETA ALGABO, TAB_THEMES global, applyTabTheme,
+init applyTabTheme), NOTASDEVER.MD

@@ -151,6 +151,58 @@
   [data-tab-theme="sandramarzzan"] .toast{background:#ffffff;border-color:var(--border);}
   [data-tab-theme="sandramarzzan"] .cart-badge{border-color:#f7f1f1;}
 
+  /* ---------- PALETA ALGABO (azul índigo y blanco) ---------- */
+  /* Colores extraídos de https://algabo.com (2026-08-03):
+     h2 #001b71 (azul índigo, marca principal), links #cc3366 (fucsia),
+     fondo #ffffff, texto #333333. */
+  [data-tab-theme="algabo"]{
+    --bg:#f2f6fc;
+    --bg-soft:#e6edf8;
+    --card:#ffffff;
+    --card-hover:#f6f9ff;
+    --border:#d5e0f0;
+    --text:#12224a;
+    --text-dim:#5b6b8f;
+    --accent:#001b71;
+    --accent-soft:#dbe4f5;
+    --shadow:0 10px 30px rgba(0,27,113,.12);
+    --btn-gold-top:#5f7fd9;
+    --btn-gold-mid:#2442ad;
+    --btn-gold-bot:#001b71;
+    --btn-green-top:#7b96e2;
+    --btn-green-mid:#2c4cb8;
+    --btn-green-bot:#001b71;
+    --btn-gray-top:#edf2fa;
+    --btn-gray-mid:#d4deef;
+    --btn-gray-bot:#b5c3e0;
+    --btn-dark-top:#c7d3eb;
+    --btn-dark-mid:#9db0d6;
+    --btn-dark-bot:#7086b8;
+  }
+  [data-tab-theme="algabo"] .bg-parallax::after{background:rgba(242,246,252,.75);}
+  [data-tab-theme="algabo"] header{
+    background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.92));
+    border-bottom-color:var(--border);
+  }
+  [data-tab-theme="algabo"] .btn-gold{border-color:#cc3366;}
+  [data-tab-theme="algabo"] .btn-green{border-color:#cc3366;}
+  [data-tab-theme="algabo"] .btn-gray{border-color:#b5c3e0;}
+  [data-tab-theme="algabo"] .btn-dark{border-color:#7086b8;}
+  [data-tab-theme="algabo"] .tab-btn.active{border-color:#cc3366;}
+  [data-tab-theme="algabo"] .chip.active{border-color:#cc3366;}
+  [data-tab-theme="algabo"] .chip-sm.active{border-color:#cc3366;}
+  [data-tab-theme="algabo"] .admin-subnav-btn.active{border-color:#cc3366;}
+  [data-tab-theme="algabo"] .card-img{background:#eaf0fa;}
+  [data-tab-theme="algabo"] .modal-img{background:#eaf0fa;}
+  [data-tab-theme="algabo"] .admin-row img{background:#eaf0fa;}
+  [data-tab-theme="algabo"] .cart-item img{background:#eaf0fa;}
+  [data-tab-theme="algabo"] .search-wrap input{background:#ffffff;}
+  [data-tab-theme="algabo"] .icon-btn{background:#ffffff;}
+  [data-tab-theme="algabo"] .admin-tab-item{background:#ffffff;}
+  [data-tab-theme="algabo"] .field input{background:#ffffff;}
+  [data-tab-theme="algabo"] .toast{background:#ffffff;border-color:var(--border);}
+  [data-tab-theme="algabo"] .cart-badge{border-color:#f2f6fc;}
+
   /* ---------- FONDO PARALLAX ---------- */
   .bg-parallax{
     position:fixed;inset:-25% 0;z-index:-1;
@@ -2604,12 +2656,15 @@ function renderTabSelects(){
   if(!tabs.find(t => t.id === csvTab.value)) csvTab.value = tabs[0]?.id || '';
 }
 
+const TAB_THEMES = {'algabo':'algabo','saphirus':'saphirus','sandra-marzzan':'sandramarzzan'};
+function applyTabTheme(){
+  document.documentElement.dataset.tabTheme = TAB_THEMES[activeTab] || '';
+}
 function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
   activeSubcat = "Todos";
-  const TAB_THEMES = {'saphirus':'saphirus','sandra-marzzan':'sandramarzzan'};
-  document.documentElement.dataset.tabTheme = TAB_THEMES[tab] || '';
+  applyTabTheme();
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
   buildFilters();
@@ -2673,6 +2728,7 @@ searchInput.addEventListener('input', renderGrid);
   renderTabs();
   buildFilters();
   renderGrid();
+  applyTabTheme();
   document.getElementById('cartBadge').textContent = cartCount();
   requestParallax();
 })();
