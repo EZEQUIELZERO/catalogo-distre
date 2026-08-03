@@ -152,10 +152,12 @@
     {
       "ean": "7798184680080",
       "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Cony",
+      "desc": "",
       "price": 5100,
       "tab": "saphirus",
       "cat": "Otros",
-      "img": "",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-cony.jpg",
       "brand": "SAPHIRUS"
     },
     {
