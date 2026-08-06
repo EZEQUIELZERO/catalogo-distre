@@ -499,10 +499,13 @@
   textarea.price-input{resize:vertical;font-family:inherit;line-height:1.4;}
   .admin-list{max-height:65vh;overflow-y:auto;border:1px solid var(--border);border-radius:12px;padding:4px 14px;}
   .admin-row{
-    display:grid;grid-template-columns:auto 1fr 110px 50px auto;gap:12px;align-items:center;
+    display:grid;grid-template-columns:auto auto 1fr 110px 50px auto;gap:12px;align-items:center;
     padding:12px 0;border-bottom:1px solid var(--border);
   }
   .admin-row:last-child{border-bottom:none;}
+  .admin-row .admin-sel{width:17px;height:17px;accent-color:var(--accent);cursor:pointer;margin:0;}
+  .admin-row.sel-row{background:rgba(255,255,255,.05);border-radius:10px;padding-left:10px;padding-right:10px;}
+  .admin-row.sel-row.disabled-row{background:rgba(255,255,255,.025);}
   .admin-row img{width:44px;height:44px;object-fit:contain;background:#10131a;border-radius:8px;padding:4px;}
   .admin-row .p-name{font-size:.8rem;font-weight:600;line-height:1.25;}
   .admin-row .p-ean{font-size:.68rem;color:var(--text-dim);margin-top:2px;}
@@ -514,6 +517,24 @@
     transition:all .15s;white-space:nowrap;
   }
   .admin-edit-btn:hover{filter:brightness(1.08);border-color:var(--accent);}
+  .btn-danger{
+    background:linear-gradient(180deg,#e06060,#c03434 55%,#972020);
+    color:#ffffff;border-color:#7e1616;text-shadow:0 -1px 0 rgba(0,0,0,.25);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.22), inset 0 -1px 0 rgba(0,0,0,.25);
+  }
+  .btn-danger:hover{filter:brightness(1.08);}
+  .admin-toolbar{
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;
+  }
+  .admin-toolbar .price-input{flex:1;min-width:200px;width:auto;margin:0;}
+  .admin-toolbar .btn{margin:0;padding:10px 14px;font-size:.8rem;}
+  .admin-bulkbar{
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px;
+    padding-top:14px;border-top:1px solid var(--border);
+  }
+  .admin-bulkbar .btn{margin:0;padding:10px 14px;font-size:.8rem;}
+  .admin-sel-count{color:var(--text-dim);font-size:.8rem;font-weight:700;margin-right:auto;}
+  .admin-empty{padding:28px;text-align:center;color:var(--text-dim);font-size:.85rem;}
 
   .switch{position:relative;display:inline-block;width:42px;height:24px;flex-shrink:0;}
   .switch input{opacity:0;width:0;height:0;position:absolute;}
@@ -907,7 +928,18 @@
           <button class="btn btn-close btn-auto" id="toggleAllBtn">✓ Habilitar todos</button>
         </div>
         <div class="admin-tabs" id="adminTabsRow"></div>
+        <div class="admin-toolbar">
+          <input type="text" id="adminSearchInput" class="price-input" placeholder="🔍 Buscar por nombre o EAN...">
+          <button class="btn btn-gray btn-auto" id="adminSelectAllBtn">☑ Seleccionar todos</button>
+          <button class="btn btn-gray btn-auto" id="adminSelectNoneBtn">☐ Deseleccionar todos</button>
+        </div>
         <div class="admin-list" id="adminProductList"></div>
+        <div class="admin-bulkbar">
+          <span class="admin-sel-count" id="adminSelCount">0 seleccionados</span>
+          <button class="btn btn-close btn-auto" id="adminDisableSelBtn">⏻ Deshabilitar seleccionados</button>
+          <button class="btn btn-danger btn-auto" id="adminDeleteSelBtn">🗑 Eliminar seleccionados</button>
+          <button class="btn btn-danger btn-auto" id="adminDeleteAllBtn">🗑 Eliminar todos</button>
+        </div>
       </div>
 
       <!-- ---------- SECCIÓN AGREGAR PRODUCTO ---------- -->
@@ -1504,7 +1536,8 @@ function getEffective(p){
   const o = overrides[p.ean] || {};
   const price = Number.isFinite(o.price) ? o.price : p.price;
   const enabled = typeof o.enabled === 'boolean' ? o.enabled : true;
-  return { ...p, price, enabled };
+  const deleted = o.deleted === true;
+  return { ...p, price, enabled, deleted };
 }
 
 /* ======================================================
@@ -1599,6 +1632,7 @@ async function saveCustomProductsData(data, sha, message){
   await githubPutFile(CUSTOM_PRODUCTS_PATH, contentBase64, message, sha);
 }
 function mergeCustomProductLocally(entry){
+  if(entry.deleted) return;
   const target = getProductsForTab(entry.tab);
   if(!target) return;
   getAllTabs().forEach(t => {
@@ -1624,7 +1658,14 @@ async function loadCustomProducts(){
     if(!res.ok) return;
     const data = await res.json();
     (data.products || []).forEach(p => {
-      if(!p.ean || !p.name) return;
+      if(!p.ean) return;
+      if(p.deleted){
+        // Producto eliminado desde el panel: sacarlo de todas las pestañas
+        // (incluye productos base embebidos en el HTML).
+        getAllTabs().forEach(t => { t.products = t.products.filter(x => x.ean !== p.ean); });
+        return;
+      }
+      if(!p.name) return;
       const tab = p.tab || 'algabo';
       mergeCustomProductLocally({ ...p, tab });
     });
@@ -1749,7 +1790,7 @@ const subfiltersEl = document.getElementById('subfilters');
 let activeCat = "Todos";
 
 function buildFilters(){
-  const visible = getActiveProducts().map(getEffective).filter(p=>p.enabled);
+  const visible = getActiveProducts().map(getEffective).filter(p=>p.enabled && !p.deleted);
   const cats = ["Todos", ...new Set(visible.map(p => p.cat))];
   if(!cats.includes(activeCat)) activeCat = "Todos";
   filtersEl.innerHTML = cats.map(c =>
@@ -1771,7 +1812,7 @@ function buildSubfilters(){
     subfiltersEl.innerHTML = '';
     return;
   }
-  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && p.cat === activeCat);
+  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && !p.deleted && p.cat === activeCat);
   const subcats = [...new Set(visible.map(p => p.subcat).filter(s => s && s.trim()))];
   if(subcats.length === 0){
     subfiltersEl.innerHTML = '';
@@ -1794,7 +1835,7 @@ function buildSubfilters(){
 
 function renderGrid(){
   const q = searchInput.value.trim().toLowerCase();
-  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled);
+  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && !p.deleted);
   const filtered = visible.filter(p => {
     const matchesQuery = !q || p.name.toLowerCase().includes(q) || p.ean.includes(q);
     const matchesCat = activeCat === "Todos" || p.cat === activeCat;
@@ -1878,7 +1919,7 @@ function openModal(ean){
   const base = findBaseProduct(ean);
   if(!base) return;
   const p = getEffective(base);
-  if(!p.enabled) return;
+  if(!p.enabled || p.deleted) return;
   currentModalEan = ean;
   const hasPrice = p.price !== null && p.price !== undefined;
 
@@ -1998,20 +2039,34 @@ document.querySelectorAll('.admin-subnav-btn').forEach(btn => {
   btn.addEventListener('click', () => switchAdminSection(btn.dataset.section));
 });
 
+let adminSelected = new Set();
+let adminSearchQuery = '';
+
 function renderAdminList(){
   const list = document.getElementById('adminProductList');
   document.querySelectorAll('.admin-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
   const activeProducts = getActiveProducts();
-  const allEnabled = activeProducts.length > 0 && activeProducts.every(p => getEffective(p).enabled);
+  const q = adminSearchQuery.trim().toLowerCase();
+  const rows = activeProducts
+    .map(p => ({ p, eff: getEffective(p) }))
+    .filter(({eff}) => !eff.deleted)
+    .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q));
+  const allEnabled = rows.length > 0 && rows.every(({eff}) => eff.enabled);
   const toggleBtn = document.getElementById('toggleAllBtn');
   if(toggleBtn){
     toggleBtn.textContent = allEnabled ? '✕ Deshabilitar todos' : '✓ Habilitar todos';
   }
-  list.innerHTML = activeProducts.map(p => {
-    const eff = getEffective(p);
+  if(rows.length === 0){
+    list.innerHTML = `<div class="admin-empty">${q ? 'No hay productos que coincidan con la búsqueda.' : 'No hay productos en esta pestaña.'}</div>`;
+    updateAdminSelCount();
+    return;
+  }
+  list.innerHTML = rows.map(({p, eff}) => {
     const priceVal = (eff.price === null || eff.price === undefined) ? '' : eff.price;
+    const checked = adminSelected.has(p.ean) ? 'checked' : '';
     return `
-    <div class="admin-row ${eff.enabled ? '' : 'disabled-row'}">
+    <div class="admin-row ${eff.enabled ? '' : 'disabled-row'} ${checked ? 'sel-row' : ''}">
+      <input type="checkbox" class="admin-sel" data-ean="${p.ean}" ${checked} title="Seleccionar">
       <img src="${p.img}" alt="" onerror="onImgError(this)">
       <div>
         <div class="p-name">${p.name}</div>
@@ -2026,6 +2081,14 @@ function renderAdminList(){
     </div>`;
   }).join('');
 
+  list.querySelectorAll('.admin-sel').forEach(chk => {
+    chk.addEventListener('change', () => {
+      if(chk.checked) adminSelected.add(chk.dataset.ean);
+      else adminSelected.delete(chk.dataset.ean);
+      chk.closest('.admin-row').classList.toggle('sel-row', chk.checked);
+      updateAdminSelCount();
+    });
+  });
   list.querySelectorAll('.admin-price').forEach(inp => {
     inp.addEventListener('change', () => {
       const ean = inp.dataset.ean;
@@ -2051,10 +2114,108 @@ function renderAdminList(){
   list.querySelectorAll('.admin-edit-btn').forEach(btn => {
     btn.addEventListener('click', () => openEditProductModal(btn.dataset.ean));
   });
+  updateAdminSelCount();
 }
 
+function updateAdminSelCount(){
+  const el = document.getElementById('adminSelCount');
+  if(el) el.textContent = adminSelected.size + (adminSelected.size === 1 ? ' seleccionado' : ' seleccionados');
+}
+
+document.getElementById('adminSearchInput').addEventListener('input', e => {
+  adminSearchQuery = e.target.value;
+  renderAdminList();
+});
+
+document.getElementById('adminSelectAllBtn').addEventListener('click', () => {
+  const q = adminSearchQuery.trim().toLowerCase();
+  getActiveProducts()
+    .map(p => ({ p, eff: getEffective(p) }))
+    .filter(({eff}) => !eff.deleted)
+    .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q))
+    .forEach(({p}) => adminSelected.add(p.ean));
+  renderAdminList();
+});
+
+document.getElementById('adminSelectNoneBtn').addEventListener('click', () => {
+  adminSelected.clear();
+  renderAdminList();
+});
+
+document.getElementById('adminDisableSelBtn').addEventListener('click', () => {
+  if(adminSelected.size === 0){ showToast('Primero seleccioná productos'); return; }
+  adminSelected.forEach(ean => {
+    if(!overrides[ean]) overrides[ean] = {};
+    overrides[ean].enabled = false;
+  });
+  saveOverrides();
+  renderAdminList();
+  buildFilters();
+  renderGrid();
+  showToast(`${adminSelected.size} producto(s) deshabilitado(s)`);
+});
+
+async function deleteProductsFromRepo(eans, label){
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ showToast('Configurá el repositorio y el token de GitHub en la sección General.'); return false; }
+  const eanSet = new Set(eans);
+  try{
+    await updateCustomProducts(data => {
+      data.products.forEach(p => {
+        if(eanSet.has(p.ean)) p.deleted = true;
+      });
+      eanSet.forEach(ean => {
+        if(!data.products.some(p => p.ean === ean)){
+          const base = findBaseProduct(ean);
+          data.products.push({ ean, name: (base && base.name) || 'Producto eliminado', tab: activeTab, deleted: true });
+        }
+      });
+      return data;
+    }, label);
+    return true;
+  }catch(e){
+    showToast('Error al eliminar: ' + e.message);
+    return false;
+  }
+}
+
+function markDeletedLocally(eans){
+  eans.forEach(ean => {
+    overrides[ean] = { deleted: true };
+  });
+  saveOverrides();
+}
+
+document.getElementById('adminDeleteSelBtn').addEventListener('click', async () => {
+  if(adminSelected.size === 0){ showToast('Primero seleccioná productos'); return; }
+  const eans = [...adminSelected];
+  if(!confirm(`¿Eliminar ${eans.length} producto(s) seleccionado(s)? Se borrarán del repositorio.`)) return;
+  const ok = await deleteProductsFromRepo(eans, `Eliminar ${eans.length} producto(s) desde el panel`);
+  if(!ok) return;
+  markDeletedLocally(eans);
+  adminSelected.clear();
+  renderAdminList();
+  buildFilters();
+  renderGrid();
+  showToast(`${eans.length} producto(s) eliminado(s)`);
+});
+
+document.getElementById('adminDeleteAllBtn').addEventListener('click', async () => {
+  const eans = getActiveProducts().filter(p => !getEffective(p).deleted).map(p => p.ean);
+  if(eans.length === 0){ showToast('No hay productos para eliminar'); return; }
+  if(!confirm(`¿Eliminar TODOS los ${eans.length} producto(s) de esta pestaña? Se borrarán del repositorio.`)) return;
+  const ok = await deleteProductsFromRepo(eans, `Eliminar todos los productos de la pestaña ${activeTab}`);
+  if(!ok) return;
+  markDeletedLocally(eans);
+  adminSelected.clear();
+  renderAdminList();
+  buildFilters();
+  renderGrid();
+  showToast(`${eans.length} producto(s) eliminado(s)`);
+});
+
 document.getElementById('toggleAllBtn').addEventListener('click', () => {
-  const products = getActiveProducts();
+  const products = getActiveProducts().filter(p => !getEffective(p).deleted);
   if(products.length === 0) return;
   const allEnabled = products.every(p => getEffective(p).enabled);
   products.forEach(p => {
@@ -2294,6 +2455,11 @@ async function saveEditProduct(){
     getAllTabs().forEach(t => {
       if(t.id !== tab) t.products = t.products.filter(p => p.ean !== ean);
     });
+    // Si el producto estaba eliminado, la edición lo resucita: limpiar el flag local
+    if(overrides[ean] && overrides[ean].deleted){
+      delete overrides[ean].deleted;
+      saveOverrides();
+    }
     mergeCustomProductLocally(entry);
     buildFilters();
     renderGrid();

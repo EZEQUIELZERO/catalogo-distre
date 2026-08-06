@@ -294,3 +294,38 @@ ella vuelve al tema oscuro original.
   futuro = entrada en TAB_THEMES + bloque CSS + (si es la inicial) nada más.
 Archivos: index.html (CSS PALETA ALGABO, TAB_THEMES global, applyTabTheme,
 init applyTabTheme), NOTASDEVER.MD
+
+### #025 - Panel admin: selección múltiple, buscador y borrado masivo de productos
+Fecha: 2026-08-06
+- Se rediseñó la lista de productos del panel admin (sección Productos):
+  cada fila tiene ahora un checkbox de selección individual.
+- Nueva barra de herramientas sobre la lista: buscador (filtra por nombre o
+  EAN en vivo) + botones "☑ Seleccionar todos" (marca solo los filtrados por
+  el buscador) y "☐ Deseleccionar todos".
+- Nueva barra de acciones bajo la lista con contador de seleccionados y:
+  - "⏻ Deshabilitar seleccionados": pone enabled=false (localStorage
+    distre_overrides) solo en los productos marcados; las filas quedan con la
+    clase disabled-row y desaparecen del catálogo público.
+  - "🗑 Eliminar seleccionados" / "🗑 Eliminar todos": borrado real. Requiere
+    GitHub configurado (como Editar): escribe en data/custom-products.json con
+    flag deleted:true para cada EAN (los productos base, que viven embebidos
+    en index.html, también entran al JSON con deleted:true para que dejen de
+    verse para los visitantes). Además marca el override local deleted:true.
+  - "Eliminar todos" borra todos los productos de la pestaña activa.
+- Mecánica de ocultamiento: getEffective() ahora propaga deleted desde
+  overrides; renderGrid, buildFilters, buildSubfilters y renderAdminList
+  filtran p.deleted; loadCustomProducts remueve de todas las pestañas los
+  EANs con deleted:true del repo (cubre productos base); mergeCustomProductLocally
+  ignora entradas deleted; openModal no abre productos eliminados.
+- Re-editar un producto eliminado lo resucita: saveEditProduct limpia el flag
+  deleted local al guardar.
+- CSS: .admin-toolbar, .admin-bulkbar, .admin-sel-count, .admin-sel (checkbox),
+  fila seleccionada .sel-row, botón rojo .btn-danger; grid de .admin-row pasa
+  a 6 columnas (checkbox + imagen + info + precio + switch + editar).
+- Verificado en navegador (login admin): búsqueda BABY filtra 37 productos,
+  seleccionar todos marca 37, deseleccionar limpia, deshabilitar seleccionados
+  afecta solo a los marcados, eliminar seleccionados/todos (con updateCustomProducts
+  mockeado, sin tocar el repo real) deja la lista en 360/0 filas y restaura.
+Archivos: index.html (HTML toolbar/bulkbar, CSS, getEffective, renderAdminList,
+deleteProductsFromRepo, markDeletedLocally, filtros deleted, saveEditProduct),
+NOTASDEVER.MD
