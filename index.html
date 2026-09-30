@@ -1475,6 +1475,9 @@ const TAB_REGISTRY = {
   algabo: { id:'algabo', name:'ALGABO', products:PRODUCTS_ALGABO }
 };
 let customTabs = [];
+/* Copia en memoria de data/custom-products.json. Se usa para no perder el
+   campo 'lists' al guardar desde el panel. */
+let customProductsData = { products: [] };
 
 function getAllTabs(){
   return [...Object.values(TAB_REGISTRY), ...customTabs];
@@ -1494,6 +1497,19 @@ function findBaseProduct(ean){
     if(found) return found;
   }
   return null;
+}
+/* Un mismo producto puede estar en varias listas a la vez (por ejemplo en el
+   catálogo general y en "Quedan pocos"). Por eso existe 'lists' además de
+   'tab': 'tab' es la lista principal y 'lists' las adicionales. */
+function ensureTab(id){
+  const reg = TAB_REGISTRY[id];
+  if(reg) return reg;
+  let t = customTabs.find(x => x.id === id);
+  if(!t){ t = { id, name: id, products: [] }; customTabs.push(t); }
+  return t;
+}
+function ListsDe(ean, tabPrincipal){
+  return getAllTabs().filter(t => t.id !== tabPrincipal && t.products.some(p => p.ean === ean)).map(t => t.id);
 }
 
 /* ======================================================
@@ -1632,9 +1648,9 @@ async function saveCustomProductsData(data, sha, message){
   await githubPutFile(CUSTOM_PRODUCTS_PATH, contentBase64, message, sha);
 }
 function mergeCustomProductLocally(entry){
-  if(entry.deleted) return;
+  if(entry.deleted) return null;
   const target = getProductsForTab(entry.tab);
-  if(!target) return;
+  if(!target) return null;
   getAllTabs().forEach(t => {
     if(t.id !== entry.tab) t.products = t.products.filter(p => p.ean !== entry.ean);
   });
@@ -1648,15 +1664,38 @@ function mergeCustomProductLocally(entry){
     img: entry.img || GENERIC_IMG,
     brand: entry.brand || defaultBrand,
     cat: entry.cat || 'Otros',
-    subcat: entry.subcat || ''
+    subcat: entry.subcat || '',
+    stock: (typeof entry.stock === 'number' ? entry.stock : null),
+    estado: entry.estado || ''
   };
   if(idx >= 0) target[idx] = productObj; else target.push(productObj);
+  /* Listas adicionales: se agregan DESPUÉS del merge, porque el merge saca el
+     EAN de todas las otras pestañas. */
+  if(Array.isArray(entry.lists) && entry.lists.length){
+    entry.lists.forEach(id => {
+      if(id === entry.tab) return;
+      const t = ensureTab(id);
+      const i = t.products.findIndex(p => p.ean === entry.ean);
+      if(i >= 0) t.products[i] = productObj; else t.products.push(productObj);
+    });
+  }
+  return productObj;
+}
+/* Al guardar desde el panel hay que conservar las listas extra del producto,
+   si no se pierde la pertenencia a "Quedan pocos" / "Sin stock". */
+function preservarListas(entry){
+  const prev = (customProductsData.products || []).find(p => p.ean === entry.ean);
+  const extra = (prev && Array.isArray(prev.lists)) ? prev.lists : ListsDe(entry.ean, entry.tab);
+  const todas = Array.from(new Set((extra || []).filter(id => id !== entry.tab)));
+  if(todas.length) entry.lists = todas;
+  return entry;
 }
 async function loadCustomProducts(){
   try{
     const res = await fetch('./' + CUSTOM_PRODUCTS_PATH, { cache: 'no-store' });
     if(!res.ok) return;
     const data = await res.json();
+    customProductsData = { products: (data.products || []) };
     (data.products || []).forEach(p => {
       if(!p.ean) return;
       if(p.deleted){
@@ -2318,7 +2357,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
       imgPath = path;
     }
 
-    const entry = { ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand: getTabById(tab)?.name || tab };
+    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand: getTabById(tab)?.name || tab });
     await updateCustomProducts((data) => {
       const idx = data.products.findIndex(p => p.ean === ean);
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
@@ -2445,7 +2484,7 @@ async function saveEditProduct(){
       imgPath = path;
     }
 
-    const entry = { ean, name, desc, price, tab, cat, subcat, img: imgPath, brand: brand || (getTabById(tab)?.name || tab) };
+    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath, brand: brand || (getTabById(tab)?.name || tab) });
     await updateCustomProducts((data) => {
       const idx = data.products.findIndex(p => p.ean === ean);
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
@@ -2540,6 +2579,10 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
     await updateCustomProducts((data) => {
       newEntries.forEach(entry => {
         const idx = data.products.findIndex(p => p.ean === entry.ean);
+        const previo = idx >= 0 ? data.products[idx] : null;
+        const extra = (previo && Array.isArray(previo.lists)) ? previo.lists : [];
+        const todas = Array.from(new Set(extra.filter(id => id !== entry.tab)));
+        if(todas.length) entry.lists = todas;
         if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       });
       return data;

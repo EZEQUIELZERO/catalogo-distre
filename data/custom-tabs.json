@@ -7,6 +7,14 @@
     {
       "id": "saphirus",
       "name": "SAPHIRUS"
+    },
+    {
+      "id": "ultimas-unidades",
+      "name": "QUEDAN POCOS"
+    },
+    {
+      "id": "sin-stock",
+      "name": "SIN STOCK"
     }
   ]
 }
