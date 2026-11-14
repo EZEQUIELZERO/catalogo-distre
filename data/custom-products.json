@@ -11,7 +11,8 @@
       "desc": "",
       "stock": 36,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274000119",
@@ -27,7 +28,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274000485",
@@ -40,7 +42,8 @@
       "desc": "",
       "stock": 20,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274000584",
@@ -53,7 +56,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274000713",
@@ -66,7 +70,8 @@
       "desc": "",
       "stock": 11,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274000720",
@@ -79,7 +84,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274000737",
@@ -95,7 +101,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274000744",
@@ -108,7 +115,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274000928",
@@ -121,7 +129,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274002625",
@@ -137,7 +146,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274002632",
@@ -150,7 +160,8 @@
       "desc": "",
       "stock": 7,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274002649",
@@ -163,7 +174,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274003110",
@@ -179,7 +191,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274004360",
@@ -195,7 +208,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274004377",
@@ -208,7 +222,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274004391",
@@ -221,7 +236,8 @@
       "desc": "",
       "stock": 12,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274004407",
@@ -234,7 +250,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274004414",
@@ -247,7 +264,8 @@
       "desc": "",
       "stock": 16,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274004421",
@@ -260,7 +278,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274005121",
@@ -273,7 +292,8 @@
       "desc": "",
       "stock": 11,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274005305",
@@ -286,7 +306,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274005312",
@@ -302,7 +323,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274005329",
@@ -318,7 +340,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274009365",
@@ -331,7 +354,8 @@
       "desc": "",
       "stock": 13,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274009532",
@@ -347,7 +371,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274087004",
@@ -363,7 +388,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274087547",
@@ -376,7 +402,8 @@
       "desc": "",
       "stock": 12,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274087615",
@@ -389,7 +416,8 @@
       "desc": "",
       "stock": 16,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274087622",
@@ -402,7 +430,8 @@
       "desc": "",
       "stock": 15,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274088780",
@@ -415,7 +444,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274088995",
@@ -428,7 +458,8 @@
       "desc": "",
       "stock": 22,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274187742",
@@ -441,7 +472,8 @@
       "desc": "",
       "stock": 29,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274188350",
@@ -454,7 +486,8 @@
       "desc": "",
       "stock": 7,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274188367",
@@ -467,7 +500,8 @@
       "desc": "",
       "stock": 5,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274189326",
@@ -483,7 +517,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274189333",
@@ -496,7 +531,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274190131",
@@ -509,7 +545,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274190360",
@@ -522,7 +559,8 @@
       "desc": "",
       "stock": 11,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274192319",
@@ -535,7 +573,8 @@
       "desc": "",
       "stock": 12,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274192326",
@@ -548,7 +587,8 @@
       "desc": "",
       "stock": 9,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274192593",
@@ -561,7 +601,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274193392",
@@ -574,7 +615,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274193408",
@@ -587,7 +629,8 @@
       "desc": "",
       "stock": 13,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274195952",
@@ -603,7 +646,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274196003",
@@ -616,7 +660,8 @@
       "desc": "",
       "stock": 11,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196010",
@@ -629,7 +674,8 @@
       "desc": "",
       "stock": 7,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196041",
@@ -645,7 +691,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274196416",
@@ -658,7 +705,8 @@
       "desc": "",
       "stock": 20,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196430",
@@ -671,7 +719,8 @@
       "desc": "",
       "stock": 47,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196447",
@@ -684,7 +733,8 @@
       "desc": "",
       "stock": 41,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196454",
@@ -697,7 +747,8 @@
       "desc": "",
       "stock": 33,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196485",
@@ -710,7 +761,8 @@
       "desc": "",
       "stock": 5,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196508",
@@ -723,7 +775,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274196546",
@@ -739,7 +792,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274197017",
@@ -752,7 +806,8 @@
       "desc": "",
       "stock": 26,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274197024",
@@ -765,7 +820,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274197710",
@@ -778,7 +834,8 @@
       "desc": "",
       "stock": 17,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274197789",
@@ -794,7 +851,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274197857",
@@ -807,7 +865,8 @@
       "desc": "",
       "stock": 16,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274197864",
@@ -820,7 +879,8 @@
       "desc": "",
       "stock": 15,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274197871",
@@ -833,7 +893,8 @@
       "desc": "",
       "stock": 26,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274197963",
@@ -849,7 +910,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274197987",
@@ -862,7 +924,8 @@
       "desc": "",
       "stock": 5,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198045",
@@ -875,7 +938,8 @@
       "desc": "",
       "stock": 8,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198069",
@@ -888,7 +952,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198168",
@@ -901,7 +966,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198175",
@@ -927,7 +993,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198205",
@@ -940,7 +1007,8 @@
       "desc": "",
       "stock": 17,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198434",
@@ -953,7 +1021,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198564",
@@ -966,7 +1035,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198779",
@@ -979,7 +1049,8 @@
       "desc": "",
       "stock": 12,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274198793",
@@ -992,7 +1063,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274199387",
@@ -1005,7 +1077,8 @@
       "desc": "",
       "stock": 22,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274199493",
@@ -1021,7 +1094,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274199653",
@@ -1034,7 +1108,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274199813",
@@ -1047,7 +1122,8 @@
       "desc": "",
       "stock": 9,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274199899",
@@ -1060,7 +1136,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200045",
@@ -1076,7 +1153,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274200151",
@@ -1089,7 +1167,8 @@
       "desc": "",
       "stock": 12,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200243",
@@ -1102,7 +1181,8 @@
       "desc": "",
       "stock": 14,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200274",
@@ -1115,7 +1195,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200281",
@@ -1128,7 +1209,8 @@
       "desc": "",
       "stock": 25,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200311",
@@ -1141,7 +1223,8 @@
       "desc": "",
       "stock": 21,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200595",
@@ -1154,7 +1237,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200601",
@@ -1167,7 +1251,8 @@
       "desc": "",
       "stock": 12,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200656",
@@ -1180,7 +1265,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200847",
@@ -1196,7 +1282,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274200854",
@@ -1212,7 +1299,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274200922",
@@ -1225,7 +1313,8 @@
       "desc": "",
       "stock": 9,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274200939",
@@ -1238,7 +1327,8 @@
       "desc": "",
       "stock": 5,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201134",
@@ -1251,7 +1341,8 @@
       "desc": "",
       "stock": 20,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201141",
@@ -1264,7 +1355,8 @@
       "desc": "",
       "stock": 16,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201158",
@@ -1277,7 +1369,8 @@
       "desc": "",
       "stock": 23,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201332",
@@ -1293,7 +1386,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274201578",
@@ -1306,7 +1400,8 @@
       "desc": "",
       "stock": 33,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201585",
@@ -1322,7 +1417,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274201646",
@@ -1335,7 +1431,8 @@
       "desc": "",
       "stock": 8,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201653",
@@ -1351,7 +1448,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274201660",
@@ -1364,7 +1462,8 @@
       "desc": "",
       "stock": 8,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201684",
@@ -1377,7 +1476,8 @@
       "desc": "",
       "stock": 10,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201721",
@@ -1390,7 +1490,8 @@
       "desc": "",
       "stock": 33,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201882",
@@ -1403,7 +1504,8 @@
       "desc": "",
       "stock": 9,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274201905",
@@ -1416,7 +1518,8 @@
       "desc": "",
       "stock": 9,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202070",
@@ -1429,7 +1532,8 @@
       "desc": "",
       "stock": 24,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202131",
@@ -1442,7 +1546,8 @@
       "desc": "",
       "stock": 24,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202148",
@@ -1455,7 +1560,8 @@
       "desc": "",
       "stock": 9,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202155",
@@ -1468,7 +1574,8 @@
       "desc": "",
       "stock": 4,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202315",
@@ -1481,7 +1588,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202322",
@@ -1494,7 +1602,8 @@
       "desc": "",
       "stock": 6,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202339",
@@ -1510,7 +1619,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274202346",
@@ -1526,7 +1636,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274202353",
@@ -1539,7 +1650,8 @@
       "desc": "",
       "stock": 20,
       "estado": "NORMAL",
-      "tab": "algabo"
+      "tab": "algabo",
+      "deleted": true
     },
     {
       "ean": "7791274202360",
@@ -1555,7 +1667,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274202780",
@@ -1571,7 +1684,8 @@
       "tab": "algabo",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "779839995431",
