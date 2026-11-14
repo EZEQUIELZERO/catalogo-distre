@@ -342,3 +342,15 @@ Fecha: 2026-11-14
   además de limpiar sufijo `.git` y barras finales al pegar una URL completa.
   Se corrigió también la nota del panel de `catalog.html` a `index.html`.
 Archivos: index.html, NOTASDEVER.MD
+
+### #027 - Fix: importador CSV compatible con formato Google Sheets (CODIGO_IN, STOCK, IMAGEN base64)
+Fecha: 2026-11-14
+- El importador CSV solo aceptaba 4 columnas fijas por posición (`CODIGO EAN,
+  DESCRIPCION, PRECIO, URL DE LA IMAGEN`), rechazando el CSV exportado de
+  Google Sheets (`PROVEEDOR,CODIGO_IN,CODIGO_EAN,DESCRIPCION,PRECIO,STOCK,IMAGEN`).
+- Nuevo parser `parseCsvRows` + detección por encabezado (`detectCsvColumns`):
+  soporta tanto el formato nuevo como el clásico, BOM UTF-8, delimitador `,` o `;`
+  y celdas entrecomilladas (como imágenes `data:image/...;base64,...`).
+- Prioriza `CODIGO_EAN` y usa `CODIGO_IN` como respaldo si no hay EAN; guarda
+  `codigoInterno`, `stock` y `PROVEEDOR` como `brand`.
+Archivos: index.html, NOTASDEVER.MD

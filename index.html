@@ -987,7 +987,7 @@
       <!-- ---------- SECCIÓN IMPORTAR CSV ---------- -->
       <div class="admin-section" id="adminSectionImportCsv" style="display:none;">
         <div class="admin-section-title">Importar productos desde CSV</div>
-        <p class="admin-note">El archivo debe tener encabezado en la primera fila con las columnas, en este orden: <b>CODIGO EAN, DESCRIPCION, PRECIO, URL DE LA IMAGEN</b>.</p>
+        <p class="admin-note">Acepta encabezado con columnas por nombre (por ejemplo: <b>PROVEEDOR, CODIGO_IN, CODIGO_EAN, DESCRIPCION, PRECIO, STOCK, IMAGEN</b>) o el formato clásico (<b>CODIGO EAN, DESCRIPCION, PRECIO, URL DE LA IMAGEN</b>). Si un producto no tiene EAN, usa <b>CODIGO_IN</b>.</p>
         <div class="field"><label>Pestaña destino</label>
           <select id="csvTab" class="price-input"></select>
         </div>
@@ -1668,7 +1668,8 @@ function mergeCustomProductLocally(entry){
     cat: entry.cat || 'Otros',
     subcat: entry.subcat || '',
     stock: (typeof entry.stock === 'number' ? entry.stock : null),
-    estado: entry.estado || ''
+    estado: entry.estado || '',
+    codigoInterno: entry.codigoInterno || ''
   };
   if(idx >= 0) target[idx] = productObj; else target.push(productObj);
   /* Listas adicionales: se agregan DESPUÉS del merge, porque el merge saca el
@@ -2533,23 +2534,72 @@ document.getElementById('editSubcatSelect').addEventListener('change', () => {
 });
 
 /* ---------- IMPORTAR CSV ---------- */
-function parseCsvLine(line){
-  const result = [];
-  let cur = '', inQuotes = false;
-  for(let i = 0; i < line.length; i++){
-    const c = line[i];
+function parseCsvRows(text){
+  const clean = String(text || '').replace(/^\uFEFF/, '');
+  const firstLine = clean.split(/\r?\n/, 1)[0] || '';
+  const delim = (firstLine.includes(';') && !firstLine.includes(',')) ? ';' : ',';
+  const rows = [];
+  let row = [], cur = '', inQuotes = false;
+  for(let i = 0; i < clean.length; i++){
+    const c = clean[i];
     if(inQuotes){
       if(c === '"'){
-        if(line[i+1] === '"'){ cur += '"'; i++; } else { inQuotes = false; }
-      }else cur += c;
-    }else{
-      if(c === '"') inQuotes = true;
-      else if(c === ','){ result.push(cur); cur = ''; }
-      else cur += c;
+        if(clean[i+1] === '"'){ cur += '"'; i++; }
+        else inQuotes = false;
+      } else {
+        cur += c;
+      }
+    } else {
+      if(c === '"'){ inQuotes = true; }
+      else if(c === delim){ row.push(cur); cur = ''; }
+      else if(c === '\r'){
+        if(clean[i+1] === '\n') i++;
+        row.push(cur); rows.push(row); row = []; cur = '';
+      }
+      else if(c === '\n'){
+        row.push(cur); rows.push(row); row = []; cur = '';
+      }
+      else { cur += c; }
     }
   }
-  result.push(cur);
-  return result;
+  if(cur.length || row.length){ row.push(cur); rows.push(row); }
+  return rows.filter(r => r.some(cell => String(cell).trim().length > 0));
+}
+
+function normalizeCsvHeader(h){
+  return String(h || '')
+    .trim()
+    .toUpperCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[\s-]+/g, '_');
+}
+
+function detectCsvColumns(headerRow){
+  const norm = headerRow.map(normalizeCsvHeader);
+  const findIdx = (names) => norm.findIndex(h => names.includes(h));
+  const ean = findIdx(['CODIGO_EAN', 'EAN']);
+  const internal = findIdx(['CODIGO_IN', 'CODIGO_INTERNO', 'INTERNO', 'SKU']);
+  const name = findIdx(['DESCRIPCION', 'NOMBRE', 'PRODUCTO', 'NAME']);
+  const price = findIdx(['PRECIO', 'PRICE', 'VALOR']);
+  const stock = findIdx(['STOCK', 'CANTIDAD', 'DISPONIBLE']);
+  const img = findIdx(['IMAGEN', 'URL_DE_LA_IMAGEN', 'URL_IMAGEN', 'IMG', 'FOTO']);
+  const brand = findIdx(['PROVEEDOR', 'MARCA', 'BRAND']);
+  const cat = findIdx(['CATEGORIA', 'CAT']);
+  const subcat = findIdx(['SUBCATEGORIA', 'SUBCAT']);
+
+  if(ean >= 0 || internal >= 0 || name >= 0){
+    return { ean, internal, name, price, stock, img, brand, cat, subcat };
+  }
+  return { ean: 0, internal: -1, name: 1, price: 2, stock: -1, img: 3, brand: -1, cat: -1, subcat: -1 };
+}
+
+function parseCsvPrice(raw){
+  const s = String(raw || '').trim().replace(/[$\s]/g, '');
+  if(!s) return null;
+  // Formato es-AR: "6.900" o "6.900,50" -> 6900 / 6901
+  const normalized = s.includes(',') ? s.replace(/\./g, '').replace(',', '.') : s.replace(/\./g, '');
+  const n = parseFloat(normalized);
+  return Number.isFinite(n) ? Math.round(n) : null;
 }
 
 document.getElementById('importCsvBtn').addEventListener('click', async () => {
@@ -2560,32 +2610,52 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
   if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
 
   const tab = document.getElementById('csvTab').value;
-  const cat = document.getElementById('csvCat').value.trim() || 'Otros';
+  const defaultCat = document.getElementById('csvCat').value.trim() || 'Otros';
+  const tabBrand = getTabById(tab)?.name || tab;
 
   statusEl.textContent = 'Leyendo archivo...';
   document.getElementById('importCsvBtn').disabled = true;
   try{
     const text = await file.text();
-    const lines = text.split(/\r?\n/).filter(l => l.trim().length);
-    const rows = lines.slice(1).map(parseCsvLine);
+    const allRows = parseCsvRows(text);
+    if(allRows.length < 2){ statusEl.textContent = '❌ El CSV no tiene filas de datos.'; return; }
+    const colMap = detectCsvColumns(allRows[0]);
+    const rows = allRows.slice(1);
 
     statusEl.textContent = 'Sincronizando con GitHub...';
     const newEntries = [];
     rows.forEach(cols => {
-      const ean = (cols[0] || '').trim();
-      const name = (cols[1] || '').trim();
-      const priceRaw = (cols[2] || '').trim().replace(/\./g, '').replace(',', '.');
-      const price = priceRaw === '' ? null : Math.round(parseFloat(priceRaw));
-      const img = (cols[3] || '').trim();
-      if(!ean || !/^\d{6,14}$/.test(ean) || !name) return;
-      newEntries.push({ ean, name, price: Number.isFinite(price) ? price : null, tab, cat, img, brand: getTabById(tab)?.name || tab });
+      const col = (idx) => (idx >= 0 && idx < cols.length) ? String(cols[idx] || '').trim() : '';
+      const eanRaw = col(colMap.ean).replace(/\s+/g, '');
+      const internalRaw = col(colMap.internal).replace(/\s+/g, '');
+      const ean = eanRaw || internalRaw;
+      const name = col(colMap.name);
+      if(!ean || !name) return;
+
+      const price = parseCsvPrice(col(colMap.price));
+      const stockRaw = col(colMap.stock);
+      const stockNum = stockRaw === '' ? null : parseInt(stockRaw, 10);
+      const stock = Number.isFinite(stockNum) ? stockNum : null;
+      const imgRaw = col(colMap.img);
+      const img = (imgRaw && imgRaw !== 'SIN_IMAGEN') ? imgRaw : '';
+      const brand = col(colMap.brand) || tabBrand;
+      const cat = col(colMap.cat) || defaultCat;
+      const subcat = col(colMap.subcat) || '';
+
+      const entry = { ean, name, price, tab, cat, subcat, img, brand };
+      if(internalRaw) entry.codigoInterno = internalRaw;
+      if(stock !== null) entry.stock = stock;
+      newEntries.push(entry);
     });
 
     if(newEntries.length === 0){ statusEl.textContent = '❌ No se encontraron filas válidas en el CSV.'; return; }
 
     await updateCustomProducts((data) => {
       newEntries.forEach(entry => {
-        const idx = data.products.findIndex(p => p.ean === entry.ean);
+        let idx = data.products.findIndex(p => p.ean === entry.ean);
+        if(idx < 0 && entry.codigoInterno){
+          idx = data.products.findIndex(p => p.codigoInterno === entry.codigoInterno || p.ean === entry.codigoInterno);
+        }
         const previo = idx >= 0 ? data.products[idx] : null;
         const extra = (previo && Array.isArray(previo.lists)) ? previo.lists : [];
         const todas = Array.from(new Set(extra.filter(id => id !== entry.tab)));
