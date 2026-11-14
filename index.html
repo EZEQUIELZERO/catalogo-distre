@@ -378,6 +378,7 @@
     min-height:2.3em;
   }
   .card-ean{color:var(--text-dim);font-size:.72rem;letter-spacing:.3px;}
+  .card-stock-code{color:var(--text-dim);font-size:.68rem;letter-spacing:.4px;margin-top:-3px;opacity:.85;}
   .card-desc{
     color:var(--text-dim);font-size:.74rem;line-height:1.35;
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
@@ -826,6 +827,7 @@
         <div class="modal-price" id="modalPrice"></div>
         <div class="modal-meta">
           <div><b>EAN:</b> <span id="modalEan"></span></div>
+          <div id="modalStockCodeWrap" style="display:none;"><b>Cód.:</b> <span id="modalStockCode"></span></div>
           <div><b>Marca:</b> <span id="modalBrand"></span></div>
         </div>
 
@@ -1564,6 +1566,11 @@ function getEffective(p){
 function formatPrice(n){
   return "$ " + Math.round(n).toLocaleString("es-AR");
 }
+function formatStockCode(stock){
+  if(typeof stock !== 'number' || !Number.isFinite(stock)) return '';
+  const n = Math.max(0, Math.round(stock));
+  return 'S-100-00' + String(n).padStart(3, '0');
+}
 function onImgError(img){
   img.onerror = null;
   img.src = GENERIC_IMG;
@@ -1925,6 +1932,7 @@ function renderGrid(){
           <div class="cart-qty-tag">En tu carrito: <b>${qty}</b></div>
         </div>`
       : `<div class="cart-controls"><div class="cart-qty-tag">Consultá disponibilidad por WhatsApp</div></div>`;
+    const stockCode = formatStockCode(p.stock);
     return `
     <div class="card" data-ean="${p.ean}">
       <div class="card-img">
@@ -1934,6 +1942,7 @@ function renderGrid(){
       <div class="card-body">
         <div class="card-name">${p.name}</div>
         <div class="card-ean">EAN ${p.ean}</div>
+        ${stockCode ? `<div class="card-stock-code">${stockCode}</div>` : ''}
         ${p.desc ? `<div class="card-desc">${p.desc}</div>` : ''}
         ${priceHtml}
         ${cartHtml}
@@ -1988,6 +1997,9 @@ function openModal(ean){
   modalPrice.textContent = hasPrice ? formatPrice(p.price) : "Consultar precio";
   modalPrice.classList.toggle('price-consult-modal', !hasPrice);
   modalEan.textContent = p.ean;
+  const stockCode = formatStockCode(p.stock);
+  document.getElementById('modalStockCode').textContent = stockCode;
+  document.getElementById('modalStockCodeWrap').style.display = stockCode ? '' : 'none';
   modalBrand.textContent = p.brand;
   modalCat.textContent = p.subcat ? p.cat + ' · ' + p.subcat : p.cat;
 

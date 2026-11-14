@@ -366,3 +366,14 @@ Fecha: 2026-11-14
   `importCsvBtn`, `addProductBtn` y `saveEditProduct()` para limpiar el flag
   local `deleted` cuando el producto vuelve a existir.
 Archivos: index.html, NOTASDEVER.MD
+
+### #029 - Código discreto de stock (S-100-00XXX) debajo del EAN
+Fecha: 2026-11-14
+- Nuevo helper `formatStockCode(stock)`: genera el código `S-100-00XXX` con
+  los últimos 3 dígitos representando el stock disponible (solo cuando el
+  producto tiene `stock` numérico).
+- Se muestra debajo del EAN en cada tarjeta (`.card-stock-code`) y en el modal
+  de detalle (`#modalStockCodeWrap`).
+- El stock no se descuenta ni modifica al agregar/enviar pedidos; solo se
+  actualiza con una nueva importación CSV.
+Archivos: index.html, NOTASDEVER.MD
