@@ -3,7 +3,7 @@
     {
       "ean": "7790000000904",
       "name": "ALGABO CARE ESPONJA FLOR",
-      "price": 1800.0,
+      "price": 1800,
       "img": "images/uploads/7790000000904.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -16,7 +16,7 @@
     {
       "ean": "7791274000119",
       "name": "BABY COLONIA DULCES MIMOS 125",
-      "price": 3300.0,
+      "price": 3300,
       "img": "images/uploads/7791274000119.jpg",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -32,7 +32,7 @@
     {
       "ean": "7791274000485",
       "name": "ALGABO JAB LIQ CREMOSO 300",
-      "price": 2500.0,
+      "price": 2500,
       "img": "images/uploads/7791274000485.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -45,7 +45,7 @@
     {
       "ean": "7791274000584",
       "name": "ALGABO JAB LIQ FLOWER MIX 300",
-      "price": 2500.0,
+      "price": 2500,
       "img": "images/uploads/7791274000584.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -58,7 +58,7 @@
     {
       "ean": "7791274000713",
       "name": "ALGABO JAB LIQ COCONUT 300",
-      "price": 2500.0,
+      "price": 2500,
       "img": "images/uploads/7791274000713.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -71,7 +71,7 @@
     {
       "ean": "7791274000720",
       "name": "ALGABO JAB LIQ FTOS BOSQUE 300",
-      "price": 2500.0,
+      "price": 2500,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -84,7 +84,7 @@
     {
       "ean": "7791274000737",
       "name": "ALGABO JAB LIQ COCONUT DP 300",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274000737.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -100,7 +100,7 @@
     {
       "ean": "7791274000744",
       "name": "ALGABO JAB LIQ F BOSQUE DP 300",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274000744.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -113,7 +113,7 @@
     {
       "ean": "7791274000928",
       "name": "ALGABO MEN ESPUMA AFEITAR 200",
-      "price": 4300.0,
+      "price": 4300,
       "img": "images/uploads/7791274000928.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Masculina",
@@ -126,7 +126,7 @@
     {
       "ean": "7791274002625",
       "name": "AVENGERS HULK COLONIA 125",
-      "price": 6400.0,
+      "price": 6400,
       "img": "images/uploads/7791274002625.jpg",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -142,7 +142,7 @@
     {
       "ean": "7791274002632",
       "name": "AVENGERS IRON MAN COLONIA 125",
-      "price": 6400.0,
+      "price": 6400,
       "img": "images/uploads/7791274002632.jpg",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -155,7 +155,7 @@
     {
       "ean": "7791274002649",
       "name": "AVENGERS CAP AMERI COLONIA 125",
-      "price": 6400.0,
+      "price": 6400,
       "img": "images/uploads/7791274002649.jpg",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -200,7 +200,7 @@
     {
       "ean": "7791274004377",
       "name": "ALGABO FOOT MUJER 100",
-      "price": 1700.0,
+      "price": 1700,
       "img": "images/uploads/7791274004377.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -213,7 +213,7 @@
     {
       "ean": "7791274004391",
       "name": "KIDS ACO SANDÍA DULCE 350",
-      "price": 3200.0,
+      "price": 3200,
       "img": "images/uploads/7791274004391.jpg",
       "brand": "ALGABO",
       "cat": "Kids",
@@ -226,7 +226,7 @@
     {
       "ean": "7791274004407",
       "name": "ALGABO CREMA AVENA-KARITÉ 200",
-      "price": 3400.0,
+      "price": 3400,
       "img": "images/uploads/7791274004407.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Facial",
@@ -239,7 +239,7 @@
     {
       "ean": "7791274004414",
       "name": "ALGABO CREMA MIEL-ALMENDRA 200",
-      "price": 3400.0,
+      "price": 3400,
       "img": "images/uploads/7791274004414.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Facial",
@@ -252,7 +252,7 @@
     {
       "ean": "7791274004421",
       "name": "ALGABO CREMA ALOE-MANZ 200",
-      "price": 3400.0,
+      "price": 3400,
       "img": "images/uploads/7791274004421.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Facial",
@@ -265,7 +265,7 @@
     {
       "ean": "7791274005121",
       "name": "ALGABO CREMA PEINAR ARGÁN 300",
-      "price": 3100.0,
+      "price": 3100,
       "img": "images/uploads/7791274005121.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -278,7 +278,7 @@
     {
       "ean": "7791274005305",
       "name": "ALGABO QUITA FORTALECEDOR 100",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274005305.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Íntimo",
@@ -291,7 +291,7 @@
     {
       "ean": "7791274005312",
       "name": "ALGABO QUITA HUMECTANTE 100",
-      "price": 1600.0,
+      "price": 1600,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Cuidado Íntimo",
@@ -307,7 +307,7 @@
     {
       "ean": "7791274005329",
       "name": "ALGABO QUITA C/KERATINA 100",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274005329.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Íntimo",
@@ -323,7 +323,7 @@
     {
       "ean": "7791274009365",
       "name": "ALGABO BAÑO NATURAL ARGAN 350",
-      "price": 4200.0,
+      "price": 4200,
       "img": "images/uploads/7791274009365.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -336,7 +336,7 @@
     {
       "ean": "7791274009532",
       "name": "ALGABO FOOT 200",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274009532.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -352,7 +352,7 @@
     {
       "ean": "7791274087004",
       "name": "ALGABO BARRO VEGETAL POTE 350",
-      "price": 4200.0,
+      "price": 4200,
       "img": "images/uploads/7791274087004.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -368,7 +368,7 @@
     {
       "ean": "7791274087547",
       "name": "ALGABO GEL EXT FUERTE 150",
-      "price": 2600.0,
+      "price": 2600,
       "img": "images/uploads/7791274087547.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -381,7 +381,7 @@
     {
       "ean": "7791274087615",
       "name": "KIDS SHAMPOO SANDÍA DULCE 350",
-      "price": 3200.0,
+      "price": 3200,
       "img": "images/uploads/7791274087615.jpg",
       "brand": "ALGABO",
       "cat": "Kids",
@@ -394,7 +394,7 @@
     {
       "ean": "7791274087622",
       "name": "KIDS SHAMPOO CHICLE 350",
-      "price": 3200.0,
+      "price": 3200,
       "img": "images/uploads/7791274087622.jpg",
       "brand": "ALGABO",
       "cat": "Kids",
@@ -407,7 +407,7 @@
     {
       "ean": "7791274088780",
       "name": "VAIS LIMPIAVIDRIOS GATILLO 500",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274088780.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -420,7 +420,7 @@
     {
       "ean": "7791274088995",
       "name": "VAIS APRESTO GATILLO 500",
-      "price": 3500.0,
+      "price": 3500,
       "img": "images/uploads/7791274088995.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -433,7 +433,7 @@
     {
       "ean": "7791274187742",
       "name": "ALGABO FOOT 100",
-      "price": 1700.0,
+      "price": 1700,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -446,7 +446,7 @@
     {
       "ean": "7791274188350",
       "name": "ALGABO TALCO PERF FLORAL 250",
-      "price": 2700.0,
+      "price": 2700,
       "img": "images/uploads/7791274188350.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -459,7 +459,7 @@
     {
       "ean": "7791274188367",
       "name": "ALGABO TALCO PERF VIOLETS 250",
-      "price": 2700.0,
+      "price": 2700,
       "img": "images/uploads/7791274188367.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -472,7 +472,7 @@
     {
       "ean": "7791274189326",
       "name": "ALGABO GEL EF. HÚMEDO POMO 200",
-      "price": 2450.0,
+      "price": 2450,
       "img": "images/uploads/7791274189326.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -488,7 +488,7 @@
     {
       "ean": "7791274189333",
       "name": "ALGABO GEL EXT FUERTE POMO 200",
-      "price": 2450.0,
+      "price": 2450,
       "img": "images/uploads/7791274189333.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -501,7 +501,7 @@
     {
       "ean": "7791274190131",
       "name": "ALGABO CREMA PEINAR RIZADO 300",
-      "price": 3100.0,
+      "price": 3100,
       "img": "images/uploads/7791274190131.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -514,7 +514,7 @@
     {
       "ean": "7791274190360",
       "name": "VAIS ANTIGRASA GATILLO 500",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274190360.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -527,7 +527,7 @@
     {
       "ean": "7791274192319",
       "name": "BABY SHAMPOO EXTRA SUAVE 200",
-      "price": 3000.0,
+      "price": 3000,
       "img": "images/uploads/7791274192319.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -540,7 +540,7 @@
     {
       "ean": "7791274192326",
       "name": "BABY SHAMPOO EXTRA SUAVE 444",
-      "price": 4500.0,
+      "price": 4500,
       "img": "images/uploads/7791274192326.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -553,7 +553,7 @@
     {
       "ean": "7791274192593",
       "name": "KIDS SHAMPOO MELOCOTÓN 350",
-      "price": 3200.0,
+      "price": 3200,
       "img": "images/uploads/7791274192593.jpg",
       "brand": "ALGABO",
       "cat": "Kids",
@@ -566,7 +566,7 @@
     {
       "ean": "7791274193392",
       "name": "ALGABO JAB LIQ GREEN TEA 300",
-      "price": 2500.0,
+      "price": 2500,
       "img": "images/uploads/7791274193392.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -579,7 +579,7 @@
     {
       "ean": "7791274193408",
       "name": "ALGABO JAB LIQ CITRUS 300",
-      "price": 2500.0,
+      "price": 2500,
       "img": "images/uploads/7791274193408.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -592,7 +592,7 @@
     {
       "ean": "7791274195952",
       "name": "VAIS REPELENTE SPRAY 200 ML",
-      "price": 3600.0,
+      "price": 3600,
       "img": "images/uploads/7791274195952.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -608,7 +608,7 @@
     {
       "ean": "7791274196003",
       "name": "ALGABO JAB LIQ FLO RAIN DP 300",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274196003.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -621,7 +621,7 @@
     {
       "ean": "7791274196010",
       "name": "ALGABO JAB LIQ CITRUS DP 300",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274196010.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -634,7 +634,7 @@
     {
       "ean": "7791274196041",
       "name": "ALGABO JAB LIQ GREEN TEA DP 300",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274196041.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -650,7 +650,7 @@
     {
       "ean": "7791274196416",
       "name": "ALGABO FOOT DP 200",
-      "price": 2300.0,
+      "price": 2300,
       "img": "images/uploads/7791274196416.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -663,7 +663,7 @@
     {
       "ean": "7791274196430",
       "name": "ALGABO GEL EF. HÚMEDO POMO 150",
-      "price": 2300.0,
+      "price": 2300,
       "img": "images/uploads/7791274196430.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -676,7 +676,7 @@
     {
       "ean": "7791274196447",
       "name": "ALGABO GEL EXT BRILLO POMO 150",
-      "price": 2300.0,
+      "price": 2300,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -689,7 +689,7 @@
     {
       "ean": "7791274196454",
       "name": "ALGABO GEL EXT FUERTE POMO 150",
-      "price": 2300.0,
+      "price": 2300,
       "img": "images/uploads/7791274196454.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -702,7 +702,7 @@
     {
       "ean": "7791274196485",
       "name": "ALGABO ENJUAGUE BUCAL 500",
-      "price": 4300.0,
+      "price": 4300,
       "img": "images/uploads/7791274196485.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -715,7 +715,7 @@
     {
       "ean": "7791274196508",
       "name": "BABY SHAMPOO MANZANILLA 444",
-      "price": 4500.0,
+      "price": 4500,
       "img": "images/uploads/7791274196508.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -728,7 +728,7 @@
     {
       "ean": "7791274196546",
       "name": "BABY FECULA TALQUERA 200",
-      "price": 4200.0,
+      "price": 4200,
       "img": "images/uploads/7791274196546.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -744,7 +744,7 @@
     {
       "ean": "7791274197017",
       "name": "BABY WIPES 20",
-      "price": 1400.0,
+      "price": 1400,
       "img": "images/uploads/7791274197017.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -757,7 +757,7 @@
     {
       "ean": "7791274197024",
       "name": "BABY WIPES 48",
-      "price": 2700.0,
+      "price": 2700,
       "img": "images/uploads/7791274197024.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -770,7 +770,7 @@
     {
       "ean": "7791274197710",
       "name": "ALGABO WIPES DESMAQ 25",
-      "price": 2200.0,
+      "price": 2200,
       "img": "images/uploads/7791274197710.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -799,7 +799,7 @@
     {
       "ean": "7791274197857",
       "name": "VAIS PERF TELA SUAVE BRISA 250",
-      "price": 3300.0,
+      "price": 3300,
       "img": "images/uploads/7791274197857.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -812,7 +812,7 @@
     {
       "ean": "7791274197864",
       "name": "ALGABO BARRO VEGETAL POMO 200",
-      "price": 3000.0,
+      "price": 3000,
       "img": "images/uploads/7791274197864.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -825,7 +825,7 @@
     {
       "ean": "7791274197871",
       "name": "ALGABO BAÑO NATURAL POMO 200",
-      "price": 3000.0,
+      "price": 3000,
       "img": "images/uploads/7791274197871.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -838,7 +838,7 @@
     {
       "ean": "7791274197963",
       "name": "ALGABO POMPONES DE ALGODÓN 50",
-      "price": 2300.0,
+      "price": 2300,
       "img": "images/uploads/7791274197963.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -854,7 +854,7 @@
     {
       "ean": "7791274197987",
       "name": "SPIDERMAN JAB LIQ BT 300",
-      "price": 7200.0,
+      "price": 7200,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -867,7 +867,7 @@
     {
       "ean": "7791274198045",
       "name": "ALGABO TALCO CLÁSICO 180",
-      "price": 2500.0,
+      "price": 2500,
       "img": "images/uploads/7791274198045.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -880,7 +880,7 @@
     {
       "ean": "7791274198069",
       "name": "ALGABO TALCO SOFT ROSA 180",
-      "price": 2500.0,
+      "price": 2500,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -893,7 +893,7 @@
     {
       "ean": "7791274198168",
       "name": "ALGABO SH COCO Y LECHE 930",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274198168.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -906,7 +906,7 @@
     {
       "ean": "7791274198175",
       "name": "ALGABO SH MANZ Y MAGNOLIA 930",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274198175.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -919,7 +919,7 @@
     {
       "ean": "7791274198199",
       "name": "ALGABO AC COCO Y LECHE 930",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274198199.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -932,7 +932,7 @@
     {
       "ean": "7791274198205",
       "name": "ALGABO AC MANZ Y MAGNOLIA 930",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274198205.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -945,7 +945,7 @@
     {
       "ean": "7791274198434",
       "name": "BABY JABON BARRA FPK 80",
-      "price": 1200.0,
+      "price": 1200,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -958,7 +958,7 @@
     {
       "ean": "7791274198564",
       "name": "ALGABO WIPES MICELARES 25",
-      "price": 2700.0,
+      "price": 2700,
       "img": "images/uploads/7791274198564.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -971,7 +971,7 @@
     {
       "ean": "7791274198779",
       "name": "VAIS PERF CÁLIDA PRIM DP 250",
-      "price": 2600.0,
+      "price": 2600,
       "img": "images/uploads/7791274198779.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -984,7 +984,7 @@
     {
       "ean": "7791274198793",
       "name": "ALGABO ENJUAGUE BUCAL 250",
-      "price": 3300.0,
+      "price": 3300,
       "img": "images/uploads/7791274198793.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -997,7 +997,7 @@
     {
       "ean": "7791274199387",
       "name": "BABY WIPES 100 C/TAPA",
-      "price": 5000.0,
+      "price": 5000,
       "img": "images/uploads/7791274199387.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -1010,7 +1010,7 @@
     {
       "ean": "7791274199493",
       "name": "ALGABO AC MANZ Y MAGN EP 930",
-      "price": 2700.0,
+      "price": 2700,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1026,7 +1026,7 @@
     {
       "ean": "7791274199653",
       "name": "ALGABO HISOPOS ZIPPER 125",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274199653.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -1039,7 +1039,7 @@
     {
       "ean": "7791274199813",
       "name": "ZOMBIES COLONIA 125 ML",
-      "price": 6100.0,
+      "price": 6100,
       "img": "images/uploads/7791274199813.jpg",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -1052,7 +1052,7 @@
     {
       "ean": "7791274199899",
       "name": "KIDS ZERO SH PIOJOS 500",
-      "price": 5700.0,
+      "price": 5700,
       "img": "images/uploads/7791274199899.jpg",
       "brand": "ALGABO",
       "cat": "Kids",
@@ -1065,7 +1065,7 @@
     {
       "ean": "7791274200045",
       "name": "ALGABO FOOT ANTIBACTERIAL 200",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274200045.jpg",
       "brand": "ALGABO",
       "cat": "Pies y Desodorantes",
@@ -1081,7 +1081,7 @@
     {
       "ean": "7791274200151",
       "name": "BABY SHAMPOO MANZANILLA 200",
-      "price": 3000.0,
+      "price": 3000,
       "img": "images/uploads/7791274200151.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -1094,7 +1094,7 @@
     {
       "ean": "7791274200243",
       "name": "ULTRA SANITI GEL 250",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274200243.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -1107,7 +1107,7 @@
     {
       "ean": "7791274200274",
       "name": "VAIS REPELENTE SPRAY 120",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274200274.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -1120,7 +1120,7 @@
     {
       "ean": "7791274200281",
       "name": "VAIS LIMPIAVIDRIOS EP 900",
-      "price": 2200.0,
+      "price": 2200,
       "img": "images/uploads/7791274200281.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -1133,7 +1133,7 @@
     {
       "ean": "7791274200311",
       "name": "VAIS BAÑO GATILLO 500",
-      "price": 2900.0,
+      "price": 2900,
       "img": "images/uploads/7791274200311.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -1146,7 +1146,7 @@
     {
       "ean": "7791274200595",
       "name": "ALGABO AC 0% AÇAÍ Y ROMERO 750",
-      "price": 3600.0,
+      "price": 3600,
       "img": "images/uploads/7791274200595.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1159,7 +1159,7 @@
     {
       "ean": "7791274200601",
       "name": "ALGABO AC 0% OLIVA Y ARGÁN 750",
-      "price": 3600.0,
+      "price": 3600,
       "img": "images/uploads/7791274200601.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1172,7 +1172,7 @@
     {
       "ean": "7791274200656",
       "name": "BABY OLEO CALCAREO EP 900",
-      "price": 7800.0,
+      "price": 7800,
       "img": "images/uploads/7791274200656.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -1185,7 +1185,7 @@
     {
       "ean": "7791274200847",
       "name": "ALGABO ENJ BUCAL S/ALCOHOL 250",
-      "price": 3300.0,
+      "price": 3300,
       "img": "images/uploads/7791274200847.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -1201,7 +1201,7 @@
     {
       "ean": "7791274200854",
       "name": "ALGABO ENJ BUCAL S/ALCOHOL 500",
-      "price": 4300.0,
+      "price": 4300,
       "img": "images/uploads/7791274200854.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -1217,7 +1217,7 @@
     {
       "ean": "7791274200922",
       "name": "VAIS ANTIGRASA DP 500",
-      "price": 1600.0,
+      "price": 1600,
       "img": "images/uploads/7791274200922.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -1230,7 +1230,7 @@
     {
       "ean": "7791274200939",
       "name": "VAIS LIMPIAVIDRIOS DP 500",
-      "price": 1400.0,
+      "price": 1400,
       "img": "images/uploads/7791274200939.jpg",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -1243,7 +1243,7 @@
     {
       "ean": "7791274201134",
       "name": "ALGABO QUITA FORTALECEDOR 200",
-      "price": 2600.0,
+      "price": 2600,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Cuidado Íntimo",
@@ -1256,7 +1256,7 @@
     {
       "ean": "7791274201141",
       "name": "ALGABO QUITA HUMECTANTE 200",
-      "price": 2600.0,
+      "price": 2600,
       "img": "images/uploads/7791274201141.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Íntimo",
@@ -1269,7 +1269,7 @@
     {
       "ean": "7791274201158",
       "name": "ALGABO QUITA C/KERATINA 200",
-      "price": 2600.0,
+      "price": 2600,
       "img": "images/uploads/7791274201158.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Íntimo",
@@ -1282,7 +1282,7 @@
     {
       "ean": "7791274201332",
       "name": "ALGABO ALGODÓN PREMIUM 75",
-      "price": 1400.0,
+      "price": 1400,
       "img": "images/uploads/7791274201332.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -1311,7 +1311,7 @@
     {
       "ean": "7791274201585",
       "name": "ALGABO HILO DENTAL C/ MANGO MENTOL X 25",
-      "price": 1800.0,
+      "price": 1800,
       "img": "images/uploads/7791274201585.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -1327,7 +1327,7 @@
     {
       "ean": "7791274201646",
       "name": "ALGABO ENJ BUCAL ANTIBAC  500",
-      "price": 4300.0,
+      "price": 4300,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -1340,7 +1340,7 @@
     {
       "ean": "7791274201653",
       "name": "ALGABO ENJ BUCAL ANTIBAC 250",
-      "price": 3300.0,
+      "price": 3300,
       "img": "images/uploads/7791274201653.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -1356,7 +1356,7 @@
     {
       "ean": "7791274201660",
       "name": "ALGABO SPRAY BUCAL ANTIBAC 60 CAJA EXH",
-      "price": 2200.0,
+      "price": 2200,
       "img": "images/uploads/7791274201660.jpg",
       "brand": "ALGABO",
       "cat": "Higiene Bucal",
@@ -1369,7 +1369,7 @@
     {
       "ean": "7791274201684",
       "name": "ALGABO CARE ESPONJA GUANTE",
-      "price": 4100.0,
+      "price": 4100,
       "img": "images/uploads/7791274201684.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -1382,7 +1382,7 @@
     {
       "ean": "7791274201721",
       "name": "ALGABO CARE ESPONJA EXFOLIANTE",
-      "price": 5500.0,
+      "price": 5500,
       "img": "images/uploads/7791274201721.jpg",
       "brand": "ALGABO",
       "cat": "Accesorios e Higiene",
@@ -1395,7 +1395,7 @@
     {
       "ean": "7791274201882",
       "name": "GO TO BE BODY CREAM GLOW IN PROGRESS 340",
-      "price": 6900.0,
+      "price": 6900,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -1408,7 +1408,7 @@
     {
       "ean": "7791274201905",
       "name": "GO TO BE BODY CREAM THE PLOT TWIST 340",
-      "price": 6900.0,
+      "price": 6900,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Colonias y Perfumes",
@@ -1421,7 +1421,7 @@
     {
       "ean": "7791274202070",
       "name": "BABY JABON DE GLICERINA 80",
-      "price": 1200.0,
+      "price": 1200,
       "img": "images/uploads/7791274202070.jpg",
       "brand": "ALGABO",
       "cat": "Baby",
@@ -1434,7 +1434,7 @@
     {
       "ean": "7791274202131",
       "name": "ALGABO JAB TOCADOR FLOWER MIX 3X80",
-      "price": 2200.0,
+      "price": 2200,
       "img": "images/uploads/7791274202131.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -1447,7 +1447,7 @@
     {
       "ean": "7791274202148",
       "name": "ALGABO JAB TOCADOR FLOWER MIX 80",
-      "price": 800.0,
+      "price": 800,
       "img": "images/uploads/7791274202148.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -1460,7 +1460,7 @@
     {
       "ean": "7791274202155",
       "name": "ALGABO JAB TOCADOR CREAM 80",
-      "price": 800.0,
+      "price": 800,
       "img": "images/uploads/7791274202155.jpg",
       "brand": "ALGABO",
       "cat": "Jabones Líquidos",
@@ -1473,7 +1473,7 @@
     {
       "ean": "7791274202315",
       "name": "ALGABO SH 0% AVOCADO Y ARGÁN EP 300",
-      "price": 2000.0,
+      "price": 2000,
       "img": "images/uploads/7791274202315.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1486,7 +1486,7 @@
     {
       "ean": "7791274202322",
       "name": "ALGABO ACO 0% AVOCADO Y ARGÁN EP 300",
-      "price": 2000.0,
+      "price": 2000,
       "img": "images/uploads/7791274202322.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1499,7 +1499,7 @@
     {
       "ean": "7791274202339",
       "name": "ALGABO ACO 0% ACAÍ Y ROMERO EP 300",
-      "price": 2000.0,
+      "price": 2000,
       "img": "images/uploads/7791274202339.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1515,7 +1515,7 @@
     {
       "ean": "7791274202346",
       "name": "ALGABO AC 0% OLIVA Y ARGÁN EP 300",
-      "price": 2000.0,
+      "price": 2000,
       "img": "images/uploads/7791274202346.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1531,7 +1531,7 @@
     {
       "ean": "7791274202353",
       "name": "ALGABO SH 0% OLIVA Y ARGÁN EP 300",
-      "price": 2000.0,
+      "price": 2000,
       "img": "images/uploads/7791274202353.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1544,7 +1544,7 @@
     {
       "ean": "7791274202360",
       "name": "ALGABO SH 0% ACAÍ Y ROMERO EP 300",
-      "price": 2000.0,
+      "price": 2000,
       "img": "images/uploads/7791274202360.jpg",
       "brand": "ALGABO",
       "cat": "Cuidado Capilar",
@@ -1560,7 +1560,7 @@
     {
       "ean": "7791274202780",
       "name": "CBO SH Y ACO 0% OLIVA Y ARGÁN + HISOPOS BAMBÚ GRATIS",
-      "price": 7200.0,
+      "price": 7200,
       "img": "SIN_IMAGEN",
       "brand": "ALGABO",
       "cat": "Hogar y Limpieza",
@@ -3087,7 +3087,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/20250804-textil-pistacho-caramel-sf-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550757",
@@ -3096,7 +3097,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hTMKp-tLjSjvryFqXxnoQRF6-8DjRbzALBlXmGaK9A&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680011",
@@ -3105,7 +3107,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6jeNpT6OArwQx-E5rYC9kYzu_UpshMvySCXoqy6NoKg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680028",
@@ -3114,7 +3117,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-citrus-1.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680035",
@@ -3123,7 +3127,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-uva-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680042",
@@ -3132,7 +3137,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-bubblegum-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680059",
@@ -3141,7 +3147,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-indiana.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680066",
@@ -3150,7 +3157,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-flores-blancas-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680073",
@@ -3159,7 +3167,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-vainilla-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680080",
@@ -3168,7 +3177,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-cony-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680097",
@@ -3177,7 +3187,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-lavanda.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680103",
@@ -3186,7 +3197,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-tropical-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680110",
@@ -3195,7 +3207,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680127",
@@ -3204,7 +3217,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-4067acae428aab067b17302110660616-480-0.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680134",
@@ -3213,7 +3227,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-violetas.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680141",
@@ -3222,7 +3237,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-etiqueta-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680158",
@@ -3231,7 +3247,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/Textil-Amour.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680165",
@@ -3240,7 +3257,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/10/AROMATIZANTE-TEXTIL-PATIO-250ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680172",
@@ -3249,7 +3267,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_d7a8031854c745d7847c29088c3732e3_638826653288907942_0_m.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680189",
@@ -3258,7 +3277,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-rocio.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680196",
@@ -3267,7 +3287,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-guarana.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680202",
@@ -3276,7 +3297,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-cc2d999ba8cfa84cb817308105849049-1024-1024.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680868",
@@ -3285,7 +3307,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://dixlimpieza.com/wp-content/uploads/2024/12/SAPHIRUS-TEXTIL-BLUE-X-250-CC.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680875",
@@ -3294,7 +3317,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680882",
@@ -3303,7 +3327,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680899",
@@ -3312,7 +3337,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/10/AROMATIZANTE-TEXTIL-FAREN-250ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680905",
@@ -3321,7 +3347,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-linah-fi-feed-1.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680912",
@@ -3330,7 +3357,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://http2.mlstatic.com/D_NQ_NP_716566-MLA111564221156_062026-O.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681100",
@@ -3339,7 +3367,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatizarmayorista.com.ar/sistema/fotos/productos/00000007_00000417_G_17315208596734e95bb0961.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681117",
@@ -3348,7 +3377,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681124",
@@ -3357,7 +3387,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-angel-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681131",
@@ -3366,7 +3397,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_76a6047724c94bb0b48a2854efe7f535_638826652257153523_0_m.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681148",
@@ -3375,7 +3407,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-730dd498917abd7e9817302111563734-1024-1024.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681155",
@@ -3384,7 +3417,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lady-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681261",
@@ -3393,7 +3427,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-apolo-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681278",
@@ -3402,7 +3437,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-jazmin.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681285",
@@ -3411,7 +3447,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_4375b38852d346ecb20c3f23ee63ab20_637986911351028992_0_m.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681292",
@@ -3420,7 +3457,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681490",
@@ -3429,7 +3467,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681568",
@@ -3438,7 +3477,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-duvet-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681773",
@@ -3447,7 +3487,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-polo-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681780",
@@ -3456,7 +3497,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2025/02/20250218-textil-invicto-legend-sf-sapfirus.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681797",
@@ -3465,7 +3507,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-man-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681803",
@@ -3474,7 +3517,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682152",
@@ -3483,7 +3527,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_7814ab9f976940baa4e9698a32ec6a62_638826662742984017_0_m.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682169",
@@ -3492,7 +3537,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-paula-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682329",
@@ -3501,7 +3547,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-magnolia-y-fresias.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682350",
@@ -3510,7 +3557,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-verbena-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682800",
@@ -3519,7 +3567,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-maracuya-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682817",
@@ -3528,7 +3577,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-c27898cf01b20eb4a417302112355443-1024-1024.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682824",
@@ -3537,7 +3587,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-cristobal-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682916",
@@ -3546,7 +3597,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683784",
@@ -3555,7 +3607,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lilas-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683852",
@@ -3564,7 +3617,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-naranja-pimienta.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683845",
@@ -3573,7 +3627,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-wanted-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683838",
@@ -3582,7 +3637,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-beauty-fi-feed.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683821",
@@ -3591,7 +3647,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-oriente-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683814",
@@ -3600,7 +3657,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-marino-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683906",
@@ -3609,7 +3667,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-olympic-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684101",
@@ -3618,7 +3677,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lucy-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684118",
@@ -3627,7 +3687,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-man-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684125",
@@ -3636,7 +3697,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-new-york.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684255",
@@ -3645,7 +3707,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://http2.mlstatic.com/D_NQ_NP_676227-MLA112208987882_062026-O.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684248",
@@ -3654,7 +3717,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-palace-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684927",
@@ -3663,7 +3727,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-antitabaco.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684934",
@@ -3672,7 +3737,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-cereza-malbec.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686198",
@@ -3681,7 +3747,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/textil-adventure.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685733",
@@ -3690,7 +3757,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/20240730-pomelo-rosado-textil-sin-fondo.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686266",
@@ -3699,7 +3767,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-pure-xs-fi-feed-1.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686273",
@@ -3708,7 +3777,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-ghost-fi-feed-1.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686280",
@@ -3717,7 +3787,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://camoga.ar/media/catalog/product/cache/17183a23c5d57b885c9e1f3d66234d68/l/u/lua.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686297",
@@ -3726,7 +3797,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-bad-man-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686303",
@@ -3735,7 +3807,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-opium-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686310",
@@ -3744,7 +3817,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/11/AROMATIZANTE-TEXTIL-FRUTILLA-250ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686327",
@@ -3753,7 +3827,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-teakwood-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686624",
@@ -3762,7 +3837,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/10/AROMATIZANTE-TEXTIL-FRUTOS-PATAGONICOS-250ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686884",
@@ -3771,7 +3847,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/textil-saphirus-yourself-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686891",
@@ -3780,7 +3857,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2024/09/20240911-textil-peonias-y-cedro-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686907",
@@ -3789,7 +3867,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/textil-saphirus-hypnotic-scent-fi-feed.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686914",
@@ -3798,7 +3877,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2023/09/Saphirus-Textiles-Sandalos-y-Violetas.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686921",
@@ -3807,7 +3887,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/flores-silvestres-1.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686938",
@@ -3816,7 +3897,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2023/09/Saphirus-Textiles-Petalos-de-Orquideas.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688833",
@@ -3825,7 +3907,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/07/saphirus-home-spray-clean-cotton.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686334",
@@ -3834,7 +3917,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/02/20250220-textil-breeze-sf-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686341",
@@ -3843,7 +3927,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromania.com.ar/wp-content/uploads/2025/01/Saphirus-textil-sandia-pepino.jpeg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688925",
@@ -3852,7 +3937,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2024/09/20240911-textil-fresias-y-bergamota-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688932",
@@ -3861,7 +3947,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/06/textil-black-xs-saphirus-1.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688949",
@@ -3870,7 +3957,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2025/02/20250218-textil-invicto-legend-sf-sapfirus.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688956",
@@ -3879,7 +3967,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/12/20241210-textil-salvaje-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688963",
@@ -3888,7 +3977,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/08/20240812-textil-fama-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688970",
@@ -3897,7 +3987,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/08/20240812-textil-scandal-fem-saphirus.jpg.webp",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688987",
@@ -3906,7 +3997,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/06/textil-scandal-man-saphirus.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688994",
@@ -3915,7 +4007,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/12/20241210-textil-good-woman-saphirus.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184689045",
@@ -3924,7 +4017,8 @@
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "img": "ERROR",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683319",
@@ -3933,7 +4027,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683432",
@@ -3942,7 +4037,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683449",
@@ -3951,7 +4047,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683456",
@@ -3960,7 +4057,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683463",
@@ -3969,7 +4067,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683470",
@@ -3978,7 +4077,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683487",
@@ -3987,7 +4087,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683494",
@@ -3996,7 +4097,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550573",
@@ -4005,7 +4107,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683500",
@@ -4014,7 +4117,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683517",
@@ -4023,7 +4127,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683524",
@@ -4032,7 +4137,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683531",
@@ -4041,7 +4147,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685856",
@@ -4050,7 +4157,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685863",
@@ -4059,7 +4167,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685870",
@@ -4068,7 +4177,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685887",
@@ -4077,7 +4187,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685894",
@@ -4086,7 +4197,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685900",
@@ -4095,7 +4207,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685917",
@@ -4104,7 +4217,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685924",
@@ -4113,7 +4227,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685931",
@@ -4122,7 +4237,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685948",
@@ -4131,7 +4247,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685955",
@@ -4140,7 +4257,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685962",
@@ -4149,7 +4267,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685979",
@@ -4158,7 +4277,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685986",
@@ -4167,7 +4287,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685993",
@@ -4176,7 +4297,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686006",
@@ -4185,7 +4307,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686013",
@@ -4194,7 +4317,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686020",
@@ -4203,7 +4327,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686037",
@@ -4212,7 +4337,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686044",
@@ -4221,7 +4347,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686051",
@@ -4230,7 +4357,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686068",
@@ -4239,7 +4367,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686075",
@@ -4248,7 +4377,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686082",
@@ -4257,7 +4387,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686099",
@@ -4266,7 +4397,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686105",
@@ -4275,7 +4407,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686112",
@@ -4284,7 +4417,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686129",
@@ -4293,7 +4427,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686136",
@@ -4302,7 +4437,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686143",
@@ -4311,7 +4447,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683548",
@@ -4320,7 +4457,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683555",
@@ -4329,7 +4467,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683562",
@@ -4338,7 +4477,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683579",
@@ -4347,7 +4487,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683586",
@@ -4356,7 +4497,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683593",
@@ -4365,7 +4507,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683609",
@@ -4374,7 +4517,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683616",
@@ -4383,7 +4527,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683623",
@@ -4392,7 +4537,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683630",
@@ -4401,7 +4547,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683647",
@@ -4410,7 +4557,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683654",
@@ -4419,7 +4567,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683661",
@@ -4428,7 +4577,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683678",
@@ -4437,7 +4587,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683685",
@@ -4446,7 +4597,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683692",
@@ -4455,7 +4607,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683708",
@@ -4464,7 +4617,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683715",
@@ -4473,7 +4627,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683722",
@@ -4482,7 +4637,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683739",
@@ -4491,7 +4647,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683746",
@@ -4500,7 +4657,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683753",
@@ -4509,7 +4667,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683760",
@@ -4518,7 +4677,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683777",
@@ -4527,7 +4687,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685146",
@@ -4536,7 +4697,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685153",
@@ -4545,7 +4707,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685160",
@@ -4554,7 +4717,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685177",
@@ -4563,7 +4727,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983480",
@@ -4572,7 +4737,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983497",
@@ -4581,7 +4747,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983503",
@@ -4590,7 +4757,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983510",
@@ -4599,7 +4767,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983527",
@@ -4608,7 +4777,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983534",
@@ -4617,7 +4787,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983541",
@@ -4626,7 +4797,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983558",
@@ -4635,7 +4807,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983565",
@@ -4644,7 +4817,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983572",
@@ -4653,7 +4827,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983589",
@@ -4662,7 +4837,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983596",
@@ -4671,7 +4847,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983602",
@@ -4680,7 +4857,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983619",
@@ -4689,7 +4867,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983626",
@@ -4698,7 +4877,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983633",
@@ -4707,7 +4887,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983640",
@@ -4716,7 +4897,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983800",
@@ -4725,7 +4907,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983657",
@@ -4734,7 +4917,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983664",
@@ -4743,7 +4927,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983671",
@@ -4752,7 +4937,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983688",
@@ -4761,7 +4947,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983695",
@@ -4770,7 +4957,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983701",
@@ -4779,7 +4967,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983718",
@@ -4788,7 +4977,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983725",
@@ -4797,7 +4987,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983732",
@@ -4806,7 +4997,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "77983749",
@@ -4815,7 +5007,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680707",
@@ -4824,7 +5017,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-difusor-citrus-conjunto.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680714",
@@ -4833,7 +5027,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-coco-vai.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680738",
@@ -4842,7 +5037,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-cony.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680769",
@@ -4851,7 +5047,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-flores-blancas.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680790",
@@ -4860,7 +5057,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-hawai.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680691",
@@ -4869,7 +5067,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-limon.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680783",
@@ -4878,7 +5077,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfy0oQrG5qH6IBLBhXndROGB9ti9PGq0L528uPW04ZvA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680721",
@@ -4887,7 +5087,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6kLfsOaBlqd1GM7xKwl7Gzr0-8o_2_yN_9ZQL6lQ1dQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680776",
@@ -4896,7 +5097,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-peras-flores.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680745",
@@ -4905,7 +5107,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-uva.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680806",
@@ -4914,7 +5117,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-vainilla.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680752",
@@ -4923,7 +5127,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-orange.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680943",
@@ -4932,7 +5137,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-amour.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680981",
@@ -4941,7 +5147,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-lavanda.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681001",
@@ -4950,7 +5157,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-difusor-tropical.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680998",
@@ -4959,7 +5167,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKpx94Wl093N2jRYTHty8yTaD9gWaJkvFQ9uBhfQr-w&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681018",
@@ -4968,7 +5177,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRRRKQzsKmKhfgr5u1HJDWeUGnL__M9e8IV6z4PVNagA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680950",
@@ -4977,7 +5187,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-bamboo.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680967",
@@ -4986,7 +5197,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-green.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680974",
@@ -4995,7 +5207,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-jazmin.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681056",
@@ -5004,7 +5217,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1887-home_default/difusor-aromatico-saphirus-sweet-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681049",
@@ -5013,7 +5227,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1862-large_default/difusor-aromatico-saphirus-jazz-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681025",
@@ -5022,7 +5237,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-papaya.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681032",
@@ -5031,7 +5247,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-bebe.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681186",
@@ -5040,7 +5257,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1858-large_default/difusor-aromatico-saphirus-guarana-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681193",
@@ -5049,7 +5267,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-bubblegum.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681230",
@@ -5058,7 +5277,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWzaR9bwzM1i86qB_APe5gpx8Fjo0QGsUFvffcG0CU3A&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681209",
@@ -5067,7 +5287,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-lola.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681223",
@@ -5076,7 +5297,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-damasco.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681216",
@@ -5085,7 +5307,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1884-large_default/difusor-aromatico-saphirus-pink-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681308",
@@ -5094,7 +5317,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/09/DIFUSOR-AROMATICO-NINA-125ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681315",
@@ -5103,7 +5327,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-tokyo.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681322",
@@ -5112,7 +5337,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-difusores-violeta.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681339",
@@ -5121,7 +5347,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-manzana-canela.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681346",
@@ -5130,7 +5357,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-marino.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681353",
@@ -5139,7 +5367,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/09/DIFUSOR-AROMATICO-FLOWERS-125ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681377",
@@ -5148,7 +5377,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1885-large_default/difusor-aromatico-saphirus-praga-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681483",
@@ -5157,7 +5387,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2kvHfLwNVdQ5fFKPRCdEzAQlzLGz-HrPgx7VvAtPqUQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681476",
@@ -5166,7 +5397,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1854-large_default/difusor-aromatico-saphirus-dolce-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681575",
@@ -5175,7 +5407,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-melon.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681810",
@@ -5184,7 +5417,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-miel-limon.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681827",
@@ -5193,7 +5427,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIHQ8eMXhcRJSE20VVklLlvaSlj87Ai3BLLhz5-aCYFQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682046",
@@ -5202,7 +5437,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-indiana.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682039",
@@ -5211,7 +5447,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-maracuya.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682008",
@@ -5220,7 +5457,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-london.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682022",
@@ -5229,7 +5467,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://osvaldomarcolini.com/1880-large_default/difusor-aromatico-saphirus-paris-x-125ml-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682312",
@@ -5238,7 +5477,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-magnolia-fresias.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682374",
@@ -5247,7 +5487,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-rocio.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682367",
@@ -5256,7 +5497,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/20240730-mery-sin-fondo.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682343",
@@ -5265,7 +5507,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/09/DIFUSOR-AROMATICO-PAULA-125ML-.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682848",
@@ -5274,7 +5517,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/09/DIFUSOR-AROMATICO-CRISTOBAL-125ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682978",
@@ -5283,7 +5527,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/09/DIFUSOR-AROMATICO-PALO-SANTO-125ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683869",
@@ -5292,7 +5537,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-naranja-pimienta.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684286",
@@ -5301,7 +5547,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-limon-dulce-vainilla.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686211",
@@ -5310,7 +5557,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://www.ndaromas.com.ar/wp-content/uploads/2023/02/saphirus-difusores-invicto-600x600.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686228",
@@ -5319,7 +5567,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/10/saphirus-difusores-wanted.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686235",
@@ -5328,7 +5577,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://borcas.com.ar/wp-content/uploads/2025/09/DIFUSOR-AROMATICO-BELLA-125ML.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686204",
@@ -5337,7 +5587,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/10/saphirus-difusores-adventure.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685580",
@@ -5346,7 +5597,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/difusor-saphirus-pera-y-durazno-1.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685597",
@@ -5355,7 +5607,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/difusor-saphirus-lavanda-y-te-verde-1.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685603",
@@ -5364,7 +5617,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRzmRx3pTXl3SO-5aqpfKFvgAhi_XpeJNluvxkN61OA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685610",
@@ -5373,7 +5627,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj09j4cBT8Ptu5QQ_UBst1zfXMC4I4R2v-FYR-zt9LSQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685627",
@@ -5382,7 +5637,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1yhQVmKEaeNBIGsIqANtSVHGndx4DWDUrTsmfWjAGFw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685634",
@@ -5391,7 +5647,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmYU2DE1lFAynmHSKnf-TLYwUycJauqJ3RynXYwiXDPA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686761",
@@ -5400,7 +5657,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr6PLI9oFaim1NQLIxywyLycwtVYdNjj6jkr7V5iPzzg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686778",
@@ -5409,7 +5667,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIUaAKADQY87_YJP5kRm7vhC59iN3vmnzSbv2u0k8PA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686785",
@@ -5418,7 +5677,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw75nGMWU7Bip0hWhQYYWbAW3pAoq47dykZLLWvwJzXA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686792",
@@ -5427,7 +5687,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp-UmxwUig_2MObXpZkwKIn6DUtQ2_Dip6Vxme4da0ow&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686808",
@@ -5436,7 +5697,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmn22ACF65neX5i5GFHalEbSaNnJu-VygQpBHzKHAgBQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686815",
@@ -5445,7 +5707,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUl4jCAwmeOepbwr5bgDejLAYkMbLHXguNEQuCmCBbEw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686822",
@@ -5454,7 +5717,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ5aFmEgXiCyKOmrVOiTftkJHEI5OyptR5eVJABlqlQA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686839",
@@ -5463,7 +5727,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpL0GUd2yBFTSYN_640vkaIZME0Gs_vk3ms3QyMMCwfg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686846",
@@ -5472,7 +5737,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQocbRuZ_IMEvzWN1KWDMzilMyntADCM5GEa0VmaFE6qA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686853",
@@ -5481,7 +5747,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNqogiU-_Ut6H3sjq2MQ-_5EFWoc7YVsK0uDpP1gyVuw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686860",
@@ -5490,7 +5757,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiet1pQkDnjDaLAc8ur3pXIogfVvW6pro25pZj6F5xWw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686877",
@@ -5499,7 +5767,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzD1qyJeGeLYfJ_1IGqu9IwaM7lGK8cwDVUDqm8wkFEA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184689038",
@@ -5508,7 +5777,8 @@
       "tab": "saphirus",
       "cat": "DIFUSORES AROMATICOS VARILLAS 125ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNllg04AeXN2lUeRrdi6IYe0CTMhBYn58NOtNTX5zk9A&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683999",
@@ -5517,7 +5787,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbboPLJCqR8ZsUKwF5PRnUadvR3opErISpmkJ-_aJrSg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684002",
@@ -5526,7 +5797,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPeB9DxlciZZWfx7l1Fr-hNxci8trNiTkwQ834qcMsw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684019",
@@ -5535,7 +5807,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtqntth2fWXagYZPifWq8JUQIss6u1hwIY7xMMEkh9Q&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684026",
@@ -5544,7 +5817,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQNODDhHuLaqDTHdQHVzB0F66qyTNsMIzMszyYkT3TRg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684033",
@@ -5553,7 +5827,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXvaUH4IeG-jgankAbOQu11F6yZ94fwukstUwslVQtYw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684040",
@@ -5562,7 +5837,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYpBegm3kK9dxQuB-bHFopDmHxiEi9PQZiRnRVIQtVYA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684644",
@@ -5571,7 +5847,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjt9OLfHGclbYvdN8FNLUVdGjfgN5oSXUkAyk6PoD2OQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684651",
@@ -5580,7 +5857,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpifGezwtePv0ugyclsD0fpFbtHDgjdeh7pjKpH2p-A&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684668",
@@ -5589,7 +5867,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgVKq1DkEc5UeJo0KKk5N0faeKXRjffLVP9LqObALYZg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684675",
@@ -5598,7 +5877,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGRr46C_pvXPbqJhRzv88sx5L3sC5p06rjJqXUJMVjkA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684682",
@@ -5607,7 +5887,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qAU4-11IBSu7r1-EulmrmWVGEZJP1VvBssxoGz9hFQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684699",
@@ -5616,7 +5897,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAl7wpPs8FZ_IWbuZ6iWQ5uGC07DipPmKtXH3uN3chqA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685467",
@@ -5625,7 +5907,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw-mARcXxfAZbRuPX4uGlHwkANZ_V5IBWNQEsRBv3h5A&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685795",
@@ -5634,7 +5917,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrV47SCfEb995Zcc-QwA3WehpGY3ueu5Bk9Uycw5vYA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685481",
@@ -5643,7 +5927,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLYw4jGuKMNaxzRfZXYOogDWePM8i5D-P7kmHfldRySg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685498",
@@ -5652,7 +5937,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdVMTuAXypFcfQ_jByBTr28maCVm0ua8UOcqU5dLLWag&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685504",
@@ -5661,7 +5947,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPgqAOQH3BwEWZmRCCuMigXB2GbBkzZBSyOd4Xzf0fAg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685832",
@@ -5670,7 +5957,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0-5T8tgwsudXOgnfR8CQz-pIcKsgpDiRbXETNYvSDGQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685528",
@@ -5679,7 +5967,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKGA_bKlMhohTNf9YxGJJqOKe8SqfrBy9uFkWQ6oPAg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685818",
@@ -5688,7 +5977,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfzWDmiNXNrR11bVG7YhQagnKQ_swQ1W-FKEppIqXq8w&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685801",
@@ -5697,7 +5987,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDDbeCs5qcUtudPPI25kQk8GjqZBPwwzTa956AkOCpHA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685849",
@@ -5706,7 +5997,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0TPV1lf0mBXqJSZApJRJ7ITQjRV3IH1kVnBNE4NpvJA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685566",
@@ -5715,7 +6007,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpYlb9uMPr0Xqku1RBqEvg9Aw65GYMZfGvB8ts1a0eHA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685825",
@@ -5724,7 +6017,8 @@
       "tab": "saphirus",
       "cat": "HOME SPRAY 500ML",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQodveibmFxsfgqd8aTJmlX_LpYGfLXR3Nph4iU7TWU5g&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681834",
@@ -5733,7 +6027,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_YpJWuq4MvPdPN-AcAZW4mIwTSxtYJWNTHDfTowgzw&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681858",
@@ -5742,7 +6037,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToFQQnIqX1uOzoO-uThGLZh4jH1dN9vwjuqP9WfSK7ww&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681865",
@@ -5751,7 +6047,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb1P0FQjNwpCXl4hZWBnjygxrXdhZE006KPRCXgVrfGA&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681872",
@@ -5760,7 +6057,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfh1md9dXEFv1N0cj2wbN11Qy-bpc_aGa3T-CWehp79g&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681889",
@@ -5769,7 +6067,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWEhmmx3UIpuuvL7rIXwd_U88SGpfrxvv_U30YFebkrw&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681896",
@@ -5778,7 +6077,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKFyfKRLgWbZvKwjq86HvXVZHtsNvlwYWz5GOUcBS6jw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681902",
@@ -5787,7 +6087,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPTyBWukdDAWB2w9JN8PdGjNkcgoS-E8YtMxD8PjIAsg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681919",
@@ -5796,7 +6097,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbrWJNI02Nxei_iTwH6ih7slojy3CMKNovYBt0sIMTWg&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681926",
@@ -5805,7 +6107,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyU2W_PTbdwJLURkIRPMNRJKtlAYlq-EbV5qNufUjqEg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681933",
@@ -5814,7 +6117,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlhKZKElWTq5aUiriFRJGXeEM9coUbhwxRMwMH0lugPg&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681940",
@@ -5823,7 +6127,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAit8kTsoJflWzk0i2MooX1mcZ57evNtLnsHmlgCscNQ&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681957",
@@ -5832,7 +6137,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSShx_Nb1hxvaSjli2HaysQZaacIra3COm9DQokymK4cA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681964",
@@ -5841,7 +6147,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GrzyblDidw0BW0GTzL2cF0Dlfm1nQosA2d0wV0upLA&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681971",
@@ -5850,7 +6157,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22tPp10RnOjhkohaR9ZsiNG_Wwe7basg6yB8pTOSHHQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683807",
@@ -5859,7 +6167,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcWaYht85KzCE2MwKwHXt0RxyDV0uAX_TSvKkkmEiyCw&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683791",
@@ -5868,7 +6177,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQTBrz-DQ5Kfbw5tJAckGN3ZkZTOoUsej5HXdlWY8Ng&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683913",
@@ -5877,7 +6187,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWm39lttb7DeQw7VcG9Gcf23ry3_8K1UA2zJSPulJ9Ng&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683920",
@@ -5886,7 +6197,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSZf5nAENhIi-DaBagiz1IOeC-n_NLOk8-_AtNx7UFMA&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684064",
@@ -5895,7 +6207,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dROXCIsjXk2I9Wz4qI7ekBXQhPoNXUFTah4ePCcYoA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684071",
@@ -5904,7 +6217,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw4zAHJn2Mdhs3lMf3QprhWRSVlAt-gMqY-h46B2jrHg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684088",
@@ -5913,7 +6227,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3zGDZl2bUwX7dju3ydlPHpQ9ZcrmX1teVPdQvOMHgBQ&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684095",
@@ -5922,7 +6237,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHG_XwvBZo4xvbN52JRAOvaFzetDIfWeCDNN4etJlwbw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684224",
@@ -5931,7 +6247,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDU0AhyD_n59SpOXjFLiDwkrv_eI9I8u9JbGgjNKCwgw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684620",
@@ -5940,7 +6257,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGKglY3In83-DaB7sc9w86UYM29W5eI92qjR316wN7w&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684637",
@@ -5949,7 +6267,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS39y532tmIyQ-LrbnRn8nLTHuTG2VIM7iYNfoSydAC0Q&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684965",
@@ -5958,7 +6277,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYKPQkna4bnYJOLRNmE98lDmNgpGJNRsiENhPvcCG8A&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684972",
@@ -5967,7 +6287,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNOgBroFHz55Thabs33uoS3HUY90UOPI2voc9s6KWY3w&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686648",
@@ -5976,7 +6297,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3nIBja7Iuha2nGR5iQp87BlVZHPrX7dNrX1rNfq2tQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686655",
@@ -5985,7 +6307,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmIGVkrtPg-7e0XIIWHHiFVYMlVl5qNpLxDjPq-RmeoA&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686662",
@@ -5994,7 +6317,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5RS9jsy-Dr72c6QstMJhCJV5papSlmGz-z-wdE9PSpPsErKv_upC-U_o&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686679",
@@ -6003,7 +6327,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNws6xbcNNMKBI-sMQkK4sFlWF0751C8p0e6ds6TFpYQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686686",
@@ -6012,7 +6337,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTvaQ9cF0YKtidp2ydMkAhI4aO7yA8WSOILkhLfw1PYA&s",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686693",
@@ -6021,7 +6347,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdlfj_NOx0FGxFpHBekPUqQYHBNT7EoqAJX0_hZToNQg&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686709",
@@ -6030,7 +6357,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAfX5gzt7KY2fgc1OjOp5O2MDehYPTWKHWodmx2MCf-g&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686716",
@@ -6039,7 +6367,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2HkOoFfu7pg6_OKjBUdvQ-tM28m6kfWVpeYUbgOKwiQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686723",
@@ -6048,7 +6377,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAm4NlZP92FkBOgYJMyv2kmt6nhoPkxlrs1CPTDZ787g&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686730",
@@ -6057,7 +6387,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmeU0m755R0exgLWBrEtI-7mPlc7QjZDcdltODfceEWw&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686747",
@@ -6066,7 +6397,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWFJQa1srky-ySnYk7RvSHspoeRO3et8zHvxkyL_8PQ&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686754",
@@ -6075,7 +6407,8 @@
       "tab": "saphirus",
       "cat": "ACEITES ESENCIALES",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuURAefVuVmV9sbg_PmERFoLt844q4Fcx5YhD_5N6fKA&s=10",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680219",
@@ -6084,7 +6417,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680226",
@@ -6093,7 +6427,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680233",
@@ -6102,7 +6437,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680240",
@@ -6111,7 +6447,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680257",
@@ -6120,7 +6457,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680264",
@@ -6129,7 +6467,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680271",
@@ -6138,7 +6477,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680288",
@@ -6147,7 +6487,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680295",
@@ -6156,7 +6497,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680301",
@@ -6165,7 +6507,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680318",
@@ -6174,7 +6517,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680325",
@@ -6183,7 +6527,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680332",
@@ -6192,7 +6537,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680349",
@@ -6201,7 +6547,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680356",
@@ -6210,7 +6557,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680363",
@@ -6219,7 +6567,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680370",
@@ -6228,7 +6577,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680387",
@@ -6237,7 +6587,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680394",
@@ -6246,7 +6597,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680400",
@@ -6255,7 +6607,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680417",
@@ -6264,7 +6617,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680424",
@@ -6273,7 +6627,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680431",
@@ -6282,7 +6637,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680448",
@@ -6291,7 +6647,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680455",
@@ -6300,7 +6657,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680462",
@@ -6309,7 +6667,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680479",
@@ -6318,7 +6677,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680486",
@@ -6327,7 +6687,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680493",
@@ -6336,7 +6697,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680509",
@@ -6345,7 +6707,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680516",
@@ -6354,7 +6717,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680523",
@@ -6363,7 +6727,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680530",
@@ -6372,7 +6737,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680547",
@@ -6381,7 +6747,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680554",
@@ -6390,7 +6757,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680561",
@@ -6399,7 +6767,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680578",
@@ -6408,7 +6777,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680585",
@@ -6417,7 +6787,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680592",
@@ -6426,7 +6797,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680608",
@@ -6435,7 +6807,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680615",
@@ -6444,7 +6817,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680622",
@@ -6453,7 +6827,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680639",
@@ -6462,7 +6837,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680646",
@@ -6471,7 +6847,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680653",
@@ -6480,7 +6857,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680660",
@@ -6489,7 +6867,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680677",
@@ -6498,7 +6877,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680684",
@@ -6507,7 +6887,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680813",
@@ -6516,7 +6897,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680820",
@@ -6525,7 +6907,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680837",
@@ -6534,7 +6917,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680844",
@@ -6543,7 +6927,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680851",
@@ -6552,7 +6937,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680929",
@@ -6561,7 +6947,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184680936",
@@ -6570,7 +6957,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681063",
@@ -6579,7 +6967,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681070",
@@ -6588,7 +6977,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681087",
@@ -6597,7 +6987,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681094",
@@ -6606,7 +6997,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681254",
@@ -6615,7 +7007,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681384",
@@ -6624,7 +7017,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681445",
@@ -6633,7 +7027,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681469",
@@ -6642,7 +7037,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681452",
@@ -6651,7 +7047,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681995",
@@ -6660,7 +7057,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682015",
@@ -6669,7 +7067,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682053",
@@ -6678,7 +7077,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682077",
@@ -6687,7 +7087,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682091",
@@ -6696,7 +7097,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682336",
@@ -6705,7 +7107,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682831",
@@ -6714,7 +7117,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682985",
@@ -6723,7 +7127,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184682992",
@@ -6732,7 +7137,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683876",
@@ -6741,7 +7147,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683937",
@@ -6750,7 +7157,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684057",
@@ -6759,7 +7167,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684279",
@@ -6768,7 +7177,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684262",
@@ -6777,7 +7187,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684583",
@@ -6786,7 +7197,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684590",
@@ -6795,7 +7207,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684606",
@@ -6804,7 +7217,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684613",
@@ -6813,7 +7227,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684941",
@@ -6822,7 +7237,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184684958",
@@ -6831,7 +7247,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685702",
@@ -6840,7 +7257,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685689",
@@ -6849,7 +7267,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685696",
@@ -6858,7 +7277,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685665",
@@ -6867,7 +7287,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685641",
@@ -6876,7 +7297,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685658",
@@ -6885,7 +7307,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685672",
@@ -6894,7 +7317,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685719",
@@ -6903,7 +7327,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184685726",
@@ -6912,7 +7337,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184687010",
@@ -6921,7 +7347,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686983",
@@ -6930,7 +7357,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686990",
@@ -6939,7 +7367,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184687003",
@@ -6948,7 +7377,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184687065",
@@ -6957,7 +7387,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184687058",
@@ -6966,7 +7397,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184687041",
@@ -6975,7 +7407,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688819",
@@ -6984,7 +7417,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688826",
@@ -6993,7 +7427,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184689014",
@@ -7002,7 +7437,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184689007",
@@ -7011,7 +7447,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184689021",
@@ -7020,7 +7457,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683005",
@@ -7029,7 +7467,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683012",
@@ -7038,7 +7477,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683029",
@@ -7047,7 +7487,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683036",
@@ -7056,7 +7497,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683043",
@@ -7065,7 +7507,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683050",
@@ -7074,7 +7517,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683067",
@@ -7083,7 +7527,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683074",
@@ -7092,7 +7537,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683081",
@@ -7101,7 +7547,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683098",
@@ -7110,7 +7557,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683104",
@@ -7119,7 +7567,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683111",
@@ -7128,7 +7577,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683128",
@@ -7137,7 +7587,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683135",
@@ -7146,7 +7597,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683142",
@@ -7155,7 +7607,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683159",
@@ -7164,7 +7617,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683166",
@@ -7173,7 +7627,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683173",
@@ -7182,7 +7637,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683180",
@@ -7191,7 +7647,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683197",
@@ -7200,7 +7657,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683203",
@@ -7209,7 +7667,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683210",
@@ -7218,7 +7677,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683227",
@@ -7227,7 +7687,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683234",
@@ -7236,7 +7697,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683241",
@@ -7245,7 +7707,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683258",
@@ -7254,7 +7717,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683265",
@@ -7263,7 +7727,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683272",
@@ -7272,7 +7737,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683289",
@@ -7281,7 +7747,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184683296",
@@ -7290,7 +7757,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550962",
@@ -7299,7 +7767,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550955",
@@ -7308,7 +7777,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550931",
@@ -7317,7 +7787,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550924",
@@ -7326,7 +7797,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550979",
@@ -7335,7 +7807,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550993",
@@ -7344,7 +7817,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550986",
@@ -7353,7 +7827,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550948",
@@ -7362,7 +7837,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550887",
@@ -7371,7 +7847,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550894",
@@ -7380,7 +7857,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550900",
@@ -7389,7 +7867,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550863",
@@ -7398,7 +7877,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550870",
@@ -7407,7 +7887,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551051",
@@ -7416,7 +7897,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551044",
@@ -7425,7 +7907,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551037",
@@ -7434,7 +7917,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551006",
@@ -7443,7 +7927,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551013",
@@ -7452,7 +7937,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551020",
@@ -7461,7 +7947,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550917",
@@ -7470,7 +7957,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551105",
@@ -7479,7 +7967,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551235",
@@ -7488,7 +7977,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551082",
@@ -7497,7 +7987,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551242",
@@ -7506,7 +7997,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551075",
@@ -7515,7 +8007,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551136",
@@ -7524,7 +8017,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551150",
@@ -7533,7 +8027,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551129",
@@ -7542,7 +8037,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551099",
@@ -7551,7 +8047,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551143",
@@ -7560,7 +8057,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551112",
@@ -7569,7 +8067,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551068",
@@ -7578,7 +8077,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551228",
@@ -7587,7 +8087,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551211",
@@ -7596,7 +8097,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551204",
@@ -7605,7 +8107,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551167",
@@ -7614,7 +8117,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444551259",
@@ -7623,7 +8127,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688772",
@@ -7632,7 +8137,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550627",
@@ -7641,7 +8147,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688765",
@@ -7650,7 +8157,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688789",
@@ -7659,7 +8167,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688758",
@@ -7668,7 +8177,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550603",
@@ -7677,7 +8187,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550597",
@@ -7686,7 +8197,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798444550610",
@@ -7695,7 +8207,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688710",
@@ -7704,7 +8217,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688734",
@@ -7713,7 +8227,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688727",
@@ -7722,7 +8237,8 @@
       "tab": "saphirus",
       "cat": "Otros",
       "img": "",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     }
   ]
 }
