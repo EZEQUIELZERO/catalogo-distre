@@ -354,3 +354,15 @@ Fecha: 2026-11-14
 - Prioriza `CODIGO_EAN` y usa `CODIGO_IN` como respaldo si no hay EAN; guarda
   `codigoInterno`, `stock` y `PROVEEDOR` como `brand`.
 Archivos: index.html, NOTASDEVER.MD
+
+### #028 - Fix: mostrar productos re-importados/agregados tras "Eliminar todos"
+Fecha: 2026-11-14
+- Causa: al usar "Eliminar todos" o "Eliminar seleccionados", `markDeletedLocally`
+  guardaba `deleted: true` en `localStorage` (`distre_overrides`). Al volver a
+  importar esos mismos EANs por CSV o agregar producto, el JSON en GitHub se
+  actualizaba bien pero el flag local `deleted: true` seguía ocultándolos en ese
+  navegador.
+- Fix: nuevo helper `clearDeletedOverrides(eans)` llamado en `loadCustomProducts()`,
+  `importCsvBtn`, `addProductBtn` y `saveEditProduct()` para limpiar el flag
+  local `deleted` cuando el producto vuelve a existir.
+Archivos: index.html, NOTASDEVER.MD

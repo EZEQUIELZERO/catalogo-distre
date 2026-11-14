@@ -1693,12 +1693,24 @@ function preservarListas(entry){
   if(todas.length) entry.lists = todas;
   return entry;
 }
+function clearDeletedOverrides(eans){
+  let changed = false;
+  eans.forEach(ean => {
+    if(overrides[ean] && overrides[ean].deleted){
+      delete overrides[ean].deleted;
+      if(Object.keys(overrides[ean]).length === 0) delete overrides[ean];
+      changed = true;
+    }
+  });
+  if(changed) saveOverrides();
+}
 async function loadCustomProducts(){
   try{
     const res = await fetch('./' + CUSTOM_PRODUCTS_PATH, { cache: 'no-store' });
     if(!res.ok) return;
     const data = await res.json();
     customProductsData = { products: (data.products || []) };
+    const activeEans = [];
     (data.products || []).forEach(p => {
       if(!p.ean) return;
       if(p.deleted){
@@ -1708,9 +1720,11 @@ async function loadCustomProducts(){
         return;
       }
       if(!p.name) return;
+      activeEans.push(p.ean);
       const tab = p.tab || 'algabo';
       mergeCustomProductLocally({ ...p, tab });
     });
+    clearDeletedOverrides(activeEans);
   }catch(e){
     /* El archivo todavía no existe en el repo, o no se pudo leer: seguimos con el catálogo base. */
   }
@@ -2372,6 +2386,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
       return data;
     }, `Agregar producto ${ean} - ${name}`);
 
+    clearDeletedOverrides([ean]);
     mergeCustomProductLocally(entry);
     buildFilters();
     renderGrid();
@@ -2503,10 +2518,7 @@ async function saveEditProduct(){
       if(t.id !== tab) t.products = t.products.filter(p => p.ean !== ean);
     });
     // Si el producto estaba eliminado, la edición lo resucita: limpiar el flag local
-    if(overrides[ean] && overrides[ean].deleted){
-      delete overrides[ean].deleted;
-      saveOverrides();
-    }
+    clearDeletedOverrides([ean]);
     mergeCustomProductLocally(entry);
     buildFilters();
     renderGrid();
@@ -2664,6 +2676,7 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
       });
       return data;
     }, `Importar CSV (${newEntries.length} productos)`);
+    clearDeletedOverrides(newEntries.map(e => e.ean));
     newEntries.forEach(mergeCustomProductLocally);
     buildFilters();
     renderGrid();
