@@ -909,7 +909,7 @@
 
         <div style="margin-bottom:10px;">
           <div class="admin-section-title">Repositorio de GitHub</div>
-          <p class="admin-note">Necesario para poder agregar productos e imágenes nuevas desde este panel. El catálogo (<code>catalog.html</code>) debe estar en la raíz del repositorio.</p>
+          <p class="admin-note">Necesario para poder agregar productos e imágenes nuevas desde este panel. El catálogo (<code>index.html</code>) debe estar en la raíz del repositorio.</p>
           <div class="field"><label>Repositorio (usuario/nombre-repo)</label>
             <input type="text" id="ghRepo" class="price-input" placeholder="ezequielzero/catalogo-distre"></div>
           <div class="field" style="margin-top:10px;"><label>Rama</label>
@@ -1063,6 +1063,8 @@
    CONFIGURACIÓN BASE
    ====================================================== */
 const DEFAULT_WHATSAPP = "5492915663645"; // número por defecto (editable desde el panel admin)
+const DEFAULT_GH_REPO = "ezequielzero/catalogo-distre";
+const DEFAULT_GH_BRANCH = "main";
 const ADMIN_USER = "admin";
 const ADMIN_PASS = "editor2026";
 // Nota: esta es una protección simple del lado del cliente, pensada para
@@ -1528,14 +1530,14 @@ function getProductsForTab(tab){ return getTabProducts(tab); }
 
 function getGithubConfig(){
   return {
-    repo: storageGet('distre_gh_repo') || '',
-    branch: storageGet('distre_gh_branch') || 'main',
+    repo: storageGet('distre_gh_repo') || DEFAULT_GH_REPO,
+    branch: storageGet('distre_gh_branch') || DEFAULT_GH_BRANCH,
     token: storageGet('distre_gh_token') || ''
   };
 }
 function saveGithubConfigTo(repo, branch, token){
   storageSet('distre_gh_repo', repo);
-  storageSet('distre_gh_branch', branch || 'main');
+  storageSet('distre_gh_branch', branch || DEFAULT_GH_BRANCH);
   storageSet('distre_gh_token', token);
 }
 
@@ -2277,14 +2279,19 @@ document.getElementById('saveWhatsapp').addEventListener('click', () => {
 });
 
 document.getElementById('saveGithubConfig').addEventListener('click', () => {
-  const repo = document.getElementById('ghRepo').value.trim().replace(/^https?:\/\/github\.com\//i, '').replace(/\/$/, '');
-  const branch = document.getElementById('ghBranch').value.trim() || 'main';
+  const rawRepo = document.getElementById('ghRepo').value.trim() || DEFAULT_GH_REPO;
+  const repo = rawRepo
+    .replace(/^https?:\/\/github\.com\//i, '')
+    .replace(/\.git$/i, '')
+    .replace(/\/+$/, '');
+  const branch = document.getElementById('ghBranch').value.trim() || DEFAULT_GH_BRANCH;
   const token = document.getElementById('ghToken').value.trim();
   if(!/^[\w.-]+\/[\w.-]+$/.test(repo)){ showToast('Repositorio inválido. Formato: usuario/repositorio'); return; }
   saveGithubConfigTo(repo, branch, token);
   document.getElementById('ghRepo').value = repo;
+  document.getElementById('ghBranch').value = branch;
   populateCategorySelect();
-  showToast('Configuración de GitHub guardada');
+  showToast(token ? 'Configuración de GitHub guardada' : 'Repositorio guardado (falta ingresar el token)');
 });
 
 /* ---------- AGREGAR PRODUCTO ---------- */

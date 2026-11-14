@@ -329,3 +329,16 @@ Fecha: 2026-08-06
 Archivos: index.html (HTML toolbar/bulkbar, CSS, getEffective, renderAdminList,
 deleteProductsFromRepo, markDeletedLocally, filtros deleted, saveEditProduct),
 NOTASDEVER.MD
+
+### #026 - Fix: valor por defecto del repositorio GitHub en panel admin
+Fecha: 2026-11-14
+- Causa del error al guardar el token: el campo "Repositorio" (`#ghRepo`)
+  mostraba `ezequielzero/catalogo-distre` solo como `placeholder` gris pero su
+  valor real quedaba vacío (`""`), por lo que al pegar únicamente el token y
+  presionar "Guardar configuración de GitHub" fallaba la validación con
+  `Repositorio inválido. Formato: usuario/repositorio`.
+- Fix: se agregaron `DEFAULT_GH_REPO` (`ezequielzero/catalogo-distre`) y
+  `DEFAULT_GH_BRANCH` (`main`) en `getGithubConfig()` y en el botón de guardado,
+  además de limpiar sufijo `.git` y barras finales al pegar una URL completa.
+  Se corrigió también la nota del panel de `catalog.html` a `index.html`.
+Archivos: index.html, NOTASDEVER.MD
