@@ -5914,21 +5914,17 @@
       "cat": "HOME SPRAY 500 ML",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbboPLJCqR8ZsUKwF5PRnUadvR3opErISpmkJ-_aJrSg&s=10",
-      "brand": "SAPHIRUS",
-      "stock": 2,
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684002",
-      "name": "COCO Y MARACUYA",
+      "name": "COCO & MARACUYA",
       "price": 9900,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPeB9DxlciZZWfx7l1Fr-hNxci8trNiTkwQ834qcMsw&s=10",
-      "brand": "SAPHIRUS",
-      "stock": 2,
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684019",
@@ -5938,221 +5934,217 @@
       "cat": "HOME SPRAY 500 ML",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtqntth2fWXagYZPifWq8JUQIss6u1hwIY7xMMEkh9Q&s=10",
-      "brand": "SAPHIRUS",
-      "stock": 2,
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684026",
-      "name": "SANDI PEPINO",
+      "name": "SANDIA PEPINO",
       "price": 9900,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQNODDhHuLaqDTHdQHVzB0F66qyTNsMIzMszyYkT3TRg&s=10",
-      "brand": "SAPHIRUS",
-      "stock": 2,
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684033",
-      "name": "HOME SPRAY  - Sweet Flowers",
+      "name": "SWEET FLOWERS",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXvaUH4IeG-jgankAbOQu11F6yZ94fwukstUwslVQtYw&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684040",
-      "name": "HOME SPRAY  - Vanilla Cream",
+      "name": "VANILLA CREAM",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYpBegm3kK9dxQuB-bHFopDmHxiEi9PQZiRnRVIQtVYA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684644",
-      "name": "HOME SPRAY  - Mix Tropical",
+      "name": "MIX TROPICAL",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjt9OLfHGclbYvdN8FNLUVdGjfgN5oSXUkAyk6PoD2OQ&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684651",
-      "name": "HOME SPRAY  - Citric Wood",
+      "name": "CITRIC WOOD",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpifGezwtePv0ugyclsD0fpFbtHDgjdeh7pjKpH2p-A&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684668",
-      "name": "HOME SPRAY  - Fancy Dreams",
+      "name": "FANCY DREAMS",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgVKq1DkEc5UeJo0KKk5N0faeKXRjffLVP9LqObALYZg&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684675",
-      "name": "HOME SPRAY  - Apple Champagne",
+      "name": "APPLE CHAMPAGNE",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGRr46C_pvXPbqJhRzv88sx5L3sC5p06rjJqXUJMVjkA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684682",
-      "name": "HOME SPRAY  - Uva & Arandanos",
+      "name": "UVA & ARANDANOS",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qAU4-11IBSu7r1-EulmrmWVGEZJP1VvBssxoGz9hFQ&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684699",
-      "name": "HOME SPRAY  - Lima Limon",
+      "name": "LIMA LIMON",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAl7wpPs8FZ_IWbuZ6iWQ5uGC07DipPmKtXH3uN3chqA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685467",
-      "name": "HOME SPRAY  - Mountain Water",
+      "name": "MOUNTAIN WATER",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw-mARcXxfAZbRuPX4uGlHwkANZ_V5IBWNQEsRBv3h5A&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685795",
-      "name": "HOME SPRAY  - Clean Cotton",
+      "name": "CLEAN COTTON",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrV47SCfEb995Zcc-QwA3WehpGY3ueu5Bk9Uycw5vYA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685481",
-      "name": "HOME SPRAY  - Grosellas & Nectarina",
+      "name": "GROSELLAS & NECTARINA",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLYw4jGuKMNaxzRfZXYOogDWePM8i5D-P7kmHfldRySg&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685498",
-      "name": "HOME SPRAY  - Lino & Peonias",
+      "name": "LINO & PEONIAS",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdVMTuAXypFcfQ_jByBTr28maCVm0ua8UOcqU5dLLWag&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685504",
-      "name": "HOME SPRAY  - Arandanos & Canela",
+      "name": "ARANDANOS & CANELA",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPgqAOQH3BwEWZmRCCuMigXB2GbBkzZBSyOd4Xzf0fAg&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685832",
-      "name": "HOME SPRAY  - Flor de Loto",
+      "name": "FLOR DE LOTO",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0-5T8tgwsudXOgnfR8CQz-pIcKsgpDiRbXETNYvSDGQ&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685528",
-      "name": "HOME SPRAY  - Mango Anana",
+      "name": "MANGO ANANA",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKGA_bKlMhohTNf9YxGJJqOKe8SqfrBy9uFkWQ6oPAg&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685818",
-      "name": "HOME SPRAY  - Clementina & Flores Blancas",
+      "name": "CLEMENTINA & FLORES BLANCAS",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfzWDmiNXNrR11bVG7YhQagnKQ_swQ1W-FKEppIqXq8w&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685801",
-      "name": "HOME SPRAY  - Frambuesa & Rosas",
+      "name": "FRAMBUESA & ROSAS",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDDbeCs5qcUtudPPI25kQk8GjqZBPwwzTa956AkOCpHA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685849",
-      "name": "HOME SPRAY  - Pomelo & Menta",
+      "name": "POMELO & MENTA",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0TPV1lf0mBXqJSZApJRJ7ITQjRV3IH1kVnBNE4NpvJA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685566",
-      "name": "HOME SPRAY  - Amapola & Cerezo",
+      "name": "AMAPOLA & CEREZO",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpYlb9uMPr0Xqku1RBqEvg9Aw65GYMZfGvB8ts1a0eHA&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685825",
-      "name": "HOME SPRAY  - Fresias & Bergamota",
+      "name": "FRESIAS & BERGAMOTA",
       "price": 9900,
       "tab": "saphirus",
-      "cat": "HOME SPRAY 500ML",
+      "cat": "HOME SPRAY 500 ML",
+      "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQodveibmFxsfgqd8aTJmlX_LpYGfLXR3Nph4iU7TWU5g&s=10",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184681834",
