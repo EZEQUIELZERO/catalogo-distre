@@ -5900,7 +5900,8 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbboPLJCqR8ZsUKwF5PRnUadvR3opErISpmkJ-_aJrSg&s=10",
       "brand": "SAPHIRUS",
-      "stock": 2
+      "stock": 2,
+      "deleted": true
     },
     {
       "ean": "7798184684002",
@@ -5911,7 +5912,8 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPeB9DxlciZZWfx7l1Fr-hNxci8trNiTkwQ834qcMsw&s=10",
       "brand": "SAPHIRUS",
-      "stock": 2
+      "stock": 2,
+      "deleted": true
     },
     {
       "ean": "7798184684019",
@@ -5922,7 +5924,8 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtqntth2fWXagYZPifWq8JUQIss6u1hwIY7xMMEkh9Q&s=10",
       "brand": "SAPHIRUS",
-      "stock": 2
+      "stock": 2,
+      "deleted": true
     },
     {
       "ean": "7798184684026",
@@ -5933,7 +5936,8 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQNODDhHuLaqDTHdQHVzB0F66qyTNsMIzMszyYkT3TRg&s=10",
       "brand": "SAPHIRUS",
-      "stock": 2
+      "stock": 2,
+      "deleted": true
     },
     {
       "ean": "7798184684033",
