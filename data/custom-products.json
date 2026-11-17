@@ -6548,113 +6548,113 @@
     },
     {
       "ean": "7798184680226",
-      "name": "AEROSOL SAPHIRUS - Cony",
-      "price": 5300,
+      "name": "CONY",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-cony.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680233",
-      "name": "AEROSOL SAPHIRUS - Daniel",
-      "price": 5300,
+      "name": "DANIEL",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-daniel.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680240",
-      "name": "AEROSOL SAPHIRUS - Etiqueta",
-      "price": 5300,
+      "name": "ETIQUETA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTobeZkhNAfIlkzOmqmWslxnGWQxI6eT677Q6gaMY8B9E49uOCTwR8RCQ-kVKgpCs3I3sVcy7EUNHqRYwPl7iOX0hk3vBy4FNP9cff7pBaNu7X2ymJ_q7viT7E",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680257",
-      "name": "AEROSOL SAPHIRUS - Fantasía",
-      "price": 5300,
+      "name": "FANTASÍA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-fantasia.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680264",
-      "name": "AEROSOL SAPHIRUS - Flores Blancas",
-      "price": 5300,
+      "name": "FLORES BLANCAS",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-flores-blancas.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680271",
-      "name": "AEROSOL SAPHIRUS - Lavanda",
-      "price": 5300,
+      "name": "LAVANDA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-lavanda.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680288",
-      "name": "AEROSOL SAPHIRUS - Limón",
-      "price": 5300,
+      "name": "LIMÓN",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-limon.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680295",
-      "name": "AEROSOL SAPHIRUS - Mandarina",
-      "price": 5300,
+      "name": "MANDARINA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-mandarina.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680301",
-      "name": "AEROSOL SAPHIRUS - Melòn",
-      "price": 5300,
+      "name": "MELÒN",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfF7PEt6RJMAG-dDCPMgVmWbmpwa18PVfgPM44mmjfp85alyffEbSjsA&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680318",
-      "name": "AEROSOL SAPHIRUS - Tropical",
-      "price": 5300,
+      "name": "TROPICAL",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZhkC1G7jLf7BrxOTIhgDaG0aiBHsxmSKhfUvuOPli_MJjOr5n8PP1ft4&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680325",
-      "name": "AEROSOL SAPHIRUS - Vainilla",
-      "price": 5300,
+      "name": "VAINILLA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvI3L9TRwHVHCdREkc1Z2NoamIEehzh4S5FSVdCSA3ARCvNsTk-CbIuHE&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680332",
@@ -6668,93 +6668,93 @@
     },
     {
       "ean": "7798184680349",
-      "name": "AEROSOL SAPHIRUS - Papaya",
-      "price": 5300,
+      "name": "PAPAYA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-papaya.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680356",
-      "name": "AEROSOL SAPHIRUS - Patio",
-      "price": 5300,
+      "name": "PATIO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-patio.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680363",
-      "name": "AEROSOL SAPHIRUS - Uva",
-      "price": 5300,
+      "name": "UVA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-uva.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680370",
-      "name": "AEROSOL SAPHIRUS - Citrus",
-      "price": 5300,
+      "name": "CITRUS",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-aerosoles-citrus-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680387",
-      "name": "AEROSOL SAPHIRUS - Coco Vai",
-      "price": 5300,
+      "name": "COCO VAI",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-coco-vai.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680394",
-      "name": "AEROSOL SAPHIRUS - Verbena",
-      "price": 5300,
+      "name": "VERBENA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-verbena.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680400",
-      "name": "AEROSOL SAPHIRUS - Mito",
-      "price": 5300,
+      "name": "MITO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-mito.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680417",
-      "name": "AEROSOL SAPHIRUS - Orange",
-      "price": 5300,
+      "name": "ORANGE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-orange.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680424",
-      "name": "AEROSOL SAPHIRUS - Bamboo",
-      "price": 5300,
+      "name": "BAMBOO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-bamboo.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680431",
@@ -6768,13 +6768,13 @@
     },
     {
       "ean": "7798184680448",
-      "name": "AEROSOL SAPHIRUS - Manzana - Canela",
-      "price": 5300,
+      "name": "MANZANA - CANELA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-manzana-y-canela-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680455",
@@ -6788,13 +6788,13 @@
     },
     {
       "ean": "7798184680462",
-      "name": "AEROSOL SAPHIRUS - Bubblegum",
-      "price": 5300,
+      "name": "BUBBLEGUM",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-bubblegum.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680479",
@@ -6808,23 +6808,23 @@
     },
     {
       "ean": "7798184680486",
-      "name": "AEROSOL SAPHIRUS - Maracuya",
-      "price": 5300,
+      "name": "MARACUYA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUcC9T-ZG9HxxQXmkbucUshMGX06S2fEoKouESdJTT7O-7Ou6qMFA_5mcG&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680493",
-      "name": "AEROSOL SAPHIRUS - Indiana",
-      "price": 5300,
+      "name": "INDIANA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-indiana.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680509",
@@ -6838,33 +6838,33 @@
     },
     {
       "ean": "7798184680516",
-      "name": "AEROSOL SAPHIRUS - Lola",
-      "price": 5300,
+      "name": "LOLA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-lola.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680523",
-      "name": "AEROSOL SAPHIRUS - Green",
-      "price": 5300,
+      "name": "GREEN",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-green.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680530",
-      "name": "AEROSOL SAPHIRUS - Miel y Limon",
-      "price": 5300,
+      "name": "MIEL Y LIMON",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQillNYoiAuj59eeMCsYpzA6iuijkSyHayyJL3MihSLtA5N-cIvdD7YVpk&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680547",
@@ -6898,33 +6898,33 @@
     },
     {
       "ean": "7798184680578",
-      "name": "AEROSOL SAPHIRUS - Rosas",
-      "price": 5300,
+      "name": "ROSAS",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-rosas.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680585",
-      "name": "AEROSOL SAPHIRUS - Tilo",
-      "price": 5300,
+      "name": "TILO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_XAgRREhU7U2cXDzmOFW0SSktjh9b4Fxa3D6-H9VxU9Tu9WKntlPwmTP1&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680592",
-      "name": "AEROSOL SAPHIRUS - Violetas",
-      "price": 5300,
+      "name": "VIOLETAS",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-violetas.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680608",
@@ -6938,93 +6938,93 @@
     },
     {
       "ean": "7798184680615",
-      "name": "AEROSOL SAPHIRUS - Tokyo",
-      "price": 5300,
+      "name": "TOKYO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6AXx-Bw7XgVDk9cR77fjVimJt22YzXNKbatOrcqG496jDiRcw-Ue5tU29&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680622",
-      "name": "AEROSOL SAPHIRUS - Rocio",
-      "price": 5300,
+      "name": "ROCIO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyHneEcKyoH0yPxoIy_UJI74rUzBDhj7UdWoDLmqSk0Wec_jtUxrgsUAzW&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680639",
-      "name": "AEROSOL SAPHIRUS - Linah",
-      "price": 5300,
+      "name": "LINAH",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-linah.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680646",
-      "name": "AEROSOL SAPHIRUS - Hawai",
-      "price": 5300,
+      "name": "HAWAI",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-hawai-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680653",
-      "name": "AEROSOL SAPHIRUS - Oriente",
-      "price": 5300,
+      "name": "ORIENTE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRogLofzownFwLq0O4nHNO6VLzHvMmC5MOdq4GJj7FguMG3Hu2SbEjgx_0&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680660",
-      "name": "AEROSOL SAPHIRUS - Guarana",
-      "price": 5300,
+      "name": "GUARANA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-guarana.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680677",
-      "name": "AEROSOL SAPHIRUS - Peras y Flores",
-      "price": 5300,
+      "name": "PERAS Y FLORES",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-peras-y-flores.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680684",
-      "name": "AEROSOL SAPHIRUS - Bebe",
-      "price": 5300,
+      "name": "BEBE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-bebe.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680813",
-      "name": "AEROSOL SAPHIRUS - Pitanga",
-      "price": 5300,
+      "name": "PITANGA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-pitanga.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680820",
@@ -7048,23 +7048,23 @@
     },
     {
       "ean": "7798184680844",
-      "name": "AEROSOL SAPHIRUS - Marino",
-      "price": 5300,
+      "name": "MARINO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-marino.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680851",
-      "name": "AEROSOL SAPHIRUS - Jazmin",
-      "price": 5300,
+      "name": "JAZMIN",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGwK82YCwkktQlsW0VPNwCyMCNz8Pii95eoAHLgo8XdG-QbDLZZM2OoXw&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184680929",
@@ -7078,13 +7078,13 @@
     },
     {
       "ean": "7798184680936",
-      "name": "AEROSOL SAPHIRUS - Apple",
-      "price": 5300,
+      "name": "APPLE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnQW8t26Wb8N9u0-PIKwn0ApFBvSlXBJt5uveD07E0jSeQjwaA3M3GxaY&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184681063",
@@ -7098,13 +7098,13 @@
     },
     {
       "ean": "7798184681070",
-      "name": "AEROSOL SAPHIRUS - Cappuccino",
-      "price": 5300,
+      "name": "CAPPUCCINO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcWwzMw-WtwNEaKeVOiAoF_XNwpKg4Gi1IdVg63IlB0iknBPsq8U2-XEV&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184681087",
@@ -7128,13 +7128,13 @@
     },
     {
       "ean": "7798184681254",
-      "name": "AEROSOL SAPHIRUS - Damasco",
-      "price": 5300,
+      "name": "DAMASCO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTicDLfJK57hTytfgQyGyTypmzgJ5wgh7nRXNruJMXerxedf8oePwU0faip&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184681384",
@@ -7148,23 +7148,23 @@
     },
     {
       "ean": "7798184681445",
-      "name": "AEROSOL SAPHIRUS - Duvet",
-      "price": 5300,
+      "name": "DUVET",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJ02It_XuLT357O6AR8tJqhE6uk6VUxD2xyB1e-11u-6VwD6Ap70DE98&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184681469",
-      "name": "AEROSOL SAPHIRUS - Citronella",
-      "price": 5300,
+      "name": "CITRONELLA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-citronella.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184681452",
@@ -7178,13 +7178,13 @@
     },
     {
       "ean": "7798184681995",
-      "name": "AEROSOL SAPHIRUS - London",
-      "price": 5300,
+      "name": "LONDON",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5QjpZNBBf45fuNtDT45H3ero_VwN-s9gNxGBnkhGv81wvItP9aBTu1t2k&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184682015",
@@ -7208,73 +7208,73 @@
     },
     {
       "ean": "7798184682077",
-      "name": "AEROSOL SAPHIRUS - Mery",
-      "price": 5300,
+      "name": "MERY",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-mery.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184682091",
-      "name": "AEROSOL SAPHIRUS - Paula",
-      "price": 5300,
+      "name": "PAULA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-paula.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184682336",
-      "name": "AEROSOL SAPHIRUS - Magnolia Y Fresias",
-      "price": 5300,
+      "name": "MAGNOLIA Y FRESIAS",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-magnolia-y-fresia.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184682831",
-      "name": "AEROSOL SAPHIRUS - Cristóbal",
-      "price": 5300,
+      "name": "CRISTÓBAL",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-cristobal-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184682985",
-      "name": "AEROSOL SAPHIRUS - Palo Santo",
-      "price": 5300,
+      "name": "PALO SANTO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-palo-santo.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184682992",
-      "name": "AEROSOL SAPHIRUS - Frutilla",
-      "price": 5300,
+      "name": "FRUTILLA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-frutilla-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184683876",
-      "name": "AEROSOL SAPHIRUS - Naranja Pimienta",
-      "price": 5300,
+      "name": "NARANJA PIMIENTA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-naranja-pimienta.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184683937",
@@ -7288,83 +7288,83 @@
     },
     {
       "ean": "7798184684057",
-      "name": "AEROSOL SAPHIRUS - New York",
-      "price": 5300,
+      "name": "NEW YORK",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7NOC1WnQykJAf7-16Jiq4TPrdqaOHtJ8YHDtI4yXTgRVUZ5xrYjYjyy_s&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684279",
-      "name": "AEROSOL SAPHIRUS - Limon Dulce y Vainilla",
-      "price": 5300,
+      "name": "LIMON DULCE Y VAINILLA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-limon-dulce-y-vainilla-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684262",
-      "name": "AEROSOL SAPHIRUS - Palace",
-      "price": 5300,
+      "name": "PALACE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-palace.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684583",
-      "name": "AEROSOL SAPHIRUS - Breeze",
-      "price": 5300,
+      "name": "BREEZE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-breeze.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684590",
-      "name": "AEROSOL SAPHIRUS - Coco & Maracuya",
-      "price": 5300,
+      "name": "COCO & MARACUYA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-coco-maracuya.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684606",
-      "name": "AEROSOL SAPHIRUS - Sandia Pepino",
-      "price": 5300,
+      "name": "SANDIA PEPINO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-sandia-pepino-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684613",
-      "name": "AEROSOL SAPHIRUS - Mix Tropical",
-      "price": 5300,
+      "name": "MIX TROPICAL",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-mix-tropical-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684941",
-      "name": "AEROSOL SAPHIRUS - Antitabaco",
-      "price": 5300,
+      "name": "ANTITABACO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-antitabaco.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184684958",
@@ -7378,113 +7378,113 @@
     },
     {
       "ean": "7798184685702",
-      "name": "AEROSOL SAPHIRUS - Bouquet Floral",
-      "price": 5300,
+      "name": "BOUQUET FLORAL",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-saphirus-bouquet-floral.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685689",
-      "name": "AEROSOL SAPHIRUS - Ciruela",
-      "price": 5300,
+      "name": "CIRUELA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-saphirus-ciruela-700x700.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685696",
-      "name": "AEROSOL SAPHIRUS - Bergamota y Naranja",
-      "price": 5300,
+      "name": "BERGAMOTA & NARANJA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-saphirus-bergamota-y-naranja.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685665",
-      "name": "AEROSOL SAPHIRUS - Pomelo Rosado",
-      "price": 5300,
+      "name": "POMELO ROSADO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKzmZryIeWy3F7pZ0mSyc482CbssHmVtfJ0roR9PNcemv2MnOFQc_A1f8&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685641",
-      "name": "AEROSOL SAPHIRUS - Pera y Durazno",
-      "price": 5300,
+      "name": "PERA Y DURAZNO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-saphirus-pera-y-durazno.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685658",
-      "name": "AEROSOL SAPHIRUS - Lavanda y Te Verde",
-      "price": 5300,
+      "name": "LAVANDA Y TE VERDE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsywxx4Iw9TEaEaxQcKsGuSoyPdeTsltnkUWKWshdSyA3gcce6a_E0Cl8&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685672",
-      "name": "AEROSOL SAPHIRUS - Vainilla Tonka",
-      "price": 5300,
+      "name": "VAINILLA TONKA",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8T9dvqX5Yy0uGUo-7tGpMcz90IqAhQJ306-CxJ_x_7IkmdRmAoTgtzmu8&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685719",
-      "name": "AEROSOL SAPHIRUS - Naranja y Chocolate",
-      "price": 5300,
+      "name": "NARANJA Y CHOCOLATE",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-saphirus-chocolate-y-naranja.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184685726",
-      "name": "AEROSOL SAPHIRUS - Café au Chocolat",
-      "price": 5300,
+      "name": "CAFÉ AU CHOCOLAT",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/11/aerosol-saphirus-cafe-au-chocolate.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184687010",
-      "name": "AEROSOL SAPHIRUS - Mango",
-      "price": 5300,
+      "name": "MANGO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2025/01/20250110-aerosol-mango-saphirus.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184686983",
-      "name": "AEROSOL SAPHIRUS - Clean Cotton",
-      "price": 5300,
+      "name": "CLEAN COTTON",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZeqXOff0Q9ErF9Z2yHBTtOrmg8vd2P2iB3uOyhDeRRc2bm95wLUsUs3K&s=10",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184686990",
@@ -7548,13 +7548,13 @@
     },
     {
       "ean": "7798184688826",
-      "name": "AEROSOL SAPHIRUS - Peonias y Cedro",
-      "price": 5300,
+      "name": "PEONIAS Y CEDRO",
+      "price": 5600,
       "tab": "saphirus",
-      "cat": "Otros",
-      "img": "",
-      "brand": "SAPHIRUS",
-      "deleted": true
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2024/11/20241104-aerosol-peonias-y-cedro-saphirus.jpg",
+      "brand": "SAPHIRUS"
     },
     {
       "ean": "7798184689014",
@@ -8632,6 +8632,146 @@
       "cat": "DIFUSOR VARILLAS 125 ML",
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2026/08/20260811-difusor-cristal-eden-saphirus-fb.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444554823",
+      "name": "SOFT LOVE",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ9I-PxMn86SHZGInjbdoJD1T-93y_ScZj7B-s8xByFdW07k43Nq-ZFNFHLKBIMWOmBQU0oBEqZCAdd5lrUCPv_4dkFMoCfMzSX6xwsl1x9zu3MhD0JkTJOs9o",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553505",
+      "name": "LAST SHOT",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2024/11/20241104-aerosol-wanted-saphirus.jpg",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553512",
+      "name": "BLOSSOM ROUGE",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260604-aerosol-blossom-rouge-saphirus.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553529",
+      "name": "CAPRI SUMMER",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260604-aerosol-capri-summer-saphirus.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553543",
+      "name": "VELOCITY",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260610-aerosol-velocity-saphirus-300x300-1.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553499",
+      "name": "SUNSET FIRE",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260618-aerosol-sunset-fire-saphirus.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553536",
+      "name": "HEAVEN AND HELL",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://res.cloudinary.com/dbszvtgz9/image/upload/c_limit,w_1200,f_auto,q_auto/v1780024841/catalog/business_5/VAR_44888.jpg",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553581",
+      "name": "GOLDEN LORD",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260527-aerosol-golden-lord-saphirus.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553550",
+      "name": "CRISTAL EDEN",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRqj7SvgtpsY0ie9qnsNTjyvwLMny3G5xs_CqxMGKOy3HAT10VP03NLShP&s=10",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553567",
+      "name": "GOLDEN LADY",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEBp0NBiCiQVZBqJxMUhaukOrcaSpRjOSXzj67cqTJ1PGThCorkz52oac&s=10",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444554830",
+      "name": "ATLANTIS",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260618-aerosol-atlantis-saphirus.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444553574",
+      "name": "CELESTIAL WINGS",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260527-aerosol-celestial-wings-saphirus.webp",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444554489",
+      "name": "LIFE IN PETALS",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkey0_dmr_1iyEWMLxJol8B0RBj82xVASCDMJHIXYCWA&s=10",
+      "brand": "SAPHIRUS"
+    },
+    {
+      "ean": "7798444554496",
+      "name": "GOSSIP KING",
+      "price": 5600,
+      "tab": "saphirus",
+      "cat": "REPUESTO AEROSOL",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2026/05/06-05-2026_Aerosol_Gossip-King_Saphirus_FB-1_1.webp",
       "brand": "SAPHIRUS"
     }
   ]
