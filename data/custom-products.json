@@ -3475,7 +3475,8 @@
       "cat": "Textil 250 ml",
       "subcat": "",
       "img": "https://aromatizarmayorista.com.ar/sistema/fotos/productos/00000007_00000417_G_17315208596734e95bb0961.png",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184681117",
