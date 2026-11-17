@@ -4016,7 +4016,8 @@
       "cat": "Textil 250 ml",
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/07/saphirus-home-spray-clean-cotton.jpg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184686334",
@@ -4036,7 +4037,8 @@
       "cat": "Textil 250 ml",
       "subcat": "",
       "img": "https://aromania.com.ar/wp-content/uploads/2025/01/Saphirus-textil-sandia-pepino.jpeg",
-      "brand": "SAPHIRUS"
+      "brand": "SAPHIRUS",
+      "deleted": true
     },
     {
       "ean": "7798184688925",
