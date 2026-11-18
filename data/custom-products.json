@@ -26,90 +26,66 @@
     },
     {
       "ean": "7791274000485",
-      "name": "ALGABO JAB LIQ CREMOSO 300",
+      "name": "JAB. LIQ. PARA MANOS CREMOSO 300 ML",
       "price": 2500,
-      "img": "images/uploads/7791274000485.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 20,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-cream-77912740004851-307ca5c0ed477ac16216560773154056-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000584",
-      "name": "ALGABO JAB LIQ FLOWER MIX 300",
+      "name": "JAB. LIQ. PARA MANOS FLOWER MIX 300 ML",
       "price": 2500,
-      "img": "images/uploads/7791274000584.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-flower-mix-77912740005841-5a5bc923f0447953c616560776078017-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000713",
-      "name": "ALGABO JAB LIQ COCONUT 300",
+      "name": "JAB. LIQ. PARA MANOS COCONUT 300 ML",
       "price": 2500,
-      "img": "images/uploads/7791274000713.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 11,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-cocnut-dream-77912740007131-a5f701a3cc45ade56616560775618357-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000720",
-      "name": "ALGABO JAB LIQ FTOS BOSQUE 300",
+      "name": "JAB. LIQ. PARA MANOS FRUTOS DEL BOSQUE 300 ML",
       "price": 2500,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-sweet-berries-77912740007201-277394579419ac616b16560772384285-640-0.webp?_gl=1*asgphn*_gcl_au*MjEyMTU2NzEwMS4xNzkzMTE1ODAxLjU0OTY0MTQ2My4xNzk1MDE2Nzg5LjE3OTUwMTY5MTMuMTU2MTE1MDk0NC4xNzk0OTY1MzMzLjE3OTUwMTY5MTM.*_ga*MTk3NTU4ODkwMy4xNzkzMTE1ODAx*_ga_2NFZDBKLY4*czE3OTUwMTY3ODkkbzUkZzEkdDE3OTUwMTY5NDAkajkkbDAkaDA.",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000737",
-      "name": "ALGABO JAB LIQ COCONUT DP 300",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS COCONUT 300 ML",
       "price": 1600,
-      "img": "images/uploads/7791274000737.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "Últimas unidades (3 disponibles)",
-      "stock": 3,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-coconut-dream-doypack-77912740007371-3f40ac1761f8a0674b16814015972651-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274000744",
-      "name": "ALGABO JAB LIQ F BOSQUE DP 300",
+      "name": "REPUESTO JAB. LIQ. PARA FRUTOS DEL BOSQUE 300 ML",
       "price": 1600,
-      "img": "images/uploads/7791274000744.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-sweet-berries-doypack-77912740007442-5aabe65ca0db8b392216897057089450-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000928",
@@ -552,31 +528,23 @@
     },
     {
       "ean": "7791274193392",
-      "name": "ALGABO JAB LIQ GREEN TEA 300",
+      "name": "JAB. LIQ. PARA MANOS TE VERDE 300 ML",
       "price": 2500,
-      "img": "images/uploads/7791274193392.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-greem-tea-77912741933921-d9c9b6b7c14fdbed5516560769010970-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274193408",
-      "name": "ALGABO JAB LIQ CITRUS 300",
+      "name": "JAB. LIQ. PARA MANOS CITRUS 300 ML",
       "price": 2500,
-      "img": "images/uploads/7791274193408.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 13,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-citrus-splash-77912741934081-950dc141a5ee7fc31016560771661600-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274195952",
@@ -597,48 +565,36 @@
     },
     {
       "ean": "7791274196003",
-      "name": "ALGABO JAB LIQ FLO RAIN DP 300",
+      "name": "REPUESTO JAB. LIQ. PARA FLORAL RAIN 300 ML",
       "price": 1600,
-      "img": "images/uploads/7791274196003.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 11,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-floral-rain-doypack-77912741960032-dec8c46423ab7798d316841658086100-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196010",
-      "name": "ALGABO JAB LIQ CITRUS DP 300",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS CITRUS 300 ML",
       "price": 1600,
-      "img": "images/uploads/7791274196010.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 7,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-citrus-splash-doypack-77912741960101-26da20bef7dfe0558b16813987145367-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196041",
-      "name": "ALGABO JAB LIQ GREEN TEA DP 300",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS TE VERDE 300 ML",
       "price": 1600,
-      "img": "images/uploads/7791274196041.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "Últimas unidades (1 disponibles)",
-      "stock": 1,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-green-tea-doypack-77912741960412-2df2c1c4aa5f37ac7d16813988277939-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274196416",
@@ -1054,17 +1010,13 @@
     },
     {
       "ean": "7791274200243",
-      "name": "ULTRA SANITI GEL 250",
+      "name": "ALCOHOL EN GEL CON DISPENSER 250 ML",
       "price": 2900,
-      "img": "images/uploads/7791274200243.jpg",
-      "brand": "ALGABO",
-      "cat": "Hogar y Limpieza",
-      "subcat": "",
-      "desc": "",
-      "stock": 14,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x250-ml-alcohol-en-gel-77912742002431-3fe19bb1061aa7eda916487618099237-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200274",
@@ -1379,45 +1331,33 @@
     },
     {
       "ean": "7791274202131",
-      "name": "ALGABO JAB TOCADOR FLOWER MIX 3X80",
+      "name": "JABON DE TOCADOR FLOWER MIX X3 UD 80 GR",
       "price": 2200,
-      "img": "images/uploads/7791274202131.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 24,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-3-x80-g-flower-mix-7791274202131-eb007192c4e26e50a617661549926417-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202148",
-      "name": "ALGABO JAB TOCADOR FLOWER MIX 80",
+      "name": "JABON DE TOCADOR FLOWER MIX X1 UD 80 GR",
       "price": 800,
-      "img": "images/uploads/7791274202148.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 9,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-x80-g-flower-mix-7791274202148-2c2165c4528f4c6fae17661549029921-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202155",
-      "name": "ALGABO JAB TOCADOR CREAM 80",
+      "name": "JABON DE TOCADOR CREMOSO X1 UD 80 GR",
       "price": 800,
-      "img": "images/uploads/7791274202155.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 4,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-x80-g-cream-7791274202155-a116e697623648ffda17661547789428-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202315",
@@ -1603,9 +1543,13 @@
     },
     {
       "ean": "7791274000492",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA FLOWER MIX 300 ML",
+      "price": 1600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-flower-mix-doypack-779127400049211-cd42227b233d4f96ff16897056613863-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000546",
@@ -1619,9 +1563,13 @@
     },
     {
       "ean": "7791274000577",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS CREMOSO 300 ML",
+      "price": 1600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-cream-doypack-77912740005771-2b9f8c2cccd9623f2716897055824609-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000621",
@@ -1649,15 +1597,23 @@
     },
     {
       "ean": "7791274000874",
-      "name": "",
+      "name": "JAB. LIQ. PARA MANOS ANTIBACTERIAL 300 ML",
+      "price": 2900,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-antibacterial-77912740008741-4946e2f9b4480b286b16582594469911-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000881",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA ANTIBACTERIAL 300 ML",
+      "price": 2400,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-antibacterial-doypack-77912740008811-1d0bd048e8a5b16dc216811518002630-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274001314",
@@ -1927,9 +1883,13 @@
     },
     {
       "ean": "7791274193415",
-      "name": "",
+      "name": "JAB. LIQ. PARA MANOS FLORAL RAIN 300 ML",
+      "price": 2500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-foral-rain-779127419341511-68f8992a35139ac4c816560770956778-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274193804",
@@ -1995,15 +1955,23 @@
     },
     {
       "ean": "7791274196515",
-      "name": "",
+      "name": "ALCOHOL EN GEL PARA BOLSILLO 75 ML",
+      "price": 2300,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x75-ml-alcohol-en-gel-caja-77912741965151-dafb4637206fa28f4b16498777327320-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196539",
-      "name": "",
+      "name": "ALCOHOL EN GEL GRANDE CON DISPENSER 750 ML",
+      "price": 5100,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_KTSXdeYvDso6qX2QseEF0s209jnvAnUiIWKKYiFysKDYOEjCfsdSsSDW&s=10",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196959",
@@ -2223,15 +2191,23 @@
     },
     {
       "ean": "7791274198458",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS COCO Y MIEL 221 ML",
+      "price": 1500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x220-repuesto-economico-coco-y-miel-77912741984581-5822db34904b86592f16935085835493-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198465",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS KARITE Y PALTA 221 ML",
+      "price": 1500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x220-repuesto-karite-y-aguacate-779127419846511-14fa95e14a79dfa30016487533709754-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198472",
@@ -2339,9 +2315,13 @@
     },
     {
       "ean": "7791274199288",
-      "name": "",
+      "name": "ALCOHOL EN GEL EN SPRAY 125 ML",
+      "price": 2800,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x125-ml-alcohol-en-spray-77912741992881-182fbee81a944f64da16553942167326-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199424",
@@ -2381,39 +2361,63 @@
     },
     {
       "ean": "7791274199516",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS CITRUS 900 ML",
+      "price": 4200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-citrus-splash-ecopack-77912741960101-e6e307c5056f43f9ba16897062877450-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199523",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS TE VERDE 900 ML",
+      "price": 4200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-green-tea-ecopack-77912741960412-c7dcb352bba473285c16897063567042-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199530",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA FLORAL RAIN 900 ML",
+      "price": 4200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-floral-rain-ecopack-77912741960031-78dec06fae02a2b87516897063942514-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199547",
-      "name": "",
+      "name": "REPUESTO JAB. LIQ. PARA MANOS ANTIBACTERIAL 900 ML",
+      "price": 4700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-antibacterial-ecopack-779127419954711-9d1d742f85a8a26ec016897062444122-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199554",
-      "name": "",
+      "name": "JAB. LIQ. PARA MANOS COCO Y MIEL 221 ML",
+      "price": 2500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x221-coco-y-miel-77912741995541-125fa689130f16b7f316873643624338-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199561",
-      "name": "",
+      "name": "JAB. LIQ. PARA MANOS KARITE Y PALTA 221 ML",
+      "price": 2500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x221-karite-y-aguacate-77912741995611-00968dd16e536c008016849381625134-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199585",
@@ -3218,33 +3222,53 @@
     },
     {
       "ean": "7791274202087",
-      "name": "",
+      "name": "JABON DE TOCADOR GLICERINA FLORAL RAIN X1 UD 90 GR",
+      "price": 1000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/fotos-productos-nuevoes-1000x1000-y-jabones-editado-f5aa4800e453873b5617764364034151-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202094",
-      "name": "",
+      "name": "JABON DE TOCADOR GLICERINA TE VERDE X1 UD 90 GR",
+      "price": 1000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/jabon-de-glicerina-x90-g-green-tea-7791274202094-7a43dde804463f284117764358765806-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202100",
-      "name": "",
+      "name": "JABON DE TOCADOR GLICERINA FLORAL RAIN X3 UD 90 GR",
+      "price": 2900,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/fotos-productos-nuevoes-1000x1000-y-jabones-editado-2-35a4834ff9bf588de417764373879907-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202117",
-      "name": "",
+      "name": "JABON DE TOCADOR GLICERINA TE VERDE X3 UD 90 GR",
+      "price": 2900,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/fotos-productos-nuevoes-1000x1000-y-jabones-editado-1-50f7436bb88c2e410517764384730965-480-0.png",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202124",
-      "name": "",
+      "name": "JABON DE TOCADOR CREMOSO X3 UD 80 GR",
+      "price": 2200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "MANOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-3-x80-g-cream-7791274202124-dcd66e0347c44443bd17664377516980-480-0.png",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202186",
