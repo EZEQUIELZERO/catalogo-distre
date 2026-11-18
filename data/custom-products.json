@@ -682,17 +682,13 @@
     },
     {
       "ean": "7791274196485",
-      "name": "ALGABO ENJUAGUE BUCAL 500",
+      "name": "ENJUAGUE BUCAL MENTOL 500 ML",
       "price": 4300,
-      "img": "images/uploads/7791274196485.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "",
-      "stock": 5,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x500-ml-arctic-menthol-7791274196485-1b3c85b87f61c25e8f17655424045553-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196508",
@@ -956,17 +952,13 @@
     },
     {
       "ean": "7791274198793",
-      "name": "ALGABO ENJUAGUE BUCAL 250",
+      "name": "ENJUAGUE BUCAL MENTOL 250 ML",
       "price": 3300,
-      "img": "images/uploads/7791274198793.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "",
-      "stock": 4,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x250-ml-arctic-menthol-7791274198793-5787660e30461d07d117655424880025-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199387",
@@ -1156,37 +1148,29 @@
     },
     {
       "ean": "7791274200847",
-      "name": "ALGABO ENJ BUCAL S/ALCOHOL 250",
+      "name": "ENJUAGUE BUCAL SIN ALCOHOL 250 ML",
       "price": 3300,
-      "img": "images/uploads/7791274200847.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "Últimas unidades (2 disponibles)",
-      "stock": 2,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x250-ml-cool-mint-7791274200847-268508d8bf2a22f2a417084557692532-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274200854",
-      "name": "ALGABO ENJ BUCAL S/ALCOHOL 500",
+      "name": "ENJUAGUE BUCAL SIN ALCOHOL 500 ML",
       "price": 4300,
-      "img": "images/uploads/7791274200854.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "Últimas unidades (3 disponibles)",
-      "stock": 3,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x500-ml-cool-mint-7791274200854-9b0fbc6be602b4676d17084558386202-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274200922",
@@ -1291,65 +1275,49 @@
     },
     {
       "ean": "7791274201585",
-      "name": "ALGABO HILO DENTAL C/ MANGO MENTOL X 25",
+      "name": "HILO DENTAL CON MANGO 25 UDS",
       "price": 1800,
-      "img": "images/uploads/7791274201585.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "Últimas unidades (1 disponibles)",
-      "stock": 1,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-hilo-dental-con-mango-floss-picks-x25-u-7791274201585-66a935acf5600cf3ba17655410158470-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274201646",
-      "name": "ALGABO ENJ BUCAL ANTIBAC  500",
+      "name": "ENJUAGUE BUCAL ANTIBACTERIAL 500 ML",
       "price": 4300,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "",
-      "stock": 8,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/diseno-sin-titulo-2-056891546ef1ba824117600166726678-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201653",
-      "name": "ALGABO ENJ BUCAL ANTIBAC 250",
+      "name": "ENJUAGUE BUCAL ANTIBACTERIAL 250 ML",
       "price": 3300,
-      "img": "images/uploads/7791274201653.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "Últimas unidades (1 disponibles)",
-      "stock": 1,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/7791274201653-bd70fadfeceab4f08017600167273663-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274201660",
-      "name": "ALGABO SPRAY BUCAL ANTIBAC 60 CAJA EXH",
+      "name": "SPRAY BUCAL ANTIBACTERIAL 60 ML",
       "price": 2200,
-      "img": "images/uploads/7791274201660.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Bucal",
-      "subcat": "",
-      "desc": "",
-      "stock": 8,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/7791274201653-1-e875c3588eaf2fce4017600203299089-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201684",
@@ -3015,9 +2983,13 @@
     },
     {
       "ean": "7791274201592",
-      "name": "",
+      "name": "HILO DENTAL CON MANGO 50 UDS",
+      "price": 2600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HIGIENE BUCAL",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-hilo-dental-con-mango-floss-picks-x50-u-7791274201592-1828f11c90ffd7b39617655410368199-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201608",
