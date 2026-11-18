@@ -16,16 +16,13 @@
     },
     {
       "ean": "7791274000119",
-      "name": "BABY COLONIA DULCES MIMOS 125",
+      "name": "COLONIA PARA BEBE DULCE MIMOS 125 ML",
       "price": 3300,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/colonia-x125-dulces-mimos-copia11-63fe74d46feda036c916384715912034-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3332004",
-      "stock": 3,
-      "deleted": true
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000485",
@@ -558,30 +555,23 @@
     },
     {
       "ean": "7791274192319",
-      "name": "BABY SHAMPOO EXTRA SUAVE 200",
+      "name": "SHAMPOO PARA BEBE EXTRA SUAVE 200 ML",
       "price": 3000,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x200-ml-extra-suave-779127419231911-1492241998f8c9f80e16504826346686-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3343232",
-      "stock": 4,
-      "deleted": true
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274192326",
-      "name": "BABY SHAMPOO EXTRA SUAVE 444",
+      "name": "SHAMPOO PARA BEBE EXTRA SUAVE 444 ML",
       "price": 4500,
-      "img": "images/uploads/7791274192326.jpg",
-      "brand": "ALGABO",
-      "cat": "Baby",
-      "subcat": "",
-      "desc": "",
-      "stock": 9,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x444-ml-extra-suave-77912741923261-f12053fa8ea3c1082c16504826841090-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274192593",
@@ -758,60 +748,46 @@
     },
     {
       "ean": "7791274196508",
-      "name": "BABY SHAMPOO MANZANILLA 444",
+      "name": "SHAMPOO PARA BEBE MANZANILLA 444 ML",
       "price": 4500,
-      "img": "images/uploads/7791274196508.jpg",
-      "brand": "ALGABO",
-      "cat": "Baby",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x444-ml-manzanilla-779127419650811-94ea5984ca89ef65cd16504837221297-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196546",
-      "name": "BABY FECULA TALQUERA 200",
+      "name": "FECULA TALCO PARA BEBE 200 ML",
       "price": 4200,
-      "img": "images/uploads/7791274196546.jpg",
-      "brand": "ALGABO",
-      "cat": "Baby",
-      "subcat": "",
-      "desc": "Últimas unidades (3 disponibles)",
-      "stock": 3,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-polvo-de-fecula-x200-g-779127419654611-ac030f1a93df1143f116565152993727-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274197017",
-      "name": "BABY WIPES 20",
+      "name": "TOALLITAS HUMEDAS 20 UD",
       "price": 1400,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3362001",
-      "stock": 96,
-      "deleted": true
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274197024",
-      "name": "BABY WIPES 48",
+      "name": "TOALLITAS HUMEDAS 48 UD",
       "price": 2700,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
-      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x48-u-77912741970241-32246f53024211bfe716813988932751-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3362002",
-      "stock": 26,
-      "deleted": true
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x48-u-77912741970241-dcd9f5636db5cc400f16831274636447-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274197710",
@@ -1002,17 +978,13 @@
     },
     {
       "ean": "7791274198434",
-      "name": "BABY JABON BARRA FPK 80",
+      "name": "JABON PARA BEBE PAQUETE 80 GR",
       "price": 1200,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Baby",
-      "subcat": "",
-      "desc": "",
-      "stock": 6,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-en-pan-x80-flowpack-77912741984341-a1760859eca548316516897067314369-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198564",
@@ -1058,17 +1030,13 @@
     },
     {
       "ean": "7791274199387",
-      "name": "BABY WIPES 100 C/TAPA",
-      "price": 5000,
-      "img": "images/uploads/7791274199387.jpg",
-      "brand": "ALGABO",
-      "cat": "Accesorios e Higiene",
-      "subcat": "",
-      "desc": "",
-      "stock": 22,
-      "estado": "NORMAL",
+      "name": "TOALLITAS HUMEDAS 100 UD CON TAPA",
+      "price": 5100,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://jumboargentina.vtexassets.com/arquivos/ids/911818/Toallitas-Humedas-Algabo-Baby-C-tapa-100-1-1057514.jpg?v=639135165803300000",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199493",
@@ -1148,16 +1116,13 @@
     },
     {
       "ean": "7791274200151",
-      "name": "BABY SHAMPOO MANZANILLA 200",
+      "name": "SHAMPOO PARA BEBE MANZANILLA 200 ML",
       "price": 3000,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x200-ml-manzanilla-779127420015111-63788b365e513c0cb516565159075069-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3343236",
-      "stock": 7,
-      "deleted": true
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200243",
@@ -1245,16 +1210,13 @@
     },
     {
       "ean": "7791274200656",
-      "name": "BABY OLEO CALCAREO EP 900",
+      "name": "REPUESTO OLEO CALCAREO 900 ML",
       "price": 7800,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
-      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-recarga-economica-7791274200649-254bdeab073acc279817183824684025-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3362011",
-      "stock": 6,
-      "deleted": true
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x900-ml-7791274200656-f2041f62718583bb5417183825576397-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200847",
@@ -1503,16 +1465,13 @@
     },
     {
       "ean": "7791274202070",
-      "name": "BABY JABON DE GLICERINA 80",
+      "name": "JABON PARA BEBE DE GLICERINA 80 GR",
       "price": 1200,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2Kb40xyyWUq9tCMbNC3bic5Ycz5dYPpg8hbEufpxMQ&s",
-      "brand": "ALGABO",
-      "codigoInterno": "3340004",
-      "stock": 3,
-      "deleted": true
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-de-glicerina-7791274202070-4609c627920a56535a17787833399913-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274202131",
@@ -1720,15 +1679,23 @@
     },
     {
       "ean": "7791274000386",
-      "name": "",
+      "name": "SHAMPOO PARA BEBE EXTRA SUAVE 755 ML",
+      "price": 6100,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x755-ml-extra-suave-779127400038611-915565f64fc1561e5316504827233143-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000393",
-      "name": "",
+      "name": "SHAMPOO PARA BEBE MANZANILLA 755 ML",
+      "price": 6100,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x755-ml-manzanilla-779127400039311-2c6eb7334b82ebf07716504836600892-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000492",
@@ -1804,9 +1771,13 @@
     },
     {
       "ean": "7791274001567",
-      "name": "",
+      "name": "ACEITE PARA BEBE 200 ML",
+      "price": 4500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://cdn.batitienda.com/baticloud/images/product_picture_52c6958d341041d6b7ae7abd0c4871a8_638772178207621756_0_m.jpg",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274003202",
@@ -1972,15 +1943,23 @@
     },
     {
       "ean": "7791274192234",
-      "name": "",
+      "name": "COLONIA PARA BEBE DULCE MIMOS 200 ML",
+      "price": 3800,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-colonia-x200-ml-dulces-mimos-77912741922341-e9ebd8bc001c214abc16565165956426-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274192241",
-      "name": "",
+      "name": "COLONIA PARA BEBE SUAVE BRISA 200 ML",
+      "price": 3800,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-colonia-x200-ml-suave-brisa-779127419224111-8d7e5c224ef4d995b516565164308488-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274192661",
@@ -2092,9 +2071,13 @@
     },
     {
       "ean": "7791274197031",
-      "name": "",
+      "name": "TOALLITAS HUMEDAS 80 UD",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/016/311/products/9-0cf3187bf01578aa5a17268688085433-1024-1024.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274197062",
@@ -2116,9 +2099,13 @@
     },
     {
       "ean": "7791274197307",
-      "name": "",
+      "name": "JABON PARA BEBE EN CAJA 80 GR",
+      "price": 1300,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-en-pan-x80-caja-779127419730731-465b851a0c48729e8116582582402732-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274197451",
@@ -2218,9 +2205,13 @@
     },
     {
       "ean": "7791274198243",
-      "name": "",
+      "name": "JABON LIQUIDO PARA BEBE C/VALBULA 200 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-liquido-x200-ml-779127419824311-f06b501c9d61d1de5c16504828819139-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198366",
@@ -2260,9 +2251,13 @@
     },
     {
       "ean": "7791274198557",
-      "name": "",
+      "name": "REPUESTO TALCO PARA BEBE 200 ML",
+      "price": 3700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-polvo-de-fecula-x200-g-77912741965462-fa87de1ecd8ba300e116565152838002-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198571",
@@ -2320,9 +2315,13 @@
     },
     {
       "ean": "7791274198786",
-      "name": "",
+      "name": "TOALLITAS HUMEDAS 3X48 UD",
+      "price": 6800,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x48-u-x3-7791274198786-05bf8d256e9bdb5a8e17655411954408-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198908",
@@ -2482,9 +2481,13 @@
     },
     {
       "ean": "7791274200144",
-      "name": "",
+      "name": "SET PARA REGALO COLONIA + SHAMPOO",
+      "price": 8700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://farmacityar.vtexassets.com/arquivos/ids/225569/219269_set-de-regalo-algabo-baby-colonia-dulces-mimos-x-200-ml-polvo-de-fecula-extra-suave-x-200-g_imagen-1.jpg?v=637943605190200000",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200175",
@@ -2566,15 +2569,23 @@
     },
     {
       "ean": "7791274200533",
-      "name": "",
+      "name": "TOALLITAS HUMEDAS NATURALES 48 UD",
+      "price": 3300,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-biodegradables-x48-u-con-tapa-7791274200533-433c75e59b4a9f446817694593839960-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200540",
-      "name": "",
+      "name": "TOALLITAS HUMEDAS NATURALES 80 UD",
+      "price": 4600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-wipes-natural-80-u-c-tapa-cc-77912742005401-4d3de6eef81feb240516837285072264-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200557",
@@ -2608,53 +2619,63 @@
     },
     {
       "ean": "7791274200649",
-      "name": "BABY OLEO CALCAREO DP 500",
+      "name": "REPUESTO OLEO CALCAREO 500 ML",
       "price": 4700,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-recarga-economica-7791274200649-254bdeab073acc279817183824684025-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3362007",
-      "stock": 6,
-      "deleted": true
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200663",
-      "name": "BABY OLEO CALCAREO 500",
+      "name": "OLEO CALCAREO 500 ML",
       "price": 5300,
       "tab": "algabo",
-      "cat": "Otros",
+      "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-7791274200663-a6027003742c649db817187211837353-480-0.webp",
-      "brand": "ALGABO",
-      "codigoInterno": "3362008",
-      "stock": 4,
-      "deleted": true
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200670",
-      "name": "",
+      "name": "HISOPOS PARA BEBE BOX",
+      "price": 2800,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-hisopos-x30-u-77912742006701-f7bb5743a324464dd616642813804532-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200687",
-      "name": "",
+      "name": "ACONDICIONADOR PARA BEBE EXTRA SUAVE 444 ML",
+      "price": 4500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-acondicionador-x444-ml-cabellos-claros-manzanilla-779127420069411-3894995607a66479d516593666078074-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200694",
-      "name": "",
+      "name": "ACONDICIONADOR PARA BEBE MANZANILLA 444 ML",
+      "price": 4500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-acondicionador-x444-ml-cabellos-suaves-779127420068711-a93fb7858669d89c2a16593665707418-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200700",
-      "name": "",
+      "name": "REPUESTO JAB LIQ PARA BEBE 200 ML",
+      "price": 1600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-liquido-x200-ml-repuesto-economico-77912742007001-42594ee250378e020116655085319788-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200748",
@@ -2706,9 +2727,13 @@
     },
     {
       "ean": "7791274200908",
-      "name": "",
+      "name": "ACEITE PARA BEBE 355 ML",
+      "price": 5900,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-aceite-x355-ml-7791274200908-36ffb4870666ee92a117144945389605-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200915",
@@ -2742,9 +2767,13 @@
     },
     {
       "ean": "7791274201011",
-      "name": "",
+      "name": "HISOPOS PARA BEBE PAPEL ECO",
+      "price": 1400,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-hisopos-x24-u-ecopack-7791274201011-17bb37cdd2a646821c17147576991519-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201042",
@@ -2832,15 +2861,23 @@
     },
     {
       "ean": "7791274201318",
-      "name": "",
+      "name": "PAÑITOS DE ALGODON 40 UD",
+      "price": 2700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-panos-de-algodon-x40-u-7791274201318-8c71c98437275991f817443116045813-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201325",
-      "name": "",
+      "name": "ALGODON PRECURTADO 100 GR",
+      "price": 2000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-algodon-precortado-x100g-algabo-algodon-pompones-de-algodon-x50-u-7791274197963-0a1fd0f3000f16403117303938085615-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201349",
@@ -2874,9 +2911,13 @@
     },
     {
       "ean": "7791274201400",
-      "name": "",
+      "name": "PAÑITOS DE ALGODON 50 UD",
+      "price": 4200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-panos-de-algodon-x50-u-7791274201400-e210edb20354d069e817443117413470-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201417",
@@ -8867,6 +8908,96 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2026/08/20260825-aerosol-atlantis-ambar-fb-700x700.webp",
       "brand": "AMBAR"
+    },
+    {
+      "ean": "7791274202513",
+      "name": "BABY PAÑALES G X 16",
+      "price": 7200,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://http2.mlstatic.com/D_Q_NP_804189-MLA117753432721_092026-F.webp",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202520",
+      "name": "BABY PAÑALES G X 38",
+      "price": 15200,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://http2.mlstatic.com/D_Q_NP_604547-MLA119569629241_102026-F.webp",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202537",
+      "name": "BABY PAÑALES M X 16",
+      "price": 6500,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTxp8aSpVD2-vg7oCUZB6No-BCb_NlzFRt29wvCaAZSw&s=10",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202544",
+      "name": "BABY PAÑALES M X 46",
+      "price": 17400,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-baby-panal-talle-m-x46-u-7791274202537-041afd22781705ecc717894983357719-480-0.webp",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202551",
+      "name": "BABY PAÑALES P X 16",
+      "price": 5800,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-baby-panal-talle-p-x16-u-7791274202513-e32f3b90d71233526b17873326828732-480-0.webp",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202568",
+      "name": "BABY PAÑALES XG X 16",
+      "price": 8000,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd2uApmajEOUI4I1dgDdSrR5fUjE0crOSZYP8gtODGyg&s=10",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202575",
+      "name": "BABY PAÑALES XG X 30",
+      "price": 13800,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://http2.mlstatic.com/D_Q_NP_968415-MLA117431672536_102026-F.webp",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202582",
+      "name": "BABY PAÑALES XXG X 16",
+      "price": 8700,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://http2.mlstatic.com/D_Q_NP_696163-MLA117432030806_102026-F.webp",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274202599",
+      "name": "BABY PAÑALES XXG X 28",
+      "price": 14500,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYYYjt-SPiZQQoDqYG8tv9EYrqkXdH-584Kp8-FpTgwg&s=10",
+      "brand": "ALGABO"
     }
   ]
 }
