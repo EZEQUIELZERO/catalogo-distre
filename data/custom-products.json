@@ -382,17 +382,13 @@
     },
     {
       "ean": "7791274087547",
-      "name": "ALGABO GEL EXT FUERTE 150",
+      "name": "PREMIUM EXTRA FUERTE 150 ML",
       "price": 2600,
-      "img": "images/uploads/7791274087547.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 12,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-fijacion-extra-fuerte-gota-77912740875471-5422100731663dbf4c16565394235979-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274087615",
@@ -492,34 +488,26 @@
     },
     {
       "ean": "7791274189326",
-      "name": "ALGABO GEL EF. HÚMEDO POMO 200",
+      "name": "POMO EFECTO HUMEDO 200 ML",
       "price": 2450,
-      "img": "images/uploads/7791274189326.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "Últimas unidades (2 disponibles)",
-      "stock": 2,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x200-pomo-efecto-humedo-77912741893261-a0f4c8a5f9b1f4078e16759558147729-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274189333",
-      "name": "ALGABO GEL EXT FUERTE POMO 200",
+      "name": "POMO EXTRA FUERTE 200 ML",
       "price": 2450,
-      "img": "images/uploads/7791274189333.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x200-pomo-fijacion-extra-fuerte-779127418933311-86c5b531be1ae54da316759568107038-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274190131",
@@ -688,45 +676,33 @@
     },
     {
       "ean": "7791274196430",
-      "name": "ALGABO GEL EF. HÚMEDO POMO 150",
+      "name": "POMO EFECTO HUMEDO 150 ML",
       "price": 2300,
-      "img": "images/uploads/7791274196430.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 47,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x150-pomo-efecto-humedo-77912741964301-c10db7d7661f1e1e8c16759558851583-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196447",
-      "name": "ALGABO GEL EXT BRILLO POMO 150",
+      "name": "POMO EXTRA BRILLO 150 ML",
       "price": 2300,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 41,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x150-pomo-extra-brillo-y-control-779127419644711-90ca809000d427aee816759561463873-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196454",
-      "name": "ALGABO GEL EXT FUERTE POMO 150",
+      "name": "POMO EXTRA FUERTE 150 ML",
       "price": 2300,
-      "img": "images/uploads/7791274196454.jpg",
-      "brand": "ALGABO",
-      "cat": "Jabones Líquidos",
-      "subcat": "",
-      "desc": "",
-      "stock": 33,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196485",
@@ -1897,39 +1873,63 @@
     },
     {
       "ean": "7791274089190",
-      "name": "",
+      "name": "PREMIUM EFECTO HUMEDO 150 ML",
+      "price": 2600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x150-efecto-humedo-gota-77912740891901-a036a7ac8bc70e738f16565390931929-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274189197",
-      "name": "",
+      "name": "GEL GRANDE EXTRA BRILLO 475 ML",
+      "price": 4000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x475-botella-extra-brillo-y-control-77912741891971-fa3a4d9508484611f516615250633002-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274189340",
-      "name": "",
+      "name": "POMO EXTRA BRILLO 200 ML",
+      "price": 2450,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x200-pomo-extra-brillo-y-control-779127418934011-93aaaea80ef7d9597216759561077983-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274189371",
-      "name": "",
+      "name": "GEL GRANDE EFECTO HUMEDO 475 ML",
+      "price": 4000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x475-botella-efecto-humedo-77912741893711-155b87615527c9e82316615250048138-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274189388",
-      "name": "",
+      "name": "GEL GRANDE EXTRA FUERTE 475 ML",
+      "price": 4000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x475-botella-fijacion-extra-fuerte-77912741893881-fa5c05f23c4dcbf96016790643758751-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274190490",
-      "name": "",
+      "name": "PREMIUM EXTRA BRILLO 150 ML",
+      "price": 2600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x150-extra-brillo-gota-77912741904901-f6d06171fd706ff23b16565391451357-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274191930",
@@ -1991,21 +1991,33 @@
     },
     {
       "ean": "7791274196287",
-      "name": "",
+      "name": "POTE EFECTO HUMEDO 350 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-efecto-humedo-x350-g-pote-77791274196287-d4ba9a166038f7b7c217605437967619-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196294",
-      "name": "",
+      "name": "POTE EXTRA BRILLO 350 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-extra-brillo-y-control-x350-g-pote-7791274196294-081e23f16632328e0617605438497562-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196300",
-      "name": "",
+      "name": "POTE EXTRA FUERTE 350 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "GEL CAPILAR",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x350-pote-fijacion-extra-fuerte-77912741963001-1b065d720c9f64c4f016615237436657-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196331",
