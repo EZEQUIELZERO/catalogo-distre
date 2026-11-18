@@ -258,51 +258,39 @@
     },
     {
       "ean": "7791274005305",
-      "name": "ALGABO QUITA FORTALECEDOR 100",
+      "name": "QUITAESMALTE FORTLECEDOR 100 ML",
       "price": 1600,
-      "img": "images/uploads/7791274005305.jpg",
-      "brand": "ALGABO",
-      "cat": "Cuidado Íntimo",
-      "subcat": "",
-      "desc": "",
-      "stock": 10,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-fortalecedor-77912740053051-0cab90bf16d459796716564407468857-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274005312",
-      "name": "ALGABO QUITA HUMECTANTE 100",
+      "name": "QUITAESMALTE HUMECTANTE 100 ML",
       "price": 1600,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Cuidado Íntimo",
-      "subcat": "",
-      "desc": "Últimas unidades (2 disponibles)",
-      "stock": 2,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-humectante-77912740053122-73ed97b9916cb6a33616564407117486-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274005329",
-      "name": "ALGABO QUITA C/KERATINA 100",
+      "name": "QUITAESMALTE CON KERATINA 100 ML",
       "price": 1600,
-      "img": "images/uploads/7791274005329.jpg",
-      "brand": "ALGABO",
-      "cat": "Cuidado Íntimo",
-      "subcat": "",
-      "desc": "Últimas unidades (1 disponibles)",
-      "stock": 1,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-keratina-77912740053291-743a482dd0ad8f8a3316564400445787-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274009365",
@@ -1154,45 +1142,33 @@
     },
     {
       "ean": "7791274201134",
-      "name": "ALGABO QUITA FORTALECEDOR 200",
+      "name": "QUITAESMALTE FORTLECEDOR 200 ML",
       "price": 2600,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Cuidado Íntimo",
-      "subcat": "",
-      "desc": "",
-      "stock": 20,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-fortalecedor-77912740053051-bd5ddf74c09c7e2bca17169214938723-480-0.png",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201141",
-      "name": "ALGABO QUITA HUMECTANTE 200",
+      "name": "QUITAESMALTE HUMECTANTE 200 ML",
       "price": 2600,
-      "img": "images/uploads/7791274201141.jpg",
-      "brand": "ALGABO",
-      "cat": "Cuidado Íntimo",
-      "subcat": "",
-      "desc": "",
-      "stock": 16,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x200-ml-humectante-7791274201141-2e0f9dae830d05c7c417169214233568-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201158",
-      "name": "ALGABO QUITA C/KERATINA 200",
+      "name": "QUITAESMALTE CON KERATINA 200 ML",
       "price": 2600,
-      "img": "images/uploads/7791274201158.jpg",
-      "brand": "ALGABO",
-      "cat": "Cuidado Íntimo",
-      "subcat": "",
-      "desc": "",
-      "stock": 23,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x200-ml-keratina-7791274201158-78e3018ddb7930b11417169216409993-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201332",
@@ -1711,9 +1687,13 @@
     },
     {
       "ean": "7791274005060",
-      "name": "",
+      "name": "QUITAESMALTE EXPRESS 75 ML",
+      "price": 3200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-express-x75-779127400506011-2ca87ae804b5910d8f16564404938374-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274005114",
@@ -1729,9 +1709,13 @@
     },
     {
       "ean": "7791274005206",
-      "name": "",
+      "name": "QUITAESMALTE CON DOSIFICADOR 120 ML",
+      "price": 3700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-dosificador-x120-ml-77912740052062-457be2dfaf281fa43d16564406191127-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274005237",
@@ -1747,21 +1731,33 @@
     },
     {
       "ean": "7791274005275",
-      "name": "",
+      "name": "QUITAESMALTE FORTLECEDOR 50 ML",
+      "price": 1200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x50-fortalecedor-77912740052751-c83ea71dffcdb9fb9416487564225254-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274005282",
-      "name": "",
+      "name": "QUITAESMALTE HUMECTANTE 50 ML",
+      "price": 1200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x50-humectante-77912740052821-9a3b0e5115d0e8734316566207259926-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274005299",
-      "name": "",
+      "name": "QUITAESMALTE CON KERATINA 50 ML",
+      "price": 1200,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://cdn.batitienda.com/baticloud/images/product_picture_2237d82d37f3418c8577551f5a55ef94_638772912274007303_0_m.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274009242",
@@ -2133,9 +2129,13 @@
     },
     {
       "ean": "7791274198144",
-      "name": "",
+      "name": "QUITAESMALTE EXTREME PARA PROFESIONAL 100 ML",
+      "price": 2000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-xtreme-x100-779127419814411-5ff24456c5881bd5d016564410230772-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198151",
@@ -2451,9 +2451,13 @@
     },
     {
       "ean": "7791274199882",
-      "name": "",
+      "name": "QUITAESMALTE BLACK 100 ML",
+      "price": 2000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "QUITAESMALTE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-black-x100-77912741998821-531542ceafc2f279d316503774386505-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274199905",
