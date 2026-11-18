@@ -113,17 +113,13 @@
     },
     {
       "ean": "7791274000928",
-      "name": "ALGABO MEN ESPUMA AFEITAR 200",
+      "name": "ESPUMA DE AFEITAR 200 ML",
       "price": 4300,
-      "img": "images/uploads/7791274000928.jpg",
-      "brand": "ALGABO",
-      "cat": "Higiene Masculina",
-      "subcat": "",
-      "desc": "",
-      "stock": 14,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-espuma-de-afeitar-x200-ml-77912740009281-8c792f8500ab5d5bc116832315614158-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274002625",
@@ -1937,9 +1933,13 @@
     },
     {
       "ean": "7791274191930",
-      "name": "",
+      "name": "LOCION POST AFEITADO 120 ML",
+      "price": 4900,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-locion-after-shave-x123-ml-77912741919301-8cf77ac7ae92e39bbc16504830806614-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274192234",
@@ -1969,9 +1969,13 @@
     },
     {
       "ean": "7791274192883",
-      "name": "",
+      "name": "ESPUMA DE AFEITAR 415 ML",
+      "price": 5800,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-espuma-de-afeitar-x415-ml-77912741928831-669c6861f42e40eede16897071726691-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274193415",
@@ -2109,9 +2113,13 @@
     },
     {
       "ean": "7791274197451",
-      "name": "",
+      "name": "CREMA PARA AFEITAR 150 ML",
+      "price": 6000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-crema-de-afeitar-x200-g-pote-779127419745111-6295fa30de148fccc716615254917450-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274197512",
@@ -2163,9 +2171,13 @@
     },
     {
       "ean": "7791274198137",
-      "name": "",
+      "name": "TALCO PARA HOMBRE 120 GR",
+      "price": 2300,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-men-desodorante-en-polvo-x120-g-7791274198137-1770e5eb500496b68417888905758594-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198144",
@@ -2709,9 +2721,13 @@
     },
     {
       "ean": "7791274200878",
-      "name": "",
+      "name": "CREMA PARA AFEITAR EN POMO 177 ML",
+      "price": 4000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-crema-de-afeitar-x177-ml-77912742008781-87fe47258417f3165a16717330527822-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200885",
@@ -3023,9 +3039,13 @@
     },
     {
       "ean": "7791274201790",
-      "name": "",
+      "name": "DESODORANTE BOLILLA HOMBRE 60 ML",
+      "price": 1750,
       "tab": "algabo",
-      "deleted": true
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-roll-on-antitranspirante-x60-ml-7791274201790-0c02118bd680cde8b617654586877595-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274201837",
@@ -8997,6 +9017,16 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYYYjt-SPiZQQoDqYG8tv9EYrqkXdH-584Kp8-FpTgwg&s=10",
+      "brand": "ALGABO"
+    },
+    {
+      "ean": "7791274199622",
+      "name": "TALCO PARA HOMBRE 180 GR",
+      "price": 2900,
+      "tab": "algabo",
+      "cat": "HOMBRE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-men-desodorante-en-polvo-x180-g-7791274199622-533d2e2335fca2087f17888906536304-480-0.webp",
       "brand": "ALGABO"
     }
   ]
