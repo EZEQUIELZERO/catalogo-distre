@@ -202,17 +202,13 @@
     },
     {
       "ean": "7791274004377",
-      "name": "ALGABO FOOT MUJER 100",
+      "name": "TALCO PARA PIES ROSA 100 ML",
       "price": 1700,
-      "img": "images/uploads/7791274004377.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 4,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x100-g-woman-77912740043772-fab22cc8b3137e72dc16564452014571-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274004391",
@@ -348,20 +344,16 @@
     },
     {
       "ean": "7791274009532",
-      "name": "ALGABO FOOT 200",
+      "name": "TALCO PARA PIES 200 ML",
       "price": 2900,
-      "img": "images/uploads/7791274009532.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "Últimas unidades (3 disponibles)",
-      "stock": 3,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x200-g-77912740095321-65a5fc6eddaadfb45316504829550607-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274087004",
@@ -446,45 +438,33 @@
     },
     {
       "ean": "7791274187742",
-      "name": "ALGABO FOOT 100",
+      "name": "TALCO PARA PIES 100 ML",
       "price": 1700,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 29,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x100-g-77912741877421-f3a79f955fbfb2b1d716564411541619-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274188350",
-      "name": "ALGABO TALCO PERF FLORAL 250",
+      "name": "TALCO PERFUMADO FLORAL 250 ML",
       "price": 2700,
-      "img": "images/uploads/7791274188350.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 7,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x250-floral-779127418835011-2c0d8c7fe272728f3516487569670206-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274188367",
-      "name": "ALGABO TALCO PERF VIOLETS 250",
+      "name": "TALCO PERFUMADO VIOLETAS 250 ML",
       "price": 2700,
-      "img": "images/uploads/7791274188367.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 5,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x250-violets-77912741883671-6426fd9403d983c3ca16487569823376-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274189326",
@@ -662,17 +642,13 @@
     },
     {
       "ean": "7791274196416",
-      "name": "ALGABO FOOT DP 200",
+      "name": "REPUESTO TALCO PARA PIES 200 ML",
       "price": 2300,
-      "img": "images/uploads/7791274196416.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 20,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x200-g-repuesto-economico-doypack-77912741964161-39120d935a4ede8ce616897074896751-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196430",
@@ -867,31 +843,23 @@
     },
     {
       "ean": "7791274198045",
-      "name": "ALGABO TALCO CLÁSICO 180",
+      "name": "TALCO CORPORAL CLASICO 180 ML",
       "price": 2500,
-      "img": "images/uploads/7791274198045.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 8,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x180-g-claisico-7791274198045-78a38314c3d0ce277317925112036395-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198069",
-      "name": "ALGABO TALCO SOFT ROSA 180",
+      "name": "TALCO CORPORAL SUAVE 180 ML",
       "price": 2500,
-      "img": "SIN_IMAGEN",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "",
-      "stock": 14,
-      "estado": "NORMAL",
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x180-g-suave-7791274198069-33484c0798f3a9757e17925111397012-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198168",
@@ -1071,20 +1039,16 @@
     },
     {
       "ean": "7791274200045",
-      "name": "ALGABO FOOT ANTIBACTERIAL 200",
+      "name": "TALCO PARA PIES ANTIBACTERIAL 200 ML",
       "price": 2900,
-      "img": "images/uploads/7791274200045.jpg",
-      "brand": "ALGABO",
-      "cat": "Pies y Desodorantes",
-      "subcat": "",
-      "desc": "Últimas unidades (1 disponibles)",
-      "stock": 1,
-      "estado": "POCOS",
       "tab": "algabo",
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-antibacterial-x200-g-77912742000451-46b9642ff7a3c2f36516564460530290-480-0.webp",
+      "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ],
-      "deleted": true
+      ]
     },
     {
       "ean": "7791274200151",
@@ -1677,9 +1641,13 @@
     },
     {
       "ean": "7791274000546",
-      "name": "",
+      "name": "DESODORANTE PARA PIES 153 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-desodorante-x153-ml-para-pies-77912740005461-43696189fa1e98a1d916564463161309-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274000577",
@@ -1753,21 +1721,33 @@
     },
     {
       "ean": "7791274003202",
-      "name": "",
+      "name": "DESODORANTE PARA CALZADO 153 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-desodorante-x153-ml-para-calzado-779127400320211-413fdf49104365922916553938250393-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274003554",
-      "name": "",
+      "name": "REPUESTO FECULA TALQUERA NATURAL 250 ML",
+      "price": 3500,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-polvo-de-fecula-x250-doypack-77912740035541-ed07ef6f8fc440caee16897080548287-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274003578",
-      "name": "",
+      "name": "FECULA TALQUERA NATURAL 250 ML",
+      "price": 4000,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-polvo-de-fecula-x250-77912740035781-364fec38705169894516564463974573-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274003608",
@@ -2027,15 +2007,23 @@
     },
     {
       "ean": "7791274196461",
-      "name": "",
+      "name": "REPUESTO TALCO PERFUMADO 200 ML",
+      "price": 1900,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x200-perfumado-77912741964782-3039c189b4c9b9b09216897082595929-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196478",
-      "name": "",
+      "name": "REPUESTO TALCO PERFUMADO 400 ML",
+      "price": 2700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x400-perfumado-779127419647811-61a42d26464f664f3e16570373847552-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274196515",
@@ -2159,27 +2147,43 @@
     },
     {
       "ean": "7791274198052",
-      "name": "",
+      "name": "REPUESTO TALCO CORPORAL CLASICO 200 ML",
+      "price": 2300,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x200-doypack-desodorante-clasico-7791274198052-753fddc18dbdb0d14017404908970226-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198076",
-      "name": "",
+      "name": "REPUESTO TALCO CORPORAL SUAVE 200 ML",
+      "price": 2300,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x200-doypack-desodorante-suave-7791274198076-24517af58776af47e717404911429892-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198113",
-      "name": "",
+      "name": "TALCO CORPORAL CLASICO 120 ML",
+      "price": 2100,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x180-g-claisico-7791274198045-9693df9cee712c078017925112256716-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198120",
-      "name": "",
+      "name": "TALCO CORPORAL SUAVE 120 ML",
+      "price": 2100,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x120-g-suave-7791274198120-f746ffdab2ebcb5c0417925111470050-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274198137",
@@ -2499,9 +2503,13 @@
     },
     {
       "ean": "7791274200038",
-      "name": "",
+      "name": "TALCO PARA PIES ANTIBACTERIAL 100 ML",
+      "price": 1700,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-antibacterial-x100-g-77912742000381-b1e60ee5af13cc455e16564445010563-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200144",
@@ -2743,9 +2751,13 @@
     },
     {
       "ean": "7791274200885",
-      "name": "",
+      "name": "DESODORANTE PARA PIES ANTIBACTERIAL 153 ML",
+      "price": 3600,
       "tab": "algabo",
-      "deleted": true
+      "cat": "TALCOS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-desodorante-antibacterial-x153-ml-para-pies-77912742007311-beb65ddf00f35ea48116734438560991-480-0.webp",
+      "brand": "ALGABO"
     },
     {
       "ean": "7791274200892",
