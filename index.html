@@ -203,6 +203,43 @@
   [data-tab-theme="algabo"] .toast{background:#ffffff;border-color:var(--border);}
   [data-tab-theme="algabo"] .cart-badge{border-color:#f2f6fc;}
 
+  /* ---------- PALETA PERSONALIZADA (admin -> GitHub) ---------- */
+  [data-tab-theme="custom"] .bg-parallax::after{background:var(--parallax-veil,rgba(15,17,21,.45));}
+  [data-tab-theme="custom"] header{
+    background:var(--header-bg,var(--card));
+    border-bottom-color:var(--border);
+  }
+  [data-tab-theme="custom"] .btn-gold{border-color:var(--active-border,var(--accent));color:var(--active-text,#1a1a1a);text-shadow:var(--active-text-shadow,none);}
+  [data-tab-theme="custom"] .btn-green{border-color:var(--btn-cart-border,var(--accent));color:var(--btn-cart-text,#ffffff);}
+  [data-tab-theme="custom"] .btn-gray{border-color:var(--border);color:var(--text);}
+  [data-tab-theme="custom"] .btn-dark{border-color:var(--border);color:var(--text-dim);}
+  [data-tab-theme="custom"] .tab-btn.active,
+  [data-tab-theme="custom"] .chip.active,
+  [data-tab-theme="custom"] .chip-sm.active,
+  [data-tab-theme="custom"] .admin-subnav-btn.active{
+    border-color:var(--active-border,var(--accent));
+    color:var(--active-text,#1a1a1a);
+    text-shadow:var(--active-text-shadow,none);
+  }
+  [data-tab-theme="custom"] .cart-btn,
+  [data-tab-theme="custom"] .btn-whatsapp,
+  [data-tab-theme="custom"] .cart-mini-btn.add,
+  [data-tab-theme="custom"] .pres-btn-wa{
+    border-color:var(--btn-cart-border,var(--accent));
+    color:var(--btn-cart-text,#ffffff);
+  }
+  [data-tab-theme="custom"] .card-img,
+  [data-tab-theme="custom"] .modal-img,
+  [data-tab-theme="custom"] .admin-row img,
+  [data-tab-theme="custom"] .cart-item img{background:var(--img-bg,var(--bg-soft));}
+  [data-tab-theme="custom"] .search-wrap input,
+  [data-tab-theme="custom"] .icon-btn,
+  [data-tab-theme="custom"] .admin-tab-item,
+  [data-tab-theme="custom"] .field input,
+  [data-tab-theme="custom"] .price-input{background:var(--input-bg,var(--bg-soft));color:var(--text);}
+  [data-tab-theme="custom"] .toast{background:var(--card);border-color:var(--border);color:var(--text);}
+  [data-tab-theme="custom"] .cart-badge{border-color:var(--bg);}
+
   /* ---------- FONDO PARALLAX ---------- */
   .bg-parallax{
     position:fixed;inset:-25% 0;z-index:-1;
@@ -212,30 +249,28 @@
   .bg-parallax::after{
     content:"";position:absolute;inset:0;
     background:rgba(15,17,21,.45);
+    opacity:var(--veil-opacity,1);
   }
 
   /* ---------- HEADER ---------- */
   header{
-    position:relative;z-index:40;
-    background:linear-gradient(180deg,rgba(15,17,21,.97),rgba(15,17,21,.9));
+    position:sticky;top:0;z-index:40;
+    background:linear-gradient(180deg,rgba(15,17,21,.97),rgba(15,17,21,.92));
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--border);
-    padding:18px 20px;
+    padding:10px 16px 8px;
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
   }
   .header-inner{
     max-width:1200px;margin:0 auto;
-    display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+    display:flex;flex-wrap:nowrap;gap:10px;align-items:center;
   }
-  .brand{display:flex;flex-direction:column;gap:2px;}
-  .brand h1{margin:0;font-size:1.5rem;letter-spacing:.5px;font-weight:700;}
-  .brand h1 span{color:var(--accent);}
-  .brand small{color:var(--text-dim);font-size:.8rem;}
 
   .search-wrap{
-    flex:1 1 280px;max-width:440px;position:relative;
+    flex:1 1 auto;min-width:120px;position:relative;
   }
   .search-wrap input{
-    width:100%;padding:12px 16px 12px 42px;border-radius:999px;
+    width:100%;padding:11px 16px 11px 42px;border-radius:999px;
     border:1px solid var(--border);background:var(--bg-soft);color:var(--text);
     font-size:.95rem;outline:none;transition:border .2s, box-shadow .2s;
   }
@@ -245,9 +280,7 @@
     width:18px;height:18px;stroke:var(--text-dim);
   }
 
-  .counter{color:var(--text-dim);font-size:.85rem;white-space:nowrap;}
-
-  .header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .counter{color:var(--text-dim);font-size:.82rem;white-space:nowrap;flex-shrink:0;}
 
   .icon-btn{
     width:42px;height:42px;border-radius:50%;flex-shrink:0;
@@ -278,25 +311,27 @@
 
   /* ---------- TABS ---------- */
   .tabs-row{
-    max-width:1200px;margin:16px auto 0;padding:0 20px;
-    display:flex;gap:8px;
+    max-width:1200px;margin:10px auto 0;padding:0 4px;
+    display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
   }
+  .tabs-row::-webkit-scrollbar,.filters::-webkit-scrollbar,.subfilters::-webkit-scrollbar{display:none;}
   .tab-btn{
-    padding:10px 22px;border-radius:10px 10px 0 0;border:1px solid var(--border);border-bottom:none;
+    flex-shrink:0;padding:9px 18px;border-radius:10px 10px 0 0;border:1px solid var(--border);border-bottom:none;
     background:linear-gradient(180deg,var(--btn-dark-top),var(--btn-dark-mid) 55%,var(--btn-dark-bot));
-    color:var(--text-dim);font-weight:800;font-size:.88rem;cursor:pointer;
-    transition:all .15s;
+    color:var(--text-dim);font-weight:800;font-size:.86rem;cursor:pointer;
+    transition:all .15s;white-space:nowrap;
   }
   .tab-btn:hover{color:var(--text);}
   .tab-btn.active{
     background:linear-gradient(180deg,var(--btn-gold-top),var(--btn-gold-mid) 55%,var(--btn-gold-bot));
     color:#1a1a1a;border-color:#8a7248;text-shadow:0 1px 0 rgba(255,255,255,.35);
   }
-  .admin-tabs{display:flex;gap:8px;margin-bottom:18px;}
+  .admin-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
   .admin-tab-item{
     display:flex;align-items:center;gap:10px;padding:10px 14px;
     border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);margin-bottom:8px;
   }
+  .admin-tab-item .tab-swatch{width:16px;height:16px;border-radius:50%;border:1px solid var(--border);flex-shrink:0;}
   .admin-tab-item .tab-name{flex:1;font-weight:600;font-size:.9rem;}
   .admin-tab-item .tab-id{color:var(--text-dim);font-size:.75rem;font-family:monospace;}
   .admin-tab-item .tab-action{
@@ -309,14 +344,15 @@
 
   /* ---------- FILTERS ---------- */
   .filters{
-    max-width:1200px;margin:16px auto 0;padding:0 20px;
-    display:flex;gap:8px;flex-wrap:wrap;
+    max-width:1200px;margin:8px auto 0;padding:0 4px;
+    display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
   }
+  .filters:empty,.subfilters:empty{display:none;}
   .chip{
-    padding:7px 14px;border-radius:999px;border:1px solid var(--border);
+    flex-shrink:0;padding:6px 13px;border-radius:999px;border:1px solid var(--border);
     background:linear-gradient(180deg,var(--btn-dark-top),var(--btn-dark-mid) 55%,var(--btn-dark-bot));
-    color:var(--text-dim);font-size:.82rem;cursor:pointer;
-    transition:all .15s;user-select:none;
+    color:var(--text-dim);font-size:.8rem;cursor:pointer;
+    transition:all .15s;user-select:none;white-space:nowrap;
   }
   .chip:hover{color:var(--text);border-color:var(--accent);}
   .chip.active{
@@ -324,26 +360,32 @@
     color:#1a1a1a;border-color:#8a7248;font-weight:600;text-shadow:0 1px 0 rgba(255,255,255,.35);
   }
   .subfilters{
-    max-width:1200px;margin:8px auto 0;padding:0 20px;
-    display:flex;gap:6px;flex-wrap:wrap;
+    max-width:1200px;margin:6px auto 0;padding:0 4px;
+    display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
   }
   .chip-sm{
-    padding:5px 10px;border-radius:999px;border:1px solid var(--border);
+    flex-shrink:0;padding:5px 10px;border-radius:999px;border:1px solid var(--border);
     background:linear-gradient(180deg,var(--btn-dark-top),var(--btn-dark-mid) 55%,var(--btn-dark-bot));
-    color:var(--text-dim);font-size:.76rem;cursor:pointer;
-    transition:all .15s;user-select:none;
+    color:var(--text-dim);font-size:.75rem;cursor:pointer;
+    transition:all .15s;user-select:none;white-space:nowrap;
   }
   .chip-sm:hover{color:var(--text);border-color:var(--accent);}
   .chip-sm.active{
     background:linear-gradient(180deg,var(--btn-gold-top),var(--btn-gold-mid) 55%,var(--btn-gold-bot));
     color:#1a1a1a;border-color:#8a7248;font-weight:600;text-shadow:0 1px 0 rgba(255,255,255,.35);
   }
+  @media(max-width:600px){
+    header{padding:8px 10px 6px;}
+    .header-inner{gap:8px;}
+    .counter{display:none;}
+    .cart-btn{padding:10px 14px;font-size:.84rem;}
+  }
 
   /* ---------- GRID ---------- */
   main{max-width:1200px;margin:0 auto;padding:24px 20px 60px;}
   .grid{
     display:grid;gap:18px;
-    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(var(--grid-min,210px),1fr));
   }
   .card{
     background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
@@ -592,6 +634,50 @@
   .admin-section-title{font-size:.95rem;}
   .toggle-all-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
 
+  /* ---------- PERSONALIZACIÓN (admin) ---------- */
+  .theme-card-box{
+    background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;
+    padding:18px;margin-bottom:20px;
+  }
+  .theme-presets-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px;}
+  .preset-pill{
+    display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;
+    border:1px solid var(--border);background:var(--card);color:var(--text);
+    font-size:.78rem;font-weight:600;cursor:pointer;transition:border-color .15s,transform .12s;
+  }
+  .preset-pill:hover{border-color:var(--accent);transform:translateY(-1px);}
+  .preset-dot{width:13px;height:13px;border-radius:50%;border:1px solid rgba(0,0,0,.25);flex-shrink:0;}
+  .color-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px;margin-top:12px;}
+  .color-item{
+    background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .color-item label{font-size:.75rem;color:var(--text-dim);font-weight:600;}
+  .color-input-row{display:flex;align-items:center;gap:8px;}
+  .color-input-row input[type="color"]{
+    width:38px;height:32px;padding:2px;border-radius:6px;border:1px solid var(--border);
+    background:transparent;cursor:pointer;flex-shrink:0;
+  }
+  .color-hex{font-family:monospace;font-size:.78rem;color:var(--text);font-weight:600;}
+  .theme-preview-box{
+    margin-top:16px;padding:14px;border-radius:12px;border:1px solid var(--border);
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .theme-preview-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 10px;border-radius:8px;}
+  .theme-preview-tab{padding:6px 12px;border-radius:8px;font-size:.76rem;font-weight:800;border:1px solid transparent;}
+  .theme-preview-chip{padding:5px 10px;border-radius:999px;font-size:.72rem;font-weight:700;border:1px solid transparent;}
+  .theme-preview-card{
+    max-width:240px;padding:12px;border-radius:12px;border:1px solid transparent;
+    display:flex;flex-direction:column;gap:5px;
+  }
+  .theme-preview-title{font-size:.82rem;font-weight:700;}
+  .theme-preview-sub{font-size:.7rem;}
+  .theme-preview-price{font-size:.98rem;font-weight:800;}
+  .theme-preview-btn{padding:7px 10px;border-radius:8px;font-size:.74rem;font-weight:700;text-align:center;border:1px solid transparent;}
+  .range-row{display:flex;align-items:center;gap:12px;}
+  .range-row input[type="range"]{flex:1;accent-color:var(--accent);}
+  .range-val{min-width:52px;text-align:right;font-family:monospace;font-size:.82rem;color:var(--accent);font-weight:700;}
+
   @media(max-width:720px){
     .admin-page{flex-direction:column;}
     .admin-sidebar{width:100%;flex-direction:row;align-items:center;gap:14px;border-right:none;border-bottom:1px solid var(--border);padding:14px 16px;}
@@ -739,24 +825,18 @@
 
 <header>
   <div class="header-inner">
-    <div class="brand">
-      <h1>Catálogo</h1>
-      <small>Perfumería &amp; distribución · consultá por WhatsApp</small>
-    </div>
     <div class="search-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input id="searchInput" type="text" placeholder="Buscar por nombre o código EAN..." autocomplete="off">
     </div>
-    <div class="header-actions">
-      <div class="counter" id="counter"></div>
-      <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      </button>
-      <button class="cart-btn" id="cartBtn">
-        🛒 <span>Carrito</span>
-        <span class="cart-badge" id="cartBadge">0</span>
-      </button>
-    </div>
+    <button class="cart-btn" id="cartBtn">
+      🛒 <span>Carrito</span>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <div class="counter" id="counter"></div>
+    <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    </button>
   </div>
   <div class="tabs-row" id="tabsRow"></div>
   <div class="filters" id="filters"></div>
@@ -767,7 +847,7 @@
   <div class="grid" id="grid"></div>
 </main>
 
-<footer>Catálogo generado automáticamente a partir de la planilla de precios · Distre · <span class="ver">v2.0.1</span></footer>
+<footer><span id="footerText">Catálogo generado automáticamente a partir de la planilla de precios · Distre</span> · <span class="ver">v2.1.0</span></footer>
 
 <!-- ================= BOTÓN DISTRIBUIDORA ================= -->
 <button class="distri-btn" id="distriBtn" aria-label="Presentación Distribuidora">
@@ -885,6 +965,7 @@
       <button class="admin-subnav-btn" data-section="products">Productos</button>
       <button class="admin-subnav-btn" data-section="addproduct">Agregar producto</button>
       <button class="admin-subnav-btn" data-section="tabs">Pestañas</button>
+      <button class="admin-subnav-btn" data-section="appearance">🎨 Personalización</button>
       <button class="admin-subnav-btn" data-section="importcsv">Importar CSV</button>
     </nav>
 
@@ -897,7 +978,7 @@
   <main class="admin-main">
     <div class="admin-main-inner">
       <h2>Panel de administración</h2>
-      <p class="admin-note">Los cambios de precio/visibilidad se guardan en este navegador. Los productos nuevos y las imágenes subidas se guardan directamente en el repositorio de GitHub.</p>
+      <p class="admin-note">Todos los cambios (precios, visibilidad, productos, pestañas, personalización y WhatsApp) se guardan en GitHub para que se vean en cualquier navegador.</p>
 
       <!-- ---------- SECCIÓN GENERAL ---------- -->
       <div class="admin-section" id="adminSectionGeneral">
@@ -983,6 +1064,93 @@
             <button class="btn btn-whatsapp btn-auto" id="createTabBtn">Crear pestaña</button>
           </div>
           <p class="admin-note" id="tabStatus"></p>
+        </div>
+      </div>
+
+      <!-- ---------- SECCIÓN PERSONALIZACIÓN ---------- -->
+      <div class="admin-section" id="adminSectionAppearance" style="display:none;">
+        <div class="admin-section-title">Personalización y colores</div>
+        <p class="admin-note">Editá los colores de cada pestaña y la apariencia general del catálogo. Al guardar, se publican en GitHub para todos los dispositivos y navegadores.</p>
+
+        <div class="theme-card-box">
+          <div class="admin-section-title">Colores por pestaña</div>
+          <div class="field"><label>Pestaña a personalizar</label>
+            <select id="themeTabSelect" class="price-input"></select>
+          </div>
+          <div style="margin-top:12px;">
+            <label style="font-size:.78rem;color:var(--text-dim);display:block;margin-bottom:4px;">Presets rápidos</label>
+            <div class="theme-presets-row" id="themePresetsRow"></div>
+          </div>
+          <div class="field" style="max-width:220px;"><label>Modo base del tema</label>
+            <select id="themeModeSelect" class="price-input">
+              <option value="light">Claro (tarjetas luminosas)</option>
+              <option value="dark">Oscuro (tarjetas oscuras)</option>
+            </select>
+          </div>
+          <div class="color-grid">
+            <div class="color-item"><label>Acento / Precios</label><div class="color-input-row"><input type="color" id="tcAccent"><span class="color-hex" id="tcAccentHex"></span></div></div>
+            <div class="color-item"><label>Pestaña / Botón activo</label><div class="color-input-row"><input type="color" id="tcBtnPrimary"><span class="color-hex" id="tcBtnPrimaryHex"></span></div></div>
+            <div class="color-item"><label>Borde detalle activo</label><div class="color-input-row"><input type="color" id="tcHighlight"><span class="color-hex" id="tcHighlightHex"></span></div></div>
+            <div class="color-item"><label>Fondo general</label><div class="color-input-row"><input type="color" id="tcBg"><span class="color-hex" id="tcBgHex"></span></div></div>
+            <div class="color-item"><label>Tarjetas</label><div class="color-input-row"><input type="color" id="tcCard"><span class="color-hex" id="tcCardHex"></span></div></div>
+            <div class="color-item"><label>Texto principal</label><div class="color-input-row"><input type="color" id="tcText"><span class="color-hex" id="tcTextHex"></span></div></div>
+            <div class="color-item"><label>Encabezado</label><div class="color-input-row"><input type="color" id="tcHeaderBg"><span class="color-hex" id="tcHeaderBgHex"></span></div></div>
+            <div class="color-item"><label>Botón Carrito / Agregar</label><div class="color-input-row"><input type="color" id="tcBtnCart"><span class="color-hex" id="tcBtnCartHex"></span></div></div>
+          </div>
+
+          <div class="theme-preview-box" id="themePreviewBox">
+            <div class="theme-preview-head" id="tpHead">
+              <span class="theme-preview-tab" id="tpTabActive">Pestaña activa</span>
+              <span class="theme-preview-chip" id="tpChipActive">Categoría</span>
+            </div>
+            <div class="theme-preview-card" id="tpCard">
+              <div class="theme-preview-title" id="tpTitle">PRODUCTO DE EJEMPLO 500 ML</div>
+              <div class="theme-preview-sub" id="tpSub">EAN 7791274000000</div>
+              <div class="theme-preview-price" id="tpPrice">$ 6.900</div>
+              <div class="theme-preview-btn" id="tpBtn">➕ Agregar</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+            <button class="btn btn-whatsapp btn-auto" id="saveTabThemeBtn">💾 Guardar color de pestaña en GitHub</button>
+            <button class="btn btn-close btn-auto" id="resetTabThemeBtn">↺ Restaurar color original</button>
+          </div>
+          <p class="admin-note" id="tabThemeStatus" style="margin:10px 0 0;"></p>
+        </div>
+
+        <div class="theme-card-box">
+          <div class="admin-section-title">Apariencia general del catálogo</div>
+          <div class="field" style="max-width:300px;"><label>Tamaño de tarjetas en grilla</label>
+            <select id="appGridMin" class="price-input">
+              <option value="175">Compacto (más productos por fila)</option>
+              <option value="210">Normal (estándar)</option>
+              <option value="250">Grande (ideal tablet)</option>
+            </select>
+          </div>
+          <div class="field" style="margin-top:12px;"><label>Redondeo de tarjetas</label>
+            <div class="range-row">
+              <input type="range" id="appCardRadius" min="6" max="24" step="1">
+              <span class="range-val" id="appCardRadiusVal">14px</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:14px;">
+            <label class="switch">
+              <input type="checkbox" id="appShowParallax">
+              <span class="slider-toggle"></span>
+            </label>
+            <span style="font-size:.85rem;font-weight:600;">Mostrar fondo de pantalla con parallax</span>
+          </div>
+          <div class="field" style="margin-top:12px;"><label>Intensidad del velo sobre el fondo</label>
+            <div class="range-row">
+              <input type="range" id="appBgOpacity" min="10" max="90" step="5">
+              <span class="range-val" id="appBgOpacityVal">45%</span>
+            </div>
+          </div>
+          <div class="field" style="margin-top:12px;"><label>Texto del pie de página</label>
+            <input type="text" id="appFooterText" class="price-input">
+          </div>
+          <button class="btn btn-whatsapp btn-auto" id="saveAppearanceBtn" style="margin-top:14px;">💾 Guardar apariencia en GitHub</button>
+          <p class="admin-note" id="appearanceStatus" style="margin:10px 0 0;"></p>
         </div>
       </div>
 
@@ -1502,16 +1670,9 @@ function findBaseProduct(ean){
   }
   return null;
 }
-/* Un mismo producto puede estar en varias listas a la vez (por ejemplo en el
-   catálogo general y en "Quedan pocos"). Por eso existe 'lists' además de
-   'tab': 'tab' es la lista principal y 'lists' las adicionales. */
-function ensureTab(id){
-  const reg = TAB_REGISTRY[id];
-  if(reg) return reg;
-  let t = customTabs.find(x => x.id === id);
-  if(!t){ t = { id, name: id, products: [] }; customTabs.push(t); }
-  return t;
-}
+/* Un mismo producto puede estar en varias listas a la vez (por ejemplo si
+   pertenece a más de una pestaña). Por eso existe 'lists' además de 'tab':
+   'tab' es la lista principal y 'lists' las adicionales. */
 function ListsDe(ean, tabPrincipal){
   return getAllTabs().filter(t => t.id !== tabPrincipal && t.products.some(p => p.ean === ean)).map(t => t.id);
 }
@@ -1519,7 +1680,7 @@ function ListsDe(ean, tabPrincipal){
 /* ======================================================
    ESTADO
    ====================================================== */
-let overrides = {};        // { ean: { price, enabled } }
+let overrides = {};        // Respaldo local (legacy)
 let cart = {};              // { ean: qty }
 let whatsappNumber = DEFAULT_WHATSAPP;
 let isAdmin = false;
@@ -1555,7 +1716,8 @@ function saveWhatsappNumber(){ storageSet('distre_whatsapp', whatsappNumber); }
 function getEffective(p){
   const o = overrides[p.ean] || {};
   const price = Number.isFinite(o.price) ? o.price : p.price;
-  const enabled = typeof o.enabled === 'boolean' ? o.enabled : true;
+  const baseEnabled = typeof p.enabled === 'boolean' ? p.enabled : true;
+  const enabled = typeof o.enabled === 'boolean' ? o.enabled : baseEnabled;
   const deleted = o.deleted === true;
   return { ...p, price, enabled, deleted };
 }
@@ -1601,6 +1763,20 @@ function closeOverlayEl(el){ el.classList.remove('open'); document.body.style.ov
 const GITHUB_API = "https://api.github.com";
 const CUSTOM_PRODUCTS_PATH = "data/custom-products.json";
 const CUSTOM_TABS_PATH = "data/custom-tabs.json";
+const SITE_CONFIG_PATH = "data/site-config.json";
+const DEFAULT_SITE_CONFIG = {
+  whatsapp: DEFAULT_WHATSAPP,
+  appearance: {
+    cardRadius: 14,
+    gridMinWidth: 210,
+    showParallaxBg: true,
+    bgOverlayOpacity: 0.45,
+    footerText: "Catálogo generado automáticamente a partir de la planilla de precios · Distre"
+  },
+  tabThemes: {}
+};
+let siteConfig = JSON.parse(JSON.stringify(DEFAULT_SITE_CONFIG));
+let productsWriteQueue = Promise.resolve();
 
 function utf8ToBase64(str){
   return btoa(unescape(encodeURIComponent(str)));
@@ -1674,38 +1850,69 @@ function mergeCustomProductLocally(entry){
     brand: entry.brand || defaultBrand,
     cat: entry.cat || 'Otros',
     subcat: entry.subcat || '',
+    enabled: entry.enabled !== false,
     stock: (typeof entry.stock === 'number' ? entry.stock : null),
     estado: entry.estado || '',
     codigoInterno: entry.codigoInterno || ''
   };
   if(idx >= 0) target[idx] = productObj; else target.push(productObj);
-  /* Listas adicionales: se agregan DESPUÉS del merge, porque el merge saca el
-     EAN de todas las otras pestañas. */
+  /* Listas adicionales válidas (nunca recrear pestañas eliminadas). */
   if(Array.isArray(entry.lists) && entry.lists.length){
     entry.lists.forEach(id => {
       if(id === entry.tab) return;
-      const t = ensureTab(id);
+      const t = getTabById(id);
+      if(!t) return;
       const i = t.products.findIndex(p => p.ean === entry.ean);
       if(i >= 0) t.products[i] = productObj; else t.products.push(productObj);
     });
   }
   return productObj;
 }
-/* Al guardar desde el panel hay que conservar las listas extra del producto,
-   si no se pierde la pertenencia a "Quedan pocos" / "Sin stock". */
+/* Al guardar desde el panel conservamos listas válidas (descartando pestañas eliminadas). */
 function preservarListas(entry){
   const prev = (customProductsData.products || []).find(p => p.ean === entry.ean);
   const extra = (prev && Array.isArray(prev.lists)) ? prev.lists : ListsDe(entry.ean, entry.tab);
-  const todas = Array.from(new Set((extra || []).filter(id => id !== entry.tab)));
+  const todas = Array.from(new Set((extra || []).filter(id => id !== entry.tab && getTabById(id))));
   if(todas.length) entry.lists = todas;
   return entry;
 }
-function clearDeletedOverrides(eans){
+function buildRepoProductEntry(ean, existing, patch){
+  const base = findBaseProduct(ean) || {};
+  const tab = (patch && patch.tab) || (existing && existing.tab) || findProductTab(ean) || activeTab || 'algabo';
+  const rawImg = (patch && 'img' in patch) ? patch.img : ((existing && existing.img) || base.img || '');
+  const img = (rawImg && rawImg !== GENERIC_IMG && rawImg !== 'SIN_IMAGEN') ? rawImg : '';
+  const entry = {
+    ean,
+    name: (patch && 'name' in patch) ? patch.name : ((existing && existing.name) || base.name || ''),
+    desc: (patch && 'desc' in patch) ? patch.desc : ((existing && existing.desc) || base.desc || ''),
+    price: (patch && 'price' in patch) ? patch.price : ((existing && 'price' in existing) ? existing.price : (base.price ?? null)),
+    tab,
+    cat: (patch && 'cat' in patch) ? patch.cat : ((existing && existing.cat) || base.cat || 'Otros'),
+    subcat: (patch && 'subcat' in patch) ? patch.subcat : ((existing && existing.subcat) || base.subcat || ''),
+    img,
+    brand: (patch && 'brand' in patch) ? patch.brand : ((existing && existing.brand) || base.brand || (getTabById(tab)?.name || tab))
+  };
+  const enabledVal = (patch && typeof patch.enabled === 'boolean') ? patch.enabled
+    : ((existing && typeof existing.enabled === 'boolean') ? existing.enabled
+      : (typeof base.enabled === 'boolean' ? base.enabled : true));
+  if(enabledVal === false) entry.enabled = false;
+  const stockVal = (patch && 'stock' in patch) ? patch.stock : ((existing && typeof existing.stock === 'number') ? existing.stock : base.stock);
+  if(typeof stockVal === 'number' && Number.isFinite(stockVal)) entry.stock = stockVal;
+  const estadoVal = (patch && 'estado' in patch) ? patch.estado : ((existing && existing.estado) || base.estado || '');
+  if(estadoVal) entry.estado = estadoVal;
+  const ciVal = (patch && 'codigoInterno' in patch) ? patch.codigoInterno : ((existing && existing.codigoInterno) || base.codigoInterno || '');
+  if(ciVal) entry.codigoInterno = ciVal;
+  const listsRaw = (patch && Array.isArray(patch.lists)) ? patch.lists
+    : ((existing && Array.isArray(existing.lists)) ? existing.lists : ListsDe(ean, tab));
+  const validLists = Array.from(new Set((listsRaw || []).filter(id => id !== tab && getTabById(id))));
+  if(validLists.length) entry.lists = validLists;
+  return entry;
+}
+function clearLocalOverrides(eans){
   let changed = false;
   eans.forEach(ean => {
-    if(overrides[ean] && overrides[ean].deleted){
-      delete overrides[ean].deleted;
-      if(Object.keys(overrides[ean]).length === 0) delete overrides[ean];
+    if(overrides[ean]){
+      delete overrides[ean];
       changed = true;
     }
   });
@@ -1713,7 +1920,7 @@ function clearDeletedOverrides(eans){
 }
 async function loadCustomProducts(){
   try{
-    const res = await fetch('./' + CUSTOM_PRODUCTS_PATH, { cache: 'no-store' });
+    const res = await fetch('./' + CUSTOM_PRODUCTS_PATH + '?t=' + Date.now(), { cache: 'no-store' });
     if(!res.ok) return;
     const data = await res.json();
     customProductsData = { products: (data.products || []) };
@@ -1731,10 +1938,64 @@ async function loadCustomProducts(){
       const tab = p.tab || 'algabo';
       mergeCustomProductLocally({ ...p, tab });
     });
-    clearDeletedOverrides(activeEans);
+    clearLocalOverrides(activeEans);
   }catch(e){
     /* El archivo todavía no existe en el repo, o no se pudo leer: seguimos con el catálogo base. */
   }
+}
+
+/* ======================================================
+   CONFIGURACIÓN GLOBAL DEL SITIO (GitHub API)
+   ====================================================== */
+async function loadSiteConfig(){
+  try{
+    const res = await fetch('./' + SITE_CONFIG_PATH + '?t=' + Date.now(), { cache: 'no-store' });
+    if(!res.ok) return;
+    const data = await res.json();
+    siteConfig = {
+      whatsapp: data.whatsapp || DEFAULT_WHATSAPP,
+      appearance: { ...DEFAULT_SITE_CONFIG.appearance, ...(data.appearance || {}) },
+      tabThemes: (data.tabThemes && typeof data.tabThemes === 'object') ? data.tabThemes : {}
+    };
+    if(siteConfig.whatsapp){
+      whatsappNumber = siteConfig.whatsapp;
+      saveWhatsappNumber();
+    }
+  }catch(e){}
+}
+async function loadSiteConfigData(){
+  const existing = await githubGetFile(SITE_CONFIG_PATH);
+  if(!existing) return { data: JSON.parse(JSON.stringify(DEFAULT_SITE_CONFIG)), sha: null };
+  let data;
+  try{ data = JSON.parse(base64ToUtf8(existing.content)); }
+  catch(e){ data = JSON.parse(JSON.stringify(DEFAULT_SITE_CONFIG)); }
+  if(!data.appearance) data.appearance = { ...DEFAULT_SITE_CONFIG.appearance };
+  if(!data.tabThemes || typeof data.tabThemes !== 'object') data.tabThemes = {};
+  return { data, sha: existing.sha };
+}
+async function saveSiteConfigData(data, sha, message){
+  const contentBase64 = utf8ToBase64(JSON.stringify(data, null, 2));
+  await githubPutFile(SITE_CONFIG_PATH, contentBase64, message, sha);
+}
+async function updateSiteConfig(mutate, message, maxRetries = 3){
+  let lastError;
+  for(let attempt = 0; attempt < maxRetries; attempt++){
+    try{
+      const { data, sha } = await loadSiteConfigData();
+      const result = mutate(data) || data;
+      await saveSiteConfigData(result, sha, message);
+      siteConfig = {
+        whatsapp: result.whatsapp || DEFAULT_WHATSAPP,
+        appearance: { ...DEFAULT_SITE_CONFIG.appearance, ...(result.appearance || {}) },
+        tabThemes: (result.tabThemes && typeof result.tabThemes === 'object') ? result.tabThemes : {}
+      };
+      return result;
+    }catch(e){
+      lastError = e;
+      if(!isShaConflictError(e) || attempt >= maxRetries - 1) throw e;
+    }
+  }
+  throw lastError;
 }
 
 /* ======================================================
@@ -1742,7 +2003,7 @@ async function loadCustomProducts(){
    ====================================================== */
 async function loadCustomTabs(){
   try{
-    const res = await fetch('./' + CUSTOM_TABS_PATH, { cache: 'no-store' });
+    const res = await fetch('./' + CUSTOM_TABS_PATH + '?t=' + Date.now(), { cache: 'no-store' });
     if(!res.ok) return;
     const data = await res.json();
     (data.tabs || []).forEach(t => {
@@ -1769,22 +2030,28 @@ function isShaConflictError(e){
   return /does not match/i.test(e.message) || /409/i.test(e.message);
 }
 
-/* Lee los datos, aplica mutate(data) y guarda. Si el PUT falla por conflicto
-   de sha (otra edición concurrente), vuelve a leer datos frescos y reintenta. */
-async function updateCustomProducts(mutate, message, maxRetries = 3){
-  let lastError;
-  for(let attempt = 0; attempt < maxRetries; attempt++){
-    try{
-      const { data, sha } = await loadCustomProductsData();
-      const result = mutate(data) || data;
-      await saveCustomProductsData(result, sha, message);
-      return result;
-    }catch(e){
-      lastError = e;
-      if(!isShaConflictError(e) || attempt >= maxRetries - 1) throw e;
+/* Lee los datos, aplica mutate(data) y guarda en cola secuencial. Si el PUT falla
+   por conflicto de sha (otra edición concurrente), vuelve a leer y reintenta. */
+function updateCustomProducts(mutate, message, maxRetries = 3){
+  const run = async () => {
+    let lastError;
+    for(let attempt = 0; attempt < maxRetries; attempt++){
+      try{
+        const { data, sha } = await loadCustomProductsData();
+        const result = mutate(data) || data;
+        await saveCustomProductsData(result, sha, message);
+        customProductsData = result;
+        return result;
+      }catch(e){
+        lastError = e;
+        if(!isShaConflictError(e) || attempt >= maxRetries - 1) throw e;
+      }
     }
-  }
-  throw lastError;
+    throw lastError;
+  };
+  const next = productsWriteQueue.then(run, run);
+  productsWriteQueue = next.catch(() => {});
+  return next;
 }
 async function updateCustomTabs(mutate, message, maxRetries = 3){
   let lastError;
@@ -2074,6 +2341,7 @@ function openAdminPanel(){
   renderTabs();
   populateCategorySelect();
   renderAdminTabList();
+  renderAppearancePanel();
   switchAdminSection('general');
   adminPage.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -2096,12 +2364,14 @@ const ADMIN_SECTION_IDS = {
   products: 'adminSectionProducts',
   addproduct: 'adminSectionAddProduct',
   tabs: 'adminSectionTabs',
+  appearance: 'adminSectionAppearance',
   importcsv: 'adminSectionImportCsv'
 };
 function switchAdminSection(section){
   document.querySelectorAll('.admin-subnav-btn').forEach(b => b.classList.toggle('active', b.dataset.section === section));
   Object.values(ADMIN_SECTION_IDS).forEach(id => { document.getElementById(id).style.display = 'none'; });
   document.getElementById(ADMIN_SECTION_IDS[section]).style.display = '';
+  if(section === 'appearance') renderAppearancePanel();
 }
 document.querySelectorAll('.admin-subnav-btn').forEach(btn => {
   btn.addEventListener('click', () => switchAdminSection(btn.dataset.section));
@@ -2158,25 +2428,73 @@ function renderAdminList(){
     });
   });
   list.querySelectorAll('.admin-price').forEach(inp => {
-    inp.addEventListener('change', () => {
+    inp.addEventListener('change', async () => {
       const ean = inp.dataset.ean;
-      const val = parseInt(inp.value, 10);
-      if(!overrides[ean]) overrides[ean] = {};
-      overrides[ean].price = Number.isFinite(val) ? val : undefined;
-      saveOverrides();
-      renderGrid();
-      showToast('Precio actualizado');
+      const base = findBaseProduct(ean);
+      const prevPrice = (base && base.price !== null && base.price !== undefined) ? base.price : '';
+      const gh = getGithubConfig();
+      if(!gh.repo || !gh.token){
+        inp.value = prevPrice;
+        showToast('Configurá el token de GitHub en General para guardar cambios.');
+        return;
+      }
+      const raw = inp.value.trim();
+      const val = raw === '' ? null : parseInt(raw, 10);
+      const newPrice = (raw !== '' && Number.isFinite(val)) ? val : null;
+      inp.disabled = true;
+      try{
+        let savedEntry = null;
+        await updateCustomProducts(data => {
+          const idx = data.products.findIndex(p => p.ean === ean);
+          const existing = idx >= 0 ? data.products[idx] : null;
+          savedEntry = buildRepoProductEntry(ean, existing, { price: newPrice });
+          if(idx >= 0) data.products[idx] = savedEntry; else data.products.push(savedEntry);
+          return data;
+        }, `Actualizar precio ${ean}`);
+        clearLocalOverrides([ean]);
+        if(savedEntry) mergeCustomProductLocally(savedEntry);
+        renderGrid();
+        showToast('Precio guardado en GitHub');
+      }catch(e){
+        inp.value = prevPrice;
+        showToast('Error al guardar precio: ' + e.message);
+      }finally{
+        inp.disabled = false;
+      }
     });
   });
   list.querySelectorAll('.admin-enabled').forEach(chk => {
-    chk.addEventListener('change', () => {
+    chk.addEventListener('change', async () => {
       const ean = chk.dataset.ean;
-      if(!overrides[ean]) overrides[ean] = {};
-      overrides[ean].enabled = chk.checked;
-      saveOverrides();
-      chk.closest('.admin-row').classList.toggle('disabled-row', !chk.checked);
-      buildFilters();
-      renderGrid();
+      const nextEnabled = chk.checked;
+      const gh = getGithubConfig();
+      if(!gh.repo || !gh.token){
+        chk.checked = !nextEnabled;
+        showToast('Configurá el token de GitHub en General para guardar cambios.');
+        return;
+      }
+      chk.disabled = true;
+      try{
+        let savedEntry = null;
+        await updateCustomProducts(data => {
+          const idx = data.products.findIndex(p => p.ean === ean);
+          const existing = idx >= 0 ? data.products[idx] : null;
+          savedEntry = buildRepoProductEntry(ean, existing, { enabled: nextEnabled });
+          if(idx >= 0) data.products[idx] = savedEntry; else data.products.push(savedEntry);
+          return data;
+        }, `${nextEnabled ? 'Habilitar' : 'Deshabilitar'} producto ${ean}`);
+        clearLocalOverrides([ean]);
+        if(savedEntry) mergeCustomProductLocally(savedEntry);
+        chk.closest('.admin-row').classList.toggle('disabled-row', !nextEnabled);
+        buildFilters();
+        renderGrid();
+        showToast(nextEnabled ? 'Producto habilitado en GitHub' : 'Producto deshabilitado en GitHub');
+      }catch(e){
+        chk.checked = !nextEnabled;
+        showToast('Error al guardar visibilidad: ' + e.message);
+      }finally{
+        chk.disabled = false;
+      }
     });
   });
   list.querySelectorAll('.admin-edit-btn').forEach(btn => {
@@ -2210,17 +2528,36 @@ document.getElementById('adminSelectNoneBtn').addEventListener('click', () => {
   renderAdminList();
 });
 
-document.getElementById('adminDisableSelBtn').addEventListener('click', () => {
+document.getElementById('adminDisableSelBtn').addEventListener('click', async () => {
   if(adminSelected.size === 0){ showToast('Primero seleccioná productos'); return; }
-  adminSelected.forEach(ean => {
-    if(!overrides[ean]) overrides[ean] = {};
-    overrides[ean].enabled = false;
-  });
-  saveOverrides();
-  renderAdminList();
-  buildFilters();
-  renderGrid();
-  showToast(`${adminSelected.size} producto(s) deshabilitado(s)`);
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ showToast('Configurá el token de GitHub en General para guardar cambios.'); return; }
+  const eans = [...adminSelected];
+  const btn = document.getElementById('adminDisableSelBtn');
+  btn.disabled = true;
+  try{
+    const updatedEntries = [];
+    await updateCustomProducts(data => {
+      eans.forEach(ean => {
+        const idx = data.products.findIndex(p => p.ean === ean);
+        const existing = idx >= 0 ? data.products[idx] : null;
+        const entry = buildRepoProductEntry(ean, existing, { enabled: false });
+        if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+        updatedEntries.push(entry);
+      });
+      return data;
+    }, `Deshabilitar ${eans.length} producto(s) desde el panel`);
+    clearLocalOverrides(eans);
+    updatedEntries.forEach(mergeCustomProductLocally);
+    renderAdminList();
+    buildFilters();
+    renderGrid();
+    showToast(`${eans.length} producto(s) deshabilitado(s) en GitHub`);
+  }catch(e){
+    showToast('Error al deshabilitar: ' + e.message);
+  }finally{
+    btn.disabled = false;
+  }
 });
 
 async function deleteProductsFromRepo(eans, label){
@@ -2240,6 +2577,9 @@ async function deleteProductsFromRepo(eans, label){
       });
       return data;
     }, label);
+    getAllTabs().forEach(t => {
+      t.products = t.products.filter(p => !eanSet.has(p.ean));
+    });
     return true;
   }catch(e){
     showToast('Error al eliminar: ' + e.message);
@@ -2282,27 +2622,61 @@ document.getElementById('adminDeleteAllBtn').addEventListener('click', async () 
   showToast(`${eans.length} producto(s) eliminado(s)`);
 });
 
-document.getElementById('toggleAllBtn').addEventListener('click', () => {
+document.getElementById('toggleAllBtn').addEventListener('click', async () => {
   const products = getActiveProducts().filter(p => !getEffective(p).deleted);
   if(products.length === 0) return;
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ showToast('Configurá el token de GitHub en General para guardar cambios.'); return; }
   const allEnabled = products.every(p => getEffective(p).enabled);
-  products.forEach(p => {
-    if(!overrides[p.ean]) overrides[p.ean] = {};
-    overrides[p.ean].enabled = !allEnabled;
-  });
-  saveOverrides();
-  renderAdminList();
-  buildFilters();
-  renderGrid();
-  showToast(!allEnabled ? 'Todos los productos habilitados' : 'Todos los productos deshabilitados');
+  const nextEnabled = !allEnabled;
+  const btn = document.getElementById('toggleAllBtn');
+  btn.disabled = true;
+  try{
+    const eans = products.map(p => p.ean);
+    const updatedEntries = [];
+    await updateCustomProducts(data => {
+      eans.forEach(ean => {
+        const idx = data.products.findIndex(p => p.ean === ean);
+        const existing = idx >= 0 ? data.products[idx] : null;
+        const entry = buildRepoProductEntry(ean, existing, { enabled: nextEnabled });
+        if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+        updatedEntries.push(entry);
+      });
+      return data;
+    }, `${nextEnabled ? 'Habilitar' : 'Deshabilitar'} todos en pestaña ${activeTab}`);
+    clearLocalOverrides(eans);
+    updatedEntries.forEach(mergeCustomProductLocally);
+    renderAdminList();
+    buildFilters();
+    renderGrid();
+    showToast(nextEnabled ? 'Todos habilitados en GitHub' : 'Todos deshabilitados en GitHub');
+  }catch(e){
+    showToast('Error al actualizar visibilidad: ' + e.message);
+  }finally{
+    btn.disabled = false;
+  }
 });
 
-document.getElementById('saveWhatsapp').addEventListener('click', () => {
+document.getElementById('saveWhatsapp').addEventListener('click', async () => {
   const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
   if(val.length < 8){ showToast('Número inválido'); return; }
-  whatsappNumber = val;
-  saveWhatsappNumber();
-  showToast('Número de WhatsApp actualizado');
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ showToast('Configurá el token de GitHub en General para guardarlo globalmente.'); return; }
+  const btn = document.getElementById('saveWhatsapp');
+  btn.disabled = true;
+  try{
+    await updateSiteConfig(cfg => {
+      cfg.whatsapp = val;
+      return cfg;
+    }, `Actualizar número de WhatsApp`);
+    whatsappNumber = val;
+    saveWhatsappNumber();
+    showToast('WhatsApp guardado en GitHub');
+  }catch(e){
+    showToast('Error al guardar WhatsApp: ' + e.message);
+  }finally{
+    btn.disabled = false;
+  }
 });
 
 document.getElementById('saveGithubConfig').addEventListener('click', () => {
@@ -2398,7 +2772,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
       return data;
     }, `Agregar producto ${ean} - ${name}`);
 
-    clearDeletedOverrides([ean]);
+    clearLocalOverrides([ean]);
     mergeCustomProductLocally(entry);
     buildFilters();
     renderGrid();
@@ -2519,19 +2893,25 @@ async function saveEditProduct(){
       imgPath = path;
     }
 
-    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath, brand: brand || (getTabById(tab)?.name || tab) });
+    let savedEntry = null;
     await updateCustomProducts((data) => {
       const idx = data.products.findIndex(p => p.ean === ean);
-      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      const existing = idx >= 0 ? data.products[idx] : null;
+      savedEntry = buildRepoProductEntry(ean, existing, {
+        name, desc, price, tab, cat, subcat,
+        img: imgPath,
+        brand: brand || (getTabById(tab)?.name || tab)
+      });
+      if(idx >= 0) data.products[idx] = savedEntry; else data.products.push(savedEntry);
       return data;
     }, `Editar producto ${ean} - ${name}`);
 
     getAllTabs().forEach(t => {
       if(t.id !== tab) t.products = t.products.filter(p => p.ean !== ean);
     });
-    // Si el producto estaba eliminado, la edición lo resucita: limpiar el flag local
-    clearDeletedOverrides([ean]);
-    mergeCustomProductLocally(entry);
+    // Si el producto estaba eliminado, la edición lo resucita: limpiar overrides locales
+    clearLocalOverrides([ean]);
+    mergeCustomProductLocally(savedEntry);
     buildFilters();
     renderGrid();
     renderAdminList();
@@ -2682,13 +3062,13 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
         }
         const previo = idx >= 0 ? data.products[idx] : null;
         const extra = (previo && Array.isArray(previo.lists)) ? previo.lists : [];
-        const todas = Array.from(new Set(extra.filter(id => id !== entry.tab)));
+        const todas = Array.from(new Set(extra.filter(id => id !== entry.tab && getTabById(id))));
         if(todas.length) entry.lists = todas;
         if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       });
       return data;
     }, `Importar CSV (${newEntries.length} productos)`);
-    clearDeletedOverrides(newEntries.map(e => e.ean));
+    clearLocalOverrides(newEntries.map(e => e.ean));
     newEntries.forEach(mergeCustomProductLocally);
     buildFilters();
     renderGrid();
@@ -2735,11 +3115,14 @@ function renderAdminTabList(){
   const tabs = getAllTabs();
   container.innerHTML = tabs.map(t => {
     const productCount = t.products ? t.products.length : 0;
+    const tc = getEffectiveTabThemeConfig(t.id);
     return `<div class="admin-tab-item">
+      <span class="tab-swatch" style="background:${tc.btnPrimary};" title="Color de pestaña"></span>
       <div style="flex:1;">
         <div class="tab-name">${t.name}</div>
         <div class="tab-id">${t.id} · ${productCount} productos</div>
       </div>
+      <button class="tab-action" data-action="color" data-tab-id="${t.id}">🎨 Color</button>
       <button class="tab-action" data-action="rename" data-tab-id="${t.id}">Renombrar</button>
       <button class="tab-action danger" data-action="delete" data-tab-id="${t.id}">Eliminar</button>
     </div>`;
@@ -2749,6 +3132,15 @@ function renderAdminTabList(){
     btn.addEventListener('click', async () => {
       const tabId = btn.dataset.tabId;
       const action = btn.dataset.action;
+      if(action === 'color'){
+        switchAdminSection('appearance');
+        const sel = document.getElementById('themeTabSelect');
+        if(sel){
+          sel.value = tabId;
+          loadAppearanceTabFields(tabId);
+        }
+        return;
+      }
       if(action === 'rename'){
         const tab = TAB_REGISTRY[tabId] || customTabs.find(t => t.id === tabId);
         if(!tab) return;
@@ -2960,17 +3352,355 @@ function renderTabSelects(){
   const tabs = getAllTabs();
   const npTab = document.getElementById('npTab');
   const csvTab = document.getElementById('csvTab');
+  const themeTab = document.getElementById('themeTabSelect');
   const options = tabs.map(t => `<option value="${t.id}">${t.name}</option>`).join('');
   npTab.innerHTML = options;
   csvTab.innerHTML = options;
+  if(themeTab) themeTab.innerHTML = options;
   if(!tabs.find(t => t.id === npTab.value)) npTab.value = tabs[0]?.id || '';
   if(!tabs.find(t => t.id === csvTab.value)) csvTab.value = tabs[0]?.id || '';
+  if(themeTab && !tabs.find(t => t.id === themeTab.value)) themeTab.value = tabs[0]?.id || '';
 }
 
+/* ======================================================
+   MOTOR DE TEMAS Y PERSONALIZACIÓN
+   ====================================================== */
 const TAB_THEMES = {'algabo':'algabo','saphirus':'saphirus','sandra-marzzan':'sandramarzzan'};
-function applyTabTheme(){
-  document.documentElement.dataset.tabTheme = TAB_THEMES[activeTab] || '';
+const THEME_PRESETS = {
+  algabo: { label:'Índigo Algabo', mode:'light', accent:'#001b71', btnPrimary:'#2442ad', highlight:'#cc3366', bg:'#f2f6fc', card:'#ffffff', text:'#12224a', headerBg:'#ffffff', btnCart:'#2c4cb8' },
+  saphirus: { label:'Azul Saphirus', mode:'light', accent:'#1a6fd8', btnPrimary:'#2e85e6', highlight:'#145eaf', bg:'#eef4fb', card:'#ffffff', text:'#10233a', headerBg:'#ffffff', btnCart:'#2e85e6' },
+  sandramarzzan: { label:'Malva Marzzan', mode:'light', accent:'#66435a', btnPrimary:'#7d5569', highlight:'#66435a', bg:'#f7f1f1', card:'#ffffff', text:'#5c3b49', headerBg:'#ffffff', btnCart:'#7d5569' },
+  ambar: { label:'Ámbar Dorado', mode:'light', accent:'#b45309', btnPrimary:'#d97706', highlight:'#92400e', bg:'#fdf8f0', card:'#ffffff', text:'#3d2409', headerBg:'#ffffff', btnCart:'#15803d' },
+  esmeralda: { label:'Verde Esmeralda', mode:'light', accent:'#047857', btnPrimary:'#10b981', highlight:'#065f46', bg:'#f0faf6', card:'#ffffff', text:'#0d3326', headerBg:'#ffffff', btnCart:'#059669' },
+  oscuro: { label:'Oscuro Clásico', mode:'dark', accent:'#d4af6a', btnPrimary:'#c5a669', highlight:'#8a7248', bg:'#0f1115', card:'#1b1f2a', text:'#f2f3f5', headerBg:'#0f1115', btnCart:'#4fa968' }
+};
+const CUSTOM_THEME_VAR_KEYS = [
+  '--bg','--bg-soft','--card','--card-hover','--border','--text','--text-dim',
+  '--accent','--accent-soft','--shadow',
+  '--btn-gold-top','--btn-gold-mid','--btn-gold-bot',
+  '--btn-green-top','--btn-green-mid','--btn-green-bot',
+  '--btn-gray-top','--btn-gray-mid','--btn-gray-bot',
+  '--btn-dark-top','--btn-dark-mid','--btn-dark-bot',
+  '--header-bg','--parallax-veil','--img-bg','--input-bg',
+  '--active-border','--active-text','--active-text-shadow',
+  '--btn-cart-border','--btn-cart-text'
+];
+
+function hexToRgb(hex){
+  const m = String(hex || '').trim().replace('#', '');
+  const full = m.length === 3 ? m.split('').map(c => c + c).join('') : m;
+  if(!/^[0-9a-f]{6}$/i.test(full)) return { r: 0, g: 0, b: 0 };
+  const n = parseInt(full, 16);
+  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
 }
+function rgbToHex(r, g, b){
+  const toH = v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0');
+  return '#' + toH(r) + toH(g) + toH(b);
+}
+function mixHex(hexA, hexB, t){
+  const a = hexToRgb(hexA), b = hexToRgb(hexB);
+  return rgbToHex(a.r + (b.r - a.r) * t, a.g + (b.g - a.g) * t, a.b + (b.b - a.b) * t);
+}
+function rgbaHex(hex, alpha){
+  const { r, g, b } = hexToRgb(hex);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+function contrastTextHex(hex){
+  const { r, g, b } = hexToRgb(hex);
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 148 ? '#1a1a1a' : '#ffffff';
+}
+
+function getEffectiveTabThemeConfig(tabId){
+  const saved = siteConfig.tabThemes && siteConfig.tabThemes[tabId];
+  if(saved && typeof saved === 'object') return { ...THEME_PRESETS.oscuro, ...saved };
+  const builtInKey = TAB_THEMES[tabId];
+  if(builtInKey && THEME_PRESETS[builtInKey]) return { ...THEME_PRESETS[builtInKey] };
+  return { ...THEME_PRESETS.oscuro };
+}
+function clearCustomThemeVars(){
+  const st = document.documentElement.style;
+  CUSTOM_THEME_VAR_KEYS.forEach(k => st.removeProperty(k));
+}
+function applyCustomThemeVars(cfg){
+  const root = document.documentElement;
+  const st = root.style;
+  const isDark = cfg.mode === 'dark';
+  const bg = cfg.bg || (isDark ? '#0f1115' : '#f2f6fc');
+  const card = cfg.card || (isDark ? '#1b1f2a' : '#ffffff');
+  const text = cfg.text || (isDark ? '#f2f3f5' : '#12224a');
+  const accent = cfg.accent || '#d4af6a';
+  const btnPrimary = cfg.btnPrimary || accent;
+  const highlight = cfg.highlight || btnPrimary;
+  const headerBg = cfg.headerBg || card;
+  const btnCart = cfg.btnCart || btnPrimary;
+
+  const bgSoft = isDark ? mixHex(bg, '#ffffff', 0.06) : mixHex(bg, text, 0.05);
+  const cardHover = isDark ? mixHex(card, '#ffffff', 0.05) : mixHex(card, bg, 0.45);
+  const border = isDark ? mixHex(card, '#ffffff', 0.14) : mixHex(bg, text, 0.16);
+  const textDim = mixHex(text, bg, 0.42);
+  const accentSoft = rgbaHex(accent, isDark ? 0.2 : 0.14);
+  const shadow = `0 10px 30px ${rgbaHex(isDark ? '#000000' : accent, isDark ? 0.35 : 0.14)}`;
+
+  const activeText = contrastTextHex(btnPrimary);
+  const cartText = contrastTextHex(btnCart);
+  const veilAlpha = (siteConfig.appearance && typeof siteConfig.appearance.bgOverlayOpacity === 'number')
+    ? siteConfig.appearance.bgOverlayOpacity : (isDark ? 0.45 : 0.72);
+
+  st.setProperty('--bg', bg);
+  st.setProperty('--bg-soft', bgSoft);
+  st.setProperty('--card', card);
+  st.setProperty('--card-hover', cardHover);
+  st.setProperty('--border', border);
+  st.setProperty('--text', text);
+  st.setProperty('--text-dim', textDim);
+  st.setProperty('--accent', accent);
+  st.setProperty('--accent-soft', accentSoft);
+  st.setProperty('--shadow', shadow);
+
+  st.setProperty('--btn-gold-top', mixHex(btnPrimary, '#ffffff', 0.25));
+  st.setProperty('--btn-gold-mid', btnPrimary);
+  st.setProperty('--btn-gold-bot', mixHex(btnPrimary, '#000000', 0.24));
+
+  st.setProperty('--btn-green-top', mixHex(btnCart, '#ffffff', 0.24));
+  st.setProperty('--btn-green-mid', btnCart);
+  st.setProperty('--btn-green-bot', mixHex(btnCart, '#000000', 0.28));
+
+  st.setProperty('--btn-gray-top', isDark ? '#9fa1a1' : mixHex(card, border, 0.25));
+  st.setProperty('--btn-gray-mid', isDark ? '#8c8c8c' : mixHex(card, border, 0.55));
+  st.setProperty('--btn-gray-bot', isDark ? '#717171' : mixHex(border, text, 0.18));
+
+  st.setProperty('--btn-dark-top', isDark ? '#4a4846' : mixHex(bgSoft, border, 0.45));
+  st.setProperty('--btn-dark-mid', isDark ? '#3b3a39' : mixHex(bgSoft, textDim, 0.35));
+  st.setProperty('--btn-dark-bot', isDark ? '#2e2e2e' : mixHex(bgSoft, textDim, 0.55));
+
+  st.setProperty('--header-bg', `linear-gradient(180deg, ${rgbaHex(headerBg, 0.98)}, ${rgbaHex(headerBg, 0.92)})`);
+  st.setProperty('--parallax-veil', rgbaHex(bg, veilAlpha));
+  st.setProperty('--img-bg', mixHex(bg, card, 0.35));
+  st.setProperty('--input-bg', isDark ? bgSoft : card);
+  st.setProperty('--active-border', highlight);
+  st.setProperty('--active-text', activeText);
+  st.setProperty('--active-text-shadow', activeText === '#ffffff' ? '0 -1px 0 rgba(0,0,0,.25)' : '0 1px 0 rgba(255,255,255,.35)');
+  st.setProperty('--btn-cart-border', mixHex(btnCart, '#000000', 0.28));
+  st.setProperty('--btn-cart-text', cartText);
+
+  root.dataset.tabTheme = 'custom';
+}
+function applyAppearance(app){
+  const a = { ...DEFAULT_SITE_CONFIG.appearance, ...(app || {}) };
+  const st = document.documentElement.style;
+  st.setProperty('--radius', (Number(a.cardRadius) || 14) + 'px');
+  st.setProperty('--grid-min', (Number(a.gridMinWidth) || 210) + 'px');
+  const parallaxEl = document.getElementById('bgParallax');
+  if(parallaxEl) parallaxEl.style.display = a.showParallaxBg === false ? 'none' : '';
+  const op = (typeof a.bgOverlayOpacity === 'number' && Number.isFinite(a.bgOverlayOpacity)) ? a.bgOverlayOpacity : 0.45;
+  if(Math.abs(op - 0.45) > 0.01){
+    st.setProperty('--veil-opacity', String(Math.max(0.15, Math.min(1.6, op / 0.45))));
+  } else {
+    st.removeProperty('--veil-opacity');
+  }
+  const footerEl = document.getElementById('footerText');
+  if(footerEl && a.footerText) footerEl.textContent = a.footerText;
+}
+function applyTabTheme(){
+  const customCfg = siteConfig.tabThemes && siteConfig.tabThemes[activeTab];
+  if(customCfg && typeof customCfg === 'object'){
+    applyCustomThemeVars(customCfg);
+  } else {
+    clearCustomThemeVars();
+    document.documentElement.dataset.tabTheme = TAB_THEMES[activeTab] || '';
+  }
+}
+
+/* ---------- UI DE PERSONALIZACIÓN (ADMIN) ---------- */
+const THEME_PICKER_MAP = [
+  ['tcAccent', 'tcAccentHex', 'accent'],
+  ['tcBtnPrimary', 'tcBtnPrimaryHex', 'btnPrimary'],
+  ['tcHighlight', 'tcHighlightHex', 'highlight'],
+  ['tcBg', 'tcBgHex', 'bg'],
+  ['tcCard', 'tcCardHex', 'card'],
+  ['tcText', 'tcTextHex', 'text'],
+  ['tcHeaderBg', 'tcHeaderBgHex', 'headerBg'],
+  ['tcBtnCart', 'tcBtnCartHex', 'btnCart']
+];
+function readAppearanceFormTheme(){
+  const cfg = { mode: document.getElementById('themeModeSelect').value };
+  THEME_PICKER_MAP.forEach(([inputId, , key]) => {
+    cfg[key] = document.getElementById(inputId).value;
+  });
+  return cfg;
+}
+function updateThemePreview(){
+  const cfg = readAppearanceFormTheme();
+  const box = document.getElementById('themePreviewBox');
+  const head = document.getElementById('tpHead');
+  const tabEl = document.getElementById('tpTabActive');
+  const chipEl = document.getElementById('tpChipActive');
+  const cardEl = document.getElementById('tpCard');
+  const titleEl = document.getElementById('tpTitle');
+  const subEl = document.getElementById('tpSub');
+  const priceEl = document.getElementById('tpPrice');
+  const btnEl = document.getElementById('tpBtn');
+  if(!box) return;
+
+  const border = cfg.mode === 'dark' ? mixHex(cfg.card, '#ffffff', 0.14) : mixHex(cfg.bg, cfg.text, 0.16);
+  box.style.background = cfg.bg;
+  box.style.borderColor = border;
+  head.style.background = cfg.headerBg;
+  tabEl.style.background = `linear-gradient(180deg, ${mixHex(cfg.btnPrimary, '#ffffff', 0.24)}, ${cfg.btnPrimary}, ${mixHex(cfg.btnPrimary, '#000000', 0.22)})`;
+  tabEl.style.color = contrastTextHex(cfg.btnPrimary);
+  tabEl.style.borderColor = cfg.highlight;
+  chipEl.style.background = cfg.btnPrimary;
+  chipEl.style.color = contrastTextHex(cfg.btnPrimary);
+  chipEl.style.borderColor = cfg.highlight;
+  cardEl.style.background = cfg.card;
+  cardEl.style.borderColor = border;
+  titleEl.style.color = cfg.text;
+  subEl.style.color = mixHex(cfg.text, cfg.bg, 0.42);
+  priceEl.style.color = cfg.accent;
+  btnEl.style.background = `linear-gradient(180deg, ${mixHex(cfg.btnCart, '#ffffff', 0.22)}, ${cfg.btnCart}, ${mixHex(cfg.btnCart, '#000000', 0.25)})`;
+  btnEl.style.color = contrastTextHex(cfg.btnCart);
+  btnEl.style.borderColor = mixHex(cfg.btnCart, '#000000', 0.25);
+}
+function writeAppearanceFormTheme(cfg){
+  document.getElementById('themeModeSelect').value = cfg.mode === 'dark' ? 'dark' : 'light';
+  THEME_PICKER_MAP.forEach(([inputId, hexId, key]) => {
+    const val = cfg[key] || '#000000';
+    document.getElementById(inputId).value = val;
+    document.getElementById(hexId).textContent = val.toUpperCase();
+  });
+  updateThemePreview();
+}
+function loadAppearanceTabFields(tabId){
+  writeAppearanceFormTheme(getEffectiveTabThemeConfig(tabId));
+}
+function renderThemePresets(){
+  const row = document.getElementById('themePresetsRow');
+  if(!row) return;
+  row.innerHTML = Object.entries(THEME_PRESETS).map(([k, p]) =>
+    `<button type="button" class="preset-pill" data-preset="${k}"><span class="preset-dot" style="background:${p.btnPrimary};"></span>${p.label}</button>`
+  ).join('');
+  row.querySelectorAll('.preset-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const p = THEME_PRESETS[btn.dataset.preset];
+      if(p) writeAppearanceFormTheme(p);
+    });
+  });
+}
+function renderAppearancePanel(){
+  renderTabSelects();
+  renderThemePresets();
+  const sel = document.getElementById('themeTabSelect');
+  if(sel){
+    if(getTabById(activeTab)) sel.value = activeTab;
+    loadAppearanceTabFields(sel.value);
+  }
+  const app = { ...DEFAULT_SITE_CONFIG.appearance, ...(siteConfig.appearance || {}) };
+  document.getElementById('appGridMin').value = String(app.gridMinWidth || 210);
+  document.getElementById('appCardRadius').value = String(app.cardRadius || 14);
+  document.getElementById('appCardRadiusVal').textContent = (app.cardRadius || 14) + 'px';
+  document.getElementById('appShowParallax').checked = app.showParallaxBg !== false;
+  const pct = Math.round((typeof app.bgOverlayOpacity === 'number' ? app.bgOverlayOpacity : 0.45) * 100);
+  document.getElementById('appBgOpacity').value = String(pct);
+  document.getElementById('appBgOpacityVal').textContent = pct + '%';
+  document.getElementById('appFooterText').value = app.footerText || DEFAULT_SITE_CONFIG.appearance.footerText;
+}
+
+document.getElementById('themeTabSelect').addEventListener('change', e => loadAppearanceTabFields(e.target.value));
+document.getElementById('themeModeSelect').addEventListener('change', updateThemePreview);
+THEME_PICKER_MAP.forEach(([inputId, hexId]) => {
+  document.getElementById(inputId).addEventListener('input', e => {
+    document.getElementById(hexId).textContent = e.target.value.toUpperCase();
+    updateThemePreview();
+  });
+});
+document.getElementById('appCardRadius').addEventListener('input', e => {
+  document.getElementById('appCardRadiusVal').textContent = e.target.value + 'px';
+});
+document.getElementById('appBgOpacity').addEventListener('input', e => {
+  document.getElementById('appBgOpacityVal').textContent = e.target.value + '%';
+});
+
+document.getElementById('saveTabThemeBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('tabThemeStatus');
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Configurá el repositorio y el token de GitHub en General.'; return; }
+  const tabId = document.getElementById('themeTabSelect').value;
+  const themeCfg = readAppearanceFormTheme();
+  const btn = document.getElementById('saveTabThemeBtn');
+  btn.disabled = true;
+  statusEl.textContent = 'Guardando en GitHub...';
+  try{
+    await updateSiteConfig(cfg => {
+      if(!cfg.tabThemes) cfg.tabThemes = {};
+      cfg.tabThemes[tabId] = themeCfg;
+      return cfg;
+    }, `Personalizar color de pestaña ${tabId}`);
+    if(tabId === activeTab) applyTabTheme();
+    renderAdminTabList();
+    statusEl.textContent = '✅ Color guardado en GitHub para todos los navegadores.';
+    showToast('Color de pestaña guardado en GitHub');
+  }catch(e){
+    statusEl.textContent = '❌ Error: ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('resetTabThemeBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('tabThemeStatus');
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Configurá el repositorio y el token de GitHub en General.'; return; }
+  const tabId = document.getElementById('themeTabSelect').value;
+  const btn = document.getElementById('resetTabThemeBtn');
+  btn.disabled = true;
+  statusEl.textContent = 'Restaurando en GitHub...';
+  try{
+    await updateSiteConfig(cfg => {
+      if(cfg.tabThemes) delete cfg.tabThemes[tabId];
+      return cfg;
+    }, `Restaurar color original de pestaña ${tabId}`);
+    loadAppearanceTabFields(tabId);
+    if(tabId === activeTab) applyTabTheme();
+    renderAdminTabList();
+    statusEl.textContent = '✅ Color original restaurado en GitHub.';
+    showToast('Color restaurado');
+  }catch(e){
+    statusEl.textContent = '❌ Error: ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('saveAppearanceBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('appearanceStatus');
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Configurá el repositorio y el token de GitHub en General.'; return; }
+  const nextApp = {
+    gridMinWidth: parseInt(document.getElementById('appGridMin').value, 10) || 210,
+    cardRadius: parseInt(document.getElementById('appCardRadius').value, 10) || 14,
+    showParallaxBg: document.getElementById('appShowParallax').checked,
+    bgOverlayOpacity: (parseInt(document.getElementById('appBgOpacity').value, 10) || 45) / 100,
+    footerText: document.getElementById('appFooterText').value.trim() || DEFAULT_SITE_CONFIG.appearance.footerText
+  };
+  const btn = document.getElementById('saveAppearanceBtn');
+  btn.disabled = true;
+  statusEl.textContent = 'Guardando en GitHub...';
+  try{
+    await updateSiteConfig(cfg => {
+      cfg.appearance = nextApp;
+      return cfg;
+    }, 'Actualizar apariencia del catálogo');
+    applyAppearance(nextApp);
+    applyTabTheme();
+    statusEl.textContent = '✅ Apariencia guardada en GitHub para todos los navegadores.';
+    showToast('Apariencia guardada en GitHub');
+  }catch(e){
+    statusEl.textContent = '❌ Error: ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
 function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
@@ -3034,8 +3764,10 @@ window.addEventListener('resize', requestParallax, { passive: true });
 searchInput.addEventListener('input', renderGrid);
 (async function init(){
   loadState();
+  await loadSiteConfig();
   await loadCustomTabs();
   await loadCustomProducts();
+  applyAppearance(siteConfig.appearance);
   renderTabs();
   buildFilters();
   renderGrid();

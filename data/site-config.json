@@ -1,0 +1,11 @@
+{
+  "whatsapp": "5492915663645",
+  "appearance": {
+    "cardRadius": 14,
+    "gridMinWidth": 210,
+    "showParallaxBg": true,
+    "bgOverlayOpacity": 0.45,
+    "footerText": "Catálogo generado automáticamente a partir de la planilla de precios · Distre"
+  },
+  "tabThemes": {}
+}

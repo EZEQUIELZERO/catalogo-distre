@@ -377,3 +377,29 @@ Fecha: 2026-11-14
 - El stock no se descuenta ni modifica al agregar/enviar pedidos; solo se
   actualiza con una nueva importación CSV.
 Archivos: index.html, NOTASDEVER.MD
+
+### #030 - Persistencia global en GitHub, quitar ultimas-unidades, Personalización y header fijo
+Fecha: 2026-11-19
+- Persistencia global en GitHub para todos los navegadores:
+  - Edición rápida de precio (`.admin-price`), visibilidad individual (`.admin-enabled`),
+    `Deshabilitar seleccionados`, `Habilitar/Deshabilitar todos` (`#toggleAllBtn`) y
+    WhatsApp (`#saveWhatsapp`) ahora guardan directamente en GitHub (`data/custom-products.json`
+    y `data/site-config.json`), con cola secuencial de escritura (`productsWriteQueue`),
+    reintentos ante conflicto de SHA, cache-busting (`?t=`) y limpieza de overrides locales
+    obsoletos (`clearLocalOverrides`).
+  - `buildRepoProductEntry` unifica la construcción/preservación de metadatos (`stock`,
+    `estado`, `codigoInterno`, `enabled`, `lists`) también en `saveEditProduct`.
+- Eliminación definitiva de `"ultimas-unidades"`:
+  - Se removieron las 25 referencias residuales en `lists` dentro de `data/custom-products.json`
+    sin alterar ningún producto, y se eliminó `ensureTab` en `index.html` para que listas
+    huérfanas no recreen pestañas borradas.
+- Personalización y colores por pestaña (`#adminSectionAppearance` -> `data/site-config.json`):
+  - Nueva sección `🎨 Personalización` en el panel admin (y acceso directo `🎨 Color`
+    en Pestañas) con selector de pestaña, presets rápidos, modo claro/oscuro, 8 color pickers,
+    vista previa en vivo y opciones globales (tamaño de grilla, redondeo de tarjetas, fondo
+    parallax, opacidad del velo y texto del pie de página).
+- Encabezado fijo y compacto (v2.1.0):
+  - Se eliminó el título "Catálogo" del header; el buscador EAN quedó inmediatamente al lado
+    del botón Carrito y `<header>` pasó a `position: sticky; top: 0` con filas de pestañas y
+    filtros con desplazamiento horizontal táctil.
+Archivos: index.html, data/custom-products.json, data/site-config.json, NOTASDEVER.MD
