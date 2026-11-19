@@ -1,11 +1,11 @@
 {
   "whatsapp": "5492915663645",
   "appearance": {
-    "cardRadius": 14,
     "gridMinWidth": 210,
+    "cardRadius": 14,
     "showParallaxBg": true,
     "bgOverlayOpacity": 0.45,
-    "footerText": "Catálogo generado automáticamente a partir de la planilla de precios · Distre"
+    "footerText": "DESARROLLADOR DEL CATALOGO  EZEQUIEL 2915663645"
   },
   "tabThemes": {}
 }
