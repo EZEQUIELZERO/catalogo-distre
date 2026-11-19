@@ -22,7 +22,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/colonia-x125-dulces-mimos-copia11-63fe74d46feda036c916384715912034-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000485",
@@ -32,7 +33,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-cream-77912740004851-307ca5c0ed477ac16216560773154056-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000584",
@@ -42,7 +44,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-flower-mix-77912740005841-5a5bc923f0447953c616560776078017-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000713",
@@ -52,7 +55,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-cocnut-dream-77912740007131-a5f701a3cc45ade56616560775618357-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000720",
@@ -62,7 +66,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-sweet-berries-77912740007201-277394579419ac616b16560772384285-640-0.webp?_gl=1*asgphn*_gcl_au*MjEyMTU2NzEwMS4xNzkzMTE1ODAxLjU0OTY0MTQ2My4xNzk1MDE2Nzg5LjE3OTUwMTY5MTMuMTU2MTE1MDk0NC4xNzk0OTY1MzMzLjE3OTUwMTY5MTM.*_ga*MTk3NTU4ODkwMy4xNzkzMTE1ODAx*_ga_2NFZDBKLY4*czE3OTUwMTY3ODkkbzUkZzEkdDE3OTUwMTY5NDAkajkkbDAkaDA.",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000737",
@@ -75,7 +80,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274000744",
@@ -85,7 +91,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-sweet-berries-doypack-77912740007442-5aabe65ca0db8b392216897057089450-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000928",
@@ -95,7 +102,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-espuma-de-afeitar-x200-ml-77912740009281-8c792f8500ab5d5bc116832315614158-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274002625",
@@ -184,7 +192,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x100-g-woman-77912740043772-fab22cc8b3137e72dc16564452014571-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274004391",
@@ -264,7 +273,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-fortalecedor-77912740053051-0cab90bf16d459796716564407468857-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274005312",
@@ -277,7 +287,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274005329",
@@ -290,7 +301,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274009365",
@@ -317,7 +329,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274087004",
@@ -344,7 +357,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-fijacion-extra-fuerte-gota-77912740875471-5422100731663dbf4c16565394235979-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274087615",
@@ -408,7 +422,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x100-g-77912741877421-f3a79f955fbfb2b1d716564411541619-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274188350",
@@ -418,7 +433,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x250-floral-779127418835011-2c0d8c7fe272728f3516487569670206-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274188367",
@@ -428,7 +444,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x250-violets-77912741883671-6426fd9403d983c3ca16487569823376-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274189326",
@@ -441,7 +458,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274189333",
@@ -451,7 +469,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x200-pomo-fijacion-extra-fuerte-779127418933311-86c5b531be1ae54da316759568107038-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274190131",
@@ -489,7 +508,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x200-ml-extra-suave-779127419231911-1492241998f8c9f80e16504826346686-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274192326",
@@ -499,7 +519,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x444-ml-extra-suave-77912741923261-f12053fa8ea3c1082c16504826841090-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274192593",
@@ -522,7 +543,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-greem-tea-77912741933921-d9c9b6b7c14fdbed5516560769010970-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274193408",
@@ -532,7 +554,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-citrus-splash-77912741934081-950dc141a5ee7fc31016560771661600-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274195952",
@@ -559,7 +582,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-floral-rain-doypack-77912741960032-dec8c46423ab7798d316841658086100-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196010",
@@ -569,7 +593,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-citrus-splash-doypack-77912741960101-26da20bef7dfe0558b16813987145367-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196041",
@@ -582,7 +607,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274196416",
@@ -592,7 +618,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x200-g-repuesto-economico-doypack-77912741964161-39120d935a4ede8ce616897074896751-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196430",
@@ -602,7 +629,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x150-pomo-efecto-humedo-77912741964301-c10db7d7661f1e1e8c16759558851583-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196447",
@@ -612,7 +640,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x150-pomo-extra-brillo-y-control-779127419644711-90ca809000d427aee816759561463873-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196454",
@@ -622,7 +651,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196485",
@@ -632,7 +662,8 @@
       "cat": "HIGIENE BUCAL",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x500-ml-arctic-menthol-7791274196485-1b3c85b87f61c25e8f17655424045553-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196508",
@@ -642,7 +673,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x444-ml-manzanilla-779127419650811-94ea5984ca89ef65cd16504837221297-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196546",
@@ -655,7 +687,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274197017",
@@ -665,7 +698,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274197024",
@@ -675,7 +709,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x48-u-77912741970241-dcd9f5636db5cc400f16831274636447-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274197710",
@@ -789,7 +824,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x180-g-claisico-7791274198045-78a38314c3d0ce277317925112036395-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198069",
@@ -799,7 +835,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x180-g-suave-7791274198069-33484c0798f3a9757e17925111397012-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198168",
@@ -864,7 +901,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-en-pan-x80-flowpack-77912741984341-a1760859eca548316516897067314369-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198564",
@@ -902,7 +940,8 @@
       "cat": "HIGIENE BUCAL",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x250-ml-arctic-menthol-7791274198793-5787660e30461d07d117655424880025-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199387",
@@ -912,7 +951,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://jumboargentina.vtexassets.com/arquivos/ids/911818/Toallitas-Humedas-Algabo-Baby-C-tapa-100-1-1057514.jpg?v=639135165803300000",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199493",
@@ -984,7 +1024,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274200151",
@@ -994,7 +1035,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x200-ml-manzanilla-779127420015111-63788b365e513c0cb516565159075069-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200243",
@@ -1004,7 +1046,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x250-ml-alcohol-en-gel-77912742002431-3fe19bb1061aa7eda916487618099237-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200274",
@@ -1084,7 +1127,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x900-ml-7791274200656-f2041f62718583bb5417183825576397-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200847",
@@ -1097,7 +1141,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274200854",
@@ -1110,7 +1155,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274200922",
@@ -1148,7 +1194,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-fortalecedor-77912740053051-bd5ddf74c09c7e2bca17169214938723-480-0.png",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201141",
@@ -1158,7 +1205,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x200-ml-humectante-7791274201141-2e0f9dae830d05c7c417169214233568-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201158",
@@ -1168,7 +1216,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x200-ml-keratina-7791274201158-78e3018ddb7930b11417169216409993-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201332",
@@ -1212,7 +1261,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274201646",
@@ -1222,7 +1272,8 @@
       "cat": "HIGIENE BUCAL",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/diseno-sin-titulo-2-056891546ef1ba824117600166726678-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201653",
@@ -1235,7 +1286,8 @@
       "brand": "ALGABO",
       "lists": [
         "ultimas-unidades"
-      ]
+      ],
+      "deleted": true
     },
     {
       "ean": "7791274201660",
@@ -1245,7 +1297,8 @@
       "cat": "HIGIENE BUCAL",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/7791274201653-1-e875c3588eaf2fce4017600203299089-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201684",
@@ -1283,7 +1336,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_cream_340_glowinprogress-f40046fcb33ffcbbf017799819471709-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201905",
@@ -1293,7 +1347,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_cream_340_plotwist-3e9d887a946845561d17799819325281-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202070",
@@ -1303,7 +1358,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-de-glicerina-7791274202070-4609c627920a56535a17787833399913-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202131",
@@ -1313,7 +1369,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-3-x80-g-flower-mix-7791274202131-eb007192c4e26e50a617661549926417-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202148",
@@ -1323,7 +1380,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-x80-g-flower-mix-7791274202148-2c2165c4528f4c6fae17661549029921-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202155",
@@ -1333,7 +1391,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-x80-g-cream-7791274202155-a116e697623648ffda17661547789428-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202315",
@@ -1459,7 +1518,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_mist_250_chillnotboring-f0e4bb7380dca9ec8817799812135471-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201875",
@@ -1469,7 +1529,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_mist_250_plotwist-0b71da78f646b2e2e017799812731071-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201936",
@@ -1479,7 +1540,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_crema_pote_chillnotboring-ii-b61daa375faf39366e17799825902165-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201851",
@@ -1489,7 +1551,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_mist_250_glowinprogress-d00870f094263f754e17799777819462-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000317",
@@ -1505,7 +1568,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x755-ml-extra-suave-779127400038611-915565f64fc1561e5316504827233143-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000393",
@@ -1515,7 +1579,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x755-ml-manzanilla-779127400039311-2c6eb7334b82ebf07716504836600892-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000492",
@@ -1525,7 +1590,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-flower-mix-doypack-779127400049211-cd42227b233d4f96ff16897056613863-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000546",
@@ -1535,7 +1601,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-desodorante-x153-ml-para-pies-77912740005461-43696189fa1e98a1d916564463161309-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000577",
@@ -1545,7 +1612,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-cream-doypack-77912740005771-2b9f8c2cccd9623f2716897055824609-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000621",
@@ -1579,7 +1647,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-antibacterial-77912740008741-4946e2f9b4480b286b16582594469911-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274000881",
@@ -1589,7 +1658,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-antibacterial-doypack-77912740008811-1d0bd048e8a5b16dc216811518002630-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274001314",
@@ -1617,7 +1687,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_52c6958d341041d6b7ae7abd0c4871a8_638772178207621756_0_m.jpg",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274003202",
@@ -1627,7 +1698,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-desodorante-x153-ml-para-calzado-779127400320211-413fdf49104365922916553938250393-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274003554",
@@ -1637,7 +1709,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-polvo-de-fecula-x250-doypack-77912740035541-ed07ef6f8fc440caee16897080548287-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274003578",
@@ -1647,7 +1720,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-polvo-de-fecula-x250-77912740035781-364fec38705169894516564463974573-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274003608",
@@ -1693,7 +1767,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-express-x75-779127400506011-2ca87ae804b5910d8f16564404938374-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274005114",
@@ -1715,7 +1790,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-dosificador-x120-ml-77912740052062-457be2dfaf281fa43d16564406191127-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274005237",
@@ -1737,7 +1813,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x50-fortalecedor-77912740052751-c83ea71dffcdb9fb9416487564225254-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274005282",
@@ -1747,7 +1824,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x50-humectante-77912740052821-9a3b0e5115d0e8734316566207259926-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274005299",
@@ -1757,7 +1835,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_2237d82d37f3418c8577551f5a55ef94_638772912274007303_0_m.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274009242",
@@ -1779,7 +1858,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x150-efecto-humedo-gota-77912740891901-a036a7ac8bc70e738f16565390931929-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274189197",
@@ -1789,7 +1869,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x475-botella-extra-brillo-y-control-77912741891971-fa3a4d9508484611f516615250633002-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274189340",
@@ -1799,7 +1880,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x200-pomo-extra-brillo-y-control-779127418934011-93aaaea80ef7d9597216759561077983-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274189371",
@@ -1809,7 +1891,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x475-botella-efecto-humedo-77912741893711-155b87615527c9e82316615250048138-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274189388",
@@ -1819,7 +1902,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x475-botella-fijacion-extra-fuerte-77912741893881-fa5c05f23c4dcbf96016790643758751-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274190490",
@@ -1829,7 +1913,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x150-extra-brillo-gota-77912741904901-f6d06171fd706ff23b16565391451357-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274191930",
@@ -1839,7 +1924,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-locion-after-shave-x123-ml-77912741919301-8cf77ac7ae92e39bbc16504830806614-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274192234",
@@ -1849,7 +1935,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-colonia-x200-ml-dulces-mimos-77912741922341-e9ebd8bc001c214abc16565165956426-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274192241",
@@ -1859,7 +1946,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-colonia-x200-ml-suave-brisa-779127419224111-8d7e5c224ef4d995b516565164308488-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274192661",
@@ -1875,7 +1963,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-espuma-de-afeitar-x415-ml-77912741928831-669c6861f42e40eede16897071726691-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274193415",
@@ -1885,7 +1974,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-foral-rain-779127419341511-68f8992a35139ac4c816560770956778-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274193804",
@@ -1901,7 +1991,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-efecto-humedo-x350-g-pote-77791274196287-d4ba9a166038f7b7c217605437967619-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196294",
@@ -1911,7 +2002,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-extra-brillo-y-control-x350-g-pote-7791274196294-081e23f16632328e0617605438497562-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196300",
@@ -1921,7 +2013,8 @@
       "cat": "GEL CAPILAR",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x350-pote-fijacion-extra-fuerte-77912741963001-1b065d720c9f64c4f016615237436657-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196331",
@@ -1937,7 +2030,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x200-perfumado-77912741964782-3039c189b4c9b9b09216897082595929-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196478",
@@ -1947,7 +2041,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x400-perfumado-779127419647811-61a42d26464f664f3e16570373847552-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196515",
@@ -1957,7 +2052,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x75-ml-alcohol-en-gel-caja-77912741965151-dafb4637206fa28f4b16498777327320-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196539",
@@ -1967,7 +2063,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_KTSXdeYvDso6qX2QseEF0s209jnvAnUiIWKKYiFysKDYOEjCfsdSsSDW&s=10",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274196959",
@@ -2013,7 +2110,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/016/311/products/9-0cf3187bf01578aa5a17268688085433-1024-1024.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274197062",
@@ -2041,7 +2139,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-en-pan-x80-caja-779127419730731-465b851a0c48729e8116582582402732-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274197451",
@@ -2051,7 +2150,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-crema-de-afeitar-x200-g-pote-779127419745111-6295fa30de148fccc716615254917450-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274197512",
@@ -2085,7 +2185,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x200-doypack-desodorante-clasico-7791274198052-753fddc18dbdb0d14017404908970226-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198076",
@@ -2095,7 +2196,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x200-doypack-desodorante-suave-7791274198076-24517af58776af47e717404911429892-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198113",
@@ -2105,7 +2207,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x180-g-claisico-7791274198045-9693df9cee712c078017925112256716-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198120",
@@ -2115,7 +2218,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x120-g-suave-7791274198120-f746ffdab2ebcb5c0417925111470050-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198137",
@@ -2125,7 +2229,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-men-desodorante-en-polvo-x120-g-7791274198137-1770e5eb500496b68417888905758594-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198144",
@@ -2135,7 +2240,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-xtreme-x100-779127419814411-5ff24456c5881bd5d016564410230772-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198151",
@@ -2175,7 +2281,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-liquido-x200-ml-779127419824311-f06b501c9d61d1de5c16504828819139-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198366",
@@ -2197,7 +2304,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x220-repuesto-economico-coco-y-miel-77912741984581-5822db34904b86592f16935085835493-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198465",
@@ -2207,7 +2315,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x220-repuesto-karite-y-aguacate-779127419846511-14fa95e14a79dfa30016487533709754-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198472",
@@ -2229,7 +2338,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-polvo-de-fecula-x200-g-77912741965462-fa87de1ecd8ba300e116565152838002-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198571",
@@ -2293,7 +2403,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x48-u-x3-7791274198786-05bf8d256e9bdb5a8e17655411954408-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274198908",
@@ -2321,7 +2432,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x125-ml-alcohol-en-spray-77912741992881-182fbee81a944f64da16553942167326-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199424",
@@ -2367,7 +2479,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-citrus-splash-ecopack-77912741960101-e6e307c5056f43f9ba16897062877450-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199523",
@@ -2377,7 +2490,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-green-tea-ecopack-77912741960412-c7dcb352bba473285c16897063567042-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199530",
@@ -2387,7 +2501,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-floral-rain-ecopack-77912741960031-78dec06fae02a2b87516897063942514-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199547",
@@ -2397,7 +2512,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x900-ml-antibacterial-ecopack-779127419954711-9d1d742f85a8a26ec016897062444122-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199554",
@@ -2407,7 +2523,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x221-coco-y-miel-77912741995541-125fa689130f16b7f316873643624338-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199561",
@@ -2417,7 +2534,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x221-karite-y-aguacate-77912741995611-00968dd16e536c008016849381625134-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199585",
@@ -2457,7 +2575,8 @@
       "cat": "QUITAESMALTE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-black-x100-77912741998821-531542ceafc2f279d316503774386505-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199905",
@@ -2485,7 +2604,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-antibacterial-x100-g-77912742000381-b1e60ee5af13cc455e16564445010563-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200144",
@@ -2495,7 +2615,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://farmacityar.vtexassets.com/arquivos/ids/225569/219269_set-de-regalo-algabo-baby-colonia-dulces-mimos-x-200-ml-polvo-de-fecula-extra-suave-x-200-g_imagen-1.jpg?v=637943605190200000",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200175",
@@ -2583,7 +2704,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-biodegradables-x48-u-con-tapa-7791274200533-433c75e59b4a9f446817694593839960-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200540",
@@ -2593,7 +2715,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-wipes-natural-80-u-c-tapa-cc-77912742005401-4d3de6eef81feb240516837285072264-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200557",
@@ -2633,7 +2756,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-recarga-economica-7791274200649-254bdeab073acc279817183824684025-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200663",
@@ -2643,7 +2767,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-7791274200663-a6027003742c649db817187211837353-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200670",
@@ -2653,7 +2778,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-hisopos-x30-u-77912742006701-f7bb5743a324464dd616642813804532-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200687",
@@ -2663,7 +2789,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-acondicionador-x444-ml-cabellos-claros-manzanilla-779127420069411-3894995607a66479d516593666078074-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200694",
@@ -2673,7 +2800,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-acondicionador-x444-ml-cabellos-suaves-779127420068711-a93fb7858669d89c2a16593665707418-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200700",
@@ -2683,7 +2811,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-liquido-x200-ml-repuesto-economico-77912742007001-42594ee250378e020116655085319788-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200748",
@@ -2723,7 +2852,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-crema-de-afeitar-x177-ml-77912742008781-87fe47258417f3165a16717330527822-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200885",
@@ -2733,7 +2863,8 @@
       "cat": "TALCOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-desodorante-antibacterial-x153-ml-para-pies-77912742007311-beb65ddf00f35ea48116734438560991-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200892",
@@ -2749,7 +2880,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-aceite-x355-ml-7791274200908-36ffb4870666ee92a117144945389605-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274200915",
@@ -2789,7 +2921,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-hisopos-x24-u-ecopack-7791274201011-17bb37cdd2a646821c17147576991519-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201042",
@@ -2883,7 +3016,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-panos-de-algodon-x40-u-7791274201318-8c71c98437275991f817443116045813-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201325",
@@ -2893,7 +3027,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-algodon-precortado-x100g-algabo-algodon-pompones-de-algodon-x50-u-7791274197963-0a1fd0f3000f16403117303938085615-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201349",
@@ -2933,7 +3068,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-panos-de-algodon-x50-u-7791274201400-e210edb20354d069e817443117413470-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201417",
@@ -2997,7 +3133,8 @@
       "cat": "HIGIENE BUCAL",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-hilo-dental-con-mango-floss-picks-x50-u-7791274201592-1828f11c90ffd7b39617655410368199-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201608",
@@ -3049,7 +3186,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-roll-on-antitranspirante-x60-ml-7791274201790-0c02118bd680cde8b617654586877595-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201837",
@@ -3071,7 +3209,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_cream_340_chillnotboring-d58932b36c354779cc17799819406503-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201912",
@@ -3092,7 +3231,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_crema_pote_glowinprogress-ii-66cf057dae268131f817799825976723-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201943",
@@ -3102,7 +3242,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_crema_pote_plotwist-ii-4127cd9ca30686d4c717799825639628-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201950",
@@ -3112,7 +3253,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_cartones_packs_plotwist-6f45224130bfd7d40c17799814931015-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201967",
@@ -3122,7 +3264,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_cartones_packs_chillnotboring-a1e1a869127b676f8117799814845945-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201974",
@@ -3132,7 +3275,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-edp-y-estuche-velvet-c26c994b713cf9c44d17799807906159-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201981",
@@ -3142,7 +3286,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-edp-y-estuche-bloom-aura-73683551a1cb3a118a17799808003823-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274201998",
@@ -3152,7 +3297,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-edp-y-estuche-elixir-2d286dc598c55388dc17799807680810-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202001",
@@ -3162,7 +3308,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-edp-y-estuche-ocean-wood-dd703a7cd244f7b79d17799807802221-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202018",
@@ -3172,7 +3319,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-deo-elixir-7af576f8f788589e7e17799797991163-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202025",
@@ -3182,7 +3330,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-deo-ocean-wood-4de8f5442384c869e817799798069279-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202032",
@@ -3192,7 +3341,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-deo-velvet-3859cb5cf4e3ba80a917799798226791-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202049",
@@ -3202,7 +3352,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-deo-bloom-aura-5cdd27250469f8f00817799798292551-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202056",
@@ -3212,7 +3363,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-pack-elixir-8ea583ad4adb9087a017799806330266-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202063",
@@ -3222,7 +3374,8 @@
       "cat": "POLO CLUB",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/polo-pack-velvet-3153acf73a78bbb0b017799806639027-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202087",
@@ -3232,7 +3385,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/fotos-productos-nuevoes-1000x1000-y-jabones-editado-f5aa4800e453873b5617764364034151-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202094",
@@ -3242,7 +3396,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/jabon-de-glicerina-x90-g-green-tea-7791274202094-7a43dde804463f284117764358765806-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202100",
@@ -3252,7 +3407,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/fotos-productos-nuevoes-1000x1000-y-jabones-editado-2-35a4834ff9bf588de417764373879907-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202117",
@@ -3262,7 +3418,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/fotos-productos-nuevoes-1000x1000-y-jabones-editado-1-50f7436bb88c2e410517764384730965-480-0.png",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202124",
@@ -3272,7 +3429,8 @@
       "cat": "MANOS",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-3-x80-g-cream-7791274202124-dcd66e0347c44443bd17664377516980-480-0.png",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202186",
@@ -3324,7 +3482,8 @@
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_cartones_packs_gloe-in-progress-3ddfc53863976b10de17799815065247-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202445",
@@ -8962,7 +9121,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://http2.mlstatic.com/D_Q_NP_804189-MLA117753432721_092026-F.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202520",
@@ -8972,7 +9132,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://http2.mlstatic.com/D_Q_NP_604547-MLA119569629241_102026-F.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202537",
@@ -8982,7 +9143,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTxp8aSpVD2-vg7oCUZB6No-BCb_NlzFRt29wvCaAZSw&s=10",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202544",
@@ -8992,7 +9154,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-baby-panal-talle-m-x46-u-7791274202537-041afd22781705ecc717894983357719-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202551",
@@ -9002,7 +9165,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-baby-panal-talle-p-x16-u-7791274202513-e32f3b90d71233526b17873326828732-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202568",
@@ -9012,7 +9176,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd2uApmajEOUI4I1dgDdSrR5fUjE0crOSZYP8gtODGyg&s=10",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202575",
@@ -9022,7 +9187,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://http2.mlstatic.com/D_Q_NP_968415-MLA117431672536_102026-F.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202582",
@@ -9032,7 +9198,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://http2.mlstatic.com/D_Q_NP_696163-MLA117432030806_102026-F.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274202599",
@@ -9042,7 +9209,8 @@
       "cat": "BEBE",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYYYjt-SPiZQQoDqYG8tv9EYrqkXdH-584Kp8-FpTgwg&s=10",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7791274199622",
@@ -9052,7 +9220,8 @@
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-men-desodorante-en-polvo-x180-g-7791274199622-533d2e2335fca2087f17888906536304-480-0.webp",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     }
   ]
 }
