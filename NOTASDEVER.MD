@@ -416,3 +416,14 @@ Fecha: 2026-11-20
   `💾 GUARDAR` (guardado en un único commit).
 - Confirmación al salir del panel admin o cerrar sesión si hay cambios pendientes.
 Archivos: index.html, NOTASDEVER.MD
+
+### #032 - Input de Stock junto al Precio en panel Admin
+Fecha: 2026-11-20
+- Se agregó el campo numérico `Stock` (`.admin-stock`) justo al lado de `Precio`
+  en cada fila de Admin → Productos (con mini etiquetas `Precio` y `Stock` sobre
+  cada input), integrado con `pendingProductChanges`, `Sin guardar` y `💾 GUARDAR`
+  para actualizar el código `S-100-00XXX` al guardar en GitHub.
+- Se agregó también el campo `Stock (opcional)` junto a `Precio` en los
+  formularios de Agregar producto (`#npStock`) y Editar producto (`#editStock`),
+  con helper compartido `parseNonNegInt`.
+Archivos: index.html, NOTASDEVER.MD

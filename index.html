@@ -542,21 +542,27 @@
   textarea.price-input{resize:vertical;font-family:inherit;line-height:1.4;}
   .admin-list{max-height:65vh;overflow-y:auto;border:1px solid var(--border);border-radius:12px;padding:4px 14px;}
   .admin-row{
-    display:grid;grid-template-columns:auto auto minmax(0,1fr) 104px 48px auto;gap:10px;align-items:center;
+    display:grid;grid-template-columns:auto auto minmax(0,1fr) 96px 76px 48px auto;gap:10px;align-items:center;
     padding:12px 0;border-bottom:1px solid var(--border);
   }
   .admin-row > div{min-width:0;}
-  @media(max-width:860px){
-    .admin-row{grid-template-columns:auto auto minmax(0,1fr) 82px 44px auto;gap:8px;}
+  .admin-num-field{display:flex;flex-direction:column;gap:2px;min-width:0;}
+  .admin-num-lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.4px;color:var(--text-dim);font-weight:700;line-height:1;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media(max-width:960px){
+    .admin-row{grid-template-columns:auto auto minmax(0,1fr) 86px 68px 46px auto;gap:8px;}
     .admin-edit-btn,.admin-del-btn{padding:6px 7px;font-size:.7rem;}
+  }
+  @media(max-width:600px){
+    .admin-row{grid-template-columns:auto auto minmax(0,1fr) 72px 58px 42px auto;gap:5px;}
   }
   .admin-row:last-child{border-bottom:none;}
   .admin-row .admin-sel{width:17px;height:17px;accent-color:var(--accent);cursor:pointer;margin:0;}
   .admin-row.sel-row{background:rgba(255,255,255,.05);border-radius:10px;padding-left:10px;padding-right:10px;}
   .admin-row.sel-row.disabled-row{background:rgba(255,255,255,.025);}
   .admin-row img{width:44px;height:44px;object-fit:contain;background:#10131a;border-radius:8px;padding:4px;}
-  .admin-row .p-name{font-size:.8rem;font-weight:600;line-height:1.25;}
-  .admin-row .p-ean{font-size:.68rem;color:var(--text-dim);margin-top:2px;}
+  .admin-row .p-name{font-size:.8rem;font-weight:600;line-height:1.25;overflow-wrap:break-word;word-break:break-word;}
+  .admin-row .p-ean{font-size:.68rem;color:var(--text-dim);margin-top:2px;overflow-wrap:break-word;word-break:break-word;}
   .admin-row.disabled-row .p-name{color:var(--text-dim);text-decoration:line-through;}
   .admin-row.dirty-row{border-left:3px solid var(--accent);padding-left:10px;background:var(--accent-soft);border-radius:8px;}
   .admin-row.pending-delete-row{border-left:3px solid var(--danger);padding-left:10px;background:rgba(224,85,95,.12);border-radius:8px;}
@@ -585,7 +591,7 @@
     position:sticky;top:0;z-index:15;
     display:flex;align-items:center;gap:10px;flex-wrap:wrap;
     padding:10px 14px;margin-bottom:14px;border-radius:12px;
-    background:var(--bg-soft);border:1px solid var(--border);
+    background:var(--card);border:1px solid var(--border);
     box-shadow:0 6px 18px rgba(0,0,0,.15);
   }
   .admin-savebar.has-changes{border-color:var(--accent);}
@@ -710,9 +716,9 @@
   .range-row input[type="range"]{flex:1;accent-color:var(--accent);}
   .range-val{min-width:52px;text-align:right;font-family:monospace;font-size:.82rem;color:var(--accent);font-weight:700;}
 
-  @media(max-width:720px){
+  @media(max-width:960px){
     .admin-page{flex-direction:column;}
-    .admin-sidebar{width:100%;flex-direction:row;align-items:center;gap:14px;border-right:none;border-bottom:1px solid var(--border);padding:14px 16px;}
+    .admin-sidebar{width:100%;flex-direction:row;flex-wrap:wrap;align-items:center;gap:10px 14px;border-right:none;border-bottom:1px solid var(--border);padding:12px 16px;}
     .admin-sidebar-head{flex-shrink:0;}
     .admin-sidebar-head p{display:none;}
     .admin-sidebar-nav{flex-direction:row;flex-wrap:wrap;margin:0;gap:6px;}
@@ -1039,7 +1045,7 @@
       <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
       <div class="admin-section" id="adminSectionProducts" style="display:none;">
         <div class="toggle-all-row">
-          <div class="admin-section-title" style="margin:0;">Productos (precio y visibilidad en el catálogo)</div>
+          <div class="admin-section-title" style="margin:0;">Productos (precio, stock y visibilidad en el catálogo)</div>
           <button class="btn btn-close btn-auto" id="toggleAllBtn">✓ Habilitar todos</button>
         </div>
         <div class="admin-savebar" id="adminSaveBar">
@@ -1068,7 +1074,10 @@
         <div class="field"><label>Código EAN</label><input type="text" id="npEan" class="price-input" inputmode="numeric"></div>
         <div class="field" style="margin-top:10px;"><label>Descripción</label><input type="text" id="npName" class="price-input"></div>
         <div class="field" style="margin-top:10px;"><label>Descripción breve (opcional)</label><textarea id="npDesc" class="price-input" rows="2" placeholder="Una o dos líneas que describan el producto..."></textarea></div>
-        <div class="field" style="margin-top:10px;"><label>Precio (dejar vacío = "Consultar precio")</label><input type="number" id="npPrice" class="price-input" min="0" step="1"></div>
+        <div class="field-row" style="margin-top:10px;">
+          <div class="field"><label>Precio (vacío = "Consultar precio")</label><input type="number" id="npPrice" class="price-input" min="0" step="1"></div>
+          <div class="field"><label>Stock (opcional)</label><input type="number" id="npStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
+        </div>
         <div class="field" style="margin-top:10px;"><label>Pestaña</label>
           <select id="npTab" class="price-input"></select>
         </div>
@@ -1222,7 +1231,10 @@
       <div class="field"><label>Código EAN (no editable)</label><input type="text" id="editEan" class="price-input" disabled></div>
       <div class="field" style="margin-top:10px;"><label>Descripción</label><input type="text" id="editName" class="price-input"></div>
       <div class="field" style="margin-top:10px;"><label>Descripción breve (opcional)</label><textarea id="editDesc" class="price-input" rows="2" placeholder="Una o dos líneas que describan el producto..."></textarea></div>
-      <div class="field" style="margin-top:10px;"><label>Precio (dejar vacío = "Consultar precio")</label><input type="number" id="editPrice" class="price-input" min="0" step="1"></div>
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label>Precio (vacío = "Consultar precio")</label><input type="number" id="editPrice" class="price-input" min="0" step="1"></div>
+        <div class="field"><label>Stock (opcional)</label><input type="number" id="editStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
+      </div>
       <div class="field" style="margin-top:10px;"><label>Marca</label><input type="text" id="editBrand" class="price-input"></div>
       <div class="field" style="margin-top:10px;"><label>Pestaña</label>
         <select id="editTab" class="price-input"></select>
@@ -2425,13 +2437,20 @@ let pendingProductChanges = {}; // { [ean]: { price?, enabled?, deleted? } }
 function getPendingCount(){
   return Object.keys(pendingProductChanges).length;
 }
+function parseNonNegInt(raw){
+  const s = String(raw ?? '').trim();
+  if(!s) return null;
+  const n = parseInt(s, 10);
+  return Number.isFinite(n) ? Math.max(0, n) : null;
+}
 function getAdminRowState(p){
   const eff = getEffective(p);
   const pend = pendingProductChanges[p.ean] || null;
   const price = (pend && 'price' in pend) ? pend.price : eff.price;
+  const stock = (pend && 'stock' in pend) ? pend.stock : ((typeof eff.stock === 'number' && Number.isFinite(eff.stock)) ? eff.stock : null);
   const enabled = (pend && typeof pend.enabled === 'boolean') ? pend.enabled : eff.enabled;
   const pendingDelete = !!(pend && pend.deleted);
-  return { eff, pend, price, enabled, pendingDelete, isDirty: !!pend };
+  return { eff, pend, price, stock, enabled, pendingDelete, isDirty: !!pend };
 }
 function stageProductChange(ean, patch){
   const base = findBaseProduct(ean);
@@ -2441,6 +2460,10 @@ function stageProductChange(ean, patch){
   if('price' in next){
     const savedPrice = (saved && saved.price !== undefined) ? saved.price : null;
     if(next.price === savedPrice) delete next.price;
+  }
+  if('stock' in next){
+    const savedStock = (saved && typeof saved.stock === 'number' && Number.isFinite(saved.stock)) ? saved.stock : null;
+    if(next.stock === savedStock) delete next.stock;
   }
   if('enabled' in next){
     const savedEnabled = saved ? saved.enabled : true;
@@ -2507,6 +2530,7 @@ function renderAdminList(){
   }
   list.innerHTML = rows.map(({p, st}) => {
     const priceVal = (st.price === null || st.price === undefined) ? '' : st.price;
+    const stockVal = (st.stock === null || st.stock === undefined) ? '' : st.stock;
     const checked = adminSelected.has(p.ean) ? 'checked' : '';
     const rowStateClass = st.pendingDelete ? 'pending-delete-row' : (st.isDirty ? 'dirty-row' : '');
     const badgeHtml = st.pendingDelete
@@ -2523,7 +2547,14 @@ function renderAdminList(){
         <div class="p-name">${p.name}</div>
         <div class="p-ean">EAN ${p.ean}${badgeHtml}</div>
       </div>
-      <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${priceVal}" placeholder="Consultar" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
+      <div class="admin-num-field">
+        <span class="admin-num-lbl">Precio</span>
+        <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${priceVal}" placeholder="Consultar" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
+      </div>
+      <div class="admin-num-field">
+        <span class="admin-num-lbl">Stock</span>
+        <input type="number" class="price-input admin-stock" data-ean="${p.ean}" value="${stockVal}" placeholder="—" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
+      </div>
       <label class="switch">
         <input type="checkbox" class="admin-enabled" data-ean="${p.ean}" ${st.enabled ? 'checked' : ''} ${st.pendingDelete ? 'disabled' : ''}>
         <span class="slider-toggle"></span>
@@ -2547,6 +2578,15 @@ function renderAdminList(){
       const val = raw === '' ? null : parseInt(raw, 10);
       const newPrice = (raw !== '' && Number.isFinite(val)) ? val : null;
       stageProductChange(ean, { price: newPrice });
+      const base = findBaseProduct(ean);
+      if(base) syncRowDirtyDOM(inp.closest('.admin-row'), getAdminRowState(base));
+    });
+  });
+  list.querySelectorAll('.admin-stock').forEach(inp => {
+    inp.addEventListener('input', () => {
+      const ean = inp.dataset.ean;
+      const newStock = parseNonNegInt(inp.value);
+      stageProductChange(ean, { stock: newStock });
       const base = findBaseProduct(ean);
       if(base) syncRowDirtyDOM(inp.closest('.admin-row'), getAdminRowState(base));
     });
@@ -2689,6 +2729,7 @@ async function savePendingProductChanges(){
         const existing = idx >= 0 ? data.products[idx] : null;
         const patch = {};
         if('price' in change) patch.price = change.price;
+        if('stock' in change) patch.stock = change.stock;
         if('enabled' in change) patch.enabled = change.enabled;
         const entry = buildRepoProductEntry(ean, existing, patch);
         if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
@@ -2807,6 +2848,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
   const desc = document.getElementById('npDesc').value.trim();
   const priceRaw = document.getElementById('npPrice').value;
   const price = priceRaw === '' ? null : parseInt(priceRaw, 10);
+  const stock = parseNonNegInt(document.getElementById('npStock').value);
   const tab = document.getElementById('npTab').value;
   const catSel = document.getElementById('npCatSelect').value;
   const cat = catSel === '__new__' ? (document.getElementById('npCatNew').value.trim() || 'Otros') : (catSel || 'Otros');
@@ -2834,6 +2876,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
     }
 
     const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand: getTabById(tab)?.name || tab });
+    if(stock !== null) entry.stock = stock;
     await updateCustomProducts((data) => {
       const idx = data.products.findIndex(p => p.ean === ean);
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
@@ -2847,7 +2890,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
     renderAdminList();
 
     statusEl.textContent = '✅ Producto guardado en GitHub. Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.';
-    ['npEan','npName','npDesc','npPrice','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
+    ['npEan','npName','npDesc','npPrice','npStock','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('npImgFile').value = '';
     populateCategorySelect();
   }catch(e){
@@ -2873,6 +2916,7 @@ function openEditProductModal(ean){
   document.getElementById('editName').value = base.name;
   document.getElementById('editDesc').value = base.desc || '';
   document.getElementById('editPrice').value = (eff.price === null || eff.price === undefined) ? '' : eff.price;
+  document.getElementById('editStock').value = (typeof base.stock === 'number' && Number.isFinite(base.stock)) ? base.stock : '';
   document.getElementById('editBrand').value = base.brand || '';
   document.getElementById('editImgUrl').value = (base.img && base.img !== GENERIC_IMG) ? base.img : '';
   document.getElementById('editImgFile').value = '';
@@ -2935,6 +2979,7 @@ async function saveEditProduct(){
   const desc = document.getElementById('editDesc').value.trim();
   const priceRaw = document.getElementById('editPrice').value;
   const price = priceRaw === '' ? null : parseInt(priceRaw, 10);
+  const stock = parseNonNegInt(document.getElementById('editStock').value);
   const brand = document.getElementById('editBrand').value.trim();
   const tab = document.getElementById('editTab').value;
   const catSel = document.getElementById('editCatSelect').value;
@@ -2966,7 +3011,7 @@ async function saveEditProduct(){
       const idx = data.products.findIndex(p => p.ean === ean);
       const existing = idx >= 0 ? data.products[idx] : null;
       savedEntry = buildRepoProductEntry(ean, existing, {
-        name, desc, price, tab, cat, subcat,
+        name, desc, price, stock, tab, cat, subcat,
         img: imgPath,
         brand: brand || (getTabById(tab)?.name || tab)
       });
