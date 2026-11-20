@@ -403,3 +403,16 @@ Fecha: 2026-11-19
     del botón Carrito y `<header>` pasó a `position: sticky; top: 0` con filas de pestañas y
     filtros con desplazamiento horizontal táctil.
 Archivos: index.html, data/custom-products.json, data/site-config.json, NOTASDEVER.MD
+
+### #031 - Botón GUARDAR y cambios pendientes en Admin → Productos
+Fecha: 2026-11-20
+- Barra fija `#adminSaveBar` en la sección Productos con contador de cambios
+  pendientes, botón `↺ Descartar` y botón `💾 GUARDAR` (`#adminSaveProductsBtn`).
+- Editar precios, activar/desactivar switches, acciones masivas (`Deshabilitar
+  seleccionados`, `Habilitar/Deshabilitar todos`, `Eliminar seleccionados/todos`)
+  y el nuevo botón individual `🗑` para quitar un producto ahora acumulan los
+  cambios en `pendingProductChanges` con indicadores visuales (`Sin guardar` /
+  `Se quitará al guardar` + `↺ Deshacer`) sin escribir en GitHub hasta presionar
+  `💾 GUARDAR` (guardado en un único commit).
+- Confirmación al salir del panel admin o cerrar sesión si hay cambios pendientes.
+Archivos: index.html, NOTASDEVER.MD

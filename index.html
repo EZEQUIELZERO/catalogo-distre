@@ -542,8 +542,13 @@
   textarea.price-input{resize:vertical;font-family:inherit;line-height:1.4;}
   .admin-list{max-height:65vh;overflow-y:auto;border:1px solid var(--border);border-radius:12px;padding:4px 14px;}
   .admin-row{
-    display:grid;grid-template-columns:auto auto 1fr 110px 50px auto;gap:12px;align-items:center;
+    display:grid;grid-template-columns:auto auto minmax(0,1fr) 104px 48px auto;gap:10px;align-items:center;
     padding:12px 0;border-bottom:1px solid var(--border);
+  }
+  .admin-row > div{min-width:0;}
+  @media(max-width:860px){
+    .admin-row{grid-template-columns:auto auto minmax(0,1fr) 82px 44px auto;gap:8px;}
+    .admin-edit-btn,.admin-del-btn{padding:6px 7px;font-size:.7rem;}
   }
   .admin-row:last-child{border-bottom:none;}
   .admin-row .admin-sel{width:17px;height:17px;accent-color:var(--accent);cursor:pointer;margin:0;}
@@ -553,6 +558,15 @@
   .admin-row .p-name{font-size:.8rem;font-weight:600;line-height:1.25;}
   .admin-row .p-ean{font-size:.68rem;color:var(--text-dim);margin-top:2px;}
   .admin-row.disabled-row .p-name{color:var(--text-dim);text-decoration:line-through;}
+  .admin-row.dirty-row{border-left:3px solid var(--accent);padding-left:10px;background:var(--accent-soft);border-radius:8px;}
+  .admin-row.pending-delete-row{border-left:3px solid var(--danger);padding-left:10px;background:rgba(224,85,95,.12);border-radius:8px;}
+  .admin-row.pending-delete-row .p-name{color:var(--danger);text-decoration:line-through;}
+  .pending-badge{
+    display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;
+    font-size:.64rem;font-weight:700;background:var(--accent);color:#fff;vertical-align:middle;
+  }
+  .pending-badge.danger{background:var(--danger);color:#fff;}
+  .admin-row-actions{display:flex;gap:6px;align-items:center;}
   .admin-edit-btn{
     padding:6px 12px;border-radius:6px;border:1px solid #5c5c5c;
     background:linear-gradient(180deg,var(--btn-gray-top),var(--btn-gray-mid) 55%,var(--btn-gray-bot));
@@ -560,6 +574,24 @@
     transition:all .15s;white-space:nowrap;
   }
   .admin-edit-btn:hover{filter:brightness(1.08);border-color:var(--accent);}
+  .admin-del-btn{
+    padding:6px 9px;border-radius:6px;border:1px solid #5c5c5c;
+    background:linear-gradient(180deg,var(--btn-gray-top),var(--btn-gray-mid) 55%,var(--btn-gray-bot));
+    color:#1a1a1a;font-size:.74rem;font-weight:700;cursor:pointer;
+    transition:all .15s;line-height:1;
+  }
+  .admin-del-btn:hover{border-color:var(--danger);color:var(--danger);filter:brightness(1.05);}
+  .admin-savebar{
+    position:sticky;top:0;z-index:15;
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    padding:10px 14px;margin-bottom:14px;border-radius:12px;
+    background:var(--bg-soft);border:1px solid var(--border);
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+  }
+  .admin-savebar.has-changes{border-color:var(--accent);}
+  .admin-pending-info{margin-right:auto;font-size:.85rem;font-weight:700;color:var(--text-dim);}
+  .admin-savebar.has-changes .admin-pending-info{color:var(--accent);}
+  .admin-savebar .btn{margin:0;padding:9px 16px;font-size:.82rem;}
   .btn-danger{
     background:linear-gradient(180deg,#e06060,#c03434 55%,#972020);
     color:#ffffff;border-color:#7e1616;text-shadow:0 -1px 0 rgba(0,0,0,.25);
@@ -1009,6 +1041,11 @@
         <div class="toggle-all-row">
           <div class="admin-section-title" style="margin:0;">Productos (precio y visibilidad en el catálogo)</div>
           <button class="btn btn-close btn-auto" id="toggleAllBtn">✓ Habilitar todos</button>
+        </div>
+        <div class="admin-savebar" id="adminSaveBar">
+          <span class="admin-pending-info" id="adminPendingInfo">Sin cambios pendientes</span>
+          <button class="btn btn-close btn-auto" id="adminDiscardProductsBtn" style="display:none;">↺ Descartar</button>
+          <button class="btn btn-whatsapp btn-auto" id="adminSaveProductsBtn">💾 GUARDAR</button>
         </div>
         <div class="admin-tabs" id="adminTabsRow"></div>
         <div class="admin-toolbar">
@@ -2348,13 +2385,17 @@ function openAdminPanel(){
   window.scrollTo(0, 0);
 }
 function closeAdminPage(){
+  if(getPendingCount() > 0 && !confirm(`Tenés ${getPendingCount()} cambio(s) sin guardar en Productos. ¿Salir sin guardar?`)) return false;
+  pendingProductChanges = {};
+  updateAdminSaveBar();
   adminPage.classList.remove('open');
   document.body.style.overflow = '';
+  return true;
 }
 document.getElementById('adminBackBtn').addEventListener('click', closeAdminPage);
 document.getElementById('logoutBtn').addEventListener('click', () => {
+  if(!closeAdminPage()) return;
   isAdmin = false;
-  closeAdminPage();
   showToast('Sesión cerrada');
 });
 
@@ -2379,6 +2420,74 @@ document.querySelectorAll('.admin-subnav-btn').forEach(btn => {
 
 let adminSelected = new Set();
 let adminSearchQuery = '';
+let pendingProductChanges = {}; // { [ean]: { price?, enabled?, deleted? } }
+
+function getPendingCount(){
+  return Object.keys(pendingProductChanges).length;
+}
+function getAdminRowState(p){
+  const eff = getEffective(p);
+  const pend = pendingProductChanges[p.ean] || null;
+  const price = (pend && 'price' in pend) ? pend.price : eff.price;
+  const enabled = (pend && typeof pend.enabled === 'boolean') ? pend.enabled : eff.enabled;
+  const pendingDelete = !!(pend && pend.deleted);
+  return { eff, pend, price, enabled, pendingDelete, isDirty: !!pend };
+}
+function stageProductChange(ean, patch){
+  const base = findBaseProduct(ean);
+  const saved = base ? getEffective(base) : null;
+  const next = { ...(pendingProductChanges[ean] || {}), ...patch };
+  if(next.deleted !== true) delete next.deleted;
+  if('price' in next){
+    const savedPrice = (saved && saved.price !== undefined) ? saved.price : null;
+    if(next.price === savedPrice) delete next.price;
+  }
+  if('enabled' in next){
+    const savedEnabled = saved ? saved.enabled : true;
+    if(next.enabled === savedEnabled) delete next.enabled;
+  }
+  if(Object.keys(next).length === 0) delete pendingProductChanges[ean];
+  else pendingProductChanges[ean] = next;
+  updateAdminSaveBar();
+}
+function updateAdminSaveBar(){
+  const bar = document.getElementById('adminSaveBar');
+  const info = document.getElementById('adminPendingInfo');
+  const discardBtn = document.getElementById('adminDiscardProductsBtn');
+  const saveBtn = document.getElementById('adminSaveProductsBtn');
+  if(!bar || !info || !discardBtn || !saveBtn) return;
+  const count = getPendingCount();
+  bar.classList.toggle('has-changes', count > 0);
+  info.textContent = count > 0
+    ? `${count} cambio(s) sin guardar — presioná GUARDAR para aplicar en GitHub`
+    : 'Sin cambios pendientes';
+  discardBtn.style.display = count > 0 ? '' : 'none';
+  if(!saveBtn.disabled){
+    saveBtn.textContent = count > 0 ? `💾 GUARDAR (${count})` : '💾 GUARDAR';
+  }
+}
+function updateToggleAllBtnLabel(rows){
+  const toggleBtn = document.getElementById('toggleAllBtn');
+  if(!toggleBtn) return;
+  const activeRows = rows.filter(r => !r.st.pendingDelete);
+  const allEnabled = activeRows.length > 0 && activeRows.every(r => r.st.enabled);
+  toggleBtn.textContent = allEnabled ? '✕ Deshabilitar todos' : '✓ Habilitar todos';
+}
+function syncRowDirtyDOM(rowEl, st){
+  if(!rowEl) return;
+  rowEl.classList.toggle('disabled-row', !st.enabled);
+  rowEl.classList.toggle('pending-delete-row', st.pendingDelete);
+  rowEl.classList.toggle('dirty-row', !st.pendingDelete && st.isDirty);
+  const badgeWrap = rowEl.querySelector('.p-ean');
+  if(!badgeWrap) return;
+  const oldBadge = badgeWrap.querySelector('.pending-badge');
+  if(oldBadge) oldBadge.remove();
+  if(st.pendingDelete){
+    badgeWrap.insertAdjacentHTML('beforeend', `<span class="pending-badge danger">Se quitará al guardar</span>`);
+  } else if(st.isDirty){
+    badgeWrap.insertAdjacentHTML('beforeend', `<span class="pending-badge">Sin guardar</span>`);
+  }
+}
 
 function renderAdminList(){
   const list = document.getElementById('adminProductList');
@@ -2386,36 +2495,40 @@ function renderAdminList(){
   const activeProducts = getActiveProducts();
   const q = adminSearchQuery.trim().toLowerCase();
   const rows = activeProducts
-    .map(p => ({ p, eff: getEffective(p) }))
-    .filter(({eff}) => !eff.deleted)
+    .map(p => ({ p, st: getAdminRowState(p) }))
+    .filter(({st}) => !st.eff.deleted)
     .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q));
-  const allEnabled = rows.length > 0 && rows.every(({eff}) => eff.enabled);
-  const toggleBtn = document.getElementById('toggleAllBtn');
-  if(toggleBtn){
-    toggleBtn.textContent = allEnabled ? '✕ Deshabilitar todos' : '✓ Habilitar todos';
-  }
+  updateToggleAllBtnLabel(rows);
   if(rows.length === 0){
     list.innerHTML = `<div class="admin-empty">${q ? 'No hay productos que coincidan con la búsqueda.' : 'No hay productos en esta pestaña.'}</div>`;
     updateAdminSelCount();
+    updateAdminSaveBar();
     return;
   }
-  list.innerHTML = rows.map(({p, eff}) => {
-    const priceVal = (eff.price === null || eff.price === undefined) ? '' : eff.price;
+  list.innerHTML = rows.map(({p, st}) => {
+    const priceVal = (st.price === null || st.price === undefined) ? '' : st.price;
     const checked = adminSelected.has(p.ean) ? 'checked' : '';
+    const rowStateClass = st.pendingDelete ? 'pending-delete-row' : (st.isDirty ? 'dirty-row' : '');
+    const badgeHtml = st.pendingDelete
+      ? `<span class="pending-badge danger">Se quitará al guardar</span>`
+      : (st.isDirty ? `<span class="pending-badge">Sin guardar</span>` : '');
+    const actionsHtml = st.pendingDelete
+      ? `<button class="admin-edit-btn" data-action="undo-delete" data-ean="${p.ean}">↺ Deshacer</button>`
+      : `<button class="admin-edit-btn" data-action="edit" data-ean="${p.ean}">✏ Editar</button><button class="admin-del-btn" data-action="delete" data-ean="${p.ean}" title="Quitar producto">🗑</button>`;
     return `
-    <div class="admin-row ${eff.enabled ? '' : 'disabled-row'} ${checked ? 'sel-row' : ''}">
+    <div class="admin-row ${st.enabled ? '' : 'disabled-row'} ${checked ? 'sel-row' : ''} ${rowStateClass}" data-ean="${p.ean}">
       <input type="checkbox" class="admin-sel" data-ean="${p.ean}" ${checked} title="Seleccionar">
       <img src="${p.img}" alt="" onerror="onImgError(this)">
       <div>
         <div class="p-name">${p.name}</div>
-        <div class="p-ean">EAN ${p.ean}</div>
+        <div class="p-ean">EAN ${p.ean}${badgeHtml}</div>
       </div>
-      <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${priceVal}" placeholder="Consultar" min="0" step="1">
+      <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${priceVal}" placeholder="Consultar" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
       <label class="switch">
-        <input type="checkbox" class="admin-enabled" data-ean="${p.ean}" ${eff.enabled ? 'checked' : ''}>
+        <input type="checkbox" class="admin-enabled" data-ean="${p.ean}" ${st.enabled ? 'checked' : ''} ${st.pendingDelete ? 'disabled' : ''}>
         <span class="slider-toggle"></span>
       </label>
-      <button class="admin-edit-btn" data-action="edit" data-ean="${p.ean}">✏ Editar</button>
+      <div class="admin-row-actions">${actionsHtml}</div>
     </div>`;
   }).join('');
 
@@ -2428,79 +2541,40 @@ function renderAdminList(){
     });
   });
   list.querySelectorAll('.admin-price').forEach(inp => {
-    inp.addEventListener('change', async () => {
+    inp.addEventListener('input', () => {
       const ean = inp.dataset.ean;
-      const base = findBaseProduct(ean);
-      const prevPrice = (base && base.price !== null && base.price !== undefined) ? base.price : '';
-      const gh = getGithubConfig();
-      if(!gh.repo || !gh.token){
-        inp.value = prevPrice;
-        showToast('Configurá el token de GitHub en General para guardar cambios.');
-        return;
-      }
       const raw = inp.value.trim();
       const val = raw === '' ? null : parseInt(raw, 10);
       const newPrice = (raw !== '' && Number.isFinite(val)) ? val : null;
-      inp.disabled = true;
-      try{
-        let savedEntry = null;
-        await updateCustomProducts(data => {
-          const idx = data.products.findIndex(p => p.ean === ean);
-          const existing = idx >= 0 ? data.products[idx] : null;
-          savedEntry = buildRepoProductEntry(ean, existing, { price: newPrice });
-          if(idx >= 0) data.products[idx] = savedEntry; else data.products.push(savedEntry);
-          return data;
-        }, `Actualizar precio ${ean}`);
-        clearLocalOverrides([ean]);
-        if(savedEntry) mergeCustomProductLocally(savedEntry);
-        renderGrid();
-        showToast('Precio guardado en GitHub');
-      }catch(e){
-        inp.value = prevPrice;
-        showToast('Error al guardar precio: ' + e.message);
-      }finally{
-        inp.disabled = false;
-      }
+      stageProductChange(ean, { price: newPrice });
+      const base = findBaseProduct(ean);
+      if(base) syncRowDirtyDOM(inp.closest('.admin-row'), getAdminRowState(base));
     });
   });
   list.querySelectorAll('.admin-enabled').forEach(chk => {
-    chk.addEventListener('change', async () => {
+    chk.addEventListener('change', () => {
       const ean = chk.dataset.ean;
-      const nextEnabled = chk.checked;
-      const gh = getGithubConfig();
-      if(!gh.repo || !gh.token){
-        chk.checked = !nextEnabled;
-        showToast('Configurá el token de GitHub en General para guardar cambios.');
-        return;
-      }
-      chk.disabled = true;
-      try{
-        let savedEntry = null;
-        await updateCustomProducts(data => {
-          const idx = data.products.findIndex(p => p.ean === ean);
-          const existing = idx >= 0 ? data.products[idx] : null;
-          savedEntry = buildRepoProductEntry(ean, existing, { enabled: nextEnabled });
-          if(idx >= 0) data.products[idx] = savedEntry; else data.products.push(savedEntry);
-          return data;
-        }, `${nextEnabled ? 'Habilitar' : 'Deshabilitar'} producto ${ean}`);
-        clearLocalOverrides([ean]);
-        if(savedEntry) mergeCustomProductLocally(savedEntry);
-        chk.closest('.admin-row').classList.toggle('disabled-row', !nextEnabled);
-        buildFilters();
-        renderGrid();
-        showToast(nextEnabled ? 'Producto habilitado en GitHub' : 'Producto deshabilitado en GitHub');
-      }catch(e){
-        chk.checked = !nextEnabled;
-        showToast('Error al guardar visibilidad: ' + e.message);
-      }finally{
-        chk.disabled = false;
-      }
+      stageProductChange(ean, { enabled: chk.checked });
+      const base = findBaseProduct(ean);
+      if(base) syncRowDirtyDOM(chk.closest('.admin-row'), getAdminRowState(base));
+      const curRows = getActiveProducts()
+        .map(p => ({ p, st: getAdminRowState(p) }))
+        .filter(({st}) => !st.eff.deleted)
+        .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q));
+      updateToggleAllBtnLabel(curRows);
     });
   });
-  list.querySelectorAll('.admin-edit-btn').forEach(btn => {
-    btn.addEventListener('click', () => openEditProductModal(btn.dataset.ean));
+  list.querySelectorAll('.admin-row-actions button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ean = btn.dataset.ean;
+      const action = btn.dataset.action;
+      if(action === 'edit') openEditProductModal(ean);
+      else if(action === 'delete'){ stageProductChange(ean, { deleted: true }); renderAdminList(); }
+      else if(action === 'undo-delete'){ stageProductChange(ean, { deleted: false }); renderAdminList(); }
+    });
   });
   updateAdminSelCount();
+  updateAdminSaveBar();
 }
 
 function updateAdminSelCount(){
@@ -2528,64 +2602,13 @@ document.getElementById('adminSelectNoneBtn').addEventListener('click', () => {
   renderAdminList();
 });
 
-document.getElementById('adminDisableSelBtn').addEventListener('click', async () => {
+document.getElementById('adminDisableSelBtn').addEventListener('click', () => {
   if(adminSelected.size === 0){ showToast('Primero seleccioná productos'); return; }
-  const gh = getGithubConfig();
-  if(!gh.repo || !gh.token){ showToast('Configurá el token de GitHub en General para guardar cambios.'); return; }
-  const eans = [...adminSelected];
-  const btn = document.getElementById('adminDisableSelBtn');
-  btn.disabled = true;
-  try{
-    const updatedEntries = [];
-    await updateCustomProducts(data => {
-      eans.forEach(ean => {
-        const idx = data.products.findIndex(p => p.ean === ean);
-        const existing = idx >= 0 ? data.products[idx] : null;
-        const entry = buildRepoProductEntry(ean, existing, { enabled: false });
-        if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
-        updatedEntries.push(entry);
-      });
-      return data;
-    }, `Deshabilitar ${eans.length} producto(s) desde el panel`);
-    clearLocalOverrides(eans);
-    updatedEntries.forEach(mergeCustomProductLocally);
-    renderAdminList();
-    buildFilters();
-    renderGrid();
-    showToast(`${eans.length} producto(s) deshabilitado(s) en GitHub`);
-  }catch(e){
-    showToast('Error al deshabilitar: ' + e.message);
-  }finally{
-    btn.disabled = false;
-  }
+  const count = adminSelected.size;
+  adminSelected.forEach(ean => stageProductChange(ean, { enabled: false }));
+  renderAdminList();
+  showToast(`${count} producto(s) deshabilitado(s) — tocá GUARDAR para aplicar`);
 });
-
-async function deleteProductsFromRepo(eans, label){
-  const gh = getGithubConfig();
-  if(!gh.repo || !gh.token){ showToast('Configurá el repositorio y el token de GitHub en la sección General.'); return false; }
-  const eanSet = new Set(eans);
-  try{
-    await updateCustomProducts(data => {
-      data.products.forEach(p => {
-        if(eanSet.has(p.ean)) p.deleted = true;
-      });
-      eanSet.forEach(ean => {
-        if(!data.products.some(p => p.ean === ean)){
-          const base = findBaseProduct(ean);
-          data.products.push({ ean, name: (base && base.name) || 'Producto eliminado', tab: activeTab, deleted: true });
-        }
-      });
-      return data;
-    }, label);
-    getAllTabs().forEach(t => {
-      t.products = t.products.filter(p => !eanSet.has(p.ean));
-    });
-    return true;
-  }catch(e){
-    showToast('Error al eliminar: ' + e.message);
-    return false;
-  }
-}
 
 function markDeletedLocally(eans){
   eans.forEach(ean => {
@@ -2594,68 +2617,113 @@ function markDeletedLocally(eans){
   saveOverrides();
 }
 
-document.getElementById('adminDeleteSelBtn').addEventListener('click', async () => {
+document.getElementById('adminDeleteSelBtn').addEventListener('click', () => {
   if(adminSelected.size === 0){ showToast('Primero seleccioná productos'); return; }
   const eans = [...adminSelected];
-  if(!confirm(`¿Eliminar ${eans.length} producto(s) seleccionado(s)? Se borrarán del repositorio.`)) return;
-  const ok = await deleteProductsFromRepo(eans, `Eliminar ${eans.length} producto(s) desde el panel`);
-  if(!ok) return;
-  markDeletedLocally(eans);
+  eans.forEach(ean => stageProductChange(ean, { deleted: true }));
   adminSelected.clear();
   renderAdminList();
-  buildFilters();
-  renderGrid();
-  showToast(`${eans.length} producto(s) eliminado(s)`);
+  showToast(`${eans.length} producto(s) marcados para quitar — tocá GUARDAR para confirmar`);
 });
 
-document.getElementById('adminDeleteAllBtn').addEventListener('click', async () => {
+document.getElementById('adminDeleteAllBtn').addEventListener('click', () => {
   const eans = getActiveProducts().filter(p => !getEffective(p).deleted).map(p => p.ean);
   if(eans.length === 0){ showToast('No hay productos para eliminar'); return; }
-  if(!confirm(`¿Eliminar TODOS los ${eans.length} producto(s) de esta pestaña? Se borrarán del repositorio.`)) return;
-  const ok = await deleteProductsFromRepo(eans, `Eliminar todos los productos de la pestaña ${activeTab}`);
-  if(!ok) return;
-  markDeletedLocally(eans);
+  if(!confirm(`¿Marcar TODOS los ${eans.length} producto(s) de esta pestaña para quitar? Luego confirmá con GUARDAR.`)) return;
+  eans.forEach(ean => stageProductChange(ean, { deleted: true }));
   adminSelected.clear();
   renderAdminList();
-  buildFilters();
-  renderGrid();
-  showToast(`${eans.length} producto(s) eliminado(s)`);
+  showToast('Productos marcados para quitar — tocá GUARDAR para confirmar');
 });
 
-document.getElementById('toggleAllBtn').addEventListener('click', async () => {
-  const products = getActiveProducts().filter(p => !getEffective(p).deleted);
+document.getElementById('toggleAllBtn').addEventListener('click', () => {
+  const products = getActiveProducts()
+    .map(p => ({ p, st: getAdminRowState(p) }))
+    .filter(({st}) => !st.eff.deleted && !st.pendingDelete);
   if(products.length === 0) return;
-  const gh = getGithubConfig();
-  if(!gh.repo || !gh.token){ showToast('Configurá el token de GitHub en General para guardar cambios.'); return; }
-  const allEnabled = products.every(p => getEffective(p).enabled);
+  const allEnabled = products.every(({st}) => st.enabled);
   const nextEnabled = !allEnabled;
-  const btn = document.getElementById('toggleAllBtn');
-  btn.disabled = true;
+  products.forEach(({p}) => stageProductChange(p.ean, { enabled: nextEnabled }));
+  renderAdminList();
+  showToast('Cambios preparados — tocá GUARDAR para aplicar');
+});
+
+document.getElementById('adminDiscardProductsBtn').addEventListener('click', () => {
+  if(getPendingCount() === 0) return;
+  pendingProductChanges = {};
+  renderAdminList();
+  showToast('Cambios descartados');
+});
+
+async function savePendingProductChanges(){
+  const entries = Object.entries(pendingProductChanges);
+  if(entries.length === 0){ showToast('No hay cambios pendientes para guardar'); return; }
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){ showToast('Configurá el repositorio y el token de GitHub en General.'); return; }
+
+  const deletedEans = entries.filter(([, c]) => c.deleted === true).map(([ean]) => ean);
+  if(deletedEans.length > 0){
+    if(!confirm(`Se quitarán definitivamente ${deletedEans.length} producto(s) del catálogo y se guardarán ${entries.length} cambio(s) en GitHub. ¿Continuar?`)) return;
+  }
+
+  const saveBtn = document.getElementById('adminSaveProductsBtn');
+  const discardBtn = document.getElementById('adminDiscardProductsBtn');
+  saveBtn.disabled = true;
+  discardBtn.disabled = true;
+  saveBtn.textContent = 'Guardando...';
   try{
-    const eans = products.map(p => p.ean);
     const updatedEntries = [];
+    const updatedEans = [];
     await updateCustomProducts(data => {
-      eans.forEach(ean => {
+      entries.forEach(([ean, change]) => {
         const idx = data.products.findIndex(p => p.ean === ean);
+        if(change.deleted === true){
+          if(idx >= 0){
+            data.products[idx].deleted = true;
+          } else {
+            const base = findBaseProduct(ean);
+            data.products.push({ ean, name: (base && base.name) || 'Producto eliminado', tab: findProductTab(ean), deleted: true });
+          }
+          return;
+        }
         const existing = idx >= 0 ? data.products[idx] : null;
-        const entry = buildRepoProductEntry(ean, existing, { enabled: nextEnabled });
+        const patch = {};
+        if('price' in change) patch.price = change.price;
+        if('enabled' in change) patch.enabled = change.enabled;
+        const entry = buildRepoProductEntry(ean, existing, patch);
         if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
         updatedEntries.push(entry);
+        updatedEans.push(ean);
       });
       return data;
-    }, `${nextEnabled ? 'Habilitar' : 'Deshabilitar'} todos en pestaña ${activeTab}`);
-    clearLocalOverrides(eans);
-    updatedEntries.forEach(mergeCustomProductLocally);
+    }, `Guardar ${entries.length} cambio(s) de productos desde el panel`);
+
+    if(deletedEans.length > 0){
+      const delSet = new Set(deletedEans);
+      getAllTabs().forEach(t => {
+        t.products = t.products.filter(p => !delSet.has(p.ean));
+      });
+      markDeletedLocally(deletedEans);
+      deletedEans.forEach(ean => adminSelected.delete(ean));
+    }
+    if(updatedEans.length > 0){
+      clearLocalOverrides(updatedEans);
+      updatedEntries.forEach(mergeCustomProductLocally);
+    }
+    pendingProductChanges = {};
     renderAdminList();
     buildFilters();
     renderGrid();
-    showToast(nextEnabled ? 'Todos habilitados en GitHub' : 'Todos deshabilitados en GitHub');
+    showToast(`✅ ${entries.length} cambio(s) guardados en GitHub`);
   }catch(e){
-    showToast('Error al actualizar visibilidad: ' + e.message);
+    showToast('❌ Error al guardar: ' + e.message);
   }finally{
-    btn.disabled = false;
+    saveBtn.disabled = false;
+    discardBtn.disabled = false;
+    updateAdminSaveBar();
   }
-});
+}
+document.getElementById('adminSaveProductsBtn').addEventListener('click', savePendingProductChanges);
 
 document.getElementById('saveWhatsapp').addEventListener('click', async () => {
   const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
@@ -2909,7 +2977,8 @@ async function saveEditProduct(){
     getAllTabs().forEach(t => {
       if(t.id !== tab) t.products = t.products.filter(p => p.ean !== ean);
     });
-    // Si el producto estaba eliminado, la edición lo resucita: limpiar overrides locales
+    // Si el producto estaba eliminado o tenía cambios pendientes, limpiarlos
+    delete pendingProductChanges[ean];
     clearLocalOverrides([ean]);
     mergeCustomProductLocally(savedEntry);
     buildFilters();
