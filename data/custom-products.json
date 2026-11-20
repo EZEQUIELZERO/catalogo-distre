@@ -61,12 +61,14 @@
     {
       "ean": "7791274000720",
       "name": "JAB. LIQ. PARA MANOS FRUTOS DEL BOSQUE 300 ML",
+      "desc": "",
       "price": 2500,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-ml-sweet-berries-77912740007201-277394579419ac616b16560772384285-640-0.webp?_gl=1*asgphn*_gcl_au*MjEyMTU2NzEwMS4xNzkzMTE1ODAxLjU0OTY0MTQ2My4xNzk1MDE2Nzg5LjE3OTUwMTY5MTMuMTU2MTE1MDk0NC4xNzk0OTY1MzMzLjE3OTUwMTY5MTM.*_ga*MTk3NTU4ODkwMy4xNzkzMTE1ODAx*_ga_2NFZDBKLY4*czE3OTUwMTY3ODkkbzUkZzEkdDE3OTUwMTY5NDAkajkkbDAkaDA.",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 2
     },
     {
@@ -474,12 +476,14 @@
     {
       "ean": "7791274193408",
       "name": "JAB. LIQ. PARA MANOS CITRUS 300 ML",
+      "desc": "",
       "price": 2500,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-citrus-splash-77912741934081-950dc141a5ee7fc31016560771661600-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 7
     },
     {
