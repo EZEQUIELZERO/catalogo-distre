@@ -1258,12 +1258,14 @@
     {
       "ean": "7791274202346",
       "name": "ALGABO AC 0% OLIVA Y ARGÁN EP 300",
+      "desc": "",
       "price": 2000,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-acondicionador-oliva-argan-fortalecedor-7791274201783-5651bf96519fc4d33a17787726747952-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 8
     },
     {
@@ -1282,12 +1284,14 @@
     {
       "ean": "7791274202360",
       "name": "ALGABO SH 0% ACAÍ Y ROMERO EP 300",
+      "desc": "",
       "price": 2000,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-shampoo-acai-romero-antioxidante-7791274201738-b217a62d88690b705117764338218356-480-0.png",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 13
     },
     {
