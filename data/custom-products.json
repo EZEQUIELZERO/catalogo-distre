@@ -1265,12 +1265,14 @@
     {
       "ean": "7791274202353",
       "name": "ALGABO SH 0% OLIVA Y ARGÁN EP 300",
+      "desc": "",
       "price": 2000,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-shampoo-oliva-argan-fortalecedor-7791274201745-2a9533af6df0b2f9af17764317266002-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 4
     },
     {
@@ -2052,12 +2054,14 @@
     {
       "ean": "7791274198120",
       "name": "TALCO CORPORAL SUAVE 120 ML",
+      "desc": "",
       "price": 2100,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-desodorante-en-polvo-x120-g-suave-7791274198120-f746ffdab2ebcb5c0417925111470050-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 3
     },
     {
@@ -3265,12 +3269,14 @@
     {
       "ean": "7791274202094",
       "name": "JABON DE TOCADOR GLICERINA TE VERDE X1 UD 90 GR",
+      "desc": "",
       "price": 1000,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/jabon-de-glicerina-x90-g-green-tea-7791274202094-7a43dde804463f284117764358765806-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 5
     },
     {
