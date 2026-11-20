@@ -547,23 +547,27 @@
     {
       "ean": "7791274196430",
       "name": "POMO EFECTO HUMEDO 150 ML",
+      "desc": "",
       "price": 2300,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x150-pomo-efecto-humedo-77912741964301-c10db7d7661f1e1e8c16759558851583-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 23
     },
     {
       "ean": "7791274196447",
       "name": "POMO EXTRA BRILLO 150 ML",
+      "desc": "",
       "price": 2300,
       "tab": "algabo",
       "cat": "Otros",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x150-pomo-extra-brillo-y-control-779127419644711-90ca809000d427aee816759561463873-480-0.webp",
       "brand": "ALGABO",
+      "enabled": false,
       "stock": 14
     },
     {
