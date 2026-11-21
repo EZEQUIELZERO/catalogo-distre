@@ -467,3 +467,19 @@ Fecha: 2026-11-21
     total en el carrito (`#cartSavingsRow`), y desglose de bultos y descuento en el
     mensaje de WhatsApp (`buildOrderMessage`).
 Archivos: index.html, NOTASDEVER.MD
+
+### #035 - Envío/exportación del pedido con Descripción completa (`DESCRIPCION | CANTIDAD | PRECIO | TOTAL`)
+Fecha: 2026-11-21
+- El envío del carrito (`buildOrderData` / `buildOrderMessage`) siempre utiliza la
+  **Descripción** completa (`eff.name`, nunca el nombre corto del catálogo) y ordena
+  las columnas como **`DESCRIPCION`**, **`CANTIDAD`**, **`PRECIO`**, **`TOTAL`**.
+- Nuevas acciones de exportación en `#cartOverlay` junto a **Enviar pedido por WhatsApp**:
+  - **📊 Descargar Excel (`#exportExcelBtn`)**: generador OOXML `.xlsx` puro en JS
+    (`buildOrderXlsxBytes` / `buildZipBytes`) con hoja `Pedido`, columnas formateadas,
+    descuento por bulto y total.
+  - **📋 Copiar para Sheets (`#copySheetsBtn`)**: copia TSV (`buildOrderTsv`) en
+    4 columnas para pegar directo en Google Sheets.
+  - **📄 Descargar PDF (`#exportPdfBtn`)**: generador PDF 1.4 puro en JS
+    (`buildOrderPdfBytes`) en tamaño A4 con codificación WinAnsi para acentos/ñ,
+    ajuste de líneas y paginación automática.
+Archivos: index.html, NOTASDEVER.MD

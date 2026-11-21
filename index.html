@@ -824,6 +824,10 @@
   .cart-remove{color:var(--text-dim);cursor:pointer;font-size:1.15rem;padding:2px;background:none;border:none;}
   .cart-remove:hover{color:var(--danger);}
   .cart-summary{padding:20px 26px 26px;display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--border);margin-top:10px;}
+  .cart-export-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .cart-export-btn{padding:10px 8px;font-size:.78rem;line-height:1.2;text-align:center;white-space:normal;}
+  .cart-export-btn:disabled{opacity:.5;pointer-events:none;cursor:not-allowed;}
+  @media(max-width:520px){.cart-export-row{grid-template-columns:1fr;}}
   .cart-savings-row{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;font-weight:700;color:var(--accent);}
   .cart-total-row{display:flex;justify-content:space-between;align-items:center;font-size:1.15rem;font-weight:800;}
   .cart-total-row span:last-child{color:var(--accent);}
@@ -1441,6 +1445,11 @@
       <div class="cart-savings-row" id="cartSavingsRow" style="display:none;"><span>Descuento por bulto</span><span id="cartSavings">- $ 0</span></div>
       <div class="cart-total-row"><span>Total del pedido</span><span id="cartTotal">$ 0</span></div>
       <a class="btn btn-whatsapp" id="sendOrderBtn" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+      <div class="cart-export-row">
+        <button type="button" class="btn btn-gold cart-export-btn" id="exportExcelBtn">📊 Descargar Excel</button>
+        <button type="button" class="btn btn-gray cart-export-btn" id="copySheetsBtn">📋 Copiar para Sheets</button>
+        <button type="button" class="btn btn-gray cart-export-btn" id="exportPdfBtn">📄 Descargar PDF</button>
+      </div>
       <button class="btn btn-close" id="clearCartBtn">Vaciar carrito</button>
     </div>
   </div>
@@ -4009,42 +4018,539 @@ document.getElementById('sendOrderBtn').addEventListener('click', (e) => {
   showToast('Abriendo WhatsApp...');
 });
 
-function buildOrderMessage(entries){
-  const lines = ['Pedido - Catálogo Distre', ''];
-  let total = 0;
+function getCartEntries(){
+  return Object.entries(cart).filter(([, qty]) => qty > 0);
+}
+
+function buildOrderData(entries){
+  const items = [];
+  let subtotal = 0;
   let totalSavings = 0;
+  let total = 0;
   entries.forEach(([ean, qty]) => {
     const base = findBaseProduct(ean);
     if(!base) return;
     const eff = getEffective(base);
     const line = calcCartLine(eff, qty);
-    total += line.total;
+    const descripcion = String(eff.name || '').trim();
+    const precioUnitario = (line.savings > 0 && qty > 0)
+      ? (line.looseUnits === 0
+          ? Math.round(line.unitPrice * (1 - line.descPct / 100) * 100) / 100
+          : Math.round((line.total / qty) * 100) / 100)
+      : line.unitPrice;
+    subtotal += line.rawTotal;
     totalSavings += line.savings;
-    let bultoNote = '';
-    if(line.bultos > 0){
-      const bulkTxt = line.looseUnits > 0
-        ? `${line.bultos} ${line.bultos === 1 ? 'bulto' : 'bultos'} x ${line.bulto} + ${line.looseUnits} u.`
-        : `${line.bultos} ${line.bultos === 1 ? 'bulto' : 'bultos'} x ${line.bulto}`;
-      bultoNote = line.descPct > 0
-        ? ` (${bulkTxt}, -${formatDiscountPct(line.descPct)}% dto. bulto)`
-        : ` (${bulkTxt})`;
-    }
-    lines.push(`${qty}, ${eff.name}${bultoNote}, ${formatPrice(line.total)}`);
+    total += line.total;
+    items.push({
+      ean,
+      descripcion,
+      cantidad: qty,
+      precioLista: line.unitPrice,
+      precioUnitario,
+      rawTotal: line.rawTotal,
+      total: line.total,
+      savings: line.savings,
+      bulto: line.bulto,
+      bultos: line.bultos,
+      looseUnits: line.looseUnits,
+      descPct: line.descPct
+    });
+  });
+  return { items, subtotal, totalSavings, total };
+}
+
+function buildOrderMessage(entries){
+  const order = buildOrderData(entries);
+  const lines = ['Pedido - Catálogo Distre', '', 'DESCRIPCION | CANTIDAD | PRECIO | TOTAL'];
+  order.items.forEach(item => {
+    lines.push(`${item.descripcion} | ${item.cantidad} | ${formatPrice(item.precioUnitario)} | ${formatPrice(item.total)}`);
   });
   lines.push('');
-  if(totalSavings > 0){
-    lines.push(`DESCUENTO POR BULTO -${formatPrice(totalSavings)}`);
+  if(order.totalSavings > 0){
+    lines.push(`DESCUENTO POR BULTO: -${formatPrice(order.totalSavings)}`);
   }
-  lines.push(`TOTAL DEL PEDIDO ${formatPrice(total)}`);
+  lines.push(`TOTAL DEL PEDIDO: ${formatPrice(order.total)}`);
   return lines.join('\n');
 }
+
+function formatSheetsNumber(n){
+  const num = Number(n);
+  if(!Number.isFinite(num)) return '0';
+  const rounded = Math.round(num * 100) / 100;
+  return Number.isInteger(rounded) ? String(rounded) : String(rounded).replace('.', ',');
+}
+
+function buildOrderTsv(entries){
+  const order = buildOrderData(entries);
+  const rows = [['DESCRIPCION', 'CANTIDAD', 'PRECIO', 'TOTAL'].join('\t')];
+  order.items.forEach(item => {
+    const cleanDesc = item.descripcion.replace(/[\r\n\t]+/g, ' ').trim();
+    rows.push([
+      cleanDesc,
+      String(item.cantidad),
+      formatSheetsNumber(item.precioUnitario),
+      formatSheetsNumber(item.total)
+    ].join('\t'));
+  });
+  return rows.join('\n');
+}
+
+function xmlEscape(str){
+  return String(str ?? '')
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+const CRC32_TABLE = (() => {
+  const tbl = new Uint32Array(256);
+  for(let i = 0; i < 256; i++){
+    let c = i;
+    for(let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+    tbl[i] = c >>> 0;
+  }
+  return tbl;
+})();
+function crc32(bytes){
+  let crc = 0xFFFFFFFF;
+  for(let i = 0; i < bytes.length; i++){
+    crc = CRC32_TABLE[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+  }
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+function buildZipBytes(files){
+  const enc = new TextEncoder();
+  const now = new Date();
+  const dosTime = ((now.getHours() & 31) << 11) | ((now.getMinutes() & 63) << 5) | ((now.getSeconds() >> 1) & 31);
+  const dosDate = ((Math.max(1980, now.getFullYear()) - 1980) << 9) | (((now.getMonth() + 1) & 15) << 5) | (now.getDate() & 31);
+  const localParts = [];
+  const cdParts = [];
+  let offset = 0;
+
+  files.forEach(file => {
+    const nameBytes = enc.encode(file.name);
+    const data = file.data;
+    const crc = crc32(data);
+
+    const lh = new Uint8Array(30 + nameBytes.length);
+    const lv = new DataView(lh.buffer);
+    lv.setUint32(0, 0x04034B50, true);
+    lv.setUint16(4, 20, true);
+    lv.setUint16(6, 0x0800, true);
+    lv.setUint16(8, 0, true);
+    lv.setUint16(10, dosTime, true);
+    lv.setUint16(12, dosDate, true);
+    lv.setUint32(14, crc, true);
+    lv.setUint32(18, data.length, true);
+    lv.setUint32(22, data.length, true);
+    lv.setUint16(26, nameBytes.length, true);
+    lv.setUint16(28, 0, true);
+    lh.set(nameBytes, 30);
+    localParts.push(lh, data);
+
+    const ch = new Uint8Array(46 + nameBytes.length);
+    const cv = new DataView(ch.buffer);
+    cv.setUint32(0, 0x02014B50, true);
+    cv.setUint16(4, 20, true);
+    cv.setUint16(6, 20, true);
+    cv.setUint16(8, 0x0800, true);
+    cv.setUint16(10, 0, true);
+    cv.setUint16(12, dosTime, true);
+    cv.setUint16(14, dosDate, true);
+    cv.setUint32(16, crc, true);
+    cv.setUint32(20, data.length, true);
+    cv.setUint32(24, data.length, true);
+    cv.setUint16(28, nameBytes.length, true);
+    cv.setUint16(30, 0, true);
+    cv.setUint16(32, 0, true);
+    cv.setUint16(34, 0, true);
+    cv.setUint16(36, 0, true);
+    cv.setUint32(38, 0, true);
+    cv.setUint32(42, offset, true);
+    ch.set(nameBytes, 46);
+    cdParts.push(ch);
+
+    offset += lh.length + data.length;
+  });
+
+  const cdSize = cdParts.reduce((sum, p) => sum + p.length, 0);
+  const eocd = new Uint8Array(22);
+  const ev = new DataView(eocd.buffer);
+  ev.setUint32(0, 0x06054B50, true);
+  ev.setUint16(4, 0, true);
+  ev.setUint16(6, 0, true);
+  ev.setUint16(8, files.length, true);
+  ev.setUint16(10, files.length, true);
+  ev.setUint32(12, cdSize, true);
+  ev.setUint32(16, offset, true);
+  ev.setUint16(20, 0, true);
+
+  const totalLen = offset + cdSize + eocd.length;
+  const out = new Uint8Array(totalLen);
+  let pos = 0;
+  [...localParts, ...cdParts, eocd].forEach(part => {
+    out.set(part, pos);
+    pos += part.length;
+  });
+  return out;
+}
+
+function buildOrderXlsxBytes(entries){
+  const order = buildOrderData(entries);
+  const enc = new TextEncoder();
+  const strCell = (ref, text, style = 0) =>
+    `<c r="${ref}" t="inlineStr" s="${style}"><is><t xml:space="preserve">${xmlEscape(text)}</t></is></c>`;
+  const numCell = (ref, val, style = 0) =>
+    `<c r="${ref}" s="${style}"><v>${Number(val) || 0}</v></c>`;
+
+  const sheetRows = [];
+  sheetRows.push(
+    `<row r="1" ht="22" customHeight="1">${strCell('A1', 'DESCRIPCION', 1)}${strCell('B1', 'CANTIDAD', 1)}${strCell('C1', 'PRECIO', 1)}${strCell('D1', 'TOTAL', 1)}</row>`
+  );
+
+  let rowNum = 2;
+  order.items.forEach(item => {
+    sheetRows.push(
+      `<row r="${rowNum}">${strCell('A' + rowNum, item.descripcion, 0)}${numCell('B' + rowNum, item.cantidad, 2)}${numCell('C' + rowNum, item.precioUnitario, 3)}${numCell('D' + rowNum, item.total, 3)}</row>`
+    );
+    rowNum++;
+  });
+
+  rowNum++;
+  if(order.totalSavings > 0){
+    sheetRows.push(
+      `<row r="${rowNum}">${strCell('A' + rowNum, 'DESCUENTO POR BULTO', 4)}${strCell('B' + rowNum, '', 4)}${strCell('C' + rowNum, '', 4)}${numCell('D' + rowNum, -order.totalSavings, 5)}</row>`
+    );
+    rowNum++;
+  }
+  sheetRows.push(
+    `<row r="${rowNum}" ht="20" customHeight="1">${strCell('A' + rowNum, 'TOTAL DEL PEDIDO', 4)}${strCell('B' + rowNum, '', 4)}${strCell('C' + rowNum, '', 4)}${numCell('D' + rowNum, order.total, 5)}</row>`
+  );
+
+  const sheetXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+    + '<cols>'
+    + '<col min="1" max="1" width="54" customWidth="1"/>'
+    + '<col min="2" max="2" width="12" customWidth="1"/>'
+    + '<col min="3" max="3" width="15" customWidth="1"/>'
+    + '<col min="4" max="4" width="16" customWidth="1"/>'
+    + '</cols>'
+    + '<sheetData>' + sheetRows.join('') + '</sheetData>'
+    + '</worksheet>';
+
+  const stylesXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+    + '<numFmts count="1"><numFmt numFmtId="164" formatCode="&quot;$ &quot;#,##0"/></numFmts>'
+    + '<fonts count="3">'
+    + '<font><sz val="11"/><color rgb="FF111827"/><name val="Calibri"/></font>'
+    + '<font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>'
+    + '<font><b/><sz val="11"/><color rgb="FF111827"/><name val="Calibri"/></font>'
+    + '</fonts>'
+    + '<fills count="4">'
+    + '<fill><patternFill patternType="none"/></fill>'
+    + '<fill><patternFill patternType="gray125"/></fill>'
+    + '<fill><patternFill patternType="solid"><fgColor rgb="FF1A6FD8"/></patternFill></fill>'
+    + '<fill><patternFill patternType="solid"><fgColor rgb="FFF3F6FA"/></patternFill></fill>'
+    + '</fills>'
+    + '<borders count="2">'
+    + '<border><left/><right/><top/><bottom/><diagonal/></border>'
+    + '<border><left style="thin"><color rgb="FFD0D7DE"/></left><right style="thin"><color rgb="FFD0D7DE"/></right><top style="thin"><color rgb="FFD0D7DE"/></top><bottom style="thin"><color rgb="FFD0D7DE"/></bottom><diagonal/></border>'
+    + '</borders>'
+    + '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'
+    + '<cellXfs count="6">'
+    + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1"/>'
+    + '<xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>'
+    + '<xf numFmtId="1" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+    + '<xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+    + '<xf numFmtId="0" fontId="2" fillId="3" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>'
+    + '<xf numFmtId="164" fontId="2" fillId="3" borderId="1" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right" vertical="center"/></xf>'
+    + '</cellXfs>'
+    + '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'
+    + '</styleSheet>';
+
+  const contentTypesXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+    + '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+    + '<Default Extension="xml" ContentType="application/xml"/>'
+    + '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'
+    + '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'
+    + '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'
+    + '</Types>';
+
+  const relsXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>'
+    + '</Relationships>';
+
+  const workbookXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+    + '<sheets><sheet name="Pedido" sheetId="1" r:id="rId1"/></sheets>'
+    + '</workbook>';
+
+  const workbookRelsXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>'
+    + '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
+    + '</Relationships>';
+
+  return buildZipBytes([
+    { name: '[Content_Types].xml', data: enc.encode(contentTypesXml) },
+    { name: '_rels/.rels', data: enc.encode(relsXml) },
+    { name: 'xl/workbook.xml', data: enc.encode(workbookXml) },
+    { name: 'xl/_rels/workbook.xml.rels', data: enc.encode(workbookRelsXml) },
+    { name: 'xl/styles.xml', data: enc.encode(stylesXml) },
+    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml) }
+  ]);
+}
+
+const WINANSI_EXTRAS = {
+  0x20AC: 0x80, 0x2018: 0x91, 0x2019: 0x92, 0x201C: 0x93, 0x201D: 0x94,
+  0x2022: 0x95, 0x2013: 0x96, 0x2014: 0x97
+};
+function encodePdfWinAnsi(str){
+  const nfc = String(str ?? '').normalize('NFC');
+  let out = '';
+  for(let i = 0; i < nfc.length; i++){
+    let code = nfc.charCodeAt(i);
+    if(code in WINANSI_EXTRAS) code = WINANSI_EXTRAS[code];
+    if(code === 0x5C) out += '\\\\';
+    else if(code === 0x28) out += '\\(';
+    else if(code === 0x29) out += '\\)';
+    else if(code >= 0x20 && code <= 0x7E) out += String.fromCharCode(code);
+    else if(code >= 0xA0 && code <= 0xFF) out += '\\' + code.toString(8).padStart(3, '0');
+    else if(code >= 0x80 && code <= 0x9F) out += '\\' + code.toString(8).padStart(3, '0');
+    else out += ' ';
+  }
+  return out;
+}
+
+function pdfApproxWidth(str, size, isBold = false){
+  let units = 0;
+  for(const ch of String(str ?? '')){
+    if('ilI.,:;\'!| '.includes(ch)) units += 0.28;
+    else if('ftrj()[]/\\-'.includes(ch)) units += 0.36;
+    else if('mwMW@#%&'.includes(ch)) units += 0.84;
+    else if(ch >= '0' && ch <= '9') units += 0.556;
+    else if(ch === '$') units += 0.556;
+    else if(ch === ch.toUpperCase() && ch !== ch.toLowerCase()) units += 0.68;
+    else units += 0.53;
+  }
+  return units * size * (isBold ? 1.05 : 1);
+}
+
+function wrapPdfText(str, maxWidth, size, isBold = false){
+  const clean = String(str ?? '').replace(/\s+/g, ' ').trim();
+  if(!clean) return [''];
+  const words = clean.split(' ');
+  const lines = [];
+  let current = '';
+  words.forEach(word => {
+    const candidate = current ? (current + ' ' + word) : word;
+    if(pdfApproxWidth(candidate, size, isBold) <= maxWidth){
+      current = candidate;
+    } else {
+      if(current) lines.push(current);
+      if(pdfApproxWidth(word, size, isBold) <= maxWidth){
+        current = word;
+      } else {
+        let part = '';
+        for(const ch of word){
+          if(part && pdfApproxWidth(part + ch, size, isBold) > maxWidth){
+            lines.push(part);
+            part = ch;
+          } else {
+            part += ch;
+          }
+        }
+        current = part;
+      }
+    }
+  });
+  if(current) lines.push(current);
+  return lines;
+}
+
+function buildOrderPdfBytes(entries){
+  const order = buildOrderData(entries);
+  const now = new Date();
+  const pad2 = n => String(n).padStart(2, '0');
+  const dateLabel = `Fecha: ${pad2(now.getDate())}/${pad2(now.getMonth() + 1)}/${now.getFullYear()} ${pad2(now.getHours())}:${pad2(now.getMinutes())} · ${order.items.length} ${order.items.length === 1 ? 'producto' : 'productos'}`;
+
+  const pages = [];
+  let ops = [];
+  let y = 790;
+
+  const drawText = (font, size, x, yPos, text, rgb = '0.07 0.09 0.15') => {
+    ops.push(`BT /${font} ${size} Tf ${rgb} rg 1 0 0 1 ${x.toFixed(1)} ${yPos.toFixed(1)} Tm (${encodePdfWinAnsi(text)}) Tj ET`);
+  };
+  const drawRight = (font, size, rightX, yPos, text, rgb) => {
+    const w = pdfApproxWidth(text, size, font === 'F2');
+    drawText(font, size, rightX - w, yPos, text, rgb);
+  };
+  const drawRect = (x, yPos, w, h, rgb) => {
+    ops.push(`${rgb} rg ${x.toFixed(1)} ${yPos.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)} re f`);
+  };
+  const drawLine = (x1, yPos, x2, rgb = '0.82 0.85 0.89') => {
+    ops.push(`${rgb} RG 0.6 w ${x1.toFixed(1)} ${yPos.toFixed(1)} m ${x2.toFixed(1)} ${yPos.toFixed(1)} l S`);
+  };
+
+  const startPage = (isContinuation) => {
+    if(ops.length) pages.push(ops.join('\n'));
+    ops = [];
+    drawText('F2', 16, 40, 795, isContinuation ? 'Pedido - Catálogo Distre (cont.)' : 'Pedido - Catálogo Distre');
+    drawText('F1', 9.5, 40, 777, dateLabel, '0.35 0.41 0.50');
+    drawRect(40, 742, 515, 22, '0.10 0.44 0.85');
+    drawText('F2', 9.5, 46, 749.5, 'DESCRIPCION', '1 1 1');
+    drawRight('F2', 9.5, 395, 749.5, 'CANTIDAD', '1 1 1');
+    drawRight('F2', 9.5, 470, 749.5, 'PRECIO', '1 1 1');
+    drawRight('F2', 9.5, 549, 749.5, 'TOTAL', '1 1 1');
+    y = 736;
+  };
+
+  startPage(false);
+
+  order.items.forEach((item, idx) => {
+    const wrapped = wrapPdfText(item.descripcion, 285, 9.5, false);
+    const rowH = Math.max(22, wrapped.length * 12.5 + 9);
+    if(y - rowH < 72){
+      startPage(true);
+    }
+    const rowBottom = y - rowH;
+    if(idx % 2 === 1){
+      drawRect(40, rowBottom, 515, rowH, '0.96 0.97 0.99');
+    }
+    wrapped.forEach((ln, li) => {
+      drawText('F1', 9.5, 46, y - 13 - li * 12.5, ln);
+    });
+    const numY = y - 13;
+    drawRight('F1', 9.5, 395, numY, String(item.cantidad));
+    drawRight('F1', 9.5, 470, numY, formatPrice(item.precioUnitario));
+    drawRight('F2', 9.5, 549, numY, formatPrice(item.total));
+    drawLine(40, rowBottom, 555);
+    y = rowBottom;
+  });
+
+  const summaryH = (order.totalSavings > 0 ? 54 : 30);
+  if(y - summaryH < 48){
+    startPage(true);
+  }
+  y -= 10;
+  if(order.totalSavings > 0){
+    drawRect(40, y - 22, 515, 22, '0.95 0.96 0.98');
+    drawText('F1', 10, 46, y - 15, 'Descuento por bulto', '0.35 0.41 0.50');
+    drawRight('F2', 10, 549, y - 15, '-' + formatPrice(order.totalSavings), '0.10 0.44 0.85');
+    y -= 24;
+  }
+  drawRect(40, y - 26, 515, 26, '0.91 0.94 0.98');
+  drawText('F2', 11.5, 46, y - 17.5, 'TOTAL DEL PEDIDO');
+  drawRight('F2', 11.5, 549, y - 17.5, formatPrice(order.total), '0.10 0.44 0.85');
+  drawLine(40, y - 26, 555, '0.10 0.44 0.85');
+
+  if(ops.length) pages.push(ops.join('\n'));
+
+  const objects = [];
+  const addObj = (body) => { objects.push(body); return objects.length; };
+
+  const fontNormalId = addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  const fontBoldId = addObj('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+  const pagesObjIndex = objects.length + 1;
+  objects.push('');
+  const pageIds = [];
+
+  pages.forEach(stream => {
+    const contentId = addObj(`<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`);
+    const pageId = addObj(`<< /Type /Page /Parent ${pagesObjIndex} 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${fontNormalId} 0 R /F2 ${fontBoldId} 0 R >> >> /Contents ${contentId} 0 R >>`);
+    pageIds.push(pageId);
+  });
+
+  objects[pagesObjIndex - 1] = `<< /Type /Pages /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] /Count ${pageIds.length} >>`;
+  const catalogId = addObj(`<< /Type /Catalog /Pages ${pagesObjIndex} 0 R >>`);
+
+  let pdf = '%PDF-1.4\n';
+  const offsets = [0];
+  objects.forEach((body, idx) => {
+    offsets.push(pdf.length);
+    pdf += `${idx + 1} 0 obj\n${body}\nendobj\n`;
+  });
+  const xrefPos = pdf.length;
+  pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
+  for(let i = 1; i <= objects.length; i++){
+    pdf += String(offsets[i]).padStart(10, '0') + ' 00000 n \n';
+  }
+  pdf += `trailer\n<< /Size ${objects.length + 1} /Root ${catalogId} 0 R >>\nstartxref\n${xrefPos}\n%%EOF\n`;
+
+  const out = new Uint8Array(pdf.length);
+  for(let i = 0; i < pdf.length; i++) out[i] = pdf.charCodeAt(i) & 0xFF;
+  return out;
+}
+
+function orderFilename(ext){
+  const now = new Date();
+  const pad2 = n => String(n).padStart(2, '0');
+  return `pedido-distre-${now.getFullYear()}-${pad2(now.getMonth() + 1)}-${pad2(now.getDate())}.${ext}`;
+}
+function triggerBlobDownload(bytes, filename, mimeType){
+  const blob = new Blob([bytes], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+document.getElementById('exportExcelBtn').addEventListener('click', () => {
+  const entries = getCartEntries();
+  if(entries.length === 0){ showToast('Tu carrito está vacío'); return; }
+  const bytes = buildOrderXlsxBytes(entries);
+  triggerBlobDownload(bytes, orderFilename('xlsx'), 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+  showToast('Excel descargado');
+});
+document.getElementById('copySheetsBtn').addEventListener('click', async () => {
+  const entries = getCartEntries();
+  if(entries.length === 0){ showToast('Tu carrito está vacío'); return; }
+  const tsv = buildOrderTsv(entries);
+  let copied = false;
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      await navigator.clipboard.writeText(tsv);
+      copied = true;
+    }
+  }catch(e){}
+  if(!copied){
+    const ta = document.createElement('textarea');
+    ta.value = tsv;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try{ copied = document.execCommand('copy'); }catch(e){}
+    ta.remove();
+  }
+  showToast(copied ? 'Pedido copiado — pegalo en Google Sheets' : 'No se pudo copiar al portapapeles');
+});
+document.getElementById('exportPdfBtn').addEventListener('click', () => {
+  const entries = getCartEntries();
+  if(entries.length === 0){ showToast('Tu carrito está vacío'); return; }
+  const bytes = buildOrderPdfBytes(entries);
+  triggerBlobDownload(bytes, orderFilename('pdf'), 'application/pdf');
+  showToast('PDF descargado');
+});
 
 function renderCartModal(){
   const list = document.getElementById('cartList');
   const sendBtn = document.getElementById('sendOrderBtn');
+  const exportBtns = ['exportExcelBtn', 'copySheetsBtn', 'exportPdfBtn'].map(id => document.getElementById(id)).filter(Boolean);
   const savingsRow = document.getElementById('cartSavingsRow');
   const savingsEl = document.getElementById('cartSavings');
-  const entries = Object.entries(cart).filter(([ean, qty]) => qty > 0);
+  const entries = getCartEntries();
 
   if(entries.length === 0){
     list.innerHTML = `<div class="cart-empty">Tu carrito está vacío.</div>`;
@@ -4052,10 +4558,12 @@ function renderCartModal(){
     document.getElementById('cartTotal').textContent = formatPrice(0);
     sendBtn.style.pointerEvents = 'none';
     sendBtn.style.opacity = '.5';
+    exportBtns.forEach(b => { b.disabled = true; });
     return;
   }
   sendBtn.style.pointerEvents = '';
   sendBtn.style.opacity = '';
+  exportBtns.forEach(b => { b.disabled = false; });
 
   let total = 0;
   let totalSavings = 0;
