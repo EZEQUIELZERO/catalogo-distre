@@ -426,6 +426,8 @@
     display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
   }
   .card-price{margin-top:2px;font-size:1.05rem;font-weight:700;color:var(--accent);}
+  .card-bulto-info{font-size:.72rem;color:var(--text-dim);margin-top:-2px;line-height:1.25;}
+  .card-bulto-info b{color:var(--accent);font-weight:700;}
   .price-consult{margin-top:2px;font-size:.85rem;font-weight:700;color:var(--text-dim);font-style:italic;}
   .modal-price.price-consult-modal{font-size:1.15rem;color:var(--text-dim);font-style:italic;}
 
@@ -444,6 +446,14 @@
   }
   .cart-mini-btn.add:hover{filter:brightness(1.08);}
   .cart-mini-btn.remove:hover{border-color:var(--danger);color:var(--danger);}
+  .cart-mini-btn.bulto{
+    width:100%;flex:none;padding:7px 8px;font-size:.73rem;
+    background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);text-shadow:none;
+  }
+  .cart-mini-btn.bulto:hover{
+    background:linear-gradient(180deg,var(--btn-gold-top),var(--btn-gold-mid) 55%,var(--btn-gold-bot));
+    color:var(--active-text,#1a1a1a);border-color:var(--active-border,var(--accent));
+  }
   .cart-qty-tag{text-align:center;font-size:.72rem;color:var(--text-dim);}
   .cart-qty-tag b{color:var(--accent);}
 
@@ -487,8 +497,14 @@
     color:var(--accent);border:1px solid var(--accent);padding:4px 10px;border-radius:999px;font-weight:600;
   }
   .modal-name{font-size:1.25rem;font-weight:700;line-height:1.35;margin:0;}
+  .modal-fullname{color:var(--text-dim);font-size:.82rem;line-height:1.35;margin-top:-8px;}
   .modal-desc{color:var(--text-dim);font-size:.9rem;line-height:1.45;}
   .modal-price{font-size:1.7rem;font-weight:800;color:var(--accent);}
+  .modal-bulto-info{
+    font-size:.82rem;font-weight:600;color:var(--accent);
+    background:var(--accent-soft);border:1px solid var(--accent);
+    border-radius:8px;padding:7px 10px;line-height:1.35;
+  }
   .modal-meta{display:flex;flex-direction:column;gap:6px;font-size:.88rem;color:var(--text-dim);}
   .modal-meta b{color:var(--text);font-weight:600;}
   .modal-actions{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
@@ -549,6 +565,7 @@
   .admin-num-field{display:flex;flex-direction:column;gap:2px;min-width:0;}
   .admin-num-lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.4px;color:var(--text-dim);font-weight:700;line-height:1;}
   .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media(max-width:520px){.field-row{grid-template-columns:1fr;}}
   @media(max-width:960px){
     .admin-row{grid-template-columns:auto auto minmax(0,1fr) 86px 68px 46px auto;gap:8px;}
     .admin-edit-btn,.admin-del-btn{padding:6px 7px;font-size:.7rem;}
@@ -785,20 +802,29 @@
   .cart-item img{width:56px;height:56px;object-fit:contain;background:#10131a;border-radius:10px;padding:6px;flex-shrink:0;}
   .cart-item-info{flex:1;min-width:0;}
   .cart-item-name{font-size:.85rem;font-weight:600;line-height:1.3;}
-  .cart-item-price{font-size:.76rem;color:var(--text-dim);margin:2px 0 8px;}
-  .qty-control{display:flex;align-items:center;gap:10px;}
+  .cart-item-price{font-size:.76rem;color:var(--text-dim);margin:2px 0 6px;}
+  .cart-item-bulto-tag{font-size:.72rem;font-weight:600;color:var(--accent);margin-bottom:6px;line-height:1.3;}
+  .cart-item-bulto-tag.muted{color:var(--text-dim);font-weight:500;}
+  .qty-control{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
   .qty-btn{
     width:26px;height:26px;border-radius:6px;border:1px solid #1c1c1c;
     background:linear-gradient(180deg,var(--btn-dark-top),var(--btn-dark-mid) 55%,var(--btn-dark-bot));
     color:var(--text);cursor:pointer;font-weight:700;display:flex;align-items:center;justify-content:center;
   }
   .qty-btn:hover{border-color:var(--accent);}
+  .qty-btn.bulto-plus{
+    width:auto;padding:0 9px;font-size:.71rem;
+    background:var(--accent-soft);color:var(--accent);border-color:var(--accent);
+  }
+  .qty-btn.bulto-plus:hover{filter:brightness(1.08);}
   .qty-val{min-width:18px;text-align:center;font-weight:700;font-size:.85rem;}
-  .cart-item-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0;}
+  .cart-item-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;}
+  .cart-item-raw{font-size:.74rem;color:var(--text-dim);text-decoration:line-through;white-space:nowrap;}
   .cart-item-total{font-weight:700;color:var(--accent);font-size:.88rem;white-space:nowrap;}
   .cart-remove{color:var(--text-dim);cursor:pointer;font-size:1.15rem;padding:2px;background:none;border:none;}
   .cart-remove:hover{color:var(--danger);}
   .cart-summary{padding:20px 26px 26px;display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--border);margin-top:10px;}
+  .cart-savings-row{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;font-weight:700;color:var(--accent);}
   .cart-total-row{display:flex;justify-content:space-between;align-items:center;font-size:1.15rem;font-weight:800;}
   .cart-total-row span:last-child{color:var(--accent);}
   .cart-empty{padding:60px 26px;text-align:center;color:var(--text-dim);}
@@ -989,8 +1015,10 @@
       <div class="modal-info">
         <span class="modal-cat" id="modalCat"></span>
         <h2 class="modal-name" id="modalName"></h2>
+        <div class="modal-fullname" id="modalFullName" style="display:none;"></div>
         <div class="modal-desc" id="modalDesc" style="display:none;"></div>
         <div class="modal-price" id="modalPrice"></div>
+        <div class="modal-bulto-info" id="modalBultoInfo" style="display:none;"></div>
         <div class="modal-meta">
           <div><b>EAN:</b> <span id="modalEan"></span></div>
           <div id="modalStockCodeWrap" style="display:none;"><b>Cód.:</b> <span id="modalStockCode"></span></div>
@@ -1002,6 +1030,7 @@
             <button class="cart-mini-btn add" id="modalAddCart">➕ Agregar al carrito</button>
             <button class="cart-mini-btn remove" id="modalRemoveCart">➖ Quitar del carrito</button>
           </div>
+          <button class="cart-mini-btn bulto" id="modalAddBulto" style="display:none;"></button>
           <div class="cart-qty-tag">En tu carrito: <b id="modalCartQty">0</b></div>
         </div>
 
@@ -1166,7 +1195,7 @@
           <div class="scan-feedback" id="scanFeedback"></div>
 
           <div class="scan-preview-card" id="scanProductCard" style="display:none;">
-            <img id="scanProdImg" src="" alt="" onerror="onImgError(this)">
+            <img id="scanProdImg" alt="" onerror="if(window.onImgError)onImgError(this)">
             <div class="scan-preview-info">
               <div class="scan-preview-name" id="scanProdName"></div>
               <div class="scan-preview-meta">
@@ -1191,19 +1220,30 @@
       <!-- ---------- SECCIÓN AGREGAR PRODUCTO ---------- -->
       <div class="admin-section" id="adminSectionAddProduct" style="display:none;">
         <div class="admin-section-title">Agregar producto nuevo</div>
-        <div class="field"><label>Código EAN</label><input type="text" id="npEan" class="price-input" inputmode="numeric"></div>
-        <div class="field" style="margin-top:10px;"><label>Descripción</label><input type="text" id="npName" class="price-input"></div>
+        <div class="field-row">
+          <div class="field"><label>Código EAN / Código</label><input type="text" id="npEan" class="price-input" placeholder="Ej: 7798444550764 o SP200"></div>
+          <div class="field"><label>Código interno (opcional)</label><input type="text" id="npCodigoInterno" class="price-input" placeholder="Ej: SP200"></div>
+        </div>
+        <div class="field" style="margin-top:10px;"><label>Nombre en catálogo (título corto, opcional)</label><input type="text" id="npCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
+        <div class="field" style="margin-top:10px;"><label>Descripción completa</label><input type="text" id="npName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250 ML - PISTACHO"></div>
         <div class="field" style="margin-top:10px;"><label>Descripción breve (opcional)</label><textarea id="npDesc" class="price-input" rows="2" placeholder="Una o dos líneas que describan el producto..."></textarea></div>
         <div class="field-row" style="margin-top:10px;">
           <div class="field"><label>Precio (vacío = "Consultar precio")</label><input type="number" id="npPrice" class="price-input" min="0" step="1"></div>
           <div class="field"><label>Stock (opcional)</label><input type="number" id="npStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
         </div>
-        <div class="field" style="margin-top:10px;"><label>Pestaña</label>
-          <select id="npTab" class="price-input"></select>
+        <div class="field-row" style="margin-top:10px;">
+          <div class="field"><label>Bulto (unidades por bulto, opcional)</label><input type="number" id="npBulto" class="price-input" min="1" step="1" placeholder="Ej: 12"></div>
+          <div class="field"><label>Descuento por bulto % (0–100, opcional)</label><input type="number" id="npBultoDesc" class="price-input" min="0" max="100" step="0.5" placeholder="Sin descuento"></div>
         </div>
-        <div class="field" style="margin-top:10px;"><label>Categoría</label>
+        <div class="field-row" style="margin-top:10px;">
+          <div class="field"><label>Proveedor / Pestaña principal</label>
+            <select id="npTab" class="price-input"></select>
+          </div>
+          <div class="field"><label>Marca / Proveedor (opcional)</label><input type="text" id="npBrand" class="price-input" placeholder="Por defecto, nombre de pestaña"></div>
+        </div>
+        <div class="field" style="margin-top:10px;"><label>Familia / Categoría (sub-pestaña)</label>
           <select id="npCatSelect" class="price-input"></select>
-          <input type="text" id="npCatNew" class="price-input" placeholder="Nombre de la nueva categoría" style="margin-top:8px;display:none;">
+          <input type="text" id="npCatNew" class="price-input" placeholder="Nombre de la nueva familia / categoría" style="margin-top:8px;display:none;">
         </div>
         <div class="field" style="margin-top:10px;"><label>Subcategoría (opcional)</label>
           <select id="npSubcatSelect" class="price-input"></select>
@@ -1323,11 +1363,11 @@
       <!-- ---------- SECCIÓN IMPORTAR CSV ---------- -->
       <div class="admin-section" id="adminSectionImportCsv" style="display:none;">
         <div class="admin-section-title">Importar productos desde CSV</div>
-        <p class="admin-note">Acepta encabezado con columnas por nombre (por ejemplo: <b>PROVEEDOR, CODIGO_IN, CODIGO_EAN, DESCRIPCION, PRECIO, STOCK, IMAGEN</b>) o el formato clásico (<b>CODIGO EAN, DESCRIPCION, PRECIO, URL DE LA IMAGEN</b>). Si un producto no tiene EAN, usa <b>CODIGO_IN</b>.</p>
+        <p class="admin-note">Acepta columnas por nombre: <b>PROVEEDOR, FAMILIA, CODIGO_EAN, DESCRIPCION, NOMBRE CATALOGO, PRECIO, STOCK, IMAGEN, BULTO, DESCUENTO POR BULTO</b> (compatible también con formatos anteriores). <b>PROVEEDOR</b> define la pestaña principal y <b>FAMILIA</b> la sub-pestaña debajo.</p>
         <div class="field"><label>Pestaña destino</label>
           <select id="csvTab" class="price-input"></select>
         </div>
-        <div class="field" style="margin-top:10px;"><label>Categoría para todos los productos importados</label><input type="text" id="csvCat" class="price-input" placeholder="Ej: Nuevos ingresos"></div>
+        <div class="field" style="margin-top:10px;"><label>Familia / Categoría por defecto (si el CSV no tiene columna FAMILIA)</label><input type="text" id="csvCat" class="price-input" placeholder="Ej: Nuevos ingresos"></div>
         <div class="field" style="margin-top:10px;"><label>Archivo CSV</label><input type="file" id="csvFile" accept=".csv" class="price-input" style="padding:8px;"></div>
         <button class="btn btn-whatsapp btn-auto" id="importCsvBtn" style="margin-top:16px;">Importar CSV</button>
         <p class="admin-note" id="importCsvStatus"></p>
@@ -1348,20 +1388,30 @@
     <div class="admin-body">
       <h2>Editar producto</h2>
       <p class="admin-note">Los cambios se guardan en el repositorio de GitHub y se aplican para todos los visitantes.</p>
-      <div class="field"><label>Código EAN (no editable)</label><input type="text" id="editEan" class="price-input" disabled></div>
-      <div class="field" style="margin-top:10px;"><label>Descripción</label><input type="text" id="editName" class="price-input"></div>
+      <div class="field-row">
+        <div class="field"><label>Código EAN / Código (no editable)</label><input type="text" id="editEan" class="price-input" disabled></div>
+        <div class="field"><label>Código interno (opcional)</label><input type="text" id="editCodigoInterno" class="price-input" placeholder="Ej: SP200"></div>
+      </div>
+      <div class="field" style="margin-top:10px;"><label>Nombre en catálogo (título corto, opcional)</label><input type="text" id="editCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
+      <div class="field" style="margin-top:10px;"><label>Descripción completa</label><input type="text" id="editName" class="price-input"></div>
       <div class="field" style="margin-top:10px;"><label>Descripción breve (opcional)</label><textarea id="editDesc" class="price-input" rows="2" placeholder="Una o dos líneas que describan el producto..."></textarea></div>
       <div class="field-row" style="margin-top:10px;">
         <div class="field"><label>Precio (vacío = "Consultar precio")</label><input type="number" id="editPrice" class="price-input" min="0" step="1"></div>
         <div class="field"><label>Stock (opcional)</label><input type="number" id="editStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
       </div>
-      <div class="field" style="margin-top:10px;"><label>Marca</label><input type="text" id="editBrand" class="price-input"></div>
-      <div class="field" style="margin-top:10px;"><label>Pestaña</label>
-        <select id="editTab" class="price-input"></select>
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label>Bulto (unidades por bulto, opcional)</label><input type="number" id="editBulto" class="price-input" min="1" step="1" placeholder="Ej: 12"></div>
+        <div class="field"><label>Descuento por bulto % (0–100, opcional)</label><input type="number" id="editBultoDesc" class="price-input" min="0" max="100" step="0.5" placeholder="Sin descuento"></div>
       </div>
-      <div class="field" style="margin-top:10px;"><label>Categoría</label>
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label>Proveedor / Pestaña principal</label>
+          <select id="editTab" class="price-input"></select>
+        </div>
+        <div class="field"><label>Marca / Proveedor</label><input type="text" id="editBrand" class="price-input"></div>
+      </div>
+      <div class="field" style="margin-top:10px;"><label>Familia / Categoría (sub-pestaña)</label>
         <select id="editCatSelect" class="price-input"></select>
-        <input type="text" id="editCatNew" class="price-input" placeholder="Nombre de la nueva categoría" style="margin-top:8px;display:none;">
+        <input type="text" id="editCatNew" class="price-input" placeholder="Nombre de la nueva familia / categoría" style="margin-top:8px;display:none;">
       </div>
       <div class="field" style="margin-top:10px;"><label>Subcategoría (opcional)</label>
         <select id="editSubcatSelect" class="price-input"></select>
@@ -1388,6 +1438,7 @@
     <div class="cart-header"><h2>Tu carrito</h2></div>
     <div class="cart-list" id="cartList"></div>
     <div class="cart-summary">
+      <div class="cart-savings-row" id="cartSavingsRow" style="display:none;"><span>Descuento por bulto</span><span id="cartSavings">- $ 0</span></div>
       <div class="cart-total-row"><span>Total del pedido</span><span id="cartTotal">$ 0</span></div>
       <a class="btn btn-whatsapp" id="sendOrderBtn" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
       <button class="btn btn-close" id="clearCartBtn">Vaciar carrito</button>
@@ -1902,6 +1953,85 @@ function formatStockCode(stock){
   const n = Math.max(0, Math.round(stock));
   return 'S-100-00' + String(n).padStart(3, '0');
 }
+function escapeHtml(str){
+  return String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function parsePositiveInt(raw){
+  const s = String(raw ?? '').trim();
+  if(!s) return null;
+  const n = parseInt(s, 10);
+  return (Number.isFinite(n) && n >= 1) ? n : null;
+}
+function parseDiscountPct(raw){
+  const s = String(raw ?? '').trim().replace(/[%\s]/g, '').replace(',', '.');
+  if(!s) return null;
+  const n = parseFloat(s);
+  if(!Number.isFinite(n)) return null;
+  const clamped = Math.min(100, Math.max(0, n));
+  return Math.round(clamped * 100) / 100;
+}
+function formatDiscountPct(pct){
+  if(typeof pct !== 'number' || !Number.isFinite(pct)) return '';
+  const rounded = Math.round(pct * 100) / 100;
+  return Number.isInteger(rounded) ? String(rounded) : String(rounded).replace('.', ',');
+}
+function getDisplayName(p){
+  if(!p) return '';
+  return (p.catalogName && String(p.catalogName).trim()) ? String(p.catalogName).trim() : (p.name || '');
+}
+function matchesProductQuery(p, q){
+  if(!q) return true;
+  const needle = String(q).toLowerCase();
+  return String(p.name || '').toLowerCase().includes(needle)
+    || String(p.catalogName || '').toLowerCase().includes(needle)
+    || String(p.ean || '').toLowerCase().includes(needle)
+    || String(p.codigoInterno || '').toLowerCase().includes(needle);
+}
+function slugifyTabId(name){
+  return String(name || '')
+    .trim()
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+function findTabForProvider(providerName){
+  const raw = String(providerName || '').trim();
+  if(!raw) return null;
+  const rawLower = raw.toLowerCase();
+  const slug = slugifyTabId(raw);
+  const existing = getAllTabs().find(t =>
+    String(t.name || '').trim().toLowerCase() === rawLower
+    || (slug && t.id === slug)
+  );
+  if(existing) return { id: existing.id, name: existing.name, isNew: false };
+  if(!slug) return null;
+  return { id: slug, name: raw.toUpperCase(), isNew: true };
+}
+function calcCartLine(eff, qty){
+  const unitPrice = (eff && typeof eff.price === 'number' && Number.isFinite(eff.price)) ? eff.price : 0;
+  const rawTotal = Math.round(unitPrice * qty);
+  const bulto = (eff && typeof eff.bulto === 'number' && Number.isFinite(eff.bulto) && eff.bulto >= 1) ? Math.round(eff.bulto) : 0;
+  const rawDesc = (eff && typeof eff.descuentoBulto === 'number' && Number.isFinite(eff.descuentoBulto)) ? eff.descuentoBulto : 0;
+  const descPct = rawDesc > 0 ? Math.min(100, Math.max(0, rawDesc)) : 0;
+  if(bulto > 0 && qty >= bulto){
+    const bultos = Math.floor(qty / bulto);
+    const bultoUnits = bultos * bulto;
+    const looseUnits = qty - bultoUnits;
+    if(descPct > 0){
+      const total = Math.round(unitPrice * bultoUnits * (1 - descPct / 100) + unitPrice * looseUnits);
+      const savings = Math.max(0, rawTotal - total);
+      return { unitPrice, qty, bulto, bultos, bultoUnits, looseUnits, descPct, rawTotal, total, savings };
+    }
+    return { unitPrice, qty, bulto, bultos, bultoUnits, looseUnits, descPct: 0, rawTotal, total: rawTotal, savings: 0 };
+  }
+  return { unitPrice, qty, bulto, bultos: 0, bultoUnits: 0, looseUnits: qty, descPct: 0, rawTotal, total: rawTotal, savings: 0 };
+}
 function onImgError(img){
   img.onerror = null;
   img.src = GENERIC_IMG;
@@ -2013,6 +2143,7 @@ function mergeCustomProductLocally(entry){
   const defaultBrand = tabInfo ? tabInfo.name : entry.tab;
   const productObj = {
     ean: entry.ean, name: entry.name,
+    catalogName: entry.catalogName ? String(entry.catalogName).trim() : '',
     desc: entry.desc || '',
     price: (typeof entry.price === 'number' && Number.isFinite(entry.price)) ? entry.price : null,
     img: entry.img || GENERIC_IMG,
@@ -2022,7 +2153,9 @@ function mergeCustomProductLocally(entry){
     enabled: entry.enabled !== false,
     stock: (typeof entry.stock === 'number' ? entry.stock : null),
     estado: entry.estado || '',
-    codigoInterno: entry.codigoInterno || ''
+    codigoInterno: entry.codigoInterno || '',
+    bulto: (typeof entry.bulto === 'number' && Number.isFinite(entry.bulto) && entry.bulto >= 1) ? Math.round(entry.bulto) : null,
+    descuentoBulto: (typeof entry.descuentoBulto === 'number' && Number.isFinite(entry.descuentoBulto)) ? Math.min(100, Math.max(0, entry.descuentoBulto)) : null
   };
   if(idx >= 0) target[idx] = productObj; else target.push(productObj);
   /* Listas adicionales válidas (nunca recrear pestañas eliminadas). */
@@ -2071,6 +2204,12 @@ function buildRepoProductEntry(ean, existing, patch){
   if(estadoVal) entry.estado = estadoVal;
   const ciVal = (patch && 'codigoInterno' in patch) ? patch.codigoInterno : ((existing && existing.codigoInterno) || base.codigoInterno || '');
   if(ciVal) entry.codigoInterno = ciVal;
+  const catalogNameVal = (patch && 'catalogName' in patch) ? (patch.catalogName || '') : ((existing && existing.catalogName) || base.catalogName || '');
+  if(catalogNameVal) entry.catalogName = catalogNameVal;
+  const bultoVal = (patch && 'bulto' in patch) ? patch.bulto : ((existing && typeof existing.bulto === 'number') ? existing.bulto : base.bulto);
+  if(typeof bultoVal === 'number' && Number.isFinite(bultoVal) && bultoVal >= 1) entry.bulto = Math.round(bultoVal);
+  const descBultoVal = (patch && 'descuentoBulto' in patch) ? patch.descuentoBulto : ((existing && typeof existing.descuentoBulto === 'number') ? existing.descuentoBulto : base.descuentoBulto);
+  if(typeof descBultoVal === 'number' && Number.isFinite(descBultoVal)) entry.descuentoBulto = Math.min(100, Math.max(0, descBultoVal));
   const listsRaw = (patch && Array.isArray(patch.lists)) ? patch.lists
     : ((existing && Array.isArray(existing.lists)) ? existing.lists : ListsDe(ean, tab));
   const validLists = Array.from(new Set((listsRaw || []).filter(id => id !== tab && getTabById(id))));
@@ -2250,6 +2389,16 @@ function addToCart(ean){
   updateCartUI();
   showToast('Agregado al carrito (+1)');
 }
+function addBultoToCart(ean){
+  const base = findBaseProduct(ean);
+  const bulto = (base && typeof base.bulto === 'number' && Number.isFinite(base.bulto) && base.bulto >= 1) ? Math.round(base.bulto) : 0;
+  if(!bulto) return;
+  cart[ean] = (cart[ean] || 0) + bulto;
+  saveCart();
+  updateCartUI();
+  const hasDesc = typeof base.descuentoBulto === 'number' && Number.isFinite(base.descuentoBulto) && base.descuentoBulto > 0;
+  showToast(hasDesc ? `Agregado 1 bulto (+${bulto}, -${formatDiscountPct(base.descuentoBulto)}% dto.)` : `Agregado 1 bulto (+${bulto})`);
+}
 function removeFromCart(ean){
   if(!cart[ean] || cart[ean] <= 0){
     showToast('Ya no está en tu carrito');
@@ -2336,7 +2485,7 @@ function renderGrid(){
   const q = searchInput.value.trim().toLowerCase();
   const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && !p.deleted);
   const filtered = visible.filter(p => {
-    const matchesQuery = !q || p.name.toLowerCase().includes(q) || p.ean.includes(q);
+    const matchesQuery = matchesProductQuery(p, q);
     const matchesCat = activeCat === "Todos" || p.cat === activeCat;
     const matchesSubcat = activeSubcat === "Todos" || p.subcat === activeSubcat;
     return matchesQuery && matchesCat && matchesSubcat;
@@ -2355,31 +2504,48 @@ function renderGrid(){
 
   grid.innerHTML = filtered.map(p => {
     const qty = cartQty(p.ean);
+    const displayName = getDisplayName(p);
     const hasPrice = p.price !== null && p.price !== undefined;
+    const hasBulto = typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1;
+    const bulto = hasBulto ? Math.round(p.bulto) : 0;
+    const hasDesc = hasBulto && typeof p.descuentoBulto === 'number' && Number.isFinite(p.descuentoBulto) && p.descuentoBulto > 0;
+    const descPct = hasDesc ? Math.min(100, Math.max(0, p.descuentoBulto)) : 0;
+    const bultoUnitPrice = hasPrice && hasDesc ? p.price * (1 - descPct / 100) : p.price;
+    const bultoQtyHint = (hasBulto && qty >= bulto)
+      ? (() => {
+          const bs = Math.floor(qty / bulto), rem = qty % bulto;
+          return ` (${bs} ${bs === 1 ? 'bulto' : 'bultos'}${rem > 0 ? ' + ' + rem : ''})`;
+        })()
+      : '';
     const priceHtml = hasPrice
       ? `<div class="card-price">${formatPrice(p.price)}</div>`
+        + (hasDesc ? `<div class="card-bulto-info">Bulto x ${bulto}: <b>${formatPrice(bultoUnitPrice)} c/u</b> (-${formatDiscountPct(descPct)}%)</div>` : '')
       : `<div class="price-consult">Consultar precio</div>`;
+    const bultoBtnHtml = hasBulto
+      ? `<button class="cart-mini-btn bulto" data-action="add-bulto" data-ean="${escapeHtml(p.ean)}">📦 Bulto x ${bulto}${hasDesc ? ` (-${formatDiscountPct(descPct)}%)` : ''}</button>`
+      : '';
     const cartHtml = hasPrice
       ? `<div class="cart-controls">
           <div class="cart-row-btns">
-            <button class="cart-mini-btn add" data-action="add" data-ean="${p.ean}">➕ Agregar</button>
-            <button class="cart-mini-btn remove" data-action="remove" data-ean="${p.ean}">➖ Quitar</button>
+            <button class="cart-mini-btn add" data-action="add" data-ean="${escapeHtml(p.ean)}">➕ Agregar</button>
+            <button class="cart-mini-btn remove" data-action="remove" data-ean="${escapeHtml(p.ean)}">➖ Quitar</button>
           </div>
-          <div class="cart-qty-tag">En tu carrito: <b>${qty}</b></div>
+          ${bultoBtnHtml}
+          <div class="cart-qty-tag">En tu carrito: <b>${qty}</b>${bultoQtyHint}</div>
         </div>`
       : `<div class="cart-controls"><div class="cart-qty-tag">Consultá disponibilidad por WhatsApp</div></div>`;
     const stockCode = formatStockCode(p.stock);
     return `
-    <div class="card" data-ean="${p.ean}">
+    <div class="card" data-ean="${escapeHtml(p.ean)}">
       <div class="card-img">
-        <span class="badge">${p.subcat ? p.cat + ' · ' + p.subcat : p.cat}</span>
-        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="onImgError(this)">
+        <span class="badge">${escapeHtml(p.subcat ? p.cat + ' · ' + p.subcat : p.cat)}</span>
+        <img src="${escapeHtml(p.img)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="onImgError(this)">
       </div>
       <div class="card-body">
-        <div class="card-name">${p.name}</div>
-        <div class="card-ean">EAN ${p.ean}</div>
+        <div class="card-name">${escapeHtml(displayName)}</div>
+        <div class="card-ean">EAN ${escapeHtml(p.ean)}</div>
         ${stockCode ? `<div class="card-stock-code">${stockCode}</div>` : ''}
-        ${p.desc ? `<div class="card-desc">${p.desc}</div>` : ''}
+        ${p.desc ? `<div class="card-desc">${escapeHtml(p.desc)}</div>` : ''}
         ${priceHtml}
         ${cartHtml}
       </div>
@@ -2397,7 +2563,9 @@ function renderGrid(){
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const ean = btn.dataset.ean;
-      if(btn.dataset.action === 'add') addToCart(ean);
+      const action = btn.dataset.action;
+      if(action === 'add') addToCart(ean);
+      else if(action === 'add-bulto') addBultoToCart(ean);
       else removeFromCart(ean);
     });
   });
@@ -2423,15 +2591,46 @@ function openModal(ean){
   if(!p.enabled || p.deleted) return;
   currentModalEan = ean;
   const hasPrice = p.price !== null && p.price !== undefined;
+  const displayName = getDisplayName(p);
+  const fullNameEl = document.getElementById('modalFullName');
+  const showFullSub = !!(p.catalogName && String(p.catalogName).trim() && String(p.catalogName).trim() !== p.name);
+  const hasBulto = typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1;
+  const bulto = hasBulto ? Math.round(p.bulto) : 0;
+  const hasDesc = hasBulto && typeof p.descuentoBulto === 'number' && Number.isFinite(p.descuentoBulto) && p.descuentoBulto > 0;
+  const descPct = hasDesc ? Math.min(100, Math.max(0, p.descuentoBulto)) : 0;
 
   modalImg.src = p.img;
   modalImg.alt = p.name;
   modalImg.onerror = () => onImgError(modalImg);
-  modalName.textContent = p.name;
+  modalName.textContent = displayName;
+  if(fullNameEl){
+    fullNameEl.textContent = showFullSub ? p.name : '';
+    fullNameEl.style.display = showFullSub ? '' : 'none';
+  }
   modalDesc.textContent = p.desc || '';
   modalDesc.style.display = p.desc ? '' : 'none';
   modalPrice.textContent = hasPrice ? formatPrice(p.price) : "Consultar precio";
   modalPrice.classList.toggle('price-consult-modal', !hasPrice);
+
+  const bultoInfoEl = document.getElementById('modalBultoInfo');
+  const modalBultoBtn = document.getElementById('modalAddBulto');
+  if(hasPrice && hasBulto){
+    const bultoLine = calcCartLine(p, bulto);
+    if(bultoInfoEl){
+      bultoInfoEl.textContent = hasDesc
+        ? `📦 Bulto x ${bulto} · ${formatPrice(p.price * (1 - descPct / 100))} c/u (-${formatDiscountPct(descPct)}%) · Total bulto: ${formatPrice(bultoLine.total)}`
+        : `📦 Bulto x ${bulto} · Total bulto: ${formatPrice(bultoLine.total)}`;
+      bultoInfoEl.style.display = '';
+    }
+    if(modalBultoBtn){
+      modalBultoBtn.textContent = `📦 Comprar bulto x ${bulto}${hasDesc ? ` (-${formatDiscountPct(descPct)}%)` : ''}`;
+      modalBultoBtn.style.display = '';
+    }
+  } else {
+    if(bultoInfoEl){ bultoInfoEl.textContent = ''; bultoInfoEl.style.display = 'none'; }
+    if(modalBultoBtn){ modalBultoBtn.style.display = 'none'; }
+  }
+
   modalEan.textContent = p.ean;
   const stockCode = formatStockCode(p.stock);
   document.getElementById('modalStockCode').textContent = stockCode;
@@ -2453,6 +2652,9 @@ function updateModalCartQty(){
 }
 document.getElementById('modalAddCart').addEventListener('click', () => {
   if(currentModalEan) addToCart(currentModalEan);
+});
+document.getElementById('modalAddBulto').addEventListener('click', () => {
+  if(currentModalEan) addBultoToCart(currentModalEan);
 });
 document.getElementById('modalRemoveCart').addEventListener('click', () => {
   if(currentModalEan) removeFromCart(currentModalEan);
@@ -2655,7 +2857,7 @@ function renderAdminList(){
   const rows = activeProducts
     .map(p => ({ p, st: getAdminRowState(p) }))
     .filter(({st}) => !st.eff.deleted)
-    .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q));
+    .filter(({p}) => matchesProductQuery(p, q));
   updateToggleAllBtnLabel(rows);
   if(rows.length === 0){
     list.innerHTML = `<div class="admin-empty">${q ? 'No hay productos que coincidan con la búsqueda.' : 'No hay productos en esta pestaña.'}</div>`;
@@ -2671,27 +2873,34 @@ function renderAdminList(){
     const badgeHtml = st.pendingDelete
       ? `<span class="pending-badge danger">Se quitará al guardar</span>`
       : (st.isDirty ? `<span class="pending-badge">Sin guardar</span>` : '');
+    const bultoSummary = (typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1)
+      ? ` · Bulto x${Math.round(p.bulto)}${(typeof p.descuentoBulto === 'number' && p.descuentoBulto > 0) ? ` (-${formatDiscountPct(p.descuentoBulto)}%)` : ''}`
+      : '';
+    const catalogTag = (p.catalogName && String(p.catalogName).trim() && String(p.catalogName).trim() !== p.name)
+      ? ` · Catálogo: ${escapeHtml(String(p.catalogName).trim())}`
+      : '';
+    const eanSafe = escapeHtml(p.ean);
     const actionsHtml = st.pendingDelete
-      ? `<button class="admin-edit-btn" data-action="undo-delete" data-ean="${p.ean}">↺ Deshacer</button>`
-      : `<button class="admin-edit-btn" data-action="edit" data-ean="${p.ean}">✏ Editar</button><button class="admin-del-btn" data-action="delete" data-ean="${p.ean}" title="Quitar producto">🗑</button>`;
+      ? `<button class="admin-edit-btn" data-action="undo-delete" data-ean="${eanSafe}">↺ Deshacer</button>`
+      : `<button class="admin-edit-btn" data-action="edit" data-ean="${eanSafe}">✏ Editar</button><button class="admin-del-btn" data-action="delete" data-ean="${eanSafe}" title="Quitar producto">🗑</button>`;
     return `
-    <div class="admin-row ${st.enabled ? '' : 'disabled-row'} ${checked ? 'sel-row' : ''} ${rowStateClass}" data-ean="${p.ean}">
-      <input type="checkbox" class="admin-sel" data-ean="${p.ean}" ${checked} title="Seleccionar">
-      <img src="${p.img}" alt="" onerror="onImgError(this)">
+    <div class="admin-row ${st.enabled ? '' : 'disabled-row'} ${checked ? 'sel-row' : ''} ${rowStateClass}" data-ean="${eanSafe}">
+      <input type="checkbox" class="admin-sel" data-ean="${eanSafe}" ${checked} title="Seleccionar">
+      <img src="${escapeHtml(p.img)}" alt="" onerror="onImgError(this)">
       <div>
-        <div class="p-name">${p.name}</div>
-        <div class="p-ean">EAN ${p.ean}${badgeHtml}</div>
+        <div class="p-name">${escapeHtml(p.name)}</div>
+        <div class="p-ean">EAN ${eanSafe}${catalogTag}${escapeHtml(bultoSummary)}${badgeHtml}</div>
       </div>
       <div class="admin-num-field">
         <span class="admin-num-lbl">Precio</span>
-        <input type="number" class="price-input admin-price" data-ean="${p.ean}" value="${priceVal}" placeholder="Consultar" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
+        <input type="number" class="price-input admin-price" data-ean="${eanSafe}" value="${priceVal}" placeholder="Consultar" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
       </div>
       <div class="admin-num-field">
         <span class="admin-num-lbl">Stock</span>
-        <input type="number" class="price-input admin-stock" data-ean="${p.ean}" value="${stockVal}" placeholder="—" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
+        <input type="number" class="price-input admin-stock" data-ean="${eanSafe}" value="${stockVal}" placeholder="—" min="0" step="1" ${st.pendingDelete ? 'disabled' : ''}>
       </div>
       <label class="switch">
-        <input type="checkbox" class="admin-enabled" data-ean="${p.ean}" ${st.enabled ? 'checked' : ''} ${st.pendingDelete ? 'disabled' : ''}>
+        <input type="checkbox" class="admin-enabled" data-ean="${eanSafe}" ${st.enabled ? 'checked' : ''} ${st.pendingDelete ? 'disabled' : ''}>
         <span class="slider-toggle"></span>
       </label>
       <div class="admin-row-actions">${actionsHtml}</div>
@@ -2735,7 +2944,7 @@ function renderAdminList(){
       const curRows = getActiveProducts()
         .map(p => ({ p, st: getAdminRowState(p) }))
         .filter(({st}) => !st.eff.deleted)
-        .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q));
+        .filter(({p}) => matchesProductQuery(p, q));
       updateToggleAllBtnLabel(curRows);
     });
   });
@@ -2767,7 +2976,7 @@ document.getElementById('adminSelectAllBtn').addEventListener('click', () => {
   getActiveProducts()
     .map(p => ({ p, eff: getEffective(p) }))
     .filter(({eff}) => !eff.deleted)
-    .filter(({p}) => !q || p.name.toLowerCase().includes(q) || p.ean.includes(q))
+    .filter(({p}) => matchesProductQuery(p, q))
     .forEach(({p}) => adminSelected.add(p.ean));
   renderAdminList();
 });
@@ -2931,6 +3140,7 @@ function parseScanCodeInput(raw){
 function findProductByCode(rawCode){
   const code = String(rawCode ?? '').trim();
   if(!code) return null;
+  const codeLower = code.toLowerCase();
   const tabs = getAllTabs();
   for(const tab of tabs){
     const found = tab.products.find(p => !getEffective(p).deleted && p.ean === code);
@@ -2938,6 +3148,14 @@ function findProductByCode(rawCode){
   }
   for(const tab of tabs){
     const found = tab.products.find(p => !getEffective(p).deleted && p.codigoInterno && p.codigoInterno === code);
+    if(found) return { product: found, tab };
+  }
+  for(const tab of tabs){
+    const found = tab.products.find(p => !getEffective(p).deleted && String(p.ean || '').toLowerCase() === codeLower);
+    if(found) return { product: found, tab };
+  }
+  for(const tab of tabs){
+    const found = tab.products.find(p => !getEffective(p).deleted && p.codigoInterno && String(p.codigoInterno).toLowerCase() === codeLower);
     if(found) return { product: found, tab };
   }
   return null;
@@ -3203,13 +3421,20 @@ document.getElementById('npSubcatSelect').addEventListener('change', () => {
 
 document.getElementById('addProductBtn').addEventListener('click', async () => {
   const statusEl = document.getElementById('addProductStatus');
-  const ean = document.getElementById('npEan').value.trim();
-  const name = document.getElementById('npName').value.trim();
+  const ean = document.getElementById('npEan').value.trim().replace(/\s+/g, '');
+  const codigoInterno = document.getElementById('npCodigoInterno').value.trim();
+  const catalogName = document.getElementById('npCatalogName').value.trim();
+  const rawName = document.getElementById('npName').value.trim();
+  const name = rawName || catalogName;
   const desc = document.getElementById('npDesc').value.trim();
   const priceRaw = document.getElementById('npPrice').value;
   const price = priceRaw === '' ? null : parseInt(priceRaw, 10);
   const stock = parseNonNegInt(document.getElementById('npStock').value);
+  const bulto = parsePositiveInt(document.getElementById('npBulto').value);
+  const descuentoBulto = parseDiscountPct(document.getElementById('npBultoDesc').value);
   const tab = document.getElementById('npTab').value;
+  const brandInput = document.getElementById('npBrand').value.trim();
+  const brand = brandInput || (getTabById(tab)?.name || tab);
   const catSel = document.getElementById('npCatSelect').value;
   const cat = catSel === '__new__' ? (document.getElementById('npCatNew').value.trim() || 'Otros') : (catSel || 'Otros');
   const subcatSel = document.getElementById('npSubcatSelect').value;
@@ -3217,9 +3442,9 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
   const imgUrl = document.getElementById('npImgUrl').value.trim();
   const imgFile = document.getElementById('npImgFile').files[0];
 
-  if(!ean || !/^\d{6,14}$/.test(ean)){ statusEl.textContent = '❌ Ingresá un código EAN válido (solo números).'; return; }
-  if(!name){ statusEl.textContent = '❌ Ingresá una descripción.'; return; }
-  if(findBaseProduct(ean)){ statusEl.textContent = '❌ Ese EAN ya existe en el catálogo. Para editarlo, usá la sección "Productos".'; return; }
+  if(!ean || !/^[A-Za-z0-9._-]{2,32}$/.test(ean)){ statusEl.textContent = '❌ Ingresá un código EAN / Código válido (mínimo 2 caracteres).'; return; }
+  if(!name){ statusEl.textContent = '❌ Ingresá una descripción o nombre en catálogo.'; return; }
+  if(findBaseProduct(ean)){ statusEl.textContent = '❌ Ese EAN / código ya existe en el catálogo. Para editarlo, usá la sección "Productos".'; return; }
   const gh = getGithubConfig();
   if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
 
@@ -3235,14 +3460,19 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
       imgPath = path;
     }
 
-    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand: getTabById(tab)?.name || tab });
+    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand });
+    if(codigoInterno) entry.codigoInterno = codigoInterno;
+    if(catalogName) entry.catalogName = catalogName;
     if(stock !== null) entry.stock = stock;
+    if(bulto !== null) entry.bulto = bulto;
+    if(descuentoBulto !== null) entry.descuentoBulto = descuentoBulto;
     await updateCustomProducts((data) => {
       const idx = data.products.findIndex(p => p.ean === ean);
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       return data;
     }, `Agregar producto ${ean} - ${name}`);
 
+    delete pendingProductChanges[ean];
     clearLocalOverrides([ean]);
     mergeCustomProductLocally(entry);
     buildFilters();
@@ -3250,7 +3480,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
     renderAdminList();
 
     statusEl.textContent = '✅ Producto guardado en GitHub. Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.';
-    ['npEan','npName','npDesc','npPrice','npStock','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
+    ['npEan','npCodigoInterno','npCatalogName','npName','npDesc','npPrice','npStock','npBulto','npBultoDesc','npBrand','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('npImgFile').value = '';
     populateCategorySelect();
   }catch(e){
@@ -3270,13 +3500,17 @@ function findProductTab(ean){
 function openEditProductModal(ean){
   const base = findBaseProduct(ean);
   if(!base) return;
-  const eff = getEffective(base);
+  const st = getAdminRowState(base);
   editingEan = ean;
   document.getElementById('editEan').value = ean;
+  document.getElementById('editCodigoInterno').value = base.codigoInterno || '';
+  document.getElementById('editCatalogName').value = base.catalogName || '';
   document.getElementById('editName').value = base.name;
   document.getElementById('editDesc').value = base.desc || '';
-  document.getElementById('editPrice').value = (eff.price === null || eff.price === undefined) ? '' : eff.price;
-  document.getElementById('editStock').value = (typeof base.stock === 'number' && Number.isFinite(base.stock)) ? base.stock : '';
+  document.getElementById('editPrice').value = (st.price === null || st.price === undefined) ? '' : st.price;
+  document.getElementById('editStock').value = (typeof st.stock === 'number' && Number.isFinite(st.stock)) ? st.stock : '';
+  document.getElementById('editBulto').value = (typeof base.bulto === 'number' && Number.isFinite(base.bulto) && base.bulto >= 1) ? base.bulto : '';
+  document.getElementById('editBultoDesc').value = (typeof base.descuentoBulto === 'number' && Number.isFinite(base.descuentoBulto)) ? base.descuentoBulto : '';
   document.getElementById('editBrand').value = base.brand || '';
   document.getElementById('editImgUrl').value = (base.img && base.img !== GENERIC_IMG) ? base.img : '';
   document.getElementById('editImgFile').value = '';
@@ -3335,11 +3569,16 @@ function populateEditSubcatSelect(){
 async function saveEditProduct(){
   const statusEl = document.getElementById('editStatus');
   const ean = editingEan;
-  const name = document.getElementById('editName').value.trim();
+  const codigoInterno = document.getElementById('editCodigoInterno').value.trim();
+  const catalogName = document.getElementById('editCatalogName').value.trim();
+  const rawName = document.getElementById('editName').value.trim();
+  const name = rawName || catalogName;
   const desc = document.getElementById('editDesc').value.trim();
   const priceRaw = document.getElementById('editPrice').value;
   const price = priceRaw === '' ? null : parseInt(priceRaw, 10);
   const stock = parseNonNegInt(document.getElementById('editStock').value);
+  const bulto = parsePositiveInt(document.getElementById('editBulto').value);
+  const descuentoBulto = parseDiscountPct(document.getElementById('editBultoDesc').value);
   const brand = document.getElementById('editBrand').value.trim();
   const tab = document.getElementById('editTab').value;
   const catSel = document.getElementById('editCatSelect').value;
@@ -3349,7 +3588,7 @@ async function saveEditProduct(){
   const imgUrl = document.getElementById('editImgUrl').value.trim();
   const imgFile = document.getElementById('editImgFile').files[0];
 
-  if(!name){ statusEl.textContent = '❌ Ingresá una descripción.'; return; }
+  if(!name){ statusEl.textContent = '❌ Ingresá una descripción o nombre en catálogo.'; return; }
   const gh = getGithubConfig();
   if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
 
@@ -3371,7 +3610,8 @@ async function saveEditProduct(){
       const idx = data.products.findIndex(p => p.ean === ean);
       const existing = idx >= 0 ? data.products[idx] : null;
       savedEntry = buildRepoProductEntry(ean, existing, {
-        name, desc, price, stock, tab, cat, subcat,
+        name, catalogName, desc, price, stock, bulto, descuentoBulto, codigoInterno,
+        tab, cat, subcat,
         img: imgPath,
         brand: brand || (getTabById(tab)?.name || tab)
       });
@@ -3415,7 +3655,7 @@ document.getElementById('editSubcatSelect').addEventListener('change', () => {
 function parseCsvRows(text){
   const clean = String(text || '').replace(/^\uFEFF/, '');
   const firstLine = clean.split(/\r?\n/, 1)[0] || '';
-  const delim = (firstLine.includes(';') && !firstLine.includes(',')) ? ';' : ',';
+  const delim = (firstLine.split(';').length > firstLine.split(',').length) ? ';' : ',';
   const rows = [];
   let row = [], cur = '', inQuotes = false;
   for(let i = 0; i < clean.length; i++){
@@ -3455,20 +3695,23 @@ function normalizeCsvHeader(h){
 function detectCsvColumns(headerRow){
   const norm = headerRow.map(normalizeCsvHeader);
   const findIdx = (names) => norm.findIndex(h => names.includes(h));
-  const ean = findIdx(['CODIGO_EAN', 'EAN']);
+  const ean = findIdx(['CODIGO_EAN', 'EAN', 'CODIGO']);
   const internal = findIdx(['CODIGO_IN', 'CODIGO_INTERNO', 'INTERNO', 'SKU']);
-  const name = findIdx(['DESCRIPCION', 'NOMBRE', 'PRODUCTO', 'NAME']);
+  const name = findIdx(['DESCRIPCION', 'PRODUCTO', 'NAME', 'NOMBRE']);
+  const catalogName = findIdx(['NOMBRE_CATALOGO', 'NOMBRE_CORTO', 'TITULO_CATALOGO', 'CATALOGO']);
   const price = findIdx(['PRECIO', 'PRICE', 'VALOR']);
   const stock = findIdx(['STOCK', 'CANTIDAD', 'DISPONIBLE']);
   const img = findIdx(['IMAGEN', 'URL_DE_LA_IMAGEN', 'URL_IMAGEN', 'IMG', 'FOTO']);
   const brand = findIdx(['PROVEEDOR', 'MARCA', 'BRAND']);
-  const cat = findIdx(['CATEGORIA', 'CAT']);
-  const subcat = findIdx(['SUBCATEGORIA', 'SUBCAT']);
+  const cat = findIdx(['FAMILIA', 'CATEGORIA', 'CAT']);
+  const subcat = findIdx(['SUBCATEGORIA', 'SUBCAT', 'SUBFAMILIA']);
+  const bulto = findIdx(['BULTO', 'CANTIDAD_BULTO', 'UNIDADES_BULTO', 'UXB', 'BULTO_X']);
+  const descuentoBulto = findIdx(['DESCUENTO_POR_BULTO', 'DESCUENTO_BULTO', 'DESC_BULTO', 'DESC_POR_BULTO', 'DESCUENTO']);
 
-  if(ean >= 0 || internal >= 0 || name >= 0){
-    return { ean, internal, name, price, stock, img, brand, cat, subcat };
+  if(ean >= 0 || internal >= 0 || name >= 0 || catalogName >= 0){
+    return { ean, internal, name, catalogName, price, stock, img, brand, cat, subcat, bulto, descuentoBulto };
   }
-  return { ean: 0, internal: -1, name: 1, price: 2, stock: -1, img: 3, brand: -1, cat: -1, subcat: -1 };
+  return { ean: 0, internal: -1, name: 1, catalogName: -1, price: 2, stock: -1, img: 3, brand: -1, cat: -1, subcat: -1, bulto: -1, descuentoBulto: -1 };
 }
 
 function parseCsvPrice(raw){
@@ -3487,9 +3730,8 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
   const gh = getGithubConfig();
   if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
 
-  const tab = document.getElementById('csvTab').value;
+  const selectedCsvTab = document.getElementById('csvTab').value;
   const defaultCat = document.getElementById('csvCat').value.trim() || 'Otros';
-  const tabBrand = getTabById(tab)?.name || tab;
 
   statusEl.textContent = 'Leyendo archivo...';
   document.getElementById('importCsvBtn').disabled = true;
@@ -3502,31 +3744,77 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
 
     statusEl.textContent = 'Sincronizando con GitHub...';
     const newEntries = [];
+    const newTabsToCreate = new Map();
+    const touchedTabs = new Set();
+
     rows.forEach(cols => {
       const col = (idx) => (idx >= 0 && idx < cols.length) ? String(cols[idx] || '').trim() : '';
       const eanRaw = col(colMap.ean).replace(/\s+/g, '');
       const internalRaw = col(colMap.internal).replace(/\s+/g, '');
       const ean = eanRaw || internalRaw;
-      const name = col(colMap.name);
+      const rawName = col(colMap.name);
+      const catalogName = col(colMap.catalogName);
+      const name = rawName || catalogName;
       if(!ean || !name) return;
 
+      const providerRaw = col(colMap.brand);
+      let rowTab = selectedCsvTab;
+      let rowBrand = providerRaw;
+      if(selectedCsvTab === '__auto__'){
+        const resolved = findTabForProvider(providerRaw);
+        if(resolved){
+          rowTab = resolved.id;
+          if(resolved.isNew && !newTabsToCreate.has(resolved.id)){
+            newTabsToCreate.set(resolved.id, resolved.name);
+          }
+          rowBrand = providerRaw || resolved.name;
+        } else {
+          rowTab = activeTab || getAllTabs()[0]?.id || 'algabo';
+          rowBrand = providerRaw || (getTabById(rowTab)?.name || rowTab);
+        }
+      } else {
+        rowBrand = providerRaw || (getTabById(rowTab)?.name || rowTab);
+      }
+      touchedTabs.add(rowTab);
+
       const price = parseCsvPrice(col(colMap.price));
-      const stockRaw = col(colMap.stock);
-      const stockNum = stockRaw === '' ? null : parseInt(stockRaw, 10);
-      const stock = Number.isFinite(stockNum) ? stockNum : null;
+      const stock = parseNonNegInt(col(colMap.stock));
+      const bulto = parsePositiveInt(col(colMap.bulto));
+      const descuentoBulto = parseDiscountPct(col(colMap.descuentoBulto));
       const imgRaw = col(colMap.img);
       const img = (imgRaw && imgRaw !== 'SIN_IMAGEN') ? imgRaw : '';
-      const brand = col(colMap.brand) || tabBrand;
       const cat = col(colMap.cat) || defaultCat;
       const subcat = col(colMap.subcat) || '';
 
-      const entry = { ean, name, price, tab, cat, subcat, img, brand };
+      const entry = { ean, name, price, tab: rowTab, cat, subcat, img, brand: rowBrand };
+      if(catalogName) entry.catalogName = catalogName;
       if(internalRaw) entry.codigoInterno = internalRaw;
       if(stock !== null) entry.stock = stock;
+      if(bulto !== null) entry.bulto = bulto;
+      if(descuentoBulto !== null) entry.descuentoBulto = descuentoBulto;
       newEntries.push(entry);
     });
 
     if(newEntries.length === 0){ statusEl.textContent = '❌ No se encontraron filas válidas en el CSV.'; return; }
+
+    const createdTabsList = [];
+    if(newTabsToCreate.size > 0){
+      const pairs = [...newTabsToCreate.entries()];
+      await updateCustomTabs((data) => {
+        pairs.forEach(([id, tabName]) => {
+          if(!TAB_REGISTRY[id] && !data.tabs.some(t => t.id === id)){
+            data.tabs.push({ id, name: tabName });
+          }
+        });
+        return data;
+      }, `Crear pestaña(s) desde CSV: ${pairs.map(([, n]) => n).join(', ')}`);
+      pairs.forEach(([id, tabName]) => {
+        if(!getTabById(id)){
+          customTabs.push({ id, name: tabName, products: [] });
+          createdTabsList.push(tabName);
+        }
+      });
+    }
 
     await updateCustomProducts((data) => {
       newEntries.forEach(entry => {
@@ -3535,6 +3823,7 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
           idx = data.products.findIndex(p => p.codigoInterno === entry.codigoInterno || p.ean === entry.codigoInterno);
         }
         const previo = idx >= 0 ? data.products[idx] : null;
+        if(previo && previo.desc && !entry.desc) entry.desc = previo.desc;
         const extra = (previo && Array.isArray(previo.lists)) ? previo.lists : [];
         const todas = Array.from(new Set(extra.filter(id => id !== entry.tab && getTabById(id))));
         if(todas.length) entry.lists = todas;
@@ -3542,13 +3831,18 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
       });
       return data;
     }, `Importar CSV (${newEntries.length} productos)`);
+    newEntries.forEach(e => { delete pendingProductChanges[e.ean]; });
     clearLocalOverrides(newEntries.map(e => e.ean));
     newEntries.forEach(mergeCustomProductLocally);
+    renderTabs();
+    renderAdminTabList();
     buildFilters();
     renderGrid();
     renderAdminList();
 
-    statusEl.textContent = `✅ Se importaron ${newEntries.length} productos a GitHub. Puede tardar uno o dos minutos en publicarse.`;
+    const tabSummary = [...touchedTabs].map(id => getTabById(id)?.name || id).join(', ');
+    const createdNote = createdTabsList.length ? ` (pestaña nueva: ${createdTabsList.join(', ')})` : '';
+    statusEl.textContent = `✅ Se importaron ${newEntries.length} productos en ${tabSummary}${createdNote} a GitHub. Puede tardar uno o dos minutos en publicarse.`;
     document.getElementById('csvFile').value = '';
   }catch(e){
     statusEl.textContent = '❌ Error: ' + e.message;
@@ -3715,16 +4009,32 @@ document.getElementById('sendOrderBtn').addEventListener('click', (e) => {
   showToast('Abriendo WhatsApp...');
 });
 
-function buildOrderMessage(entries, total){
+function buildOrderMessage(entries){
   const lines = ['Pedido - Catálogo Distre', ''];
+  let total = 0;
+  let totalSavings = 0;
   entries.forEach(([ean, qty]) => {
     const base = findBaseProduct(ean);
     if(!base) return;
     const eff = getEffective(base);
-    const lineTotal = eff.price * qty;
-    lines.push(`${qty}, ${eff.name}, ${formatPrice(lineTotal)}`);
+    const line = calcCartLine(eff, qty);
+    total += line.total;
+    totalSavings += line.savings;
+    let bultoNote = '';
+    if(line.bultos > 0){
+      const bulkTxt = line.looseUnits > 0
+        ? `${line.bultos} ${line.bultos === 1 ? 'bulto' : 'bultos'} x ${line.bulto} + ${line.looseUnits} u.`
+        : `${line.bultos} ${line.bultos === 1 ? 'bulto' : 'bultos'} x ${line.bulto}`;
+      bultoNote = line.descPct > 0
+        ? ` (${bulkTxt}, -${formatDiscountPct(line.descPct)}% dto. bulto)`
+        : ` (${bulkTxt})`;
+    }
+    lines.push(`${qty}, ${eff.name}${bultoNote}, ${formatPrice(line.total)}`);
   });
   lines.push('');
+  if(totalSavings > 0){
+    lines.push(`DESCUENTO POR BULTO -${formatPrice(totalSavings)}`);
+  }
   lines.push(`TOTAL DEL PEDIDO ${formatPrice(total)}`);
   return lines.join('\n');
 }
@@ -3732,10 +4042,13 @@ function buildOrderMessage(entries, total){
 function renderCartModal(){
   const list = document.getElementById('cartList');
   const sendBtn = document.getElementById('sendOrderBtn');
+  const savingsRow = document.getElementById('cartSavingsRow');
+  const savingsEl = document.getElementById('cartSavings');
   const entries = Object.entries(cart).filter(([ean, qty]) => qty > 0);
 
   if(entries.length === 0){
     list.innerHTML = `<div class="cart-empty">Tu carrito está vacío.</div>`;
+    if(savingsRow) savingsRow.style.display = 'none';
     document.getElementById('cartTotal').textContent = formatPrice(0);
     sendBtn.style.pointerEvents = 'none';
     sendBtn.style.opacity = '.5';
@@ -3745,31 +4058,56 @@ function renderCartModal(){
   sendBtn.style.opacity = '';
 
   let total = 0;
+  let totalSavings = 0;
   list.innerHTML = entries.map(([ean, qty]) => {
     const base = findBaseProduct(ean);
     if(!base) return '';
     const eff = getEffective(base);
-    const lineTotal = eff.price * qty;
-    total += lineTotal;
+    const line = calcCartLine(eff, qty);
+    total += line.total;
+    totalSavings += line.savings;
+    const eanSafe = escapeHtml(ean);
+    let bultoTagHtml = '';
+    if(line.bultos > 0 && line.savings > 0){
+      bultoTagHtml = `<div class="cart-item-bulto-tag">✓ ${line.bultos} ${line.bultos === 1 ? 'bulto' : 'bultos'} x ${line.bulto} (-${formatDiscountPct(line.descPct)}%) · Ahorrás ${formatPrice(line.savings)}</div>`;
+    } else if(line.bulto > 0 && line.descPct > 0){
+      bultoTagHtml = `<div class="cart-item-bulto-tag muted">Llevando bulto x ${line.bulto}: -${formatDiscountPct(line.descPct)}%</div>`;
+    } else if(line.bultos > 0){
+      bultoTagHtml = `<div class="cart-item-bulto-tag muted">${line.bultos} ${line.bultos === 1 ? 'bulto' : 'bultos'} x ${line.bulto}</div>`;
+    }
+    const bultoPlusHtml = line.bulto > 0
+      ? `<button class="qty-btn bulto-plus" data-act="add-bulto" data-ean="${eanSafe}">+Bulto (${line.bulto})</button>`
+      : '';
     return `
-    <div class="cart-item" data-ean="${ean}">
-      <img src="${eff.img}" alt="" onerror="onImgError(this)">
+    <div class="cart-item" data-ean="${eanSafe}">
+      <img src="${escapeHtml(eff.img)}" alt="" onerror="onImgError(this)">
       <div class="cart-item-info">
-        <div class="cart-item-name">${eff.name}</div>
+        <div class="cart-item-name">${escapeHtml(eff.name)}</div>
         <div class="cart-item-price">${formatPrice(eff.price)} c/u</div>
+        ${bultoTagHtml}
         <div class="qty-control">
-          <button class="qty-btn" data-act="dec" data-ean="${ean}">−</button>
+          <button class="qty-btn" data-act="dec" data-ean="${eanSafe}">−</button>
           <span class="qty-val">${qty}</span>
-          <button class="qty-btn" data-act="inc" data-ean="${ean}">+</button>
+          <button class="qty-btn" data-act="inc" data-ean="${eanSafe}">+</button>
+          ${bultoPlusHtml}
         </div>
       </div>
       <div class="cart-item-right">
-        <div class="cart-item-total">${formatPrice(lineTotal)}</div>
-        <button class="cart-remove" data-act="del" data-ean="${ean}" title="Quitar">🗑</button>
+        ${line.savings > 0 ? `<div class="cart-item-raw">${formatPrice(line.rawTotal)}</div>` : ''}
+        <div class="cart-item-total">${formatPrice(line.total)}</div>
+        <button class="cart-remove" data-act="del" data-ean="${eanSafe}" title="Quitar">🗑</button>
       </div>
     </div>`;
   }).join('');
 
+  if(savingsRow && savingsEl){
+    if(totalSavings > 0){
+      savingsEl.textContent = '-' + formatPrice(totalSavings);
+      savingsRow.style.display = '';
+    } else {
+      savingsRow.style.display = 'none';
+    }
+  }
   document.getElementById('cartTotal').textContent = formatPrice(total);
 
   list.querySelectorAll('[data-act]').forEach(btn => {
@@ -3777,13 +4115,14 @@ function renderCartModal(){
       const ean = btn.dataset.ean;
       const act = btn.dataset.act;
       if(act === 'inc') addToCart(ean);
+      else if(act === 'add-bulto') addBultoToCart(ean);
       else if(act === 'dec') removeFromCart(ean);
       else if(act === 'del') setCartQty(ean, 0);
       renderCartModal();
     });
   });
 
-  sendBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildOrderMessage(entries, total))}`;
+  sendBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildOrderMessage(entries))}`;
 }
 
 /* ======================================================
@@ -3827,13 +4166,16 @@ function renderTabSelects(){
   const npTab = document.getElementById('npTab');
   const csvTab = document.getElementById('csvTab');
   const themeTab = document.getElementById('themeTabSelect');
-  const options = tabs.map(t => `<option value="${t.id}">${t.name}</option>`).join('');
+  const prevNp = npTab.value;
+  const prevCsv = csvTab.value;
+  const prevTheme = themeTab ? themeTab.value : '';
+  const options = tabs.map(t => `<option value="${escapeHtml(t.id)}">${escapeHtml(t.name)}</option>`).join('');
   npTab.innerHTML = options;
-  csvTab.innerHTML = options;
+  csvTab.innerHTML = `<option value="__auto__">Automático (según columna PROVEEDOR)</option>` + options;
   if(themeTab) themeTab.innerHTML = options;
-  if(!tabs.find(t => t.id === npTab.value)) npTab.value = tabs[0]?.id || '';
-  if(!tabs.find(t => t.id === csvTab.value)) csvTab.value = tabs[0]?.id || '';
-  if(themeTab && !tabs.find(t => t.id === themeTab.value)) themeTab.value = tabs[0]?.id || '';
+  npTab.value = tabs.some(t => t.id === prevNp) ? prevNp : (tabs[0]?.id || '');
+  csvTab.value = (prevCsv === '__auto__' || tabs.some(t => t.id === prevCsv)) ? prevCsv : '__auto__';
+  if(themeTab) themeTab.value = tabs.some(t => t.id === prevTheme) ? prevTheme : (tabs[0]?.id || '');
 }
 
 /* ======================================================

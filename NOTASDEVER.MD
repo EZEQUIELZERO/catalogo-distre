@@ -439,3 +439,31 @@ Fecha: 2026-11-21
   tarjeta de vista previa del producto encontrado (`#scanProductCard`) e historial
   de sesión (`#scanLogList`) con botón `↺ Deshacer`.
 Archivos: index.html, NOTASDEVER.MD
+
+### #034 - Nuevo formato CSV, campos Bulto/Nombre Catálogo en Admin y compra por Bulto con descuento
+Fecha: 2026-11-21
+- Nuevo formato CSV compatible con las columnas `PROVEEDOR`, `FAMILIA`, `CODIGO_EAN`
+  (incluyendo códigos alfanuméricos como `SP200`), `DESCRIPCION`, `NOMBRE CATALOGO`,
+  `PRECIO`, `STOCK`, `IMAGEN`, `BULTO` y `DESCUENTO POR BULTO` (y compatible con
+  formatos anteriores o columna A vacía al inicio):
+  - `PROVEEDOR` define la pestaña principal del producto (modo `Automático` por defecto
+    en `#csvTab`, creando la pestaña en `data/custom-tabs.json` si no existiera).
+  - `FAMILIA` define la sub-pestaña/categoría (`cat`) que aparece debajo de las pestañas
+    principales.
+  - `NOMBRE CATALOGO` (`catalogName`) se muestra como título en las tarjetas y modal
+    del catálogo (`getDisplayName`), conservando `DESCRIPCION` (`name`) para búsqueda,
+    admin, carrito y pedidos de WhatsApp.
+- Paridad completa en **Agregar producto** (`#adminSectionAddProduct`) y **Editar
+  producto** (`#editOverlay`): se incorporaron `Código interno`, `Nombre en catálogo`,
+  `Bulto (unidades por bulto)`, `Descuento por bulto % (0–100)`, `Marca / Proveedor`
+  y etiqueta `Familia / Categoría`; se habilitó código EAN alfanumérico (`SP200`) y
+  búsqueda/escáner case-insensitive por EAN, código interno, descripción y nombre catálogo.
+- Compra por bulto (`📦 Bulto x CANTIDAD`):
+  - Nuevo botón en tarjetas del catálogo, modal de producto y `+Bulto` en el carrito.
+  - Aplica descuento configurable del 0 al 100% (`calcCartLine`) sobre las unidades por
+    bulto completo cuando `DESCUENTO POR BULTO > 0`; si no tiene valor o es `0`, no
+    aplica descuento y agrega el bulto al precio normal.
+  - Muestra precio por unidad con descuento en tarjeta y modal, precio tachado y ahorro
+    total en el carrito (`#cartSavingsRow`), y desglose de bultos y descuento en el
+    mensaje de WhatsApp (`buildOrderMessage`).
+Archivos: index.html, NOTASDEVER.MD
