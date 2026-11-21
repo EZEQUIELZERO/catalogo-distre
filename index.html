@@ -727,6 +727,54 @@
     .admin-main{padding:20px 16px 60px;}
   }
 
+  /* ---------- CARGAR STOCK (ESCANER) ---------- */
+  .scan-box{
+    background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;
+    padding:18px;margin-bottom:20px;display:flex;flex-direction:column;gap:14px;
+  }
+  .scan-top-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .scan-top-row .field{display:flex;align-items:center;gap:8px;}
+  .scan-top-row .field label{margin:0;white-space:nowrap;}
+  .scan-top-row .price-input{width:auto;min-width:170px;}
+  .scan-sound-wrap{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--text-dim);}
+  .scan-inputs-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end;}
+  @media(max-width:640px){.scan-inputs-row{grid-template-columns:1fr;}}
+  .scan-input-group{display:flex;gap:8px;align-items:stretch;}
+  .scan-input-group .price-input{flex:1;min-width:0;font-size:.95rem;padding:10px 12px;}
+  .scan-input-group .btn{margin:0;padding:10px 14px;font-size:.82rem;white-space:nowrap;}
+  .scan-feedback{
+    min-height:20px;font-size:.84rem;font-weight:700;padding:8px 12px;border-radius:10px;
+    border:1px solid transparent;display:none;
+  }
+  .scan-feedback.ok{display:block;background:rgba(37,211,102,.14);border-color:rgba(37,211,102,.4);color:#186732;}
+  [data-tab-theme=""] .scan-feedback.ok,[data-tab-theme="oscuro"] .scan-feedback.ok{color:#73bd89;}
+  .scan-feedback.err{display:block;background:rgba(224,85,95,.14);border-color:rgba(224,85,95,.45);color:var(--danger);}
+  .scan-feedback.info{display:block;background:var(--accent-soft);border-color:var(--accent);color:var(--text);}
+  .scan-preview-card{
+    display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+    background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:12px 14px;
+  }
+  .scan-preview-card img{width:64px;height:64px;object-fit:contain;background:var(--bg-soft);border-radius:10px;padding:6px;flex-shrink:0;}
+  .scan-preview-info{flex:1;min-width:190px;display:flex;flex-direction:column;gap:4px;}
+  .scan-preview-name{font-size:.95rem;font-weight:700;line-height:1.3;}
+  .scan-preview-meta{font-size:.76rem;color:var(--text-dim);display:flex;gap:10px;flex-wrap:wrap;}
+  .scan-preview-meta b{color:var(--accent);}
+  .scan-log-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+  .scan-log{
+    border:1px solid var(--border);border-radius:12px;max-height:360px;overflow-y:auto;
+    background:var(--card);padding:4px 12px;
+  }
+  .scan-log-row{
+    display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);flex-wrap:wrap;
+  }
+  .scan-log-row:last-child{border-bottom:none;}
+  .scan-log-row img{width:36px;height:36px;object-fit:contain;background:var(--bg-soft);border-radius:6px;padding:3px;flex-shrink:0;}
+  .scan-log-info{flex:1;min-width:160px;}
+  .scan-log-name{font-size:.8rem;font-weight:600;line-height:1.25;}
+  .scan-log-sub{font-size:.7rem;color:var(--text-dim);margin-top:2px;}
+  .scan-log-qty{font-family:monospace;font-size:.82rem;font-weight:700;color:var(--accent);white-space:nowrap;}
+  .scan-saved-pill{font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:999px;background:rgba(37,211,102,.15);color:#186732;}
+
   /* ---------- CART MODAL ---------- */
   .cart-header{padding:26px 26px 0;}
   .cart-header h2{margin:0;font-size:1.2rem;}
@@ -1001,6 +1049,7 @@
     <nav class="admin-sidebar-nav">
       <button class="admin-subnav-btn active" data-section="general">General</button>
       <button class="admin-subnav-btn" data-section="products">Productos</button>
+      <button class="admin-subnav-btn" data-section="scanstock">📷 Cargar Stock</button>
       <button class="admin-subnav-btn" data-section="addproduct">Agregar producto</button>
       <button class="admin-subnav-btn" data-section="tabs">Pestañas</button>
       <button class="admin-subnav-btn" data-section="appearance">🎨 Personalización</button>
@@ -1066,6 +1115,77 @@
           <button class="btn btn-danger btn-auto" id="adminDeleteSelBtn">🗑 Eliminar seleccionados</button>
           <button class="btn btn-danger btn-auto" id="adminDeleteAllBtn">🗑 Eliminar todos</button>
         </div>
+      </div>
+
+      <!-- ---------- SECCIÓN CARGAR STOCK (ESCÁNER) ---------- -->
+      <div class="admin-section" id="adminSectionScanStock" style="display:none;">
+        <div class="admin-section-title">Cargar stock con lector de códigos</div>
+        <p class="admin-note">Escaneá el código EAN (o código interno) → presioná <b>Enter</b> → tecleá la cantidad → presioná <b>Enter</b> para aplicar. También podés enviar <code>CODIGO CANTIDAD</code> todo junto. Al terminar, tocá <b>💾 GUARDAR</b>.</p>
+
+        <div class="admin-savebar" id="scanSaveBar">
+          <span class="admin-pending-info" id="scanPendingInfo">Sin cambios pendientes</span>
+          <button class="btn btn-close btn-auto" id="scanDiscardProductsBtn" style="display:none;">↺ Descartar</button>
+          <button class="btn btn-whatsapp btn-auto" id="scanSaveProductsBtn">💾 GUARDAR</button>
+        </div>
+
+        <div class="scan-box">
+          <div class="scan-top-row">
+            <div class="field">
+              <label for="scanModeSelect">Modo</label>
+              <select id="scanModeSelect" class="price-input">
+                <option value="set">Establecer stock</option>
+                <option value="add">Sumar al stock</option>
+              </select>
+            </div>
+            <div class="scan-sound-wrap">
+              <label class="switch">
+                <input type="checkbox" id="scanSoundToggle" checked>
+                <span class="slider-toggle"></span>
+              </label>
+              <span>Sonido al escanear</span>
+            </div>
+          </div>
+
+          <div class="scan-inputs-row">
+            <div class="field">
+              <label for="scanCodeInput">Código (EAN / Cód. interno)</label>
+              <div class="scan-input-group">
+                <input type="text" id="scanCodeInput" class="price-input" autocomplete="off" placeholder="Escaneá el código y presioná Enter...">
+                <button type="button" class="btn btn-gray btn-auto" id="scanLookupBtn">Buscar</button>
+              </div>
+            </div>
+            <div class="field">
+              <label for="scanQtyInput">Cantidad</label>
+              <div class="scan-input-group">
+                <input type="number" id="scanQtyInput" class="price-input" min="0" step="1" inputmode="numeric" placeholder="Cantidad + Enter" disabled>
+                <button type="button" class="btn btn-whatsapp btn-auto" id="scanApplyBtn" disabled>Aplicar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="scan-feedback" id="scanFeedback"></div>
+
+          <div class="scan-preview-card" id="scanProductCard" style="display:none;">
+            <img id="scanProdImg" src="" alt="" onerror="onImgError(this)">
+            <div class="scan-preview-info">
+              <div class="scan-preview-name" id="scanProdName"></div>
+              <div class="scan-preview-meta">
+                <span id="scanProdTab"></span>
+                <span id="scanProdCode"></span>
+                <span id="scanProdPrice"></span>
+                <span>Stock actual: <b id="scanProdCurStock">—</b></span>
+              </div>
+              <div id="scanProdDisabledNote" style="display:none;font-size:.72rem;color:var(--danger);font-weight:700;">Producto deshabilitado en el catálogo</div>
+            </div>
+            <button type="button" class="btn btn-close btn-auto" id="scanCancelBtn" style="padding:7px 12px;font-size:.78rem;">✕ Cancelar (Esc)</button>
+          </div>
+        </div>
+
+        <div class="scan-log-head">
+          <div class="admin-section-title" style="margin:0;">Escaneados en esta sesión (<span id="scanLogCount">0</span>)</div>
+          <button type="button" class="btn btn-gray btn-auto" id="scanClearLogBtn" style="padding:6px 12px;font-size:.76rem;">Limpiar historial</button>
+        </div>
+        <div class="scan-log" id="scanLogList"></div>
       </div>
 
       <!-- ---------- SECCIÓN AGREGAR PRODUCTO ---------- -->
@@ -2399,6 +2519,8 @@ function openAdminPanel(){
 function closeAdminPage(){
   if(getPendingCount() > 0 && !confirm(`Tenés ${getPendingCount()} cambio(s) sin guardar en Productos. ¿Salir sin guardar?`)) return false;
   pendingProductChanges = {};
+  currentScanned = null;
+  scanSessionLog = [];
   updateAdminSaveBar();
   adminPage.classList.remove('open');
   document.body.style.overflow = '';
@@ -2415,6 +2537,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 const ADMIN_SECTION_IDS = {
   general: 'adminSectionGeneral',
   products: 'adminSectionProducts',
+  scanstock: 'adminSectionScanStock',
   addproduct: 'adminSectionAddProduct',
   tabs: 'adminSectionTabs',
   appearance: 'adminSectionAppearance',
@@ -2425,6 +2548,12 @@ function switchAdminSection(section){
   Object.values(ADMIN_SECTION_IDS).forEach(id => { document.getElementById(id).style.display = 'none'; });
   document.getElementById(ADMIN_SECTION_IDS[section]).style.display = '';
   if(section === 'appearance') renderAppearancePanel();
+  if(section === 'products') renderAdminList();
+  if(section === 'scanstock'){
+    renderScanLog();
+    updateAdminSaveBar();
+    setTimeout(() => document.getElementById('scanCodeInput')?.focus(), 0);
+  }
 }
 document.querySelectorAll('.admin-subnav-btn').forEach(btn => {
   btn.addEventListener('click', () => switchAdminSection(btn.dataset.section));
@@ -2474,20 +2603,26 @@ function stageProductChange(ean, patch){
   updateAdminSaveBar();
 }
 function updateAdminSaveBar(){
-  const bar = document.getElementById('adminSaveBar');
-  const info = document.getElementById('adminPendingInfo');
-  const discardBtn = document.getElementById('adminDiscardProductsBtn');
-  const saveBtn = document.getElementById('adminSaveProductsBtn');
-  if(!bar || !info || !discardBtn || !saveBtn) return;
   const count = getPendingCount();
-  bar.classList.toggle('has-changes', count > 0);
-  info.textContent = count > 0
-    ? `${count} cambio(s) sin guardar — presioná GUARDAR para aplicar en GitHub`
-    : 'Sin cambios pendientes';
-  discardBtn.style.display = count > 0 ? '' : 'none';
-  if(!saveBtn.disabled){
-    saveBtn.textContent = count > 0 ? `💾 GUARDAR (${count})` : '💾 GUARDAR';
-  }
+  const pairs = [
+    ['adminSaveBar', 'adminPendingInfo', 'adminDiscardProductsBtn', 'adminSaveProductsBtn'],
+    ['scanSaveBar', 'scanPendingInfo', 'scanDiscardProductsBtn', 'scanSaveProductsBtn']
+  ];
+  pairs.forEach(([barId, infoId, discardId, saveId]) => {
+    const bar = document.getElementById(barId);
+    const info = document.getElementById(infoId);
+    const discardBtn = document.getElementById(discardId);
+    const saveBtn = document.getElementById(saveId);
+    if(!bar || !info || !discardBtn || !saveBtn) return;
+    bar.classList.toggle('has-changes', count > 0);
+    info.textContent = count > 0
+      ? `${count} cambio(s) sin guardar — presioná GUARDAR para aplicar en GitHub`
+      : 'Sin cambios pendientes';
+    discardBtn.style.display = count > 0 ? '' : 'none';
+    if(!saveBtn.disabled){
+      saveBtn.textContent = count > 0 ? `💾 GUARDAR (${count})` : '💾 GUARDAR';
+    }
+  });
 }
 function updateToggleAllBtnLabel(rows){
   const toggleBtn = document.getElementById('toggleAllBtn');
@@ -2688,12 +2823,21 @@ document.getElementById('toggleAllBtn').addEventListener('click', () => {
   showToast('Cambios preparados — tocá GUARDAR para aplicar');
 });
 
-document.getElementById('adminDiscardProductsBtn').addEventListener('click', () => {
+function discardPendingProductChanges(){
   if(getPendingCount() === 0) return;
   pendingProductChanges = {};
+  scanSessionLog = scanSessionLog.filter(item => item.saved);
   renderAdminList();
+  renderScanLog();
+  if(currentScanned){
+    const curSt = getAdminRowState(currentScanned.product);
+    const curEl = document.getElementById('scanProdCurStock');
+    if(curEl) curEl.textContent = curSt.stock === null ? '—' : curSt.stock;
+  }
   showToast('Cambios descartados');
-});
+}
+document.getElementById('adminDiscardProductsBtn').addEventListener('click', discardPendingProductChanges);
+document.getElementById('scanDiscardProductsBtn').addEventListener('click', discardPendingProductChanges);
 
 async function savePendingProductChanges(){
   const entries = Object.entries(pendingProductChanges);
@@ -2706,11 +2850,10 @@ async function savePendingProductChanges(){
     if(!confirm(`Se quitarán definitivamente ${deletedEans.length} producto(s) del catálogo y se guardarán ${entries.length} cambio(s) en GitHub. ¿Continuar?`)) return;
   }
 
-  const saveBtn = document.getElementById('adminSaveProductsBtn');
-  const discardBtn = document.getElementById('adminDiscardProductsBtn');
-  saveBtn.disabled = true;
-  discardBtn.disabled = true;
-  saveBtn.textContent = 'Guardando...';
+  const saveBtns = ['adminSaveProductsBtn', 'scanSaveProductsBtn'].map(id => document.getElementById(id)).filter(Boolean);
+  const discardBtns = ['adminDiscardProductsBtn', 'scanDiscardProductsBtn'].map(id => document.getElementById(id)).filter(Boolean);
+  saveBtns.forEach(b => { b.disabled = true; b.textContent = 'Guardando...'; });
+  discardBtns.forEach(b => { b.disabled = true; });
   try{
     const updatedEntries = [];
     const updatedEans = [];
@@ -2751,20 +2894,237 @@ async function savePendingProductChanges(){
       clearLocalOverrides(updatedEans);
       updatedEntries.forEach(mergeCustomProductLocally);
     }
+    const savedSet = new Set(updatedEans);
+    scanSessionLog.forEach(item => { if(savedSet.has(item.ean)) item.saved = true; });
     pendingProductChanges = {};
     renderAdminList();
+    renderScanLog();
     buildFilters();
     renderGrid();
     showToast(`✅ ${entries.length} cambio(s) guardados en GitHub`);
   }catch(e){
     showToast('❌ Error al guardar: ' + e.message);
   }finally{
-    saveBtn.disabled = false;
-    discardBtn.disabled = false;
+    saveBtns.forEach(b => { b.disabled = false; });
+    discardBtns.forEach(b => { b.disabled = false; });
     updateAdminSaveBar();
   }
 }
 document.getElementById('adminSaveProductsBtn').addEventListener('click', savePendingProductChanges);
+document.getElementById('scanSaveProductsBtn').addEventListener('click', savePendingProductChanges);
+
+/* ---------- CARGAR STOCK CON ESCÁNER ---------- */
+let currentScanned = null;
+let scanSessionLog = [];
+
+function parseScanCodeInput(raw){
+  const trimmed = String(raw ?? '').trim();
+  if(!trimmed) return { code: '', inlineQty: null };
+  const parts = trimmed.split(/\s+/);
+  if(parts.length >= 2 && /^\d+$/.test(parts[parts.length - 1])){
+    const qty = parseInt(parts[parts.length - 1], 10);
+    const code = parts.slice(0, -1).join('');
+    if(code) return { code, inlineQty: Math.max(0, qty) };
+  }
+  return { code: trimmed, inlineQty: null };
+}
+function findProductByCode(rawCode){
+  const code = String(rawCode ?? '').trim();
+  if(!code) return null;
+  const tabs = getAllTabs();
+  for(const tab of tabs){
+    const found = tab.products.find(p => !getEffective(p).deleted && p.ean === code);
+    if(found) return { product: found, tab };
+  }
+  for(const tab of tabs){
+    const found = tab.products.find(p => !getEffective(p).deleted && p.codigoInterno && p.codigoInterno === code);
+    if(found) return { product: found, tab };
+  }
+  return null;
+}
+function playScanBeep(ok){
+  const toggle = document.getElementById('scanSoundToggle');
+  if(toggle && !toggle.checked) return;
+  try{
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if(!AudioCtx) return;
+    const ctx = new AudioCtx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = ok ? 'sine' : 'square';
+    osc.frequency.value = ok ? 880 : 240;
+    gain.gain.value = 0.08;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + (ok ? 0.09 : 0.18));
+    osc.onended = () => { try{ ctx.close(); }catch(e){} };
+  }catch(e){}
+}
+function setScanFeedback(type, msg){
+  const el = document.getElementById('scanFeedback');
+  if(!el) return;
+  el.className = 'scan-feedback' + (type ? ' ' + type : '');
+  el.textContent = msg || '';
+}
+function resetScanInputs(focusCode = true, clearFeedback = false){
+  currentScanned = null;
+  const card = document.getElementById('scanProductCard');
+  const codeInp = document.getElementById('scanCodeInput');
+  const qtyInp = document.getElementById('scanQtyInput');
+  const applyBtn = document.getElementById('scanApplyBtn');
+  if(card) card.style.display = 'none';
+  if(codeInp) codeInp.value = '';
+  if(qtyInp){
+    qtyInp.value = '';
+    qtyInp.placeholder = 'Cantidad + Enter';
+    qtyInp.disabled = true;
+  }
+  if(applyBtn) applyBtn.disabled = true;
+  if(clearFeedback) setScanFeedback('', '');
+  if(focusCode && codeInp) codeInp.focus();
+}
+function renderScanLog(){
+  const list = document.getElementById('scanLogList');
+  const countEl = document.getElementById('scanLogCount');
+  if(countEl) countEl.textContent = scanSessionLog.length;
+  if(!list) return;
+  if(scanSessionLog.length === 0){
+    list.innerHTML = `<div class="admin-empty">Todavía no escaneaste productos en esta sesión.</div>`;
+    return;
+  }
+  list.innerHTML = scanSessionLog.map(item => {
+    const prevTxt = (item.prevStock === null || item.prevStock === undefined) ? '—' : item.prevStock;
+    const rightHtml = item.saved
+      ? `<span class="scan-saved-pill">✓ Guardado</span>`
+      : `<button type="button" class="admin-edit-btn" data-scan-undo="${item.id}">↺ Deshacer</button>`;
+    return `
+    <div class="scan-log-row">
+      <img src="${item.img}" alt="" onerror="onImgError(this)">
+      <div class="scan-log-info">
+        <div class="scan-log-name">${item.name}</div>
+        <div class="scan-log-sub">EAN ${item.ean} · ${item.tabName} · ${item.time}</div>
+      </div>
+      <div class="scan-log-qty">${prevTxt} → ${item.newStock}</div>
+      ${rightHtml}
+    </div>`;
+  }).join('');
+  list.querySelectorAll('[data-scan-undo]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.scanUndo;
+      const idx = scanSessionLog.findIndex(x => x.id === id);
+      if(idx < 0) return;
+      const item = scanSessionLog[idx];
+      const base = findBaseProduct(item.ean);
+      const savedStock = (base && typeof base.stock === 'number' && Number.isFinite(base.stock)) ? base.stock : null;
+      stageProductChange(item.ean, { stock: savedStock });
+      scanSessionLog = scanSessionLog.filter(x => !(x.ean === item.ean && !x.saved));
+      renderScanLog();
+      renderAdminList();
+      setScanFeedback('info', `↺ Se revirtió ${item.name} al stock guardado.`);
+      document.getElementById('scanCodeInput')?.focus();
+    });
+  });
+}
+function handleScanCodeSubmit(){
+  const codeInp = document.getElementById('scanCodeInput');
+  const qtyInp = document.getElementById('scanQtyInput');
+  const applyBtn = document.getElementById('scanApplyBtn');
+  if(!codeInp) return;
+  const { code, inlineQty } = parseScanCodeInput(codeInp.value);
+  if(!code){
+    setScanFeedback('', '');
+    codeInp.focus();
+    return;
+  }
+  const found = findProductByCode(code);
+  if(!found){
+    currentScanned = null;
+    document.getElementById('scanProductCard').style.display = 'none';
+    qtyInp.value = '';
+    qtyInp.disabled = true;
+    applyBtn.disabled = true;
+    playScanBeep(false);
+    setScanFeedback('err', `❌ No se encontró ningún producto con código "${code}".`);
+    codeInp.focus();
+    codeInp.select();
+    return;
+  }
+  currentScanned = found;
+  const p = found.product;
+  const st = getAdminRowState(p);
+  const curStockTxt = (st.stock === null || st.stock === undefined) ? '—' : st.stock;
+  document.getElementById('scanProdImg').src = p.img;
+  document.getElementById('scanProdName').textContent = p.name;
+  document.getElementById('scanProdTab').textContent = found.tab.name;
+  document.getElementById('scanProdCode').textContent = p.codigoInterno ? `EAN ${p.ean} · Int. ${p.codigoInterno}` : `EAN ${p.ean}`;
+  document.getElementById('scanProdPrice').textContent = (st.price !== null && st.price !== undefined) ? formatPrice(st.price) : 'Consultar';
+  document.getElementById('scanProdCurStock').textContent = curStockTxt;
+  document.getElementById('scanProdDisabledNote').style.display = st.enabled ? 'none' : '';
+  document.getElementById('scanProductCard').style.display = 'flex';
+
+  if(inlineQty !== null){
+    applyScannedQty(inlineQty);
+    return;
+  }
+  qtyInp.disabled = false;
+  applyBtn.disabled = false;
+  qtyInp.value = '';
+  qtyInp.placeholder = `Actual: ${curStockTxt}`;
+  setScanFeedback('info', `Producto encontrado: ${p.name}. Ingresá la cantidad y presioná Enter.`);
+  qtyInp.focus();
+}
+function applyScannedQty(qtyOverride){
+  if(!currentScanned) return;
+  const qtyInp = document.getElementById('scanQtyInput');
+  const raw = (qtyOverride !== undefined) ? qtyOverride : qtyInp.value;
+  const qty = parseNonNegInt(raw);
+  if(qty === null){
+    playScanBeep(false);
+    setScanFeedback('err', '❌ Ingresá una cantidad válida (0 o mayor).');
+    if(qtyInp && !qtyInp.disabled){ qtyInp.focus(); qtyInp.select(); }
+    return;
+  }
+  const { product, tab } = currentScanned;
+  const st = getAdminRowState(product);
+  const prevStock = st.stock;
+  const mode = document.getElementById('scanModeSelect')?.value || 'set';
+  const finalStock = mode === 'add' ? ((prevStock ?? 0) + qty) : qty;
+
+  stageProductChange(product.ean, { stock: finalStock });
+  scanSessionLog.unshift({
+    id: Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+    ean: product.ean,
+    name: product.name,
+    img: product.img,
+    tabName: tab.name,
+    prevStock,
+    newStock: finalStock,
+    time: new Date().toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit', second:'2-digit' }),
+    saved: false
+  });
+  renderScanLog();
+  playScanBeep(true);
+  const prevTxt = (prevStock === null || prevStock === undefined) ? '—' : prevStock;
+  setScanFeedback('ok', `✅ ${product.name}: stock ${prevTxt} → ${finalStock}`);
+  resetScanInputs(true, false);
+}
+
+document.getElementById('scanCodeInput').addEventListener('keydown', e => {
+  if(e.key === 'Enter'){ e.preventDefault(); handleScanCodeSubmit(); }
+});
+document.getElementById('scanQtyInput').addEventListener('keydown', e => {
+  if(e.key === 'Enter'){ e.preventDefault(); applyScannedQty(); }
+  else if(e.key === 'Escape'){ e.preventDefault(); resetScanInputs(true, true); }
+});
+document.getElementById('scanLookupBtn').addEventListener('click', handleScanCodeSubmit);
+document.getElementById('scanApplyBtn').addEventListener('click', () => applyScannedQty());
+document.getElementById('scanCancelBtn').addEventListener('click', () => resetScanInputs(true, true));
+document.getElementById('scanClearLogBtn').addEventListener('click', () => {
+  scanSessionLog = [];
+  renderScanLog();
+  document.getElementById('scanCodeInput')?.focus();
+});
 
 document.getElementById('saveWhatsapp').addEventListener('click', async () => {
   const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');

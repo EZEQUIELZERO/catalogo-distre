@@ -427,3 +427,15 @@ Fecha: 2026-11-20
   formularios de Agregar producto (`#npStock`) y Editar producto (`#editStock`),
   con helper compartido `parseNonNegInt`.
 Archivos: index.html, NOTASDEVER.MD
+
+### #033 - Carga rápida de stock con lector de códigos (`📷 Cargar Stock`)
+Fecha: 2026-11-21
+- Nueva sección `📷 Cargar Stock` (`#adminSectionScanStock`) en el panel Admin.
+- Flujo de carga con lector/teclado: escanear EAN o código interno (`findProductByCode`)
+  → Enter → escribir cantidad → Enter → establece o suma al stock (`#scanModeSelect`)
+  y devuelve el foco al campo de código para el siguiente escaneo. También soporta
+  entrada combinada `"CODIGO CANTIDAD"` (`parseScanCodeInput`) y sonido opcional.
+- Barra fija `#scanSaveBar` sincronizada con `pendingProductChanges` y `💾 GUARDAR`,
+  tarjeta de vista previa del producto encontrado (`#scanProductCard`) e historial
+  de sesión (`#scanLogList`) con botón `↺ Deshacer`.
+Archivos: index.html, NOTASDEVER.MD
