@@ -483,3 +483,10 @@ Fecha: 2026-11-21
     (`buildOrderPdfBytes`) en tamaño A4 con codificación WinAnsi para acentos/ñ,
     ajuste de líneas y paginación automática.
 Archivos: index.html, NOTASDEVER.MD
+
+### #036 - Edición directa de Descripción (sistema) y Catálogo (tarjeta) en Admin → Productos
+Fecha: 2026-11-21
+- En **Admin → Productos** (`renderAdminList`), cada fila ahora incluye inputs editables en línea para **Descripción (sistema / pedidos)** (`.admin-prod-name`) y **Catálogo (tarjeta)** (`.admin-prod-catalog`), integrados con `pendingProductChanges`, el indicador `Sin guardar` y el guardado en lote con `💾 GUARDAR`.
+- `openEditProductModal` refleja también las ediciones en línea pendientes al abrir `#editOverlay`.
+- Etiquetas unificadas y claras en **Agregar producto**, **Editar producto** y lista Admin distinguiendo `Descripción (sistema / pedidos — WhatsApp, Excel, Sheets, PDF)`, `Nombre en catálogo (como aparece en la tarjeta, opcional)` y `Nota en tarjeta (opcional)`, además de alias CSV adicionales (`DESCRIPCION_SISTEMA`, `NOMBRE_DEL_CATALOGO`).
+Archivos: index.html, NOTASDEVER.MD

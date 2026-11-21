@@ -562,12 +562,17 @@
     padding:12px 0;border-bottom:1px solid var(--border);
   }
   .admin-row > div{min-width:0;}
+  .admin-names-col{display:flex;flex-direction:column;gap:4px;min-width:0;}
+  .admin-name-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:6px;}
+  .admin-name-field{display:flex;flex-direction:column;gap:2px;min-width:0;}
+  .admin-prod-name,.admin-prod-catalog{width:100%;min-width:0;padding:6px 8px;font-size:.78rem;}
   .admin-num-field{display:flex;flex-direction:column;gap:2px;min-width:0;}
   .admin-num-lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.4px;color:var(--text-dim);font-weight:700;line-height:1;}
   .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   @media(max-width:520px){.field-row{grid-template-columns:1fr;}}
   @media(max-width:960px){
     .admin-row{grid-template-columns:auto auto minmax(0,1fr) 86px 68px 46px auto;gap:8px;}
+    .admin-name-grid{grid-template-columns:1fr;}
     .admin-edit-btn,.admin-del-btn{padding:6px 7px;font-size:.7rem;}
   }
   @media(max-width:600px){
@@ -581,9 +586,11 @@
   .admin-row .p-name{font-size:.8rem;font-weight:600;line-height:1.25;overflow-wrap:break-word;word-break:break-word;}
   .admin-row .p-ean{font-size:.68rem;color:var(--text-dim);margin-top:2px;overflow-wrap:break-word;word-break:break-word;}
   .admin-row.disabled-row .p-name{color:var(--text-dim);text-decoration:line-through;}
+  .admin-row.disabled-row .admin-prod-name,.admin-row.disabled-row .admin-prod-catalog{opacity:.6;text-decoration:line-through;}
   .admin-row.dirty-row{border-left:3px solid var(--accent);padding-left:10px;background:var(--accent-soft);border-radius:8px;}
   .admin-row.pending-delete-row{border-left:3px solid var(--danger);padding-left:10px;background:rgba(224,85,95,.12);border-radius:8px;}
   .admin-row.pending-delete-row .p-name{color:var(--danger);text-decoration:line-through;}
+  .admin-row.pending-delete-row .admin-prod-name,.admin-row.pending-delete-row .admin-prod-catalog{color:var(--danger);text-decoration:line-through;}
   .pending-badge{
     display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;
     font-size:.64rem;font-weight:700;background:var(--accent);color:#fff;vertical-align:middle;
@@ -1127,7 +1134,7 @@
       <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
       <div class="admin-section" id="adminSectionProducts" style="display:none;">
         <div class="toggle-all-row">
-          <div class="admin-section-title" style="margin:0;">Productos (precio, stock y visibilidad en el catálogo)</div>
+          <div class="admin-section-title" style="margin:0;">Productos (descripción, catálogo, precio, stock y visibilidad)</div>
           <button class="btn btn-close btn-auto" id="toggleAllBtn">✓ Habilitar todos</button>
         </div>
         <div class="admin-savebar" id="adminSaveBar">
@@ -1228,9 +1235,9 @@
           <div class="field"><label>Código EAN / Código</label><input type="text" id="npEan" class="price-input" placeholder="Ej: 7798444550764 o SP200"></div>
           <div class="field"><label>Código interno (opcional)</label><input type="text" id="npCodigoInterno" class="price-input" placeholder="Ej: SP200"></div>
         </div>
-        <div class="field" style="margin-top:10px;"><label>Nombre en catálogo (título corto, opcional)</label><input type="text" id="npCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
-        <div class="field" style="margin-top:10px;"><label>Descripción completa</label><input type="text" id="npName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250 ML - PISTACHO"></div>
-        <div class="field" style="margin-top:10px;"><label>Descripción breve (opcional)</label><textarea id="npDesc" class="price-input" rows="2" placeholder="Una o dos líneas que describan el producto..."></textarea></div>
+        <div class="field" style="margin-top:10px;"><label>Descripción (sistema / pedidos — WhatsApp, Excel, Sheets, PDF)</label><input type="text" id="npName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250 ML - PISTACHO"></div>
+        <div class="field" style="margin-top:10px;"><label>Nombre en catálogo (como aparece en la tarjeta, opcional)</label><input type="text" id="npCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
+        <div class="field" style="margin-top:10px;"><label>Nota en tarjeta (opcional)</label><textarea id="npDesc" class="price-input" rows="2" placeholder="Texto secundario opcional debajo del código..."></textarea></div>
         <div class="field-row" style="margin-top:10px;">
           <div class="field"><label>Precio (vacío = "Consultar precio")</label><input type="number" id="npPrice" class="price-input" min="0" step="1"></div>
           <div class="field"><label>Stock (opcional)</label><input type="number" id="npStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
@@ -1396,9 +1403,9 @@
         <div class="field"><label>Código EAN / Código (no editable)</label><input type="text" id="editEan" class="price-input" disabled></div>
         <div class="field"><label>Código interno (opcional)</label><input type="text" id="editCodigoInterno" class="price-input" placeholder="Ej: SP200"></div>
       </div>
-      <div class="field" style="margin-top:10px;"><label>Nombre en catálogo (título corto, opcional)</label><input type="text" id="editCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
-      <div class="field" style="margin-top:10px;"><label>Descripción completa</label><input type="text" id="editName" class="price-input"></div>
-      <div class="field" style="margin-top:10px;"><label>Descripción breve (opcional)</label><textarea id="editDesc" class="price-input" rows="2" placeholder="Una o dos líneas que describan el producto..."></textarea></div>
+      <div class="field" style="margin-top:10px;"><label>Descripción (sistema / pedidos — WhatsApp, Excel, Sheets, PDF)</label><input type="text" id="editName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250 ML - PISTACHO"></div>
+      <div class="field" style="margin-top:10px;"><label>Nombre en catálogo (como aparece en la tarjeta, opcional)</label><input type="text" id="editCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
+      <div class="field" style="margin-top:10px;"><label>Nota en tarjeta (opcional)</label><textarea id="editDesc" class="price-input" rows="2" placeholder="Texto secundario opcional debajo del código..."></textarea></div>
       <div class="field-row" style="margin-top:10px;">
         <div class="field"><label>Precio (vacío = "Consultar precio")</label><input type="number" id="editPrice" class="price-input" min="0" step="1"></div>
         <div class="field"><label>Stock (opcional)</label><input type="number" id="editStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
@@ -2786,17 +2793,31 @@ function parseNonNegInt(raw){
 function getAdminRowState(p){
   const eff = getEffective(p);
   const pend = pendingProductChanges[p.ean] || null;
+  const name = (pend && 'name' in pend) ? pend.name : (eff.name || '');
+  const catalogName = (pend && 'catalogName' in pend) ? pend.catalogName : (eff.catalogName || '');
   const price = (pend && 'price' in pend) ? pend.price : eff.price;
   const stock = (pend && 'stock' in pend) ? pend.stock : ((typeof eff.stock === 'number' && Number.isFinite(eff.stock)) ? eff.stock : null);
   const enabled = (pend && typeof pend.enabled === 'boolean') ? pend.enabled : eff.enabled;
   const pendingDelete = !!(pend && pend.deleted);
-  return { eff, pend, price, stock, enabled, pendingDelete, isDirty: !!pend };
+  return { eff, pend, name, catalogName, price, stock, enabled, pendingDelete, isDirty: !!pend };
 }
 function stageProductChange(ean, patch){
   const base = findBaseProduct(ean);
   const saved = base ? getEffective(base) : null;
   const next = { ...(pendingProductChanges[ean] || {}), ...patch };
   if(next.deleted !== true) delete next.deleted;
+  if('name' in next){
+    const savedName = (saved && saved.name) ? String(saved.name).trim() : '';
+    const nextName = String(next.name ?? '').trim();
+    if(!nextName || nextName === savedName) delete next.name;
+    else next.name = nextName;
+  }
+  if('catalogName' in next){
+    const savedCat = (saved && saved.catalogName) ? String(saved.catalogName).trim() : '';
+    const nextCat = String(next.catalogName ?? '').trim();
+    if(nextCat === savedCat) delete next.catalogName;
+    else next.catalogName = nextCat;
+  }
   if('price' in next){
     const savedPrice = (saved && saved.price !== undefined) ? saved.price : null;
     if(next.price === savedPrice) delete next.price;
@@ -2885,9 +2906,6 @@ function renderAdminList(){
     const bultoSummary = (typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1)
       ? ` · Bulto x${Math.round(p.bulto)}${(typeof p.descuentoBulto === 'number' && p.descuentoBulto > 0) ? ` (-${formatDiscountPct(p.descuentoBulto)}%)` : ''}`
       : '';
-    const catalogTag = (p.catalogName && String(p.catalogName).trim() && String(p.catalogName).trim() !== p.name)
-      ? ` · Catálogo: ${escapeHtml(String(p.catalogName).trim())}`
-      : '';
     const eanSafe = escapeHtml(p.ean);
     const actionsHtml = st.pendingDelete
       ? `<button class="admin-edit-btn" data-action="undo-delete" data-ean="${eanSafe}">↺ Deshacer</button>`
@@ -2896,9 +2914,18 @@ function renderAdminList(){
     <div class="admin-row ${st.enabled ? '' : 'disabled-row'} ${checked ? 'sel-row' : ''} ${rowStateClass}" data-ean="${eanSafe}">
       <input type="checkbox" class="admin-sel" data-ean="${eanSafe}" ${checked} title="Seleccionar">
       <img src="${escapeHtml(p.img)}" alt="" onerror="onImgError(this)">
-      <div>
-        <div class="p-name">${escapeHtml(p.name)}</div>
-        <div class="p-ean">EAN ${eanSafe}${catalogTag}${escapeHtml(bultoSummary)}${badgeHtml}</div>
+      <div class="admin-names-col">
+        <div class="admin-name-grid">
+          <div class="admin-name-field">
+            <span class="admin-num-lbl">Descripción (sistema / pedidos)</span>
+            <input type="text" class="price-input admin-prod-name" data-ean="${eanSafe}" value="${escapeHtml(st.name)}" placeholder="Descripción del producto" ${st.pendingDelete ? 'disabled' : ''}>
+          </div>
+          <div class="admin-name-field">
+            <span class="admin-num-lbl">Catálogo (tarjeta)</span>
+            <input type="text" class="price-input admin-prod-catalog" data-ean="${eanSafe}" value="${escapeHtml(st.catalogName)}" placeholder="Opcional — si queda vacío usa Descripción" ${st.pendingDelete ? 'disabled' : ''}>
+          </div>
+        </div>
+        <div class="p-ean">EAN ${eanSafe}${escapeHtml(bultoSummary)}${badgeHtml}</div>
       </div>
       <div class="admin-num-field">
         <span class="admin-num-lbl">Precio</span>
@@ -2922,6 +2949,22 @@ function renderAdminList(){
       else adminSelected.delete(chk.dataset.ean);
       chk.closest('.admin-row').classList.toggle('sel-row', chk.checked);
       updateAdminSelCount();
+    });
+  });
+  list.querySelectorAll('.admin-prod-name').forEach(inp => {
+    inp.addEventListener('input', () => {
+      const ean = inp.dataset.ean;
+      stageProductChange(ean, { name: inp.value });
+      const base = findBaseProduct(ean);
+      if(base) syncRowDirtyDOM(inp.closest('.admin-row'), getAdminRowState(base));
+    });
+  });
+  list.querySelectorAll('.admin-prod-catalog').forEach(inp => {
+    inp.addEventListener('input', () => {
+      const ean = inp.dataset.ean;
+      stageProductChange(ean, { catalogName: inp.value });
+      const base = findBaseProduct(ean);
+      if(base) syncRowDirtyDOM(inp.closest('.admin-row'), getAdminRowState(base));
     });
   });
   list.querySelectorAll('.admin-price').forEach(inp => {
@@ -3089,6 +3132,8 @@ async function savePendingProductChanges(){
         }
         const existing = idx >= 0 ? data.products[idx] : null;
         const patch = {};
+        if('name' in change && String(change.name).trim()) patch.name = String(change.name).trim();
+        if('catalogName' in change) patch.catalogName = String(change.catalogName).trim();
         if('price' in change) patch.price = change.price;
         if('stock' in change) patch.stock = change.stock;
         if('enabled' in change) patch.enabled = change.enabled;
@@ -3513,8 +3558,8 @@ function openEditProductModal(ean){
   editingEan = ean;
   document.getElementById('editEan').value = ean;
   document.getElementById('editCodigoInterno').value = base.codigoInterno || '';
-  document.getElementById('editCatalogName').value = base.catalogName || '';
-  document.getElementById('editName').value = base.name;
+  document.getElementById('editCatalogName').value = st.catalogName || '';
+  document.getElementById('editName').value = st.name || '';
   document.getElementById('editDesc').value = base.desc || '';
   document.getElementById('editPrice').value = (st.price === null || st.price === undefined) ? '' : st.price;
   document.getElementById('editStock').value = (typeof st.stock === 'number' && Number.isFinite(st.stock)) ? st.stock : '';
@@ -3706,8 +3751,8 @@ function detectCsvColumns(headerRow){
   const findIdx = (names) => norm.findIndex(h => names.includes(h));
   const ean = findIdx(['CODIGO_EAN', 'EAN', 'CODIGO']);
   const internal = findIdx(['CODIGO_IN', 'CODIGO_INTERNO', 'INTERNO', 'SKU']);
-  const name = findIdx(['DESCRIPCION', 'PRODUCTO', 'NAME', 'NOMBRE']);
-  const catalogName = findIdx(['NOMBRE_CATALOGO', 'NOMBRE_CORTO', 'TITULO_CATALOGO', 'CATALOGO']);
+  const name = findIdx(['DESCRIPCION', 'DESCRIPCION_SISTEMA', 'PRODUCTO', 'NAME', 'NOMBRE']);
+  const catalogName = findIdx(['NOMBRE_CATALOGO', 'NOMBRE_DEL_CATALOGO', 'NOMBRE_CORTO', 'TITULO_CATALOGO', 'CATALOGO']);
   const price = findIdx(['PRECIO', 'PRICE', 'VALOR']);
   const stock = findIdx(['STOCK', 'CANTIDAD', 'DISPONIBLE']);
   const img = findIdx(['IMAGEN', 'URL_DE_LA_IMAGEN', 'URL_IMAGEN', 'IMG', 'FOTO']);
