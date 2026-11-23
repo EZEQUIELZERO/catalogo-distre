@@ -21,14 +21,14 @@
     },
     "desodorantes": {
       "mode": "light",
-      "accent": "#d4af6a",
-      "btnPrimary": "#c5a669",
-      "highlight": "#8a7248",
-      "bg": "#0f1115",
-      "card": "#1b1f2a",
-      "text": "#f2f3f5",
-      "headerBg": "#0f1115",
-      "btnCart": "#4fa968"
+      "accent": "#000000",
+      "btnPrimary": "#e32b2b",
+      "highlight": "#000000",
+      "bg": "#f5dbdb",
+      "card": "#fb6a6a",
+      "text": "#000000",
+      "headerBg": "#ffa3a3",
+      "btnCart": "#d41111"
     }
   }
 }
