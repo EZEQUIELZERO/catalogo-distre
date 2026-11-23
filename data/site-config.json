@@ -44,13 +44,13 @@
     "algabo": {
       "mode": "light",
       "accent": "#000000",
-      "btnPrimary": "#2442ad",
-      "highlight": "#cc3366",
-      "bg": "#f2f6fc",
+      "btnPrimary": "#a4b6f9",
+      "highlight": "#000000",
+      "bg": "#ffffff",
       "card": "#ffffff",
       "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#2c4cb8"
+      "btnCart": "#003cff"
     },
     "sandra-marzzan": {
       "mode": "light",
