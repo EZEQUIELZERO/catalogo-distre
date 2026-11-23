@@ -10,14 +10,14 @@
   "tabThemes": {
     "ambar": {
       "mode": "light",
-      "accent": "#d4af6a",
-      "btnPrimary": "#c5a669",
-      "highlight": "#8a7248",
+      "accent": "#000000",
+      "btnPrimary": "#c4a4e5",
+      "highlight": "#b7b9d2",
       "bg": "#ffffff",
-      "card": "#1b1f2a",
-      "text": "#f2f3f5",
+      "card": "#b9c6e9",
+      "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#4fa968"
+      "btnCart": "#5a48e5"
     }
   }
 }
