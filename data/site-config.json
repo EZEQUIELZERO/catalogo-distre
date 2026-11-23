@@ -51,6 +51,17 @@
       "text": "#000000",
       "headerBg": "#ffffff",
       "btnCart": "#2c4cb8"
+    },
+    "sandra-marzzan": {
+      "mode": "light",
+      "accent": "#000000",
+      "btnPrimary": "#7d5569",
+      "highlight": "#66435a",
+      "bg": "#ffffff",
+      "card": "#ffffff",
+      "text": "#000000",
+      "headerBg": "#ffffff",
+      "btnCart": "#7d5569"
     }
   }
 }
