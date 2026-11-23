@@ -62,6 +62,17 @@
       "text": "#000000",
       "headerBg": "#ffffff",
       "btnCart": "#7d5569"
+    },
+    "saphirus": {
+      "mode": "light",
+      "accent": "#000000",
+      "btnPrimary": "#2e85e6",
+      "highlight": "#145eaf",
+      "bg": "#ffffff",
+      "card": "#ffffff",
+      "text": "#000000",
+      "headerBg": "#ffffff",
+      "btnCart": "#2e85e6"
     }
   }
 }
