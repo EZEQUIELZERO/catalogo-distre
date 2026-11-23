@@ -40,6 +40,17 @@
       "text": "#000000",
       "headerBg": "#5d9266",
       "btnCart": "#4fa968"
+    },
+    "algabo": {
+      "mode": "light",
+      "accent": "#000000",
+      "btnPrimary": "#2442ad",
+      "highlight": "#cc3366",
+      "bg": "#f2f6fc",
+      "card": "#ffffff",
+      "text": "#000000",
+      "headerBg": "#ffffff",
+      "btnCart": "#2c4cb8"
     }
   }
 }
