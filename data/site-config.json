@@ -18,6 +18,17 @@
       "text": "#000000",
       "headerBg": "#ffffff",
       "btnCart": "#5a48e5"
+    },
+    "desodorantes": {
+      "mode": "light",
+      "accent": "#d4af6a",
+      "btnPrimary": "#c5a669",
+      "highlight": "#8a7248",
+      "bg": "#0f1115",
+      "card": "#1b1f2a",
+      "text": "#f2f3f5",
+      "headerBg": "#0f1115",
+      "btnCart": "#4fa968"
     }
   }
 }
