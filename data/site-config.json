@@ -29,6 +29,17 @@
       "text": "#000000",
       "headerBg": "#ffa3a3",
       "btnCart": "#d41111"
+    },
+    "vais": {
+      "mode": "light",
+      "accent": "#050505",
+      "btnPrimary": "#50ee44",
+      "highlight": "#0a0a0a",
+      "bg": "#73a57b",
+      "card": "#76d078",
+      "text": "#000000",
+      "headerBg": "#5d9266",
+      "btnCart": "#4fa968"
     }
   }
 }
