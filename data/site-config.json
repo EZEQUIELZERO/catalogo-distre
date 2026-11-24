@@ -66,13 +66,13 @@
     "saphirus": {
       "mode": "light",
       "accent": "#000000",
-      "btnPrimary": "#2e85e6",
+      "btnPrimary": "#51a0fb",
       "highlight": "#000000",
       "bg": "#ffffff",
-      "card": "#ffffff",
+      "card": "#e7d6ff",
       "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#2e85e6"
+      "btnCart": "#0008ff"
     }
   }
 }
