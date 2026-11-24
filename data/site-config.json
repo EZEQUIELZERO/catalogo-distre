@@ -11,13 +11,13 @@
     "ambar": {
       "mode": "light",
       "accent": "#000000",
-      "btnPrimary": "#c4a4e5",
+      "btnPrimary": "#bf86f9",
       "highlight": "#000000",
       "bg": "#ffffff",
-      "card": "#b9c6e9",
+      "card": "#e3cdf9",
       "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#5a48e5"
+      "btnCart": "#1e00ff"
     },
     "desodorantes": {
       "mode": "light",
