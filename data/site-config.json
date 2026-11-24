@@ -33,13 +33,13 @@
     "vais": {
       "mode": "light",
       "accent": "#050505",
-      "btnPrimary": "#50ee44",
+      "btnPrimary": "#67ff5c",
       "highlight": "#0a0a0a",
       "bg": "#ffffff",
-      "card": "#76d078",
+      "card": "#bdffbe",
       "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#4fa968"
+      "btnCart": "#1e00ff"
     },
     "algabo": {
       "mode": "light",
