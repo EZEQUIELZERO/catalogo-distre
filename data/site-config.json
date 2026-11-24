@@ -55,13 +55,13 @@
     "sandra-marzzan": {
       "mode": "light",
       "accent": "#000000",
-      "btnPrimary": "#7d5569",
+      "btnPrimary": "#ffbdde",
       "highlight": "#000000",
       "bg": "#ffffff",
-      "card": "#ffffff",
+      "card": "#ffe5f1",
       "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#7d5569"
+      "btnCart": "#0400ff"
     },
     "saphirus": {
       "mode": "light",
