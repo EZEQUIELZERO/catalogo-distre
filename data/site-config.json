@@ -22,13 +22,13 @@
     "desodorantes": {
       "mode": "light",
       "accent": "#000000",
-      "btnPrimary": "#e32b2b",
+      "btnPrimary": "#ffb8b8",
       "highlight": "#000000",
       "bg": "#ffffff",
-      "card": "#fb6a6a",
+      "card": "#f0c6c6",
       "text": "#000000",
       "headerBg": "#ffffff",
-      "btnCart": "#d41111"
+      "btnCart": "#1e00ff"
     },
     "vais": {
       "mode": "light",
