@@ -11549,12 +11549,14 @@
     {
       "ean": "7791274199622",
       "name": "ALGABO MEN TALCO 180",
+      "desc": "",
       "price": 2920,
       "tab": "algabo",
       "cat": "HOMBRE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda-algabo-men-desodorante-en-polvo-x180-g-7791274199622-533d2e2335fca2087f17888906536304-480-0.webp",
       "brand": "ALGABO",
+      "stock": 1,
       "catalogName": "TALCO PARA HOMBRE 180 GR",
       "bulto": 12,
       "descuentoBulto": 3
