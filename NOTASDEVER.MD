@@ -490,3 +490,13 @@ Fecha: 2026-11-21
 - `openEditProductModal` refleja también las ediciones en línea pendientes al abrir `#editOverlay`.
 - Etiquetas unificadas y claras en **Agregar producto**, **Editar producto** y lista Admin distinguiendo `Descripción (sistema / pedidos — WhatsApp, Excel, Sheets, PDF)`, `Nombre en catálogo (como aparece en la tarjeta, opcional)` y `Nota en tarjeta (opcional)`, además de alias CSV adicionales (`DESCRIPCION_SISTEMA`, `NOMBRE_DEL_CATALOGO`).
 Archivos: index.html, NOTASDEVER.MD
+
+### #037 - Doble catálogo independiente (COMPLETO / EN STOCK)
+Fecha: 2026-11-24
+- Se duplicó la estructura de catálogo en dos catálogos independientes accesibles desde la barra superior (`#catalogSwitchRow`, soporta `?catalogo=stock` / `#stock`):
+  - **📚 COMPLETO** (`completo`): catálogo principal completo (`data/custom-products.json` + productos embebidos `PRODUCTS_ALGABO`), con clave de almacenamiento `distre_overrides` y `distre_cart`.
+  - **✅ EN STOCK** (`stock`): catálogo secundario inicializado vacío (`data/stock-products.json`) para cargar solo productos en stock, sin mezclar los productos embebidos, con claves independientes `distre_overrides_stock` y `distre_cart_stock`.
+- Ambas vistas comparten exactamente las mismas pestañas de marca (`ALGABO`, `SANDRA MARZZAN`, `SAPHIRUS`, `AMBAR`, `DESODORANTES`, `VAIS` y pestañas personalizadas) y sub-pestañas de familia (`#filters`, `#subfilters`), además de todas las funciones de precios, bulto con descuento, código interno de stock (`S-100-...`) y exportación de pedidos (`WhatsApp`, `Excel`, `Sheets`, `PDF`, indicando catálogo en título y nombre de archivo).
+- En **Admin** se agregó la barra fija `#adminCatalogBar` (`📚 COMPLETO` / `✅ EN STOCK`) y selectores en **Agregar producto** (`#npCatalog`) e **Importar CSV** (`#csvCatalog`), más badge de catálogo activo en **Productos**, **📷 Cargar Stock** y **Editar producto** (`#editCatalogBadge`), con confirmación para no perder ediciones pendientes al cambiar de catálogo.
+- La subida de imágenes desde admin prefija `stock-` cuando el destino es `EN STOCK` y consulta `githubGetFile` para respetar `sha` previo.
+Archivos: index.html, data/stock-products.json, NOTASDEVER.MD

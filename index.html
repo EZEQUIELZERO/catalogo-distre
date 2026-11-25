@@ -309,6 +309,45 @@
     border:2px solid var(--bg);
   }
 
+  /* ---------- CATALOGO PRINCIPAL (COMPLETO / EN STOCK) ---------- */
+  .catalog-switch-row{
+    max-width:1200px;margin:8px auto 0;padding:0 4px;
+    display:flex;gap:8px;align-items:center;overflow-x:auto;scrollbar-width:none;
+  }
+  .catalog-switch-row::-webkit-scrollbar{display:none;}
+  .catalog-pill-group{
+    display:inline-flex;gap:6px;padding:4px;border-radius:999px;
+    background:var(--bg-soft);border:1px solid var(--border);flex-shrink:0;
+  }
+  .catalog-tab-btn{
+    display:inline-flex;align-items:center;gap:4px;
+    padding:7px 16px;border-radius:999px;border:1px solid transparent;
+    background:transparent;color:var(--text-dim);font-weight:800;font-size:.82rem;
+    cursor:pointer;transition:all .15s;white-space:nowrap;
+  }
+  .catalog-tab-btn:hover{color:var(--text);}
+  .catalog-tab-btn.active{
+    background:linear-gradient(180deg,var(--btn-green-top),var(--btn-green-mid) 55%,var(--btn-green-bot));
+    color:var(--btn-cart-text,#ffffff);border-color:var(--btn-cart-border,#186732);
+    text-shadow:0 -1px 0 rgba(0,0,0,.22);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 2px 8px rgba(0,0,0,.15);
+  }
+  .catalog-count-pill{
+    font-size:.7rem;padding:1px 6px;border-radius:999px;
+    background:rgba(128,128,128,.22);margin-left:2px;font-weight:700;
+  }
+  .catalog-tab-btn.active .catalog-count-pill{background:rgba(255,255,255,.22);}
+  .admin-catalog-bar{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    padding:10px 14px;margin-bottom:18px;border-radius:12px;
+    background:var(--card);border:2px solid var(--accent);
+  }
+  .admin-catalog-lbl{font-size:.82rem;font-weight:700;color:var(--text);}
+  .admin-catalog-badge{
+    font-size:.74rem;font-weight:700;color:var(--accent);background:var(--accent-soft);
+    padding:4px 10px;border-radius:999px;
+  }
+
   /* ---------- TABS ---------- */
   .tabs-row{
     max-width:1200px;margin:10px auto 0;padding:0 4px;
@@ -379,6 +418,7 @@
     .header-inner{gap:8px;}
     .counter{display:none;}
     .cart-btn{padding:10px 14px;font-size:.84rem;}
+    .catalog-tab-btn{padding:6px 12px;font-size:.78rem;}
   }
 
   /* ---------- GRID ---------- */
@@ -961,6 +1001,12 @@
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
     </button>
   </div>
+  <div class="catalog-switch-row" id="catalogSwitchRow">
+    <div class="catalog-pill-group" role="tablist" aria-label="Catálogo">
+      <button type="button" class="catalog-tab-btn active" data-catalog="completo" role="tab" aria-selected="true">📦 COMPLETO <span class="catalog-count-pill" id="countCatalogCompleto">0</span></button>
+      <button type="button" class="catalog-tab-btn" data-catalog="stock" role="tab" aria-selected="false">✅ EN STOCK <span class="catalog-count-pill" id="countCatalogStock">0</span></button>
+    </div>
+  </div>
   <div class="tabs-row" id="tabsRow"></div>
   <div class="filters" id="filters"></div>
   <div class="subfilters" id="subfilters"></div>
@@ -1107,6 +1153,17 @@
       <h2>Panel de administración</h2>
       <p class="admin-note">Todos los cambios (precios, visibilidad, productos, pestañas, personalización y WhatsApp) se guardan en GitHub para que se vean en cualquier navegador.</p>
 
+      <div class="admin-catalog-bar" id="adminCatalogBar">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <span class="admin-catalog-lbl">Catálogo a editar:</span>
+          <div class="catalog-pill-group">
+            <button type="button" class="catalog-tab-btn active" data-admin-catalog="completo">📦 COMPLETO</button>
+            <button type="button" class="catalog-tab-btn" data-admin-catalog="stock">✅ EN STOCK</button>
+          </div>
+        </div>
+        <span class="admin-catalog-badge" id="adminCatalogBadge">Editando: COMPLETO</span>
+      </div>
+
       <!-- ---------- SECCIÓN GENERAL ---------- -->
       <div class="admin-section" id="adminSectionGeneral">
         <div style="margin-bottom:26px;">
@@ -1134,7 +1191,7 @@
       <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
       <div class="admin-section" id="adminSectionProducts" style="display:none;">
         <div class="toggle-all-row">
-          <div class="admin-section-title" style="margin:0;">Productos (descripción, catálogo, precio, stock y visibilidad)</div>
+          <div class="admin-section-title" style="margin:0;">Productos — <span id="adminProductsCatalogTag">COMPLETO</span> (descripción, catálogo, precio, stock y visibilidad)</div>
           <button class="btn btn-close btn-auto" id="toggleAllBtn">✓ Habilitar todos</button>
         </div>
         <div class="admin-savebar" id="adminSaveBar">
@@ -1159,7 +1216,7 @@
 
       <!-- ---------- SECCIÓN CARGAR STOCK (ESCÁNER) ---------- -->
       <div class="admin-section" id="adminSectionScanStock" style="display:none;">
-        <div class="admin-section-title">Cargar stock con lector de códigos</div>
+        <div class="admin-section-title">Cargar stock con lector de códigos — <span id="adminScanCatalogTag">COMPLETO</span></div>
         <p class="admin-note">Escaneá el código EAN (o código interno) → presioná <b>Enter</b> → tecleá la cantidad → presioná <b>Enter</b> para aplicar. También podés enviar <code>CODIGO CANTIDAD</code> todo junto. Al terminar, tocá <b>💾 GUARDAR</b>.</p>
 
         <div class="admin-savebar" id="scanSaveBar">
@@ -1231,6 +1288,12 @@
       <!-- ---------- SECCIÓN AGREGAR PRODUCTO ---------- -->
       <div class="admin-section" id="adminSectionAddProduct" style="display:none;">
         <div class="admin-section-title">Agregar producto nuevo</div>
+        <div class="field" style="margin-bottom:10px;"><label>Catálogo destino</label>
+          <select id="npCatalog" class="price-input">
+            <option value="completo">📦 COMPLETO (catálogo general)</option>
+            <option value="stock">✅ EN STOCK (disponible inmediato)</option>
+          </select>
+        </div>
         <div class="field-row">
           <div class="field"><label>Código EAN / Código</label><input type="text" id="npEan" class="price-input" placeholder="Ej: 7798444550764 o SP200"></div>
           <div class="field"><label>Código interno (opcional)</label><input type="text" id="npCodigoInterno" class="price-input" placeholder="Ej: SP200"></div>
@@ -1375,6 +1438,12 @@
       <div class="admin-section" id="adminSectionImportCsv" style="display:none;">
         <div class="admin-section-title">Importar productos desde CSV</div>
         <p class="admin-note">Acepta columnas por nombre: <b>PROVEEDOR, FAMILIA, CODIGO_EAN, DESCRIPCION, NOMBRE CATALOGO, PRECIO, STOCK, IMAGEN, BULTO, DESCUENTO POR BULTO</b> (compatible también con formatos anteriores). <b>PROVEEDOR</b> define la pestaña principal y <b>FAMILIA</b> la sub-pestaña debajo.</p>
+        <div class="field" style="margin-bottom:10px;"><label>Catálogo destino</label>
+          <select id="csvCatalog" class="price-input">
+            <option value="completo">📦 COMPLETO (catálogo general)</option>
+            <option value="stock">✅ EN STOCK (disponible inmediato)</option>
+          </select>
+        </div>
         <div class="field"><label>Pestaña destino</label>
           <select id="csvTab" class="price-input"></select>
         </div>
@@ -1398,6 +1467,7 @@
     <button class="modal-close" id="editClose" aria-label="Cerrar">✕</button>
     <div class="admin-body">
       <h2>Editar producto</h2>
+      <span class="admin-catalog-badge" id="editCatalogBadge" style="display:inline-block;margin-bottom:10px;">Catálogo: COMPLETO</span>
       <p class="admin-note">Los cambios se guardan en el repositorio de GitHub y se aplican para todos los visitantes.</p>
       <div class="field-row">
         <div class="field"><label>Código EAN / Código (no editable)</label><input type="text" id="editEan" class="price-input" disabled></div>
@@ -1877,31 +1947,65 @@ function storageSet(key, value){
 }
 
 /* ======================================================
-   TAB REGISTRY (pestañas dinámicas)
+   CATÁLOGOS & TAB REGISTRY (COMPLETO / EN STOCK)
    ====================================================== */
+const CATALOGS = {
+  completo: { id:'completo', name:'COMPLETO', productsPath:'data/custom-products.json', cartKey:'distre_cart', overridesKey:'distre_overrides' },
+  stock: { id:'stock', name:'EN STOCK', productsPath:'data/stock-products.json', cartKey:'distre_cart_stock', overridesKey:'distre_overrides_stock' }
+};
+const CATALOG_IDS = ['completo', 'stock'];
+let activeCatalog = 'completo';
+
 const TAB_REGISTRY = {
-  algabo: { id:'algabo', name:'ALGABO', products:PRODUCTS_ALGABO }
+  algabo: { id:'algabo', name:'ALGABO' }
 };
 let customTabs = [];
-/* Copia en memoria de data/custom-products.json. Se usa para no perder el
-   campo 'lists' al guardar desde el panel. */
-let customProductsData = { products: [] };
+const catalogProducts = {
+  completo: { algabo: PRODUCTS_ALGABO.map(p => ({ ...p })) },
+  stock: { algabo: [] }
+};
+/* Copias en memoria de data/custom-products.json y data/stock-products.json.
+   Se usan para no perder el campo 'lists' al guardar desde el panel. */
+const catalogRepoData = {
+  completo: { products: [] },
+  stock: { products: [] }
+};
 
+function getActiveCatalogInfo(catalogId = activeCatalog){
+  return CATALOGS[catalogId] || CATALOGS.completo;
+}
+function ensureTabBucket(tabId){
+  CATALOG_IDS.forEach(cid => {
+    if(!catalogProducts[cid][tabId]) catalogProducts[cid][tabId] = [];
+  });
+}
 function getAllTabs(){
   return [...Object.values(TAB_REGISTRY), ...customTabs];
 }
 function getTabById(id){
   return getAllTabs().find(t => t.id === id);
 }
-function getTabProducts(id){
-  const t = TAB_REGISTRY[id];
-  if(t) return t.products;
-  const ct = customTabs.find(t => t.id === id);
-  return ct ? ct.products : [];
+function getTabProducts(id, catalogId = activeCatalog){
+  const bucket = catalogProducts[catalogId] || catalogProducts.completo;
+  return bucket[id] || [];
 }
-function findBaseProduct(ean){
+function setTabProducts(id, arr, catalogId = activeCatalog){
+  const bucket = catalogProducts[catalogId] || catalogProducts.completo;
+  bucket[id] = Array.isArray(arr) ? arr : [];
+}
+function getCatalogTotalCount(catalogId = activeCatalog){
+  const seen = new Set();
+  getAllTabs().forEach(t => {
+    getTabProducts(t.id, catalogId).forEach(p => {
+      const eff = getEffective(p, catalogId);
+      if(eff.enabled && !eff.deleted) seen.add(p.ean);
+    });
+  });
+  return seen.size;
+}
+function findBaseProduct(ean, catalogId = activeCatalog){
   for(const t of getAllTabs()){
-    const found = t.products.find(p => p.ean === ean);
+    const found = getTabProducts(t.id, catalogId).find(p => p.ean === ean);
     if(found) return found;
   }
   return null;
@@ -1909,23 +2013,31 @@ function findBaseProduct(ean){
 /* Un mismo producto puede estar en varias listas a la vez (por ejemplo si
    pertenece a más de una pestaña). Por eso existe 'lists' además de 'tab':
    'tab' es la lista principal y 'lists' las adicionales. */
-function ListsDe(ean, tabPrincipal){
-  return getAllTabs().filter(t => t.id !== tabPrincipal && t.products.some(p => p.ean === ean)).map(t => t.id);
+function ListsDe(ean, tabPrincipal, catalogId = activeCatalog){
+  return getAllTabs().filter(t => t.id !== tabPrincipal && getTabProducts(t.id, catalogId).some(p => p.ean === ean)).map(t => t.id);
 }
 
 /* ======================================================
    ESTADO
    ====================================================== */
-let overrides = {};        // Respaldo local (legacy)
-let cart = {};              // { ean: qty }
+const overridesByCatalog = { completo: {}, stock: {} }; // Respaldo local (legacy)
+const cartsByCatalog = { completo: {}, stock: {} };     // { ean: qty } por catálogo
 let whatsappNumber = DEFAULT_WHATSAPP;
 let isAdmin = false;
 let currentModalEan = null;
 let activeTab = 'algabo';
 let activeSubcat = 'Todos';
 
-function getActiveProducts(){ return getTabProducts(activeTab); }
-function getProductsForTab(tab){ return getTabProducts(tab); }
+function getCatalogCart(catalogId = activeCatalog){
+  if(!cartsByCatalog[catalogId]) cartsByCatalog[catalogId] = {};
+  return cartsByCatalog[catalogId];
+}
+function getCatalogOverrides(catalogId = activeCatalog){
+  if(!overridesByCatalog[catalogId]) overridesByCatalog[catalogId] = {};
+  return overridesByCatalog[catalogId];
+}
+function getActiveProducts(){ return getTabProducts(activeTab, activeCatalog); }
+function getProductsForTab(tab, catalogId = activeCatalog){ return getTabProducts(tab, catalogId); }
 
 function getGithubConfig(){
   return {
@@ -1941,16 +2053,23 @@ function saveGithubConfigTo(repo, branch, token){
 }
 
 function loadState(){
-  try{ overrides = JSON.parse(storageGet('distre_overrides')) || {}; }catch(e){ overrides = {}; }
-  try{ cart = JSON.parse(storageGet('distre_cart')) || {}; }catch(e){ cart = {}; }
+  CATALOG_IDS.forEach(cid => {
+    const info = CATALOGS[cid];
+    try{ overridesByCatalog[cid] = JSON.parse(storageGet(info.overridesKey)) || {}; }catch(e){ overridesByCatalog[cid] = {}; }
+    try{ cartsByCatalog[cid] = JSON.parse(storageGet(info.cartKey)) || {}; }catch(e){ cartsByCatalog[cid] = {}; }
+  });
   whatsappNumber = storageGet('distre_whatsapp') || DEFAULT_WHATSAPP;
 }
-function saveOverrides(){ storageSet('distre_overrides', JSON.stringify(overrides)); }
-function saveCart(){ storageSet('distre_cart', JSON.stringify(cart)); }
+function saveOverrides(catalogId = activeCatalog){
+  storageSet(getActiveCatalogInfo(catalogId).overridesKey, JSON.stringify(getCatalogOverrides(catalogId)));
+}
+function saveCart(catalogId = activeCatalog){
+  storageSet(getActiveCatalogInfo(catalogId).cartKey, JSON.stringify(getCatalogCart(catalogId)));
+}
 function saveWhatsappNumber(){ storageSet('distre_whatsapp', whatsappNumber); }
 
-function getEffective(p){
-  const o = overrides[p.ean] || {};
+function getEffective(p, catalogId = activeCatalog){
+  const o = getCatalogOverrides(catalogId)[p.ean] || {};
   const price = Number.isFinite(o.price) ? o.price : p.price;
   const baseEnabled = typeof p.enabled === 'boolean' ? p.enabled : true;
   const enabled = typeof o.enabled === 'boolean' ? o.enabled : baseEnabled;
@@ -2135,24 +2254,38 @@ async function githubPutFile(path, contentBase64, message, sha){
   }
   return res.json();
 }
-async function loadCustomProductsData(){
-  const existing = await githubGetFile(CUSTOM_PRODUCTS_PATH);
+async function loadCustomProductsData(catalogId = activeCatalog){
+  const path = getActiveCatalogInfo(catalogId).productsPath;
+  const existing = await githubGetFile(path);
   if(!existing) return { data: { products: [] }, sha: null };
   let data;
   try{ data = JSON.parse(base64ToUtf8(existing.content)); }catch(e){ data = { products: [] }; }
   if(!Array.isArray(data.products)) data.products = [];
   return { data, sha: existing.sha };
 }
-async function saveCustomProductsData(data, sha, message){
+async function saveCustomProductsData(data, sha, message, catalogId = activeCatalog){
+  const path = getActiveCatalogInfo(catalogId).productsPath;
   const contentBase64 = utf8ToBase64(JSON.stringify(data, null, 2));
-  await githubPutFile(CUSTOM_PRODUCTS_PATH, contentBase64, message, sha);
+  await githubPutFile(path, contentBase64, message, sha);
 }
-function mergeCustomProductLocally(entry){
+async function uploadProductImage(ean, imgFile, commitMessage, catalogId = activeCatalog){
+  const base64 = await fileToBase64(imgFile);
+  const ext = (imgFile.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
+  const prefix = catalogId === 'stock' ? 'stock-' : '';
+  const path = `images/uploads/${prefix}${ean}.${ext}`;
+  const existingImg = await githubGetFile(path).catch(() => null);
+  await githubPutFile(path, base64, commitMessage, existingImg ? existingImg.sha : null);
+  return path;
+}
+function mergeCustomProductLocally(entry, catalogId = activeCatalog){
   if(entry.deleted) return null;
-  const target = getProductsForTab(entry.tab);
-  if(!target) return null;
+  if(!getTabById(entry.tab)) return null;
+  ensureTabBucket(entry.tab);
+  const target = getTabProducts(entry.tab, catalogId);
   getAllTabs().forEach(t => {
-    if(t.id !== entry.tab) t.products = t.products.filter(p => p.ean !== entry.ean);
+    if(t.id !== entry.tab){
+      setTabProducts(t.id, getTabProducts(t.id, catalogId).filter(p => p.ean !== entry.ean), catalogId);
+    }
   });
   const idx = target.findIndex(p => p.ean === entry.ean);
   const tabInfo = getTabById(entry.tab);
@@ -2180,23 +2313,26 @@ function mergeCustomProductLocally(entry){
       if(id === entry.tab) return;
       const t = getTabById(id);
       if(!t) return;
-      const i = t.products.findIndex(p => p.ean === entry.ean);
-      if(i >= 0) t.products[i] = productObj; else t.products.push(productObj);
+      ensureTabBucket(id);
+      const listArr = getTabProducts(id, catalogId);
+      const i = listArr.findIndex(p => p.ean === entry.ean);
+      if(i >= 0) listArr[i] = productObj; else listArr.push(productObj);
     });
   }
   return productObj;
 }
 /* Al guardar desde el panel conservamos listas válidas (descartando pestañas eliminadas). */
-function preservarListas(entry){
-  const prev = (customProductsData.products || []).find(p => p.ean === entry.ean);
-  const extra = (prev && Array.isArray(prev.lists)) ? prev.lists : ListsDe(entry.ean, entry.tab);
+function preservarListas(entry, catalogId = activeCatalog){
+  const repoProds = (catalogRepoData[catalogId] && catalogRepoData[catalogId].products) || [];
+  const prev = repoProds.find(p => p.ean === entry.ean);
+  const extra = (prev && Array.isArray(prev.lists)) ? prev.lists : ListsDe(entry.ean, entry.tab, catalogId);
   const todas = Array.from(new Set((extra || []).filter(id => id !== entry.tab && getTabById(id))));
   if(todas.length) entry.lists = todas;
   return entry;
 }
-function buildRepoProductEntry(ean, existing, patch){
-  const base = findBaseProduct(ean) || {};
-  const tab = (patch && patch.tab) || (existing && existing.tab) || findProductTab(ean) || activeTab || 'algabo';
+function buildRepoProductEntry(ean, existing, patch, catalogId = activeCatalog){
+  const base = findBaseProduct(ean, catalogId) || {};
+  const tab = (patch && patch.tab) || (existing && existing.tab) || findProductTab(ean, catalogId) || activeTab || 'algabo';
   const rawImg = (patch && 'img' in patch) ? patch.img : ((existing && existing.img) || base.img || '');
   const img = (rawImg && rawImg !== GENERIC_IMG && rawImg !== 'SIN_IMAGEN') ? rawImg : '';
   const entry = {
@@ -2227,42 +2363,45 @@ function buildRepoProductEntry(ean, existing, patch){
   const descBultoVal = (patch && 'descuentoBulto' in patch) ? patch.descuentoBulto : ((existing && typeof existing.descuentoBulto === 'number') ? existing.descuentoBulto : base.descuentoBulto);
   if(typeof descBultoVal === 'number' && Number.isFinite(descBultoVal)) entry.descuentoBulto = Math.min(100, Math.max(0, descBultoVal));
   const listsRaw = (patch && Array.isArray(patch.lists)) ? patch.lists
-    : ((existing && Array.isArray(existing.lists)) ? existing.lists : ListsDe(ean, tab));
+    : ((existing && Array.isArray(existing.lists)) ? existing.lists : ListsDe(ean, tab, catalogId));
   const validLists = Array.from(new Set((listsRaw || []).filter(id => id !== tab && getTabById(id))));
   if(validLists.length) entry.lists = validLists;
   return entry;
 }
-function clearLocalOverrides(eans){
+function clearLocalOverrides(eans, catalogId = activeCatalog){
+  const ov = getCatalogOverrides(catalogId);
   let changed = false;
   eans.forEach(ean => {
-    if(overrides[ean]){
-      delete overrides[ean];
+    if(ov[ean]){
+      delete ov[ean];
       changed = true;
     }
   });
-  if(changed) saveOverrides();
+  if(changed) saveOverrides(catalogId);
 }
-async function loadCustomProducts(){
+async function loadCatalogProducts(catalogId){
+  const info = getActiveCatalogInfo(catalogId);
   try{
-    const res = await fetch('./' + CUSTOM_PRODUCTS_PATH + '?t=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch('./' + info.productsPath + '?t=' + Date.now(), { cache: 'no-store' });
     if(!res.ok) return;
     const data = await res.json();
-    customProductsData = { products: (data.products || []) };
+    catalogRepoData[catalogId] = { products: (data.products || []) };
     const activeEans = [];
     (data.products || []).forEach(p => {
       if(!p.ean) return;
       if(p.deleted){
-        // Producto eliminado desde el panel: sacarlo de todas las pestañas
-        // (incluye productos base embebidos en el HTML).
-        getAllTabs().forEach(t => { t.products = t.products.filter(x => x.ean !== p.ean); });
+        // Producto eliminado desde el panel: sacarlo de todas las pestañas de este catálogo.
+        getAllTabs().forEach(t => {
+          setTabProducts(t.id, getTabProducts(t.id, catalogId).filter(x => x.ean !== p.ean), catalogId);
+        });
         return;
       }
       if(!p.name) return;
       activeEans.push(p.ean);
       const tab = p.tab || 'algabo';
-      mergeCustomProductLocally({ ...p, tab });
+      mergeCustomProductLocally({ ...p, tab }, catalogId);
     });
-    clearLocalOverrides(activeEans);
+    clearLocalOverrides(activeEans, catalogId);
   }catch(e){
     /* El archivo todavía no existe en el repo, o no se pudo leer: seguimos con el catálogo base. */
   }
@@ -2332,8 +2471,9 @@ async function loadCustomTabs(){
     const data = await res.json();
     (data.tabs || []).forEach(t => {
       if(!t.id || !t.name) return;
-      if(TAB_REGISTRY[t.id]) return;
-      customTabs.push({ id: t.id, name: t.name, products: [] });
+      if(TAB_REGISTRY[t.id]){ ensureTabBucket(t.id); return; }
+      customTabs.push({ id: t.id, name: t.name });
+      ensureTabBucket(t.id);
     });
   }catch(e){}
 }
@@ -2356,15 +2496,16 @@ function isShaConflictError(e){
 
 /* Lee los datos, aplica mutate(data) y guarda en cola secuencial. Si el PUT falla
    por conflicto de sha (otra edición concurrente), vuelve a leer y reintenta. */
-function updateCustomProducts(mutate, message, maxRetries = 3){
+function updateCustomProducts(mutate, message, maxRetries = 3, catalogId = activeCatalog){
+  const targetCatalog = catalogId;
   const run = async () => {
     let lastError;
     for(let attempt = 0; attempt < maxRetries; attempt++){
       try{
-        const { data, sha } = await loadCustomProductsData();
+        const { data, sha } = await loadCustomProductsData(targetCatalog);
         const result = mutate(data) || data;
-        await saveCustomProductsData(result, sha, message);
-        customProductsData = result;
+        await saveCustomProductsData(result, sha, message, targetCatalog);
+        catalogRepoData[targetCatalog] = result;
         return result;
       }catch(e){
         lastError = e;
@@ -2394,13 +2535,85 @@ async function updateCustomTabs(mutate, message, maxRetries = 3){
 }
 
 /* ======================================================
+   CAMBIO DE CATÁLOGO (COMPLETO / EN STOCK)
+   ====================================================== */
+function syncCatalogUI(){
+  const info = getActiveCatalogInfo();
+  document.querySelectorAll('[data-catalog]').forEach(btn => {
+    const active = btn.dataset.catalog === activeCatalog;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+  document.querySelectorAll('[data-admin-catalog]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.adminCatalog === activeCatalog);
+  });
+  const countComp = document.getElementById('countCatalogCompleto');
+  const countStock = document.getElementById('countCatalogStock');
+  if(countComp) countComp.textContent = getCatalogTotalCount('completo');
+  if(countStock) countStock.textContent = getCatalogTotalCount('stock');
+  const badge = document.getElementById('adminCatalogBadge');
+  if(badge) badge.textContent = `Editando: ${info.name}`;
+  const prodTag = document.getElementById('adminProductsCatalogTag');
+  if(prodTag) prodTag.textContent = info.name;
+  const scanTag = document.getElementById('adminScanCatalogTag');
+  if(scanTag) scanTag.textContent = info.name;
+  const npCat = document.getElementById('npCatalog');
+  if(npCat && npCat.value !== activeCatalog) npCat.value = activeCatalog;
+  const csvCat = document.getElementById('csvCatalog');
+  if(csvCat && csvCat.value !== activeCatalog) csvCat.value = activeCatalog;
+}
+
+function setActiveCatalog(catalogId, opts = {}){
+  if(!CATALOGS[catalogId]) return false;
+  if(catalogId === activeCatalog && !opts.force) return true;
+  if(!opts.force && isAdmin && adminPage.classList.contains('open') && typeof getPendingCount === 'function' && getPendingCount() > 0){
+    const targetName = CATALOGS[catalogId].name;
+    if(!confirm(`Tenés ${getPendingCount()} cambio(s) sin guardar en ${getActiveCatalogInfo().name}. ¿Cambiar a ${targetName} y descartar los cambios pendientes?`)){
+      const npCat = document.getElementById('npCatalog');
+      const csvCat = document.getElementById('csvCatalog');
+      if(npCat) npCat.value = activeCatalog;
+      if(csvCat) csvCat.value = activeCatalog;
+      return false;
+    }
+  }
+  activeCatalog = catalogId;
+  activeCat = 'Todos';
+  activeSubcat = 'Todos';
+  searchInput.value = '';
+  if(typeof pendingProductChanges !== 'undefined') pendingProductChanges = {};
+  if(typeof adminSelected !== 'undefined') adminSelected.clear();
+  if(typeof currentScanned !== 'undefined') currentScanned = null;
+  if(typeof scanSessionLog !== 'undefined') scanSessionLog = [];
+  ['addProductStatus', 'importCsvStatus'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.textContent = '';
+  });
+
+  syncCatalogUI();
+  buildFilters();
+  renderGrid();
+  document.getElementById('cartBadge').textContent = cartCount();
+  if(cartOverlay.classList.contains('open')) renderCartModal();
+  if(isAdmin && adminPage.classList.contains('open')){
+    renderAdminList();
+    renderAdminTabList();
+    populateCategorySelect();
+    if(typeof resetScanInputs === 'function') resetScanInputs(false, true);
+    if(typeof renderScanLog === 'function') renderScanLog();
+    if(typeof updateAdminSaveBar === 'function') updateAdminSaveBar();
+  }
+  return true;
+}
+
+/* ======================================================
    CARRITO
    ====================================================== */
-function cartQty(ean){ return cart[ean] || 0; }
-function cartCount(){ return Object.values(cart).reduce((a,b)=>a+b,0); }
+function cartQty(ean){ return getCatalogCart()[ean] || 0; }
+function cartCount(){ return Object.values(getCatalogCart()).reduce((a,b)=>a+b,0); }
 
 function addToCart(ean){
-  cart[ean] = (cart[ean] || 0) + 1;
+  const c = getCatalogCart();
+  c[ean] = (c[ean] || 0) + 1;
   saveCart();
   updateCartUI();
   showToast('Agregado al carrito (+1)');
@@ -2409,29 +2622,32 @@ function addBultoToCart(ean){
   const base = findBaseProduct(ean);
   const bulto = (base && typeof base.bulto === 'number' && Number.isFinite(base.bulto) && base.bulto >= 1) ? Math.round(base.bulto) : 0;
   if(!bulto) return;
-  cart[ean] = (cart[ean] || 0) + bulto;
+  const c = getCatalogCart();
+  c[ean] = (c[ean] || 0) + bulto;
   saveCart();
   updateCartUI();
   const hasDesc = typeof base.descuentoBulto === 'number' && Number.isFinite(base.descuentoBulto) && base.descuentoBulto > 0;
   showToast(hasDesc ? `Agregado 1 bulto (+${bulto}, -${formatDiscountPct(base.descuentoBulto)}% dto.)` : `Agregado 1 bulto (+${bulto})`);
 }
 function removeFromCart(ean){
-  if(!cart[ean] || cart[ean] <= 0){
+  const c = getCatalogCart();
+  if(!c[ean] || c[ean] <= 0){
     showToast('Ya no está en tu carrito');
     return;
   }
-  cart[ean] -= 1;
-  if(cart[ean] <= 0) delete cart[ean];
+  c[ean] -= 1;
+  if(c[ean] <= 0) delete c[ean];
   saveCart();
   updateCartUI();
 }
 function setCartQty(ean, qty){
-  if(qty <= 0){ delete cart[ean]; } else { cart[ean] = qty; }
+  const c = getCatalogCart();
+  if(qty <= 0){ delete c[ean]; } else { c[ean] = qty; }
   saveCart();
   updateCartUI();
 }
 function clearCart(){
-  cart = {};
+  cartsByCatalog[activeCatalog] = {};
   saveCart();
   updateCartUI();
 }
@@ -2510,10 +2726,13 @@ function renderGrid(){
   counter.textContent = filtered.length + (filtered.length === 1 ? " producto" : " productos");
 
   if(filtered.length === 0){
+    const emptyMsg = (!q && activeCatalog === 'stock')
+      ? 'Todavía no hay productos cargados en EN STOCK para esta marca.'
+      : 'No se encontraron productos para tu búsqueda.';
     grid.innerHTML = `
       <div class="empty-state">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <div>No se encontraron productos para tu búsqueda.</div>
+        <div>${emptyMsg}</div>
       </div>`;
     return;
   }
@@ -2724,6 +2943,7 @@ function openAdminPanel(){
   document.getElementById('ghRepo').value = gh.repo;
   document.getElementById('ghBranch').value = gh.branch;
   document.getElementById('ghToken').value = gh.token;
+  syncCatalogUI();
   renderAdminList();
   renderTabs();
   populateCategorySelect();
@@ -3046,11 +3266,12 @@ document.getElementById('adminDisableSelBtn').addEventListener('click', () => {
   showToast(`${count} producto(s) deshabilitado(s) — tocá GUARDAR para aplicar`);
 });
 
-function markDeletedLocally(eans){
+function markDeletedLocally(eans, catalogId = activeCatalog){
+  const ov = getCatalogOverrides(catalogId);
   eans.forEach(ean => {
-    overrides[ean] = { deleted: true };
+    ov[ean] = { deleted: true };
   });
-  saveOverrides();
+  saveOverrides(catalogId);
 }
 
 document.getElementById('adminDeleteSelBtn').addEventListener('click', () => {
@@ -3101,6 +3322,8 @@ document.getElementById('adminDiscardProductsBtn').addEventListener('click', dis
 document.getElementById('scanDiscardProductsBtn').addEventListener('click', discardPendingProductChanges);
 
 async function savePendingProductChanges(){
+  const targetCatalog = activeCatalog;
+  const catalogNameLabel = CATALOGS[targetCatalog].name;
   const entries = Object.entries(pendingProductChanges);
   if(entries.length === 0){ showToast('No hay cambios pendientes para guardar'); return; }
   const gh = getGithubConfig();
@@ -3108,7 +3331,7 @@ async function savePendingProductChanges(){
 
   const deletedEans = entries.filter(([, c]) => c.deleted === true).map(([ean]) => ean);
   if(deletedEans.length > 0){
-    if(!confirm(`Se quitarán definitivamente ${deletedEans.length} producto(s) del catálogo y se guardarán ${entries.length} cambio(s) en GitHub. ¿Continuar?`)) return;
+    if(!confirm(`Se quitarán definitivamente ${deletedEans.length} producto(s) del catálogo ${catalogNameLabel} y se guardarán ${entries.length} cambio(s) en GitHub. ¿Continuar?`)) return;
   }
 
   const saveBtns = ['adminSaveProductsBtn', 'scanSaveProductsBtn'].map(id => document.getElementById(id)).filter(Boolean);
@@ -3125,8 +3348,8 @@ async function savePendingProductChanges(){
           if(idx >= 0){
             data.products[idx].deleted = true;
           } else {
-            const base = findBaseProduct(ean);
-            data.products.push({ ean, name: (base && base.name) || 'Producto eliminado', tab: findProductTab(ean), deleted: true });
+            const base = findBaseProduct(ean, targetCatalog);
+            data.products.push({ ean, name: (base && base.name) || 'Producto eliminado', tab: findProductTab(ean, targetCatalog), deleted: true });
           }
           return;
         }
@@ -3137,34 +3360,35 @@ async function savePendingProductChanges(){
         if('price' in change) patch.price = change.price;
         if('stock' in change) patch.stock = change.stock;
         if('enabled' in change) patch.enabled = change.enabled;
-        const entry = buildRepoProductEntry(ean, existing, patch);
+        const entry = buildRepoProductEntry(ean, existing, patch, targetCatalog);
         if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
         updatedEntries.push(entry);
         updatedEans.push(ean);
       });
       return data;
-    }, `Guardar ${entries.length} cambio(s) de productos desde el panel`);
+    }, `Guardar [${catalogNameLabel}] ${entries.length} cambio(s) de productos desde el panel`, 3, targetCatalog);
 
     if(deletedEans.length > 0){
       const delSet = new Set(deletedEans);
       getAllTabs().forEach(t => {
-        t.products = t.products.filter(p => !delSet.has(p.ean));
+        setTabProducts(t.id, getTabProducts(t.id, targetCatalog).filter(p => !delSet.has(p.ean)), targetCatalog);
       });
-      markDeletedLocally(deletedEans);
+      markDeletedLocally(deletedEans, targetCatalog);
       deletedEans.forEach(ean => adminSelected.delete(ean));
     }
     if(updatedEans.length > 0){
-      clearLocalOverrides(updatedEans);
-      updatedEntries.forEach(mergeCustomProductLocally);
+      clearLocalOverrides(updatedEans, targetCatalog);
+      updatedEntries.forEach(e => mergeCustomProductLocally(e, targetCatalog));
     }
     const savedSet = new Set(updatedEans);
     scanSessionLog.forEach(item => { if(savedSet.has(item.ean)) item.saved = true; });
     pendingProductChanges = {};
+    syncCatalogUI();
     renderAdminList();
     renderScanLog();
     buildFilters();
     renderGrid();
-    showToast(`✅ ${entries.length} cambio(s) guardados en GitHub`);
+    showToast(`✅ ${entries.length} cambio(s) guardados en ${catalogNameLabel}`);
   }catch(e){
     showToast('❌ Error al guardar: ' + e.message);
   }finally{
@@ -3191,25 +3415,25 @@ function parseScanCodeInput(raw){
   }
   return { code: trimmed, inlineQty: null };
 }
-function findProductByCode(rawCode){
+function findProductByCode(rawCode, catalogId = activeCatalog){
   const code = String(rawCode ?? '').trim();
   if(!code) return null;
   const codeLower = code.toLowerCase();
   const tabs = getAllTabs();
   for(const tab of tabs){
-    const found = tab.products.find(p => !getEffective(p).deleted && p.ean === code);
+    const found = getTabProducts(tab.id, catalogId).find(p => !getEffective(p, catalogId).deleted && p.ean === code);
     if(found) return { product: found, tab };
   }
   for(const tab of tabs){
-    const found = tab.products.find(p => !getEffective(p).deleted && p.codigoInterno && p.codigoInterno === code);
+    const found = getTabProducts(tab.id, catalogId).find(p => !getEffective(p, catalogId).deleted && p.codigoInterno && p.codigoInterno === code);
     if(found) return { product: found, tab };
   }
   for(const tab of tabs){
-    const found = tab.products.find(p => !getEffective(p).deleted && String(p.ean || '').toLowerCase() === codeLower);
+    const found = getTabProducts(tab.id, catalogId).find(p => !getEffective(p, catalogId).deleted && String(p.ean || '').toLowerCase() === codeLower);
     if(found) return { product: found, tab };
   }
   for(const tab of tabs){
-    const found = tab.products.find(p => !getEffective(p).deleted && p.codigoInterno && String(p.codigoInterno).toLowerCase() === codeLower);
+    const found = getTabProducts(tab.id, catalogId).find(p => !getEffective(p, catalogId).deleted && p.codigoInterno && String(p.codigoInterno).toLowerCase() === codeLower);
     if(found) return { product: found, tab };
   }
   return null;
@@ -3475,6 +3699,8 @@ document.getElementById('npSubcatSelect').addEventListener('change', () => {
 
 document.getElementById('addProductBtn').addEventListener('click', async () => {
   const statusEl = document.getElementById('addProductStatus');
+  const targetCatalog = document.getElementById('npCatalog').value || activeCatalog;
+  const catalogNameLabel = getActiveCatalogInfo(targetCatalog).name;
   const ean = document.getElementById('npEan').value.trim().replace(/\s+/g, '');
   const codigoInterno = document.getElementById('npCodigoInterno').value.trim();
   const catalogName = document.getElementById('npCatalogName').value.trim();
@@ -3498,7 +3724,7 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
 
   if(!ean || !/^[A-Za-z0-9._-]{2,32}$/.test(ean)){ statusEl.textContent = '❌ Ingresá un código EAN / Código válido (mínimo 2 caracteres).'; return; }
   if(!name){ statusEl.textContent = '❌ Ingresá una descripción o nombre en catálogo.'; return; }
-  if(findBaseProduct(ean)){ statusEl.textContent = '❌ Ese EAN / código ya existe en el catálogo. Para editarlo, usá la sección "Productos".'; return; }
+  if(findBaseProduct(ean, targetCatalog)){ statusEl.textContent = `❌ Ese EAN / código ya existe en ${catalogNameLabel}. Para editarlo, usá la sección "Productos".`; return; }
   const gh = getGithubConfig();
   if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
 
@@ -3507,14 +3733,10 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
   try{
     let imgPath = imgUrl;
     if(imgFile){
-      const base64 = await fileToBase64(imgFile);
-      const ext = (imgFile.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
-      const path = `images/uploads/${ean}.${ext}`;
-      await githubPutFile(path, base64, `Agregar imagen producto ${ean}`, null);
-      imgPath = path;
+      imgPath = await uploadProductImage(ean, imgFile, `Agregar imagen [${catalogNameLabel}] producto ${ean}`, targetCatalog);
     }
 
-    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand });
+    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand }, targetCatalog);
     if(codigoInterno) entry.codigoInterno = codigoInterno;
     if(catalogName) entry.catalogName = catalogName;
     if(stock !== null) entry.stock = stock;
@@ -3524,16 +3746,17 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
       const idx = data.products.findIndex(p => p.ean === ean);
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       return data;
-    }, `Agregar producto ${ean} - ${name}`);
+    }, `Agregar producto [${catalogNameLabel}] ${ean} - ${name}`, 3, targetCatalog);
 
-    delete pendingProductChanges[ean];
-    clearLocalOverrides([ean]);
-    mergeCustomProductLocally(entry);
+    if(targetCatalog === activeCatalog) delete pendingProductChanges[ean];
+    clearLocalOverrides([ean], targetCatalog);
+    mergeCustomProductLocally(entry, targetCatalog);
+    syncCatalogUI();
     buildFilters();
     renderGrid();
     renderAdminList();
 
-    statusEl.textContent = '✅ Producto guardado en GitHub. Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.';
+    statusEl.textContent = `✅ Producto guardado en ${catalogNameLabel} (GitHub). Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.`;
     ['npEan','npCodigoInterno','npCatalogName','npName','npDesc','npPrice','npStock','npBulto','npBultoDesc','npBrand','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('npImgFile').value = '';
     populateCategorySelect();
@@ -3546,16 +3769,20 @@ document.getElementById('addProductBtn').addEventListener('click', async () => {
 
 /* ---------- EDITAR PRODUCTO ---------- */
 let editingEan = null;
+let editingCatalog = 'completo';
 
-function findProductTab(ean){
-  return getAllTabs().find(t => t.products.some(p => p.ean === ean))?.id || 'algabo';
+function findProductTab(ean, catalogId = activeCatalog){
+  return getAllTabs().find(t => getTabProducts(t.id, catalogId).some(p => p.ean === ean))?.id || 'algabo';
 }
 
 function openEditProductModal(ean){
-  const base = findBaseProduct(ean);
+  editingCatalog = activeCatalog;
+  const base = findBaseProduct(ean, editingCatalog);
   if(!base) return;
   const st = getAdminRowState(base);
   editingEan = ean;
+  const editBadge = document.getElementById('editCatalogBadge');
+  if(editBadge) editBadge.textContent = `Catálogo: ${getActiveCatalogInfo(editingCatalog).name}`;
   document.getElementById('editEan').value = ean;
   document.getElementById('editCodigoInterno').value = base.codigoInterno || '';
   document.getElementById('editCatalogName').value = st.catalogName || '';
@@ -3577,16 +3804,16 @@ function populateEditTabSelect(ean){
   const tabs = getAllTabs();
   const sel = document.getElementById('editTab');
   sel.innerHTML = tabs.map(t => `<option value="${t.id}">${t.name}</option>`).join('');
-  sel.value = findProductTab(ean);
+  sel.value = findProductTab(ean, editingCatalog);
   populateEditCategorySelect();
 }
 
 function populateEditCategorySelect(){
   const tab = document.getElementById('editTab').value;
   const sel = document.getElementById('editCatSelect');
-  const base = findBaseProduct(editingEan);
+  const base = findBaseProduct(editingEan, editingCatalog);
   const currentCat = (base && base.cat) || '';
-  const cats = [...new Set(getProductsForTab(tab).map(p => p.cat))].sort();
+  const cats = [...new Set(getProductsForTab(tab, editingCatalog).map(p => p.cat))].sort();
   let html = cats.map(c => `<option value="${c}" ${c === currentCat ? 'selected' : ''}>${c}</option>`).join('');
   if(currentCat && !cats.includes(currentCat)){
     html = `<option value="${currentCat}" selected>${currentCat}</option>` + html;
@@ -3600,14 +3827,14 @@ function populateEditSubcatSelect(){
   const tab = document.getElementById('editTab').value;
   const cat = document.getElementById('editCatSelect').value;
   const sel = document.getElementById('editSubcatSelect');
-  const base = findBaseProduct(editingEan);
+  const base = findBaseProduct(editingEan, editingCatalog);
   const currentSub = (base && base.subcat) || '';
   let html = '';
   if(!cat || cat === '__new__'){
     html = `<option value="" ${!currentSub ? 'selected' : ''}>— Sin subcategoría —</option><option value="__new__">+ Nueva subcategoría...</option>`;
   } else {
     const subcats = [...new Set(
-      getProductsForTab(tab).filter(p => p.cat === cat && p.subcat && p.subcat.trim()).map(p => p.subcat)
+      getProductsForTab(tab, editingCatalog).filter(p => p.cat === cat && p.subcat && p.subcat.trim()).map(p => p.subcat)
     )].sort();
     html = subcats.map(s => `<option value="${s}" ${s === currentSub ? 'selected' : ''}>${s}</option>`).join('');
     if(currentSub && !subcats.includes(currentSub)){
@@ -3622,6 +3849,8 @@ function populateEditSubcatSelect(){
 
 async function saveEditProduct(){
   const statusEl = document.getElementById('editStatus');
+  const targetCatalog = editingCatalog || activeCatalog;
+  const catalogNameLabel = getActiveCatalogInfo(targetCatalog).name;
   const ean = editingEan;
   const codigoInterno = document.getElementById('editCodigoInterno').value.trim();
   const catalogName = document.getElementById('editCatalogName').value.trim();
@@ -3649,14 +3878,10 @@ async function saveEditProduct(){
   statusEl.textContent = 'Guardando...';
   document.getElementById('editSaveBtn').disabled = true;
   try{
-    const base = findBaseProduct(ean) || {};
+    const base = findBaseProduct(ean, targetCatalog) || {};
     let imgPath = imgUrl || base.img || GENERIC_IMG;
     if(imgFile){
-      const base64 = await fileToBase64(imgFile);
-      const ext = (imgFile.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '') || 'jpg';
-      const path = `images/uploads/${ean}.${ext}`;
-      await githubPutFile(path, base64, `Actualizar imagen producto ${ean}`, null);
-      imgPath = path;
+      imgPath = await uploadProductImage(ean, imgFile, `Actualizar imagen [${catalogNameLabel}] producto ${ean}`, targetCatalog);
     }
 
     let savedEntry = null;
@@ -3668,23 +3893,26 @@ async function saveEditProduct(){
         tab, cat, subcat,
         img: imgPath,
         brand: brand || (getTabById(tab)?.name || tab)
-      });
+      }, targetCatalog);
       if(idx >= 0) data.products[idx] = savedEntry; else data.products.push(savedEntry);
       return data;
-    }, `Editar producto ${ean} - ${name}`);
+    }, `Editar producto [${catalogNameLabel}] ${ean} - ${name}`, 3, targetCatalog);
 
     getAllTabs().forEach(t => {
-      if(t.id !== tab) t.products = t.products.filter(p => p.ean !== ean);
+      if(t.id !== tab){
+        setTabProducts(t.id, getTabProducts(t.id, targetCatalog).filter(p => p.ean !== ean), targetCatalog);
+      }
     });
     // Si el producto estaba eliminado o tenía cambios pendientes, limpiarlos
-    delete pendingProductChanges[ean];
-    clearLocalOverrides([ean]);
-    mergeCustomProductLocally(savedEntry);
+    if(targetCatalog === activeCatalog) delete pendingProductChanges[ean];
+    clearLocalOverrides([ean], targetCatalog);
+    mergeCustomProductLocally(savedEntry, targetCatalog);
+    syncCatalogUI();
     buildFilters();
     renderGrid();
     renderAdminList();
 
-    statusEl.textContent = '✅ Producto editado y guardado en GitHub.';
+    statusEl.textContent = `✅ Producto editado y guardado en ${catalogNameLabel} (GitHub).`;
     closeOverlayEl(editOverlay);
   }catch(e){
     statusEl.textContent = '❌ Error: ' + e.message;
@@ -3784,6 +4012,8 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
   const gh = getGithubConfig();
   if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
 
+  const targetCatalog = document.getElementById('csvCatalog').value || activeCatalog;
+  const catalogNameLabel = getActiveCatalogInfo(targetCatalog).name;
   const selectedCsvTab = document.getElementById('csvTab').value;
   const defaultCat = document.getElementById('csvCat').value.trim() || 'Otros';
 
@@ -3796,7 +4026,7 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
     const colMap = detectCsvColumns(allRows[0]);
     const rows = allRows.slice(1);
 
-    statusEl.textContent = 'Sincronizando con GitHub...';
+    statusEl.textContent = `Sincronizando ${catalogNameLabel} con GitHub...`;
     const newEntries = [];
     const newTabsToCreate = new Map();
     const touchedTabs = new Set();
@@ -3864,7 +4094,8 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
       }, `Crear pestaña(s) desde CSV: ${pairs.map(([, n]) => n).join(', ')}`);
       pairs.forEach(([id, tabName]) => {
         if(!getTabById(id)){
-          customTabs.push({ id, name: tabName, products: [] });
+          customTabs.push({ id, name: tabName });
+          ensureTabBucket(id);
           createdTabsList.push(tabName);
         }
       });
@@ -3884,10 +4115,13 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
         if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       });
       return data;
-    }, `Importar CSV (${newEntries.length} productos)`);
-    newEntries.forEach(e => { delete pendingProductChanges[e.ean]; });
-    clearLocalOverrides(newEntries.map(e => e.ean));
-    newEntries.forEach(mergeCustomProductLocally);
+    }, `Importar CSV [${catalogNameLabel}] (${newEntries.length} productos)`, 3, targetCatalog);
+    if(targetCatalog === activeCatalog){
+      newEntries.forEach(e => { delete pendingProductChanges[e.ean]; });
+    }
+    clearLocalOverrides(newEntries.map(e => e.ean), targetCatalog);
+    newEntries.forEach(e => mergeCustomProductLocally(e, targetCatalog));
+    syncCatalogUI();
     renderTabs();
     renderAdminTabList();
     buildFilters();
@@ -3896,7 +4130,7 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
 
     const tabSummary = [...touchedTabs].map(id => getTabById(id)?.name || id).join(', ');
     const createdNote = createdTabsList.length ? ` (pestaña nueva: ${createdTabsList.join(', ')})` : '';
-    statusEl.textContent = `✅ Se importaron ${newEntries.length} productos en ${tabSummary}${createdNote} a GitHub. Puede tardar uno o dos minutos en publicarse.`;
+    statusEl.textContent = `✅ Se importaron ${newEntries.length} productos en ${catalogNameLabel} (${tabSummary}${createdNote}) a GitHub. Puede tardar uno o dos minutos en publicarse.`;
     document.getElementById('csvFile').value = '';
   }catch(e){
     statusEl.textContent = '❌ Error: ' + e.message;
@@ -3906,12 +4140,13 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
 });
 
 document.getElementById('resetConfig').addEventListener('click', () => {
-  if(!confirm('¿Restablecer precios, productos habilitados y WhatsApp a los valores originales?')) return;
-  overrides = {};
+  if(!confirm(`¿Restablecer precios, productos habilitados de ${getActiveCatalogInfo().name} y WhatsApp a los valores originales?`)) return;
+  overridesByCatalog[activeCatalog] = {};
   whatsappNumber = DEFAULT_WHATSAPP;
-  saveOverrides();
+  saveOverrides(activeCatalog);
   saveWhatsappNumber();
   document.getElementById('adminWhatsapp').value = whatsappNumber;
+  syncCatalogUI();
   renderAdminList();
   buildFilters();
   renderGrid();
@@ -3919,11 +4154,11 @@ document.getElementById('resetConfig').addEventListener('click', () => {
 });
 
 document.getElementById('exportConfig').addEventListener('click', () => {
-  const data = { overrides, whatsapp: whatsappNumber, exportedAt: new Date().toISOString() };
+  const data = { catalog: activeCatalog, overrides: getCatalogOverrides(), whatsapp: whatsappNumber, exportedAt: new Date().toISOString() };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = 'distre-config.json';
+  a.href = url; a.download = `distre-config-${activeCatalog}.json`;
   a.click();
   URL.revokeObjectURL(url);
   showToast('Configuración exportada');
@@ -3936,13 +4171,14 @@ function renderAdminTabList(){
   const container = document.getElementById('adminTabList');
   const tabs = getAllTabs();
   container.innerHTML = tabs.map(t => {
-    const productCount = t.products ? t.products.length : 0;
+    const completoCount = getTabProducts(t.id, 'completo').length;
+    const stockCount = getTabProducts(t.id, 'stock').length;
     const tc = getEffectiveTabThemeConfig(t.id);
     return `<div class="admin-tab-item">
       <span class="tab-swatch" style="background:${tc.btnPrimary};" title="Color de pestaña"></span>
       <div style="flex:1;">
         <div class="tab-name">${t.name}</div>
-        <div class="tab-id">${t.id} · ${productCount} productos</div>
+        <div class="tab-id">${t.id} · ${completoCount} en Completo · ${stockCount} en Stock</div>
       </div>
       <button class="tab-action" data-action="color" data-tab-id="${t.id}">🎨 Color</button>
       <button class="tab-action" data-action="rename" data-tab-id="${t.id}">Renombrar</button>
@@ -3991,6 +4227,7 @@ function renderAdminTabList(){
         } else {
           customTabs = customTabs.filter(t => t.id !== tabId);
         }
+        CATALOG_IDS.forEach(cid => { delete catalogProducts[cid][tabId]; });
         try{
           await updateCustomTabs((data) => {
             data.tabs = data.tabs.filter(t => t.id !== tabId);
@@ -4000,6 +4237,7 @@ function renderAdminTabList(){
             const remaining = getAllTabs();
             setActiveTab(remaining[0]?.id || 'algabo');
           }
+          syncCatalogUI();
           renderAdminTabList();
           renderTabs();
           renderGrid();
@@ -4026,7 +4264,8 @@ document.getElementById('createTabBtn').addEventListener('click', async () => {
   statusEl.textContent = 'Guardando...';
   document.getElementById('createTabBtn').disabled = true;
   try{
-    customTabs.push({ id, name, products: [] });
+    customTabs.push({ id, name });
+    ensureTabBucket(id);
     await updateCustomTabs((data) => {
       data.tabs.push({ id, name });
       return data;
@@ -4039,6 +4278,7 @@ document.getElementById('createTabBtn').addEventListener('click', async () => {
   }catch(e){
     statusEl.textContent = '❌ Error: ' + e.message;
     customTabs = customTabs.filter(t => t.id !== id);
+    CATALOG_IDS.forEach(cid => { delete catalogProducts[cid][id]; });
   }finally{
     document.getElementById('createTabBtn').disabled = false;
   }
@@ -4053,21 +4293,21 @@ document.getElementById('cartBtn').addEventListener('click', () => {
 });
 document.getElementById('cartClose').addEventListener('click', () => closeOverlayEl(cartOverlay));
 document.getElementById('clearCartBtn').addEventListener('click', () => {
-  if(Object.keys(cart).length === 0) return;
+  if(getCartEntries().length === 0) return;
   if(!confirm('¿Vaciar el carrito?')) return;
   clearCart();
   renderCartModal();
 });
 document.getElementById('sendOrderBtn').addEventListener('click', (e) => {
-  if(Object.keys(cart).length === 0){ e.preventDefault(); return; }
+  if(getCartEntries().length === 0){ e.preventDefault(); return; }
   showToast('Abriendo WhatsApp...');
 });
 
 function getCartEntries(){
-  return Object.entries(cart).filter(([, qty]) => qty > 0);
+  return Object.entries(getCatalogCart()).filter(([, qty]) => qty > 0);
 }
 
-function buildOrderData(entries){
+function buildOrderData(entries = getCartEntries()){
   const items = [];
   let subtotal = 0;
   let totalSavings = 0;
@@ -4106,7 +4346,8 @@ function buildOrderData(entries){
 
 function buildOrderMessage(entries){
   const order = buildOrderData(entries);
-  const lines = ['Pedido - Catálogo Distre', '', 'DESCRIPCION | CANTIDAD | PRECIO | TOTAL'];
+  const catLabel = getActiveCatalogInfo().name;
+  const lines = [`Pedido - Catálogo Distre (${catLabel})`, '', 'DESCRIPCION | CANTIDAD | PRECIO | TOTAL'];
   order.items.forEach(item => {
     lines.push(`${item.descripcion} | ${item.cantidad} | ${formatPrice(item.precioUnitario)} | ${formatPrice(item.total)}`);
   });
@@ -4446,7 +4687,8 @@ function buildOrderPdfBytes(entries){
   const startPage = (isContinuation) => {
     if(ops.length) pages.push(ops.join('\n'));
     ops = [];
-    drawText('F2', 16, 40, 795, isContinuation ? 'Pedido - Catálogo Distre (cont.)' : 'Pedido - Catálogo Distre');
+    const catLabel = getActiveCatalogInfo().name;
+    drawText('F2', 16, 40, 795, isContinuation ? `Pedido - Catálogo Distre (${catLabel}, cont.)` : `Pedido - Catálogo Distre (${catLabel})`);
     drawText('F1', 9.5, 40, 777, dateLabel, '0.35 0.41 0.50');
     drawRect(40, 742, 515, 22, '0.10 0.44 0.85');
     drawText('F2', 9.5, 46, 749.5, 'DESCRIPCION', '1 1 1');
@@ -4536,7 +4778,8 @@ function buildOrderPdfBytes(entries){
 function orderFilename(ext){
   const now = new Date();
   const pad2 = n => String(n).padStart(2, '0');
-  return `pedido-distre-${now.getFullYear()}-${pad2(now.getMonth() + 1)}-${pad2(now.getDate())}.${ext}`;
+  const slug = activeCatalog === 'stock' ? 'en-stock' : 'completo';
+  return `pedido-distre-${slug}-${now.getFullYear()}-${pad2(now.getMonth() + 1)}-${pad2(now.getDate())}.${ext}`;
 }
 function triggerBlobDownload(bytes, filename, mimeType){
   const blob = new Blob([bytes], { type: mimeType });
@@ -5131,12 +5374,29 @@ window.addEventListener('resize', requestParallax, { passive: true });
    INIT
    ====================================================== */
 searchInput.addEventListener('input', renderGrid);
+document.querySelectorAll('[data-catalog]').forEach(btn => {
+  btn.addEventListener('click', () => setActiveCatalog(btn.dataset.catalog));
+});
+document.querySelectorAll('[data-admin-catalog]').forEach(btn => {
+  btn.addEventListener('click', () => setActiveCatalog(btn.dataset.adminCatalog));
+});
+document.getElementById('npCatalog')?.addEventListener('change', e => setActiveCatalog(e.target.value));
+document.getElementById('csvCatalog')?.addEventListener('change', e => setActiveCatalog(e.target.value));
 (async function init(){
   loadState();
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlCatalog = (urlParams.get('catalogo') || '').toLowerCase();
+  if(urlCatalog === 'stock' || window.location.hash.toLowerCase() === '#stock'){
+    activeCatalog = 'stock';
+  }
   await loadSiteConfig();
   await loadCustomTabs();
-  await loadCustomProducts();
+  await Promise.all([
+    loadCatalogProducts('completo'),
+    loadCatalogProducts('stock')
+  ]);
   applyAppearance(siteConfig.appearance);
+  syncCatalogUI();
   renderTabs();
   buildFilters();
   renderGrid();
