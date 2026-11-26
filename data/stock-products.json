@@ -1403,14 +1403,15 @@
     {
       "ean": "7798184683463",
       "name": "MUSK",
+      "desc": "",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Musk-Saphirus-fb-700x700.webp",
       "brand": "SAPHIRUS",
+      "stock": 23,
       "catalogName": "MUSK",
-      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
