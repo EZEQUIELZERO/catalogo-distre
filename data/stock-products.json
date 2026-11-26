@@ -150,7 +150,7 @@
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-cony-fi-feed.jpg.webp",
       "brand": "SAPHIRUS",
       "catalogName": "CONY",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -528,7 +528,7 @@
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_4375b38852d346ecb20c3f23ee63ab20_637986911351028992_0_m.png",
       "brand": "SAPHIRUS",
       "catalogName": "GREEN",
-      "stock": 12,
+      "stock": 15,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1256,7 +1256,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/02/20250220-textil-breeze-sf-saphirus.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "BREEZE",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1466,7 +1466,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2026/09/20260908-sahumerios-masala-incienso-saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "INCIENSO",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1606,9 +1606,9 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-limon.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "LIMON",
+      "stock": 12,
       "bulto": 12,
-      "descuentoBulto": 3,
-      "deleted": true
+      "descuentoBulto": 3
     },
     {
       "ean": "7798184680783",
@@ -1718,9 +1718,9 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-lavanda.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA",
+      "stock": 12,
       "bulto": 12,
-      "descuentoBulto": 3,
-      "deleted": true
+      "descuentoBulto": 3
     },
     {
       "ean": "7798184681001",
@@ -1802,7 +1802,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-jazmin.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "JAZMIN",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1830,7 +1830,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-bebe.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "BEBE",
-      "stock": 12,
+      "stock": 13,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2292,7 +2292,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRzmRx3pTXl3SO-5aqpfKFvgAhi_XpeJNluvxkN61OA&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "POMELO ROSADO",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2642,7 +2642,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgVKq1DkEc5UeJo0KKk5N0faeKXRjffLVP9LqObALYZg&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "FANCY DREAMS",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2712,7 +2712,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrV47SCfEb995Zcc-QwA3WehpGY3ueu5Bk9Uycw5vYA&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "CLEAN COTTON",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -4728,7 +4728,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/12/20251125-textil-disney-lotso-430x430.webp",
       "brand": "SAPHIRUS",
       "catalogName": "LOTSO",
-      "stock": 12,
+      "stock": 5,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -5162,7 +5162,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2024/07/20250905-Touch-Agua-Marina-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "AGUA MARINA",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -5218,7 +5218,7 @@
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/07/20240719-blister-compuesto-white-y-frutos-rojos-saphirus-1024x1024-1.jpg.webp",
       "brand": "SAPHIRUS",
       "catalogName": "FRUTOS ROJOS",
-      "stock": 12,
+      "stock": 5,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -5232,7 +5232,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/09/20250905-Touch-Dulzura-Tropical-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "DULZURA TROPICAL",
-      "stock": 12,
+      "stock": 2,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -5246,7 +5246,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/09/20250905-Touch-Repuesto-Dulzura-Tropical-Saphirus-fb-700x700.webp",
       "brand": "SAPHIRUS",
       "catalogName": "REPUESTO DULZURA TROPICAL",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7080,7 +7080,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_cream_340_plotwist-3e9d887a946845561d17799819325281-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL THE PLOT TWIST 340 ML",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7304,7 +7304,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/colonia-x125-dulces-mimos-copia11-63fe74d46feda036c916384715912034-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "COLONIA PARA BEBE DULCE MIMOS 125 ML",
-      "stock": 15,
+      "stock": 3,
       "bulto": 15,
       "descuentoBulto": 3
     },
@@ -7388,7 +7388,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-recarga-economica-7791274200649-254bdeab073acc279817183824684025-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO OLEO CALCAREO 500 ML",
-      "stock": 8,
+      "stock": 6,
       "bulto": 8,
       "descuentoBulto": 3
     },
@@ -7402,7 +7402,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x900-ml-7791274200656-f2041f62718583bb5417183825576397-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO OLEO CALCAREO 900 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7500,7 +7500,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x200-ml-manzanilla-779127420015111-63788b365e513c0cb516565159075069-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA BEBE MANZANILLA 200 ML",
-      "stock": 12,
+      "stock": 7,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7640,7 +7640,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-toallitas-humedas-x20-u-77912741970171-693ec200f6a9e4479e16897066158459-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS 20 UD",
-      "stock": 48,
+      "stock": 94,
       "bulto": 48,
       "descuentoBulto": 3
     },
@@ -7920,7 +7920,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-kids-shampoo-x350-melocoton-779127419259311-037d54a6267208e2ef16565145927916-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO KIDS MELOCOTON 350 ML",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8158,7 +8158,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-transparente-x150-pomo-extra-brillo-y-control-779127419644711-90ca809000d427aee816759561463873-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "POMO EXTRA BRILLO 150 ML",
-      "stock": 24,
+      "stock": 2,
       "bulto": 24,
       "descuentoBulto": 3
     },
@@ -8214,7 +8214,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-amarillo-x200-pomo-efecto-humedo-77912741893261-a0f4c8a5f9b1f4078e16759558147729-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "POMO EFECTO HUMEDO 200 ML",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8354,7 +8354,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x200-g-repuesto-economico-doypack-77912741964161-39120d935a4ede8ce616897074896751-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO TALCO PARA PIES 200 ML",
-      "stock": 24,
+      "stock": 12,
       "bulto": 24,
       "descuentoBulto": 3
     },
@@ -8382,7 +8382,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-antibacterial-x100-g-77912742000381-b1e60ee5af13cc455e16564445010563-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TALCO PARA PIES ANTIBACTERIAL 100 ML",
-      "stock": 12,
+      "stock": 2,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8578,7 +8578,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-talco-x250-floral-779127418835011-2c0d8c7fe272728f3516487569670206-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TALCO PERFUMADO FLORAL 250 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8690,7 +8690,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/7791274201653-bd70fadfeceab4f08017600167273663-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ENJUAGUE BUCAL ANTIBACTERIAL 250 ML",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8704,7 +8704,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/diseno-sin-titulo-2-056891546ef1ba824117600166726678-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ENJUAGUE BUCAL ANTIBACTERIAL 500 ML",
-      "stock": 12,
+      "stock": 5,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8802,7 +8802,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-citrus-splash-77912741934081-950dc141a5ee7fc31016560771661600-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS CITRUS 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8872,7 +8872,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-cream-77912740004851-307ca5c0ed477ac16216560773154056-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS CREMOSO 300 ML",
-      "stock": 12,
+      "stock": 5,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -9096,7 +9096,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-ultra-x250-ml-alcohol-en-gel-77912742002431-3fe19bb1061aa7eda916487618099237-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ALCOHOL EN GEL CON DISPENSER 250 ML",
-      "stock": 15,
+      "stock": 25,
       "bulto": 15,
       "descuentoBulto": 3
     },
@@ -9138,7 +9138,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-x80-g-flower-mix-7791274202148-2c2165c4528f4c6fae17661549029921-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR FLOWER MIX X1 UD 80 GR",
-      "stock": 80,
+      "stock": 115,
       "bulto": 80,
       "descuentoBulto": 3
     },
@@ -9166,7 +9166,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-x80-g-cream-7791274202155-a116e697623648ffda17661547789428-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR CREMOSO X1 UD 80 GR",
-      "stock": 80,
+      "stock": 113,
       "bulto": 80,
       "descuentoBulto": 3
     },
@@ -9334,7 +9334,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x200-ml-keratina-7791274201158-78e3018ddb7930b11417169216409993-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE CON KERATINA 200 ML",
-      "stock": 22,
+      "stock": 21,
       "bulto": 22,
       "descuentoBulto": 3
     },
@@ -9348,7 +9348,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-fortalecedor-77912740053051-bd5ddf74c09c7e2bca17169214938723-480-0.png",
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE FORTLECEDOR 200 ML",
-      "stock": 22,
+      "stock": 18,
       "bulto": 22,
       "descuentoBulto": 3
     },
@@ -9600,7 +9600,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-control-discos-de-algodon-x80u-77912741975121-de95be13ce0879375916577593737433-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "DISCOS DESMAQUILLANTES 80 UD",
-      "stock": 36,
+      "stock": 27,
       "bulto": 36,
       "descuentoBulto": 3
     },
@@ -9656,7 +9656,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-algodon-premium-x75-g-7791274201332-c009e1a0fc65080e9a17303937155431-480-0.png",
       "brand": "ALGABO",
       "catalogName": "ALGODON PREMIUM 75 GR",
-      "stock": 120,
+      "stock": 104,
       "bulto": 120,
       "descuentoBulto": 3
     },
@@ -9684,7 +9684,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-hisopos-x100-u-7791274005237-c4d19070cd6e2940bc17605437281566-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "HISOPOS 100 UD",
-      "stock": 48,
+      "stock": 80,
       "bulto": 48,
       "descuentoBulto": 3
     },
@@ -9698,7 +9698,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-hisopos-x125-u-bolsa-7791274199653-2d2d7aa1bdd60f956317605435922596-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "HISOPOS CIERRE ZIPPER 125 UD",
-      "stock": 48,
+      "stock": 36,
       "bulto": 48,
       "descuentoBulto": 3
     },
@@ -9782,7 +9782,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-crema-corporal-pomo-x200-ml-avena-y-karite-779127400440711-e9b8a22714dc1938da16681736943499-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL EN POMO AVENA 200 ML",
-      "stock": 12,
+      "stock": 7,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -9838,7 +9838,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-crema-corporal-pomo-x400-ml-miel-y-almendras-779127400472811-a5a3bd50b8a659fd9916681721975656-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL C/DISP. MIEL 400 ML",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10020,7 +10020,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-control-bano-de-crema-pomo-x200-barro-natural-77912741978712-6740f9acb044b7c36516564395121158-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TRATAMIENTO BAÑO NATURAL EN POMO 200 ML",
-      "stock": 12,
+      "stock": 17,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10048,7 +10048,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-control-bano-de-crema-pomo-x200-barro-vegetal-77912741978641-7b87597e6bad9a3ef316564396803083-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TRATAMIENTO BARRO VEGETAL EN POMO 200 ML",
-      "stock": 12,
+      "stock": 5,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10104,7 +10104,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-crema-para-peinar-x300-ml-argan-7791274005121-a96edc3481be46426917605440214173-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA PARA PEINAR CON KERATINA 300 ML",
-      "stock": 12,
+      "stock": 23,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10202,7 +10202,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x750-ml-shampoo-acai-romero-antioxidante-7791274200571-2d320467efd8a1839017764305992325-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ACOND. 0% OLIVA Y ARGAN 750 ML",
-      "stock": 15,
+      "stock": 35,
       "bulto": 15,
       "descuentoBulto": 3
     },
@@ -10216,7 +10216,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x750-ml-shampoo-oliva-argan-fortalecedor-7791274200588-a1269c3f7f080524dc17764308016555-640-0.webp?_gl=1*7u1c59*_gcl_au*MjEyMTU2NzEwMS4xNzkzMTE1ODAxLjE1ODgzNzAzNjAuMTc5NTA0NTM3MC4xNzk1MDQ4MjEyLjE1NjExNTA5NDQuMTc5NDk2NTMzMy4xNzk1MDQ4MjEy*_ga*MTk3NTU4ODkwMy4xNzkzMTE1ODAx*_ga_2NFZDBKLY4*czE3OTUwNDUzNjkkbzkkZzEkdDE3OTUwNDgyMjckajYwJGwwJGgw",
       "brand": "ALGABO",
       "catalogName": "ACOND. 0% ACAI Y ROMERO 750 ML",
-      "stock": 15,
+      "stock": 58,
       "bulto": 15,
       "descuentoBulto": 3
     },
@@ -10300,7 +10300,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-acondicionador-x300-ml-ecopack-hidratacion-779127419698011-7fbdb1338bc82cb71516813985656571-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. AGUACATE 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10314,7 +10314,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-shampoo-x930-ml-hidratacion-779127419815111-ed841841c020777eaa16564536586369-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO AGUACATE 930 ML",
-      "stock": 12,
+      "stock": 31,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10482,7 +10482,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-shampoo-x930-ml-suavidad-77912741981681-e804d070c5bd44e1ed16566231509939-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO COCO Y LECHE 930 ML",
-      "stock": 12,
+      "stock": 37,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10496,7 +10496,7 @@
       "img": "https://www.lacoopeencasa.coop/media/lcec/publico/articulos/8/1/6/8167011e14d47e69ef87476eaacda699",
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR COCO Y LECHE 930 ML",
-      "stock": 12,
+      "stock": 16,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10692,7 +10692,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-aromatizante-de-telas-x250-ml-suave-brisa-77912741978571-1a73ce0856c6eba37616566168575144-480-0.webp",
       "brand": "VAIS",
       "catalogName": "PERF. TEXTIL SUAVE BRISA 250 ML",
-      "stock": 16,
+      "stock": 17,
       "bulto": 16,
       "descuentoBulto": 3
     },
@@ -10706,7 +10706,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-aromatizante-de-telas-x250-ml-calida-primavera-doypack-7791274198779-9608c386a12fcf5dab17480087490998-480-0.webp",
       "brand": "VAIS",
       "catalogName": "REPUESTO PERF. TEXTIL CALIDA PRIMAVERA 250 ML",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11112,7 +11112,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/avengers-body-splash-x125-capitan-america-77912740026491-e35f13abc0a40df58d16365602614517-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY IRON MAN 125 ML",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11644,7 +11644,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-burbuja-de-jabon-77612cbb561e6fbe9817930402299157-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "BURBUJAS DE JABÓN",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11798,7 +11798,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-azahares-b1dcd6198ea7f017c517930393590973-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "AZAHARES",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11812,7 +11812,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-burbuja-de-jabon-e77df7ebe0140d6adc17930395745134-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "BURBUJAS DE JABÓN",
-      "stock": 12,
+      "stock": 16,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11823,10 +11823,10 @@
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
       "subcat": "",
-      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-coco-y-vainilla-23abf064ef79e8dbb717930398151141-1024-1024.webp",
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-durazno-mendocino-edeb3f7258ead14ec817930394282628-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
-      "catalogName": "COCO Y VAINILLA",
-      "stock": 12,
+      "catalogName": "DURAZNO MENDOCINO",
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11938,7 +11938,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-maderas-de-oriente-6b118384b3e8865a6517930398708550-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "MADERAS DE ORIENTE",
-      "stock": 12,
+      "stock": 7,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12316,7 +12316,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_120-pistacho-119d7072b85b31d6e117930403411769-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "PISTACHO",
-      "stock": 12,
+      "stock": 14,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12484,7 +12484,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_burbujas-de-jabon-0103cf5af8cd76ae1d17930416923366-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "BURBUJAS JABON",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12778,7 +12778,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_verbena-45ff9a252c9a59613817930413259198-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "VERBENA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -13213,7 +13213,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-arrorro-6e2f7383bfdc68be8017231316909913-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "ARRORRÓ",
-      "stock": 12,
+      "stock": 7,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -14188,7 +14188,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/15-76411a7c269e877c5617496551281901-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "CHER_78F",
-      "stock": 12,
+      "stock": 2,
       "bulto": 12,
       "descuentoBulto": 3
     },
