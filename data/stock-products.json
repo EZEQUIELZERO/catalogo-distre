@@ -14979,6 +14979,20 @@
       "catalogName": "DIFUSOR PARA AUTO SAPHIRUS - BLEND FLORAL",
       "bulto": 24,
       "descuentoBulto": 3
+    },
+    {
+      "ean": "7798444554724",
+      "name": "TEXTIL SAPHIRUS 250 - SOFT LOVE",
+      "desc": "",
+      "price": 3820,
+      "tab": "saphirus",
+      "cat": "TEXTIL 250 ML",
+      "subcat": "",
+      "img": "",
+      "brand": "SAPHIRUS",
+      "catalogName": "SOFT LOVE",
+      "stock": 12,
+      "bulto": 12
     }
   ]
 }
