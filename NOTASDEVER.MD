@@ -606,3 +606,14 @@ Fecha: 2026-11-26
   - Columnas: `CODIGO_EAN` (texto `inlineStr` para evitar notación científica), `DESCRIPCION`, `CANTIDAD` (entero numérico) y `PRECIO` (numérico con formato `#,##0`), con encabezado fijo (`ySplit="1"`) y autofiltro (`autoFilter`).
   - Exporta las cantidades armadas actuales (`cantArmada > 0`), y si el pedido aún está sin armar toma las cantidades pedidas (`cantPedida > 0`).
 Archivos: index.html, NOTASDEVER.MD
+
+### #047 - Saldo anterior / pendiente en Depósito y formulario completo + importar desde COMPLETO al crear producto en armado
+Fecha: 2026-11-26
+- **Saldo anterior / pendiente (`SALDO ANTERIOR`) en armado, remito y entrega**:
+  - Agregado bloque **💰 Saldo anterior / pendiente (se suma al pedido)** en la mesa de armado (`#depPrevBalDesc`, `#depPrevBalAmount`, `#depLoadClientDebtBtn` para traer la deuda actual del cliente con 1 clic y `#depClearPrevBalBtn`).
+  - Se suma en `#depTotalsBox`, en el Remito A4 (`SALDO ANTERIOR` / `TOTAL QUEDA ENTONCES`) y en la confirmación de entrega/cobro (`#deliveryOverlay` prellena `pedido + saldoAnterior`), mientras `VENTAS.TOTAL` conserva solo el monto del pedido actual para no duplicar deuda en `CLIENTES` (`SUMIF`).
+  - `apps-script/Code.gs` amplía `VENTAS` con `SALDO_ANTERIOR` y `SALDO_ANTERIOR_DESC` y actualiza `handleRegisterSale_`, `handleGetOrders_`, `handleSaveOrderPacking_`, `handleConfirmDelivery_` y `handleCancelOrder_`.
+- **Alta completa de producto + importar desde `COMPLETO` en armado (`#depQuickAddBox`)**:
+  - Incorporado buscador/selector `#dqImportSearch`, `#dqImportSelect` y botón **📋 Importar de COMPLETO** (`#dqImportBtn`) para traer nombre, precios, bulto, categoría, subcategoría, nota e imagen desde `COMPLETO`.
+  - Sumados los campos completos de carga (`#dqCatalog` destino `EN STOCK` / `COMPLETO`, `#dqDesc` nota en tarjeta, `#dqImgUrl` URL de imagen y `#dqImgFile` subida de imagen).
+Archivos: apps-script/Code.gs, index.html, NOTASDEVER.MD

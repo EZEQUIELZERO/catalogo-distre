@@ -27,7 +27,8 @@ const HEADERS = {
     'SUBTOTAL', 'DESC_BULTO', 'TOTAL', 'PAGADO', 'SALDO_VENTA',
     'CONDICION', 'MEDIO_PAGO', 'ESTADO', 'NOTA',
     'ESTADO_DEPOSITO', 'FECHA_ARMADO', 'FECHA_ENTREGA',
-    'FECHA_COBRO_ACORDADA', 'DEVOLUCIONES_JSON', 'TOTAL_DEVOLUCIONES'
+    'FECHA_COBRO_ACORDADA', 'DEVOLUCIONES_JSON', 'TOTAL_DEVOLUCIONES',
+    'SALDO_ANTERIOR', 'SALDO_ANTERIOR_DESC'
   ],
   VENTAS_DETALLE: [
     'ID_VENTA', 'FECHA', 'CATALOGO', 'EAN', 'DESCRIPCION',
@@ -604,9 +605,13 @@ function handleRegisterSale_(body) {
     const subtotal = round2_(body.subtotal);
     const descBulto = round2_(body.totalSavings);
     const total = round2_(body.total);
-    const pagado = Math.min(total, Math.max(0, round2_(body.pagado)));
-    const saldoVenta = round2_(total - pagado);
-    const condicion = String(body.condicion || (pagado >= total ? 'CONTADO' : (pagado > 0 ? 'PARCIAL' : 'CUENTA CORRIENTE'))).trim();
+    const saldoAnterior = Math.max(0, round2_(body.saldoAnterior));
+    const saldoAnteriorDesc = saldoAnterior > 0
+      ? (String(body.saldoAnteriorDesc || '').trim() || 'SALDO ANTERIOR')
+      : '';
+    const pagado = Math.min(round2_(total + saldoAnterior), Math.max(0, round2_(body.pagado)));
+    const saldoVenta = Math.max(0, round2_(total + saldoAnterior - pagado));
+    const condicion = String(body.condicion || (saldoVenta <= 0 ? 'CONTADO' : (pagado > 0 ? 'PARCIAL' : 'CUENTA CORRIENTE'))).trim();
     const medioPago = String(body.medioPago || '').trim();
     const nota = String(body.nota || '').trim();
     const catalogo = String(body.catalogName || 'COMPLETO').trim();
@@ -624,7 +629,8 @@ function handleRegisterSale_(body) {
       saleId, fecha, catalogo, /^\d+$/.test(codigo) ? Number(codigo) : codigo,
       clienteName, subtotal, descBulto, total, pagado, saldoVenta,
       condicion, medioPago, estado, nota,
-      estadoDeposito, fechaArmado, '', '', JSON.stringify(devs), totalDevoluciones
+      estadoDeposito, fechaArmado, '', '', JSON.stringify(devs), totalDevoluciones,
+      saldoAnterior, saldoAnteriorDesc
     ]);
 
     const deductions = Array.isArray(body.stockDeductions) ? body.stockDeductions : [];
@@ -687,6 +693,8 @@ function handleRegisterSale_(body) {
       codigo: codigo,
       estadoDeposito: estadoDeposito,
       fechaArmado: fechaArmado,
+      saldoAnterior: saldoAnterior,
+      saldoAnteriorDesc: saldoAnteriorDesc,
       clientBalance: clientBalance
     };
   } finally {
@@ -778,6 +786,8 @@ function handleGetOrders_(ss) {
       descBulto: round2_(v.DESC_BULTO),
       totalDevoluciones: round2_(v.TOTAL_DEVOLUCIONES),
       total: round2_(v.TOTAL),
+      saldoAnterior: Math.max(0, round2_(v.SALDO_ANTERIOR)),
+      saldoAnteriorDesc: String(v.SALDO_ANTERIOR_DESC || '').trim() || 'SALDO ANTERIOR',
       pagado: round2_(v.PAGADO),
       saldoVenta: round2_(v.SALDO_VENTA),
       condicion: String(v.CONDICION || '').trim(),
@@ -822,7 +832,14 @@ function handleSaveOrderPacking_(body) {
     const descBulto = round2_(body.descBulto);
     const totalDevoluciones = round2_(body.totalDevoluciones);
     const total = round2_(body.total);
-    const saldoVenta = round2_(total - pagado);
+    const saldoAnterior = body.saldoAnterior !== undefined
+      ? Math.max(0, round2_(body.saldoAnterior))
+      : Math.max(0, round2_(row[20]));
+    const rawSaldoDesc = body.saldoAnteriorDesc !== undefined
+      ? String(body.saldoAnteriorDesc || '').trim()
+      : String(row[21] || '').trim();
+    const saldoAnteriorDesc = saldoAnterior > 0 ? (rawSaldoDesc || 'SALDO ANTERIOR') : '';
+    const saldoVenta = Math.max(0, round2_(total + saldoAnterior - pagado));
     const estado = saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
     const nextStatus = String(body.nextStatus || 'EN_ESPERA').trim().toUpperCase();
     const now = new Date();
@@ -840,6 +857,8 @@ function handleSaveOrderPacking_(body) {
     row[15] = fechaArmado;
     row[18] = JSON.stringify(devs);
     row[19] = totalDevoluciones;
+    row[20] = saldoAnterior;
+    row[21] = saldoAnteriorDesc;
     ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).setValues([row]);
 
     const items = Array.isArray(body.items) ? body.items : [];
@@ -903,6 +922,8 @@ function handleSaveOrderPacking_(body) {
       estadoDeposito: nextStatus,
       fechaArmado: fechaArmado,
       total: total,
+      saldoAnterior: saldoAnterior,
+      saldoAnteriorDesc: saldoAnteriorDesc || 'SALDO ANTERIOR',
       saldoVenta: saldoVenta,
       estado: estado,
       clientBalance: clientBalance
@@ -931,6 +952,7 @@ function handleConfirmDelivery_(body) {
     const codigo = String(row[3] || '').trim();
     const clienteName = String(row[4] || '').trim();
     const total = round2_(row[7]);
+    const saldoAnterior = Math.max(0, round2_(row[20]));
     let pagado = round2_(row[8]);
     const monto = round2_(body.monto);
     const medioPago = String(body.medioPago || row[11] || '').trim();
@@ -949,7 +971,7 @@ function handleConfirmDelivery_(body) {
       pagado = round2_(pagado + monto);
     }
 
-    const saldoVenta = round2_(total - pagado);
+    const saldoVenta = Math.max(0, round2_(total + saldoAnterior - pagado));
     const estado = saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
     const prevNota = String(row[13] || '').trim();
     const finalNota = notaEntrega ? (prevNota ? prevNota + ' | Entrega: ' + notaEntrega : 'Entrega: ' + notaEntrega) : prevNota;
@@ -1040,6 +1062,8 @@ function handleCancelOrder_(body) {
     row[14] = 'CANCELADO';
     row[17] = '';
     row[19] = 0;
+    row[20] = 0;
+    row[21] = '';
     ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).setValues([row]);
 
     const detSh = ss.getSheetByName(SHEET_NAMES.VENTAS_DETALLE);

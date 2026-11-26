@@ -1617,8 +1617,25 @@
 
           <div class="scan-quickadd-box" id="depQuickAddBox" style="display:none;">
             <div class="scan-quickadd-head">
-              <strong>✨ Cargar producto nuevo en EN STOCK y agregar al pedido</strong>
+              <strong>✨ Cargar producto nuevo y agregar al pedido</strong>
               <button type="button" class="btn btn-close btn-auto" id="dqCloseBtn" style="padding:5px 10px;font-size:.76rem;">✕ Cancelar</button>
+            </div>
+            <div id="dqImportSection" style="background:rgba(127,127,127,.08);border:1px dashed var(--border);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:8px;">
+              <div style="font-size:.78rem;font-weight:700;">📋 Importar datos desde catálogo COMPLETO (opcional)</div>
+              <input type="text" id="dqImportSearch" class="price-input" placeholder="🔍 Buscar en catálogo COMPLETO por nombre o EAN...">
+              <div class="scan-input-group">
+                <select id="dqImportSelect" class="price-input"></select>
+                <button type="button" class="btn btn-gold btn-auto" id="dqImportBtn">📋 Importar de COMPLETO</button>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqCatalog">Catálogo destino</label>
+                <select id="dqCatalog" class="price-input">
+                  <option value="stock">✅ EN STOCK (disponible inmediato)</option>
+                  <option value="completo">📦 COMPLETO (catálogo general)</option>
+                </select>
+              </div>
+              <div class="field"><label for="dqOrderQty">Cantidad armada para sumar a este pedido</label><input type="number" id="dqOrderQty" class="price-input" min="0" step="1" value="1"></div>
             </div>
             <div class="field-row">
               <div class="field"><label for="dqEan">Código EAN / Código *</label><input type="text" id="dqEan" class="price-input" placeholder="Ej: 7798444550764"></div>
@@ -1628,9 +1645,10 @@
               <div class="field"><label for="dqName">Descripción (sistema / remito) *</label><input type="text" id="dqName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250"></div>
               <div class="field"><label for="dqCatalogName">Nombre corto en tarjeta (opcional)</label><input type="text" id="dqCatalogName" class="price-input"></div>
             </div>
+            <div class="field"><label for="dqDesc">Nota en tarjeta (opcional)</label><textarea id="dqDesc" class="price-input" rows="2" placeholder="Texto secundario opcional debajo del código..."></textarea></div>
             <div class="field-row">
               <div class="field"><label for="dqPrice">Precio unitario ($)</label><input type="number" id="dqPrice" class="price-input" min="0" step="1"></div>
-              <div class="field"><label for="dqStock">Stock inicial en EN STOCK</label><input type="number" id="dqStock" class="price-input" min="0" step="1" placeholder="Ej: 24"></div>
+              <div class="field"><label for="dqStock">Stock inicial</label><input type="number" id="dqStock" class="price-input" min="0" step="1" placeholder="Ej: 24"></div>
             </div>
             <div class="field-row">
               <div class="field"><label for="dqBulto">Bulto (unidades, opcional)</label><input type="number" id="dqBulto" class="price-input" min="1" step="1"></div>
@@ -1650,7 +1668,11 @@
                 <input type="text" id="dqSubcatNew" class="price-input" placeholder="Nueva subcategoría" style="margin-top:6px;display:none;">
               </div>
             </div>
-            <div class="field"><label for="dqOrderQty">Cantidad armada para sumar a este pedido</label><input type="number" id="dqOrderQty" class="price-input" min="0" step="1" value="1"></div>
+            <div class="field">
+              <label for="dqImgUrl">Imagen — pegá una URL o subí un archivo (opcional)</label>
+              <input type="text" id="dqImgUrl" class="price-input" placeholder="https://...">
+              <input type="file" id="dqImgFile" accept="image/*" class="price-input" style="margin-top:8px;padding:8px;">
+            </div>
             <div class="scan-quickadd-actions">
               <button type="button" class="btn btn-whatsapp btn-auto" id="dqSaveBtn">💾 Crear producto y agregar al pedido</button>
               <button type="button" class="btn btn-close btn-auto" id="dqCancelBtn">Cancelar</button>
@@ -1683,6 +1705,17 @@
                 <input type="text" id="depRetDesc" class="price-input" placeholder="Motivo / producto devuelto (ej: DIFUSOR VARILLAS)">
                 <input type="number" id="depRetAmount" class="price-input" min="1" step="1" placeholder="$ monto" style="max-width:110px;flex:0 0 110px;">
                 <button type="button" class="btn btn-gray btn-auto" id="depAddReturnBtn">➕</button>
+              </div>
+              <div style="border-top:1px solid var(--border);padding-top:10px;margin-top:4px;display:flex;flex-direction:column;gap:6px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+                  <h4 style="margin:0;font-size:.86rem;">💰 Saldo anterior / pendiente (se suma al pedido)</h4>
+                  <button type="button" class="btn btn-gray btn-auto" id="depLoadClientDebtBtn" style="margin:0;padding:4px 9px;font-size:.73rem;">📥 Traer deuda actual</button>
+                </div>
+                <div class="scan-input-group">
+                  <input type="text" id="depPrevBalDesc" class="price-input" placeholder="Ej: SALDO ANTERIOR" value="SALDO ANTERIOR">
+                  <input type="number" id="depPrevBalAmount" class="price-input" min="0" step="1" placeholder="$ 0" style="max-width:120px;flex:0 0 120px;">
+                  <button type="button" class="btn btn-close btn-auto" id="depClearPrevBalBtn" title="Quitar saldo anterior" style="margin:0;padding:7px 10px;">✕</button>
+                </div>
               </div>
               <div class="field" style="margin-top:4px;">
                 <label for="depOrderNote">Observación del armado / entrega</label>
@@ -5675,6 +5708,9 @@ function recomputeDraftOrderTotals(draft){
   draft.descBulto = Math.round(descBulto * 100) / 100;
   draft.totalDevoluciones = Math.round(totalDevoluciones * 100) / 100;
   draft.total = Math.max(0, Math.round((itemsNetTotal - draft.totalDevoluciones) * 100) / 100);
+  draft.saldoAnterior = Math.max(0, Math.round((Number(draft.saldoAnterior) || 0) * 100) / 100);
+  draft.saldoAnteriorDesc = String(draft.saldoAnteriorDesc || '').trim() || 'SALDO ANTERIOR';
+  draft.totalConSaldo = Math.round((draft.total + draft.saldoAnterior) * 100) / 100;
 }
 
 function computePackingStockDeltas(items){
@@ -5864,6 +5900,11 @@ function renderDepositoSection(){
       : '';
     const locTxt = [o.localidad, o.direccion].filter(Boolean).join(' · ');
     const safeId = escapeHtml(o.saleId);
+    const saldoAnt = Math.max(0, Number(o.saldoAnterior) || 0);
+    const totalConSaldo = Math.round(((Number(o.total) || 0) + saldoAnt) * 100) / 100;
+    const saldoAntHtml = saldoAnt > 0
+      ? ` + ${escapeHtml(o.saldoAnteriorDesc || 'SALDO ANTERIOR')}: <b>${formatPrice(saldoAnt)}</b> (A cobrar: <b>${formatPrice(totalConSaldo)}</b>)`
+      : '';
 
     let actionsHtml = '';
     if(st === 'PARA_ARMAR' || st === 'EN_ESPERA'){
@@ -5899,7 +5940,7 @@ function renderDepositoSection(){
         </div>
         <div class="dep-order-meta">
           ${escapeHtml(o.fecha)}${locTxt ? ' · ' + escapeHtml(locTxt) : ''} · ${(o.items || []).length} ítem(s) (${totalArm}/${totalPed} u.)
-          · Total: <b>${formatPrice(o.total)}</b> · Pagado: ${formatPrice(o.pagado)} · Saldo: <b style="color:${o.saldoVenta > 0 ? 'var(--danger)' : 'inherit'};">${formatPrice(o.saldoVenta)}</b>
+          · Total: <b>${formatPrice(o.total)}</b>${saldoAntHtml} · Pagado: ${formatPrice(o.pagado)} · Saldo: <b style="color:${o.saldoVenta > 0 ? 'var(--danger)' : 'inherit'};">${formatPrice(o.saldoVenta)}</b>
           ${o.nota ? '<br>📝 ' + escapeHtml(o.nota) : ''}
         </div>
       </div>
@@ -5954,6 +5995,8 @@ function buildDraftOrderClone(order){
     };
   });
   clone.devoluciones = Array.isArray(clone.devoluciones) ? clone.devoluciones : [];
+  clone.saldoAnterior = Math.max(0, Math.round((Number(clone.saldoAnterior) || 0) * 100) / 100);
+  clone.saldoAnteriorDesc = String(clone.saldoAnteriorDesc || '').trim() || 'SALDO ANTERIOR';
   recomputeDraftOrderTotals(clone);
   return clone;
 }
@@ -6061,6 +6104,9 @@ async function openNewDepOrderWorkspace(){
     fechaEntrega: '',
     fechaCobroAcordada: '',
     devoluciones: [],
+    saldoAnterior: 0,
+    saldoAnteriorDesc: 'SALDO ANTERIOR',
+    totalConSaldo: 0,
     items: []
   };
   depScannedItem = null;
@@ -6072,6 +6118,8 @@ async function openNewDepOrderWorkspace(){
   document.getElementById('depScanApplyBtn').disabled = true;
   document.getElementById('depScanFeedback').className = 'scan-feedback';
   document.getElementById('depScanFeedback').textContent = '';
+  document.getElementById('depPrevBalDesc').value = 'SALDO ANTERIOR';
+  document.getElementById('depPrevBalAmount').value = '';
   document.getElementById('depClientSearch').value = '';
   document.getElementById('depNewPayMode').value = 'cc';
   document.getElementById('depNewPartialWrap').style.display = 'none';
@@ -6102,6 +6150,8 @@ function openDepWorkspace(saleId){
   document.getElementById('depScanApplyBtn').disabled = true;
   document.getElementById('depScanFeedback').className = 'scan-feedback';
   document.getElementById('depScanFeedback').textContent = '';
+  document.getElementById('depPrevBalDesc').value = activeDepOrder.saldoAnteriorDesc || 'SALDO ANTERIOR';
+  document.getElementById('depPrevBalAmount').value = activeDepOrder.saldoAnterior > 0 ? String(activeDepOrder.saldoAnterior) : '';
   hideDepQuickAdd();
   populateDepCatalogDropdown();
   renderDepositoSection();
@@ -6308,11 +6358,19 @@ function renderDepWorkspace(){
     }));
   }
 
+  const cliObj = findClientByKey(o.codigo ? 'C:' + o.codigo : 'N:' + o.cliente) || null;
+  const availDebt = Math.max(0, Number(cliObj ? cliObj.saldo : o.clientSaldo) || 0);
+  const debtBtn = document.getElementById('depLoadClientDebtBtn');
+  if(debtBtn){
+    debtBtn.textContent = availDebt > 0 ? `📥 Traer deuda (${formatPrice(availDebt)})` : '📥 Traer deuda actual';
+  }
+
   document.getElementById('depTotalsBox').innerHTML = `
     <div>Artículos armados: <b>${totalArm}</b> (pedidos: ${totalPed})</div>
     <div>Subtotal artículos: <b>${formatPrice(o.subtotal - o.descBulto)}</b>${o.descBulto > 0 ? ` <span style="color:var(--text-dim);">(incluye -${formatPrice(o.descBulto)} bulto)</span>` : ''}</div>
     ${o.totalDevoluciones > 0 ? `<div style="color:var(--danger);">Devuelve: <b>-${formatPrice(o.totalDevoluciones)}</b></div>` : ''}
-    <div style="font-size:1rem;margin-top:4px;">TOTAL QUEDA ENTONCES: <b style="color:var(--accent);">${formatPrice(o.total)}</b></div>
+    ${o.saldoAnterior > 0 ? `<div style="color:#b86b00;">+ ${escapeHtml(o.saldoAnteriorDesc)}: <b>+${formatPrice(o.saldoAnterior)}</b></div>` : ''}
+    <div style="font-size:1rem;margin-top:4px;">${o.saldoAnterior > 0 ? 'TOTAL A COBRAR (armado + saldo)' : 'TOTAL QUEDA ENTONCES'}: <b style="color:var(--accent);">${formatPrice(o.saldoAnterior > 0 ? o.totalConSaldo : o.total)}</b></div>
   `;
 
   const deltaBox = document.getElementById('depStockDeltaBox');
@@ -6389,16 +6447,83 @@ function populateDepQuickAddCategories(preCat = '', preSub = ''){
   if(newInp){ newInp.value = ''; newInp.style.display = sel.value === '__new__' ? '' : 'none'; }
   populateDepQuickAddSubcats(preSub);
 }
+function populateDepQuickImportSelect(preSelectCode = ''){
+  const sel = document.getElementById('dqImportSelect');
+  if(!sel) return;
+  const q = (document.getElementById('dqImportSearch')?.value || '').trim().toLowerCase();
+  const seen = new Set();
+  const items = [];
+  getAllTabs().forEach(t => {
+    getTabProducts(t.id, 'completo').forEach(p => {
+      const eff = getEffective(p, 'completo');
+      if(eff.deleted || seen.has(eff.ean)) return;
+      seen.add(eff.ean);
+      items.push({ eff, tabName: t.name });
+    });
+  });
+  const filtered = items.filter(({ eff }) => !q || matchesProductQuery(eff, q)).slice(0, 150);
+  if(filtered.length === 0){
+    sel.innerHTML = `<option value="">— Sin coincidencias en COMPLETO —</option>`;
+    return;
+  }
+  sel.innerHTML = filtered.map(({ eff, tabName }) => {
+    const priceTxt = typeof eff.price === 'number' ? ` · ${formatPrice(eff.price)}` : '';
+    return `<option value="${escapeHtml(eff.ean)}">${escapeHtml(eff.name)} (${escapeHtml(eff.ean)}${priceTxt}) — ${escapeHtml(tabName)}</option>`;
+  }).join('');
+  if(preSelectCode){
+    const low = preSelectCode.toLowerCase();
+    const match = filtered.find(({ eff }) =>
+      String(eff.ean || '').toLowerCase() === low || String(eff.codigoInterno || '').toLowerCase() === low
+    );
+    if(match) sel.value = match.eff.ean;
+  }
+}
+
+function importFromCompletoToDepQuickAdd(ean){
+  if(!ean) return;
+  const found = findProductByCode(ean, 'completo');
+  if(!found){
+    document.getElementById('dqStatus').textContent = '❌ No se encontró ese producto en COMPLETO.';
+    return;
+  }
+  const eff = getEffective(found.product, 'completo');
+  document.getElementById('dqEan').value = eff.ean || '';
+  document.getElementById('dqCodigoInterno').value = eff.codigoInterno || '';
+  document.getElementById('dqName').value = eff.name || '';
+  document.getElementById('dqCatalogName').value = eff.catalogName || '';
+  document.getElementById('dqDesc').value = eff.desc || '';
+  document.getElementById('dqPrice').value = (typeof eff.price === 'number' && Number.isFinite(eff.price)) ? String(eff.price) : '';
+  document.getElementById('dqBulto').value = (typeof eff.bulto === 'number' && Number.isFinite(eff.bulto)) ? String(eff.bulto) : '';
+  document.getElementById('dqBultoDesc').value = (typeof eff.descuentoBulto === 'number' && Number.isFinite(eff.descuentoBulto)) ? String(eff.descuentoBulto) : '';
+  const tabSel = document.getElementById('dqTab');
+  if(tabSel && found.tab && [...tabSel.options].some(o => o.value === found.tab.id)){
+    tabSel.value = found.tab.id;
+  }
+  document.getElementById('dqBrand').value = eff.brand || (found.tab ? found.tab.name : '');
+  populateDepQuickAddCategories(eff.cat || '', eff.subcat || '');
+  document.getElementById('dqImgUrl').value = eff.img || '';
+  const imgFile = document.getElementById('dqImgFile');
+  if(imgFile) imgFile.value = '';
+  document.getElementById('dqStatus').textContent = `📋 Datos importados desde COMPLETO (${eff.name}). Verificá el stock y guardá.`;
+}
+
 function openDepQuickAdd(code = '', orderQty = 1){
   renderTabSelects();
-  ['dqEan','dqCodigoInterno','dqName','dqCatalogName','dqPrice','dqStock','dqBulto','dqBultoDesc','dqBrand','dqCatNew','dqSubcatNew'].forEach(id => {
+  ['dqEan','dqCodigoInterno','dqName','dqCatalogName','dqDesc','dqPrice','dqStock','dqBulto','dqBultoDesc','dqBrand','dqCatNew','dqSubcatNew','dqImgUrl'].forEach(id => {
     const el = document.getElementById(id);
     if(el) el.value = '';
   });
+  const dqImgFile = document.getElementById('dqImgFile');
+  if(dqImgFile) dqImgFile.value = '';
+  const dqCatSel = document.getElementById('dqCatalog');
+  if(dqCatSel) dqCatSel.value = 'stock';
   document.getElementById('dqEan').value = code;
   document.getElementById('dqOrderQty').value = String(Math.max(0, Number(orderQty) || 1));
   document.getElementById('dqStock').value = String(Math.max(0, Number(orderQty) || 1));
   document.getElementById('dqStatus').textContent = '';
+  const impSearch = document.getElementById('dqImportSearch');
+  if(impSearch) impSearch.value = code || '';
+  populateDepQuickImportSelect(code || '');
   populateDepQuickAddCategories('', '');
   document.getElementById('depScanNotFoundCard').style.display = 'none';
   document.getElementById('depQuickAddBox').style.display = '';
@@ -6507,15 +6632,16 @@ async function saveNewDepOrder(nextStatus){
   recomputeDraftOrderTotals(o);
 
   const mode = document.getElementById('depNewPayMode')?.value || 'cc';
+  const totalConSaldo = Math.round((o.total + (o.saldoAnterior || 0)) * 100) / 100;
   let pagado = 0;
   let condicion = 'CUENTA CORRIENTE';
   if(mode === 'paid'){
-    pagado = o.total;
+    pagado = totalConSaldo;
     condicion = 'CONTADO';
   } else if(mode === 'partial'){
     const rawPag = parseFloat(document.getElementById('depNewPaidAmount')?.value);
-    if(!Number.isFinite(rawPag) || rawPag < 0 || rawPag > o.total){
-      statusEl.textContent = `❌ Ingresá un monto abonado entre 0 y ${formatPrice(o.total)}.`;
+    if(!Number.isFinite(rawPag) || rawPag < 0 || rawPag > totalConSaldo){
+      statusEl.textContent = `❌ Ingresá un monto abonado entre 0 y ${formatPrice(totalConSaldo)}.`;
       return;
     }
     pagado = rawPag;
@@ -6587,6 +6713,8 @@ async function saveNewDepOrder(nextStatus){
       subtotal: o.subtotal,
       totalSavings: o.descBulto,
       total: o.total,
+      saldoAnterior: o.saldoAnterior || 0,
+      saldoAnteriorDesc: o.saldoAnterior > 0 ? (o.saldoAnteriorDesc || 'SALDO ANTERIOR') : '',
       pagado,
       condicion,
       medioPago,
@@ -6606,7 +6734,9 @@ async function saveNewDepOrder(nextStatus){
     o.direccion = client.direccion || '';
     o.telefono = client.telefono || '';
     o.pagado = pagado;
-    o.saldoVenta = Math.max(0, Math.round((o.total - pagado) * 100) / 100);
+    o.saldoAnterior = res.saldoAnterior !== undefined ? res.saldoAnterior : (o.saldoAnterior || 0);
+    o.saldoAnteriorDesc = res.saldoAnteriorDesc || o.saldoAnteriorDesc || 'SALDO ANTERIOR';
+    o.saldoVenta = Math.max(0, Math.round((o.total + (o.saldoAnterior || 0) - pagado) * 100) / 100);
     o.condicion = condicion;
     o.medioPago = medioPago;
     o.estado = o.saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
@@ -6711,6 +6841,8 @@ async function saveActiveDepOrder(nextStatus){
       descBulto: o.descBulto,
       totalDevoluciones: o.totalDevoluciones,
       total: o.total,
+      saldoAnterior: o.saldoAnterior || 0,
+      saldoAnteriorDesc: o.saldoAnterior > 0 ? (o.saldoAnteriorDesc || 'SALDO ANTERIOR') : '',
       nota: o.nota,
       stockAdjustments: sentAdjustments
     });
@@ -6722,7 +6854,9 @@ async function saveActiveDepOrder(nextStatus){
     });
     o.estadoDeposito = res.estadoDeposito || nextStatus;
     o.fechaArmado = res.fechaArmado || o.fechaArmado;
-    o.saldoVenta = res.saldoVenta !== undefined ? res.saldoVenta : o.saldoVenta;
+    o.saldoAnterior = res.saldoAnterior !== undefined ? res.saldoAnterior : (o.saldoAnterior || 0);
+    o.saldoAnteriorDesc = res.saldoAnteriorDesc || o.saldoAnteriorDesc || 'SALDO ANTERIOR';
+    o.saldoVenta = res.saldoVenta !== undefined ? res.saldoVenta : Math.max(0, Math.round((o.total + (o.saldoAnterior || 0) - (o.pagado || 0)) * 100) / 100);
     o.estado = res.estado || o.estado;
     upsertOrderInCache(JSON.parse(JSON.stringify(o)));
     if(res.clientBalance) upsertClientInCache(res.clientBalance);
@@ -6764,6 +6898,9 @@ function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false
   const devs = Array.isArray(order.devoluciones) ? order.devoluciones : [];
   const totalDevs = devs.reduce((a, d) => a + (Math.max(0, Number(d.monto) || 0)), 0);
   const netTotal = Math.max(0, Math.round((itemsSub - totalDevs) * 100) / 100);
+  const saldoAnt = Math.max(0, Number(order.saldoAnterior) || 0);
+  const saldoAntDesc = String(order.saldoAnteriorDesc || '').trim() || 'SALDO ANTERIOR';
+  const grandTotal = Math.round((netTotal + saldoAnt) * 100) / 100;
 
   let fontScale, cellPad, rowH;
   if(isHalfBox){
@@ -6784,6 +6921,7 @@ function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false
 
   const extraLines = ((cfg.title || cfg.subtitle) ? 2 : 0)
     + (devs.length > 0 ? (devs.length + 3) : (cfg.showEmptyReturns ? 4 : 0))
+    + (saldoAnt > 0 ? 2 : 0)
     + (order.nota ? 1 : 0)
     + (cfg.showSignature ? 3 : 0)
     + (cfg.footerNote ? 1 : 0);
@@ -6826,24 +6964,35 @@ function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false
   const blankRowsHtml = Array.from({ length: blankCount }, () => `<tr class="remito-blank-row" style="height:${rowH};">${blankRowCells}</tr>`).join('');
 
   let returnsHtml = '';
-  if(devs.length > 0 || cfg.showEmptyReturns){
-    const devRows = devs.length > 0
-      ? devs.map(d => `
-          <tr style="height:${rowH};">
-            <td style="padding:${cellPad};border:1px solid #888;line-height:1.15;">${escapeHtml(d.descripcion || '')}</td>
-            <td style="padding:${cellPad};border:1px solid #888;text-align:center;width:42px;line-height:1.15;"></td>
-            ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #888;width:76px;line-height:1.15;"></td>` : ''}
-            <td style="padding:${cellPad};border:1px solid #888;text-align:right;font-weight:700;width:88px;line-height:1.15;">-${formatPrice(d.monto || 0)}</td>
-          </tr>`).join('')
-      : `<tr><td colspan="${totalCols}" style="padding:${cellPad};border:1px solid #aaa;height:16px;"></td></tr>`;
+  if(devs.length > 0 || saldoAnt > 0 || cfg.showEmptyReturns){
+    const devBlock = (devs.length > 0 || cfg.showEmptyReturns)
+      ? `<tr><td colspan="${totalCols}" style="padding:${cellPad};font-weight:800;border-bottom:1.5px solid #222;text-transform:uppercase;">DEVUELVE</td></tr>`
+        + (devs.length > 0
+          ? devs.map(d => `
+              <tr style="height:${rowH};">
+                <td style="padding:${cellPad};border:1px solid #888;line-height:1.15;">${escapeHtml(d.descripcion || '')}</td>
+                <td style="padding:${cellPad};border:1px solid #888;text-align:center;width:42px;line-height:1.15;"></td>
+                ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #888;width:76px;line-height:1.15;"></td>` : ''}
+                <td style="padding:${cellPad};border:1px solid #888;text-align:right;font-weight:700;width:88px;line-height:1.15;">-${formatPrice(d.monto || 0)}</td>
+              </tr>`).join('')
+          : `<tr><td colspan="${totalCols}" style="padding:${cellPad};border:1px solid #aaa;height:16px;"></td></tr>`)
+      : '';
+    const saldoRowHtml = saldoAnt > 0
+      ? `<tr style="height:${rowH};">
+           <td style="padding:${cellPad};border:1px solid #888;font-weight:700;line-height:1.15;">+ ${escapeHtml(saldoAntDesc)}</td>
+           <td style="padding:${cellPad};border:1px solid #888;text-align:center;width:42px;line-height:1.15;"></td>
+           ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #888;width:76px;line-height:1.15;"></td>` : ''}
+           <td style="padding:${cellPad};border:1px solid #888;text-align:right;font-weight:700;width:88px;line-height:1.15;">+${formatPrice(saldoAnt)}</td>
+         </tr>`
+      : '';
 
     returnsHtml = `
       <table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:${fontScale};color:#111;">
-        <tr><td colspan="${totalCols}" style="padding:${cellPad};font-weight:800;border-bottom:1.5px solid #222;text-transform:uppercase;">DEVUELVE</td></tr>
-        ${devRows}
+        ${devBlock}
+        ${saldoRowHtml}
         <tr style="background:${subBg};">
           <td colspan="${totalCols - 1}" style="padding:${cellPad};border:1px solid #222;font-weight:800;">TOTAL QUEDA ENTONCES:</td>
-          <td style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:900;white-space:nowrap;">${formatPrice(netTotal)}</td>
+          <td style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:900;white-space:nowrap;">${formatPrice(grandTotal)}</td>
         </tr>
       </table>`;
   }
@@ -7018,13 +7167,18 @@ function openRemitoConfigModal(){
 }
 
 /* ---------- CONFIRMAR ENTREGA Y PAGO ---------- */
+function getDeliveryOrderPendingTotal(order){
+  if(!order) return 0;
+  const totalConSaldo = Math.round(((Number(order.total) || 0) + Math.max(0, Number(order.saldoAnterior) || 0)) * 100) / 100;
+  return Math.max(0, Math.round((totalConSaldo - (Number(order.pagado) || 0)) * 100) / 100);
+}
 function syncDeliveryModeFields(){
   const mode = document.getElementById('delPayMode')?.value || 'paid';
   document.getElementById('delAmountWrap').style.display = (mode === 'paid' || mode === 'partial') ? '' : 'none';
   document.getElementById('delMethodWrap').style.display = (mode === 'paid' || mode === 'partial') ? '' : 'none';
   document.getElementById('delDateWrap').style.display = (mode === 'partial' || mode === 'promise') ? '' : 'none';
   if(mode === 'paid' && deliveryTargetOrder){
-    document.getElementById('delAmount').value = String(Math.max(0, Number(deliveryTargetOrder.saldoVenta) || 0));
+    document.getElementById('delAmount').value = String(getDeliveryOrderPendingTotal(deliveryTargetOrder));
   } else if(mode === 'promise' || mode === 'already_paid'){
     document.getElementById('delAmount').value = '0';
   }
@@ -7032,10 +7186,15 @@ function syncDeliveryModeFields(){
 function openDeliveryModal(order){
   if(!isAdmin || !order) return;
   deliveryTargetOrder = order;
+  const saldoAnt = Math.max(0, Number(order.saldoAnterior) || 0);
+  const totalConSaldo = Math.round(((Number(order.total) || 0) + saldoAnt) * 100) / 100;
+  const pendiente = getDeliveryOrderPendingTotal(order);
   document.getElementById('delTitle').textContent = `${order.cliente} · ${order.saleId}`;
-  document.getElementById('delSummary').textContent = `Total: ${formatPrice(order.total)} · Ya abonado: ${formatPrice(order.pagado)} · Saldo pendiente: ${formatPrice(order.saldoVenta)}`;
+  document.getElementById('delSummary').textContent = saldoAnt > 0
+    ? `Pedido: ${formatPrice(order.total)} + ${order.saldoAnteriorDesc || 'SALDO ANTERIOR'}: ${formatPrice(saldoAnt)} = ${formatPrice(totalConSaldo)} · Ya abonado: ${formatPrice(order.pagado)} · Pendiente: ${formatPrice(pendiente)}`
+    : `Total: ${formatPrice(order.total)} · Ya abonado: ${formatPrice(order.pagado)} · Saldo pendiente: ${formatPrice(pendiente)}`;
   const modeEl = document.getElementById('delPayMode');
-  modeEl.value = (Number(order.saldoVenta) || 0) <= 0 ? 'already_paid' : 'paid';
+  modeEl.value = pendiente <= 0 ? 'already_paid' : 'paid';
   document.getElementById('delPromiseDate').value = order.fechaCobroAcordada || '';
   document.getElementById('delNote').value = '';
   document.getElementById('delStatus').textContent = '';
@@ -7229,21 +7388,27 @@ document.getElementById('dqSubcatSelect')?.addEventListener('change', () => {
   const newInp = document.getElementById('dqSubcatNew');
   if(newInp) newInp.style.display = document.getElementById('dqSubcatSelect').value === '__new__' ? '' : 'none';
 });
+document.getElementById('dqImportSearch')?.addEventListener('input', () => populateDepQuickImportSelect());
+document.getElementById('dqImportBtn')?.addEventListener('click', () => {
+  importFromCompletoToDepQuickAdd(document.getElementById('dqImportSelect')?.value || '');
+});
 document.getElementById('dqSaveBtn')?.addEventListener('click', async () => {
   const statusEl = document.getElementById('dqStatus');
   const btn = document.getElementById('dqSaveBtn');
+  const targetCatalog = document.getElementById('dqCatalog')?.value || 'stock';
+  const catLabel = getActiveCatalogInfo(targetCatalog).name;
   const stock = parseNonNegInt(document.getElementById('dqStock').value);
   const orderQty = parseNonNegInt(document.getElementById('dqOrderQty').value) ?? 1;
-  statusEl.textContent = 'Creando producto en EN STOCK (GitHub)...';
+  statusEl.textContent = `Creando producto en ${catLabel} (GitHub)...`;
   btn.disabled = true;
   try{
     const { entry } = await createAndSaveProduct({
-      targetCatalog: 'stock',
+      targetCatalog,
       ean: document.getElementById('dqEan').value.trim().replace(/\s+/g, ''),
       codigoInterno: document.getElementById('dqCodigoInterno').value.trim(),
       catalogName: document.getElementById('dqCatalogName').value.trim(),
       rawName: document.getElementById('dqName').value.trim(),
-      desc: '',
+      desc: document.getElementById('dqDesc')?.value.trim() || '',
       priceRaw: document.getElementById('dqPrice').value,
       stock,
       bulto: parsePositiveInt(document.getElementById('dqBulto').value),
@@ -7254,14 +7419,14 @@ document.getElementById('dqSaveBtn')?.addEventListener('click', async () => {
       catNew: document.getElementById('dqCatNew').value.trim(),
       subcatSel: document.getElementById('dqSubcatSelect').value,
       subcatNew: document.getElementById('dqSubcatNew').value.trim(),
-      imgUrl: '',
-      imgFile: null
+      imgUrl: document.getElementById('dqImgUrl')?.value.trim() || '',
+      imgFile: document.getElementById('dqImgFile')?.files[0] || null
     });
     populateCategorySelect();
     populateDepCatalogDropdown();
     addOrUpdateOrderItem(entry, orderQty, 'add');
     hideDepQuickAdd();
-    setDepScanFeedback('ok', `✅ Producto "${entry.name}" creado en EN STOCK y sumado (+${orderQty}) al pedido.`);
+    setDepScanFeedback('ok', `✅ Producto "${entry.name}" creado en ${catLabel} y sumado (+${orderQty}) al pedido.`);
     document.getElementById('depScanCode')?.focus();
   }catch(e){
     statusEl.textContent = '❌ ' + e.message;
@@ -7292,6 +7457,42 @@ document.getElementById('depAddReturnBtn')?.addEventListener('click', () => {
   document.getElementById('depRetDesc').value = '';
   document.getElementById('depRetAmount').value = '';
   renderDepWorkspace();
+});
+document.getElementById('depPrevBalDesc')?.addEventListener('input', e => {
+  if(!activeDepOrder) return;
+  activeDepOrder.saldoAnteriorDesc = e.target.value.trim() || 'SALDO ANTERIOR';
+  renderDepWorkspace();
+});
+document.getElementById('depPrevBalAmount')?.addEventListener('input', e => {
+  if(!activeDepOrder) return;
+  const v = parseFloat(e.target.value);
+  activeDepOrder.saldoAnterior = (Number.isFinite(v) && v > 0) ? Math.round(v * 100) / 100 : 0;
+  renderDepWorkspace();
+});
+document.getElementById('depClearPrevBalBtn')?.addEventListener('click', () => {
+  if(!activeDepOrder) return;
+  activeDepOrder.saldoAnterior = 0;
+  const amtEl = document.getElementById('depPrevBalAmount');
+  if(amtEl) amtEl.value = '';
+  renderDepWorkspace();
+});
+document.getElementById('depLoadClientDebtBtn')?.addEventListener('click', () => {
+  if(!activeDepOrder) return;
+  const o = activeDepOrder;
+  const cliObj = findClientByKey(o.codigo ? 'C:' + o.codigo : 'N:' + o.cliente) || null;
+  const availDebt = Math.max(0, Math.round((Number(cliObj ? cliObj.saldo : o.clientSaldo) || 0) * 100) / 100);
+  if(availDebt <= 0){
+    showToast('Este cliente no tiene deuda pendiente para sumar');
+    return;
+  }
+  const descEl = document.getElementById('depPrevBalDesc');
+  if(descEl && !descEl.value.trim()) descEl.value = 'SALDO ANTERIOR';
+  const amtEl = document.getElementById('depPrevBalAmount');
+  if(amtEl) amtEl.value = String(availDebt);
+  o.saldoAnterior = availDebt;
+  o.saldoAnteriorDesc = (descEl && descEl.value.trim()) || 'SALDO ANTERIOR';
+  renderDepWorkspace();
+  showToast(`Saldo anterior de ${formatPrice(availDebt)} sumado al pedido`);
 });
 document.getElementById('depSavePartialBtn')?.addEventListener('click', () => saveActiveDepOrder('EN_ESPERA'));
 document.getElementById('depFinishOrderBtn')?.addEventListener('click', () => saveActiveDepOrder('LISTO'));
