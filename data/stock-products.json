@@ -16,7 +16,7 @@
     },
     {
       "ean": "7798444550764",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML -  PISTACHO",
+      "name": "PISTACHO",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -30,7 +30,7 @@
     },
     {
       "ean": "7798444550757",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML -  ERBA",
+      "name": "ERBA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -44,7 +44,7 @@
     },
     {
       "ean": "7798184680011",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Limon",
+      "name": "LIMON",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -72,7 +72,7 @@
     },
     {
       "ean": "7798184680035",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Uva",
+      "name": "UVA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -86,7 +86,7 @@
     },
     {
       "ean": "7798184680042",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bubblegum",
+      "name": "BUBBLEGUM",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -114,7 +114,7 @@
     },
     {
       "ean": "7798184680066",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Flores Blancas",
+      "name": "FLORES BLANCAS",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -122,7 +122,7 @@
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-flores-blancas-fi-feed.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "FLORES BLANCAS",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -142,7 +142,7 @@
     },
     {
       "ean": "7798184680080",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Cony",
+      "name": "CONY",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -156,7 +156,7 @@
     },
     {
       "ean": "7798184680097",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lavanda",
+      "name": "LAVANDA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -170,7 +170,7 @@
     },
     {
       "ean": "7798184680103",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Tropical",
+      "name": "TROPICAL",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -184,7 +184,7 @@
     },
     {
       "ean": "7798184680110",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Coco - Vai",
+      "name": "COCO - VAI",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -240,7 +240,7 @@
     },
     {
       "ean": "7798184680158",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Amour",
+      "name": "AMOUR",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -268,7 +268,7 @@
     },
     {
       "ean": "7798184680172",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lola",
+      "name": "LOLA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -282,7 +282,7 @@
     },
     {
       "ean": "7798184680189",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Rocio",
+      "name": "ROCIO",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -290,7 +290,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-rocio.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "ROCIO",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -310,7 +310,7 @@
     },
     {
       "ean": "7798184680202",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Hawai",
+      "name": "HAWAI",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -352,7 +352,7 @@
     },
     {
       "ean": "7798184680882",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Daniel",
+      "name": "DANIEL",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -380,7 +380,7 @@
     },
     {
       "ean": "7798184680905",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Linah",
+      "name": "LINAH",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -388,13 +388,13 @@
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-linah-fi-feed-1.jpg.webp",
       "brand": "SAPHIRUS",
       "catalogName": "LINAH",
-      "stock": 12,
+      "stock": 14,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184680912",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bebe",
+      "name": "BEBE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -402,7 +402,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-bebe.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "BEBE",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -450,7 +450,7 @@
     },
     {
       "ean": "7798184681131",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - One Million",
+      "name": "ONE MILLION",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -520,7 +520,7 @@
     },
     {
       "ean": "7798184681285",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Green",
+      "name": "GREEN",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -534,7 +534,7 @@
     },
     {
       "ean": "7798184681292",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Bamboo",
+      "name": "BAMBOO",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -590,7 +590,7 @@
     },
     {
       "ean": "7798444554717",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Life in Petals",
+      "name": "LIFE IN PETALS",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -604,7 +604,7 @@
     },
     {
       "ean": "7798444553949",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Blossom Rouge",
+      "name": "BLOSSOM ROUGE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -618,7 +618,7 @@
     },
     {
       "ean": "7798444553796",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Celestial Wings",
+      "name": "CELESTIAL WINGS",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -632,7 +632,7 @@
     },
     {
       "ean": "7798444554779",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Atlantis",
+      "name": "ATLANTIS",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -646,7 +646,7 @@
     },
     {
       "ean": "7798444554762",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Celebrity Shoes",
+      "name": "CELEBRITY SHOES",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -688,7 +688,7 @@
     },
     {
       "ean": "7798184681797",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Man",
+      "name": "MAN",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -716,7 +716,7 @@
     },
     {
       "ean": "7798184682152",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Mery",
+      "name": "MERY",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -730,7 +730,7 @@
     },
     {
       "ean": "7798184682169",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Paula",
+      "name": "PAULA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -758,7 +758,7 @@
     },
     {
       "ean": "7798184682350",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Verbena",
+      "name": "VERBENA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -884,7 +884,7 @@
     },
     {
       "ean": "7798184683821",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Oriente",
+      "name": "ORIENTE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -898,7 +898,7 @@
     },
     {
       "ean": "7798184683814",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Marino",
+      "name": "MARINO",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -926,7 +926,7 @@
     },
     {
       "ean": "7798184684101",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Lucy",
+      "name": "LUCY",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1024,7 +1024,7 @@
     },
     {
       "ean": "7798184686198",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Adventure",
+      "name": "ADVENTURE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1150,7 +1150,7 @@
     },
     {
       "ean": "7798184686624",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Frutos Patagonicos",
+      "name": "FRUTOS PATAGONICOS",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1248,7 +1248,7 @@
     },
     {
       "ean": "7798184686334",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Breeze",
+      "name": "BREEZE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1262,7 +1262,7 @@
     },
     {
       "ean": "7798184688925",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Fresias & Bergamota",
+      "name": "FRESIAS & BERGAMOTA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1270,13 +1270,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2024/09/20240911-textil-fresias-y-bergamota-saphirus.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "FRESIAS & BERGAMOTA",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184688932",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Black",
+      "name": "BLACK",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1290,7 +1290,7 @@
     },
     {
       "ean": "7798184688949",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Invicto Legend",
+      "name": "INVICTO LEGEND",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1304,7 +1304,7 @@
     },
     {
       "ean": "7798184688956",
-      "name": "AROMATIZANTE TEXTIL SAPHIRUS 250 ML - Salvaje",
+      "name": "SALVAJE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
@@ -1360,7 +1360,7 @@
     },
     {
       "ean": "7798184683432",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Cinnamon",
+      "name": "CINNAMON",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1374,7 +1374,7 @@
     },
     {
       "ean": "7798184683449",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Fancy Bouquet",
+      "name": "FANCY BOUQUET",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1388,7 +1388,7 @@
     },
     {
       "ean": "7798184683456",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Frankincense",
+      "name": "FRANKINCENSE",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1396,13 +1396,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Frankincense-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "FRANKINCENSE",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184683463",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Musk",
+      "name": "MUSK",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1410,13 +1410,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Musk-Saphirus-fb-700x700.webp",
       "brand": "SAPHIRUS",
       "catalogName": "MUSK",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184683470",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Nag Champa",
+      "name": "NAG CHAMPA",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1424,13 +1424,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Nag-Champa-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "NAG CHAMPA",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184683487",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Palo Santo",
+      "name": "PALO SANTO",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1438,13 +1438,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Palo-Santo-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "PALO SANTO",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184683494",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Patchouli",
+      "name": "PATCHOULI",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1452,13 +1452,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Patchouli-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "PATCHOULI",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798444550573",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Incienso",
+      "name": "INCIENSO",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1472,7 +1472,7 @@
     },
     {
       "ean": "7798184683500",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Sandalwood",
+      "name": "SANDALWOOD",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1480,7 +1480,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Sandalo-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "SANDALWOOD",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1500,7 +1500,7 @@
     },
     {
       "ean": "7798184683524",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Vainilla",
+      "name": "VAINILLA",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1508,13 +1508,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Vainilla-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "VAINILLA",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184683531",
-      "name": "SAHUMERIO SAPHIRUS CAJA - Vrindavan Flower",
+      "name": "VRINDAVAN FLOWER",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
@@ -1522,7 +1522,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Vrindavan-Flower-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "VRINDAVAN FLOWER",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1556,7 +1556,7 @@
     },
     {
       "ean": "7798184680738",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Cony",
+      "name": "CONY",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1570,7 +1570,7 @@
     },
     {
       "ean": "7798184680769",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Flores Blancas",
+      "name": "FLORES BLANCAS",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1578,9 +1578,9 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-flores-blancas.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "FLORES BLANCAS",
+      "stock": 13,
       "bulto": 12,
-      "descuentoBulto": 3,
-      "deleted": true
+      "descuentoBulto": 3
     },
     {
       "ean": "7798184680790",
@@ -1598,7 +1598,7 @@
     },
     {
       "ean": "7798184680691",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Limon",
+      "name": "LIMON",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1612,7 +1612,7 @@
     },
     {
       "ean": "7798184680783",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Linah",
+      "name": "LINAH",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1620,9 +1620,9 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-linah.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "LINAH",
+      "stock": 12,
       "bulto": 12,
-      "descuentoBulto": 3,
-      "deleted": true
+      "descuentoBulto": 3
     },
     {
       "ean": "7798184680721",
@@ -1668,7 +1668,7 @@
     },
     {
       "ean": "7798184680806",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Vainilla",
+      "name": "VAINILLA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1676,9 +1676,9 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-vainilla.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "VAINILLA",
+      "stock": 12,
       "bulto": 12,
-      "descuentoBulto": 3,
-      "deleted": true
+      "descuentoBulto": 3
     },
     {
       "ean": "7798184680752",
@@ -1710,7 +1710,7 @@
     },
     {
       "ean": "7798184680981",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Lavanda",
+      "name": "LAVANDA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1752,7 +1752,7 @@
     },
     {
       "ean": "7798184681018",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Verbena",
+      "name": "VERBENA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1760,7 +1760,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-verbena.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "VERBENA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1794,7 +1794,7 @@
     },
     {
       "ean": "7798184680974",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Jazmin",
+      "name": "JAZMIN",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1808,7 +1808,7 @@
     },
     {
       "ean": "7798184681025",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Papaya",
+      "name": "PAPAYA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1816,13 +1816,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-papaya.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "PAPAYA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184681032",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Bebe",
+      "name": "BEBE",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1850,7 +1850,7 @@
     },
     {
       "ean": "7798184681193",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Bubblegum",
+      "name": "BUBBLEGUM",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1892,7 +1892,7 @@
     },
     {
       "ean": "7798184681223",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Damasco",
+      "name": "DAMASCO",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1962,7 +1962,7 @@
     },
     {
       "ean": "7798184681346",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Marino",
+      "name": "MARINO",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1976,7 +1976,7 @@
     },
     {
       "ean": "7798184681353",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Blossom Rouge",
+      "name": "BLOSSOM ROUGE",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -1984,7 +1984,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2026/06/20260610-difusor-blossom-rouge.webp",
       "brand": "SAPHIRUS",
       "catalogName": "BLOSSOM ROUGE",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2046,7 +2046,7 @@
     },
     {
       "ean": "7798184682046",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Indiana",
+      "name": "INDIANA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2054,7 +2054,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-indiana.jpg",
       "brand": "SAPHIRUS",
       "catalogName": "INDIANA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2102,7 +2102,7 @@
     },
     {
       "ean": "7798184682374",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Rocio",
+      "name": "ROCIO",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2130,7 +2130,7 @@
     },
     {
       "ean": "7798184682343",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Paula",
+      "name": "PAULA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2172,7 +2172,7 @@
     },
     {
       "ean": "7798184683869",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Naranja Pimienta",
+      "name": "NARANJA PIMIENTA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2228,7 +2228,7 @@
     },
     {
       "ean": "7798184686235",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Life in Petals",
+      "name": "LIFE IN PETALS",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2236,7 +2236,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2026/08/20260805-difusor-life-in-petals-saphirus.webp",
       "brand": "SAPHIRUS",
       "catalogName": "LIFE IN PETALS",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2284,7 +2284,7 @@
     },
     {
       "ean": "7798184685603",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Pomelo Rosado",
+      "name": "POMELO ROSADO",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2424,7 +2424,7 @@
     },
     {
       "ean": "7798184686822",
-      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Frutos Patagonicos",
+      "name": "FRUTOS PATAGONICOS",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DIFUSOR VARILLAS 125 ML",
@@ -2432,7 +2432,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ5aFmEgXiCyKOmrVOiTftkJHEI5OyptR5eVJABlqlQA&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "FRUTOS PATAGONICOS",
-      "stock": 12,
+      "stock": 14,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2522,7 +2522,7 @@
     },
     {
       "ean": "7798184683999",
-      "name": "HOME SPRAY SAPHIRUS - Breeze",
+      "name": "BREEZE",
       "price": 7500,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
@@ -2530,7 +2530,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbboPLJCqR8ZsUKwF5PRnUadvR3opErISpmkJ-_aJrSg&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "BREEZE",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2592,7 +2592,7 @@
     },
     {
       "ean": "7798184684040",
-      "name": "HOME SPRAY SAPHIRUS - Vanilla Cream",
+      "name": "VANILLA CREAM",
       "price": 7500,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
@@ -2600,7 +2600,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYpBegm3kK9dxQuB-bHFopDmHxiEi9PQZiRnRVIQtVYA&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "VANILLA CREAM",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2634,7 +2634,7 @@
     },
     {
       "ean": "7798184684668",
-      "name": "HOME SPRAY SAPHIRUS - Fancy Dreams",
+      "name": "FANCY DREAMS",
       "price": 7500,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
@@ -2676,7 +2676,7 @@
     },
     {
       "ean": "7798184684699",
-      "name": "HOME SPRAY SAPHIRUS - Lima Limon",
+      "name": "LIMA LIMON",
       "price": 7500,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
@@ -2684,7 +2684,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAl7wpPs8FZ_IWbuZ6iWQ5uGC07DipPmKtXH3uN3chqA&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "LIMA LIMON",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2704,7 +2704,7 @@
     },
     {
       "ean": "7798184685795",
-      "name": "HOME SPRAY SAPHIRUS - Clean Cotton",
+      "name": "CLEAN COTTON",
       "price": 7500,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
@@ -2774,7 +2774,7 @@
     },
     {
       "ean": "7798184685528",
-      "name": "HOME SPRAY SAPHIRUS - Mango Anana",
+      "name": "MANGO ANANA",
       "price": 7500,
       "tab": "saphirus",
       "cat": "HOME SPRAY 500 ML",
@@ -2782,7 +2782,7 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKGA_bKlMhohTNf9YxGJJqOKe8SqfrBy9uFkWQ6oPAg&s=10",
       "brand": "SAPHIRUS",
       "catalogName": "MANGO ANANA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -2858,7 +2858,7 @@
     },
     {
       "ean": "7798184681834",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Bamboo",
+      "name": "BAMBOO",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -2872,7 +2872,7 @@
     },
     {
       "ean": "7798184681858",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Coco Vai",
+      "name": "COCOVAI",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -2886,7 +2886,7 @@
     },
     {
       "ean": "7798184681865",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Flores Blancas",
+      "name": "FLORESBLANCAS",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -2928,7 +2928,7 @@
     },
     {
       "ean": "7798184681896",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Lavanda",
+      "name": "LAVANDA",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -2942,7 +2942,7 @@
     },
     {
       "ean": "7798184681902",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Limon",
+      "name": "LIMON",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -2956,7 +2956,7 @@
     },
     {
       "ean": "7798184681919",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Linah",
+      "name": "LINAH",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3012,7 +3012,7 @@
     },
     {
       "ean": "7798184681957",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Papaya",
+      "name": "PAPAYA",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3040,7 +3040,7 @@
     },
     {
       "ean": "7798184681971",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Vainilla",
+      "name": "VAINILLA",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3054,7 +3054,7 @@
     },
     {
       "ean": "7798184683807",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Palo Santo",
+      "name": "PALOSANTO",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3068,7 +3068,7 @@
     },
     {
       "ean": "7798184683791",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Naranja Pimienta",
+      "name": "NARANJAPIMIENTA",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3250,7 +3250,7 @@
     },
     {
       "ean": "7798184686655",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Dragon´s Blood",
+      "name": "DRAGON´SBLOOD",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3362,7 +3362,7 @@
     },
     {
       "ean": "7798184686730",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Bergamota",
+      "name": "BERGAMOTA",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3376,7 +3376,7 @@
     },
     {
       "ean": "7798184686747",
-      "name": "ACEITE ESCENCIAL SAPHIRUS 10 ML- Verbena",
+      "name": "VERBENA",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
@@ -3418,7 +3418,7 @@
     },
     {
       "ean": "7798184680226",
-      "name": "AEROSOL SAPHIRUS - CONY",
+      "name": "CONY",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -3474,7 +3474,7 @@
     },
     {
       "ean": "7798184680264",
-      "name": "AEROSOL SAPHIRUS - FLORES BLANCAS",
+      "name": "FLORES BLANCAS",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -3502,7 +3502,7 @@
     },
     {
       "ean": "7798184680288",
-      "name": "AEROSOL SAPHIRUS - LIMÓN",
+      "name": "LIMÓN",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -3586,7 +3586,7 @@
     },
     {
       "ean": "7798184680325",
-      "name": "AEROSOL SAPHIRUS - VAINILLA",
+      "name": "VAINILLA",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -3726,7 +3726,7 @@
     },
     {
       "ean": "7798444553512",
-      "name": "AEROSOL SAPHIRUS - BLOSSOM ROUGE",
+      "name": "BLOSSOM ROUGE",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -3768,7 +3768,7 @@
     },
     {
       "ean": "7798184680462",
-      "name": "AEROSOL SAPHIRUS - BUBBLEGUM",
+      "name": "BUBBLEGUM",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -3950,7 +3950,7 @@
     },
     {
       "ean": "7798184680622",
-      "name": "AEROSOL SAPHIRUS - ROCIO",
+      "name": "ROCIO",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -4034,7 +4034,7 @@
     },
     {
       "ean": "7798184680684",
-      "name": "AEROSOL SAPHIRUS - BEBE",
+      "name": "BEBE",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -4062,7 +4062,7 @@
     },
     {
       "ean": "7798444553581",
-      "name": "AEROSOL SAPHIRUS - GOLDEN LORD",
+      "name": "GOLDEN LORD",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -4244,7 +4244,7 @@
     },
     {
       "ean": "7798184682091",
-      "name": "AEROSOL SAPHIRUS - PAULA",
+      "name": "PAULA",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -4384,7 +4384,7 @@
     },
     {
       "ean": "7798184684583",
-      "name": "AEROSOL SAPHIRUS - BREEZE",
+      "name": "BREEZE",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -4440,7 +4440,7 @@
     },
     {
       "ean": "7798184684941",
-      "name": "AEROSOL SAPHIRUS - ANTITABACO",
+      "name": "ANTITABACO",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
@@ -4720,7 +4720,7 @@
     },
     {
       "ean": "7798444550986",
-      "name": "AROMATIZANTE TEXTIL - DISNEY LOTSO",
+      "name": "LOTSO",
       "price": 3820,
       "tab": "saphirus",
       "cat": "DISNEY TEXTIL",
@@ -4734,7 +4734,7 @@
     },
     {
       "ean": "7798444550948",
-      "name": "AROMATIZANTE TEXTIL - DISNEY PRINCESA",
+      "name": "PRINCESA",
       "price": 3820,
       "tab": "saphirus",
       "cat": "DISNEY TEXTIL",
@@ -4804,7 +4804,7 @@
     },
     {
       "ean": "7798444550870",
-      "name": "AROMATIZANTE TEXTIL - DISNEY MINNIE",
+      "name": "MINNIE",
       "price": 3820,
       "tab": "saphirus",
       "cat": "DISNEY TEXTIL",
@@ -5140,7 +5140,7 @@
     },
     {
       "ean": "7798444551259",
-      "name": "DIFUSOR VARILLAS 125 ML - DISNEY MOANA",
+      "name": "MOANA",
       "price": 5400,
       "tab": "saphirus",
       "cat": "DISNEY DIFUSOR",
@@ -5148,13 +5148,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/12/2025_11_25-Difusor-Moana-Saphirus-FB-1_13_11zon.webp",
       "brand": "SAPHIRUS",
       "catalogName": "MOANA",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184688772",
-      "name": "SAPHIRUS TOUCH APARATO - AGUA MARINA",
+      "name": "AGUA MARINA",
       "price": 4300,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5168,7 +5168,7 @@
     },
     {
       "ean": "7798444550627",
-      "name": "SAPHIRUS TOUCH APARATO - LAVANDA FRESH",
+      "name": "LAVANDA FRESH",
       "price": 4300,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5176,13 +5176,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/09/20250905-Touch-Lavanda-Fresh-Saphirus-fb-430x430.webp",
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA FRESH",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184688765",
-      "name": "SAPHIRUS TOUCH APARATO - MIX CITRICO",
+      "name": "MIX CITRICO",
       "price": 4300,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5190,13 +5190,13 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2024/07/20250905-Touch-Mix-Citrico-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "MIX CITRICO",
-      "stock": 12,
+      "stock": 2,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184688789",
-      "name": "SAPHIRUS TOUCH APARATO - PETALOS FLORALES",
+      "name": "PETALOS FLORALES",
       "price": 4300,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5204,13 +5204,13 @@
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2024/07/20240719-blister-compuesto-soft-rose-y-petalos-florales-saphirus-1024x1024-1.jpg.webp",
       "brand": "SAPHIRUS",
       "catalogName": "PETALOS FLORALES",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184688758",
-      "name": "SAPHIRUS TOUCH APARATO - FRUTOS ROJOS",
+      "name": "FRUTOS ROJOS",
       "price": 4300,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5224,7 +5224,7 @@
     },
     {
       "ean": "7798444550603",
-      "name": "SAPHIRUS TOUCH APARATO - DULZURA TROPICAL",
+      "name": "DULZURA TROPICAL",
       "price": 4300,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5238,7 +5238,7 @@
     },
     {
       "ean": "7798444550597",
-      "name": "SAPHIRUS TOUCH REPUESTO - DULZURA TROPICAL",
+      "name": "REPUESTO DULZURA TROPICAL",
       "price": 2900,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5280,7 +5280,7 @@
     },
     {
       "ean": "7798184688734",
-      "name": "SAPHIRUS TOUCH REPUESTO - AGUA MARINA",
+      "name": "REPUESTO AGUA MARINA",
       "price": 2900,
       "tab": "saphirus",
       "cat": "BAÑO",
@@ -5288,7 +5288,7 @@
       "img": "https://saphirus.com.ar/wp-content/uploads/2024/07/20250905-Touch-Repuesto-Agua-Marina-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
       "catalogName": "REPUESTO AGUA MARINA",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -6792,7 +6792,7 @@
     },
     {
       "ean": "7798184683715",
-      "name": "SAHUMERIOS AMBAR - Patchouli",
+      "name": "PATCHOULI",
       "price": 1300,
       "tab": "ambar",
       "cat": "SAHUMERIO AMBAR",
@@ -6800,7 +6800,7 @@
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/12/sahumerio-ambar-patchouli-fi-feed-1-1.jpg",
       "brand": "AMBAR",
       "catalogName": "PATCHOULI",
-      "stock": 12,
+      "stock": 42,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7058,7 +7058,7 @@
     },
     {
       "ean": "7791274201882",
-      "name": "GO TO BE BODY CREAM GLOW IN PROGRESS 340",
+      "name": "CREMA CORPORAL GLOW IN PROGRESS 340 ML",
       "price": 7310,
       "tab": "algabo",
       "cat": "GO TO BE",
@@ -7066,13 +7066,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_cream_340_glowinprogress-f40046fcb33ffcbbf017799819471709-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL GLOW IN PROGRESS 340 ML",
-      "stock": 12,
+      "stock": 4,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274201905",
-      "name": "GO TO BE BODY CREAM THE PLOT TWIST 340",
+      "name": "CREMA CORPORAL THE PLOT TWIST 340 ML",
       "price": 7310,
       "tab": "algabo",
       "cat": "GO TO BE",
@@ -7296,7 +7296,7 @@
     },
     {
       "ean": "7791274000119",
-      "name": "BABY COLONIA DULCES MIMOS 125",
+      "name": "COLONIA PARA BEBE DULCE MIMOS 125 ML",
       "price": 3310,
       "tab": "algabo",
       "cat": "BEBE",
@@ -7366,7 +7366,7 @@
     },
     {
       "ean": "7791274200663",
-      "name": "BABY OLEO CALCAREO 500",
+      "name": "OLEO CALCAREO 500 ML",
       "price": 5690,
       "tab": "algabo",
       "cat": "BEBE",
@@ -7374,7 +7374,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-7791274200663-a6027003742c649db817187211837353-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "OLEO CALCAREO 500 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7450,7 +7450,7 @@
     },
     {
       "ean": "7791274202070",
-      "name": "BABY JABON DE GLICERINA 80",
+      "name": "JABON PARA BEBE DE GLICERINA 80 GR",
       "price": 1170,
       "tab": "algabo",
       "cat": "BEBE",
@@ -7458,7 +7458,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-jabon-de-glicerina-7791274202070-4609c627920a56535a17787833399913-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JABON PARA BEBE DE GLICERINA 80 GR",
-      "stock": 24,
+      "stock": 3,
       "bulto": 24,
       "descuentoBulto": 3
     },
@@ -7492,7 +7492,7 @@
     },
     {
       "ean": "7791274200151",
-      "name": "BABY SHAMPOO MANZANILLA 200",
+      "name": "SHAMPOO PARA BEBE MANZANILLA 200 ML",
       "price": 3080,
       "tab": "algabo",
       "cat": "BEBE",
@@ -7506,7 +7506,7 @@
     },
     {
       "ean": "7791274192319",
-      "name": "BABY SHAMPOO EXTRA SUAVE 200",
+      "name": "SHAMPOO PARA BEBE EXTRA SUAVE 200 ML",
       "price": 3080,
       "tab": "algabo",
       "cat": "BEBE",
@@ -7514,7 +7514,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-shampoo-x200-ml-extra-suave-779127419231911-1492241998f8c9f80e16504826346686-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA BEBE EXTRA SUAVE 200 ML",
-      "stock": 12,
+      "stock": 4,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -7632,7 +7632,7 @@
     },
     {
       "ean": "7791274197017",
-      "name": "BABY WIPES 20",
+      "name": "TOALLITAS HUMEDAS 20 UD",
       "price": 1540,
       "tab": "algabo",
       "cat": "BEBE",
@@ -7898,7 +7898,7 @@
     },
     {
       "ean": "7791274087622",
-      "name": "KIDS SHAMPOO CHICLE 350",
+      "name": "SHAMPOO KIDS CHICLE 350 ML",
       "price": 3390,
       "tab": "algabo",
       "cat": "KIDS",
@@ -7906,13 +7906,13 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9lFYdln_mDUqNoXPZeWI_SupqgmMqWU2oXBPXfuXI_g&s=10",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO KIDS CHICLE 350 ML",
-      "stock": 12,
+      "stock": 4,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274192593",
-      "name": "KIDS SHAMPOO MELOCOTÓN 350",
+      "name": "SHAMPOO KIDS MELOCOTON 350 ML",
       "price": 3390,
       "tab": "algabo",
       "cat": "KIDS",
@@ -7926,7 +7926,7 @@
     },
     {
       "ean": "7791274087615",
-      "name": "KIDS SHAMPOO SANDÍA DULCE 350",
+      "name": "SHAMPOO KIDS SANDIA DULCE 350 ML",
       "price": 3390,
       "tab": "algabo",
       "cat": "KIDS",
@@ -7934,13 +7934,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-kids-shampoo-x350-sandia-dulce-77912740876151-a4a99c31b016df04f216565293025691-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO KIDS SANDIA DULCE 350 ML",
-      "stock": 12,
+      "stock": 11,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274004391",
-      "name": "KIDS ACO SANDÍA DULCE 350",
+      "name": "ACONDICIONADOR KIDS SANDIA DULCE 350 ML",
       "price": 3390,
       "tab": "algabo",
       "cat": "KIDS",
@@ -7948,13 +7948,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-kids-acondicionador-x350-sandia-dulce-77912740043911-4dceef171b55d59e5616565267169054-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR KIDS SANDIA DULCE 350 ML",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274199899",
-      "name": "KIDS ZERO SH PIOJOS 500",
+      "name": "SHAMPOO PARA PIOJOS 500 ML",
       "price": 6000,
       "tab": "algabo",
       "cat": "KIDS",
@@ -7962,7 +7962,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-piojos-y-liendres-x500-ml-shampoo-77912741998991-62fb9102216d24f9e716813054031298-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA PIOJOS 500 ML",
-      "stock": 11,
+      "stock": 4,
       "bulto": 11,
       "descuentoBulto": 3
     },
@@ -8094,7 +8094,7 @@
     },
     {
       "ean": "7791274201790",
-      "name": "ALGABO ROLL ON MEN 60",
+      "name": "DESODORANTE BOLILLA HOMBRE 60 ML",
       "price": 1770,
       "tab": "algabo",
       "cat": "HOMBRE",
@@ -8102,7 +8102,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-men-roll-on-antitranspirante-x60-ml-7791274201790-0c02118bd680cde8b617654586877595-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "DESODORANTE BOLILLA HOMBRE 60 ML",
-      "stock": 24,
+      "stock": 6,
       "bulto": 24,
       "descuentoBulto": 3
     },
@@ -8150,7 +8150,7 @@
     },
     {
       "ean": "7791274196447",
-      "name": "ALGABO GEL EXT BRILLO POMO 150",
+      "name": "POMO EXTRA BRILLO 150 ML",
       "price": 2350,
       "tab": "algabo",
       "cat": "GELES",
@@ -8178,7 +8178,7 @@
     },
     {
       "ean": "7791274196454",
-      "name": "ALGABO GEL EXT FUERTE POMO 150",
+      "name": "POMO EXTRA FUERTE 150 ML",
       "price": 2350,
       "tab": "algabo",
       "cat": "GELES",
@@ -8186,7 +8186,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-azul-x150-pomo-fijacion-extra-fuerte-779127419645411-00af2465786d5188d216759567256862-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "POMO EXTRA FUERTE 150 ML",
-      "stock": 24,
+      "stock": 82,
       "bulto": 24,
       "descuentoBulto": 3
     },
@@ -8206,7 +8206,7 @@
     },
     {
       "ean": "7791274189326",
-      "name": "ALGABO GEL EF. HÚMEDO POMO 200",
+      "name": "POMO EFECTO HUMEDO 200 ML",
       "price": 2540,
       "tab": "algabo",
       "cat": "GELES",
@@ -8234,7 +8234,7 @@
     },
     {
       "ean": "7791274196294",
-      "name": "ALGABO GEL EXT BRILLO POTE 350",
+      "name": "POTE EXTRA BRILLO 350 ML",
       "price": 3850,
       "tab": "algabo",
       "cat": "GELES",
@@ -8242,13 +8242,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-extra-brillo-y-control-x350-g-pote-7791274196294-081e23f16632328e0617605438497562-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "POTE EXTRA BRILLO 350 ML",
-      "stock": 6,
+      "stock": 4,
       "bulto": 6,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274196287",
-      "name": "ALGABO GEL EF. HÚMEDO POTE 350",
+      "name": "POTE EFECTO HUMEDO 350 ML",
       "price": 3850,
       "tab": "algabo",
       "cat": "GELES",
@@ -8256,7 +8256,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-gel-efecto-humedo-x350-g-pote-77791274196287-d4ba9a166038f7b7c217605437967619-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "POTE EFECTO HUMEDO 350 ML",
-      "stock": 6,
+      "stock": 4,
       "bulto": 6,
       "descuentoBulto": 3
     },
@@ -8318,7 +8318,7 @@
     },
     {
       "ean": "7791274187742",
-      "name": "ALGABO FOOT 100",
+      "name": "TALCO PARA PIES 100 ML",
       "price": 1770,
       "tab": "algabo",
       "cat": "TALCOS",
@@ -8326,7 +8326,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-foot-polvo-pedico-x100-g-77912741877421-f3a79f955fbfb2b1d716564411541619-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TALCO PARA PIES 100 ML",
-      "stock": 12,
+      "stock": 27,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8346,7 +8346,7 @@
     },
     {
       "ean": "7791274196416",
-      "name": "ALGABO FOOT DP 200",
+      "name": "REPUESTO TALCO PARA PIES 200 ML",
       "price": 2390,
       "tab": "algabo",
       "cat": "TALCOS",
@@ -8374,7 +8374,7 @@
     },
     {
       "ean": "7791274200038",
-      "name": "ALGABO FOOT ANTIBACTERIAL 100",
+      "name": "TALCO PARA PIES ANTIBACTERIAL 100 ML",
       "price": 1770,
       "tab": "algabo",
       "cat": "TALCOS",
@@ -8570,7 +8570,7 @@
     },
     {
       "ean": "7791274188350",
-      "name": "ALGABO TALCO PERF FLORAL 250",
+      "name": "TALCO PERFUMADO FLORAL 250 ML",
       "price": 2770,
       "tab": "algabo",
       "cat": "TALCOS",
@@ -8612,7 +8612,7 @@
     },
     {
       "ean": "7791274198793",
-      "name": "ALGABO ENJUAGUE BUCAL 250",
+      "name": "ENJUAGUE BUCAL MENTOL 250 ML",
       "price": 3540,
       "tab": "algabo",
       "cat": "HIGIENE BUCAL",
@@ -8620,13 +8620,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x250-ml-arctic-menthol-7791274198793-5787660e30461d07d117655424880025-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ENJUAGUE BUCAL MENTOL 250 ML",
-      "stock": 12,
+      "stock": 2,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274196485",
-      "name": "ALGABO ENJUAGUE BUCAL 500",
+      "name": "ENJUAGUE BUCAL MENTOL 500 ML",
       "price": 4390,
       "tab": "algabo",
       "cat": "HIGIENE BUCAL",
@@ -8634,7 +8634,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x500-ml-arctic-menthol-7791274196485-1b3c85b87f61c25e8f17655424045553-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ENJUAGUE BUCAL MENTOL 500 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8682,7 +8682,7 @@
     },
     {
       "ean": "7791274201653",
-      "name": "ALGABO ENJ BUCAL ANTIBAC 250",
+      "name": "ENJUAGUE BUCAL ANTIBACTERIAL 250 ML",
       "price": 3540,
       "tab": "algabo",
       "cat": "HIGIENE BUCAL",
@@ -8696,7 +8696,7 @@
     },
     {
       "ean": "7791274201646",
-      "name": "ALGABO ENJ BUCAL ANTIBAC  500",
+      "name": "ENJUAGUE BUCAL ANTIBACTERIAL 500 ML",
       "price": 4390,
       "tab": "algabo",
       "cat": "HIGIENE BUCAL",
@@ -8710,7 +8710,7 @@
     },
     {
       "ean": "7791274200847",
-      "name": "ALGABO ENJ BUCAL S/ALCOHOL 250",
+      "name": "ENJUAGUE BUCAL SIN ALCOHOL 250 ML",
       "price": 3540,
       "tab": "algabo",
       "cat": "HIGIENE BUCAL",
@@ -8718,7 +8718,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-enjuage-bucal-x250-ml-cool-mint-7791274200847-268508d8bf2a22f2a417084557692532-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ENJUAGUE BUCAL SIN ALCOHOL 250 ML",
-      "stock": 12,
+      "stock": 20,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -8766,7 +8766,7 @@
     },
     {
       "ean": "7791274199561",
-      "name": "ALGABO JAB LIQ KAR-AGU 221",
+      "name": "JAB. LIQ. PARA MANOS KARITE Y PALTA 221 ML",
       "price": 2540,
       "tab": "algabo",
       "cat": "MANOS",
@@ -8774,7 +8774,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x221-karite-y-aguacate-77912741995611-00968dd16e536c008016849381625134-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS KARITE Y PALTA 221 ML",
-      "stock": 18,
+      "stock": 14,
       "bulto": 18,
       "descuentoBulto": 3
     },
@@ -8794,7 +8794,7 @@
     },
     {
       "ean": "7791274193408",
-      "name": "ALGABO JAB LIQ CITRUS 300",
+      "name": "JAB. LIQ. PARA MANOS CITRUS 300 ML",
       "price": 2620,
       "tab": "algabo",
       "cat": "MANOS",
@@ -8864,7 +8864,7 @@
     },
     {
       "ean": "7791274000485",
-      "name": "ALGABO JAB LIQ CREMOSO 300",
+      "name": "JAB. LIQ. PARA MANOS CREMOSO 300 ML",
       "price": 2620,
       "tab": "algabo",
       "cat": "MANOS",
@@ -8990,7 +8990,7 @@
     },
     {
       "ean": "7791274193392",
-      "name": "ALGABO JAB LIQ GREEN TEA 300",
+      "name": "JAB. LIQ. PARA MANOS TE VERDE 300 ML",
       "price": 2620,
       "tab": "algabo",
       "cat": "MANOS",
@@ -8998,7 +8998,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-liquido-x300-greem-tea-77912741933921-d9c9b6b7c14fdbed5516560769010970-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS TE VERDE 300 ML",
-      "stock": 12,
+      "stock": 2,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -9088,7 +9088,7 @@
     },
     {
       "ean": "7791274200243",
-      "name": "ULTRA SANITI GEL 250",
+      "name": "ALCOHOL EN GEL CON DISPENSER 250 ML",
       "price": 2920,
       "tab": "algabo",
       "cat": "MANOS",
@@ -9130,7 +9130,7 @@
     },
     {
       "ean": "7791274202148",
-      "name": "ALGABO JAB TOCADOR FLOWER MIX 80",
+      "name": "JABON DE TOCADOR FLOWER MIX X1 UD 80 GR",
       "price": 800,
       "tab": "algabo",
       "cat": "MANOS",
@@ -9144,7 +9144,7 @@
     },
     {
       "ean": "7791274202131",
-      "name": "ALGABO JAB TOCADOR FLOWER MIX 3X80",
+      "name": "JABON DE TOCADOR FLOWER MIX X3 UD 80 GR",
       "price": 2220,
       "tab": "algabo",
       "cat": "MANOS",
@@ -9152,13 +9152,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-3-x80-g-flower-mix-7791274202131-eb007192c4e26e50a617661549926417-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR FLOWER MIX X3 UD 80 GR",
-      "stock": 60,
+      "stock": 5,
       "bulto": 60,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274202155",
-      "name": "ALGABO JAB TOCADOR CREAM 80",
+      "name": "JABON DE TOCADOR CREMOSO X1 UD 80 GR",
       "price": 800,
       "tab": "algabo",
       "cat": "MANOS",
@@ -9172,7 +9172,7 @@
     },
     {
       "ean": "7791274202124",
-      "name": "ALGABO JAB TOCADOR CREAM PACK 3X80",
+      "name": "JABON DE TOCADOR CREMOSO X3 UD 80 GR",
       "price": 2220,
       "tab": "algabo",
       "cat": "MANOS",
@@ -9180,7 +9180,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-jabon-cremoso-3-x80-g-cream-7791274202124-dcd66e0347c44443bd17664377516980-480-0.png",
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR CREMOSO X3 UD 80 GR",
-      "stock": 60,
+      "stock": 26,
       "bulto": 60,
       "descuentoBulto": 3
     },
@@ -9284,7 +9284,7 @@
     },
     {
       "ean": "7791274005329",
-      "name": "ALGABO QUITA C/KERATINA 100",
+      "name": "QUITAESMALTE CON KERATINA 100 ML",
       "price": 1720,
       "tab": "algabo",
       "cat": "QUITAESMALTE",
@@ -9292,13 +9292,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-keratina-77912740053291-743a482dd0ad8f8a3316564400445787-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE CON KERATINA 100 ML",
-      "stock": 24,
+      "stock": 16,
       "bulto": 24,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274005305",
-      "name": "ALGABO QUITA FORTALECEDOR 100",
+      "name": "QUITAESMALTE FORTLECEDOR 100 ML",
       "price": 1720,
       "tab": "algabo",
       "cat": "QUITAESMALTE",
@@ -9306,13 +9306,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-fortalecedor-77912740053051-0cab90bf16d459796716564407468857-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE FORTLECEDOR 100 ML",
-      "stock": 24,
+      "stock": 19,
       "bulto": 24,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274005312",
-      "name": "ALGABO QUITA HUMECTANTE 100",
+      "name": "QUITAESMALTE HUMECTANTE 100 ML",
       "price": 1720,
       "tab": "algabo",
       "cat": "QUITAESMALTE",
@@ -9320,13 +9320,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x100-humectante-77912740053122-73ed97b9916cb6a33616564407117486-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE HUMECTANTE 100 ML",
-      "stock": 24,
+      "stock": 15,
       "bulto": 24,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274201158",
-      "name": "ALGABO QUITA C/KERATINA 200",
+      "name": "QUITAESMALTE CON KERATINA 200 ML",
       "price": 2740,
       "tab": "algabo",
       "cat": "QUITAESMALTE",
@@ -9340,7 +9340,7 @@
     },
     {
       "ean": "7791274201134",
-      "name": "ALGABO QUITA FORTALECEDOR 200",
+      "name": "QUITAESMALTE FORTLECEDOR 200 ML",
       "price": 2740,
       "tab": "algabo",
       "cat": "QUITAESMALTE",
@@ -9354,7 +9354,7 @@
     },
     {
       "ean": "7791274201141",
-      "name": "ALGABO QUITA HUMECTANTE 200",
+      "name": "QUITAESMALTE HUMECTANTE 200 ML",
       "price": 2740,
       "tab": "algabo",
       "cat": "QUITAESMALTE",
@@ -9362,7 +9362,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-quitaesmalte-x200-ml-humectante-7791274201141-2e0f9dae830d05c7c417169214233568-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE HUMECTANTE 200 ML",
-      "stock": 22,
+      "stock": 14,
       "bulto": 22,
       "descuentoBulto": 3
     },
@@ -9466,7 +9466,7 @@
     },
     {
       "ean": "7791274201721",
-      "name": "ALGABO CARE ESPONJA EXFOLIANTE",
+      "name": "ESPONJA EXFOLIANTE 1 UD",
       "price": 5770,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9474,7 +9474,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-care-esponja-exfoliante-7791274201721-fa920f28088cefb08117629580790202-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ESPONJA EXFOLIANTE 1 UD",
-      "stock": 60,
+      "stock": 14,
       "bulto": 60,
       "descuentoBulto": 3
     },
@@ -9578,7 +9578,7 @@
     },
     {
       "ean": "7791274198564",
-      "name": "ALGABO WIPES MICELARES 25",
+      "name": "TOALLITAS HUMEDAS CON AGUA MICELAR 25 UD",
       "price": 2850,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9586,13 +9586,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-micelar-toallitas-micelares-desmaquillantes-x25-u-7791274198564-b9e0c413a67003703117231300354888-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS CON AGUA MICELAR 25 UD",
-      "stock": 24,
+      "stock": 43,
       "bulto": 24,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274197512",
-      "name": "ALGABO DISCOS DESMAQ 80",
+      "name": "DISCOS DESMAQUILLANTES 80 UD",
       "price": 2430,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9620,7 +9620,7 @@
     },
     {
       "ean": "7791274197710",
-      "name": "ALGABO WIPES DESMAQ 25",
+      "name": "TOALLITAS DESMAQUILLANTES 25 UD",
       "price": 2310,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9628,7 +9628,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-toallitas-desmaquillantes-x25-u-7791274197710-5d26356738f8d37ad217231301344126-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TOALLITAS DESMAQUILLANTES 25 UD",
-      "stock": 24,
+      "stock": 8,
       "bulto": 24,
       "descuentoBulto": 3
     },
@@ -9648,7 +9648,7 @@
     },
     {
       "ean": "7791274201332",
-      "name": "ALGABO ALGODÓN PREMIUM 75",
+      "name": "ALGODON PREMIUM 75 GR",
       "price": 1460,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9676,7 +9676,7 @@
     },
     {
       "ean": "7791274005237",
-      "name": "ALGABO HISOPOS TUBO 100",
+      "name": "HISOPOS 100 UD",
       "price": 1690,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9690,7 +9690,7 @@
     },
     {
       "ean": "7791274199653",
-      "name": "ALGABO HISOPOS ZIPPER 125",
+      "name": "HISOPOS CIERRE ZIPPER 125 UD",
       "price": 1690,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9774,7 +9774,7 @@
     },
     {
       "ean": "7791274004407",
-      "name": "ALGABO CREMA AVENA-KARITÉ 200",
+      "name": "CREMA CORPORAL EN POMO AVENA 200 ML",
       "price": 3620,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9788,7 +9788,7 @@
     },
     {
       "ean": "7791274004414",
-      "name": "ALGABO CREMA MIEL-ALMENDRA 200",
+      "name": "CREMA CORPORAL EN POMO MIEL 200 ML",
       "price": 3620,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9796,13 +9796,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-crema-corporal-pomo-x200-ml-miel-y-almendras-77912740044141-4adc3b5db5e93b216016504849693698-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL EN POMO MIEL 200 ML",
-      "stock": 12,
+      "stock": 11,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274004421",
-      "name": "ALGABO CREMA ALOE-MANZ 200",
+      "name": "CREMA CORPORAL EN POMO ALOE 200 ML",
       "price": 3620,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9810,13 +9810,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-crema-corporal-pomo-x200-ml-aloe-y-manzanilla-779127400442111-9a46bef514ca76218b16681747661134-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL EN POMO ALOE 200 ML",
-      "stock": 12,
+      "stock": 7,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274004711",
-      "name": "ALGABO CREMA AVENA-KARITÉ 400",
+      "name": "CREMA CORPORAL C/DISP. AVENA 400 ML",
       "price": 5130,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9830,7 +9830,7 @@
     },
     {
       "ean": "7791274004728",
-      "name": "ALGABO CREMA MIEL-ALMENDRA 400",
+      "name": "CREMA CORPORAL C/DISP. MIEL 400 ML",
       "price": 5130,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9844,7 +9844,7 @@
     },
     {
       "ean": "7791274004704",
-      "name": "ALGABO CREMA ALOE-MANZ 400",
+      "name": "CREMA CORPORAL C/DISP. ALOE 400 ML",
       "price": 5130,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9858,7 +9858,7 @@
     },
     {
       "ean": "7791274201509",
-      "name": "ALGABO CREM FACIAL ANTIAGE 100",
+      "name": "CREMA FACIAL ANTIAGE 100 ML",
       "price": 5130,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9866,13 +9866,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-crema-facial-x100-ml-antiarrugas-7791274201509-7df9cca11c2a4e4fd417424749753953-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA FACIAL ANTIAGE 100 ML",
-      "stock": 12,
+      "stock": 8,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274201516",
-      "name": "ALGABO CREM FACIAL HUMECT 100",
+      "name": "CREMA FACIAL HUMECTANTE 100 ML",
       "price": 5130,
       "tab": "algabo",
       "cat": "CUIDADO",
@@ -9880,7 +9880,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-crema-facial-x100-ml-humectante-7791274201516-ad95b726216724588117424753002996-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA FACIAL HUMECTANTE 100 ML",
-      "stock": 12,
+      "stock": 9,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10012,7 +10012,7 @@
     },
     {
       "ean": "7791274197871",
-      "name": "ALGABO BAÑO NATURAL POMO 200",
+      "name": "TRATAMIENTO BAÑO NATURAL EN POMO 200 ML",
       "price": 3200,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10026,7 +10026,7 @@
     },
     {
       "ean": "7791274009365",
-      "name": "ALGABO BAÑO NATURAL ARGAN 350",
+      "name": "TRATAMIENTO BAÑO NATURAL EN POTE 350 ML",
       "price": 4390,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10034,13 +10034,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-control-bano-de-crema-pote-x350-bano-natural-77912740093651-d56148175354fb861616564394354078-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TRATAMIENTO BAÑO NATURAL EN POTE 350 ML",
-      "stock": 6,
+      "stock": 13,
       "bulto": 6,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274197864",
-      "name": "ALGABO BARRO VEGETAL POMO 200",
+      "name": "TRATAMIENTO BARRO VEGETAL EN POMO 200 ML",
       "price": 3200,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10054,7 +10054,7 @@
     },
     {
       "ean": "7791274087004",
-      "name": "ALGABO BARRO VEGETAL POTE 350",
+      "name": "TRATAMIENTO BARRO VEGETAL EN POTE 350 ML",
       "price": 4390,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10062,13 +10062,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-control-bano-de-crema-pote-x350-barro-vegetal-77912740870041-e0754fe31cbe1e3a1c16564396219224-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "TRATAMIENTO BARRO VEGETAL EN POTE 350 ML",
-      "stock": 6,
+      "stock": 1,
       "bulto": 6,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274005121",
-      "name": "ALGABO CREMA PEINAR ARGÁN 300",
+      "name": "CREMA PARA PEINAR CON ARGA 300 ML",
       "price": 3310,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10076,13 +10076,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-crema-para-peinar-x300-ml-keratina-7791274001482-6c020c047044387ff317605439448860-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA PARA PEINAR CON ARGA 300 ML",
-      "stock": 12,
+      "stock": 8,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274190131",
-      "name": "ALGABO CREMA PEINAR RIZADO 300",
+      "name": "CREMA PARA PEINAR RIZADO 300 ML",
       "price": 3310,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10090,13 +10090,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-crema-para-peinar-x300-ml-rizados-7791274190131-3dc3399e6ada7f67a517605439854419-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "CREMA PARA PEINAR RIZADO 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274001482",
-      "name": "ALGABO CREMA PEINAR KERAT 300",
+      "name": "CREMA PARA PEINAR CON KERATINA 300 ML",
       "price": 3310,
       "tab": "algabo",
       "cat": "SALUD CAPILAR",
@@ -10110,7 +10110,7 @@
     },
     {
       "ean": "7791274202346",
-      "name": "ALGABO AC 0% OLIVA Y ARGÁN EP 300",
+      "name": "REPUESTO ACOND. 0% OLIVA Y ARGAN 300 ML",
       "price": 2030,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10118,13 +10118,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-acondicionador-oliva-argan-fortalecedor-7791274201783-5651bf96519fc4d33a17787726747952-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. 0% OLIVA Y ARGAN 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274202339",
-      "name": "ALGABO ACO 0% ACAÍ Y ROMERO EP 300",
+      "name": "REPUESTO ACOND. 0% ACAI Y ROMERO 300 ML",
       "price": 2030,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10132,13 +10132,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-acondicionador-acai-romero-antioxidante-7791274201776-09508fcda2ae528e1f17792055858462-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. 0% ACAI Y ROMERO 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274202322",
-      "name": "ALGABO ACO 0% AVOCADO Y ARGÁN EP 300",
+      "name": "REPUESTO ACOND. 0% AVOCADO Y ARGAN 300 ML",
       "price": 2030,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10146,13 +10146,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-acondicionador-avocado-y-aceite-de-argan-ondas-y-rizos-7791274201769-1a872dbead89252ace17792066126997-480-0.png",
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. 0% AVOCADO Y ARGAN 300 ML",
-      "stock": 12,
+      "stock": 9,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274202360",
-      "name": "ALGABO SH 0% ACAÍ Y ROMERO EP 300",
+      "name": "REPUESTO SHAMPOO 0% OLIVA Y ARGAN 300 ML",
       "price": 2030,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10160,13 +10160,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-shampoo-acai-romero-antioxidante-7791274201738-b217a62d88690b705117764338218356-480-0.png",
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO 0% OLIVA Y ARGAN 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274202315",
-      "name": "ALGABO SH 0% AVOCADO Y ARGÁN EP 300",
+      "name": "REPUESTO SHAMPOO 0% ACAI Y ROMERO 300 ML",
       "price": 2030,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10174,7 +10174,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x300-ml-shampoo-avocado-y-aceite-de-argan-ondas-y-rizos-7791274201752-c1f476464709d929e817764340424268-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO 0% ACAI Y ROMERO 300 ML",
-      "stock": 12,
+      "stock": 3,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10194,7 +10194,7 @@
     },
     {
       "ean": "7791274200571",
-      "name": "ALGABO SH 0% AÇAÍ Y ROMERO 750",
+      "name": "ACOND. 0% OLIVA Y ARGAN 750 ML",
       "price": 3660,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10208,7 +10208,7 @@
     },
     {
       "ean": "7791274200588",
-      "name": "ALGABO SH 0% OLIVA Y ARGÁN 750",
+      "name": "ACOND. 0% ACAI Y ROMERO 750 ML",
       "price": 3660,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10222,7 +10222,7 @@
     },
     {
       "ean": "7791274201356",
-      "name": "ALGABO SH 0% AVOCADO Y ARGÁN 750",
+      "name": "ACOND. 0% AVOCADO Y ARGAN 750 ML",
       "price": 3660,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10230,13 +10230,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x750-ml-shampoo-avocado-y-aceite-de-argan-ondas-y-rizos-7791274201356-6ac31beb6c27e5df4617764306730436-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "ACOND. 0% AVOCADO Y ARGAN 750 ML",
-      "stock": 15,
+      "stock": 63,
       "bulto": 15,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274200595",
-      "name": "ALGABO AC 0% AÇAÍ Y ROMERO 750",
+      "name": "SHAMPOO 0% OLIVA Y ARGAN 750 Ml",
       "price": 3660,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10244,13 +10244,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-sin-sal-x750-ml-acondicionador-acai-romero-7791274200595-c4ca1586a4375aa71d17232161944845-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO 0% OLIVA Y ARGAN 750 Ml",
-      "stock": 15,
+      "stock": 48,
       "bulto": 15,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274200601",
-      "name": "ALGABO AC 0% OLIVA Y ARGÁN 750",
+      "name": "SHAMPOO 0% ACAI Y ROMERO 750 ML",
       "price": 3660,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10258,13 +10258,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x750-ml-acondicionador-oliva-argan-fortalecedor-7791274200601-a264414b9b1084ad2617764310223970-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO 0% ACAI Y ROMERO 750 ML",
-      "stock": 15,
+      "stock": 41,
       "bulto": 15,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274201363",
-      "name": "ALGABO AC 0% AVOCADO Y ARGÁN 750",
+      "name": "SHAMPOO 0% AVOCADO Y ARGAN 750 ML",
       "price": 3660,
       "tab": "algabo",
       "cat": "SH & AC 0%",
@@ -10272,13 +10272,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/tienda_algabo-sin-sal-x750-ml-acondicionador-acai-romero-antioxidante-7791274200595-70d1a54ea8be17ac1317764308638587-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "SHAMPOO 0% AVOCADO Y ARGAN 750 ML",
-      "stock": 15,
+      "stock": 28,
       "bulto": 15,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274196959",
-      "name": "ALGABO SH AGUAC Y ARGÁN EP 300",
+      "name": "REPUESTO SHAMPOO AGUACATE 300 ML",
       "price": 1690,
       "tab": "algabo",
       "cat": "SH & AC CLASICO",
@@ -10286,13 +10286,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-shampoo-x300-ml-ecopack-hidratacion-77912741969591-ce6e5d1baf349e5cdc16566222599462-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO AGUACATE 300 ML",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274196980",
-      "name": "ALGABO AC AGUAC Y ARGÁN EP 300",
+      "name": "REPUESTO ACOND. AGUACATE 300 ML",
       "price": 1690,
       "tab": "algabo",
       "cat": "SH & AC CLASICO",
@@ -10306,7 +10306,7 @@
     },
     {
       "ean": "7791274198151",
-      "name": "ALGABO SH AGUACATE Y ARGÁN 930",
+      "name": "SHAMPOO AGUACATE 930 ML",
       "price": 3140,
       "tab": "algabo",
       "cat": "SH & AC CLASICO",
@@ -10432,7 +10432,7 @@
     },
     {
       "ean": "7791274199493",
-      "name": "ALGABO AC MANZ Y MAGN EP 930",
+      "name": "REPUESTO ACOND. MANZANILLA 930 ML",
       "price": 2920,
       "tab": "algabo",
       "cat": "SH & AC CLASICO",
@@ -10440,7 +10440,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-natural-acondicionador-x930-ml-ecopack-brillo-77912741994931-465e1bbdfd2d4cc03a16897076891692-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. MANZANILLA 930 ML",
-      "stock": 12,
+      "stock": 25,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10474,7 +10474,7 @@
     },
     {
       "ean": "7791274198168",
-      "name": "ALGABO SH COCO Y LECHE 930",
+      "name": "SHAMPOO COCO Y LECHE 930 ML",
       "price": 3140,
       "tab": "algabo",
       "cat": "SH & AC CLASICO",
@@ -10488,7 +10488,7 @@
     },
     {
       "ean": "7791274198199",
-      "name": "ALGABO AC COCO Y LECHE 930",
+      "name": "ACONDICIONADOR COCO Y LECHE 930 ML",
       "price": 3140,
       "tab": "algabo",
       "cat": "SH & AC CLASICO",
@@ -10684,7 +10684,7 @@
     },
     {
       "ean": "7791274197857",
-      "name": "VAIS PERF TELA SUAVE BRISA 250",
+      "name": "PERF. TEXTIL SUAVE BRISA 250 ML",
       "price": 3390,
       "tab": "vais",
       "cat": "PERFUMINAS",
@@ -10698,7 +10698,7 @@
     },
     {
       "ean": "7791274198779",
-      "name": "VAIS PERF CÁLIDA PRIM DP 250",
+      "name": "REPUESTO PERF. TEXTIL CALIDA PRIMAVERA 250 ML",
       "price": 2590,
       "tab": "vais",
       "cat": "PERFUMINAS",
@@ -10754,7 +10754,7 @@
     },
     {
       "ean": "7791274088780",
-      "name": "VAIS LIMPIAVIDRIOS GATILLO 500",
+      "name": "LIMPIAVIDRIOS CON GATILLO 500 ML",
       "price": 2920,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10762,13 +10762,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-gatillo-x500-ml-limpiador-liquido-vidrios-y-multiuso-7791274088780-bb4fdd590736b9886b17144949487443-480-0.webp",
       "brand": "VAIS",
       "catalogName": "LIMPIAVIDRIOS CON GATILLO 500 ML",
-      "stock": 12,
+      "stock": 16,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274200939",
-      "name": "VAIS LIMPIAVIDRIOS DP 500",
+      "name": "REPUESTO LIMPIAVIDRIOS 500 ML",
       "price": 1460,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10776,13 +10776,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-doypack-x500-ml-limpiador-liquido-vidrios-y-multiuso-7791274200939-b4d617644f4be93e2316963432716152-480-0.webp",
       "brand": "VAIS",
       "catalogName": "REPUESTO LIMPIAVIDRIOS 500 ML",
-      "stock": 20,
+      "stock": 3,
       "bulto": 20,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274200281",
-      "name": "VAIS LIMPIAVIDRIOS EP 900",
+      "name": "REPUESTO LIMPIAVIDRIOS 900 ML",
       "price": 2310,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10790,13 +10790,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-ecopack-x800-ml-limpiador-liquido-vidrios-y-multiuso-77912742002811-e012a6fb99e36e87a916759756490760-480-0.webp",
       "brand": "VAIS",
       "catalogName": "REPUESTO LIMPIAVIDRIOS 900 ML",
-      "stock": 12,
+      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274190360",
-      "name": "VAIS ANTIGRASA GATILLO 500",
+      "name": "ANTIGRASA CON GATILLO 500 ML",
       "price": 3080,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10804,13 +10804,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-gatillo-x500-ml-limpiador-liquido-antigrasa-7791274190360-20349bef5bb441f60d17144949826252-480-0.webp",
       "brand": "VAIS",
       "catalogName": "ANTIGRASA CON GATILLO 500 ML",
-      "stock": 12,
+      "stock": 31,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7791274200922",
-      "name": "VAIS ANTIGRASA DP 500",
+      "name": "REPUESTO ANTIGRASA 500 ML",
       "price": 1660,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10818,7 +10818,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-doypack-x500-ml-limpiador-liquido-antigrasa-7791274200922-7ae13639f868530dde16963427766369-480-0.webp",
       "brand": "VAIS",
       "catalogName": "REPUESTO ANTIGRASA 500 ML",
-      "stock": 20,
+      "stock": 16,
       "bulto": 20,
       "descuentoBulto": 3
     },
@@ -10838,7 +10838,7 @@
     },
     {
       "ean": "7791274200311",
-      "name": "VAIS BAÑO GATILLO 500",
+      "name": "LIMPIADOR DE BAÑO CON GATILLO 500 ML",
       "price": 3080,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10880,7 +10880,7 @@
     },
     {
       "ean": "7791274088995",
-      "name": "VAIS APRESTO GATILLO 500",
+      "name": "APRESTO CON GATILLO 500 ML",
       "price": 3690,
       "tab": "vais",
       "cat": "HOGAR",
@@ -10888,7 +10888,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/vais-gatillo-x500-ml-apresto-7791274088995-770c47312ac82d0e4216988655924709-480-0.webp",
       "brand": "VAIS",
       "catalogName": "APRESTO CON GATILLO 500 ML",
-      "stock": 12,
+      "stock": 15,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -10950,7 +10950,7 @@
     },
     {
       "ean": "7791274192661",
-      "name": "SALLY COLONIA 50",
+      "name": "COLONIA SALLY 50 ML",
       "price": 6310,
       "tab": "algabo",
       "cat": "KIDS",
@@ -10958,7 +10958,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/sally-unicornio-colonia-x50-77912741926611-9cf019a74c3684a12716028822165825-480-0.webp",
       "brand": "ALGABO",
       "catalogName": "COLONIA SALLY 50 ML",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11622,7 +11622,7 @@
     },
     {
       "ean": "7798356304134",
-      "name": "AROMATIZADOR AZAHARES 250 ML",
+      "name": "AZAHARES",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11630,13 +11630,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-azahares-b2e03cc11d94bd49e417930400992327-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "AZAHARES",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356304103",
-      "name": "AROMATIZADOR BURBUJAS DE JABÓN 250 ML",
+      "name": "BURBUJAS DE JABÓN",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11650,7 +11650,7 @@
     },
     {
       "ean": "7798356304288",
-      "name": "AROMATIZADOR DURAZNO MENDOCINO 250 ML",
+      "name": "DURAZNO MENDOCINO",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11658,13 +11658,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-durazno-mendocino-2c20d06765725a0f6817930401632006-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "DURAZNO MENDOCINO",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356304073",
-      "name": "AROMATIZADOR LAVANDA SÁNDALO 250 ML",
+      "name": "LAVANDA SÁNDALO",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11672,13 +11672,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-lavanda-y-sandalo-12d2c699a264d04c8717930401926227-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "LAVANDA SÁNDALO",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356304226",
-      "name": "AROMATIZADOR LIMÓN MANZANILLA 250 ML",
+      "name": "LIMÓN MANZANILLA",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11686,13 +11686,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-limon-y-manzanilla-48541bc13755a9204117930402095286-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "LIMÓN MANZANILLA",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356304202",
-      "name": "AROMATIZADOR MARINA 250 ML",
+      "name": "MARINA",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11700,13 +11700,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-marina-1ef78f4570b68c23b417930400559945-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "MARINA",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356304028",
-      "name": "AROMATIZADOR SUAVECHITO 250 ML",
+      "name": "SUAVECHITO",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11714,13 +11714,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-suavechito-899f29745706bfd70b17930401187454-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVECHITO",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356304011",
-      "name": "AROMATIZADOR SUAVIDAD FLORAL 250 ML",
+      "name": "SUAVIDAD FLORAL",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11728,7 +11728,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-suavidad-floral-0cc9bd49a53a40b16917930401431528-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVIDAD FLORAL",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11748,7 +11748,7 @@
     },
     {
       "ean": "7798356304059",
-      "name": "AROMATIZADOR VERBENA 250 ML",
+      "name": "VERBENA",
       "price": 3950,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL 250 ML",
@@ -11756,13 +11756,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_250-verbena-ff0390fc16b095fbe817930400763236-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "VERBENA",
-      "stock": 12,
+      "stock": 10,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356302024",
-      "name": "AROMATIZADOR ACQUA 500 ML",
+      "name": "ACQUA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11770,7 +11770,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-acqua-dcdf0e1a9dc45beb2017930393904463-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "ACQUA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11790,7 +11790,7 @@
     },
     {
       "ean": "7798356302017",
-      "name": "AROMATIZADOR AZAHARES 500 ML",
+      "name": "AZAHARES",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11804,7 +11804,7 @@
     },
     {
       "ean": "7798356302000",
-      "name": "AROMATIZADOR BURBUJAS DE JABÓN 500 ML",
+      "name": "BURBUJAS DE JABÓN",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11818,7 +11818,7 @@
     },
     {
       "ean": "7798356301997",
-      "name": "AROMATIZADOR DURAZNO MENDOCINO 500 ML",
+      "name": "COCO Y VAINILLA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11826,13 +11826,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-durazno-mendocino-edeb3f7258ead14ec817930394282628-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "DURAZNO MENDOCINO",
-      "stock": 10,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356302253",
-      "name": "AROMATIZADOR FLOR DE LOTO 500 ML",
+      "name": "FLOR DE LOTO",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11840,13 +11840,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-flor-de-loto-4c8029161820a0350a17930397066938-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLOR DE LOTO",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356301898",
-      "name": "AROMATIZADOR FLORES CÍTRICAS 500 ML",
+      "name": "FLORES CÍTRICAS",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11854,7 +11854,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-flores-citricas-a5eed0d4fb3f7e8ebc17930395526236-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLORES CÍTRICAS",
-      "stock": 12,
+      "stock": 8,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -11902,7 +11902,7 @@
     },
     {
       "ean": "7798356304301",
-      "name": "AROMATIZADOR LAVANDA SÁNDALO 500 ML",
+      "name": "LAVANDA SÁNDALO",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11910,13 +11910,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-lavanda-y-sandalo-f5e257cde98aa349c017930395910650-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "LAVANDA SÁNDALO",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356301973",
-      "name": "AROMATIZADOR LIMÓN MANZANILLA 500 ML",
+      "name": "LIMÓN MANZANILLA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11924,13 +11924,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-limon-y-manzanilla-1390ddf5a9a52b4f1617930395389598-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "LIMÓN MANZANILLA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356301911",
-      "name": "AROMATIZADOR MADERAS DE ORIENTE 500 ML",
+      "name": "MADERAS DE ORIENTE",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11944,7 +11944,7 @@
     },
     {
       "ean": "7798356301966",
-      "name": "AROMATIZADOR MARINA 500 ML",
+      "name": "MARINA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11958,7 +11958,7 @@
     },
     {
       "ean": "7798356302260",
-      "name": "AROMATIZADOR NARANJA PIMIENTA 500 ML",
+      "name": "NARANJA PIMIENTA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -11966,7 +11966,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-naranja-y-pimienta-32c983f6131da970d917930394928341-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "NARANJA PIMIENTA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12000,7 +12000,7 @@
     },
     {
       "ean": "7798356301942",
-      "name": "AROMATIZADOR SUAVECHITO 500 ML",
+      "name": "SUAVECHITO",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -12008,13 +12008,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-suavechito-eb25f7213dd0bd783c17930392879436-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVECHITO",
-      "stock": 12,
+      "stock": 38,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356301935",
-      "name": "AROMATIZADOR SUAVIDAD FLORAL 500 ML",
+      "name": "SUAVIDAD FLORAL",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -12022,7 +12022,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-suavidad-floral-83489c0230fc78f25617930395224333-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVIDAD FLORAL",
-      "stock": 12,
+      "stock": 14,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12056,7 +12056,7 @@
     },
     {
       "ean": "7798356303335",
-      "name": "AROMATIZADOR VAINILLA Y ALMENDRA 500 ML",
+      "name": "VAINILLA Y ALMENDRA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -12064,13 +12064,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-vainilla-y-almendra-fe95b5ffada2d2a2d317930394661997-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "VAINILLA Y ALMENDRA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356301980",
-      "name": "AROMATIZADOR VERBENA 500 ML",
+      "name": "VERBENA",
       "price": 7150,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 500 ML",
@@ -12078,7 +12078,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizadores_500-verbena-cb9451d4c79a6d5f5517930393079400-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "VERBENA",
-      "stock": 12,
+      "stock": 9,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12308,7 +12308,7 @@
     },
     {
       "ean": "7798356303625",
-      "name": "AROMATIZADOR PISTACHO 120 ML",
+      "name": "PISTACHO",
       "price": 2500,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL HOGAR 120 ML",
@@ -12420,7 +12420,7 @@
     },
     {
       "ean": "7798356303113",
-      "name": "AEROSOLES ACQUA 270 ML",
+      "name": "ACQUA",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12428,7 +12428,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_acqua-35e7da891b06340c7417930413021897-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "ACQUA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12462,7 +12462,7 @@
     },
     {
       "ean": "7798356302079",
-      "name": "AEROSOLES AZAHARES 270 ML",
+      "name": "AZAHARES",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12470,13 +12470,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_azahares-4297a02b757b20f53017930414068065-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "AZAHARES",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356303120",
-      "name": "AEROSOLES BURBUJAS JABON 270 ML",
+      "name": "BURBUJAS JABON",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12504,7 +12504,7 @@
     },
     {
       "ean": "7798356303663",
-      "name": "AEROSOLES COCO Y VAINILLA 270 ML",
+      "name": "COCO Y VAINILLA",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12512,7 +12512,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_coco-y-vainilla-f68a51897174bbb08317930414631801-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "COCO Y VAINILLA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12644,7 +12644,7 @@
     },
     {
       "ean": "7798356303144",
-      "name": "AEROSOLES MARINA 270 ML",
+      "name": "MARINA",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12652,13 +12652,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_marina-d878bba544cd781d5b17930412544255-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "MARINA",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356302789",
-      "name": "AEROSOLES NARANJA PIMIENT 270 ML",
+      "name": "NARANJA PIMIENT",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12666,7 +12666,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_naranja-y-pimienta-b47a9e5a42af94388217930415626652-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "NARANJA PIMIENT",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12700,7 +12700,7 @@
     },
     {
       "ean": "7798356302055",
-      "name": "AEROSOLES SUAVECHITO 270 ML",
+      "name": "SUAVECHITO",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12708,7 +12708,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_suavechito-0fbf365afae6911c4217930413738296-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVECHITO",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -12756,7 +12756,7 @@
     },
     {
       "ean": "7798356303397",
-      "name": "AEROSOLES VAINILLA ALMEND 270 ML",
+      "name": "VAINILLA ALMEND",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -12764,13 +12764,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosoles_vainilla-y-almendra-696199763b10c22e1017930415043964-1024-1024.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "VAINILLA ALMEND",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356302031",
-      "name": "AEROSOLES VERBENA 270 ML",
+      "name": "VERBENA",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -13205,7 +13205,7 @@
     },
     {
       "ean": "7798356302314",
-      "name": "AROMATIZADOR ARRORRÓ 500 ML",
+      "name": "ARRORRÓ",
       "price": 8350,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL BEBE 500 ML",
@@ -13230,7 +13230,7 @@
     },
     {
       "ean": "7798356302291",
-      "name": "AROMATIZADOR DEDITOS 500 ML",
+      "name": "DEDITOS",
       "price": 8350,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL BEBE 500 ML",
@@ -13238,13 +13238,13 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-deditos-e0149e32ed69ba49e817231318647680-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "DEDITOS",
-      "stock": 12,
+      "stock": 1,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798356302307",
-      "name": "AROMATIZADOR LEFRANCE 500 ML",
+      "name": "LEFRANCE",
       "price": 8350,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL BEBE 500 ML",
@@ -13252,7 +13252,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-lefrance-e82b0de7f0058ebaab17231318865943-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "LEFRANCE",
-      "stock": 12,
+      "stock": 16,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -13291,7 +13291,7 @@
     },
     {
       "ean": "7798356302734",
-      "name": "AEROSOLES LEFRANCE 270 ML",
+      "name": "LEFRANCE",
       "price": 5200,
       "tab": "sandra-marzzan",
       "cat": "AEROSOL",
@@ -13299,7 +13299,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosol-lefrance-3d29950f5d5db36f4417231327814232-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "LEFRANCE",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -13382,7 +13382,7 @@
     },
     {
       "ean": "7798356302352",
-      "name": "AROMATIZADOR SUEÑITOS 500 ML",
+      "name": "SUEÑITOS",
       "price": 8350,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL KIDS 500 ML",
@@ -13390,7 +13390,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-suenitos-b4b2968fc9e8feca5417231317764771-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUEÑITOS",
-      "stock": 12,
+      "stock": 6,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -14089,7 +14089,7 @@
     },
     {
       "ean": "7798356303540",
-      "name": "AROMATIZADOR 212 - 01F 500 ML",
+      "name": "212 - 01F",
       "price": 8350,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL PERFUM 500 ML",
@@ -14097,7 +14097,7 @@
       "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/v0050097-0054-0500_aromatizador_212_-_01f_500_ml-33ac09950101ccccb017508539623950-480-0.webp",
       "brand": "SANDRA MARZZAN",
       "catalogName": "212 - 01F",
-      "stock": 12,
+      "stock": 4,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -14180,7 +14180,7 @@
     },
     {
       "ean": "7798356300747",
-      "name": "AROMATIZADOR CHER_78F 500 ML",
+      "name": "CHER_78F",
       "price": 8350,
       "tab": "sandra-marzzan",
       "cat": "TEXTIL PERFUM 500 ML",
@@ -14481,6 +14481,376 @@
       "stock": 12,
       "bulto": 12,
       "descuentoBulto": 3
+    },
+    {
+      "ean": "7.791.274.200.656,00",
+      "name": "REPUESTO OLEO CALCAREO 900 ML",
+      "price": 8160,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x900-ml-7791274200656-f2041f62718583bb5417183825576397-480-0.webp",
+      "brand": "ALGABO",
+      "catalogName": "REPUESTO OLEO CALCAREO 900 ML",
+      "stock": 3,
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.791.274.200.649,00",
+      "name": "REPUESTO OLEO CALCAREO 500 ML",
+      "price": 5080,
+      "tab": "algabo",
+      "cat": "BEBE",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-baby-oleo-calcareo-x500-ml-recarga-economica-7791274200649-254bdeab073acc279817183824684025-480-0.webp",
+      "brand": "ALGABO",
+      "catalogName": "REPUESTO OLEO CALCAREO 500 ML",
+      "stock": 6,
+      "bulto": 8,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.791.274.002.649,00",
+      "name": "COLONIA EN SPRAY CAPITAN AMERICA 125 ML",
+      "price": 6460,
+      "tab": "algabo",
+      "cat": "KIDS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/avengers-body-splash-x125-ironman-77912740026321-7c1b2d6cc67ab7ecff16365599183250-480-0.webp",
+      "brand": "ALGABO",
+      "catalogName": "COLONIA EN SPRAY CAPITAN AMERICA 125 ML",
+      "stock": 2,
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.791.274.002.632,00",
+      "name": "COLONIA EN SPRAY IRON MAN 125 ML",
+      "price": 6460,
+      "tab": "algabo",
+      "cat": "KIDS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/avengers-body-splash-x125-capitan-america-77912740026491-e35f13abc0a40df58d16365602614517-480-0.webp",
+      "brand": "ALGABO",
+      "catalogName": "COLONIA EN SPRAY IRON MAN 125 ML",
+      "stock": 1,
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.791.274.199.813,00",
+      "name": "COLONIA EN SPRAY ZOMBIES 125 ML",
+      "price": 6160,
+      "tab": "algabo",
+      "cat": "KIDS",
+      "subcat": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/ultra-zombies-body-splash-x125-estuche1-3d4e67a5d6a4e2049e16188355117478-480-0.webp",
+      "brand": "ALGABO",
+      "catalogName": "COLONIA EN SPRAY ZOMBIES 125 ML",
+      "stock": 6,
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7790000000904",
+      "name": "ALGABO CARE ESPONJA FLOR",
+      "price": null,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "ALGABO CARE ESPONJA FLOR",
+      "stock": 24
+    },
+    {
+      "ean": "7798175718051",
+      "name": "EAU DE PARFUM BOOS INTENSE 90 ML",
+      "price": 45800,
+      "tab": "algabo",
+      "cat": "PERFUMES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "EAU DE PARFUM BOOS INTENSE 90 ML",
+      "stock": 6
+    },
+    {
+      "ean": "7798332023189",
+      "name": "TASCANI DEO ACTITUD",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "TASCANI DEO ACTITUD",
+      "stock": 16
+    },
+    {
+      "ean": "7798332020850",
+      "name": "TASCANI DEO SINGULAR",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "TASCANI DEO SINGULAR",
+      "stock": 13
+    },
+    {
+      "ean": "7798175719928",
+      "name": "TASCANI DEO UNICO",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "TASCANI DEO UNICO",
+      "stock": 17
+    },
+    {
+      "ean": "7798175718860",
+      "name": "TASCANI DEO DISTINTO",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "TASCANI DEO DISTINTO",
+      "stock": 16
+    },
+    {
+      "ean": "7798175714732",
+      "name": "DEO BOOS FOREVER 123 ML",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BOOS FOREVER 123 ML",
+      "stock": 4
+    },
+    {
+      "ean": "7798175719874",
+      "name": "DEO BOOS BLACK EXTREME",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BOOS BLACK EXTREME",
+      "stock": 1
+    },
+    {
+      "ean": "7798175718426",
+      "name": "DEO BOOS INTENSE WOMAN 123 ML",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BOOS INTENSE WOMAN 123 ML",
+      "stock": 2
+    },
+    {
+      "ean": "7798175714749",
+      "name": "DEO BOOS RAINBOW 123 ML",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BOOS RAINBOW 123 ML",
+      "stock": 1
+    },
+    {
+      "ean": "7798175718877",
+      "name": "DEO BOOS INTENSE WOMAN LUMIERE 127 ML",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BOOS INTENSE WOMAN LUMIERE 127 ML",
+      "stock": 3
+    },
+    {
+      "ean": "7798332024124",
+      "name": "DEO BOOS INTENSE ATTRACTION",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BOOS INTENSE ATTRACTION",
+      "stock": 10
+    },
+    {
+      "ean": "7798332022588",
+      "name": "MUA DEO STAY WILD DEO MUA",
+      "price": 3700,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "MUA DEO STAY WILD DEO MUA",
+      "stock": 4
+    },
+    {
+      "ean": "7798332022564",
+      "name": "MUA DEO STAY TRUE DEO MUA",
+      "price": 3700,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "MUA DEO STAY TRUE DEO MUA",
+      "stock": 4
+    },
+    {
+      "ean": "7798332022571",
+      "name": "MUA DEO STAY REAL  DEO MUA",
+      "price": 3700,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "MUA DEO STAY REAL  DEO MUA",
+      "stock": 4
+    },
+    {
+      "ean": "7798332022397",
+      "name": "MUA STAY TRUE AMARILLO 50ML",
+      "price": 12500,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "MUA STAY TRUE AMARILLO 50ML",
+      "stock": 1
+    },
+    {
+      "ean": "7798332023141",
+      "name": "DEO SHINE WOMAN",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO SHINE WOMAN",
+      "stock": 33
+    },
+    {
+      "ean": "7798045219299",
+      "name": "STONE DEO BLACK 150 ML",
+      "price": 4400,
+      "tab": "algabo",
+      "cat": "PERFUMES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "STONE DEO BLACK 150 ML",
+      "stock": 23
+    },
+    {
+      "ean": "7798045219282",
+      "name": "STONE DEO BLUE 150 ML",
+      "price": 4400,
+      "tab": "algabo",
+      "cat": "PERFUMES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "STONE DEO BLUE 150 ML",
+      "stock": 20
+    },
+    {
+      "ean": "7798175711632",
+      "name": "DEO ACQUA 150ML",
+      "price": 4500,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO ACQUA 150ML",
+      "stock": 1
+    },
+    {
+      "ean": "7798175713513",
+      "name": "DEO RED 150ML",
+      "price": 4500,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO RED 150ML",
+      "stock": 1
+    },
+    {
+      "ean": "7798175719829",
+      "name": "DEO INTENSE BLUE 150 ML",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO INTENSE BLUE 150 ML",
+      "stock": 4
+    },
+    {
+      "ean": "7798175711649",
+      "name": "DEO BLACK 150ML",
+      "price": 4500,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO BLACK 150ML",
+      "stock": 1
+    },
+    {
+      "ean": "7798175718037",
+      "name": "DEO INTENSE 150 ML",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO INTENSE 150 ML",
+      "stock": 7
+    },
+    {
+      "ean": "7798332024131",
+      "name": "DEO INTENSE ATTRACTION MASCULINO",
+      "price": 5600,
+      "tab": "algabo",
+      "cat": "DESODORANTES",
+      "subcat": "",
+      "img": "",
+      "brand": "ALGABO",
+      "catalogName": "DEO INTENSE ATTRACTION MASCULINO",
+      "stock": 7
     }
   ]
 }
