@@ -15139,6 +15139,19 @@
       "brand": "SAPHIRUS",
       "stock": 5,
       "bulto": 12
+    },
+    {
+      "ean": "7798444554731",
+      "name": "NOCTURNAL SHADOWN",
+      "desc": "",
+      "price": 3820,
+      "tab": "saphirus",
+      "cat": "TEXTIL 250 ML",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2Wv4XcBjQzS2QQkmDznXf3dg6nHpsqmDAdLD9U5gTw&s=10",
+      "brand": "SAPHIRUS",
+      "stock": 12,
+      "bulto": 12
     }
   ]
 }
