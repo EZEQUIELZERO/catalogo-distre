@@ -74,5 +74,22 @@
       "headerBg": "#ffffff",
       "btnCart": "#0008ff"
     }
+  },
+  "remito": {
+    "title": "",
+    "subtitle": "",
+    "footerNote": "",
+    "pageMode": "auto",
+    "fontSize": "normal",
+    "headerBg": "#7f7f7f",
+    "subHeaderBg": "#b7b7b7",
+    "headerText": "#111111",
+    "showMeta": false,
+    "showClientAddr": false,
+    "showUnitPrice": true,
+    "showEan": false,
+    "showEmptyReturns": false,
+    "showSignature": false,
+    "showCutLine": true
   }
 }
