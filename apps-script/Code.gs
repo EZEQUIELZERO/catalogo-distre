@@ -51,7 +51,7 @@ const HEADERS = {
 function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('⚙️ Distre')
-    .addItem('Preparar hojas y cuentas corrientes', 'setupSheets')
+    .addItem('Preparar hojas y cuentas corrientes', 'setupSheetsFromMenu')
     .addToUi();
 }
 
@@ -120,6 +120,9 @@ function ensureAdminSheet_(ss, name, headers) {
   if (!sh) {
     sh = ss.insertSheet(name);
   }
+  if (sh.getMaxColumns() < headers.length) {
+    sh.insertColumnsAfter(sh.getMaxColumns(), headers.length - sh.getMaxColumns());
+  }
   if (sh.getLastRow() === 0) {
     sh.getRange(1, 1, 1, headers.length).setValues([headers]);
     styleHeaderRow_(sh, 1, headers.length, '#1e3a5f');
@@ -182,15 +185,19 @@ function getMaxClientCode_(vals, headerRow) {
   return maxCode;
 }
 
-function applyClientRowFormulas_(sheet, rowNum) {
+function buildClientRowFormulas_(rowNum) {
   const r = rowNum;
-  sheet.getRange(r, 18, 1, 4).setFormulas([[
+  return [
     '=IF(A' + r + '="",0,SUMIF(VENTAS!$D:$D,A' + r + ',VENTAS!$H:$H))',
     '=IF(A' + r + '="",0,SUMIF(COBROS!$C:$C,A' + r + ',COBROS!$F:$F))',
     '=R' + r + '-S' + r,
     '=IF(T' + r + '>0,"CON DEUDA",IF(T' + r + '<0,"A FAVOR","AL DIA"))'
-  ]]);
-  sheet.getRange(r, 18, 1, 3).setNumberFormat('$ #,##0');
+  ];
+}
+
+function applyClientRowFormulas_(sheet, rowNum) {
+  sheet.getRange(rowNum, 18, 1, 4).setFormulas([buildClientRowFormulas_(rowNum)]);
+  sheet.getRange(rowNum, 18, 1, 3).setNumberFormat('$ #,##0');
 }
 
 function ensureSheets_(applyFormulas) {
@@ -211,6 +218,10 @@ function ensureSheets_(applyFormulas) {
   ensureAdminSheet_(ss, SHEET_NAMES.MOVIMIENTOS_STOCK, HEADERS.MOVIMIENTOS_STOCK);
   ensureAdminSheet_(ss, SHEET_NAMES.STOCK_ACTUAL, HEADERS.STOCK_ACTUAL);
 
+  if (clientsSh.getMaxColumns() < 21) {
+    clientsSh.insertColumnsAfter(clientsSh.getMaxColumns(), 21 - clientsSh.getMaxColumns());
+  }
+
   const headerRow = findClientsHeaderRow_(clientsSh);
   clientsSh.getRange(headerRow, 18, 1, 4)
     .setValues([HEADERS.CLIENTES_CTACTE])
@@ -221,19 +232,36 @@ function ensureSheets_(applyFormulas) {
   let clientsUpdated = 0;
   if (applyFormulas) {
     const lastClientRow = findLastClientRow_(clientsSh, headerRow);
-    if (lastClientRow > headerRow) {
+    const numRows = lastClientRow - headerRow;
+    if (numRows > 0) {
       const vals = clientsSh.getRange(1, 1, lastClientRow, 6).getValues();
       let maxCode = getMaxClientCode_(vals, headerRow);
+      const colAValues = [];
+      const formulasGrid = [];
+      let codesChanged = false;
       for (let r = headerRow; r < vals.length; r++) {
-        if (!isRealClientRow_(vals[r])) continue;
         const rowNum = r + 1;
-        if (!String(vals[r][0] || '').trim()) {
-          maxCode += 1;
-          clientsSh.getRange(rowNum, 1).setValue(maxCode);
+        const curCode = vals[r][0];
+        if (isRealClientRow_(vals[r])) {
+          if (!String(curCode || '').trim()) {
+            maxCode += 1;
+            colAValues.push([maxCode]);
+            codesChanged = true;
+          } else {
+            colAValues.push([curCode]);
+          }
+          formulasGrid.push(buildClientRowFormulas_(rowNum));
+          clientsUpdated += 1;
+        } else {
+          colAValues.push([curCode]);
+          formulasGrid.push(['', '', '', '']);
         }
-        applyClientRowFormulas_(clientsSh, rowNum);
-        clientsUpdated += 1;
       }
+      if (codesChanged) {
+        clientsSh.getRange(headerRow + 1, 1, numRows, 1).setValues(colAValues);
+      }
+      clientsSh.getRange(headerRow + 1, 18, numRows, 4).setFormulas(formulasGrid);
+      clientsSh.getRange(headerRow + 1, 18, numRows, 3).setNumberFormat('$ #,##0');
     }
   }
   return {
@@ -245,16 +273,21 @@ function ensureSheets_(applyFormulas) {
   };
 }
 
-/** Se puede ejecutar manualmente desde Apps Script o desde el menú ⚙️ Distre */
+/** Se puede ejecutar manualmente desde Apps Script o desde la web (sin cartel bloqueante) */
 function setupSheets() {
   const res = ensureSheets_(true);
-  try {
-    SpreadsheetApp.getUi().alert(
-      'Listo ✅\nSe prepararon las hojas administrativas y ' +
-      res.clientsUpdated + ' cuentas corrientes en CLIENTES.'
-    );
-  } catch (e) {}
+  Logger.log('setupSheets OK: ' + res.clientsUpdated + ' clientes actualizados.');
   return { ok: true, clientsUpdated: res.clientsUpdated, sheets: res.sheets };
+}
+
+/** Solo para ejecutar desde el menú ⚙️ Distre dentro de Google Sheets */
+function setupSheetsFromMenu() {
+  const res = setupSheets();
+  SpreadsheetApp.getUi().alert(
+    'Listo ✅\nSe prepararon las hojas administrativas y ' +
+    res.clientsUpdated + ' cuentas corrientes en CLIENTES.'
+  );
+  return res;
 }
 
 function normName_(v) {

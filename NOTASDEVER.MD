@@ -543,3 +543,13 @@ Fecha: 2026-11-26
 - **Confirmación de entrega y cobro (`#deliveryOverlay`)**:
   - Al entregar un pedido listo, permite registrar pago total, cobro parcial con fecha acordada para el saldo o cuenta corriente con fecha acordada, impactando en `COBROS`, `VENTAS` y el saldo del cliente.
 Archivos: apps-script/Code.gs, apps-script/INSTRUCCIONES.md, index.html, NOTASDEVER.MD
+
+### #041 - Fix bloqueo al ejecutar `setupSheets` en Google Apps Script
+Fecha: 2026-11-26
+- **Eliminación de bloqueo por alerta UI en `setupSheets()`**:
+  - Al ejecutar `setupSheets` desde el editor de Apps Script, `SpreadsheetApp.getUi().alert(...)` abría un diálogo modal oculto en la pestaña de la planilla esperando confirmación y dejaba la ejecución "cargando" indefinidamente. Se quitó el `alert()` de `setupSheets()` (ahora registra con `Logger.log`) y se movió a `setupSheetsFromMenu()`, usado únicamente por el menú `⚙️ Distre`.
+- **Escritura en lote de fórmulas y códigos en `ensureSheets_()`**:
+  - Reemplazado el bucle fila-por-fila por un único `setFormulas(formulasGrid)`, `setNumberFormat('$ #,##0')` y `setValues(colAValues)` (solo si faltan códigos), reduciendo cientos de llamadas RPC a 2–3 operaciones rápidas.
+- **Ampliación automática de columnas**:
+  - `ensureAdminSheet_` y `ensureSheets_` amplían automáticamente columnas (`insertColumnsAfter`) si la hoja tiene menos columnas que los encabezados requeridos (`20` para `VENTAS` o `21` para `CLIENTES` con cuentas corrientes `R..U`).
+Archivos: apps-script/Code.gs, NOTASDEVER.MD
