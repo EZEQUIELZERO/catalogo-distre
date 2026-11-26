@@ -1700,6 +1700,7 @@
           <div class="dep-ws-actions">
             <button type="button" class="btn btn-gray btn-auto" id="depSavePartialBtn">⏳ Guardar parcial (en espera)</button>
             <button type="button" class="btn btn-close btn-auto" id="depPrintRemitoBtn">🖨️ Vista previa / Imprimir Remito</button>
+            <button type="button" class="btn btn-gold btn-auto" id="depExportOrderBtn">📊 Exportar pedido (Excel)</button>
             <button type="button" class="btn btn-danger btn-auto" id="depCancelOrderBtn">❌ Cancelar pedido</button>
             <button type="button" class="btn btn-whatsapp btn-auto" id="depFinishOrderBtn">✅ Finalizar armado (Pedido listo)</button>
           </div>
@@ -2208,6 +2209,7 @@
             <option value="full">Hoja A4 completa / Multipágina</option>
           </select>
           <button type="button" class="btn btn-gold btn-auto" id="remitoOpenCfgFromPrevBtn" style="margin:0;padding:8px 12px;font-size:.8rem;">🎨 Personalizar</button>
+          <button type="button" class="btn btn-gold btn-auto" id="remitoExportExcelBtn" style="margin:0;padding:8px 12px;font-size:.8rem;">📊 Exportar Excel</button>
           <button type="button" class="btn btn-whatsapp btn-auto" id="remitoDoPrintBtn" style="margin:0;padding:8px 14px;font-size:.82rem;">🖨️ Imprimir / PDF</button>
         </div>
       </div>
@@ -7299,10 +7301,16 @@ document.getElementById('depPrintRemitoBtn')?.addEventListener('click', () => {
   recomputeDraftOrderTotals(activeDepOrder);
   openRemitoPreviewModal(activeDepOrder);
 });
+document.getElementById('depExportOrderBtn')?.addEventListener('click', () => {
+  exportDepOrderToExcel(activeDepOrder);
+});
 
 document.getElementById('remitoPrevClose')?.addEventListener('click', () => closeOverlayEl(remitoPreviewOverlay));
 document.getElementById('remitoQuickMode')?.addEventListener('change', renderRemitoPreview);
 document.getElementById('remitoDoPrintBtn')?.addEventListener('click', printRemitoOrder);
+document.getElementById('remitoExportExcelBtn')?.addEventListener('click', () => {
+  exportDepOrderToExcel(remitoTargetOrder);
+});
 document.getElementById('remitoOpenCfgFromPrevBtn')?.addEventListener('click', openRemitoConfigModal);
 
 ['rcHeaderBg','rcSubHeaderBg','rcHeaderText'].forEach(id => {
@@ -8491,8 +8499,6 @@ function buildProductsXlsxBytes(records, sheetTitle = 'Productos'){
   });
 
   const lastRow = Math.max(1, records.length + 1);
-  const safeSheet = sanitizeXmlText(sheetTitle || 'Productos').replace(/[\[\]:*?\/\\]/g, ' ').trim().slice(0, 31) || 'Productos';
-
   const sheetXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
     + '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
     + '<sheetViews><sheetView tabSelected="1" workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>'
@@ -8514,33 +8520,39 @@ function buildProductsXlsxBytes(records, sheetTitle = 'Productos'){
     + `<autoFilter ref="A1:L${lastRow}"/>`
     + '</worksheet>';
 
-  const stylesXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
-    + '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
-    + '<numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0"/></numFmts>'
-    + '<fonts count="2">'
-    + '<font><sz val="11"/><color rgb="FF111827"/><name val="Calibri"/></font>'
-    + '<font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>'
-    + '</fonts>'
-    + '<fills count="3">'
-    + '<fill><patternFill patternType="none"/></fill>'
-    + '<fill><patternFill patternType="gray125"/></fill>'
-    + '<fill><patternFill patternType="solid"><fgColor rgb="FF1E3A5F"/></patternFill></fill>'
-    + '</fills>'
-    + '<borders count="2">'
-    + '<border><left/><right/><top/><bottom/><diagonal/></border>'
-    + '<border><left style="thin"><color rgb="FFD0D7DE"/></left><right style="thin"><color rgb="FFD0D7DE"/></right><top style="thin"><color rgb="FFD0D7DE"/></top><bottom style="thin"><color rgb="FFD0D7DE"/></bottom><diagonal/></border>'
-    + '</borders>'
-    + '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'
-    + '<cellXfs count="5">'
-    + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1"/>'
-    + '<xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>'
-    + '<xf numFmtId="1" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
-    + '<xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
-    + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
-    + '</cellXfs>'
-    + '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'
-    + '</styleSheet>';
+  return buildSimpleXlsxPackage(sheetXml, sheetTitle || 'Productos');
+}
 
+const DEFAULT_TABLE_XLSX_STYLES_XML = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+  + '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+  + '<numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0"/></numFmts>'
+  + '<fonts count="2">'
+  + '<font><sz val="11"/><color rgb="FF111827"/><name val="Calibri"/></font>'
+  + '<font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>'
+  + '</fonts>'
+  + '<fills count="3">'
+  + '<fill><patternFill patternType="none"/></fill>'
+  + '<fill><patternFill patternType="gray125"/></fill>'
+  + '<fill><patternFill patternType="solid"><fgColor rgb="FF1E3A5F"/></patternFill></fill>'
+  + '</fills>'
+  + '<borders count="2">'
+  + '<border><left/><right/><top/><bottom/><diagonal/></border>'
+  + '<border><left style="thin"><color rgb="FFD0D7DE"/></left><right style="thin"><color rgb="FFD0D7DE"/></right><top style="thin"><color rgb="FFD0D7DE"/></top><bottom style="thin"><color rgb="FFD0D7DE"/></bottom><diagonal/></border>'
+  + '</borders>'
+  + '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'
+  + '<cellXfs count="5">'
+  + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1"/>'
+  + '<xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>'
+  + '<xf numFmtId="1" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+  + '<xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+  + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+  + '</cellXfs>'
+  + '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'
+  + '</styleSheet>';
+
+function buildSimpleXlsxPackage(sheetXml, sheetTitle = 'Hoja1', stylesXml = DEFAULT_TABLE_XLSX_STYLES_XML){
+  const enc = new TextEncoder();
+  const safeSheet = sanitizeXmlText(sheetTitle || 'Hoja1').replace(/[\[\]:*?\/\\]/g, ' ').trim().slice(0, 31) || 'Hoja1';
   const contentTypesXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
     + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
     + '<Default Extension="rels" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.relationships+xml"/>'
@@ -8549,23 +8561,19 @@ function buildProductsXlsxBytes(records, sheetTitle = 'Productos'){
     + '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'
     + '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'
     + '</Types>';
-
   const relsXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
     + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
     + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>'
     + '</Relationships>';
-
   const workbookXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
     + '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
     + `<sheets><sheet name="${xmlEscape(safeSheet)}" sheetId="1" r:id="rId1"/></sheets>`
     + '</workbook>';
-
   const workbookRelsXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
     + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
     + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>'
     + '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
     + '</Relationships>';
-
   return buildZipBytes([
     { name: '[Content_Types].xml', data: enc.encode(contentTypesXml) },
     { name: '_rels/.rels', data: enc.encode(relsXml) },
@@ -8574,6 +8582,92 @@ function buildProductsXlsxBytes(records, sheetTitle = 'Productos'){
     { name: 'xl/styles.xml', data: enc.encode(stylesXml) },
     { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml) }
   ]);
+}
+
+const DEP_ORDER_EXPORT_HEADERS = ['CODIGO_EAN', 'DESCRIPCION', 'CANTIDAD', 'PRECIO'];
+
+function collectDepOrderExportRows(order){
+  if(!order || !Array.isArray(order.items)) return { rows: [], usedOrderedFallback: false };
+  const mapItem = (it, qty) => ({
+    ean: String(it.ean || '').trim(),
+    descripcion: String(it.descripcion || it.name || '').trim(),
+    cantidad: qty,
+    precio: (typeof it.precioUnitario === 'number' && Number.isFinite(it.precioUnitario)) ? it.precioUnitario : 0
+  });
+  const packed = order.items
+    .filter(it => (Number(it.cantArmada) || 0) > 0)
+    .map(it => mapItem(it, Math.round(Number(it.cantArmada) || 0)));
+  if(packed.length > 0) return { rows: packed, usedOrderedFallback: false };
+
+  const ordered = order.items
+    .filter(it => (Number(it.cantPedida ?? it.cantidad) || 0) > 0)
+    .map(it => mapItem(it, Math.round(Number(it.cantPedida ?? it.cantidad) || 0)));
+  return { rows: ordered, usedOrderedFallback: true };
+}
+
+function buildDepOrderXlsxBytes(rows, sheetTitle = 'Pedido'){
+  const strCell = (ref, text, style = 0) =>
+    `<c r="${ref}" t="inlineStr" s="${style}"><is><t xml:space="preserve">${xmlEscape(sanitizeXmlText(text))}</t></is></c>`;
+  const numCell = (ref, val, style = 2) =>
+    `<c r="${ref}" s="${style}"><v>${Number.isFinite(Number(val)) ? Number(val) : 0}</v></c>`;
+
+  const colsLetters = ['A','B','C','D'];
+  const sheetRows = [];
+  sheetRows.push(
+    `<row r="1" ht="22" customHeight="1">${DEP_ORDER_EXPORT_HEADERS.map((h, idx) => strCell(colsLetters[idx] + '1', h, 1)).join('')}</row>`
+  );
+
+  rows.forEach((rec, i) => {
+    const r = i + 2;
+    sheetRows.push(
+      `<row r="${r}">`
+      + strCell('A' + r, rec.ean, 0)
+      + strCell('B' + r, rec.descripcion, 0)
+      + numCell('C' + r, rec.cantidad, 2)
+      + numCell('D' + r, rec.precio, 3)
+      + `</row>`
+    );
+  });
+
+  const lastRow = Math.max(1, rows.length + 1);
+  const sheetXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+    + '<sheetViews><sheetView tabSelected="1" workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>'
+    + '<cols>'
+    + '<col min="1" max="1" width="18" customWidth="1"/>'
+    + '<col min="2" max="2" width="48" customWidth="1"/>'
+    + '<col min="3" max="3" width="12" customWidth="1"/>'
+    + '<col min="4" max="4" width="14" customWidth="1"/>'
+    + '</cols>'
+    + '<sheetData>' + sheetRows.join('') + '</sheetData>'
+    + `<autoFilter ref="A1:D${lastRow}"/>`
+    + '</worksheet>';
+
+  return buildSimpleXlsxPackage(sheetXml, sheetTitle || 'Pedido');
+}
+
+function exportDepOrderToExcel(order){
+  if(!order) return { count: 0, filename: '' };
+  if(order === activeDepOrder && typeof recomputeDraftOrderTotals === 'function'){
+    recomputeDraftOrderTotals(order);
+  }
+  const { rows, usedOrderedFallback } = collectDepOrderExportRows(order);
+  if(rows.length === 0){
+    showToast('No hay productos con cantidad para exportar en este pedido');
+    return { count: 0, filename: '' };
+  }
+  const clientSlug = String(order.cliente || 'cliente')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 28) || 'cliente';
+  const idSlug = String(order.saleId || 'borrador').replace(/[^a-z0-9_-]/gi, '-');
+  const today = new Date().toISOString().slice(0, 10);
+  const filename = `pedido-${clientSlug}-${idSlug}-${today}.xlsx`;
+  const bytes = buildDepOrderXlsxBytes(rows, `Pedido ${order.saleId || ''}`.trim());
+  triggerBlobDownload(bytes, filename, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+  const qtyNote = usedOrderedFallback ? ' (cantidades pedidas)' : '';
+  showToast(`📊 Pedido exportado (${rows.length} producto/s${qtyNote}) → ${filename}`);
+  return { count: rows.length, filename };
 }
 
 function exportProductsToExcel(scope = 'catalog', catalogId = activeCatalog, explicitTabId = null){

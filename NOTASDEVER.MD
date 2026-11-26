@@ -597,3 +597,12 @@ Fecha: 2026-11-26
 - **Backend Google Apps Script (`apps-script/Code.gs`)**:
   - `handleRegisterSale_` acepta campos opcionales `estadoDeposito` (`PARA_ARMAR`, `EN_ESPERA`, `LISTO`), `devoluciones`, `totalDevoluciones` y cantidades `cantPedida`/`cantArmada`/`cantDescontada` por ítem, manteniendo 100% de compatibilidad con las ventas desde el carrito.
 Archivos: apps-script/Code.gs, index.html, NOTASDEVER.MD
+
+### #046 - Exportar pedido desde Depósito a Excel (CODIGO_EAN, DESCRIPCION, CANTIDAD, PRECIO)
+Fecha: 2026-11-26
+- **Botón `📊 Exportar pedido (Excel)` junto a Imprimir Remito**:
+  - Agregado `#depExportOrderBtn` al lado de `#depPrintRemitoBtn` dentro de la mesa de armado (`#depWorkspaceView .dep-ws-actions`), y `#remitoExportExcelBtn` junto a `#remitoDoPrintBtn` en el modal de vista previa del remito (`#remitoPreviewOverlay`).
+- **Formato `.xlsx` limpio (`buildDepOrderXlsxBytes` / `collectDepOrderExportRows` / `exportDepOrderToExcel`)**:
+  - Columnas: `CODIGO_EAN` (texto `inlineStr` para evitar notación científica), `DESCRIPCION`, `CANTIDAD` (entero numérico) y `PRECIO` (numérico con formato `#,##0`), con encabezado fijo (`ySplit="1"`) y autofiltro (`autoFilter`).
+  - Exporta las cantidades armadas actuales (`cantArmada > 0`), y si el pedido aún está sin armar toma las cantidades pedidas (`cantPedida > 0`).
+Archivos: index.html, NOTASDEVER.MD
