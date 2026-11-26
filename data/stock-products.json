@@ -14891,6 +14891,20 @@
       "brand": "SAPHIRUS",
       "stock": 24,
       "bulto": 24
+    },
+    {
+      "ean": "7798444555530",
+      "name": "DIFUSOR PARA AUTO SAPHIRUS - PARAISO ROSE",
+      "desc": "",
+      "price": 3400,
+      "tab": "saphirus",
+      "cat": "DIFUSOR PARA AUTO",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpOuVM6HKXmV-9ojmmRUjUnFsSrOb9UMVEUzFcWqtf8g&s=10",
+      "brand": "SAPHIRUS",
+      "catalogName": "DIFUSOR PARA AUTO SAPHIRUS - PARAISO ROSE",
+      "stock": 24,
+      "bulto": 24
     }
   ]
 }
