@@ -553,3 +553,15 @@ Fecha: 2026-11-26
 - **Ampliación automática de columnas**:
   - `ensureAdminSheet_` y `ensureSheets_` amplían automáticamente columnas (`insertColumnsAfter`) si la hoja tiene menos columnas que los encabezados requeridos (`20` para `VENTAS` o `21` para `CLIENTES` con cuentas corrientes `R..U`).
 Archivos: apps-script/Code.gs, NOTASDEVER.MD
+
+### #042 - Remito: mínimo ½ Hoja A4 con líneas en blanco, 25 productos por media página y salto automático a A4 / Multipágina
+Fecha: 2026-11-26
+- **Tamaño mínimo garantizado de ½ Hoja A4 (`138mm`)**:
+  - Incluso cuando el pedido tiene 1 solo producto, `.remito-card` / `.remito-half-box` mantienen una altura mínima de `138mm` (`½ Hoja A4`) y rellenan con filas en blanco delimitadas por bordes suaves (`remito-blank-row`) hasta completar el cuadro antes de `TOTAL DE ARTICULOS`.
+- **Capacidad de al menos 25 productos en ½ Hoja A4**:
+  - Se calibró la tipografía e interlineado de impresión/vista previa para que hasta `REMITO_HALF_MAX_ITEMS = 25` ítems entren cómodamente dentro de `138mm`.
+- **Escalado automático a Hoja A4 completa y Multipágina**:
+  - `resolveRemitoMode`: hasta `25` ítems usa **½ Hoja A4** (`half`); desde `26` ítems pasa automáticamente a **Hoja A4 completa** (`full`, rellenando hasta 1 página hasta `54` ítems) y al superar `REMITO_FULL_MAX_ITEMS = 54` fluye automáticamente en **A4 Multipágina** sin filas de relleno y repitiendo el encabezado `thead` en cada página.
+- **Vista previa fiel a hoja A4**:
+  - `.remito-preview-frame` / `.remito-preview-sheet` muestran la proporción real de A4 / ½ A4 y la insignia `#remitoLayoutBadge` indica cantidad de productos y páginas estimadas.
+Archivos: index.html, NOTASDEVER.MD

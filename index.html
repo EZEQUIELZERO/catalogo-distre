@@ -1184,9 +1184,15 @@
   .dep-ws-actions .btn{margin:0;padding:10px 15px;font-size:.84rem;}
 
   .remito-preview-frame{
-    background:#ffffff;color:#111111;border:1px solid #cbd5e1;border-radius:10px;
-    padding:16px;overflow:auto;max-height:62vh;
+    background:#cbd5e1;color:#111111;border:1px solid #94a3b8;border-radius:10px;
+    padding:16px;overflow:auto;max-height:66vh;
   }
+  .remito-preview-sheet{
+    background:#ffffff;color:#111111;max-width:210mm;margin:0 auto;padding:6mm 7mm;
+    box-shadow:0 4px 18px rgba(0,0,0,.22);border-radius:4px;
+  }
+  .remito-preview-frame .remito-half-box,
+  .remito-preview-frame .remito-card{min-height:138mm;}
 </style>
 </head>
 <body>
@@ -2134,8 +2140,8 @@
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
           <select id="remitoQuickMode" class="price-input" style="width:auto;padding:7px 10px;font-size:.8rem;" title="Formato de hoja A4">
-            <option value="auto">Auto (½ A4 o A4)</option>
-            <option value="half">½ Hoja A4</option>
+            <option value="auto">Auto (½ A4 hasta 25 · A4 · Multipágina)</option>
+            <option value="half">½ Hoja A4 (mínimo media hoja)</option>
             <option value="half-dup">½ Hoja A4 x 2 (Original + Duplicado)</option>
             <option value="full">Hoja A4 completa / Multipágina</option>
           </select>
@@ -2165,7 +2171,7 @@
       <div class="field-row" style="margin-top:10px;">
         <div class="field"><label for="rcPageMode">Formato de página por defecto</label>
           <select id="rcPageMode" class="price-input">
-            <option value="auto">Automático (½ A4 hasta 15 líneas, sino A4)</option>
+            <option value="auto">Automático (½ A4 hasta 25 ítems · A4 · Multipágina)</option>
             <option value="half">Siempre ½ Hoja A4</option>
             <option value="half-dup">½ Hoja A4 duplicado (2 por hoja)</option>
             <option value="full">Siempre Hoja A4 completa / Multipágina</option>
@@ -6292,14 +6298,14 @@ async function saveActiveDepOrder(nextStatus){
 }
 
 /* ---------- REMITO A4 / 1/2 A4 PERSONALIZABLE ---------- */
+const REMITO_HALF_MAX_ITEMS = 25;
+const REMITO_FULL_MAX_ITEMS = 54;
+
 function resolveRemitoMode(order, cfg, modeOverride = null){
   const reqMode = (modeOverride && modeOverride !== 'auto') ? modeOverride : cfg.pageMode;
   if(reqMode && reqMode !== 'auto') return reqMode;
   const activeCount = (order.items || []).filter(it => (Number(it.cantArmada) || 0) > 0).length;
-  const retCount = (order.devoluciones && order.devoluciones.length)
-    ? (order.devoluciones.length + 3)
-    : (cfg.showEmptyReturns ? 4 : 0);
-  return (activeCount + retCount) <= 15 ? 'half' : 'full';
+  return activeCount <= REMITO_HALF_MAX_ITEMS ? 'half' : 'full';
 }
 
 function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false){
@@ -6310,49 +6316,80 @@ function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false
   const totalDevs = devs.reduce((a, d) => a + (Math.max(0, Number(d.monto) || 0)), 0);
   const netTotal = Math.max(0, Math.round((itemsSub - totalDevs) * 100) / 100);
 
-  const fontScale = cfg.fontSize === 'compact' ? '10.5px' : (cfg.fontSize === 'large' ? '13.5px' : '11.5px');
-  const cellPad = cfg.fontSize === 'compact' ? '2.5px 6px' : (cfg.fontSize === 'large' ? '5px 8px' : '3.5px 7px');
+  let fontScale, cellPad, rowH;
+  if(isHalfBox){
+    fontScale = cfg.fontSize === 'compact' ? '8.2px' : (cfg.fontSize === 'large' ? '9.8px' : '9px');
+    cellPad = cfg.fontSize === 'compact' ? '1px 5px' : (cfg.fontSize === 'large' ? '2px 6px' : '1.5px 5px');
+    rowH = cfg.fontSize === 'compact' ? '13.5px' : (cfg.fontSize === 'large' ? '16.5px' : '15px');
+  } else {
+    fontScale = cfg.fontSize === 'compact' ? '9px' : (cfg.fontSize === 'large' ? '11px' : '9.8px');
+    cellPad = cfg.fontSize === 'compact' ? '1.5px 5px' : (cfg.fontSize === 'large' ? '3px 7px' : '2px 6px');
+    rowH = cfg.fontSize === 'compact' ? '15px' : (cfg.fontSize === 'large' ? '19px' : '16.5px');
+  }
+
   const headerBg = cfg.headerBg || '#7f7f7f';
   const headerText = cfg.headerText || '#111111';
   const subBg = cfg.subHeaderBg || '#b7b7b7';
   const colSpanProd = 1;
   const totalCols = cfg.showUnitPrice ? 4 : 3;
 
+  const extraLines = ((cfg.title || cfg.subtitle) ? 2 : 0)
+    + (devs.length > 0 ? (devs.length + 3) : (cfg.showEmptyReturns ? 4 : 0))
+    + (order.nota ? 1 : 0)
+    + (cfg.showSignature ? 3 : 0)
+    + (cfg.footerNote ? 1 : 0);
+
+  let blankCount = 0;
+  if(isHalfBox){
+    const minRows = Math.max(15, REMITO_HALF_MAX_ITEMS - extraLines);
+    blankCount = Math.max(0, minRows - activeItems.length);
+  } else if(activeItems.length <= REMITO_FULL_MAX_ITEMS){
+    const fullMinRows = Math.max(REMITO_HALF_MAX_ITEMS, 48 - extraLines);
+    blankCount = Math.max(0, fullMinRows - activeItems.length);
+  }
+
   const customBanner = (cfg.title || cfg.subtitle)
-    ? `<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid #222;padding:3px 6px;margin-bottom:4px;font-size:.92em;">
+    ? `<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid #222;padding:2px 6px;margin-bottom:3px;font-size:.92em;">
          <b>${escapeHtml(cfg.title || '')}</b>
          <span>${escapeHtml(cfg.subtitle || '')}</span>
        </div>`
     : '';
   const metaLine = (cfg.showMeta || cfg.showClientAddr || copyLabel)
-    ? `<div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.86em;color:#333;padding:2px 4px 5px;">
+    ? `<div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.86em;color:#333;padding:1px 4px 3px;">
          <span>${cfg.showMeta ? `<b>${escapeHtml(order.saleId)}</b> · ${escapeHtml(order.fecha || '')}` : ''}${cfg.showClientAddr && (order.localidad || order.direccion) ? ` · ${escapeHtml([order.localidad, order.direccion].filter(Boolean).join(' - '))}` : ''}</span>
          ${copyLabel ? `<b>${escapeHtml(copyLabel)}</b>` : ''}
        </div>`
     : '';
 
   const rowsHtml = activeItems.map(it => `
-    <tr>
-      <td style="padding:${cellPad};border:1px solid #444;font-weight:600;">${escapeHtml(it.descripcion)}${cfg.showEan && it.ean ? ` <span style="color:#555;font-weight:400;font-size:.85em;">(${escapeHtml(it.ean)})</span>` : ''}</td>
-      <td style="padding:${cellPad};border:1px solid #444;text-align:center;font-weight:600;width:44px;">${Number(it.cantArmada) || 0}</td>
-      ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #444;text-align:right;white-space:nowrap;width:78px;">${formatPrice(it.precioUnitario || 0)}</td>` : ''}
-      <td style="padding:${cellPad};border:1px solid #444;text-align:right;font-weight:700;white-space:nowrap;width:92px;">${formatPrice(it.total || 0)}</td>
+    <tr style="height:${rowH};">
+      <td style="padding:${cellPad};border:1px solid #444;font-weight:600;line-height:1.15;">${escapeHtml(it.descripcion)}${cfg.showEan && it.ean ? ` <span style="color:#555;font-weight:400;font-size:.85em;">(${escapeHtml(it.ean)})</span>` : ''}</td>
+      <td style="padding:${cellPad};border:1px solid #444;text-align:center;font-weight:600;width:42px;line-height:1.15;">${Number(it.cantArmada) || 0}</td>
+      ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #444;text-align:right;white-space:nowrap;width:76px;line-height:1.15;">${formatPrice(it.precioUnitario || 0)}</td>` : ''}
+      <td style="padding:${cellPad};border:1px solid #444;text-align:right;font-weight:700;white-space:nowrap;width:88px;line-height:1.15;">${formatPrice(it.total || 0)}</td>
     </tr>`).join('');
+
+  const blankRowCells = `
+      <td style="padding:${cellPad};border-left:1px solid #444;border-right:1px solid #444;border-bottom:1px solid #c5c5c5;line-height:1.15;">&nbsp;</td>
+      <td style="padding:${cellPad};border-left:1px solid #444;border-right:1px solid #444;border-bottom:1px solid #c5c5c5;width:42px;line-height:1.15;">&nbsp;</td>
+      ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border-left:1px solid #444;border-right:1px solid #444;border-bottom:1px solid #c5c5c5;width:76px;line-height:1.15;">&nbsp;</td>` : ''}
+      <td style="padding:${cellPad};border-left:1px solid #444;border-right:1px solid #444;border-bottom:1px solid #c5c5c5;width:88px;line-height:1.15;">&nbsp;</td>`;
+  const blankRowsHtml = Array.from({ length: blankCount }, () => `<tr class="remito-blank-row" style="height:${rowH};">${blankRowCells}</tr>`).join('');
 
   let returnsHtml = '';
   if(devs.length > 0 || cfg.showEmptyReturns){
     const devRows = devs.length > 0
       ? devs.map(d => `
-          <tr>
-            <td style="padding:${cellPad};border:1px solid #888;">${escapeHtml(d.descripcion || '')}</td>
-            <td style="padding:${cellPad};border:1px solid #888;text-align:center;width:44px;"></td>
-            ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #888;width:78px;"></td>` : ''}
-            <td style="padding:${cellPad};border:1px solid #888;text-align:right;font-weight:700;width:92px;">-${formatPrice(d.monto || 0)}</td>
+          <tr style="height:${rowH};">
+            <td style="padding:${cellPad};border:1px solid #888;line-height:1.15;">${escapeHtml(d.descripcion || '')}</td>
+            <td style="padding:${cellPad};border:1px solid #888;text-align:center;width:42px;line-height:1.15;"></td>
+            ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #888;width:76px;line-height:1.15;"></td>` : ''}
+            <td style="padding:${cellPad};border:1px solid #888;text-align:right;font-weight:700;width:88px;line-height:1.15;">-${formatPrice(d.monto || 0)}</td>
           </tr>`).join('')
-      : `<tr><td colspan="${totalCols}" style="padding:${cellPad};border:1px solid #aaa;height:18px;"></td></tr>`;
+      : `<tr><td colspan="${totalCols}" style="padding:${cellPad};border:1px solid #aaa;height:16px;"></td></tr>`;
 
     returnsHtml = `
-      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:${fontScale};color:#111;">
+      <table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:${fontScale};color:#111;">
         <tr><td colspan="${totalCols}" style="padding:${cellPad};font-weight:800;border-bottom:1.5px solid #222;text-transform:uppercase;">DEVUELVE</td></tr>
         ${devRows}
         <tr style="background:${subBg};">
@@ -6363,62 +6400,65 @@ function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false
   }
 
   const sigHtml = cfg.showSignature
-    ? `<div style="display:flex;justify-content:space-between;gap:24px;margin-top:16px;font-size:.85em;color:#222;">
+    ? `<div style="display:flex;justify-content:space-between;gap:24px;margin-top:12px;font-size:.85em;color:#222;">
          <div style="flex:1;border-top:1px solid #333;padding-top:3px;text-align:center;">Firma quien recibe</div>
          <div style="flex:1;border-top:1px solid #333;padding-top:3px;text-align:center;">Aclaración / DNI</div>
        </div>`
     : '';
   const footerHtml = cfg.footerNote
-    ? `<div style="margin-top:6px;font-size:.82em;color:#444;text-align:center;">${escapeHtml(cfg.footerNote)}</div>`
+    ? `<div style="margin-top:4px;font-size:.82em;color:#444;text-align:center;">${escapeHtml(cfg.footerNote)}</div>`
     : '';
 
   return `
-  <div class="remito-card ${isHalfBox ? 'remito-half-box' : ''}" style="font-family:Arial,Helvetica,sans-serif;font-size:${fontScale};color:#111;background:#fff;">
+  <div class="remito-card ${isHalfBox ? 'remito-half-box' : ''}" style="font-family:Arial,Helvetica,sans-serif;font-size:${fontScale};color:#111;background:#fff;min-height:138mm;">
     ${customBanner}
     ${metaLine}
     <table style="width:100%;border-collapse:collapse;color:#111;">
       <thead>
         <tr style="background:${headerBg};color:${headerText};">
-          <th colspan="${totalCols - 1}" style="padding:5px 8px;border:1.5px solid #222;text-align:center;font-size:1.08em;font-weight:900;text-transform:uppercase;">${escapeHtml(order.cliente)}</th>
-          <th style="padding:5px 8px;border:1.5px solid #222;text-align:center;font-size:1.05em;font-weight:900;">${totalUnidades}</th>
+          <th colspan="${totalCols - 1}" style="padding:3px 6px;border:1.5px solid #222;text-align:center;font-size:1.08em;font-weight:900;text-transform:uppercase;">${escapeHtml(order.cliente)}</th>
+          <th style="padding:3px 6px;border:1.5px solid #222;text-align:center;font-size:1.05em;font-weight:900;">${totalUnidades}</th>
         </tr>
         <tr style="background:${subBg};color:#111;">
-          <th style="padding:${cellPad};border:1px solid #222;text-align:left;font-weight:800;">PRODUCTO</th>
-          <th style="padding:${cellPad};border:1px solid #222;text-align:center;font-weight:800;">UD</th>
-          ${cfg.showUnitPrice ? `<th style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:800;">PRECIO</th>` : ''}
-          <th style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:800;">TOTAL</th>
+          <th style="padding:2px 5px;border:1px solid #222;text-align:left;font-weight:800;">PRODUCTO</th>
+          <th style="padding:2px 5px;border:1px solid #222;text-align:center;font-weight:800;">UD</th>
+          ${cfg.showUnitPrice ? `<th style="padding:2px 5px;border:1px solid #222;text-align:right;font-weight:800;">PRECIO</th>` : ''}
+          <th style="padding:2px 5px;border:1px solid #222;text-align:right;font-weight:800;">TOTAL</th>
         </tr>
       </thead>
       <tbody>
-        ${rowsHtml || `<tr><td colspan="${totalCols}" style="padding:10px;border:1px solid #444;text-align:center;color:#666;">Sin artículos</td></tr>`}
+        ${(rowsHtml || blankRowsHtml) ? (rowsHtml + blankRowsHtml) : `<tr><td colspan="${totalCols}" style="padding:10px;border:1px solid #444;text-align:center;color:#666;">Sin artículos</td></tr>`}
       </tbody>
       <tfoot>
         <tr style="background:${subBg};color:#111;">
-          <td colspan="${colSpanProd}" style="padding:5px 8px;border:1.5px solid #222;text-align:right;font-weight:800;">TOTAL DE ARTICULOS</td>
-          <td style="padding:5px 8px;border:1.5px solid #222;text-align:center;font-weight:900;">${totalUnidades}</td>
-          ${cfg.showUnitPrice ? `<td style="padding:5px 8px;border:1.5px solid #222;"></td>` : ''}
-          <td style="padding:5px 8px;border:1.5px solid #222;text-align:right;font-weight:900;white-space:nowrap;">${formatPrice(itemsSub)}</td>
+          <td colspan="${colSpanProd}" style="padding:3px 6px;border:1.5px solid #222;text-align:right;font-weight:800;">TOTAL DE ARTICULOS</td>
+          <td style="padding:3px 6px;border:1.5px solid #222;text-align:center;font-weight:900;">${totalUnidades}</td>
+          ${cfg.showUnitPrice ? `<td style="padding:3px 6px;border:1.5px solid #222;"></td>` : ''}
+          <td style="padding:3px 6px;border:1.5px solid #222;text-align:right;font-weight:900;white-space:nowrap;">${formatPrice(itemsSub)}</td>
         </tr>
       </tfoot>
     </table>
     ${returnsHtml}
-    ${order.nota ? `<div style="margin-top:6px;font-size:.86em;color:#222;"><b>Nota:</b> ${escapeHtml(order.nota)}</div>` : ''}
+    ${order.nota ? `<div style="margin-top:4px;font-size:.86em;color:#222;"><b>Nota:</b> ${escapeHtml(order.nota)}</div>` : ''}
     ${sigHtml}
     ${footerHtml}
   </div>`;
 }
 
 function buildRemitoDocumentHtml(order, cfg, modeOverride = null){
+  const reqMode = (modeOverride && modeOverride !== 'auto') ? modeOverride : cfg.pageMode;
+  const isAuto = !reqMode || reqMode === 'auto';
+  const activeCount = (order.items || []).filter(it => (Number(it.cantArmada) || 0) > 0).length;
   const effectiveMode = resolveRemitoMode(order, cfg, modeOverride);
   const cutLineHtml = cfg.showCutLine
-    ? `<div style="border-top:1.5px dashed #888;margin:7mm 0;text-align:center;font-family:Arial,sans-serif;font-size:9px;color:#666;line-height:0;"><span style="background:#fff;padding:0 6px;">✂ cortar por aquí (½ Hoja A4)</span></div>`
-    : `<div style="height:6mm;"></div>`;
+    ? `<div style="border-top:1.5px dashed #888;margin:3mm 0;text-align:center;font-family:Arial,sans-serif;font-size:9px;color:#666;line-height:0;"><span style="background:#fff;padding:0 6px;">✂ cortar por aquí (½ Hoja A4)</span></div>`
+    : `<div style="height:3mm;"></div>`;
 
   let bodyInner = '';
   let layoutLabel = '';
   if(effectiveMode === 'half'){
     bodyInner = buildRemitoSingleCardHtml(order, cfg, '', true) + cutLineHtml;
-    layoutLabel = 'Formato automático: ½ Hoja A4';
+    layoutLabel = `${isAuto ? 'Formato automático' : 'Formato'}: ½ Hoja A4 (${activeCount} ${activeCount === 1 ? 'producto' : 'productos'} · mín. ½ hoja, hasta ${REMITO_HALF_MAX_ITEMS})`;
   } else if(effectiveMode === 'half-dup'){
     bodyInner = buildRemitoSingleCardHtml(order, cfg, 'ORIGINAL', true)
       + cutLineHtml
@@ -6426,7 +6466,12 @@ function buildRemitoDocumentHtml(order, cfg, modeOverride = null){
     layoutLabel = 'Formato: ½ Hoja A4 x 2 (Original + Duplicado en 1 hoja A4)';
   } else {
     bodyInner = buildRemitoSingleCardHtml(order, cfg, '', false);
-    layoutLabel = 'Formato: Hoja A4 completa (salta a 2ª hoja automáticamente si hace falta)';
+    if(activeCount > REMITO_FULL_MAX_ITEMS){
+      const estPages = Math.ceil(activeCount / REMITO_FULL_MAX_ITEMS);
+      layoutLabel = `${isAuto ? 'Formato automático' : 'Formato'}: A4 Multipágina (~${estPages} hojas · ${activeCount} productos)`;
+    } else {
+      layoutLabel = `${isAuto ? 'Formato automático' : 'Formato'}: Hoja A4 completa (${activeCount} ${activeCount === 1 ? 'producto' : 'productos'} · 26 a ${REMITO_FULL_MAX_ITEMS} en 1 hoja)`;
+    }
   }
 
   const fullDoc = `<!DOCTYPE html>
@@ -6435,13 +6480,14 @@ function buildRemitoDocumentHtml(order, cfg, modeOverride = null){
 <meta charset="UTF-8">
 <title>Remito - ${escapeHtml(order.cliente)} (${escapeHtml(order.saleId)})</title>
 <style>
-  @page { size: A4 portrait; margin: 8mm; }
+  @page { size: A4 portrait; margin: 6mm 7mm; }
   * { box-sizing: border-box; }
   body { margin: 0; padding: 0; background: #fff; color: #111; }
   thead { display: table-header-group; }
   tfoot { display: table-row-group; }
   tr { break-inside: avoid; page-break-inside: avoid; }
-  .remito-half-box { min-height: 130mm; }
+  .remito-card { min-height: 138mm; }
+  .remito-half-box { min-height: 138mm; }
 </style>
 </head>
 <body>${bodyInner}</body>
@@ -6464,7 +6510,7 @@ function renderRemitoPreview(){
   const modeOverride = document.getElementById('remitoQuickMode')?.value || 'auto';
   const built = buildRemitoDocumentHtml(remitoTargetOrder, cfg, modeOverride);
   document.getElementById('remitoLayoutBadge').textContent = built.layoutLabel;
-  document.getElementById('remitoPreviewContainer').innerHTML = built.bodyInner;
+  document.getElementById('remitoPreviewContainer').innerHTML = `<div class="remito-preview-sheet">${built.bodyInner}</div>`;
 }
 function printRemitoOrder(){
   if(!remitoTargetOrder) return;
