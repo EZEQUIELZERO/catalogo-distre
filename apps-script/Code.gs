@@ -992,6 +992,102 @@ function handleReopenOrder_(body) {
   }
 }
 
+function handleCancelOrder_(body) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    const info = ensureSheets_(false);
+    const ss = info.ss;
+    const saleId = String(body.saleId || '').trim();
+    if (!saleId) throw new Error('Falta ID de venta.');
+
+    const ventasSh = ss.getSheetByName(SHEET_NAMES.VENTAS);
+    const rowIdx = findVentaRowIndex_(ventasSh, saleId);
+    if (rowIdx < 2) throw new Error('No se encontró la venta ' + saleId + '.');
+
+    const row = ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).getValues()[0];
+    const currentDep = String(row[14] || '').trim().toUpperCase();
+    if (currentDep === 'CANCELADO') {
+      throw new Error('Este pedido ya está cancelado.');
+    }
+
+    const codigo = String(row[3] || '').trim();
+    const clienteName = String(row[4] || '').trim();
+    const origTotal = round2_(row[7]);
+    const motivo = String(body.motivo || '').trim();
+    const fecha = formatDate_(ss, new Date());
+    const cancelTag = 'CANCELADO ' + fecha
+      + (origTotal > 0 ? ' (total orig. $ ' + origTotal + ')' : '')
+      + (motivo ? ': ' + motivo : '');
+    const prevNota = String(row[13] || '').trim();
+    const finalNota = prevNota ? (prevNota + ' | ' + cancelTag) : cancelTag;
+
+    row[5] = 0;
+    row[6] = 0;
+    row[7] = 0;
+    row[9] = 0;
+    row[12] = 'CANCELADO';
+    row[13] = finalNota;
+    row[14] = 'CANCELADO';
+    row[17] = '';
+    row[19] = 0;
+    ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).setValues([row]);
+
+    const detSh = ss.getSheetByName(SHEET_NAMES.VENTAS_DETALLE);
+    const detLast = detSh.getLastRow();
+    const detCols = HEADERS.VENTAS_DETALLE.length;
+    const stockRestored = body.stockRestored !== false;
+    if (detLast > 1) {
+      const detVals = detSh.getRange(2, 1, detLast - 1, Math.max(detCols, detSh.getLastColumn())).getValues();
+      let detDirty = false;
+      const updatedDet = detVals.map(function (r) {
+        const padded = [];
+        for (let c = 0; c < detCols; c++) padded.push(r[c] !== undefined ? r[c] : '');
+        if (String(padded[0] || '').trim() === saleId) {
+          padded[5] = 0; // CANTIDAD
+          padded[7] = 0; // TOTAL
+          padded[9] = 0; // CANT_ARMADA
+          if (stockRestored) padded[10] = 0; // CANT_DESCONTADA
+          detDirty = true;
+        }
+        return padded;
+      });
+      if (detDirty) {
+        detSh.getRange(2, 1, updatedDet.length, detCols).setValues(updatedDet);
+      }
+    }
+
+    const stockAdj = Array.isArray(body.stockAdjustments) ? body.stockAdjustments : [];
+    if (stockAdj.length) {
+      const movSh = ss.getSheetByName(SHEET_NAMES.MOVIMIENTOS_STOCK);
+      const movRows = stockAdj.map(function (d) {
+        return [
+          fecha, 'CANCELACION_PEDIDO', saleId, 'EN STOCK',
+          String(d.ean || ''), String(d.name || ''),
+          Math.abs(toNum_(d.delta)), toNum_(d.prevStock), toNum_(d.newStock),
+          clienteName
+        ];
+      });
+      movSh.getRange(movSh.getLastRow() + 1, 1, movRows.length, HEADERS.MOVIMIENTOS_STOCK.length).setValues(movRows);
+      updateStockActualRows_(ss.getSheetByName(SHEET_NAMES.STOCK_ACTUAL), stockAdj, fecha);
+    }
+
+    const clientBalance = findClientBalance_(ss, codigo, clienteName);
+    return {
+      ok: true,
+      saleId: saleId,
+      estadoDeposito: 'CANCELADO',
+      estado: 'CANCELADO',
+      total: 0,
+      saldoVenta: 0,
+      nota: finalNota,
+      clientBalance: clientBalance
+    };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
 function handleRegisterPayment_(body) {
   const lock = LockService.getScriptLock();
   lock.waitLock(15000);
@@ -1106,6 +1202,7 @@ function doPost(e) {
     if (action === 'saveOrderPacking') return jsonOut_(handleSaveOrderPacking_(body));
     if (action === 'confirmDelivery') return jsonOut_(handleConfirmDelivery_(body));
     if (action === 'reopenOrderToPacking') return jsonOut_(handleReopenOrder_(body));
+    if (action === 'cancelOrder') return jsonOut_(handleCancelOrder_(body));
 
     throw new Error('Acción desconocida: ' + action);
   } catch (err) {

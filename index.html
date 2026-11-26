@@ -1119,6 +1119,7 @@
   .dep-status-pill.en_espera{background:rgba(212,138,24,.18);color:#b86b00;border:1px solid rgba(212,138,24,.45);}
   .dep-status-pill.listo{background:rgba(37,211,102,.16);color:#186732;border:1px solid rgba(37,211,102,.4);}
   .dep-status-pill.entregado{background:rgba(139,92,246,.16);color:#6d28d9;border:1px solid rgba(139,92,246,.35);}
+  .dep-status-pill.cancelado{background:rgba(224,85,95,.16);color:#dc2626;border:1px solid rgba(224,85,95,.4);}
   .dep-status-pill.overdue{background:rgba(224,85,95,.16);color:var(--danger);border:1px solid rgba(224,85,95,.4);}
   [data-tab-theme=""] .dep-status-pill.listo,[data-tab-theme="oscuro"] .dep-status-pill.listo{color:#73bd89;}
 
@@ -1487,6 +1488,7 @@
             <button type="button" class="dep-tab-btn active" data-dep-tab="pending">📦 Para armar <span class="dep-count-pill" id="depCountPending">0</span></button>
             <button type="button" class="dep-tab-btn" data-dep-tab="ready">✅ Pedidos listos <span class="dep-count-pill" id="depCountReady">0</span></button>
             <button type="button" class="dep-tab-btn" data-dep-tab="delivered">🚚 Entregados <span class="dep-count-pill" id="depCountDelivered">0</span></button>
+            <button type="button" class="dep-tab-btn" data-dep-tab="cancelled">❌ Cancelados <span class="dep-count-pill" id="depCountCancelled">0</span></button>
           </div>
           <div class="admin-toolbar">
             <input type="text" id="depSearchInput" class="price-input" placeholder="🔍 Buscar pedido por cliente, N° venta, localidad o estado...">
@@ -1651,6 +1653,7 @@
           <div class="dep-ws-actions">
             <button type="button" class="btn btn-gray btn-auto" id="depSavePartialBtn">⏳ Guardar parcial (en espera)</button>
             <button type="button" class="btn btn-close btn-auto" id="depPrintRemitoBtn">🖨️ Vista previa / Imprimir Remito</button>
+            <button type="button" class="btn btn-danger btn-auto" id="depCancelOrderBtn">❌ Cancelar pedido</button>
             <button type="button" class="btn btn-whatsapp btn-auto" id="depFinishOrderBtn">✅ Finalizar armado (Pedido listo)</button>
           </div>
           <p class="admin-note" id="depWsStatus" style="margin:0;"></p>
@@ -2291,6 +2294,32 @@
         <button type="button" class="btn btn-close btn-auto" id="delCancelBtn">Cancelar</button>
       </div>
       <p class="admin-note" id="delStatus"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL CANCELAR PEDIDO Y DEVOLVER STOCK (SOLO ADMIN) ================= -->
+<div class="overlay" id="cancelOrderOverlay">
+  <div class="modal" style="max-width:540px;">
+    <button class="modal-close" id="coClose" aria-label="Cerrar">✕</button>
+    <div class="admin-body">
+      <h2>❌ Cancelar pedido y devolver stock</h2>
+      <p class="admin-note" id="coTitle" style="font-weight:700;color:var(--text);margin-bottom:4px;"></p>
+      <p class="admin-note" id="coSummary" style="margin-bottom:10px;"></p>
+
+      <div style="font-size:.82rem;font-weight:700;margin-bottom:6px;">Stock a devolver a EN STOCK:</div>
+      <div id="coStockPreview" class="sale-stock-preview" style="max-height:170px;margin-bottom:12px;"></div>
+
+      <div class="field">
+        <label for="coReason">Motivo de cancelación (opcional)</label>
+        <input type="text" id="coReason" class="price-input" placeholder="Ej: Cliente anuló el pedido / cambio de fecha">
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-danger btn-auto" id="coConfirmBtn">❌ Confirmar cancelación y devolver stock</button>
+        <button type="button" class="btn btn-close btn-auto" id="coCancelBtn">Volver</button>
+      </div>
+      <p class="admin-note" id="coStatus"></p>
     </div>
   </div>
 </div>
@@ -3823,6 +3852,7 @@ const clientDetailOverlay = document.getElementById('clientDetailOverlay');
 const remitoPreviewOverlay = document.getElementById('remitoPreviewOverlay');
 const remitoConfigOverlay = document.getElementById('remitoConfigOverlay');
 const deliveryOverlay = document.getElementById('deliveryOverlay');
+const cancelOrderOverlay = document.getElementById('cancelOrderOverlay');
 
 document.getElementById('adminIconBtn').addEventListener('click', () => {
   if(isAdmin){ openAdminPanel(); }
@@ -5550,6 +5580,7 @@ let depQuickAddCode = '';
 let depQuickAddQty = 1;
 let remitoTargetOrder = null;
 let deliveryTargetOrder = null;
+let cancelTargetOrder = null;
 
 function findOrderInCache(saleId){
   return ordersCache.find(o => o.saleId === saleId) || null;
@@ -5634,7 +5665,12 @@ function computePackingStockDeltas(items){
   return { adjustments, notInStock };
 }
 
-async function applyEnStockAdjustments(adjustments, saleId){
+function computeCancelStockReturns(order){
+  const items = ((order && order.items) || []).map(it => ({ ...it, cantArmada: 0 }));
+  return computePackingStockDeltas(items);
+}
+
+async function applyEnStockAdjustments(adjustments, saleId, actionLabel = 'ajustar stock'){
   if(!adjustments || adjustments.length === 0) return { updated: 0, skippedReason: '' };
   const gh = getGithubConfig();
   if(!gh.repo || !gh.token){
@@ -5646,13 +5682,19 @@ async function applyEnStockAdjustments(adjustments, saleId){
     adjustments.forEach(d => {
       const idx = data.products.findIndex(p => p.ean === d.ean);
       const existing = idx >= 0 ? data.products[idx] : null;
-      const entry = buildRepoProductEntry(d.ean, existing, { stock: d.newStock }, 'stock');
+      const livePrev = (existing && typeof existing.stock === 'number' && Number.isFinite(existing.stock))
+        ? existing.stock
+        : d.prevStock;
+      const liveNew = Math.max(0, livePrev - d.delta);
+      d.prevStock = livePrev;
+      d.newStock = liveNew;
+      const entry = buildRepoProductEntry(d.ean, existing, { stock: liveNew }, 'stock');
       if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
       updatedEntries.push(entry);
       updatedEans.push(d.ean);
     });
     return data;
-  }, `Depósito ${saleId} — ajustar stock [EN STOCK] (${adjustments.length} producto/s)`, 3, 'stock');
+  }, `Depósito ${saleId} — ${actionLabel} [EN STOCK] (${adjustments.length} producto/s)`, 3, 'stock');
 
   clearLocalOverrides(updatedEans, 'stock');
   updatedEntries.forEach(e => mergeCustomProductLocally(e, 'stock'));
@@ -5692,6 +5734,7 @@ async function loadOrdersFromSheets(force = false){
 
 function getDepTabGroup(status){
   const st = String(status || 'PARA_ARMAR').toUpperCase();
+  if(st === 'CANCELADO') return 'cancelled';
   if(st === 'ENTREGADO') return 'delivered';
   if(st === 'LISTO') return 'ready';
   return 'pending';
@@ -5720,11 +5763,13 @@ function renderDepositoSection(){
   wsView.style.display = 'none';
   listView.style.display = '';
 
-  const counts = { pending: 0, ready: 0, delivered: 0 };
+  const counts = { pending: 0, ready: 0, delivered: 0, cancelled: 0 };
   ordersCache.forEach(o => { counts[getDepTabGroup(o.estadoDeposito)] += 1; });
   document.getElementById('depCountPending').textContent = counts.pending;
   document.getElementById('depCountReady').textContent = counts.ready;
   document.getElementById('depCountDelivered').textContent = counts.delivered;
+  const cancEl = document.getElementById('depCountCancelled');
+  if(cancEl) cancEl.textContent = counts.cancelled;
 
   document.querySelectorAll('[data-dep-tab]').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.depTab === activeDepTab);
@@ -5751,7 +5796,8 @@ function renderDepositoSection(){
     const emptyMsgs = {
       pending: 'No hay pedidos pendientes para armar.',
       ready: 'No hay pedidos listos para entregar.',
-      delivered: 'Todavía no hay pedidos entregados.'
+      delivered: 'Todavía no hay pedidos entregados.',
+      cancelled: 'No hay pedidos cancelados.'
     };
     listEl.innerHTML = `<div class="admin-empty">${q ? 'No hay pedidos que coincidan con la búsqueda.' : emptyMsgs[activeDepTab]}</div>`;
     return;
@@ -5760,11 +5806,11 @@ function renderDepositoSection(){
   listEl.innerHTML = filtered.map(o => {
     const st = String(o.estadoDeposito || 'PARA_ARMAR').toUpperCase();
     const stClass = st.toLowerCase();
-    const stLabel = st === 'PARA_ARMAR' ? 'Para armar' : (st === 'EN_ESPERA' ? 'En espera (parcial)' : (st === 'LISTO' ? 'Listo para entregar' : 'Entregado'));
+    const stLabel = st === 'PARA_ARMAR' ? 'Para armar' : (st === 'EN_ESPERA' ? 'En espera (parcial)' : (st === 'LISTO' ? 'Listo para entregar' : (st === 'CANCELADO' ? 'Cancelado' : 'Entregado')));
     const totalPed = (o.items || []).reduce((a, it) => a + (Number(it.cantPedida) || 0), 0);
     const totalArm = (o.items || []).reduce((a, it) => a + (Number(it.cantArmada) || 0), 0);
-    const promiseOverdue = !!(o.fechaCobroAcordada && o.saldoVenta > 0 && o.fechaCobroAcordada < todayIso);
-    const promiseBadge = o.fechaCobroAcordada
+    const promiseOverdue = !!(st !== 'CANCELADO' && o.fechaCobroAcordada && o.saldoVenta > 0 && o.fechaCobroAcordada < todayIso);
+    const promiseBadge = (st !== 'CANCELADO' && o.fechaCobroAcordada)
       ? `<span class="dep-status-pill ${promiseOverdue ? 'overdue' : 'en_espera'}">${promiseOverdue ? '⚠ Cobro vencido: ' : '📅 Cobro acordado: '}${escapeHtml(o.fechaCobroAcordada)}</span>`
       : '';
     const locTxt = [o.localidad, o.direccion].filter(Boolean).join(' · ');
@@ -5774,12 +5820,16 @@ function renderDepositoSection(){
     if(st === 'PARA_ARMAR' || st === 'EN_ESPERA'){
       actionsHtml = `
         <button type="button" class="btn btn-gold btn-auto" data-dep-open="${safeId}">🔧 ${st === 'EN_ESPERA' ? 'Continuar armado' : 'Armar pedido'}</button>
-        <button type="button" class="btn btn-gray btn-auto" data-dep-remito="${safeId}">🖨️ Remito</button>`;
+        <button type="button" class="btn btn-gray btn-auto" data-dep-remito="${safeId}">🖨️ Remito</button>
+        <button type="button" class="btn btn-danger btn-auto" data-dep-cancel="${safeId}">❌ Cancelar</button>`;
     } else if(st === 'LISTO'){
       actionsHtml = `
         <button type="button" class="btn btn-whatsapp btn-auto" data-dep-deliver="${safeId}">🚚 Confirmar entrega y pago</button>
         <button type="button" class="btn btn-gray btn-auto" data-dep-remito="${safeId}">🖨️ Remito</button>
-        <button type="button" class="btn btn-close btn-auto" data-dep-reopen="${safeId}">✏ Modificar</button>`;
+        <button type="button" class="btn btn-close btn-auto" data-dep-reopen="${safeId}">✏ Modificar</button>
+        <button type="button" class="btn btn-danger btn-auto" data-dep-cancel="${safeId}">❌ Cancelar</button>`;
+    } else if(st === 'CANCELADO'){
+      actionsHtml = `<span class="admin-note" style="margin:0;">Stock y venta anulados</span>`;
     } else {
       const collectBtn = o.saldoVenta > 0
         ? `<button type="button" class="btn btn-gold btn-auto" data-dep-collect="${safeId}">💵 Cobrar saldo (${formatPrice(o.saldoVenta)})</button>`
@@ -5822,6 +5872,7 @@ function renderDepositoSection(){
     if(o) openDeliveryModal(o);
   }));
   listEl.querySelectorAll('[data-dep-reopen]').forEach(b => b.addEventListener('click', () => reopenOrderFromList(b.dataset.depReopen)));
+  listEl.querySelectorAll('[data-dep-cancel]').forEach(b => b.addEventListener('click', () => openCancelOrderModal(b.dataset.depCancel)));
 }
 
 async function reopenOrderFromList(saleId){
@@ -6070,8 +6121,8 @@ function renderDepWorkspace(){
   } else {
     const lines = adjustments.map(d => {
       const actionTxt = d.delta < 0
-        ? `<b style="color:#186732;">devuelve +${Math.abs(d.delta)}</b>`
-        : `<b style="color:var(--danger);">descuenta -${d.delta}</b>`;
+        ? `<b style="color:#186732;">↩ sobrante devuelve +${Math.abs(d.delta)} a EN STOCK</b>`
+        : `<b style="color:var(--danger);">⬇ extra descuenta -${d.delta} de EN STOCK</b>`;
       return `${escapeHtml(d.name)}: ${actionTxt} (${d.prevStock} → <b>${d.newStock}</b>)`;
     });
     if(notInStock.length > 0){
@@ -6232,27 +6283,62 @@ async function saveActiveDepOrder(nextStatus){
   const statusEl = document.getElementById('depWsStatus');
   const partialBtn = document.getElementById('depSavePartialBtn');
   const finishBtn = document.getElementById('depFinishOrderBtn');
+  const cancelBtn = document.getElementById('depCancelOrderBtn');
   partialBtn.disabled = true;
   finishBtn.disabled = true;
+  if(cancelBtn) cancelBtn.disabled = true;
 
   const { adjustments } = computePackingStockDeltas(o.items);
   const gh = getGithubConfig();
   const canUpdateGithub = !!(gh.repo && gh.token);
-  const sentAdjustments = canUpdateGithub ? adjustments : [];
+  let stockApplied = (adjustments.length === 0);
+  let ghNote = '';
 
-  const itemsPayload = o.items.map(it => ({
-    ean: it.ean,
-    descripcion: it.descripcion,
-    catalogo: it.catalogo || o.catalogo || 'EN STOCK',
-    cantPedida: it.cantPedida || 0,
-    cantArmada: it.cantArmada || 0,
-    cantDescontada: canUpdateGithub ? (it.cantArmada || 0) : (it.cantDescontada || 0),
-    precioUnitario: it.precioUnitario || 0,
-    total: it.total || 0
-  }));
-
-  statusEl.textContent = 'Guardando armado en Google Sheets...';
   try{
+    if(adjustments.length > 0){
+      if(canUpdateGithub){
+        statusEl.textContent = 'Ajustando stock en EN STOCK (GitHub)...';
+        try{
+          await applyEnStockAdjustments(
+            adjustments,
+            o.saleId,
+            nextStatus === 'LISTO' ? 'finalizar armado' : 'armado parcial'
+          );
+          stockApplied = true;
+          const returnedUnits = adjustments.filter(d => d.delta < 0).reduce((a, d) => a + Math.abs(d.delta), 0);
+          const deductedUnits = adjustments.filter(d => d.delta > 0).reduce((a, d) => a + d.delta, 0);
+          const parts = [];
+          if(returnedUnits > 0) parts.push(`↩ Sobrante devuelto a EN STOCK: +${returnedUnits} u.`);
+          if(deductedUnits > 0) parts.push(`⬇ Extra descontado de EN STOCK: -${deductedUnits} u.`);
+          ghNote = parts.length ? (' ' + parts.join(' · ')) : '';
+        }catch(ghErr){
+          statusEl.textContent = '❌ Error al actualizar EN STOCK en GitHub: ' + ghErr.message + ' (no se modificó Sheets).';
+          return;
+        }
+      } else {
+        ghNote = ' ⚠ Falta configurar el token de GitHub en General para reflejar el ajuste en EN STOCK.';
+      }
+    }
+
+    const sentAdjustments = stockApplied ? adjustments : [];
+    const itemsPayload = o.items.map(it => {
+      const inEnStock = !!findBaseProduct(it.ean, 'stock');
+      const nextDescontada = !inEnStock
+        ? 0
+        : (stockApplied ? (it.cantArmada || 0) : (it.cantDescontada || 0));
+      return {
+        ean: it.ean,
+        descripcion: it.descripcion,
+        catalogo: it.catalogo || o.catalogo || 'EN STOCK',
+        cantPedida: it.cantPedida || 0,
+        cantArmada: it.cantArmada || 0,
+        cantDescontada: nextDescontada,
+        precioUnitario: it.precioUnitario || 0,
+        total: it.total || 0
+      };
+    });
+
+    statusEl.textContent = 'Guardando armado en Google Sheets...';
     const res = await sheetsApi('saveOrderPacking', {
       saleId: o.saleId,
       nextStatus,
@@ -6266,24 +6352,11 @@ async function saveActiveDepOrder(nextStatus){
       stockAdjustments: sentAdjustments
     });
 
-    let ghNote = '';
-    if(adjustments.length > 0){
-      if(canUpdateGithub){
-        statusEl.textContent = 'Ajustando stock en EN STOCK (GitHub)...';
-        try{
-          const stRes = await applyEnStockAdjustments(adjustments, o.saleId);
-          ghNote = ` Stock ajustado en EN STOCK (${stRes.updated} producto/s).`;
-        }catch(ghErr){
-          ghNote = ` ⚠ Armado guardado en Sheets, pero falló GitHub: ${ghErr.message}`;
-        }
-      } else {
-        ghNote = ' ⚠ Falta configurar el token de GitHub en General para reflejar el ajuste en EN STOCK.';
-      }
-    }
-
-    if(canUpdateGithub){
-      o.items.forEach(it => { it.cantDescontada = it.cantArmada; });
-    }
+    o.items.forEach(it => {
+      const inEnStock = !!findBaseProduct(it.ean, 'stock');
+      if(!inEnStock) it.cantDescontada = 0;
+      else if(stockApplied) it.cantDescontada = it.cantArmada;
+    });
     o.estadoDeposito = res.estadoDeposito || nextStatus;
     o.fechaArmado = res.fechaArmado || o.fechaArmado;
     o.saldoVenta = res.saldoVenta !== undefined ? res.saldoVenta : o.saldoVenta;
@@ -6299,13 +6372,14 @@ async function saveActiveDepOrder(nextStatus){
     } else {
       renderDepWorkspace();
       statusEl.textContent = `⏳ Armado parcial guardado (${o.saleId}).${ghNote}`;
-      showToast(`⏳ Pedido ${o.saleId} guardado en espera`);
+      showToast(`⏳ Pedido ${o.saleId} guardado en espera.${ghNote}`);
     }
   }catch(e){
     statusEl.textContent = '❌ ' + e.message;
   }finally{
     partialBtn.disabled = false;
     finishBtn.disabled = false;
+    if(cancelBtn) cancelBtn.disabled = false;
   }
 }
 
@@ -6606,7 +6680,127 @@ function openDeliveryModal(order){
   openOverlayEl(deliveryOverlay);
 }
 
-/* Listeners Depósito / Remito / Entrega */
+/* ---------- CANCELAR PEDIDO Y DEVOLVER STOCK ---------- */
+function openCancelOrderModal(saleId){
+  if(!isAdmin || !saleId) return;
+  const order = findOrderInCache(saleId) || (activeDepOrder && activeDepOrder.saleId === saleId ? activeDepOrder : null);
+  if(!order) return;
+  if(String(order.estadoDeposito || '').toUpperCase() === 'CANCELADO'){
+    showToast('Este pedido ya está cancelado');
+    return;
+  }
+  cancelTargetOrder = order;
+  document.getElementById('coTitle').textContent = `${order.cliente} · ${order.saleId}`;
+  const paidWarn = (Number(order.pagado) || 0) > 0
+    ? ` · ⚠ Registra ${formatPrice(order.pagado)} abonado(s) (quedará a favor en la cuenta corriente).`
+    : '';
+  document.getElementById('coSummary').innerHTML = `Total del pedido: <b>${formatPrice(order.total)}</b>${escapeHtml(paidWarn)}`;
+
+  const { adjustments, notInStock } = computeCancelStockReturns(order);
+  const gh = getGithubConfig();
+  const canUpdateGithub = !!(gh.repo && gh.token);
+  const prevEl = document.getElementById('coStockPreview');
+  if(adjustments.length > 0){
+    const lines = adjustments.map(d =>
+      `<div>↩ <b>${escapeHtml(d.name)}</b>: devuelve <b style="color:#186732;">+${Math.abs(d.delta)} u.</b> (${d.prevStock} → <b>${d.newStock}</b>)</div>`
+    );
+    if(!canUpdateGithub){
+      lines.push(`<div style="color:var(--danger);margin-top:6px;">⚠ Configurá el token de GitHub en Admin → General para devolver estas unidades a EN STOCK.</div>`);
+    }
+    prevEl.innerHTML = lines.join('');
+  } else {
+    const extraTxt = notInStock.length > 0
+      ? ` (${notInStock.length} producto(s) sin stock vinculado en EN STOCK)`
+      : '';
+    prevEl.innerHTML = `<div style="color:var(--text-dim);">Este pedido no tiene unidades actualmente descontadas en EN STOCK.${escapeHtml(extraTxt)}</div>`;
+  }
+  document.getElementById('coReason').value = '';
+  document.getElementById('coStatus').textContent = '';
+  document.getElementById('coConfirmBtn').disabled = false;
+  document.getElementById('coCancelBtn').disabled = false;
+  openOverlayEl(cancelOrderOverlay);
+}
+
+/* Listeners Depósito / Remito / Entrega / Cancelación */
+document.getElementById('coClose')?.addEventListener('click', () => closeOverlayEl(cancelOrderOverlay));
+document.getElementById('coCancelBtn')?.addEventListener('click', () => closeOverlayEl(cancelOrderOverlay));
+document.getElementById('coConfirmBtn')?.addEventListener('click', async () => {
+  if(!cancelTargetOrder) return;
+  const order = cancelTargetOrder;
+  const statusEl = document.getElementById('coStatus');
+  const confirmBtn = document.getElementById('coConfirmBtn');
+  const cancelBtn = document.getElementById('coCancelBtn');
+  const motivo = document.getElementById('coReason')?.value.trim() || '';
+
+  confirmBtn.disabled = true;
+  cancelBtn.disabled = true;
+  try{
+    const { adjustments } = computeCancelStockReturns(order);
+    const gh = getGithubConfig();
+    const canUpdateGithub = !!(gh.repo && gh.token);
+    let stockApplied = (adjustments.length === 0);
+
+    if(adjustments.length > 0 && canUpdateGithub){
+      statusEl.textContent = 'Devolviendo stock a EN STOCK (GitHub)...';
+      try{
+        await applyEnStockAdjustments(adjustments, order.saleId, 'cancelar pedido');
+        stockApplied = true;
+      }catch(ghErr){
+        statusEl.textContent = '❌ Error al devolver stock en GitHub: ' + ghErr.message + ' (no se anuló en Sheets).';
+        return;
+      }
+    }
+
+    statusEl.textContent = 'Registrando cancelación en Google Sheets...';
+    const res = await sheetsApi('cancelOrder', {
+      saleId: order.saleId,
+      motivo,
+      stockAdjustments: stockApplied ? adjustments : [],
+      stockRestored: stockApplied || adjustments.length === 0
+    });
+
+    const returnedUnits = stockApplied
+      ? adjustments.reduce((a, d) => a + Math.abs(d.delta), 0)
+      : 0;
+    upsertOrderInCache({
+      ...order,
+      estadoDeposito: 'CANCELADO',
+      estado: 'CANCELADO',
+      subtotal: 0,
+      descBulto: 0,
+      totalDevoluciones: 0,
+      total: 0,
+      saldoVenta: 0,
+      fechaCobroAcordada: '',
+      nota: res.nota !== undefined ? res.nota : order.nota,
+      items: (order.items || []).map(it => ({
+        ...it,
+        cantidad: 0,
+        cantArmada: 0,
+        cantDescontada: (stockApplied || adjustments.length === 0) ? 0 : it.cantDescontada,
+        total: 0
+      }))
+    });
+    if(res.clientBalance) upsertClientInCache(res.clientBalance);
+    if(activeDepOrder && activeDepOrder.saleId === order.saleId) activeDepOrder = null;
+
+    closeOverlayEl(cancelOrderOverlay);
+    activeDepTab = 'cancelled';
+    renderDepositoSection();
+    renderClientsSection();
+    const stkToast = returnedUnits > 0 ? ` · ↩ Devuelto a EN STOCK: +${returnedUnits} u.` : '';
+    showToast(`❌ Pedido ${order.saleId} cancelado${stkToast}`);
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    confirmBtn.disabled = false;
+    cancelBtn.disabled = false;
+  }
+});
+
+document.getElementById('depCancelOrderBtn')?.addEventListener('click', () => {
+  if(activeDepOrder) openCancelOrderModal(activeDepOrder.saleId);
+});
 document.getElementById('depRefreshBtn')?.addEventListener('click', () => loadOrdersFromSheets(true));
 document.getElementById('depGoGeneralBtn')?.addEventListener('click', () => switchAdminSection('general'));
 document.getElementById('depOpenRemitoCfgBtn')?.addEventListener('click', openRemitoConfigModal);
@@ -8376,12 +8570,12 @@ function renderCartModal(){
 /* ======================================================
    CIERRE GENÉRICO DE MODALES (click afuera / ESC)
    ====================================================== */
-[overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay, remitoPreviewOverlay, remitoConfigOverlay, deliveryOverlay].filter(Boolean).forEach(ov => {
+[overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay, remitoPreviewOverlay, remitoConfigOverlay, deliveryOverlay, cancelOrderOverlay].filter(Boolean).forEach(ov => {
   ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
 });
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape'){
-    [overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay, remitoPreviewOverlay, remitoConfigOverlay, deliveryOverlay].filter(Boolean).forEach(ov => {
+    [overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay, remitoPreviewOverlay, remitoConfigOverlay, deliveryOverlay, cancelOrderOverlay].filter(Boolean).forEach(ov => {
       if(ov.classList.contains('open')) closeOverlayEl(ov);
     });
   }

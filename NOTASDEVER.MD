@@ -575,3 +575,15 @@ Fecha: 2026-11-26
   - En **Admin → Productos** (`#adminExportScope` + `#adminExportExcelBtn`): permite exportar **Todo el catálogo activo**, **Solo pestaña actual**, **Solo vista filtrada** o **Solo seleccionados**, reflejando incluso cambios pendientes en pantalla y omitiendo los marcados para eliminar.
   - En **Admin → Importar CSV** (`#csvExportExcelBtn`): exporta según el **Catálogo destino** (`#csvCatalog`) y la **Pestaña destino** (`#csvTab`), sirviendo también como plantilla editable para volver a subir cambios.
 Archivos: index.html, NOTASDEVER.MD
+
+### #044 - Cancelación de pedidos con devolución de stock y refuerzo de devolución de sobrantes en EN STOCK
+Fecha: 2026-11-26
+- **Backend Google Apps Script (`apps-script/Code.gs`, `apps-script/INSTRUCCIONES.md`)**:
+  - Nueva acción `cancelOrder` (`handleCancelOrder_`): marca la venta como `CANCELADO` (`ESTADO` y `ESTADO_DEPOSITO`), anula montos financieros (`TOTAL = 0`, `SALDO_VENTA = 0`) preservando el total original en `NOTA` para que `CLIENTES` deje de computar la deuda, pone en `0` `CANTIDAD`, `TOTAL`, `CANT_ARMADA` y `CANT_DESCONTADA` en `VENTAS_DETALLE` (evitando doble devolución si se intenta cancelar de nuevo) y registra movimientos positivos `CANCELACION_PEDIDO` en `MOVIMIENTOS_STOCK` / `STOCK_ACTUAL`.
+- **Cancelar pedido en Depósito (`index.html`)**:
+  - Nueva pestaña **❌ Cancelados** (`#depCountCancelled`) y botón **❌ Cancelar** en tarjetas `PARA_ARMAR`, `EN_ESPERA`, `LISTO` y dentro de la mesa de armado (`#depCancelOrderBtn`).
+  - Modal `#cancelOrderOverlay` (`openCancelOrderModal`) con previsualización exacta de unidades que vuelven a `EN STOCK` (`computeCancelStockReturns`), motivo opcional y advertencia si hubo pago previo (queda a favor del cliente).
+- **Refuerzo de devolución de sobrantes al armar menos unidades (`EN STOCK`)**:
+  - `applyEnStockAdjustments` calcula el nuevo stock sobre el valor vivo leído dentro de `updateCustomProducts` en GitHub (evitando pises ante ediciones concurrentes) y se ejecuta **antes** de confirmar `saveOrderPacking` o `cancelOrder` en Google Sheets.
+  - `saveActiveDepOrder` actualiza `cantDescontada` únicamente para productos existentes en `EN STOCK` y `#depStockDeltaBox` detalla explícitamente los sobrantes devueltos (`↩ sobrante devuelve +N a EN STOCK`).
+Archivos: apps-script/Code.gs, apps-script/INSTRUCCIONES.md, index.html, NOTASDEVER.MD
