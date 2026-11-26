@@ -1085,6 +1085,108 @@
     font-size:.75rem;color:var(--text-dim);background:var(--card);border:1px solid var(--border);
     border-radius:8px;padding:8px 10px;line-height:1.4;max-height:110px;overflow-y:auto;
   }
+
+  /* ---------- DEPOSITO (ARMADO, REMITOS, ENTREGAS) ---------- */
+  .dep-subtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+  .dep-tab-btn{
+    display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;
+    border:1px solid var(--border);background:var(--card);color:var(--text-dim);
+    font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s;
+  }
+  .dep-tab-btn:hover{border-color:var(--accent);color:var(--text);}
+  .dep-tab-btn.active{
+    background:linear-gradient(180deg,var(--btn-green-top),var(--btn-green-mid) 55%,var(--btn-green-bot));
+    color:var(--btn-cart-text);border-color:var(--btn-cart-border);
+  }
+  .dep-count-pill{
+    padding:1px 7px;border-radius:999px;font-size:.72rem;font-weight:800;
+    background:rgba(0,0,0,.12);color:inherit;
+  }
+  .dep-tab-btn.active .dep-count-pill{background:rgba(255,255,255,.24);}
+  .dep-order-card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;
+    margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+  .dep-order-info{flex:1;min-width:230px;display:flex;flex-direction:column;gap:4px;}
+  .dep-order-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.94rem;font-weight:800;}
+  .dep-order-meta{font-size:.76rem;color:var(--text-dim);line-height:1.4;}
+  .dep-order-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .dep-order-actions .btn{margin:0;padding:8px 12px;font-size:.78rem;}
+  .dep-status-pill{
+    font-size:.68rem;font-weight:800;padding:3px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.3px;
+  }
+  .dep-status-pill.para_armar{background:rgba(59,130,246,.15);color:#2563eb;border:1px solid rgba(59,130,246,.35);}
+  .dep-status-pill.en_espera{background:rgba(212,138,24,.18);color:#b86b00;border:1px solid rgba(212,138,24,.45);}
+  .dep-status-pill.listo{background:rgba(37,211,102,.16);color:#186732;border:1px solid rgba(37,211,102,.4);}
+  .dep-status-pill.entregado{background:rgba(139,92,246,.16);color:#6d28d9;border:1px solid rgba(139,92,246,.35);}
+  .dep-status-pill.overdue{background:rgba(224,85,95,.16);color:var(--danger);border:1px solid rgba(224,85,95,.4);}
+  [data-tab-theme=""] .dep-status-pill.listo,[data-tab-theme="oscuro"] .dep-status-pill.listo{color:#73bd89;}
+
+  .dep-workspace{display:flex;flex-direction:column;gap:14px;}
+  .dep-ws-head{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--border);
+  }
+  .dep-progress-wrap{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .dep-progress-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.82rem;font-weight:700;}
+  .dep-progress-track{height:10px;border-radius:999px;background:var(--bg-soft);overflow:hidden;border:1px solid var(--border);}
+  .dep-progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--btn-green-top),var(--btn-green-mid));transition:width .2s ease;}
+
+  .dep-tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:860px){.dep-tools-grid{grid-template-columns:1fr;}}
+  .dep-tool-card{
+    background:var(--bg-soft);border:1px solid var(--border);border-radius:12px;padding:14px;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .dep-tool-card h4{margin:0;font-size:.88rem;}
+
+  .dep-items-wrap{
+    overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--card);
+  }
+  .dep-items-table{width:100%;border-collapse:collapse;font-size:.8rem;min-width:640px;}
+  .dep-items-table th,.dep-items-table td{padding:9px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:middle;}
+  .dep-items-table th{background:var(--bg-soft);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;color:var(--text-dim);}
+  .dep-items-table tr:last-child td{border-bottom:none;}
+  .dep-items-table tr.row-ok{background:rgba(37,211,102,.06);}
+  .dep-items-table tr.row-short{background:rgba(212,138,24,.07);}
+  .dep-items-table tr.row-added{background:rgba(59,130,246,.07);}
+  .dep-qty-ctrl{display:inline-flex;align-items:center;gap:4px;}
+  .dep-qty-ctrl input{width:58px;text-align:center;padding:5px 6px;font-weight:700;}
+  .dep-mini-btn{
+    padding:5px 8px;border-radius:6px;border:1px solid var(--border);background:var(--bg-soft);
+    color:var(--text);font-weight:700;cursor:pointer;font-size:.76rem;line-height:1;
+  }
+  .dep-mini-btn:hover{border-color:var(--accent);}
+  .dep-diff-pill{display:inline-block;padding:2px 7px;border-radius:999px;font-size:.7rem;font-weight:800;white-space:nowrap;}
+  .dep-diff-pill.ok{background:rgba(37,211,102,.16);color:#186732;}
+  .dep-diff-pill.short{background:rgba(212,138,24,.18);color:#b86b00;}
+  .dep-diff-pill.extra{background:rgba(59,130,246,.16);color:#2563eb;}
+  .dep-diff-pill.zero{background:rgba(224,85,95,.15);color:var(--danger);}
+  [data-tab-theme=""] .dep-diff-pill.ok,[data-tab-theme="oscuro"] .dep-diff-pill.ok{color:#73bd89;}
+
+  .dep-bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:780px){.dep-bottom-grid{grid-template-columns:1fr;}}
+  .dep-box{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .dep-ret-row{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:6px 8px;border-radius:8px;background:var(--bg-soft);font-size:.78rem;
+  }
+  .dep-ws-actions{
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+    padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--border);
+  }
+  .dep-ws-actions .btn{margin:0;padding:10px 15px;font-size:.84rem;}
+
+  .remito-preview-frame{
+    background:#ffffff;color:#111111;border:1px solid #cbd5e1;border-radius:10px;
+    padding:16px;overflow:auto;max-height:62vh;
+  }
 </style>
 </head>
 <body>
@@ -1244,6 +1346,7 @@
       <button class="admin-subnav-btn" data-section="products">Productos</button>
       <button class="admin-subnav-btn" data-section="scanstock">📷 Cargar Stock</button>
       <button class="admin-subnav-btn" data-section="clients">👥 Clientes</button>
+      <button class="admin-subnav-btn" data-section="deposito">🏭 Depósito</button>
       <button class="admin-subnav-btn" data-section="addproduct">Agregar producto</button>
       <button class="admin-subnav-btn" data-section="tabs">Pestañas</button>
       <button class="admin-subnav-btn" data-section="appearance">🎨 Personalización</button>
@@ -1355,6 +1458,197 @@
         </div>
 
         <div id="clientsList"></div>
+      </div>
+
+      <!-- ---------- SECCIÓN DEPÓSITO (ARMADO, REMITOS, ENTREGAS) ---------- -->
+      <div class="admin-section" id="adminSectionDeposito" style="display:none;">
+        <div class="toggle-all-row">
+          <div class="admin-section-title" style="margin:0;">🏭 Depósito — Armado, Remitos y Entregas</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-gray btn-auto" id="depRefreshBtn">🔄 Actualizar pedidos</button>
+            <button type="button" class="btn btn-gold btn-auto" id="depOpenRemitoCfgBtn">🎨 Personalizar remito</button>
+          </div>
+        </div>
+
+        <div id="depNotConfiguredBox" class="scan-notfound-card" style="display:none;margin-bottom:14px;">
+          <div class="scan-notfound-title">Falta conectar Google Sheets (<code>CATALOGO-DISTRE-BASE</code>)</div>
+          <div class="admin-note" style="margin:0;">Configurá la URL del Apps Script y tu clave secreta en <b>General → Conexión con Google Sheets</b> para ver pedidos para armar, listos y entregas.</div>
+          <div><button type="button" class="btn btn-gold btn-auto" id="depGoGeneralBtn">Ir a General</button></div>
+        </div>
+
+        <div id="depListView">
+          <div class="dep-subtabs">
+            <button type="button" class="dep-tab-btn active" data-dep-tab="pending">📦 Para armar <span class="dep-count-pill" id="depCountPending">0</span></button>
+            <button type="button" class="dep-tab-btn" data-dep-tab="ready">✅ Pedidos listos <span class="dep-count-pill" id="depCountReady">0</span></button>
+            <button type="button" class="dep-tab-btn" data-dep-tab="delivered">🚚 Entregados <span class="dep-count-pill" id="depCountDelivered">0</span></button>
+          </div>
+          <div class="admin-toolbar">
+            <input type="text" id="depSearchInput" class="price-input" placeholder="🔍 Buscar pedido por cliente, N° venta, localidad o estado...">
+          </div>
+          <div id="depOrdersList"></div>
+        </div>
+
+        <div id="depWorkspaceView" class="dep-workspace" style="display:none;">
+          <div class="dep-ws-head">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+              <button type="button" class="btn btn-close btn-auto" id="depBackToListBtn" style="margin:0;padding:7px 12px;font-size:.8rem;">← Volver a la lista</button>
+              <div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                  <strong id="depWsTitle" style="font-size:1rem;"></strong>
+                  <span class="dep-status-pill" id="depWsStatusBadge"></span>
+                </div>
+                <div id="depWsMeta" class="admin-note" style="margin:2px 0 0;"></div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-gray btn-auto" id="depMatchAllBtn" style="margin:0;padding:8px 12px;font-size:.78rem;">✓ Armar todo igual a lo pedido</button>
+          </div>
+
+          <div class="dep-progress-wrap">
+            <div class="dep-progress-top">
+              <span>Progreso de armado</span>
+              <span id="depProgressText">0 / 0 unidades</span>
+            </div>
+            <div class="dep-progress-track"><div class="dep-progress-fill" id="depProgressFill"></div></div>
+          </div>
+
+          <div class="dep-tools-grid">
+            <div class="dep-tool-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+                <h4 style="margin:0;">📷 Escanear producto (EAN / Interno)</h4>
+                <div style="display:flex;align-items:center;gap:8px;font-size:.76rem;">
+                  <select id="depScanMode" class="price-input" style="padding:4px 8px;width:auto;font-size:.76rem;">
+                    <option value="add">Sumar al armado</option>
+                    <option value="set">Establecer armado</option>
+                  </select>
+                  <label class="switch" title="Sonido al escanear" style="transform:scale(.85);">
+                    <input type="checkbox" id="depScanSound" checked>
+                    <span class="slider-toggle"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="scan-input-group">
+                <input type="text" id="depScanCode" class="price-input" autocomplete="off" placeholder="Escaneá EAN + Enter (o CODIGO CANT)...">
+                <button type="button" class="btn btn-gray btn-auto" id="depScanLookupBtn">Buscar</button>
+              </div>
+              <div class="scan-input-group">
+                <input type="number" id="depScanQty" class="price-input" min="0" step="1" inputmode="numeric" placeholder="Cantidad + Enter" disabled>
+                <button type="button" class="btn btn-whatsapp btn-auto" id="depScanApplyBtn" disabled>Aplicar</button>
+              </div>
+              <div class="scan-feedback" id="depScanFeedback" style="margin:0;"></div>
+
+              <div class="scan-notfound-card" id="depScanNotFoundCard" style="display:none;padding:10px 12px;">
+                <div class="scan-notfound-title" id="depNotFoundMsg" style="font-size:.82rem;"></div>
+                <div class="scan-notfound-actions">
+                  <button type="button" class="btn btn-gold btn-auto" id="depOpenQuickAddBtn">➕ Cargar producto nuevo y agregar al pedido</button>
+                  <button type="button" class="btn btn-close btn-auto" id="depNotFoundCloseBtn">✕ Cerrar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dep-tool-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+                <h4 style="margin:0;">📋 Agregar desde el catálogo</h4>
+                <button type="button" class="btn btn-gold btn-auto" id="depManualNewProdBtn" style="margin:0;padding:5px 10px;font-size:.75rem;">✨ Nuevo producto</button>
+              </div>
+              <input type="text" id="depCatalogSearch" class="price-input" placeholder="🔍 Filtrar productos por nombre o EAN...">
+              <div class="scan-input-group">
+                <select id="depCatalogSelect" class="price-input"></select>
+                <input type="number" id="depCatalogQty" class="price-input" min="1" step="1" value="1" style="max-width:74px;flex:0 0 74px;">
+                <button type="button" class="btn btn-whatsapp btn-auto" id="depCatalogAddBtn">➕ Agregar</button>
+              </div>
+              <p class="admin-note" style="margin:0;">Podés sumar artículos nuevos, ajustar cantidades o descontar lo que no salió. Los cambios en <b>EN STOCK</b> se previsualizan abajo antes de guardar.</p>
+            </div>
+          </div>
+
+          <div class="scan-quickadd-box" id="depQuickAddBox" style="display:none;">
+            <div class="scan-quickadd-head">
+              <strong>✨ Cargar producto nuevo en EN STOCK y agregar al pedido</strong>
+              <button type="button" class="btn btn-close btn-auto" id="dqCloseBtn" style="padding:5px 10px;font-size:.76rem;">✕ Cancelar</button>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqEan">Código EAN / Código *</label><input type="text" id="dqEan" class="price-input" placeholder="Ej: 7798444550764"></div>
+              <div class="field"><label for="dqCodigoInterno">Código interno (opcional)</label><input type="text" id="dqCodigoInterno" class="price-input"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqName">Descripción (sistema / remito) *</label><input type="text" id="dqName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250"></div>
+              <div class="field"><label for="dqCatalogName">Nombre corto en tarjeta (opcional)</label><input type="text" id="dqCatalogName" class="price-input"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqPrice">Precio unitario ($)</label><input type="number" id="dqPrice" class="price-input" min="0" step="1"></div>
+              <div class="field"><label for="dqStock">Stock inicial en EN STOCK</label><input type="number" id="dqStock" class="price-input" min="0" step="1" placeholder="Ej: 24"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqBulto">Bulto (unidades, opcional)</label><input type="number" id="dqBulto" class="price-input" min="1" step="1"></div>
+              <div class="field"><label for="dqBultoDesc">Desc. por bulto % (opcional)</label><input type="number" id="dqBultoDesc" class="price-input" min="0" max="100" step="0.5"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqTab">Pestaña / Marca</label><select id="dqTab" class="price-input"></select></div>
+              <div class="field"><label for="dqBrand">Marca / Proveedor (opcional)</label><input type="text" id="dqBrand" class="price-input"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="dqCatSelect">Familia / Categoría</label>
+                <select id="dqCatSelect" class="price-input"></select>
+                <input type="text" id="dqCatNew" class="price-input" placeholder="Nueva categoría" style="margin-top:6px;display:none;">
+              </div>
+              <div class="field"><label for="dqSubcatSelect">Subcategoría (opcional)</label>
+                <select id="dqSubcatSelect" class="price-input"></select>
+                <input type="text" id="dqSubcatNew" class="price-input" placeholder="Nueva subcategoría" style="margin-top:6px;display:none;">
+              </div>
+            </div>
+            <div class="field"><label for="dqOrderQty">Cantidad armada para sumar a este pedido</label><input type="number" id="dqOrderQty" class="price-input" min="0" step="1" value="1"></div>
+            <div class="scan-quickadd-actions">
+              <button type="button" class="btn btn-whatsapp btn-auto" id="dqSaveBtn">💾 Crear producto y agregar al pedido</button>
+              <button type="button" class="btn btn-close btn-auto" id="dqCancelBtn">Cancelar</button>
+            </div>
+            <p class="admin-note" id="dqStatus" style="margin:2px 0 0;"></p>
+          </div>
+
+          <div class="dep-items-wrap">
+            <table class="dep-items-table">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th style="width:76px;text-align:center;">Pedido</th>
+                  <th style="width:160px;text-align:center;">Armado</th>
+                  <th style="width:110px;text-align:center;">Estado</th>
+                  <th style="width:92px;text-align:right;">Precio</th>
+                  <th style="width:96px;text-align:right;">Total</th>
+                  <th style="width:46px;"></th>
+                </tr>
+              </thead>
+              <tbody id="depItemsList"></tbody>
+            </table>
+          </div>
+
+          <div class="dep-bottom-grid">
+            <div class="dep-box">
+              <h4 style="margin:0;font-size:.88rem;">↩️ Devoluciones / Notas de crédito (DEVUELVE)</h4>
+              <div id="depReturnsList"></div>
+              <div class="scan-input-group">
+                <input type="text" id="depRetDesc" class="price-input" placeholder="Motivo / producto devuelto (ej: DIFUSOR VARILLAS)">
+                <input type="number" id="depRetAmount" class="price-input" min="1" step="1" placeholder="$ monto" style="max-width:110px;flex:0 0 110px;">
+                <button type="button" class="btn btn-gray btn-auto" id="depAddReturnBtn">➕</button>
+              </div>
+              <div class="field" style="margin-top:4px;">
+                <label for="depOrderNote">Observación del armado / entrega</label>
+                <input type="text" id="depOrderNote" class="price-input" placeholder="Ej: Faltó vainilla, se envía la próxima">
+              </div>
+            </div>
+
+            <div class="dep-box">
+              <h4 style="margin:0;font-size:.88rem;">📊 Totales y ajuste automático de EN STOCK</h4>
+              <div id="depTotalsBox" style="font-size:.84rem;line-height:1.6;"></div>
+              <div id="depStockDeltaBox" class="sale-stock-preview" style="max-height:150px;"></div>
+            </div>
+          </div>
+
+          <div class="dep-ws-actions">
+            <button type="button" class="btn btn-gray btn-auto" id="depSavePartialBtn">⏳ Guardar parcial (en espera)</button>
+            <button type="button" class="btn btn-close btn-auto" id="depPrintRemitoBtn">🖨️ Vista previa / Imprimir Remito</button>
+            <button type="button" class="btn btn-whatsapp btn-auto" id="depFinishOrderBtn">✅ Finalizar armado (Pedido listo)</button>
+          </div>
+          <p class="admin-note" id="depWsStatus" style="margin:0;"></p>
+        </div>
       </div>
 
       <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
@@ -1824,6 +2118,161 @@
 
       <div class="admin-section-title" style="margin-bottom:8px;">Movimientos de cuenta corriente</div>
       <div class="ledger-list" id="cdLedgerList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL VISTA PREVIA REMITO (SOLO ADMIN) ================= -->
+<div class="overlay" id="remitoPreviewOverlay">
+  <div class="modal" style="max-width:900px;">
+    <button class="modal-close" id="remitoPrevClose" aria-label="Cerrar">✕</button>
+    <div class="admin-body">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;padding-right:34px;">
+        <div>
+          <h2 style="margin:0;">Vista previa del Remito</h2>
+          <p class="admin-note" id="remitoLayoutBadge" style="margin:4px 0 0;"></p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+          <select id="remitoQuickMode" class="price-input" style="width:auto;padding:7px 10px;font-size:.8rem;" title="Formato de hoja A4">
+            <option value="auto">Auto (½ A4 o A4)</option>
+            <option value="half">½ Hoja A4</option>
+            <option value="half-dup">½ Hoja A4 x 2 (Original + Duplicado)</option>
+            <option value="full">Hoja A4 completa / Multipágina</option>
+          </select>
+          <button type="button" class="btn btn-gold btn-auto" id="remitoOpenCfgFromPrevBtn" style="margin:0;padding:8px 12px;font-size:.8rem;">🎨 Personalizar</button>
+          <button type="button" class="btn btn-whatsapp btn-auto" id="remitoDoPrintBtn" style="margin:0;padding:8px 14px;font-size:.82rem;">🖨️ Imprimir / PDF</button>
+        </div>
+      </div>
+      <div class="remito-preview-frame" id="remitoPreviewContainer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL PERSONALIZAR REMITO (SOLO ADMIN) ================= -->
+<div class="overlay" id="remitoConfigOverlay">
+  <div class="modal" style="max-width:600px;">
+    <button class="modal-close" id="rcClose" aria-label="Cerrar">✕</button>
+    <div class="admin-body">
+      <h2>🎨 Personalizar diseño del Remito</h2>
+      <p class="admin-note">Los ajustes se guardan en el sitio (y localmente) para todos los remitos que imprimas desde Depósito.</p>
+
+      <div class="field-row">
+        <div class="field"><label for="rcTitle">Encabezado / Razón social (opcional, ej: DISTRIBUIDORA DISTRE)</label><input type="text" id="rcTitle" class="price-input" placeholder="Ej: DISTRE DISTRIBUIDORA"></div>
+        <div class="field"><label for="rcSubtitle">Subtítulo (teléfono / dirección, opcional)</label><input type="text" id="rcSubtitle" class="price-input" placeholder="Ej: Tel 2920... · Viedma"></div>
+      </div>
+      <div class="field" style="margin-top:10px;"><label for="rcFooter">Pie del remito (opcional)</label><input type="text" id="rcFooter" class="price-input" placeholder="Ej: Documento no válido como factura"></div>
+
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label for="rcPageMode">Formato de página por defecto</label>
+          <select id="rcPageMode" class="price-input">
+            <option value="auto">Automático (½ A4 hasta 15 líneas, sino A4)</option>
+            <option value="half">Siempre ½ Hoja A4</option>
+            <option value="half-dup">½ Hoja A4 duplicado (2 por hoja)</option>
+            <option value="full">Siempre Hoja A4 completa / Multipágina</option>
+          </select>
+        </div>
+        <div class="field"><label for="rcFontSize">Tamaño de letra</label>
+          <select id="rcFontSize" class="price-input">
+            <option value="compact">Compacta (entran más ítems)</option>
+            <option value="normal">Normal</option>
+            <option value="large">Grande</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="color-grid" style="margin-top:12px;">
+        <div class="color-item">
+          <label for="rcHeaderBg">Fondo cabecera</label>
+          <div class="color-input-row">
+            <input type="color" id="rcHeaderBg" value="#7f7f7f">
+            <span class="color-hex" id="rcHeaderBgHex">#7f7f7f</span>
+          </div>
+        </div>
+        <div class="color-item">
+          <label for="rcSubHeaderBg">Fondo subcabecera y totales</label>
+          <div class="color-input-row">
+            <input type="color" id="rcSubHeaderBg" value="#b7b7b7">
+            <span class="color-hex" id="rcSubHeaderBgHex">#b7b7b7</span>
+          </div>
+        </div>
+        <div class="color-item">
+          <label for="rcHeaderText">Color texto cabecera</label>
+          <div class="color-input-row">
+            <input type="color" id="rcHeaderText" value="#111111">
+            <span class="color-hex" id="rcHeaderTextHex">#111111</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;font-size:.82rem;">
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowMeta"> Mostrar fecha y N° venta</label>
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowClientAddr"> Mostrar dirección y localidad</label>
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowUnitPrice"> Mostrar columna precio unitario</label>
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowEan"> Mostrar código EAN</label>
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowEmptyReturns"> Incluir bloque DEVUELVE vacío</label>
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowSignature"> Incluir línea de firma y aclaración</label>
+        <label class="sale-stock-check"><input type="checkbox" id="rcShowCutLine"> Línea de corte en ½ A4</label>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-whatsapp btn-auto" id="rcSaveBtn">💾 Guardar diseño</button>
+        <button type="button" class="btn btn-gray btn-auto" id="rcResetBtn">↺ Estilo clásico</button>
+        <button type="button" class="btn btn-close btn-auto" id="rcCancelBtn">Cerrar</button>
+      </div>
+      <p class="admin-note" id="rcStatus"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL CONFIRMAR ENTREGA Y PAGO (SOLO ADMIN) ================= -->
+<div class="overlay" id="deliveryOverlay">
+  <div class="modal" style="max-width:540px;">
+    <button class="modal-close" id="delClose" aria-label="Cerrar">✕</button>
+    <div class="admin-body">
+      <h2>🚚 Confirmar entrega y pago</h2>
+      <p class="admin-note" id="delTitle" style="font-weight:700;color:var(--text);margin-bottom:4px;"></p>
+      <p class="admin-note" id="delSummary" style="margin-bottom:14px;"></p>
+
+      <div class="field"><label for="delPayMode">¿Cómo abonó al recibir el pedido?</label>
+        <select id="delPayMode" class="price-input">
+          <option value="paid">💵 Pagó el total pendiente ahora</option>
+          <option value="partial">💳 Cobro parcial + acuerdo fecha para el resto</option>
+          <option value="promise">📅 Queda pendiente en Cta. Cte. / Acordó fecha de cobro</option>
+          <option value="already_paid">✅ Sin cobro nuevo (ya estaba pago / CTA CTE)</option>
+        </select>
+      </div>
+
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field" id="delAmountWrap">
+          <label for="delAmount">Monto cobrado ($)</label>
+          <input type="number" id="delAmount" class="price-input" min="0" step="0.01" placeholder="0">
+        </div>
+        <div class="field" id="delMethodWrap">
+          <label for="delMethod">Medio de pago</label>
+          <select id="delMethod" class="price-input">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Transferencia">Transferencia</option>
+            <option value="Cheque">Cheque</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field" id="delDateWrap" style="margin-top:10px;">
+        <label for="delPromiseDate">Fecha acordada de cobro (opcional)</label>
+        <input type="date" id="delPromiseDate" class="price-input">
+      </div>
+
+      <div class="field" style="margin-top:10px;">
+        <label for="delNote">Nota de entrega / cobro (opcional)</label>
+        <input type="text" id="delNote" class="price-input" placeholder="Ej: Recibió Juan, pasa a pagar el viernes">
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-whatsapp btn-auto" id="delConfirmBtn">✅ Confirmar entrega</button>
+        <button type="button" class="btn btn-close btn-auto" id="delCancelBtn">Cancelar</button>
+      </div>
+      <p class="admin-note" id="delStatus"></p>
     </div>
   </div>
 </div>
@@ -2618,6 +3067,23 @@ const GITHUB_API = "https://api.github.com";
 const CUSTOM_PRODUCTS_PATH = "data/custom-products.json";
 const CUSTOM_TABS_PATH = "data/custom-tabs.json";
 const SITE_CONFIG_PATH = "data/site-config.json";
+const DEFAULT_REMITO_CONFIG = {
+  title: "",
+  subtitle: "",
+  footerNote: "",
+  headerBg: "#7f7f7f",
+  headerText: "#111111",
+  subHeaderBg: "#b7b7b7",
+  pageMode: "auto",
+  fontSize: "normal",
+  showMeta: true,
+  showClientAddr: true,
+  showUnitPrice: true,
+  showEan: false,
+  showEmptyReturns: false,
+  showSignature: false,
+  showCutLine: true
+};
 const DEFAULT_SITE_CONFIG = {
   whatsapp: DEFAULT_WHATSAPP,
   appearance: {
@@ -2627,9 +3093,15 @@ const DEFAULT_SITE_CONFIG = {
     bgOverlayOpacity: 0.45,
     footerText: "Catálogo generado automáticamente a partir de la planilla de precios · Distre"
   },
-  tabThemes: {}
+  tabThemes: {},
+  remito: { ...DEFAULT_REMITO_CONFIG }
 };
 let siteConfig = JSON.parse(JSON.stringify(DEFAULT_SITE_CONFIG));
+function getRemitoConfig(){
+  let local = {};
+  try{ local = JSON.parse(storageGet('distre_remito_cfg') || 'null') || {}; }catch(e){}
+  return { ...DEFAULT_REMITO_CONFIG, ...(siteConfig.remito || {}), ...(local || {}) };
+}
 let productsWriteQueue = Promise.resolve();
 
 function utf8ToBase64(str){
@@ -2838,7 +3310,8 @@ async function loadSiteConfig(){
     siteConfig = {
       whatsapp: data.whatsapp || DEFAULT_WHATSAPP,
       appearance: { ...DEFAULT_SITE_CONFIG.appearance, ...(data.appearance || {}) },
-      tabThemes: (data.tabThemes && typeof data.tabThemes === 'object') ? data.tabThemes : {}
+      tabThemes: (data.tabThemes && typeof data.tabThemes === 'object') ? data.tabThemes : {},
+      remito: { ...DEFAULT_REMITO_CONFIG, ...(data.remito || {}) }
     };
     if(siteConfig.whatsapp){
       whatsappNumber = siteConfig.whatsapp;
@@ -2854,6 +3327,7 @@ async function loadSiteConfigData(){
   catch(e){ data = JSON.parse(JSON.stringify(DEFAULT_SITE_CONFIG)); }
   if(!data.appearance) data.appearance = { ...DEFAULT_SITE_CONFIG.appearance };
   if(!data.tabThemes || typeof data.tabThemes !== 'object') data.tabThemes = {};
+  if(!data.remito || typeof data.remito !== 'object') data.remito = { ...DEFAULT_REMITO_CONFIG };
   return { data, sha: existing.sha };
 }
 async function saveSiteConfigData(data, sha, message){
@@ -2870,7 +3344,8 @@ async function updateSiteConfig(mutate, message, maxRetries = 3){
       siteConfig = {
         whatsapp: result.whatsapp || DEFAULT_WHATSAPP,
         appearance: { ...DEFAULT_SITE_CONFIG.appearance, ...(result.appearance || {}) },
-        tabThemes: (result.tabThemes && typeof result.tabThemes === 'object') ? result.tabThemes : {}
+        tabThemes: (result.tabThemes && typeof result.tabThemes === 'object') ? result.tabThemes : {},
+        remito: { ...DEFAULT_REMITO_CONFIG, ...(result.remito || {}) }
       };
       return result;
     }catch(e){
@@ -3327,6 +3802,9 @@ const cartOverlay = document.getElementById('cartOverlay');
 const editOverlay = document.getElementById('editOverlay');
 const clientFormOverlay = document.getElementById('clientFormOverlay');
 const clientDetailOverlay = document.getElementById('clientDetailOverlay');
+const remitoPreviewOverlay = document.getElementById('remitoPreviewOverlay');
+const remitoConfigOverlay = document.getElementById('remitoConfigOverlay');
+const deliveryOverlay = document.getElementById('deliveryOverlay');
 
 document.getElementById('adminIconBtn').addEventListener('click', () => {
   if(isAdmin){ openAdminPanel(); }
@@ -3410,6 +3888,7 @@ const ADMIN_SECTION_IDS = {
   products: 'adminSectionProducts',
   scanstock: 'adminSectionScanStock',
   clients: 'adminSectionClients',
+  deposito: 'adminSectionDeposito',
   addproduct: 'adminSectionAddProduct',
   tabs: 'adminSectionTabs',
   appearance: 'adminSectionAppearance',
@@ -3424,6 +3903,10 @@ function switchAdminSection(section){
   if(section === 'clients' && typeof renderClientsSection === 'function'){
     renderClientsSection();
     loadClientsFromSheets(false);
+  }
+  if(section === 'deposito' && typeof renderDepositoSection === 'function'){
+    renderDepositoSection();
+    loadOrdersFromSheets(false);
   }
   if(section === 'scanstock'){
     renderScanLog();
@@ -4425,6 +4908,7 @@ document.getElementById('saveSheetsConfig')?.addEventListener('click', () => {
   const statusEl = document.getElementById('sheetsConfigStatus');
   const { url, apiKey } = getSheetsInputsAndSave();
   clientsLoaded = false;
+  if(typeof ordersLoaded !== 'undefined') ordersLoaded = false;
   if(!url || !apiKey){
     if(statusEl) statusEl.textContent = '⚠ Pegá tanto la URL de la Aplicación Web como tu clave secreta.';
     showToast('Faltan datos de conexión de Google Sheets');
@@ -5025,11 +5509,1280 @@ document.getElementById('registerSaleBtn')?.addEventListener('click', async () =
     clearCart();
     document.getElementById('saleNote').value = '';
     document.getElementById('salePaidAmount').value = '';
+    if(typeof ordersLoaded !== 'undefined') ordersLoaded = false;
     renderCartModal();
-    setSaleStatus(`✅ Venta ${res.saleId} registrada (${client.cliente}).${stockNote}`);
+    setSaleStatus(`✅ Venta ${res.saleId} registrada (${client.cliente}) — en 🏭 Depósito → Para armar.${stockNote}`);
     showToast(`✅ Venta ${res.saleId} registrada`);
   }catch(e){
     setSaleStatus('❌ ' + e.message);
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+/* ---------- DEPÓSITO: ARMADO, ESCÁNER, REMITOS Y ENTREGAS (SOLO ADMIN) ---------- */
+let ordersCache = [];
+let ordersLoaded = false;
+let ordersLoading = false;
+let ordersLoadPromise = null;
+let activeDepTab = 'pending';
+let activeDepOrder = null;
+let depScannedItem = null;
+let depQuickAddCode = '';
+let depQuickAddQty = 1;
+let remitoTargetOrder = null;
+let deliveryTargetOrder = null;
+
+function findOrderInCache(saleId){
+  return ordersCache.find(o => o.saleId === saleId) || null;
+}
+function upsertOrderInCache(order){
+  if(!order || !order.saleId) return;
+  const idx = ordersCache.findIndex(o => o.saleId === order.saleId);
+  if(idx >= 0) ordersCache[idx] = { ...ordersCache[idx], ...order };
+  else ordersCache.unshift(order);
+}
+function getCatalogLookupInfo(ean){
+  return findBaseProduct(ean, 'stock') || findBaseProduct(ean, 'completo') || null;
+}
+function recomputeDraftOrderTotals(draft){
+  if(!draft) return;
+  let subtotal = 0;
+  let descBulto = 0;
+  let itemsNetTotal = 0;
+  (draft.items || []).forEach(it => {
+    const qty = Math.max(0, Math.round(Number(it.cantArmada) || 0));
+    it.cantArmada = qty;
+    it.cantidad = qty;
+    const base = getCatalogLookupInfo(it.ean);
+    const listPrice = (typeof it.precioLista === 'number' && Number.isFinite(it.precioLista))
+      ? it.precioLista
+      : ((base && typeof base.price === 'number' && Number.isFinite(base.price)) ? base.price : (Number(it.precioUnitario) || 0));
+    it.precioLista = listPrice;
+    const bulto = it.bulto ?? (base && base.bulto) ?? 0;
+    const descuentoBulto = it.descuentoBulto ?? (base && base.descuentoBulto) ?? 0;
+    const line = calcCartLine({ price: listPrice, bulto, descuentoBulto }, qty);
+    it.rawTotal = line.rawTotal;
+    it.savings = line.savings;
+    it.total = line.total;
+    it.precioUnitario = (line.savings > 0 && qty > 0)
+      ? Math.round((line.total / qty) * 100) / 100
+      : listPrice;
+    subtotal += line.rawTotal;
+    descBulto += line.savings;
+    itemsNetTotal += line.total;
+  });
+  const totalDevoluciones = (draft.devoluciones || []).reduce((acc, d) => acc + (Math.max(0, Number(d.monto) || 0)), 0);
+  draft.subtotal = Math.round(subtotal * 100) / 100;
+  draft.descBulto = Math.round(descBulto * 100) / 100;
+  draft.totalDevoluciones = Math.round(totalDevoluciones * 100) / 100;
+  draft.total = Math.max(0, Math.round((itemsNetTotal - draft.totalDevoluciones) * 100) / 100);
+}
+
+function computePackingStockDeltas(items){
+  const grouped = {};
+  (items || []).forEach(it => {
+    const ean = String(it.ean || '').trim();
+    if(!ean) return;
+    if(!grouped[ean]) grouped[ean] = { ean, finalQty: 0, alreadyDeducted: 0, descripcion: it.descripcion || ean };
+    grouped[ean].finalQty += Math.max(0, Math.round(Number(it.cantArmada) || 0));
+    grouped[ean].alreadyDeducted += Math.max(0, Math.round(Number(it.cantDescontada) || 0));
+  });
+  const adjustments = [];
+  const notInStock = [];
+  Object.values(grouped).forEach(g => {
+    const delta = g.finalQty - g.alreadyDeducted;
+    if(delta === 0) return;
+    const stockBase = findBaseProduct(g.ean, 'stock');
+    if(!stockBase){
+      notInStock.push({ ean: g.ean, name: g.descripcion, delta });
+      return;
+    }
+    const eff = getEffective(stockBase, 'stock');
+    const prevStock = (typeof eff.stock === 'number' && Number.isFinite(eff.stock)) ? eff.stock : 0;
+    const newStock = Math.max(0, prevStock - delta);
+    adjustments.push({
+      ean: g.ean,
+      codigoInterno: eff.codigoInterno || '',
+      brand: eff.brand || '',
+      cat: eff.cat || '',
+      name: eff.name || g.descripcion,
+      price: eff.price,
+      delta,
+      prevStock,
+      newStock
+    });
+  });
+  return { adjustments, notInStock };
+}
+
+async function applyEnStockAdjustments(adjustments, saleId){
+  if(!adjustments || adjustments.length === 0) return { updated: 0, skippedReason: '' };
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){
+    return { updated: 0, skippedReason: 'Falta token de GitHub en General para ajustar EN STOCK.' };
+  }
+  const updatedEntries = [];
+  const updatedEans = [];
+  await updateCustomProducts(data => {
+    adjustments.forEach(d => {
+      const idx = data.products.findIndex(p => p.ean === d.ean);
+      const existing = idx >= 0 ? data.products[idx] : null;
+      const entry = buildRepoProductEntry(d.ean, existing, { stock: d.newStock }, 'stock');
+      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      updatedEntries.push(entry);
+      updatedEans.push(d.ean);
+    });
+    return data;
+  }, `Depósito ${saleId} — ajustar stock [EN STOCK] (${adjustments.length} producto/s)`, 3, 'stock');
+
+  clearLocalOverrides(updatedEans, 'stock');
+  updatedEntries.forEach(e => mergeCustomProductLocally(e, 'stock'));
+  syncCatalogUI();
+  buildFilters();
+  renderGrid();
+  renderAdminList();
+  return { updated: updatedEntries.length, skippedReason: '' };
+}
+
+async function loadOrdersFromSheets(force = false){
+  if(!isAdmin || !isSheetsConfigured()) return [];
+  if(ordersLoadPromise) return ordersLoadPromise;
+  if(ordersLoaded && !force) return ordersCache;
+  ordersLoading = true;
+  const listEl = document.getElementById('depOrdersList');
+  if(listEl && !ordersLoaded){
+    listEl.innerHTML = `<div class="admin-empty">Cargando pedidos desde Google Sheets...</div>`;
+  }
+  ordersLoadPromise = (async () => {
+    try{
+      const res = await sheetsApi('getOrders');
+      ordersCache = Array.isArray(res.orders) ? res.orders : [];
+      ordersLoaded = true;
+      renderDepositoSection();
+      return ordersCache;
+    }catch(e){
+      if(listEl) listEl.innerHTML = `<div class="admin-empty" style="color:var(--danger);">❌ ${escapeHtml(e.message)}</div>`;
+      return [];
+    }finally{
+      ordersLoading = false;
+      ordersLoadPromise = null;
+    }
+  })();
+  return ordersLoadPromise;
+}
+
+function getDepTabGroup(status){
+  const st = String(status || 'PARA_ARMAR').toUpperCase();
+  if(st === 'ENTREGADO') return 'delivered';
+  if(st === 'LISTO') return 'ready';
+  return 'pending';
+}
+
+function renderDepositoSection(){
+  const notCfg = document.getElementById('depNotConfiguredBox');
+  const listView = document.getElementById('depListView');
+  const wsView = document.getElementById('depWorkspaceView');
+  if(!listView || !wsView) return;
+
+  if(!isSheetsConfigured()){
+    if(notCfg) notCfg.style.display = 'flex';
+    listView.style.display = 'none';
+    wsView.style.display = 'none';
+    return;
+  }
+  if(notCfg) notCfg.style.display = 'none';
+
+  if(activeDepOrder){
+    listView.style.display = 'none';
+    wsView.style.display = 'flex';
+    renderDepWorkspace();
+    return;
+  }
+  wsView.style.display = 'none';
+  listView.style.display = '';
+
+  const counts = { pending: 0, ready: 0, delivered: 0 };
+  ordersCache.forEach(o => { counts[getDepTabGroup(o.estadoDeposito)] += 1; });
+  document.getElementById('depCountPending').textContent = counts.pending;
+  document.getElementById('depCountReady').textContent = counts.ready;
+  document.getElementById('depCountDelivered').textContent = counts.delivered;
+
+  document.querySelectorAll('[data-dep-tab]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.depTab === activeDepTab);
+  });
+
+  const listEl = document.getElementById('depOrdersList');
+  if(!ordersLoaded && ordersLoading){
+    listEl.innerHTML = `<div class="admin-empty">Cargando pedidos desde Google Sheets...</div>`;
+    return;
+  }
+
+  const q = (document.getElementById('depSearchInput')?.value || '').trim().toLowerCase();
+  const todayIso = new Date().toISOString().slice(0, 10);
+  const filtered = ordersCache.filter(o => {
+    if(getDepTabGroup(o.estadoDeposito) !== activeDepTab) return false;
+    if(!q) return true;
+    return String(o.cliente || '').toLowerCase().includes(q)
+      || String(o.saleId || '').toLowerCase().includes(q)
+      || String(o.localidad || '').toLowerCase().includes(q)
+      || String(o.estado || '').toLowerCase().includes(q);
+  });
+
+  if(filtered.length === 0){
+    const emptyMsgs = {
+      pending: 'No hay pedidos pendientes para armar.',
+      ready: 'No hay pedidos listos para entregar.',
+      delivered: 'Todavía no hay pedidos entregados.'
+    };
+    listEl.innerHTML = `<div class="admin-empty">${q ? 'No hay pedidos que coincidan con la búsqueda.' : emptyMsgs[activeDepTab]}</div>`;
+    return;
+  }
+
+  listEl.innerHTML = filtered.map(o => {
+    const st = String(o.estadoDeposito || 'PARA_ARMAR').toUpperCase();
+    const stClass = st.toLowerCase();
+    const stLabel = st === 'PARA_ARMAR' ? 'Para armar' : (st === 'EN_ESPERA' ? 'En espera (parcial)' : (st === 'LISTO' ? 'Listo para entregar' : 'Entregado'));
+    const totalPed = (o.items || []).reduce((a, it) => a + (Number(it.cantPedida) || 0), 0);
+    const totalArm = (o.items || []).reduce((a, it) => a + (Number(it.cantArmada) || 0), 0);
+    const promiseOverdue = !!(o.fechaCobroAcordada && o.saldoVenta > 0 && o.fechaCobroAcordada < todayIso);
+    const promiseBadge = o.fechaCobroAcordada
+      ? `<span class="dep-status-pill ${promiseOverdue ? 'overdue' : 'en_espera'}">${promiseOverdue ? '⚠ Cobro vencido: ' : '📅 Cobro acordado: '}${escapeHtml(o.fechaCobroAcordada)}</span>`
+      : '';
+    const locTxt = [o.localidad, o.direccion].filter(Boolean).join(' · ');
+    const safeId = escapeHtml(o.saleId);
+
+    let actionsHtml = '';
+    if(st === 'PARA_ARMAR' || st === 'EN_ESPERA'){
+      actionsHtml = `
+        <button type="button" class="btn btn-gold btn-auto" data-dep-open="${safeId}">🔧 ${st === 'EN_ESPERA' ? 'Continuar armado' : 'Armar pedido'}</button>
+        <button type="button" class="btn btn-gray btn-auto" data-dep-remito="${safeId}">🖨️ Remito</button>`;
+    } else if(st === 'LISTO'){
+      actionsHtml = `
+        <button type="button" class="btn btn-whatsapp btn-auto" data-dep-deliver="${safeId}">🚚 Confirmar entrega y pago</button>
+        <button type="button" class="btn btn-gray btn-auto" data-dep-remito="${safeId}">🖨️ Remito</button>
+        <button type="button" class="btn btn-close btn-auto" data-dep-reopen="${safeId}">✏ Modificar</button>`;
+    } else {
+      const collectBtn = o.saldoVenta > 0
+        ? `<button type="button" class="btn btn-gold btn-auto" data-dep-collect="${safeId}">💵 Cobrar saldo (${formatPrice(o.saldoVenta)})</button>`
+        : '';
+      actionsHtml = `
+        ${collectBtn}
+        <button type="button" class="btn btn-gray btn-auto" data-dep-remito="${safeId}">🖨️ Remito</button>`;
+    }
+
+    return `
+    <div class="dep-order-card">
+      <div class="dep-order-info">
+        <div class="dep-order-title">
+          <span>${escapeHtml(o.cliente)}</span>
+          <span class="client-code-pill">${safeId}</span>
+          <span class="dep-status-pill ${stClass}">${stLabel}</span>
+          ${promiseBadge}
+        </div>
+        <div class="dep-order-meta">
+          ${escapeHtml(o.fecha)}${locTxt ? ' · ' + escapeHtml(locTxt) : ''} · ${(o.items || []).length} ítem(s) (${totalArm}/${totalPed} u.)
+          · Total: <b>${formatPrice(o.total)}</b> · Pagado: ${formatPrice(o.pagado)} · Saldo: <b style="color:${o.saldoVenta > 0 ? 'var(--danger)' : 'inherit'};">${formatPrice(o.saldoVenta)}</b>
+          ${o.nota ? '<br>📝 ' + escapeHtml(o.nota) : ''}
+        </div>
+      </div>
+      <div class="dep-order-actions">${actionsHtml}</div>
+    </div>`;
+  }).join('');
+
+  listEl.querySelectorAll('[data-dep-open]').forEach(b => b.addEventListener('click', () => openDepWorkspace(b.dataset.depOpen)));
+  listEl.querySelectorAll('[data-dep-remito]').forEach(b => b.addEventListener('click', () => {
+    const o = findOrderInCache(b.dataset.depRemito);
+    if(o) openRemitoPreviewModal(o);
+  }));
+  listEl.querySelectorAll('[data-dep-deliver]').forEach(b => b.addEventListener('click', () => {
+    const o = findOrderInCache(b.dataset.depDeliver);
+    if(o) openDeliveryModal(o);
+  }));
+  listEl.querySelectorAll('[data-dep-collect]').forEach(b => b.addEventListener('click', () => {
+    const o = findOrderInCache(b.dataset.depCollect);
+    if(o) openDeliveryModal(o);
+  }));
+  listEl.querySelectorAll('[data-dep-reopen]').forEach(b => b.addEventListener('click', () => reopenOrderFromList(b.dataset.depReopen)));
+}
+
+async function reopenOrderFromList(saleId){
+  const order = findOrderInCache(saleId);
+  if(!order) return;
+  try{
+    await sheetsApi('reopenOrderToPacking', { saleId });
+    order.estadoDeposito = 'EN_ESPERA';
+    activeDepTab = 'pending';
+    openDepWorkspace(saleId);
+    showToast(`Pedido ${saleId} reabierto para modificar`);
+  }catch(e){
+    showToast('❌ ' + e.message);
+  }
+}
+
+function buildDraftOrderClone(order){
+  const clone = JSON.parse(JSON.stringify(order));
+  clone.items = (clone.items || []).map(it => {
+    const base = getCatalogLookupInfo(it.ean);
+    const hasCustomPrice = (typeof it.precioUnitario === 'number' && it.precioUnitario > 0);
+    return {
+      ...it,
+      cantPedida: Math.max(0, Math.round(Number(it.cantPedida ?? it.cantidad) || 0)),
+      cantArmada: Math.max(0, Math.round(Number(it.cantArmada) || 0)),
+      cantDescontada: Math.max(0, Math.round(Number(it.cantDescontada ?? it.cantidad) || 0)),
+      precioLista: (base && typeof base.price === 'number' && !hasCustomPrice) ? base.price : (Number(it.precioUnitario) || (base && base.price) || 0),
+      bulto: base ? base.bulto : null,
+      descuentoBulto: base ? base.descuentoBulto : null
+    };
+  });
+  clone.devoluciones = Array.isArray(clone.devoluciones) ? clone.devoluciones : [];
+  recomputeDraftOrderTotals(clone);
+  return clone;
+}
+
+function openDepWorkspace(saleId){
+  const order = findOrderInCache(saleId);
+  if(!order) return;
+  activeDepOrder = buildDraftOrderClone(order);
+  depScannedItem = null;
+  document.getElementById('depOrderNote').value = activeDepOrder.nota || '';
+  document.getElementById('depWsStatus').textContent = '';
+  document.getElementById('depScanCode').value = '';
+  document.getElementById('depScanQty').value = '';
+  document.getElementById('depScanQty').disabled = true;
+  document.getElementById('depScanApplyBtn').disabled = true;
+  document.getElementById('depScanFeedback').className = 'scan-feedback';
+  document.getElementById('depScanFeedback').textContent = '';
+  hideDepQuickAdd();
+  populateDepCatalogDropdown();
+  renderDepositoSection();
+  setTimeout(() => document.getElementById('depScanCode')?.focus(), 0);
+}
+
+function populateDepCatalogDropdown(){
+  const sel = document.getElementById('depCatalogSelect');
+  if(!sel) return;
+  const q = (document.getElementById('depCatalogSearch')?.value || '').trim().toLowerCase();
+  const seen = new Set();
+  const all = [];
+  ['stock', 'completo'].forEach(cid => {
+    getAllTabs().forEach(t => {
+      getTabProducts(t.id, cid).forEach(p => {
+        const eff = getEffective(p, cid);
+        if(eff.deleted || !eff.enabled || seen.has(eff.ean)) return;
+        seen.add(eff.ean);
+        all.push({ ...eff, _catOrigin: cid === 'stock' ? 'EN STOCK' : 'COMPLETO', _tabName: t.name });
+      });
+    });
+  });
+  const filtered = all.filter(p => !q || matchesProductQuery(p, q)).slice(0, 120);
+  if(filtered.length === 0){
+    sel.innerHTML = `<option value="">— Sin coincidencias —</option>`;
+    return;
+  }
+  sel.innerHTML = filtered.map(p => {
+    const stkTxt = typeof p.stock === 'number' ? ` · Stk:${p.stock}` : '';
+    const priceTxt = typeof p.price === 'number' ? ` · ${formatPrice(p.price)}` : '';
+    return `<option value="${escapeHtml(p.ean)}">${escapeHtml(p.name)} (${escapeHtml(p.ean)}${priceTxt}${stkTxt})</option>`;
+  }).join('');
+}
+
+function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
+  if(!activeDepOrder || !productObj) return;
+  const ean = String(productObj.ean || '').trim();
+  const q = Math.max(0, Math.round(Number(qtyVal) || 0));
+  let item = activeDepOrder.items.find(it => it.ean === ean);
+  if(!item){
+    const base = getCatalogLookupInfo(ean) || productObj;
+    item = {
+      ean,
+      descripcion: productObj.name || productObj.descripcion || ean,
+      catalogo: activeDepOrder.catalogo || 'EN STOCK',
+      cantidad: q,
+      cantPedida: 0,
+      cantArmada: q,
+      cantDescontada: 0,
+      precioLista: (typeof base.price === 'number' && Number.isFinite(base.price)) ? base.price : 0,
+      precioUnitario: (typeof base.price === 'number' && Number.isFinite(base.price)) ? base.price : 0,
+      bulto: base.bulto || null,
+      descuentoBulto: base.descuentoBulto || null,
+      total: 0
+    };
+    activeDepOrder.items.push(item);
+  } else {
+    item.cantArmada = mode === 'set' ? q : Math.max(0, (Number(item.cantArmada) || 0) + q);
+  }
+  recomputeDraftOrderTotals(activeDepOrder);
+  renderDepWorkspace();
+  return item;
+}
+
+function renderDepWorkspace(){
+  if(!activeDepOrder) return;
+  const o = activeDepOrder;
+  recomputeDraftOrderTotals(o);
+
+  document.getElementById('depWsTitle').textContent = `${o.cliente} (${o.saleId})`;
+  const metaParts = [o.fecha, o.localidad, o.direccion, o.telefono ? 'Tel ' + o.telefono : ''].filter(Boolean);
+  document.getElementById('depWsMeta').textContent = metaParts.join(' · ');
+
+  const st = String(o.estadoDeposito || 'PARA_ARMAR').toUpperCase();
+  const badge = document.getElementById('depWsStatusBadge');
+  badge.className = 'dep-status-pill ' + st.toLowerCase();
+  badge.textContent = st === 'PARA_ARMAR' ? 'Para armar' : (st === 'EN_ESPERA' ? 'En espera' : (st === 'LISTO' ? 'Listo' : 'Entregado'));
+
+  const totalPed = o.items.reduce((a, it) => a + (it.cantPedida || 0), 0);
+  const totalArm = o.items.reduce((a, it) => a + (it.cantArmada || 0), 0);
+  const pct = totalPed > 0 ? Math.min(100, Math.round((totalArm / totalPed) * 100)) : (totalArm > 0 ? 100 : 0);
+  document.getElementById('depProgressText').textContent = `${totalArm} / ${totalPed} unidades armadas (${pct}%)`;
+  document.getElementById('depProgressFill').style.width = `${pct}%`;
+
+  const tbody = document.getElementById('depItemsList');
+  if(o.items.length === 0){
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;color:var(--text-dim);padding:18px;">Sin productos en el pedido.</td></tr>`;
+  } else {
+    tbody.innerHTML = o.items.map((it, idx) => {
+      const ped = it.cantPedida || 0;
+      const arm = it.cantArmada || 0;
+      const diff = arm - ped;
+      let rowCls = '';
+      let diffBadge = '';
+      if(ped === 0 && arm > 0){
+        rowCls = 'row-added';
+        diffBadge = `<span class="dep-diff-pill extra">+${arm} agregado</span>`;
+      } else if(arm === 0 && ped > 0){
+        rowCls = 'row-short';
+        diffBadge = `<span class="dep-diff-pill zero">Faltan ${ped}</span>`;
+      } else if(diff === 0){
+        rowCls = 'row-ok';
+        diffBadge = `<span class="dep-diff-pill ok">✓ Completo</span>`;
+      } else if(diff < 0){
+        rowCls = 'row-short';
+        diffBadge = `<span class="dep-diff-pill short">Faltan ${Math.abs(diff)}</span>`;
+      } else {
+        rowCls = 'row-added';
+        diffBadge = `<span class="dep-diff-pill extra">+${diff} extra</span>`;
+      }
+      const stockInfo = findBaseProduct(it.ean, 'stock');
+      const curStockTag = stockInfo && typeof stockInfo.stock === 'number'
+        ? ` · Stk actual EN STOCK: ${stockInfo.stock}`
+        : ' · (Solo catálogo / sin stock vinculado)';
+      return `
+      <tr class="${rowCls}">
+        <td>
+          <div style="font-weight:700;line-height:1.25;">${escapeHtml(it.descripcion)}</div>
+          <div style="font-size:.7rem;color:var(--text-dim);">EAN ${escapeHtml(it.ean)}${curStockTag}</div>
+        </td>
+        <td style="text-align:center;font-weight:700;">${ped}</td>
+        <td style="text-align:center;">
+          <div class="dep-qty-ctrl">
+            <button type="button" class="dep-mini-btn" data-dep-dec="${idx}" title="Restar 1">−</button>
+            <input type="number" class="price-input" min="0" step="1" data-dep-qty="${idx}" value="${arm}">
+            <button type="button" class="dep-mini-btn" data-dep-inc="${idx}" title="Sumar 1">+</button>
+            <button type="button" class="dep-mini-btn" data-dep-eq="${idx}" title="Igualar a lo pedido (${ped})">=</button>
+          </div>
+        </td>
+        <td style="text-align:center;">${diffBadge}</td>
+        <td style="text-align:right;font-family:monospace;">${formatPrice(it.precioUnitario)}</td>
+        <td style="text-align:right;font-weight:800;">${formatPrice(it.total)}</td>
+        <td style="text-align:center;"><button type="button" class="cart-remove" data-dep-del="${idx}" title="Quitar / poner en 0">🗑</button></td>
+      </tr>`;
+    }).join('');
+
+    tbody.querySelectorAll('[data-dep-dec]').forEach(b => b.addEventListener('click', () => {
+      const i = Number(b.dataset.depDec);
+      o.items[i].cantArmada = Math.max(0, (o.items[i].cantArmada || 0) - 1);
+      renderDepWorkspace();
+    }));
+    tbody.querySelectorAll('[data-dep-inc]').forEach(b => b.addEventListener('click', () => {
+      const i = Number(b.dataset.depInc);
+      o.items[i].cantArmada = (o.items[i].cantArmada || 0) + 1;
+      renderDepWorkspace();
+    }));
+    tbody.querySelectorAll('[data-dep-eq]').forEach(b => b.addEventListener('click', () => {
+      const i = Number(b.dataset.depEq);
+      o.items[i].cantArmada = o.items[i].cantPedida || 0;
+      renderDepWorkspace();
+    }));
+    tbody.querySelectorAll('[data-dep-qty]').forEach(inp => inp.addEventListener('change', () => {
+      const i = Number(inp.dataset.depQty);
+      o.items[i].cantArmada = Math.max(0, Math.round(Number(inp.value) || 0));
+      renderDepWorkspace();
+    }));
+    tbody.querySelectorAll('[data-dep-del]').forEach(b => b.addEventListener('click', () => {
+      const i = Number(b.dataset.depDel);
+      if((o.items[i].cantPedida || 0) === 0 && (o.items[i].cantDescontada || 0) === 0){
+        o.items.splice(i, 1);
+      } else {
+        o.items[i].cantArmada = 0;
+      }
+      renderDepWorkspace();
+    }));
+  }
+
+  const retList = document.getElementById('depReturnsList');
+  if(!o.devoluciones.length){
+    retList.innerHTML = `<div class="admin-note" style="margin:0;">Sin devoluciones cargadas.</div>`;
+  } else {
+    retList.innerHTML = o.devoluciones.map((r, i) => `
+      <div class="dep-ret-row">
+        <span>${escapeHtml(r.descripcion)}</span>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <b style="color:var(--danger);">-${formatPrice(r.monto)}</b>
+          <button type="button" class="dep-mini-btn" data-dep-delret="${i}">✕</button>
+        </div>
+      </div>`).join('');
+    retList.querySelectorAll('[data-dep-delret]').forEach(b => b.addEventListener('click', () => {
+      o.devoluciones.splice(Number(b.dataset.depDelret), 1);
+      renderDepWorkspace();
+    }));
+  }
+
+  document.getElementById('depTotalsBox').innerHTML = `
+    <div>Artículos armados: <b>${totalArm}</b> (pedidos: ${totalPed})</div>
+    <div>Subtotal artículos: <b>${formatPrice(o.subtotal - o.descBulto)}</b>${o.descBulto > 0 ? ` <span style="color:var(--text-dim);">(incluye -${formatPrice(o.descBulto)} bulto)</span>` : ''}</div>
+    ${o.totalDevoluciones > 0 ? `<div style="color:var(--danger);">Devuelve: <b>-${formatPrice(o.totalDevoluciones)}</b></div>` : ''}
+    <div style="font-size:1rem;margin-top:4px;">TOTAL QUEDA ENTONCES: <b style="color:var(--accent);">${formatPrice(o.total)}</b></div>
+  `;
+
+  const { adjustments, notInStock } = computePackingStockDeltas(o.items);
+  const deltaBox = document.getElementById('depStockDeltaBox');
+  if(adjustments.length === 0 && notInStock.length === 0){
+    deltaBox.textContent = 'Sin diferencias de stock pendientes respecto a lo ya descontado en EN STOCK.';
+  } else {
+    const lines = adjustments.map(d => {
+      const actionTxt = d.delta < 0
+        ? `<b style="color:#186732;">devuelve +${Math.abs(d.delta)}</b>`
+        : `<b style="color:var(--danger);">descuenta -${d.delta}</b>`;
+      return `${escapeHtml(d.name)}: ${actionTxt} (${d.prevStock} → <b>${d.newStock}</b>)`;
+    });
+    if(notInStock.length > 0){
+      lines.push(`<span style="color:var(--text-dim);">${notInStock.length} producto(s) modificado(s) no figuran en EN STOCK (no modifican stock).</span>`);
+    }
+    deltaBox.innerHTML = lines.join('<br>');
+  }
+}
+
+function setDepScanFeedback(type, msg){
+  const el = document.getElementById('depScanFeedback');
+  if(!el) return;
+  el.className = 'scan-feedback' + (type ? ' ' + type : '');
+  el.textContent = msg || '';
+}
+function hideDepQuickAdd(){
+  document.getElementById('depScanNotFoundCard').style.display = 'none';
+  document.getElementById('depQuickAddBox').style.display = 'none';
+  const st = document.getElementById('dqStatus');
+  if(st) st.textContent = '';
+}
+function populateDepQuickAddSubcats(preSub = ''){
+  const tab = document.getElementById('dqTab')?.value || 'algabo';
+  const cat = document.getElementById('dqCatSelect')?.value || '';
+  const sel = document.getElementById('dqSubcatSelect');
+  const newInp = document.getElementById('dqSubcatNew');
+  if(!sel) return;
+  const subSet = new Set();
+  if(cat && cat !== '__new__'){
+    CATALOG_IDS.forEach(cid => getProductsForTab(tab, cid).forEach(p => {
+      if(p.cat === cat && p.subcat && String(p.subcat).trim()) subSet.add(String(p.subcat).trim());
+    }));
+  }
+  if(preSub) subSet.add(preSub);
+  const subs = [...subSet].sort((a, b) => a.localeCompare(b, 'es'));
+  sel.innerHTML = `<option value="">— Sin subcategoría —</option>`
+    + subs.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('')
+    + `<option value="__new__">+ Nueva subcategoría...</option>`;
+  sel.value = preSub || '';
+  if(newInp){ newInp.value = ''; newInp.style.display = 'none'; }
+}
+function populateDepQuickAddCategories(preCat = '', preSub = ''){
+  const tab = document.getElementById('dqTab')?.value || 'algabo';
+  const sel = document.getElementById('dqCatSelect');
+  const newInp = document.getElementById('dqCatNew');
+  if(!sel) return;
+  const catSet = new Set();
+  CATALOG_IDS.forEach(cid => getProductsForTab(tab, cid).forEach(p => {
+    if(p.cat && String(p.cat).trim()) catSet.add(String(p.cat).trim());
+  }));
+  if(preCat) catSet.add(preCat);
+  const cats = [...catSet].sort((a, b) => a.localeCompare(b, 'es'));
+  sel.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('')
+    + `<option value="__new__">+ Nueva categoría...</option>`;
+  sel.value = preCat && cats.includes(preCat) ? preCat : (cats[0] || '__new__');
+  if(newInp){ newInp.value = ''; newInp.style.display = sel.value === '__new__' ? '' : 'none'; }
+  populateDepQuickAddSubcats(preSub);
+}
+function openDepQuickAdd(code = '', orderQty = 1){
+  renderTabSelects();
+  ['dqEan','dqCodigoInterno','dqName','dqCatalogName','dqPrice','dqStock','dqBulto','dqBultoDesc','dqBrand','dqCatNew','dqSubcatNew'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+  document.getElementById('dqEan').value = code;
+  document.getElementById('dqOrderQty').value = String(Math.max(0, Number(orderQty) || 1));
+  document.getElementById('dqStock').value = String(Math.max(0, Number(orderQty) || 1));
+  document.getElementById('dqStatus').textContent = '';
+  populateDepQuickAddCategories('', '');
+  document.getElementById('depScanNotFoundCard').style.display = 'none';
+  document.getElementById('depQuickAddBox').style.display = '';
+  setTimeout(() => document.getElementById(code ? 'dqName' : 'dqEan')?.focus(), 0);
+}
+
+function handleDepScanSubmit(){
+  if(!activeDepOrder) return;
+  const codeInp = document.getElementById('depScanCode');
+  const qtyInp = document.getElementById('depScanQty');
+  const applyBtn = document.getElementById('depScanApplyBtn');
+  const { code, inlineQty } = parseScanCodeInput(codeInp.value);
+  hideDepQuickAdd();
+  if(!code){
+    setDepScanFeedback('', '');
+    codeInp.focus();
+    return;
+  }
+  const codeLower = code.toLowerCase();
+  const orderIdx = activeDepOrder.items.findIndex(it => String(it.ean || '').toLowerCase() === codeLower);
+  let resolved = null;
+  if(orderIdx >= 0){
+    const it = activeDepOrder.items[orderIdx];
+    const catProd = getCatalogLookupInfo(it.ean) || {};
+    resolved = { source: 'order', ean: it.ean, name: it.descripcion, product: { ...catProd, ean: it.ean, name: it.descripcion } };
+  } else {
+    const inStock = findProductByCode(code, 'stock');
+    const inComp = inStock || findProductByCode(code, 'completo');
+    if(inComp){
+      resolved = { source: inStock ? 'stock' : 'completo', ean: inComp.product.ean, name: inComp.product.name, product: inComp.product };
+    }
+  }
+  if(!resolved){
+    depScannedItem = null;
+    qtyInp.value = '';
+    qtyInp.disabled = true;
+    applyBtn.disabled = true;
+    depQuickAddCode = code;
+    depQuickAddQty = inlineQty !== null ? inlineQty : 1;
+    document.getElementById('depNotFoundMsg').textContent = `El código "${code}" no existe en el pedido ni en los catálogos.`;
+    document.getElementById('depScanNotFoundCard').style.display = 'flex';
+    if(document.getElementById('depScanSound')?.checked) playScanBeep(false);
+    setDepScanFeedback('err', `❌ No se encontró "${code}". Podés cargarlo nuevo abajo.`);
+    codeInp.focus();
+    codeInp.select();
+    return;
+  }
+  depScannedItem = resolved;
+  if(inlineQty !== null){
+    applyDepScannedQty(inlineQty);
+    return;
+  }
+  qtyInp.disabled = false;
+  applyBtn.disabled = false;
+  qtyInp.value = '';
+  setDepScanFeedback('info', `Encontrado: ${resolved.name}. Ingresá la cantidad y presioná Enter.`);
+  qtyInp.focus();
+}
+
+function applyDepScannedQty(qtyOverride){
+  if(!depScannedItem || !activeDepOrder) return;
+  const qtyInp = document.getElementById('depScanQty');
+  const codeInp = document.getElementById('depScanCode');
+  const raw = qtyOverride !== undefined ? qtyOverride : qtyInp.value;
+  const qty = parseNonNegInt(raw);
+  if(qty === null){
+    if(document.getElementById('depScanSound')?.checked) playScanBeep(false);
+    setDepScanFeedback('err', '❌ Ingresá una cantidad válida.');
+    qtyInp.focus();
+    return;
+  }
+  const mode = document.getElementById('depScanMode')?.value || 'add';
+  const updated = addOrUpdateOrderItem(depScannedItem.product, qty, mode);
+  if(document.getElementById('depScanSound')?.checked) playScanBeep(true);
+  setDepScanFeedback('ok', `✅ ${updated.descripcion} → Armado: ${updated.cantArmada} (pedido: ${updated.cantPedida})`);
+  depScannedItem = null;
+  codeInp.value = '';
+  qtyInp.value = '';
+  qtyInp.disabled = true;
+  document.getElementById('depScanApplyBtn').disabled = true;
+  codeInp.focus();
+}
+
+async function saveActiveDepOrder(nextStatus){
+  if(!activeDepOrder) return;
+  const o = activeDepOrder;
+  o.nota = document.getElementById('depOrderNote')?.value.trim() || '';
+  recomputeDraftOrderTotals(o);
+
+  const statusEl = document.getElementById('depWsStatus');
+  const partialBtn = document.getElementById('depSavePartialBtn');
+  const finishBtn = document.getElementById('depFinishOrderBtn');
+  partialBtn.disabled = true;
+  finishBtn.disabled = true;
+
+  const { adjustments } = computePackingStockDeltas(o.items);
+  const gh = getGithubConfig();
+  const canUpdateGithub = !!(gh.repo && gh.token);
+  const sentAdjustments = canUpdateGithub ? adjustments : [];
+
+  const itemsPayload = o.items.map(it => ({
+    ean: it.ean,
+    descripcion: it.descripcion,
+    catalogo: it.catalogo || o.catalogo || 'EN STOCK',
+    cantPedida: it.cantPedida || 0,
+    cantArmada: it.cantArmada || 0,
+    cantDescontada: canUpdateGithub ? (it.cantArmada || 0) : (it.cantDescontada || 0),
+    precioUnitario: it.precioUnitario || 0,
+    total: it.total || 0
+  }));
+
+  statusEl.textContent = 'Guardando armado en Google Sheets...';
+  try{
+    const res = await sheetsApi('saveOrderPacking', {
+      saleId: o.saleId,
+      nextStatus,
+      items: itemsPayload,
+      devoluciones: o.devoluciones,
+      subtotal: o.subtotal,
+      descBulto: o.descBulto,
+      totalDevoluciones: o.totalDevoluciones,
+      total: o.total,
+      nota: o.nota,
+      stockAdjustments: sentAdjustments
+    });
+
+    let ghNote = '';
+    if(adjustments.length > 0){
+      if(canUpdateGithub){
+        statusEl.textContent = 'Ajustando stock en EN STOCK (GitHub)...';
+        try{
+          const stRes = await applyEnStockAdjustments(adjustments, o.saleId);
+          ghNote = ` Stock ajustado en EN STOCK (${stRes.updated} producto/s).`;
+        }catch(ghErr){
+          ghNote = ` ⚠ Armado guardado en Sheets, pero falló GitHub: ${ghErr.message}`;
+        }
+      } else {
+        ghNote = ' ⚠ Falta configurar el token de GitHub en General para reflejar el ajuste en EN STOCK.';
+      }
+    }
+
+    if(canUpdateGithub){
+      o.items.forEach(it => { it.cantDescontada = it.cantArmada; });
+    }
+    o.estadoDeposito = res.estadoDeposito || nextStatus;
+    o.fechaArmado = res.fechaArmado || o.fechaArmado;
+    o.saldoVenta = res.saldoVenta !== undefined ? res.saldoVenta : o.saldoVenta;
+    o.estado = res.estado || o.estado;
+    upsertOrderInCache(JSON.parse(JSON.stringify(o)));
+    if(res.clientBalance) upsertClientInCache(res.clientBalance);
+
+    if(nextStatus === 'LISTO'){
+      activeDepOrder = null;
+      activeDepTab = 'ready';
+      renderDepositoSection();
+      showToast(`✅ Pedido ${o.saleId} listo para entregar.${ghNote}`);
+    } else {
+      renderDepWorkspace();
+      statusEl.textContent = `⏳ Armado parcial guardado (${o.saleId}).${ghNote}`;
+      showToast(`⏳ Pedido ${o.saleId} guardado en espera`);
+    }
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    partialBtn.disabled = false;
+    finishBtn.disabled = false;
+  }
+}
+
+/* ---------- REMITO A4 / 1/2 A4 PERSONALIZABLE ---------- */
+function resolveRemitoMode(order, cfg, modeOverride = null){
+  const reqMode = (modeOverride && modeOverride !== 'auto') ? modeOverride : cfg.pageMode;
+  if(reqMode && reqMode !== 'auto') return reqMode;
+  const activeCount = (order.items || []).filter(it => (Number(it.cantArmada) || 0) > 0).length;
+  const retCount = (order.devoluciones && order.devoluciones.length)
+    ? (order.devoluciones.length + 3)
+    : (cfg.showEmptyReturns ? 4 : 0);
+  return (activeCount + retCount) <= 15 ? 'half' : 'full';
+}
+
+function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false){
+  const activeItems = (order.items || []).filter(it => (Number(it.cantArmada) || 0) > 0);
+  const totalUnidades = activeItems.reduce((a, it) => a + (Number(it.cantArmada) || 0), 0);
+  const itemsSub = activeItems.reduce((a, it) => a + (Number(it.total) || 0), 0);
+  const devs = Array.isArray(order.devoluciones) ? order.devoluciones : [];
+  const totalDevs = devs.reduce((a, d) => a + (Math.max(0, Number(d.monto) || 0)), 0);
+  const netTotal = Math.max(0, Math.round((itemsSub - totalDevs) * 100) / 100);
+
+  const fontScale = cfg.fontSize === 'compact' ? '10.5px' : (cfg.fontSize === 'large' ? '13.5px' : '11.5px');
+  const cellPad = cfg.fontSize === 'compact' ? '2.5px 6px' : (cfg.fontSize === 'large' ? '5px 8px' : '3.5px 7px');
+  const headerBg = cfg.headerBg || '#7f7f7f';
+  const headerText = cfg.headerText || '#111111';
+  const subBg = cfg.subHeaderBg || '#b7b7b7';
+  const colSpanProd = 1;
+  const totalCols = cfg.showUnitPrice ? 4 : 3;
+
+  const customBanner = (cfg.title || cfg.subtitle)
+    ? `<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid #222;padding:3px 6px;margin-bottom:4px;font-size:.92em;">
+         <b>${escapeHtml(cfg.title || '')}</b>
+         <span>${escapeHtml(cfg.subtitle || '')}</span>
+       </div>`
+    : '';
+  const metaLine = (cfg.showMeta || cfg.showClientAddr || copyLabel)
+    ? `<div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.86em;color:#333;padding:2px 4px 5px;">
+         <span>${cfg.showMeta ? `<b>${escapeHtml(order.saleId)}</b> · ${escapeHtml(order.fecha || '')}` : ''}${cfg.showClientAddr && (order.localidad || order.direccion) ? ` · ${escapeHtml([order.localidad, order.direccion].filter(Boolean).join(' - '))}` : ''}</span>
+         ${copyLabel ? `<b>${escapeHtml(copyLabel)}</b>` : ''}
+       </div>`
+    : '';
+
+  const rowsHtml = activeItems.map(it => `
+    <tr>
+      <td style="padding:${cellPad};border:1px solid #444;font-weight:600;">${escapeHtml(it.descripcion)}${cfg.showEan && it.ean ? ` <span style="color:#555;font-weight:400;font-size:.85em;">(${escapeHtml(it.ean)})</span>` : ''}</td>
+      <td style="padding:${cellPad};border:1px solid #444;text-align:center;font-weight:600;width:44px;">${Number(it.cantArmada) || 0}</td>
+      ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #444;text-align:right;white-space:nowrap;width:78px;">${formatPrice(it.precioUnitario || 0)}</td>` : ''}
+      <td style="padding:${cellPad};border:1px solid #444;text-align:right;font-weight:700;white-space:nowrap;width:92px;">${formatPrice(it.total || 0)}</td>
+    </tr>`).join('');
+
+  let returnsHtml = '';
+  if(devs.length > 0 || cfg.showEmptyReturns){
+    const devRows = devs.length > 0
+      ? devs.map(d => `
+          <tr>
+            <td style="padding:${cellPad};border:1px solid #888;">${escapeHtml(d.descripcion || '')}</td>
+            <td style="padding:${cellPad};border:1px solid #888;text-align:center;width:44px;"></td>
+            ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #888;width:78px;"></td>` : ''}
+            <td style="padding:${cellPad};border:1px solid #888;text-align:right;font-weight:700;width:92px;">-${formatPrice(d.monto || 0)}</td>
+          </tr>`).join('')
+      : `<tr><td colspan="${totalCols}" style="padding:${cellPad};border:1px solid #aaa;height:18px;"></td></tr>`;
+
+    returnsHtml = `
+      <table style="width:100%;border-collapse:collapse;margin-top:8px;font-size:${fontScale};color:#111;">
+        <tr><td colspan="${totalCols}" style="padding:${cellPad};font-weight:800;border-bottom:1.5px solid #222;text-transform:uppercase;">DEVUELVE</td></tr>
+        ${devRows}
+        <tr style="background:${subBg};">
+          <td colspan="${totalCols - 1}" style="padding:${cellPad};border:1px solid #222;font-weight:800;">TOTAL QUEDA ENTONCES:</td>
+          <td style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:900;white-space:nowrap;">${formatPrice(netTotal)}</td>
+        </tr>
+      </table>`;
+  }
+
+  const sigHtml = cfg.showSignature
+    ? `<div style="display:flex;justify-content:space-between;gap:24px;margin-top:16px;font-size:.85em;color:#222;">
+         <div style="flex:1;border-top:1px solid #333;padding-top:3px;text-align:center;">Firma quien recibe</div>
+         <div style="flex:1;border-top:1px solid #333;padding-top:3px;text-align:center;">Aclaración / DNI</div>
+       </div>`
+    : '';
+  const footerHtml = cfg.footerNote
+    ? `<div style="margin-top:6px;font-size:.82em;color:#444;text-align:center;">${escapeHtml(cfg.footerNote)}</div>`
+    : '';
+
+  return `
+  <div class="remito-card ${isHalfBox ? 'remito-half-box' : ''}" style="font-family:Arial,Helvetica,sans-serif;font-size:${fontScale};color:#111;background:#fff;">
+    ${customBanner}
+    ${metaLine}
+    <table style="width:100%;border-collapse:collapse;color:#111;">
+      <thead>
+        <tr style="background:${headerBg};color:${headerText};">
+          <th colspan="${totalCols - 1}" style="padding:5px 8px;border:1.5px solid #222;text-align:center;font-size:1.08em;font-weight:900;text-transform:uppercase;">${escapeHtml(order.cliente)}</th>
+          <th style="padding:5px 8px;border:1.5px solid #222;text-align:center;font-size:1.05em;font-weight:900;">${totalUnidades}</th>
+        </tr>
+        <tr style="background:${subBg};color:#111;">
+          <th style="padding:${cellPad};border:1px solid #222;text-align:left;font-weight:800;">PRODUCTO</th>
+          <th style="padding:${cellPad};border:1px solid #222;text-align:center;font-weight:800;">UD</th>
+          ${cfg.showUnitPrice ? `<th style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:800;">PRECIO</th>` : ''}
+          <th style="padding:${cellPad};border:1px solid #222;text-align:right;font-weight:800;">TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rowsHtml || `<tr><td colspan="${totalCols}" style="padding:10px;border:1px solid #444;text-align:center;color:#666;">Sin artículos</td></tr>`}
+      </tbody>
+      <tfoot>
+        <tr style="background:${subBg};color:#111;">
+          <td colspan="${colSpanProd}" style="padding:5px 8px;border:1.5px solid #222;text-align:right;font-weight:800;">TOTAL DE ARTICULOS</td>
+          <td style="padding:5px 8px;border:1.5px solid #222;text-align:center;font-weight:900;">${totalUnidades}</td>
+          ${cfg.showUnitPrice ? `<td style="padding:5px 8px;border:1.5px solid #222;"></td>` : ''}
+          <td style="padding:5px 8px;border:1.5px solid #222;text-align:right;font-weight:900;white-space:nowrap;">${formatPrice(itemsSub)}</td>
+        </tr>
+      </tfoot>
+    </table>
+    ${returnsHtml}
+    ${order.nota ? `<div style="margin-top:6px;font-size:.86em;color:#222;"><b>Nota:</b> ${escapeHtml(order.nota)}</div>` : ''}
+    ${sigHtml}
+    ${footerHtml}
+  </div>`;
+}
+
+function buildRemitoDocumentHtml(order, cfg, modeOverride = null){
+  const effectiveMode = resolveRemitoMode(order, cfg, modeOverride);
+  const cutLineHtml = cfg.showCutLine
+    ? `<div style="border-top:1.5px dashed #888;margin:7mm 0;text-align:center;font-family:Arial,sans-serif;font-size:9px;color:#666;line-height:0;"><span style="background:#fff;padding:0 6px;">✂ cortar por aquí (½ Hoja A4)</span></div>`
+    : `<div style="height:6mm;"></div>`;
+
+  let bodyInner = '';
+  let layoutLabel = '';
+  if(effectiveMode === 'half'){
+    bodyInner = buildRemitoSingleCardHtml(order, cfg, '', true) + cutLineHtml;
+    layoutLabel = 'Formato automático: ½ Hoja A4';
+  } else if(effectiveMode === 'half-dup'){
+    bodyInner = buildRemitoSingleCardHtml(order, cfg, 'ORIGINAL', true)
+      + cutLineHtml
+      + buildRemitoSingleCardHtml(order, cfg, 'DUPLICADO', true);
+    layoutLabel = 'Formato: ½ Hoja A4 x 2 (Original + Duplicado en 1 hoja A4)';
+  } else {
+    bodyInner = buildRemitoSingleCardHtml(order, cfg, '', false);
+    layoutLabel = 'Formato: Hoja A4 completa (salta a 2ª hoja automáticamente si hace falta)';
+  }
+
+  const fullDoc = `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Remito - ${escapeHtml(order.cliente)} (${escapeHtml(order.saleId)})</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; background: #fff; color: #111; }
+  thead { display: table-header-group; }
+  tfoot { display: table-row-group; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  .remito-half-box { min-height: 130mm; }
+</style>
+</head>
+<body>${bodyInner}</body>
+</html>`;
+  return { effectiveMode, layoutLabel, bodyInner, fullDoc };
+}
+
+function openRemitoPreviewModal(order){
+  if(!isAdmin || !order) return;
+  remitoTargetOrder = order;
+  const cfg = getRemitoConfig();
+  const quickSel = document.getElementById('remitoQuickMode');
+  if(quickSel) quickSel.value = cfg.pageMode || 'auto';
+  renderRemitoPreview();
+  openOverlayEl(remitoPreviewOverlay);
+}
+function renderRemitoPreview(){
+  if(!remitoTargetOrder) return;
+  const cfg = getRemitoConfig();
+  const modeOverride = document.getElementById('remitoQuickMode')?.value || 'auto';
+  const built = buildRemitoDocumentHtml(remitoTargetOrder, cfg, modeOverride);
+  document.getElementById('remitoLayoutBadge').textContent = built.layoutLabel;
+  document.getElementById('remitoPreviewContainer').innerHTML = built.bodyInner;
+}
+function printRemitoOrder(){
+  if(!remitoTargetOrder) return;
+  const cfg = getRemitoConfig();
+  const modeOverride = document.getElementById('remitoQuickMode')?.value || 'auto';
+  const { fullDoc } = buildRemitoDocumentHtml(remitoTargetOrder, cfg, modeOverride);
+  const win = window.open('', '_blank', 'width=900,height=750');
+  if(win){
+    win.document.open();
+    win.document.write(fullDoc);
+    win.document.close();
+    win.focus();
+    setTimeout(() => win.print(), 250);
+    return;
+  }
+  const iframe = document.createElement('iframe');
+  iframe.style.position = 'fixed';
+  iframe.style.right = '0';
+  iframe.style.bottom = '0';
+  iframe.style.width = '0';
+  iframe.style.height = '0';
+  iframe.style.border = '0';
+  document.body.appendChild(iframe);
+  iframe.contentDocument.open();
+  iframe.contentDocument.write(fullDoc);
+  iframe.contentDocument.close();
+  setTimeout(() => {
+    iframe.contentWindow.focus();
+    iframe.contentWindow.print();
+    setTimeout(() => iframe.remove(), 1000);
+  }, 250);
+}
+
+function openRemitoConfigModal(){
+  const cfg = getRemitoConfig();
+  document.getElementById('rcTitle').value = cfg.title || '';
+  document.getElementById('rcSubtitle').value = cfg.subtitle || '';
+  document.getElementById('rcFooter').value = cfg.footerNote || '';
+  document.getElementById('rcPageMode').value = cfg.pageMode || 'auto';
+  document.getElementById('rcFontSize').value = cfg.fontSize || 'normal';
+  document.getElementById('rcHeaderBg').value = cfg.headerBg || '#7f7f7f';
+  document.getElementById('rcHeaderBgHex').textContent = cfg.headerBg || '#7f7f7f';
+  document.getElementById('rcSubHeaderBg').value = cfg.subHeaderBg || '#b7b7b7';
+  document.getElementById('rcSubHeaderBgHex').textContent = cfg.subHeaderBg || '#b7b7b7';
+  document.getElementById('rcHeaderText').value = cfg.headerText || '#111111';
+  document.getElementById('rcHeaderTextHex').textContent = cfg.headerText || '#111111';
+  document.getElementById('rcShowMeta').checked = !!cfg.showMeta;
+  document.getElementById('rcShowClientAddr').checked = !!cfg.showClientAddr;
+  document.getElementById('rcShowUnitPrice').checked = !!cfg.showUnitPrice;
+  document.getElementById('rcShowEan').checked = !!cfg.showEan;
+  document.getElementById('rcShowEmptyReturns').checked = !!cfg.showEmptyReturns;
+  document.getElementById('rcShowSignature').checked = !!cfg.showSignature;
+  document.getElementById('rcShowCutLine').checked = !!cfg.showCutLine;
+  document.getElementById('rcStatus').textContent = '';
+  openOverlayEl(remitoConfigOverlay);
+}
+
+/* ---------- CONFIRMAR ENTREGA Y PAGO ---------- */
+function syncDeliveryModeFields(){
+  const mode = document.getElementById('delPayMode')?.value || 'paid';
+  document.getElementById('delAmountWrap').style.display = (mode === 'paid' || mode === 'partial') ? '' : 'none';
+  document.getElementById('delMethodWrap').style.display = (mode === 'paid' || mode === 'partial') ? '' : 'none';
+  document.getElementById('delDateWrap').style.display = (mode === 'partial' || mode === 'promise') ? '' : 'none';
+  if(mode === 'paid' && deliveryTargetOrder){
+    document.getElementById('delAmount').value = String(Math.max(0, Number(deliveryTargetOrder.saldoVenta) || 0));
+  } else if(mode === 'promise' || mode === 'already_paid'){
+    document.getElementById('delAmount').value = '0';
+  }
+}
+function openDeliveryModal(order){
+  if(!isAdmin || !order) return;
+  deliveryTargetOrder = order;
+  document.getElementById('delTitle').textContent = `${order.cliente} · ${order.saleId}`;
+  document.getElementById('delSummary').textContent = `Total: ${formatPrice(order.total)} · Ya abonado: ${formatPrice(order.pagado)} · Saldo pendiente: ${formatPrice(order.saldoVenta)}`;
+  const modeEl = document.getElementById('delPayMode');
+  modeEl.value = (Number(order.saldoVenta) || 0) <= 0 ? 'already_paid' : 'paid';
+  document.getElementById('delPromiseDate').value = order.fechaCobroAcordada || '';
+  document.getElementById('delNote').value = '';
+  document.getElementById('delStatus').textContent = '';
+  syncDeliveryModeFields();
+  openOverlayEl(deliveryOverlay);
+}
+
+/* Listeners Depósito / Remito / Entrega */
+document.getElementById('depRefreshBtn')?.addEventListener('click', () => loadOrdersFromSheets(true));
+document.getElementById('depGoGeneralBtn')?.addEventListener('click', () => switchAdminSection('general'));
+document.getElementById('depOpenRemitoCfgBtn')?.addEventListener('click', openRemitoConfigModal);
+document.querySelectorAll('[data-dep-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeDepTab = btn.dataset.depTab;
+    renderDepositoSection();
+  });
+});
+document.getElementById('depSearchInput')?.addEventListener('input', renderDepositoSection);
+document.getElementById('depBackToListBtn')?.addEventListener('click', () => {
+  activeDepOrder = null;
+  renderDepositoSection();
+});
+document.getElementById('depMatchAllBtn')?.addEventListener('click', () => {
+  if(!activeDepOrder) return;
+  activeDepOrder.items.forEach(it => {
+    if((it.cantPedida || 0) > 0) it.cantArmada = it.cantPedida;
+  });
+  renderDepWorkspace();
+  showToast('Cantidades armadas igualadas a lo pedido');
+});
+document.getElementById('depScanCode')?.addEventListener('keydown', e => {
+  if(e.key === 'Enter'){ e.preventDefault(); handleDepScanSubmit(); }
+});
+document.getElementById('depScanQty')?.addEventListener('keydown', e => {
+  if(e.key === 'Enter'){ e.preventDefault(); applyDepScannedQty(); }
+});
+document.getElementById('depScanLookupBtn')?.addEventListener('click', handleDepScanSubmit);
+document.getElementById('depScanApplyBtn')?.addEventListener('click', () => applyDepScannedQty());
+document.getElementById('depOpenQuickAddBtn')?.addEventListener('click', () => openDepQuickAdd(depQuickAddCode, depQuickAddQty));
+document.getElementById('depNotFoundCloseBtn')?.addEventListener('click', hideDepQuickAdd);
+document.getElementById('depManualNewProdBtn')?.addEventListener('click', () => openDepQuickAdd('', 1));
+document.getElementById('dqCloseBtn')?.addEventListener('click', hideDepQuickAdd);
+document.getElementById('dqCancelBtn')?.addEventListener('click', hideDepQuickAdd);
+document.getElementById('dqTab')?.addEventListener('change', () => populateDepQuickAddCategories('', ''));
+document.getElementById('dqCatSelect')?.addEventListener('change', () => {
+  const newInp = document.getElementById('dqCatNew');
+  if(newInp) newInp.style.display = document.getElementById('dqCatSelect').value === '__new__' ? '' : 'none';
+  populateDepQuickAddSubcats('');
+});
+document.getElementById('dqSubcatSelect')?.addEventListener('change', () => {
+  const newInp = document.getElementById('dqSubcatNew');
+  if(newInp) newInp.style.display = document.getElementById('dqSubcatSelect').value === '__new__' ? '' : 'none';
+});
+document.getElementById('dqSaveBtn')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('dqStatus');
+  const btn = document.getElementById('dqSaveBtn');
+  const stock = parseNonNegInt(document.getElementById('dqStock').value);
+  const orderQty = parseNonNegInt(document.getElementById('dqOrderQty').value) ?? 1;
+  statusEl.textContent = 'Creando producto en EN STOCK (GitHub)...';
+  btn.disabled = true;
+  try{
+    const { entry } = await createAndSaveProduct({
+      targetCatalog: 'stock',
+      ean: document.getElementById('dqEan').value.trim().replace(/\s+/g, ''),
+      codigoInterno: document.getElementById('dqCodigoInterno').value.trim(),
+      catalogName: document.getElementById('dqCatalogName').value.trim(),
+      rawName: document.getElementById('dqName').value.trim(),
+      desc: '',
+      priceRaw: document.getElementById('dqPrice').value,
+      stock,
+      bulto: parsePositiveInt(document.getElementById('dqBulto').value),
+      descuentoBulto: parseDiscountPct(document.getElementById('dqBultoDesc').value),
+      tab: document.getElementById('dqTab').value,
+      brandInput: document.getElementById('dqBrand').value.trim(),
+      catSel: document.getElementById('dqCatSelect').value,
+      catNew: document.getElementById('dqCatNew').value.trim(),
+      subcatSel: document.getElementById('dqSubcatSelect').value,
+      subcatNew: document.getElementById('dqSubcatNew').value.trim(),
+      imgUrl: '',
+      imgFile: null
+    });
+    populateCategorySelect();
+    populateDepCatalogDropdown();
+    addOrUpdateOrderItem(entry, orderQty, 'add');
+    hideDepQuickAdd();
+    setDepScanFeedback('ok', `✅ Producto "${entry.name}" creado en EN STOCK y sumado (+${orderQty}) al pedido.`);
+    document.getElementById('depScanCode')?.focus();
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('depCatalogSearch')?.addEventListener('input', populateDepCatalogDropdown);
+document.getElementById('depCatalogAddBtn')?.addEventListener('click', () => {
+  const ean = document.getElementById('depCatalogSelect')?.value;
+  if(!ean) return;
+  const prod = getCatalogLookupInfo(ean);
+  if(!prod) return;
+  const qty = Math.max(1, Math.round(Number(document.getElementById('depCatalogQty')?.value) || 1));
+  addOrUpdateOrderItem(prod, qty, 'add');
+  showToast(`+ ${qty} ${prod.name} agregado al armado`);
+});
+document.getElementById('depAddReturnBtn')?.addEventListener('click', () => {
+  if(!activeDepOrder) return;
+  const desc = document.getElementById('depRetDesc')?.value.trim();
+  const monto = parseFloat(document.getElementById('depRetAmount')?.value);
+  if(!desc || !Number.isFinite(monto) || monto <= 0){
+    showToast('Ingresá motivo y monto válido para la devolución');
+    return;
+  }
+  activeDepOrder.devoluciones.push({ descripcion: desc, monto: Math.round(monto * 100) / 100 });
+  document.getElementById('depRetDesc').value = '';
+  document.getElementById('depRetAmount').value = '';
+  renderDepWorkspace();
+});
+document.getElementById('depSavePartialBtn')?.addEventListener('click', () => saveActiveDepOrder('EN_ESPERA'));
+document.getElementById('depFinishOrderBtn')?.addEventListener('click', () => saveActiveDepOrder('LISTO'));
+document.getElementById('depPrintRemitoBtn')?.addEventListener('click', () => {
+  if(!activeDepOrder) return;
+  activeDepOrder.nota = document.getElementById('depOrderNote')?.value.trim() || '';
+  recomputeDraftOrderTotals(activeDepOrder);
+  openRemitoPreviewModal(activeDepOrder);
+});
+
+document.getElementById('remitoPrevClose')?.addEventListener('click', () => closeOverlayEl(remitoPreviewOverlay));
+document.getElementById('remitoQuickMode')?.addEventListener('change', renderRemitoPreview);
+document.getElementById('remitoDoPrintBtn')?.addEventListener('click', printRemitoOrder);
+document.getElementById('remitoOpenCfgFromPrevBtn')?.addEventListener('click', openRemitoConfigModal);
+
+['rcHeaderBg','rcSubHeaderBg','rcHeaderText'].forEach(id => {
+  document.getElementById(id)?.addEventListener('input', e => {
+    const hex = document.getElementById(id + 'Hex');
+    if(hex) hex.textContent = e.target.value;
+  });
+});
+document.getElementById('rcClose')?.addEventListener('click', () => closeOverlayEl(remitoConfigOverlay));
+document.getElementById('rcCancelBtn')?.addEventListener('click', () => closeOverlayEl(remitoConfigOverlay));
+document.getElementById('rcResetBtn')?.addEventListener('click', () => {
+  siteConfig.remito = { ...DEFAULT_REMITO_CONFIG };
+  storageSet('distre_remito_cfg', JSON.stringify(siteConfig.remito));
+  openRemitoConfigModal();
+  if(remitoPreviewOverlay?.classList.contains('open')) renderRemitoPreview();
+  showToast('Estilo clásico restaurado');
+});
+document.getElementById('rcSaveBtn')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('rcStatus');
+  const btn = document.getElementById('rcSaveBtn');
+  const nextRemito = {
+    title: document.getElementById('rcTitle').value.trim(),
+    subtitle: document.getElementById('rcSubtitle').value.trim(),
+    footerNote: document.getElementById('rcFooter').value.trim(),
+    pageMode: document.getElementById('rcPageMode').value,
+    fontSize: document.getElementById('rcFontSize').value,
+    headerBg: document.getElementById('rcHeaderBg').value,
+    subHeaderBg: document.getElementById('rcSubHeaderBg').value,
+    headerText: document.getElementById('rcHeaderText').value,
+    showMeta: document.getElementById('rcShowMeta').checked,
+    showClientAddr: document.getElementById('rcShowClientAddr').checked,
+    showUnitPrice: document.getElementById('rcShowUnitPrice').checked,
+    showEan: document.getElementById('rcShowEan').checked,
+    showEmptyReturns: document.getElementById('rcShowEmptyReturns').checked,
+    showSignature: document.getElementById('rcShowSignature').checked,
+    showCutLine: document.getElementById('rcShowCutLine').checked
+  };
+  siteConfig.remito = nextRemito;
+  storageSet('distre_remito_cfg', JSON.stringify(nextRemito));
+  if(remitoPreviewOverlay?.classList.contains('open')) renderRemitoPreview();
+
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){
+    statusEl.textContent = '✅ Diseño guardado en este navegador (para sincronizar globalmente, configurá el token de GitHub en General).';
+    showToast('Diseño de remito guardado');
+    return;
+  }
+  btn.disabled = true;
+  statusEl.textContent = 'Guardando diseño en GitHub...';
+  try{
+    await updateSiteConfig(cfg => {
+      cfg.remito = nextRemito;
+      return cfg;
+    }, 'Actualizar diseño de remito');
+    statusEl.textContent = '✅ Diseño de remito guardado globalmente en GitHub.';
+    showToast('Diseño de remito guardado');
+  }catch(e){
+    statusEl.textContent = '⚠ Guardado localmente, pero falló GitHub: ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('delClose')?.addEventListener('click', () => closeOverlayEl(deliveryOverlay));
+document.getElementById('delCancelBtn')?.addEventListener('click', () => closeOverlayEl(deliveryOverlay));
+document.getElementById('delPayMode')?.addEventListener('change', syncDeliveryModeFields);
+document.getElementById('delConfirmBtn')?.addEventListener('click', async () => {
+  if(!deliveryTargetOrder) return;
+  const o = deliveryTargetOrder;
+  const statusEl = document.getElementById('delStatus');
+  const btn = document.getElementById('delConfirmBtn');
+  const mode = document.getElementById('delPayMode').value;
+  let monto = 0;
+  if(mode === 'paid' || mode === 'partial'){
+    monto = parseFloat(document.getElementById('delAmount').value);
+    if(!Number.isFinite(monto) || monto <= 0){
+      statusEl.textContent = '❌ Ingresá un monto cobrado mayor a 0.';
+      return;
+    }
+  }
+  const fechaCobroAcordada = (mode === 'partial' || mode === 'promise')
+    ? (document.getElementById('delPromiseDate').value || '')
+    : '';
+
+  statusEl.textContent = 'Confirmando entrega en Google Sheets...';
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('confirmDelivery', {
+      saleId: o.saleId,
+      paymentType: mode,
+      monto,
+      medioPago: document.getElementById('delMethod').value,
+      fechaCobroAcordada,
+      nota: document.getElementById('delNote').value.trim()
+    });
+    upsertOrderInCache({
+      saleId: o.saleId,
+      estadoDeposito: 'ENTREGADO',
+      fechaEntrega: res.fechaEntrega,
+      pagado: res.pagado,
+      saldoVenta: res.saldoVenta,
+      estado: res.estado,
+      fechaCobroAcordada: res.fechaCobroAcordada || '',
+      nota: res.nota !== undefined ? res.nota : o.nota
+    });
+    if(res.clientBalance) upsertClientInCache(res.clientBalance);
+    closeOverlayEl(deliveryOverlay);
+    activeDepTab = 'delivered';
+    renderDepositoSection();
+    renderClientsSection();
+    showToast(`🚚 Entrega confirmada (${o.saleId})`);
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
   }finally{
     btn.disabled = false;
   }
@@ -6322,12 +8075,12 @@ function renderCartModal(){
 /* ======================================================
    CIERRE GENÉRICO DE MODALES (click afuera / ESC)
    ====================================================== */
-[overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay].filter(Boolean).forEach(ov => {
+[overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay, remitoPreviewOverlay, remitoConfigOverlay, deliveryOverlay].filter(Boolean).forEach(ov => {
   ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
 });
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape'){
-    [overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay].filter(Boolean).forEach(ov => {
+    [overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay, remitoPreviewOverlay, remitoConfigOverlay, deliveryOverlay].filter(Boolean).forEach(ov => {
       if(ov.classList.contains('open')) closeOverlayEl(ov);
     });
   }
@@ -6359,19 +8112,23 @@ function renderTabSelects(){
   const tabs = getAllTabs();
   const npTab = document.getElementById('npTab');
   const sqTab = document.getElementById('sqTab');
+  const dqTab = document.getElementById('dqTab');
   const csvTab = document.getElementById('csvTab');
   const themeTab = document.getElementById('themeTabSelect');
   const prevNp = npTab.value;
   const prevSq = sqTab ? sqTab.value : '';
+  const prevDq = dqTab ? dqTab.value : '';
   const prevCsv = csvTab.value;
   const prevTheme = themeTab ? themeTab.value : '';
   const options = tabs.map(t => `<option value="${escapeHtml(t.id)}">${escapeHtml(t.name)}</option>`).join('');
   npTab.innerHTML = options;
   if(sqTab) sqTab.innerHTML = options;
+  if(dqTab) dqTab.innerHTML = options;
   csvTab.innerHTML = `<option value="__auto__">Automático (según columna PROVEEDOR)</option>` + options;
   if(themeTab) themeTab.innerHTML = options;
   npTab.value = tabs.some(t => t.id === prevNp) ? prevNp : (tabs[0]?.id || '');
   if(sqTab) sqTab.value = tabs.some(t => t.id === prevSq) ? prevSq : (tabs[0]?.id || '');
+  if(dqTab) dqTab.value = tabs.some(t => t.id === prevDq) ? prevDq : (tabs[0]?.id || '');
   csvTab.value = (prevCsv === '__auto__' || tabs.some(t => t.id === prevCsv)) ? prevCsv : '__auto__';
   if(themeTab) themeTab.value = tabs.some(t => t.id === prevTheme) ? prevTheme : (tabs[0]?.id || '');
 }

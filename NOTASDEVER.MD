@@ -526,3 +526,20 @@ Fecha: 2026-11-26
   - Cuando el administrador está logueado (`isAdmin`), el encabezado muestra `👤 Admin` (`#adminLoggedPill`) y el carrito muestra `#cartAdminSaleBox` para seleccionar o crear un cliente, ver su deuda actual, elegir condición (`Cuenta corriente`, `Pago total`, `Pago parcial`), medio de pago y cerrar la venta en Google Sheets.
   - Al cerrar la venta como Admin (con la casilla `#saleDeductStock` activa), descuenta las cantidades vendidas **únicamente del catálogo `EN STOCK`** (`data/stock-products.json`), dejando intacto el catálogo `COMPLETO` y registrando cada baja en `MOVIMIENTOS_STOCK` / `STOCK_ACTUAL`. Los visitantes no logueados como Admin no ven estas opciones ni se descuenta stock al usar el carrito.
 Archivos: apps-script/Code.gs, apps-script/INSTRUCCIONES.md, index.html, NOTASDEVER.MD
+
+### #040 - Módulo Depósito (solo Admin): armado con escáner/catálogo, ajuste de stock, remito A4 personalizable y entrega/cobro
+Fecha: 2026-11-26
+- **Backend Google Apps Script (`apps-script/Code.gs`)**:
+  - Se ampliaron `VENTAS` (`ESTADO_DEPOSITO`, `FECHA_ARMADO`, `FECHA_ENTREGA`, `FECHA_COBRO_ACORDADA`, `DEVOLUCIONES_JSON`, `TOTAL_DEVOLUCIONES`) y `VENTAS_DETALLE` (`CANT_PEDIDA`, `CANT_ARMADA`, `CANT_DESCONTADA`) conservando compatibilidad con las columnas `A..N` y fórmulas existentes de cuenta corriente.
+  - Nuevas acciones: `getOrders`, `saveOrderPacking` (guardado parcial `EN_ESPERA` o finalizado `LISTO` con movimientos `AJUSTE_ARMADO_MAS` / `DEVOLUCION_ARMADO`), `confirmDelivery` (confirma entrega y cobro total/parcial/fecha acordada) y `reopenOrderToPacking`.
+- **Panel Admin → `🏭 Depósito` (`#adminSectionDeposito`)**:
+  - Sub-pestañas **📦 Para armar**, **✅ Pedidos listos** y **🚚 Entregados** con búsqueda en vivo y alertas de fecha de cobro vencida.
+  - **Mesa de armado comparativa**: barra de progreso, tabla Pedido vs. Armado, botones `−`/`+`/`=`, sección **DEVUELVE** (devoluciones/notas de crédito que restan en `TOTAL QUEDA ENTONCES`) y vista previa en vivo de cambios en `EN STOCK`.
+  - **Herramientas de armado**: lector EAN / código interno (`CODIGO` + Enter + cantidad + Enter, o `CODIGO CANTIDAD`), menú desplegable del catálogo con buscador, y alta rápida de productos nuevos en `EN STOCK` directamente al pedido (`#depQuickAddBox` compartiendo `createAndSaveProduct`).
+  - **Ajuste bidireccional automático en `EN STOCK`**: si se arma menos cantidad que la descontada originalmente (`10 → 8`), devuelve la diferencia al stock (`+2`); si se arma más o se agregan productos, descuenta el excedente (`computePackingStockDeltas` / `applyEnStockAdjustments`), sin tocar `COMPLETO`.
+- **Remito personalizable A4 / ½ A4 (`#remitoPreviewOverlay`, `#remitoConfigOverlay`)**:
+  - Formato con cabecera de cliente + total de artículos, tabla `PRODUCTO | UD | PRECIO | TOTAL`, fila `TOTAL DE ARTICULOS` y bloque `DEVUELVE` / `TOTAL QUEDA ENTONCES`.
+  - Ajuste automático a **½ Hoja A4** (hasta 15 líneas), **½ A4 duplicado** (2 copias en 1 A4) u **Hoja A4 completa / multipágina**, además de configuración persistente de títulos, colores, tamaño de letra, firma, EAN y línea de corte (`siteConfig.remito`).
+- **Confirmación de entrega y cobro (`#deliveryOverlay`)**:
+  - Al entregar un pedido listo, permite registrar pago total, cobro parcial con fecha acordada para el saldo o cuenta corriente con fecha acordada, impactando en `COBROS`, `VENTAS` y el saldo del cliente.
+Archivos: apps-script/Code.gs, apps-script/INSTRUCCIONES.md, index.html, NOTASDEVER.MD

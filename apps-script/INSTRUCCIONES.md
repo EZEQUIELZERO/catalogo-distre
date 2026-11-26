@@ -16,10 +16,10 @@ Seguí estos pasos una sola vez para habilitar **Clientes, Cuentas Corrientes, V
    - Tocá **Revisar permisos** → elegí tu cuenta de Google → **Configuración avanzada** → **Ir a ... (no seguro)** → **Permitir**.
 3. Al finalizar, vas a ver creadas automáticamente las hojas:
    - **`CLIENTES`**: mantiene tus columnas `A..Q` intactas y agrega en `R..U` las columnas automáticas **`TOTAL VENTAS`**, **`TOTAL COBROS`**, **`DEUDA / SALDO`** y **`ESTADO`**.
-   - **`VENTAS`**: encabezado de cada venta (`ID_VENTA`, fecha, catálogo, cliente, total, pagado, saldo, condición, medio de pago, estado).
-   - **`VENTAS_DETALLE`**: detalle de cada producto vendido.
+   - **`VENTAS`**: encabezado de cada venta (`ID_VENTA`, fecha, catálogo, cliente, total, pagado, saldo, condición, medio de pago, estado, más seguimiento de **Depósito**: `ESTADO_DEPOSITO`, fecha de armado, fecha de entrega, fecha de cobro acordada y devoluciones).
+   - **`VENTAS_DETALLE`**: detalle por producto con cantidades pedidas, armadas y descontadas de stock.
    - **`COBROS`**: pagos totales, parciales y cobranzas de cuenta corriente.
-   - **`MOVIMIENTOS_STOCK`**: historial automático de bajas de stock por cada venta cerrada como Admin.
+   - **`MOVIMIENTOS_STOCK`**: historial automático de bajas y ajustes de stock por ventas y armado en Depósito.
    - **`STOCK_ACTUAL`**: stock vinculado desde el catálogo **EN STOCK**.
 
 ## 3. Publicar como Aplicación Web

@@ -25,11 +25,14 @@ const HEADERS = {
   VENTAS: [
     'ID_VENTA', 'FECHA', 'CATALOGO', 'COD_CLIENTE', 'CLIENTE',
     'SUBTOTAL', 'DESC_BULTO', 'TOTAL', 'PAGADO', 'SALDO_VENTA',
-    'CONDICION', 'MEDIO_PAGO', 'ESTADO', 'NOTA'
+    'CONDICION', 'MEDIO_PAGO', 'ESTADO', 'NOTA',
+    'ESTADO_DEPOSITO', 'FECHA_ARMADO', 'FECHA_ENTREGA',
+    'FECHA_COBRO_ACORDADA', 'DEVOLUCIONES_JSON', 'TOTAL_DEVOLUCIONES'
   ],
   VENTAS_DETALLE: [
     'ID_VENTA', 'FECHA', 'CATALOGO', 'EAN', 'DESCRIPCION',
-    'CANTIDAD', 'PRECIO_UNIT', 'TOTAL'
+    'CANTIDAD', 'PRECIO_UNIT', 'TOTAL',
+    'CANT_PEDIDA', 'CANT_ARMADA', 'CANT_DESCONTADA'
   ],
   COBROS: [
     'ID_COBRO', 'FECHA', 'COD_CLIENTE', 'CLIENTE', 'ID_VENTA',
@@ -582,20 +585,33 @@ function handleRegisterSale_(body) {
     ventasSh.appendRow([
       saleId, fecha, catalogo, /^\d+$/.test(codigo) ? Number(codigo) : codigo,
       clienteName, subtotal, descBulto, total, pagado, saldoVenta,
-      condicion, medioPago, estado, nota
+      condicion, medioPago, estado, nota,
+      'PARA_ARMAR', '', '', '', '[]', 0
     ]);
+
+    const deductions = Array.isArray(body.stockDeductions) ? body.stockDeductions : [];
+    const deductedMap = {};
+    deductions.forEach(function (d) {
+      const k = String(d.ean || '').trim();
+      if (k) deductedMap[k] = round2_((deductedMap[k] || 0) + toNum_(d.qty));
+    });
 
     const detSh = ss.getSheetByName(SHEET_NAMES.VENTAS_DETALLE);
     const detRows = items.map(function (it) {
+      const eanStr = String(it.ean || '').trim();
+      const qty = toNum_(it.cantidad);
       return [
-        saleId, fecha, catalogo, String(it.ean || ''),
+        saleId, fecha, catalogo, eanStr,
         String(it.descripcion || it.name || ''),
-        toNum_(it.cantidad),
+        qty,
         round2_(it.precioUnitario),
-        round2_(it.total)
+        round2_(it.total),
+        qty,
+        0,
+        deductedMap[eanStr] || 0
       ];
     });
-    detSh.getRange(detSh.getLastRow() + 1, 1, detRows.length, 8).setValues(detRows);
+    detSh.getRange(detSh.getLastRow() + 1, 1, detRows.length, HEADERS.VENTAS_DETALLE.length).setValues(detRows);
 
     let cobroId = '';
     if (pagado > 0) {
@@ -607,7 +623,6 @@ function handleRegisterSale_(body) {
       ]);
     }
 
-    const deductions = Array.isArray(body.stockDeductions) ? body.stockDeductions : [];
     if (deductions.length) {
       const movSh = ss.getSheetByName(SHEET_NAMES.MOVIMIENTOS_STOCK);
       const movRows = deductions.map(function (d) {
@@ -618,12 +633,327 @@ function handleRegisterSale_(body) {
           clienteName
         ];
       });
-      movSh.getRange(movSh.getLastRow() + 1, 1, movRows.length, 10).setValues(movRows);
+      movSh.getRange(movSh.getLastRow() + 1, 1, movRows.length, HEADERS.MOVIMIENTOS_STOCK.length).setValues(movRows);
       updateStockActualRows_(ss.getSheetByName(SHEET_NAMES.STOCK_ACTUAL), deductions, fecha);
     }
 
     const clientBalance = findClientBalance_(ss, codigo, clienteName);
-    return { ok: true, saleId: saleId, cobroId: cobroId, fecha: fecha, codigo: codigo, clientBalance: clientBalance };
+    return {
+      ok: true,
+      saleId: saleId,
+      cobroId: cobroId,
+      fecha: fecha,
+      codigo: codigo,
+      estadoDeposito: 'PARA_ARMAR',
+      clientBalance: clientBalance
+    };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function findVentaRowIndex_(ventasSh, saleId) {
+  const lastRow = ventasSh.getLastRow();
+  if (lastRow <= 1) return -1;
+  const colA = ventasSh.getRange(2, 1, lastRow - 1, 1).getValues();
+  for (let i = 0; i < colA.length; i++) {
+    if (String(colA[i][0] || '').trim() === saleId) return i + 2;
+  }
+  return -1;
+}
+
+function handleGetOrders_(ss) {
+  const ventasRows = readSheetObjects_(ss, SHEET_NAMES.VENTAS);
+  const detalleRows = readSheetObjects_(ss, SHEET_NAMES.VENTAS_DETALLE);
+  const clientsData = getClientsPayload_(ss).clients || [];
+
+  const cliByCode = {};
+  const cliByName = {};
+  clientsData.forEach(function (c) {
+    if (c.codigo) cliByCode[c.codigo] = c;
+    const n = normName_(c.cliente);
+    if (n && !cliByName[n]) cliByName[n] = c;
+  });
+
+  const detBySale = {};
+  detalleRows.forEach(function (d) {
+    const id = String(d.ID_VENTA || '').trim();
+    if (!id) return;
+    if (!detBySale[id]) detBySale[id] = [];
+    detBySale[id].push(d);
+  });
+
+  const orders = [];
+  ventasRows.forEach(function (v) {
+    const saleId = String(v.ID_VENTA || '').trim();
+    if (!saleId) return;
+    const codigo = String(v.COD_CLIENTE || '').trim();
+    const cliente = String(v.CLIENTE || '').trim();
+    const cliMeta = (codigo && cliByCode[codigo]) || cliByName[normName_(cliente)] || {};
+    const estadoDep = String(v.ESTADO_DEPOSITO || '').trim().toUpperCase() || 'PARA_ARMAR';
+
+    const rawItems = detBySale[saleId] || [];
+    const items = rawItems.map(function (d) {
+      const cantidad = toNum_(d.CANTIDAD);
+      const hasPedida = d.CANT_PEDIDA !== undefined && String(d.CANT_PEDIDA).trim() !== '';
+      const hasArmada = d.CANT_ARMADA !== undefined && String(d.CANT_ARMADA).trim() !== '';
+      const hasDesc = d.CANT_DESCONTADA !== undefined && String(d.CANT_DESCONTADA).trim() !== '';
+      const cantPedida = hasPedida ? toNum_(d.CANT_PEDIDA) : cantidad;
+      const cantArmada = hasArmada ? toNum_(d.CANT_ARMADA)
+        : ((estadoDep === 'LISTO' || estadoDep === 'ENTREGADO') ? cantidad : 0);
+      const cantDescontada = hasDesc ? toNum_(d.CANT_DESCONTADA) : cantidad;
+      return {
+        ean: String(d.EAN || '').trim(),
+        descripcion: String(d.DESCRIPCION || '').trim(),
+        catalogo: String(d.CATALOGO || '').trim(),
+        cantidad: cantidad,
+        cantPedida: cantPedida,
+        cantArmada: cantArmada,
+        cantDescontada: cantDescontada,
+        precioUnitario: round2_(d.PRECIO_UNIT),
+        total: round2_(d.TOTAL)
+      };
+    });
+
+    let devoluciones = [];
+    try {
+      const parsed = JSON.parse(String(v.DEVOLUCIONES_JSON || '[]'));
+      if (Array.isArray(parsed)) devoluciones = parsed;
+    } catch (e) {}
+
+    orders.push({
+      saleId: saleId,
+      fecha: String(v.FECHA || '').trim(),
+      catalogo: String(v.CATALOGO || '').trim(),
+      codigo: codigo,
+      cliente: cliente,
+      localidad: cliMeta.localidad || '',
+      direccion: cliMeta.direccion || '',
+      telefono: cliMeta.telefono || '',
+      zona: cliMeta.zona || '',
+      clientSaldo: typeof cliMeta.saldo === 'number' ? cliMeta.saldo : 0,
+      subtotal: round2_(v.SUBTOTAL),
+      descBulto: round2_(v.DESC_BULTO),
+      totalDevoluciones: round2_(v.TOTAL_DEVOLUCIONES),
+      total: round2_(v.TOTAL),
+      pagado: round2_(v.PAGADO),
+      saldoVenta: round2_(v.SALDO_VENTA),
+      condicion: String(v.CONDICION || '').trim(),
+      medioPago: String(v.MEDIO_PAGO || '').trim(),
+      estado: String(v.ESTADO || '').trim(),
+      nota: String(v.NOTA || '').trim(),
+      estadoDeposito: estadoDep,
+      fechaArmado: String(v.FECHA_ARMADO || '').trim(),
+      fechaEntrega: String(v.FECHA_ENTREGA || '').trim(),
+      fechaCobroAcordada: String(v.FECHA_COBRO_ACORDADA || '').trim(),
+      devoluciones: devoluciones,
+      items: items
+    });
+  });
+
+  orders.reverse();
+  return { ok: true, orders: orders };
+}
+
+function handleSaveOrderPacking_(body) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    const info = ensureSheets_(false);
+    const ss = info.ss;
+    const saleId = String(body.saleId || '').trim();
+    if (!saleId) throw new Error('Falta ID de venta.');
+
+    const ventasSh = ss.getSheetByName(SHEET_NAMES.VENTAS);
+    const rowIdx = findVentaRowIndex_(ventasSh, saleId);
+    if (rowIdx < 2) throw new Error('No se encontró la venta ' + saleId + '.');
+
+    const row = ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).getValues()[0];
+    const saleFecha = String(row[1] || '').trim();
+    const catalogo = String(row[2] || 'EN STOCK').trim();
+    const codigo = String(row[3] || '').trim();
+    const clienteName = String(row[4] || '').trim();
+    const pagado = round2_(row[8]);
+    const existingFechaArmado = String(row[15] || '').trim();
+
+    const subtotal = round2_(body.subtotal);
+    const descBulto = round2_(body.descBulto);
+    const totalDevoluciones = round2_(body.totalDevoluciones);
+    const total = round2_(body.total);
+    const saldoVenta = round2_(total - pagado);
+    const estado = saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
+    const nextStatus = String(body.nextStatus || 'EN_ESPERA').trim().toUpperCase();
+    const now = new Date();
+    const fecha = formatDate_(ss, now);
+    const fechaArmado = nextStatus === 'LISTO' ? fecha : existingFechaArmado;
+    const devs = Array.isArray(body.devoluciones) ? body.devoluciones : [];
+
+    row[5] = subtotal;
+    row[6] = descBulto;
+    row[7] = total;
+    row[9] = saldoVenta;
+    row[12] = estado;
+    row[13] = body.nota !== undefined ? String(body.nota || '').trim() : String(row[13] || '').trim();
+    row[14] = nextStatus;
+    row[15] = fechaArmado;
+    row[18] = JSON.stringify(devs);
+    row[19] = totalDevoluciones;
+    ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).setValues([row]);
+
+    const items = Array.isArray(body.items) ? body.items : [];
+    const detSh = ss.getSheetByName(SHEET_NAMES.VENTAS_DETALLE);
+    const detLast = detSh.getLastRow();
+    const detCols = HEADERS.VENTAS_DETALLE.length;
+    const keptRows = [];
+    if (detLast > 1) {
+      const existingDet = detSh.getRange(2, 1, detLast - 1, Math.max(detCols, detSh.getLastColumn())).getValues();
+      existingDet.forEach(function (r) {
+        if (String(r[0] || '').trim() !== saleId && r.some(function (c) { return String(c === null || c === undefined ? '' : c).trim() !== ''; })) {
+          const padded = [];
+          for (let c = 0; c < detCols; c++) padded.push(r[c] !== undefined ? r[c] : '');
+          keptRows.push(padded);
+        }
+      });
+    }
+    const newDetRows = items.map(function (it) {
+      const cantPed = toNum_(it.cantPedida);
+      const cantArm = toNum_(it.cantArmada);
+      const cantDesc = it.cantDescontada !== undefined ? toNum_(it.cantDescontada) : cantArm;
+      return [
+        saleId,
+        saleFecha || fecha,
+        String(it.catalogo || catalogo),
+        String(it.ean || '').trim(),
+        String(it.descripcion || it.name || '').trim(),
+        cantArm,
+        round2_(it.precioUnitario),
+        round2_(it.total),
+        cantPed,
+        cantArm,
+        cantDesc
+      ];
+    });
+    const combinedDet = keptRows.concat(newDetRows);
+    if (detLast > 1) detSh.getRange(2, 1, detLast - 1, detCols).clearContent();
+    if (combinedDet.length) detSh.getRange(2, 1, combinedDet.length, detCols).setValues(combinedDet);
+
+    const stockAdj = Array.isArray(body.stockAdjustments) ? body.stockAdjustments : [];
+    if (stockAdj.length) {
+      const movSh = ss.getSheetByName(SHEET_NAMES.MOVIMIENTOS_STOCK);
+      const movRows = stockAdj.map(function (d) {
+        const delta = toNum_(d.delta); // +N => salió más stock; -N => volvió al stock
+        const tipo = delta > 0 ? 'AJUSTE_ARMADO_MAS' : 'DEVOLUCION_ARMADO';
+        return [
+          fecha, tipo, saleId, 'EN STOCK',
+          String(d.ean || ''), String(d.name || ''),
+          -delta, toNum_(d.prevStock), toNum_(d.newStock),
+          clienteName
+        ];
+      });
+      movSh.getRange(movSh.getLastRow() + 1, 1, movRows.length, HEADERS.MOVIMIENTOS_STOCK.length).setValues(movRows);
+      updateStockActualRows_(ss.getSheetByName(SHEET_NAMES.STOCK_ACTUAL), stockAdj, fecha);
+    }
+
+    const clientBalance = findClientBalance_(ss, codigo, clienteName);
+    return {
+      ok: true,
+      saleId: saleId,
+      estadoDeposito: nextStatus,
+      fechaArmado: fechaArmado,
+      total: total,
+      saldoVenta: saldoVenta,
+      estado: estado,
+      clientBalance: clientBalance
+    };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function handleConfirmDelivery_(body) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(15000);
+  try {
+    const info = ensureSheets_(false);
+    const ss = info.ss;
+    const saleId = String(body.saleId || '').trim();
+    if (!saleId) throw new Error('Falta ID de venta.');
+
+    const ventasSh = ss.getSheetByName(SHEET_NAMES.VENTAS);
+    const rowIdx = findVentaRowIndex_(ventasSh, saleId);
+    if (rowIdx < 2) throw new Error('No se encontró la venta ' + saleId + '.');
+
+    const now = new Date();
+    const fecha = formatDate_(ss, now);
+    const row = ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).getValues()[0];
+    const codigo = String(row[3] || '').trim();
+    const clienteName = String(row[4] || '').trim();
+    const total = round2_(row[7]);
+    let pagado = round2_(row[8]);
+    const monto = round2_(body.monto);
+    const medioPago = String(body.medioPago || row[11] || '').trim();
+    const fechaCobroAcordada = String(body.fechaCobroAcordada || '').trim();
+    const notaEntrega = String(body.nota || '').trim();
+
+    let cobroId = '';
+    if (monto > 0) {
+      cobroId = makeId_(ss, 'C', now);
+      const cobrosSh = ss.getSheetByName(SHEET_NAMES.COBROS);
+      cobrosSh.appendRow([
+        cobroId, fecha, /^\d+$/.test(codigo) ? Number(codigo) : codigo,
+        clienteName, saleId, monto, medioPago,
+        notaEntrega || 'Cobro al confirmar entrega en Depósito'
+      ]);
+      pagado = round2_(pagado + monto);
+    }
+
+    const saldoVenta = round2_(total - pagado);
+    const estado = saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
+    const prevNota = String(row[13] || '').trim();
+    const finalNota = notaEntrega ? (prevNota ? prevNota + ' | Entrega: ' + notaEntrega : 'Entrega: ' + notaEntrega) : prevNota;
+
+    row[8] = pagado;
+    row[9] = saldoVenta;
+    if (medioPago) row[11] = medioPago;
+    row[12] = estado;
+    row[13] = finalNota;
+    row[14] = 'ENTREGADO';
+    row[16] = fecha;
+    row[17] = fechaCobroAcordada;
+    ventasSh.getRange(rowIdx, 1, 1, HEADERS.VENTAS.length).setValues([row]);
+
+    const clientBalance = findClientBalance_(ss, codigo, clienteName);
+    return {
+      ok: true,
+      saleId: saleId,
+      cobroId: cobroId,
+      estadoDeposito: 'ENTREGADO',
+      fechaEntrega: fecha,
+      pagado: pagado,
+      saldoVenta: saldoVenta,
+      estado: estado,
+      fechaCobroAcordada: fechaCobroAcordada,
+      nota: finalNota,
+      clientBalance: clientBalance
+    };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function handleReopenOrder_(body) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(15000);
+  try {
+    const info = ensureSheets_(false);
+    const ss = info.ss;
+    const saleId = String(body.saleId || '').trim();
+    if (!saleId) throw new Error('Falta ID de venta.');
+    const ventasSh = ss.getSheetByName(SHEET_NAMES.VENTAS);
+    const rowIdx = findVentaRowIndex_(ventasSh, saleId);
+    if (rowIdx < 2) throw new Error('No se encontró la venta ' + saleId + '.');
+    ventasSh.getRange(rowIdx, 15).setValue('EN_ESPERA');
+    return { ok: true, saleId: saleId, estadoDeposito: 'EN_ESPERA' };
   } finally {
     lock.releaseLock();
   }
@@ -706,6 +1036,7 @@ function doGet(e) {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     if (p.action === 'getClients') return jsonOut_(handleGetClients_(ss));
     if (p.action === 'getClientLedger') return jsonOut_(handleGetClientLedger_(ss, p));
+    if (p.action === 'getOrders') return jsonOut_(handleGetOrders_(ss));
     return jsonOut_({
       ok: true,
       spreadsheetName: ss.getName(),
@@ -738,6 +1069,10 @@ function doPost(e) {
     if (action === 'registerSale') return jsonOut_(handleRegisterSale_(body));
     if (action === 'registerPayment') return jsonOut_(handleRegisterPayment_(body));
     if (action === 'syncStockSnapshot') return jsonOut_(handleSyncStockSnapshot_(body));
+    if (action === 'getOrders') return jsonOut_(handleGetOrders_(ss));
+    if (action === 'saveOrderPacking') return jsonOut_(handleSaveOrderPacking_(body));
+    if (action === 'confirmDelivery') return jsonOut_(handleConfirmDelivery_(body));
+    if (action === 'reopenOrderToPacking') return jsonOut_(handleReopenOrder_(body));
 
     throw new Error('Acción desconocida: ' + action);
   } catch (err) {
