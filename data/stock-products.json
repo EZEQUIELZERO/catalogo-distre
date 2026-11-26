@@ -14555,14 +14555,15 @@
     {
       "ean": "7790000000904",
       "name": "ALGABO CARE ESPONJA FLOR",
+      "desc": "",
       "price": null,
       "tab": "algabo",
       "cat": "DESODORANTES",
       "subcat": "",
-      "img": "",
+      "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/algabo-care-esponja-flor-7791274201677-2b6bf75944dc9d763417629574297747-480-0.webp",
       "brand": "ALGABO",
-      "catalogName": "ALGABO CARE ESPONJA FLOR",
-      "stock": 24
+      "stock": 24,
+      "catalogName": "ALGABO CARE ESPONJA FLOR"
     },
     {
       "ean": "7798175718051",
