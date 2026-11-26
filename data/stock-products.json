@@ -14581,14 +14581,15 @@
     {
       "ean": "7798332023189",
       "name": "TASCANI DEO ACTITUD",
+      "desc": "",
       "price": 5600,
       "tab": "algabo",
       "cat": "DESODORANTES",
       "subcat": "",
-      "img": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTyFQ-UMkAymiCFCEqBMw9AgepiARhhP27urRhW1wzZw&s",
       "brand": "ALGABO",
-      "catalogName": "TASCANI DEO ACTITUD",
-      "stock": 16
+      "stock": 16,
+      "catalogName": "TASCANI DEO ACTITUD"
     },
     {
       "ean": "7798332020850",
