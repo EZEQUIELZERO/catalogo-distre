@@ -611,6 +611,11 @@ function handleRegisterSale_(body) {
     const nota = String(body.nota || '').trim();
     const catalogo = String(body.catalogName || 'COMPLETO').trim();
     const estado = saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
+    const rawEstadoDep = String(body.estadoDeposito || 'PARA_ARMAR').trim().toUpperCase();
+    const estadoDeposito = (rawEstadoDep === 'LISTO' || rawEstadoDep === 'EN_ESPERA') ? rawEstadoDep : 'PARA_ARMAR';
+    const fechaArmado = estadoDeposito === 'LISTO' ? fecha : '';
+    const devs = Array.isArray(body.devoluciones) ? body.devoluciones : [];
+    const totalDevoluciones = round2_(body.totalDevoluciones);
 
     const saleId = makeId_(ss, 'V', now);
 
@@ -619,7 +624,7 @@ function handleRegisterSale_(body) {
       saleId, fecha, catalogo, /^\d+$/.test(codigo) ? Number(codigo) : codigo,
       clienteName, subtotal, descBulto, total, pagado, saldoVenta,
       condicion, medioPago, estado, nota,
-      'PARA_ARMAR', '', '', '', '[]', 0
+      estadoDeposito, fechaArmado, '', '', JSON.stringify(devs), totalDevoluciones
     ]);
 
     const deductions = Array.isArray(body.stockDeductions) ? body.stockDeductions : [];
@@ -633,15 +638,18 @@ function handleRegisterSale_(body) {
     const detRows = items.map(function (it) {
       const eanStr = String(it.ean || '').trim();
       const qty = toNum_(it.cantidad);
+      const cantPed = (it.cantPedida !== undefined && it.cantPedida !== null && String(it.cantPedida).trim() !== '') ? toNum_(it.cantPedida) : qty;
+      const cantArm = (it.cantArmada !== undefined && it.cantArmada !== null && String(it.cantArmada).trim() !== '') ? toNum_(it.cantArmada) : 0;
+      const cantDesc = (it.cantDescontada !== undefined && it.cantDescontada !== null && String(it.cantDescontada).trim() !== '') ? toNum_(it.cantDescontada) : (deductedMap[eanStr] || 0);
       return [
         saleId, fecha, catalogo, eanStr,
         String(it.descripcion || it.name || ''),
         qty,
         round2_(it.precioUnitario),
         round2_(it.total),
-        qty,
-        0,
-        deductedMap[eanStr] || 0
+        cantPed,
+        cantArm,
+        cantDesc
       ];
     });
     detSh.getRange(detSh.getLastRow() + 1, 1, detRows.length, HEADERS.VENTAS_DETALLE.length).setValues(detRows);
@@ -677,7 +685,8 @@ function handleRegisterSale_(body) {
       cobroId: cobroId,
       fecha: fecha,
       codigo: codigo,
-      estadoDeposito: 'PARA_ARMAR',
+      estadoDeposito: estadoDeposito,
+      fechaArmado: fechaArmado,
       clientBalance: clientBalance
     };
   } finally {

@@ -1472,6 +1472,7 @@
         <div class="toggle-all-row">
           <div class="admin-section-title" style="margin:0;">🏭 Depósito — Armado, Remitos y Entregas</div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-whatsapp btn-auto" id="depNewOrderBtn">➕ Nuevo pedido</button>
             <button type="button" class="btn btn-gray btn-auto" id="depRefreshBtn">🔄 Actualizar pedidos</button>
             <button type="button" class="btn btn-gold btn-auto" id="depOpenRemitoCfgBtn">🎨 Personalizar remito</button>
           </div>
@@ -1509,6 +1510,52 @@
               </div>
             </div>
             <button type="button" class="btn btn-gray btn-auto" id="depMatchAllBtn" style="margin:0;padding:8px 12px;font-size:.78rem;">✓ Armar todo igual a lo pedido</button>
+          </div>
+
+          <div class="dep-tool-card" id="depNewClientBar" style="display:none;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+              <h4 style="margin:0;">👤 Cliente y condición del nuevo pedido</h4>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                <button type="button" class="btn btn-gold btn-auto" id="depNewClientBtn" style="margin:0;padding:5px 10px;font-size:.76rem;">➕ Nuevo cliente</button>
+                <button type="button" class="btn btn-gray btn-auto" id="depRefreshClientsBtn" style="margin:0;padding:5px 10px;font-size:.76rem;" title="Actualizar clientes">🔄</button>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="depClientSearch">Buscar cliente</label>
+                <input type="text" id="depClientSearch" class="price-input" placeholder="🔍 Nombre, localidad o código...">
+              </div>
+              <div class="field">
+                <label for="depClientSelect">Cliente *</label>
+                <select id="depClientSelect" class="price-input"></select>
+              </div>
+            </div>
+            <div id="depClientDebtBanner" class="sale-debt-banner" style="display:none;"></div>
+            <div class="field-row">
+              <div class="field">
+                <label for="depNewPayMode">Condición de venta</label>
+                <select id="depNewPayMode" class="price-input">
+                  <option value="cc">Cuenta corriente (queda pendiente)</option>
+                  <option value="paid">Pago total ahora</option>
+                  <option value="partial">Pago parcial</option>
+                </select>
+              </div>
+              <div class="field" id="depNewPartialWrap" style="display:none;">
+                <label for="depNewPaidAmount">Monto abonado ($)</label>
+                <input type="number" id="depNewPaidAmount" class="price-input" min="0" step="0.01" placeholder="0">
+              </div>
+              <div class="field">
+                <label for="depNewPayMethod">Medio de pago</label>
+                <select id="depNewPayMethod" class="price-input">
+                  <option value="Cuenta Corriente">Cuenta Corriente</option>
+                  <option value="Efectivo">Efectivo</option>
+                  <option value="Transferencia">Transferencia</option>
+                  <option value="Cheque">Cheque</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+            </div>
+            <label class="sale-stock-check"><input type="checkbox" id="depNewDeductStock" checked> Descontar stock automáticamente en <b>EN STOCK</b> al guardar</label>
           </div>
 
           <div class="dep-progress-wrap">
@@ -5909,6 +5956,137 @@ function buildDraftOrderClone(order){
   return clone;
 }
 
+function populateDepClientSelect(selectKeyOverride = null){
+  const sel = document.getElementById('depClientSelect');
+  if(!sel) return;
+  const prev = selectKeyOverride || sel.value;
+  const q = (document.getElementById('depClientSearch')?.value || '').trim().toLowerCase();
+  const filtered = clientsCache.filter(c => {
+    if(!q) return true;
+    return String(c.cliente || '').toLowerCase().includes(q)
+      || String(c.nombre || '').toLowerCase().includes(q)
+      || String(c.codigo || '').toLowerCase().includes(q)
+      || String(c.localidad || '').toLowerCase().includes(q);
+  });
+  if(filtered.length === 0){
+    sel.innerHTML = `<option value="">${clientsCache.length === 0 ? '— Sin clientes cargados —' : '— Sin coincidencias —'}</option>`;
+  } else {
+    sel.innerHTML = `<option value="">— Seleccioná un cliente —</option>`
+      + filtered.map(c => {
+        const key = escapeHtml(getClientKey(c));
+        const codTxt = c.codigo ? `[#${c.codigo}] ` : '';
+        const debtTxt = c.saldo > 0 ? ` · Debe ${formatPrice(c.saldo)}` : '';
+        return `<option value="${key}">${escapeHtml(codTxt + c.cliente + debtTxt)}</option>`;
+      }).join('');
+    if(prev && filtered.some(c => getClientKey(c) === prev)) sel.value = prev;
+  }
+  updateDepClientDebtBanner();
+}
+
+function updateDepClientDebtBanner(){
+  const banner = document.getElementById('depClientDebtBanner');
+  const sel = document.getElementById('depClientSelect');
+  if(!sel) return;
+  const client = findClientByKey(sel.value);
+  if(activeDepOrder && activeDepOrder._isNew){
+    activeDepOrder.codigo = client ? (client.codigo || '') : '';
+    activeDepOrder.cliente = client ? (client.cliente || '') : '';
+    activeDepOrder.localidad = client ? (client.localidad || '') : '';
+    activeDepOrder.direccion = client ? (client.direccion || '') : '';
+    activeDepOrder.telefono = client ? (client.telefono || '') : '';
+    activeDepOrder.rowIndex = client ? (client.rowIndex || null) : null;
+    const titleEl = document.getElementById('depWsTitle');
+    if(titleEl){
+      titleEl.textContent = activeDepOrder.cliente
+        ? `Nuevo pedido — ${activeDepOrder.cliente}`
+        : 'Nuevo pedido desde Depósito (elegí un cliente)';
+    }
+    const metaEl = document.getElementById('depWsMeta');
+    if(metaEl){
+      const metaParts = [activeDepOrder.fecha, activeDepOrder.localidad, activeDepOrder.direccion, activeDepOrder.telefono ? 'Tel ' + activeDepOrder.telefono : ''].filter(Boolean);
+      metaEl.textContent = metaParts.join(' · ');
+    }
+  }
+  if(!banner) return;
+  if(!client){
+    banner.style.display = 'none';
+    return;
+  }
+  const saldo = Number(client.saldo) || 0;
+  banner.style.display = '';
+  if(saldo > 0){
+    banner.className = 'sale-debt-banner has-debt';
+    banner.textContent = `⚠ Tiene deuda pendiente en cuenta corriente: ${formatPrice(saldo)} (Ventas: ${formatPrice(client.totalVentas || 0)} · Cobros: ${formatPrice(client.totalCobros || 0)})`;
+  } else if(saldo < 0){
+    banner.className = 'sale-debt-banner clean';
+    banner.textContent = `✓ Saldo a favor del cliente: ${formatPrice(Math.abs(saldo))}`;
+  } else {
+    banner.className = 'sale-debt-banner clean';
+    banner.textContent = '✓ Cuenta corriente al día (sin deuda)';
+  }
+}
+
+async function openNewDepOrderWorkspace(){
+  if(!isAdmin) return;
+  if(!isSheetsConfigured()){
+    showToast('Configurá la conexión con Google Sheets en General para crear pedidos');
+    switchAdminSection('general');
+    return;
+  }
+  activeDepOrder = {
+    _isNew: true,
+    saleId: 'BORRADOR',
+    fecha: new Date().toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'short' }),
+    catalogo: 'EN STOCK',
+    codigo: '',
+    cliente: '',
+    localidad: '',
+    direccion: '',
+    telefono: '',
+    rowIndex: null,
+    subtotal: 0,
+    descBulto: 0,
+    totalDevoluciones: 0,
+    total: 0,
+    pagado: 0,
+    saldoVenta: 0,
+    condicion: 'CUENTA CORRIENTE',
+    medioPago: 'Cuenta Corriente',
+    estado: 'PENDIENTE',
+    nota: '',
+    estadoDeposito: 'PARA_ARMAR',
+    fechaArmado: '',
+    fechaEntrega: '',
+    fechaCobroAcordada: '',
+    devoluciones: [],
+    items: []
+  };
+  depScannedItem = null;
+  document.getElementById('depOrderNote').value = '';
+  document.getElementById('depWsStatus').textContent = '';
+  document.getElementById('depScanCode').value = '';
+  document.getElementById('depScanQty').value = '';
+  document.getElementById('depScanQty').disabled = true;
+  document.getElementById('depScanApplyBtn').disabled = true;
+  document.getElementById('depScanFeedback').className = 'scan-feedback';
+  document.getElementById('depScanFeedback').textContent = '';
+  document.getElementById('depClientSearch').value = '';
+  document.getElementById('depNewPayMode').value = 'cc';
+  document.getElementById('depNewPartialWrap').style.display = 'none';
+  document.getElementById('depNewPaidAmount').value = '';
+  document.getElementById('depNewPayMethod').value = 'Cuenta Corriente';
+  document.getElementById('depNewDeductStock').checked = true;
+  hideDepQuickAdd();
+  populateDepCatalogDropdown();
+  renderDepositoSection();
+  populateDepClientSelect();
+  if(!clientsLoaded){
+    await loadClientsFromSheets(false);
+    populateDepClientSelect();
+  }
+  setTimeout(() => document.getElementById('depClientSearch')?.focus(), 0);
+}
+
 function openDepWorkspace(saleId){
   const order = findOrderInCache(saleId);
   if(!order) return;
@@ -5960,6 +6138,7 @@ function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
   if(!activeDepOrder || !productObj) return;
   const ean = String(productObj.ean || '').trim();
   const q = Math.max(0, Math.round(Number(qtyVal) || 0));
+  const isNewDraft = !!activeDepOrder._isNew;
   let item = activeDepOrder.items.find(it => it.ean === ean);
   if(!item){
     const base = getCatalogLookupInfo(ean) || productObj;
@@ -5968,7 +6147,7 @@ function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
       descripcion: productObj.name || productObj.descripcion || ean,
       catalogo: activeDepOrder.catalogo || 'EN STOCK',
       cantidad: q,
-      cantPedida: 0,
+      cantPedida: isNewDraft ? q : 0,
       cantArmada: q,
       cantDescontada: 0,
       precioLista: (typeof base.price === 'number' && Number.isFinite(base.price)) ? base.price : 0,
@@ -5980,6 +6159,7 @@ function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
     activeDepOrder.items.push(item);
   } else {
     item.cantArmada = mode === 'set' ? q : Math.max(0, (Number(item.cantArmada) || 0) + q);
+    if(isNewDraft) item.cantPedida = item.cantArmada;
   }
   recomputeDraftOrderTotals(activeDepOrder);
   renderDepWorkspace();
@@ -5989,16 +6169,35 @@ function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
 function renderDepWorkspace(){
   if(!activeDepOrder) return;
   const o = activeDepOrder;
+  const isNewDraft = !!o._isNew;
+  if(isNewDraft){
+    (o.items || []).forEach(it => { it.cantPedida = Math.max(0, Math.round(Number(it.cantArmada) || 0)); });
+  }
   recomputeDraftOrderTotals(o);
 
-  document.getElementById('depWsTitle').textContent = `${o.cliente} (${o.saleId})`;
+  const clientBarEl = document.getElementById('depNewClientBar');
+  if(clientBarEl) clientBarEl.style.display = isNewDraft ? '' : 'none';
+  const matchBtn = document.getElementById('depMatchAllBtn');
+  if(matchBtn) matchBtn.style.display = isNewDraft ? 'none' : '';
+  const cancelBtn = document.getElementById('depCancelOrderBtn');
+  if(cancelBtn) cancelBtn.style.display = isNewDraft ? 'none' : '';
+  const progWrap = document.querySelector('#depWorkspaceView .dep-progress-wrap');
+  if(progWrap) progWrap.style.display = isNewDraft ? 'none' : '';
+  const partialSaveBtn = document.getElementById('depSavePartialBtn');
+  if(partialSaveBtn) partialSaveBtn.textContent = isNewDraft ? '⏳ Guardar pedido (Para armar / En espera)' : '⏳ Guardar parcial (en espera)';
+  const finishBtn = document.getElementById('depFinishOrderBtn');
+  if(finishBtn) finishBtn.textContent = isNewDraft ? '✅ Crear y dejar Listo para entregar' : '✅ Finalizar armado (Pedido listo)';
+
+  document.getElementById('depWsTitle').textContent = isNewDraft
+    ? (o.cliente ? `Nuevo pedido — ${o.cliente}` : 'Nuevo pedido desde Depósito (elegí un cliente)')
+    : `${o.cliente} (${o.saleId})`;
   const metaParts = [o.fecha, o.localidad, o.direccion, o.telefono ? 'Tel ' + o.telefono : ''].filter(Boolean);
   document.getElementById('depWsMeta').textContent = metaParts.join(' · ');
 
   const st = String(o.estadoDeposito || 'PARA_ARMAR').toUpperCase();
   const badge = document.getElementById('depWsStatusBadge');
   badge.className = 'dep-status-pill ' + st.toLowerCase();
-  badge.textContent = st === 'PARA_ARMAR' ? 'Para armar' : (st === 'EN_ESPERA' ? 'En espera' : (st === 'LISTO' ? 'Listo' : 'Entregado'));
+  badge.textContent = isNewDraft ? 'Nuevo' : (st === 'PARA_ARMAR' ? 'Para armar' : (st === 'EN_ESPERA' ? 'En espera' : (st === 'LISTO' ? 'Listo' : 'Entregado')));
 
   const totalPed = o.items.reduce((a, it) => a + (it.cantPedida || 0), 0);
   const totalArm = o.items.reduce((a, it) => a + (it.cantArmada || 0), 0);
@@ -6114,10 +6313,17 @@ function renderDepWorkspace(){
     <div style="font-size:1rem;margin-top:4px;">TOTAL QUEDA ENTONCES: <b style="color:var(--accent);">${formatPrice(o.total)}</b></div>
   `;
 
-  const { adjustments, notInStock } = computePackingStockDeltas(o.items);
   const deltaBox = document.getElementById('depStockDeltaBox');
+  const skipNewDeduct = isNewDraft && !document.getElementById('depNewDeductStock')?.checked;
+  if(skipNewDeduct){
+    deltaBox.textContent = 'No se descontará stock en EN STOCK al crear este pedido.';
+    return;
+  }
+  const { adjustments, notInStock } = computePackingStockDeltas(o.items);
   if(adjustments.length === 0 && notInStock.length === 0){
-    deltaBox.textContent = 'Sin diferencias de stock pendientes respecto a lo ya descontado en EN STOCK.';
+    deltaBox.textContent = isNewDraft
+      ? 'Agregá productos para previsualizar el descuento automático en EN STOCK.'
+      : 'Sin diferencias de stock pendientes respecto a lo ya descontado en EN STOCK.';
   } else {
     const lines = adjustments.map(d => {
       const actionTxt = d.delta < 0
@@ -6274,8 +6480,163 @@ function applyDepScannedQty(qtyOverride){
   codeInp.focus();
 }
 
+async function saveNewDepOrder(nextStatus){
+  if(!activeDepOrder) return;
+  const o = activeDepOrder;
+  const statusEl = document.getElementById('depWsStatus');
+  const partialBtn = document.getElementById('depSavePartialBtn');
+  const finishBtn = document.getElementById('depFinishOrderBtn');
+
+  const client = findClientByKey(document.getElementById('depClientSelect')?.value || '');
+  if(!client){
+    statusEl.textContent = '❌ Seleccioná un cliente o creá uno nuevo.';
+    document.getElementById('depClientSelect')?.focus();
+    return;
+  }
+
+  const activeItems = (o.items || []).filter(it => (Number(it.cantArmada) || 0) > 0);
+  if(activeItems.length === 0){
+    statusEl.textContent = '❌ Agregá al menos un producto al pedido.';
+    return;
+  }
+
+  o.nota = document.getElementById('depOrderNote')?.value.trim() || '';
+  o.items.forEach(it => { it.cantPedida = Math.max(0, Math.round(Number(it.cantArmada) || 0)); });
+  recomputeDraftOrderTotals(o);
+
+  const mode = document.getElementById('depNewPayMode')?.value || 'cc';
+  let pagado = 0;
+  let condicion = 'CUENTA CORRIENTE';
+  if(mode === 'paid'){
+    pagado = o.total;
+    condicion = 'CONTADO';
+  } else if(mode === 'partial'){
+    const rawPag = parseFloat(document.getElementById('depNewPaidAmount')?.value);
+    if(!Number.isFinite(rawPag) || rawPag < 0 || rawPag > o.total){
+      statusEl.textContent = `❌ Ingresá un monto abonado entre 0 y ${formatPrice(o.total)}.`;
+      return;
+    }
+    pagado = rawPag;
+    condicion = 'PARCIAL';
+  }
+  const medioPago = document.getElementById('depNewPayMethod')?.value || 'Cuenta Corriente';
+
+  const deductChecked = !!document.getElementById('depNewDeductStock')?.checked;
+  const { adjustments } = deductChecked ? computePackingStockDeltas(activeItems) : { adjustments: [] };
+  const gh = getGithubConfig();
+  const canUpdateGithub = !!(gh.repo && gh.token);
+  let stockApplied = (!deductChecked || adjustments.length === 0);
+  let ghNote = '';
+
+  partialBtn.disabled = true;
+  finishBtn.disabled = true;
+  try{
+    if(deductChecked && adjustments.length > 0){
+      if(canUpdateGithub){
+        statusEl.textContent = 'Descontando stock en EN STOCK (GitHub)...';
+        try{
+          await applyEnStockAdjustments(adjustments, 'NUEVO', 'crear pedido desde Depósito');
+          stockApplied = true;
+          ghNote = ` Stock descontado en EN STOCK (${adjustments.length} producto/s).`;
+        }catch(ghErr){
+          statusEl.textContent = '❌ Error al descontar EN STOCK en GitHub: ' + ghErr.message + ' (no se creó en Sheets).';
+          return;
+        }
+      } else {
+        ghNote = ' ⚠ Falta configurar el token de GitHub en General para reflejar el descuento en EN STOCK.';
+      }
+    }
+
+    const stockDeductions = (deductChecked && stockApplied)
+      ? adjustments.map(d => ({
+          ean: d.ean,
+          codigoInterno: d.codigoInterno || '',
+          brand: d.brand || '',
+          cat: d.cat || '',
+          name: d.name || '',
+          price: d.price,
+          qty: Math.abs(d.delta),
+          prevStock: d.prevStock,
+          newStock: d.newStock
+        }))
+      : [];
+
+    const itemsPayload = activeItems.map(it => {
+      const inEnStock = !!findBaseProduct(it.ean, 'stock');
+      const cantDesc = (deductChecked && stockApplied && inEnStock) ? (it.cantArmada || 0) : 0;
+      return {
+        ean: it.ean,
+        descripcion: it.descripcion,
+        catalogo: 'EN STOCK',
+        cantidad: it.cantArmada || 0,
+        cantPedida: it.cantArmada || 0,
+        cantArmada: it.cantArmada || 0,
+        cantDescontada: cantDesc,
+        precioUnitario: it.precioUnitario || 0,
+        total: it.total || 0
+      };
+    });
+
+    statusEl.textContent = 'Registrando nuevo pedido en Google Sheets...';
+    const res = await sheetsApi('registerSale', {
+      catalogName: 'EN STOCK',
+      client: { rowIndex: client.rowIndex, codigo: client.codigo, cliente: client.cliente },
+      items: itemsPayload,
+      subtotal: o.subtotal,
+      totalSavings: o.descBulto,
+      total: o.total,
+      pagado,
+      condicion,
+      medioPago,
+      nota: o.nota,
+      stockDeductions,
+      estadoDeposito: nextStatus,
+      devoluciones: o.devoluciones,
+      totalDevoluciones: o.totalDevoluciones
+    });
+
+    delete o._isNew;
+    o.saleId = res.saleId;
+    o.fecha = res.fecha || o.fecha;
+    o.codigo = res.codigo || client.codigo || '';
+    o.cliente = client.cliente;
+    o.localidad = client.localidad || '';
+    o.direccion = client.direccion || '';
+    o.telefono = client.telefono || '';
+    o.pagado = pagado;
+    o.saldoVenta = Math.max(0, Math.round((o.total - pagado) * 100) / 100);
+    o.condicion = condicion;
+    o.medioPago = medioPago;
+    o.estado = o.saldoVenta <= 0 ? 'PAGADO' : (pagado > 0 ? 'PARCIAL' : 'PENDIENTE');
+    o.estadoDeposito = res.estadoDeposito || nextStatus;
+    o.fechaArmado = res.fechaArmado || '';
+    o.items = itemsPayload.map((it, idx) => ({ ...activeItems[idx], ...it }));
+
+    upsertOrderInCache(JSON.parse(JSON.stringify(o)));
+    if(res.clientBalance) upsertClientInCache(res.clientBalance);
+    renderClientsSection();
+
+    if(nextStatus === 'LISTO'){
+      activeDepOrder = null;
+      activeDepTab = 'ready';
+      renderDepositoSection();
+      showToast(`✅ Pedido ${o.saleId} creado y listo para entregar.${ghNote}`);
+    } else {
+      renderDepWorkspace();
+      statusEl.textContent = `⏳ Pedido ${o.saleId} creado y guardado en Para armar / En espera.${ghNote}`;
+      showToast(`⏳ Pedido ${o.saleId} creado en Depósito.${ghNote}`);
+    }
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    partialBtn.disabled = false;
+    finishBtn.disabled = false;
+  }
+}
+
 async function saveActiveDepOrder(nextStatus){
   if(!activeDepOrder) return;
+  if(activeDepOrder._isNew) return saveNewDepOrder(nextStatus);
   const o = activeDepOrder;
   o.nota = document.getElementById('depOrderNote')?.value.trim() || '';
   recomputeDraftOrderTotals(o);
@@ -6801,6 +7162,23 @@ document.getElementById('coConfirmBtn')?.addEventListener('click', async () => {
 document.getElementById('depCancelOrderBtn')?.addEventListener('click', () => {
   if(activeDepOrder) openCancelOrderModal(activeDepOrder.saleId);
 });
+document.getElementById('depNewOrderBtn')?.addEventListener('click', openNewDepOrderWorkspace);
+document.getElementById('depClientSearch')?.addEventListener('input', () => populateDepClientSelect());
+document.getElementById('depClientSelect')?.addEventListener('change', updateDepClientDebtBanner);
+document.getElementById('depRefreshClientsBtn')?.addEventListener('click', async () => {
+  await loadClientsFromSheets(true);
+  populateDepClientSelect();
+});
+document.getElementById('depNewClientBtn')?.addEventListener('click', () => {
+  openClientFormModal(newClient => {
+    populateDepClientSelect(getClientKey(newClient));
+  });
+});
+document.getElementById('depNewPayMode')?.addEventListener('change', e => {
+  const wrap = document.getElementById('depNewPartialWrap');
+  if(wrap) wrap.style.display = e.target.value === 'partial' ? '' : 'none';
+});
+document.getElementById('depNewDeductStock')?.addEventListener('change', () => renderDepWorkspace());
 document.getElementById('depRefreshBtn')?.addEventListener('click', () => loadOrdersFromSheets(true));
 document.getElementById('depGoGeneralBtn')?.addEventListener('click', () => switchAdminSection('general'));
 document.getElementById('depOpenRemitoCfgBtn')?.addEventListener('click', openRemitoConfigModal);
@@ -6812,6 +7190,9 @@ document.querySelectorAll('[data-dep-tab]').forEach(btn => {
 });
 document.getElementById('depSearchInput')?.addEventListener('input', renderDepositoSection);
 document.getElementById('depBackToListBtn')?.addEventListener('click', () => {
+  if(activeDepOrder && activeDepOrder._isNew && (activeDepOrder.items || []).length > 0){
+    if(!confirm('¿Salir sin guardar el nuevo pedido?')) return;
+  }
   activeDepOrder = null;
   renderDepositoSection();
 });

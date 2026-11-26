@@ -587,3 +587,13 @@ Fecha: 2026-11-26
   - `applyEnStockAdjustments` calcula el nuevo stock sobre el valor vivo leído dentro de `updateCustomProducts` en GitHub (evitando pises ante ediciones concurrentes) y se ejecuta **antes** de confirmar `saveOrderPacking` o `cancelOrder` en Google Sheets.
   - `saveActiveDepOrder` actualiza `cantDescontada` únicamente para productos existentes en `EN STOCK` y `#depStockDeltaBox` detalla explícitamente los sobrantes devueltos (`↩ sobrante devuelve +N a EN STOCK`).
 Archivos: apps-script/Code.gs, apps-script/INSTRUCCIONES.md, index.html, NOTASDEVER.MD
+
+### #045 - Crear pedido directamente desde Depósito (elegir/crear cliente, armar y registrar)
+Fecha: 2026-11-26
+- **Botón `➕ Nuevo pedido` en `🏭 Depósito` (`#depNewOrderBtn` → `openNewDepOrderWorkspace`)**:
+  - Abre la misma mesa de armado de Depósito en modo borrador (`_isNew: true`) con buscador y selector de cliente (`#depNewClientBar`, `#depClientSearch`, `#depClientSelect`), aviso de deuda/saldo en cuenta corriente (`#depClientDebtBanner`), botón inline `➕ Nuevo cliente` (`openClientFormModal`) y condición inicial (`Cuenta corriente`, `Pago total`, `Pago parcial`, medio de pago y casilla `Descontar stock de EN STOCK`).
+  - Reutiliza todas las herramientas de Depósito para armar el pedido directamente: lector EAN + Enter + cantidad, desplegable del catálogo, alta de producto nuevo inline, devoluciones (`DEVUELVE`), previsualización de remito A4 y previsualización de bajas en `EN STOCK`.
+  - Permite guardar como **En espera / Para armar** (`EN_ESPERA`) o **Crear y dejar Listo para entregar** (`LISTO`) descontando automáticamente en `EN STOCK` y registrando en `VENTAS` / `VENTAS_DETALLE` / `COBROS` / `MOVIMIENTOS_STOCK`.
+- **Backend Google Apps Script (`apps-script/Code.gs`)**:
+  - `handleRegisterSale_` acepta campos opcionales `estadoDeposito` (`PARA_ARMAR`, `EN_ESPERA`, `LISTO`), `devoluciones`, `totalDevoluciones` y cantidades `cantPedida`/`cantArmada`/`cantDescontada` por ítem, manteniendo 100% de compatibilidad con las ventas desde el carrito.
+Archivos: apps-script/Code.gs, index.html, NOTASDEVER.MD
