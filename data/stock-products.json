@@ -7059,14 +7059,15 @@
     {
       "ean": "7791274201882",
       "name": "CREMA CORPORAL GLOW IN PROGRESS 340 ML",
+      "desc": "",
       "price": 7310,
       "tab": "algabo",
       "cat": "GO TO BE",
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/001/130/470/products/gotobe_body_cream_340_glowinprogress-f40046fcb33ffcbbf017799819471709-480-0.webp",
       "brand": "ALGABO",
+      "stock": 3,
       "catalogName": "CREMA CORPORAL GLOW IN PROGRESS 340 ML",
-      "stock": 4,
       "bulto": 12,
       "descuentoBulto": 3
     },
