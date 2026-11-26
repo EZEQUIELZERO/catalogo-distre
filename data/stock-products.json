@@ -12261,12 +12261,15 @@
     {
       "ean": "7798356302314",
       "name": "AROMATIZADOR ARRORRÓ 500 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 8350,
+      "tab": "sandra-marzzan",
+      "cat": "TEXTIL BEBE 500 ML",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-arrorro-6e2f7383bfdc68be8017231316909913-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "ARRORRÓ",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356302321",
@@ -12281,22 +12284,28 @@
     {
       "ean": "7798356302291",
       "name": "AROMATIZADOR DEDITOS 500 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 8350,
+      "tab": "sandra-marzzan",
+      "cat": "TEXTIL BEBE 500 ML",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-deditos-e0149e32ed69ba49e817231318647680-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "DEDITOS",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356302307",
       "name": "AROMATIZADOR LEFRANCE 500 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 8350,
+      "tab": "sandra-marzzan",
+      "cat": "TEXTIL BEBE 500 ML",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-lefrance-e82b0de7f0058ebaab17231318865943-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "LEFRANCE",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356302338",
@@ -12331,12 +12340,15 @@
     {
       "ean": "7798356302734",
       "name": "AEROSOLES LEFRANCE 270 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 5200,
+      "tab": "sandra-marzzan",
+      "cat": "AEROSOL",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aerosol-lefrance-3d29950f5d5db36f4417231327814232-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "LEFRANCE",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356302987",
@@ -12411,12 +12423,15 @@
     {
       "ean": "7798356302352",
       "name": "AROMATIZADOR SUEÑITOS 500 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 8350,
+      "tab": "sandra-marzzan",
+      "cat": "TEXTIL KIDS 500 ML",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/aromatizador-suenitos-b4b2968fc9e8feca5417231317764771-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "SUEÑITOS",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356303694",
@@ -13051,12 +13066,15 @@
     {
       "ean": "7798356303540",
       "name": "AROMATIZADOR 212 - 01F 500 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 8350,
+      "tab": "sandra-marzzan",
+      "cat": "TEXTIL PERFUM 500 ML",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/v0050097-0054-0500_aromatizador_212_-_01f_500_ml-33ac09950101ccccb017508539623950-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "212 - 01F",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356303441",
@@ -13131,12 +13149,15 @@
     {
       "ean": "7798356300747",
       "name": "AROMATIZADOR CHER_78F 500 ML",
-      "price": null,
-      "tab": "algabo",
-      "cat": "Otros",
+      "price": 8350,
+      "tab": "sandra-marzzan",
+      "cat": "TEXTIL PERFUM 500 ML",
       "subcat": "",
-      "img": "",
-      "brand": "ALGABO"
+      "img": "https://acdn-us.mitiendanube.com/stores/002/063/283/products/15-76411a7c269e877c5617496551281901-480-0.webp",
+      "brand": "SANDRA MARZZAN",
+      "catalogName": "CHER_78F",
+      "bulto": 12,
+      "descuentoBulto": 3
     },
     {
       "ean": "7798356303502",
@@ -13337,6 +13358,71 @@
       "subcat": "",
       "img": "",
       "brand": "ALGABO"
+    },
+    {
+      "ean": "7.798.184.680.769,00",
+      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Flores Blancas",
+      "price": 5400,
+      "tab": "saphirus",
+      "cat": "DIFUSOR VARILLAS 125 ML",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-flores-blancas.jpg",
+      "brand": "SAPHIRUS",
+      "catalogName": "FLORES BLANCAS",
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.798.184.680.691,00",
+      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Limon",
+      "price": 5400,
+      "tab": "saphirus",
+      "cat": "DIFUSOR VARILLAS 125 ML",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-limon.jpg",
+      "brand": "SAPHIRUS",
+      "catalogName": "LIMON",
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.798.184.680.783,00",
+      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Linah",
+      "price": 5400,
+      "tab": "saphirus",
+      "cat": "DIFUSOR VARILLAS 125 ML",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-linah.jpg",
+      "brand": "SAPHIRUS",
+      "catalogName": "LINAH",
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.798.184.680.806,00",
+      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Vainilla",
+      "price": 5400,
+      "tab": "saphirus",
+      "cat": "DIFUSOR VARILLAS 125 ML",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-vainilla.jpg",
+      "brand": "SAPHIRUS",
+      "catalogName": "VAINILLA",
+      "bulto": 12,
+      "descuentoBulto": 3
+    },
+    {
+      "ean": "7.798.184.680.981,00",
+      "name": "DIFUSOR AROMATICO SAPHIRUS 125 ML - Lavanda",
+      "price": 5400,
+      "tab": "saphirus",
+      "cat": "DIFUSOR VARILLAS 125 ML",
+      "subcat": "",
+      "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-lavanda.jpg",
+      "brand": "SAPHIRUS",
+      "catalogName": "LAVANDA",
+      "bulto": 12,
+      "descuentoBulto": 3
     }
   ]
 }
