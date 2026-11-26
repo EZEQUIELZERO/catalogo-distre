@@ -1661,7 +1661,16 @@
       <div class="admin-section" id="adminSectionProducts" style="display:none;">
         <div class="toggle-all-row">
           <div class="admin-section-title" style="margin:0;">Productos — <span id="adminProductsCatalogTag">COMPLETO</span> (descripción, catálogo, precio, stock y visibilidad)</div>
-          <button class="btn btn-close btn-auto" id="toggleAllBtn">✓ Habilitar todos</button>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+            <select id="adminExportScope" class="price-input" style="width:auto;padding:7px 10px;font-size:.78rem;" aria-label="Alcance de exportación a Excel">
+              <option value="catalog">Exportar: Todo el catálogo activo</option>
+              <option value="tab">Exportar: Solo pestaña actual</option>
+              <option value="filtered">Exportar: Solo vista filtrada</option>
+              <option value="selected">Exportar: Solo seleccionados</option>
+            </select>
+            <button type="button" class="btn btn-gold btn-auto" id="adminExportExcelBtn" style="margin:0;padding:8px 13px;font-size:.8rem;">📊 Exportar Excel</button>
+            <button class="btn btn-close btn-auto" id="toggleAllBtn" style="margin:0;">✓ Habilitar todos</button>
+          </div>
         </div>
         <div class="admin-savebar" id="adminSaveBar">
           <span class="admin-pending-info" id="adminPendingInfo">Sin cambios pendientes</span>
@@ -1982,7 +1991,10 @@
         </div>
         <div class="field" style="margin-top:10px;"><label>Familia / Categoría por defecto (si el CSV no tiene columna FAMILIA)</label><input type="text" id="csvCat" class="price-input" placeholder="Ej: Nuevos ingresos"></div>
         <div class="field" style="margin-top:10px;"><label>Archivo CSV</label><input type="file" id="csvFile" accept=".csv" class="price-input" style="padding:8px;"></div>
-        <button class="btn btn-whatsapp btn-auto" id="importCsvBtn" style="margin-top:16px;">Importar CSV</button>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px;">
+          <button class="btn btn-whatsapp btn-auto" id="importCsvBtn" style="margin:0;">Importar CSV</button>
+          <button type="button" class="btn btn-gold btn-auto" id="csvExportExcelBtn" style="margin:0;">📊 Exportar productos a Excel (.xlsx)</button>
+        </div>
         <p class="admin-note" id="importCsvStatus"></p>
       </div>
 
@@ -7785,6 +7797,249 @@ function buildOrderXlsxBytes(entries){
     { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml) }
   ]);
 }
+
+function sanitizeXmlText(v){
+  return String(v === null || v === undefined ? '' : v).replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
+}
+
+const PRODUCT_EXPORT_HEADERS = [
+  'PROVEEDOR',
+  'FAMILIA',
+  'CODIGO_EAN',
+  'DESCRIPCION',
+  'NOMBRE CATALOGO',
+  'PRECIO',
+  'STOCK',
+  'IMAGEN',
+  'BULTO',
+  'DESCUENTO POR BULTO',
+  'SUBCATEGORIA',
+  'CODIGO_INTERNO'
+];
+
+function collectProductsForExport(scope = 'catalog', catalogId = activeCatalog, explicitTabId = null){
+  const list = [];
+  const pushProduct = (p, fallbackTabId) => {
+    const st = (catalogId === activeCatalog) ? getAdminRowState(p) : (() => {
+      const eff = getEffective(p, catalogId);
+      return {
+        eff,
+        name: eff.name || '',
+        catalogName: eff.catalogName || '',
+        price: eff.price,
+        stock: (typeof eff.stock === 'number' && Number.isFinite(eff.stock)) ? eff.stock : null,
+        pendingDelete: !!eff.deleted
+      };
+    })();
+    if(st.pendingDelete || st.eff.deleted) return;
+
+    const primaryTabId = p.tab || fallbackTabId;
+    const proveedor = String(p.brand || '').trim() || (getTabById(primaryTabId)?.name || primaryTabId || '');
+    const precio = (typeof st.price === 'number' && Number.isFinite(st.price)) ? st.price : null;
+    const stock = (typeof st.stock === 'number' && Number.isFinite(st.stock)) ? st.stock : null;
+    const bulto = (typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1) ? Math.round(p.bulto) : null;
+    const descuentoBulto = (typeof p.descuentoBulto === 'number' && Number.isFinite(p.descuentoBulto) && p.descuentoBulto >= 0) ? p.descuentoBulto : null;
+
+    list.push({
+      proveedor,
+      familia: String(p.cat || '').trim(),
+      ean: String(p.ean || '').trim(),
+      descripcion: String(st.name || p.name || '').trim(),
+      nombreCatalogo: String(st.catalogName || '').trim(),
+      precio,
+      stock,
+      imagen: String(p.img || '').trim(),
+      bulto,
+      descuentoBulto,
+      subcategoria: String(p.subcat || '').trim(),
+      codigoInterno: String(p.codigoInterno || '').trim()
+    });
+  };
+
+  if(scope === 'catalog'){
+    const byEan = new Map();
+    getAllTabs().forEach(t => {
+      getTabProducts(t.id, catalogId).forEach(p => {
+        const prev = byEan.get(p.ean);
+        if(!prev || p.tab === t.id){
+          byEan.set(p.ean, { p, tabId: p.tab || t.id });
+        }
+      });
+    });
+    byEan.forEach(({ p, tabId }) => pushProduct(p, tabId));
+    return list;
+  }
+
+  const targetTab = (scope === 'tab' && explicitTabId) ? explicitTabId : activeTab;
+  const tabProducts = getTabProducts(targetTab, catalogId);
+  tabProducts.forEach(p => {
+    if(scope === 'filtered' && !matchesAdminProduct(p)) return;
+    if(scope === 'selected' && !adminSelected.has(p.ean)) return;
+    pushProduct(p, targetTab);
+  });
+  return list;
+}
+
+function buildProductsXlsxBytes(records, sheetTitle = 'Productos'){
+  const enc = new TextEncoder();
+  const strCell = (ref, text, style = 0) =>
+    `<c r="${ref}" t="inlineStr" s="${style}"><is><t xml:space="preserve">${xmlEscape(sanitizeXmlText(text))}</t></is></c>`;
+  const optNumCell = (ref, val, style = 0) =>
+    (typeof val === 'number' && Number.isFinite(val))
+      ? `<c r="${ref}" s="${style}"><v>${val}</v></c>`
+      : strCell(ref, '', style);
+
+  const colsLetters = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+  const sheetRows = [];
+  sheetRows.push(
+    `<row r="1" ht="22" customHeight="1">${PRODUCT_EXPORT_HEADERS.map((h, idx) => strCell(colsLetters[idx] + '1', h, 1)).join('')}</row>`
+  );
+
+  records.forEach((rec, i) => {
+    const r = i + 2;
+    sheetRows.push(
+      `<row r="${r}">`
+      + strCell('A' + r, rec.proveedor, 0)
+      + strCell('B' + r, rec.familia, 0)
+      + strCell('C' + r, rec.ean, 0)
+      + strCell('D' + r, rec.descripcion, 0)
+      + strCell('E' + r, rec.nombreCatalogo, 0)
+      + optNumCell('F' + r, rec.precio, 3)
+      + optNumCell('G' + r, rec.stock, 2)
+      + strCell('H' + r, rec.imagen, 0)
+      + optNumCell('I' + r, rec.bulto, 2)
+      + optNumCell('J' + r, rec.descuentoBulto, 4)
+      + strCell('K' + r, rec.subcategoria, 0)
+      + strCell('L' + r, rec.codigoInterno, 0)
+      + `</row>`
+    );
+  });
+
+  const lastRow = Math.max(1, records.length + 1);
+  const safeSheet = sanitizeXmlText(sheetTitle || 'Productos').replace(/[\[\]:*?\/\\]/g, ' ').trim().slice(0, 31) || 'Productos';
+
+  const sheetXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+    + '<sheetViews><sheetView tabSelected="1" workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews>'
+    + '<cols>'
+    + '<col min="1" max="1" width="18" customWidth="1"/>'
+    + '<col min="2" max="2" width="22" customWidth="1"/>'
+    + '<col min="3" max="3" width="18" customWidth="1"/>'
+    + '<col min="4" max="4" width="46" customWidth="1"/>'
+    + '<col min="5" max="5" width="28" customWidth="1"/>'
+    + '<col min="6" max="6" width="12" customWidth="1"/>'
+    + '<col min="7" max="7" width="10" customWidth="1"/>'
+    + '<col min="8" max="8" width="44" customWidth="1"/>'
+    + '<col min="9" max="9" width="10" customWidth="1"/>'
+    + '<col min="10" max="10" width="20" customWidth="1"/>'
+    + '<col min="11" max="11" width="18" customWidth="1"/>'
+    + '<col min="12" max="12" width="16" customWidth="1"/>'
+    + '</cols>'
+    + '<sheetData>' + sheetRows.join('') + '</sheetData>'
+    + `<autoFilter ref="A1:L${lastRow}"/>`
+    + '</worksheet>';
+
+  const stylesXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+    + '<numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0"/></numFmts>'
+    + '<fonts count="2">'
+    + '<font><sz val="11"/><color rgb="FF111827"/><name val="Calibri"/></font>'
+    + '<font><b/><sz val="11"/><color rgb="FFFFFFFF"/><name val="Calibri"/></font>'
+    + '</fonts>'
+    + '<fills count="3">'
+    + '<fill><patternFill patternType="none"/></fill>'
+    + '<fill><patternFill patternType="gray125"/></fill>'
+    + '<fill><patternFill patternType="solid"><fgColor rgb="FF1E3A5F"/></patternFill></fill>'
+    + '</fills>'
+    + '<borders count="2">'
+    + '<border><left/><right/><top/><bottom/><diagonal/></border>'
+    + '<border><left style="thin"><color rgb="FFD0D7DE"/></left><right style="thin"><color rgb="FFD0D7DE"/></right><top style="thin"><color rgb="FFD0D7DE"/></top><bottom style="thin"><color rgb="FFD0D7DE"/></bottom><diagonal/></border>'
+    + '</borders>'
+    + '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>'
+    + '<cellXfs count="5">'
+    + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1"/>'
+    + '<xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf>'
+    + '<xf numFmtId="1" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+    + '<xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+    + '<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf>'
+    + '</cellXfs>'
+    + '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>'
+    + '</styleSheet>';
+
+  const contentTypesXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+    + '<Default Extension="rels" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.relationships+xml"/>'
+    + '<Default Extension="xml" ContentType="application/xml"/>'
+    + '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'
+    + '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'
+    + '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'
+    + '</Types>';
+
+  const relsXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/>'
+    + '</Relationships>';
+
+  const workbookXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+    + `<sheets><sheet name="${xmlEscape(safeSheet)}" sheetId="1" r:id="rId1"/></sheets>`
+    + '</workbook>';
+
+  const workbookRelsXml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/>'
+    + '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
+    + '</Relationships>';
+
+  return buildZipBytes([
+    { name: '[Content_Types].xml', data: enc.encode(contentTypesXml) },
+    { name: '_rels/.rels', data: enc.encode(relsXml) },
+    { name: 'xl/workbook.xml', data: enc.encode(workbookXml) },
+    { name: 'xl/_rels/workbook.xml.rels', data: enc.encode(workbookRelsXml) },
+    { name: 'xl/styles.xml', data: enc.encode(stylesXml) },
+    { name: 'xl/worksheets/sheet1.xml', data: enc.encode(sheetXml) }
+  ]);
+}
+
+function exportProductsToExcel(scope = 'catalog', catalogId = activeCatalog, explicitTabId = null){
+  const records = collectProductsForExport(scope, catalogId, explicitTabId);
+  if(records.length === 0){
+    const emptyMsg = scope === 'selected'
+      ? 'No hay productos seleccionados para exportar'
+      : 'No hay productos para exportar en el alcance elegido';
+    showToast(emptyMsg);
+    return { count: 0, filename: '' };
+  }
+  const catLabel = getActiveCatalogInfo(catalogId).name;
+  const catalogSlug = catalogId === 'stock' ? 'en-stock' : 'completo';
+  const scopeSlug = scope === 'catalog'
+    ? 'todo'
+    : (scope === 'tab' ? String(explicitTabId || activeTab || 'pestana').replace(/[^a-z0-9_-]/gi, '-') : scope);
+  const today = new Date().toISOString().slice(0, 10);
+  const filename = `productos-${catalogSlug}-${scopeSlug}-${today}.xlsx`;
+  const bytes = buildProductsXlsxBytes(records, `Productos ${catLabel}`);
+  triggerBlobDownload(bytes, filename, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+  showToast(`📊 Exportados ${records.length} productos a Excel (${filename})`);
+  return { count: records.length, filename };
+}
+
+document.getElementById('adminExportExcelBtn')?.addEventListener('click', () => {
+  const scope = document.getElementById('adminExportScope')?.value || 'catalog';
+  exportProductsToExcel(scope, activeCatalog);
+});
+
+document.getElementById('csvExportExcelBtn')?.addEventListener('click', () => {
+  const targetCatalog = document.getElementById('csvCatalog')?.value || activeCatalog;
+  const selectedTab = document.getElementById('csvTab')?.value || '__auto__';
+  const scope = selectedTab === '__auto__' ? 'catalog' : 'tab';
+  const res = exportProductsToExcel(scope, targetCatalog, selectedTab === '__auto__' ? null : selectedTab);
+  const statusEl = document.getElementById('importCsvStatus');
+  if(statusEl){
+    statusEl.textContent = res.count > 0
+      ? `✅ Exportados ${res.count} productos de ${getActiveCatalogInfo(targetCatalog).name} a ${res.filename}`
+      : '⚠ No hay productos cargados en esa selección para exportar.';
+  }
+});
 
 const WINANSI_EXTRAS = {
   0x20AC: 0x80, 0x2018: 0x91, 0x2019: 0x92, 0x201C: 0x93, 0x201D: 0x94,

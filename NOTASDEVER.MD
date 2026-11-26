@@ -565,3 +565,13 @@ Fecha: 2026-11-26
 - **Vista previa fiel a hoja A4**:
   - `.remito-preview-frame` / `.remito-preview-sheet` muestran la proporción real de A4 / ½ A4 y la insignia `#remitoLayoutBadge` indica cantidad de productos y páginas estimadas.
 Archivos: index.html, NOTASDEVER.MD
+
+### #043 - Exportar productos cargados a Excel (.xlsx) con el mismo formato de carga
+Fecha: 2026-11-26
+- **Exportación directa a `.xlsx` compatible 1:1 con `Importar CSV` / Google Sheets (`CATALOGO_WEB`)**:
+  - Columnas exportadas en orden exacto: `PROVEEDOR`, `FAMILIA`, `CODIGO_EAN`, `DESCRIPCION`, `NOMBRE CATALOGO`, `PRECIO`, `STOCK`, `IMAGEN`, `BULTO`, `DESCUENTO POR BULTO`, `SUBCATEGORIA`, `CODIGO_INTERNO`.
+  - Los códigos EAN y texto se escriben como `inlineStr` (evita notación científica en Excel), mientras que `PRECIO`, `STOCK`, `BULTO` y `DESCUENTO POR BULTO` conservan formato numérico real (y celdas vacías cuando no tienen valor). Incluye fila de encabezado fija (`ySplit="1"`) y autofiltro Excel (`autoFilter`).
+- **Alcances configurables en Admin**:
+  - En **Admin → Productos** (`#adminExportScope` + `#adminExportExcelBtn`): permite exportar **Todo el catálogo activo**, **Solo pestaña actual**, **Solo vista filtrada** o **Solo seleccionados**, reflejando incluso cambios pendientes en pantalla y omitiendo los marcados para eliminar.
+  - En **Admin → Importar CSV** (`#csvExportExcelBtn`): exporta según el **Catálogo destino** (`#csvCatalog`) y la **Pestaña destino** (`#csvTab`), sirviendo también como plantilla editable para volver a subir cambios.
+Archivos: index.html, NOTASDEVER.MD
