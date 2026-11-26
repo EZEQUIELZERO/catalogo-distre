@@ -291,14 +291,15 @@
     {
       "ean": "7798184680189",
       "name": "ROCIO",
+      "desc": "",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-rocio.jpg",
       "brand": "SAPHIRUS",
+      "stock": 20,
       "catalogName": "ROCIO",
-      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -745,14 +746,15 @@
     {
       "ean": "7798184682169",
       "name": "PAULA",
+      "desc": "",
       "price": 3820,
       "tab": "saphirus",
       "cat": "TEXTIL 250 ML",
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-paula-fi-feed.jpg.webp",
       "brand": "SAPHIRUS",
+      "stock": 8,
       "catalogName": "PAULA",
-      "stock": 12,
       "bulto": 12,
       "descuentoBulto": 3
     },
