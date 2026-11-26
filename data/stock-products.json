@@ -11,7 +11,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TEXTIL MIX",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550764",
@@ -63,7 +64,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRUS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680035",
@@ -102,7 +104,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "INDIANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680066",
@@ -128,7 +131,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680080",
@@ -193,7 +197,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ROSAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680134",
@@ -206,7 +211,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VIOLETAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680141",
@@ -219,7 +225,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ETIQUETA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680158",
@@ -245,7 +252,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PATIO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680172",
@@ -284,7 +292,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GUARANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680202",
@@ -310,7 +319,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BLUE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680875",
@@ -323,7 +333,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PAPAYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680882",
@@ -349,7 +360,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FAREN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680905",
@@ -388,7 +400,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PINK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681117",
@@ -401,7 +414,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TOKYO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681124",
@@ -414,7 +428,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ANGEL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681131",
@@ -440,7 +455,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NINA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681155",
@@ -453,7 +469,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LADY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681261",
@@ -466,7 +483,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "APOLO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681278",
@@ -479,7 +497,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681285",
@@ -518,7 +537,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FLOWERS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681568",
@@ -531,7 +551,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DUVET",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554748",
@@ -544,7 +565,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GROSSIP PRINCESS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554717",
@@ -622,7 +644,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "POLO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681780",
@@ -635,7 +658,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "INVICTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681797",
@@ -661,7 +685,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "APPLE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682152",
@@ -700,7 +725,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MAGNOLIA Y FRESIAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682350",
@@ -726,7 +752,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MARACUYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682817",
@@ -739,7 +766,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PITANGA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682824",
@@ -752,7 +780,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CRISTÓBAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682916",
@@ -765,7 +794,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683784",
@@ -778,7 +808,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LILAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683852",
@@ -791,7 +822,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NARANJA PIMIENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683845",
@@ -804,7 +836,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WANTED",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683838",
@@ -817,7 +850,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BEAUTY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683821",
@@ -856,7 +890,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "OLYMPIC",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684101",
@@ -882,7 +917,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MALE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684125",
@@ -895,7 +931,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NEW YORK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684255",
@@ -908,7 +945,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LIMON DULCE Y VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684248",
@@ -921,7 +959,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PALACE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684927",
@@ -934,7 +973,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ANTITABACO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684934",
@@ -947,7 +987,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CEREZA MALBEC",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686198",
@@ -973,7 +1014,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "POMELO ROSADO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686266",
@@ -986,7 +1028,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "XS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686273",
@@ -999,7 +1042,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GHOST",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686280",
@@ -1012,7 +1056,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DUE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686297",
@@ -1025,7 +1070,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BAD MAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686303",
@@ -1038,7 +1084,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "OPIUM",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686310",
@@ -1051,7 +1098,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FRUTILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686327",
@@ -1064,7 +1112,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TEAKWOOD",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686624",
@@ -1090,7 +1139,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "YOURSELF",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686891",
@@ -1103,7 +1153,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PEONIAS Y CEDRO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686907",
@@ -1116,7 +1167,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "HYPNOTIC SCENT",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686914",
@@ -1129,7 +1181,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SÁNDALO Y VIOLETAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686921",
@@ -1142,7 +1195,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FLORES SILVESTRES",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686938",
@@ -1155,7 +1209,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PETALOS DE ORQUIDEAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686334",
@@ -1233,7 +1288,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FAMA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184689045",
@@ -1246,7 +1302,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BERGAMOTA Y CEDRO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683319",
@@ -1259,7 +1316,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "AMBER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683432",
@@ -1389,7 +1447,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SWEET BASIL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683524",
@@ -1428,7 +1487,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRUS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680714",
@@ -1441,7 +1501,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "COCO-VAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680738",
@@ -1467,7 +1528,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FLORES BLANCAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680790",
@@ -1480,7 +1542,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "HAWAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680691",
@@ -1493,7 +1556,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680783",
@@ -1506,7 +1570,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LINAH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680721",
@@ -1519,7 +1584,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680776",
@@ -1532,7 +1598,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PERAS Y FLORES",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680745",
@@ -1545,7 +1612,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680806",
@@ -1558,7 +1626,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680752",
@@ -1571,7 +1640,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ORANGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680943",
@@ -1584,7 +1654,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "AMOUR",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680981",
@@ -1597,7 +1668,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681001",
@@ -1610,7 +1682,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680998",
@@ -1623,7 +1696,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PATIO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681018",
@@ -1649,7 +1723,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BAMBOO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680967",
@@ -1662,7 +1737,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GREEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680974",
@@ -1714,7 +1790,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GUARANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681193",
@@ -1740,7 +1817,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CAPPUCCINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681209",
@@ -1753,7 +1831,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LOLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681223",
@@ -1779,7 +1858,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CRISTAL EDEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681315",
@@ -1792,7 +1872,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TOKYO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681322",
@@ -1805,7 +1886,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VIOLETAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681339",
@@ -1818,7 +1900,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANZANA CANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681346",
@@ -1857,7 +1940,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681575",
@@ -1870,7 +1954,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MELON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681810",
@@ -1883,7 +1968,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MIEL Y LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681827",
@@ -1896,7 +1982,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "APPLE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682046",
@@ -1922,7 +2009,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MARACUYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682008",
@@ -1935,7 +2023,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LONDON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682312",
@@ -1948,7 +2037,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MAGNOLIA Y FRESIAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682374",
@@ -1974,7 +2064,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MERY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682343",
@@ -2000,7 +2091,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CRISTÓBAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682978",
@@ -2013,7 +2105,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PALO SANTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683869",
@@ -2039,7 +2132,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LIMON DULCE Y VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686211",
@@ -2052,7 +2146,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "INVICTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686228",
@@ -2065,7 +2160,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WANTED",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686235",
@@ -2091,7 +2187,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ADVENTURE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685580",
@@ -2104,7 +2201,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PERA Y DURAZNO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685597",
@@ -2117,7 +2215,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA Y TE VERDE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685603",
@@ -2143,7 +2242,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VAINILLA TONKA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685627",
@@ -2156,7 +2256,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NARANJA & CHOCOLATE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685634",
@@ -2169,7 +2270,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CAFÉ CON CHOCOLATE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686761",
@@ -2182,7 +2284,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BAD MAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686778",
@@ -2195,7 +2298,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "COCO MARACUYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686785",
@@ -2208,7 +2312,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SANDIA PEPINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686792",
@@ -2221,7 +2326,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LIMA LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686808",
@@ -2234,7 +2340,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MELOCOTON BLANCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686815",
@@ -2247,7 +2354,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686822",
@@ -2273,7 +2381,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANGO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686846",
@@ -2286,7 +2395,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CLEAN COTTON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686853",
@@ -2299,7 +2409,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PETALOS DE ORQUIDEAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686860",
@@ -2312,7 +2423,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "COOKIES & CREAM",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686877",
@@ -2325,7 +2437,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FRESIAS & BERGAMOTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184689038",
@@ -2338,7 +2451,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BERGAMOTA Y CEDRO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683999",
@@ -2364,7 +2478,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "COCO & MARACUYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684019",
@@ -2377,7 +2492,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NARANJA POMELO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684026",
@@ -2390,7 +2506,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SANDIA PEPINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684033",
@@ -2403,7 +2520,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SWEET FLOWERS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684040",
@@ -2429,7 +2547,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MIX TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684651",
@@ -2442,7 +2561,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRIC WOOD",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684668",
@@ -2468,7 +2588,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "APPLE CHAMPAGNE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684682",
@@ -2481,7 +2602,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "UVA & ARANDANOS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684699",
@@ -2507,7 +2629,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MOUNTAIN WATER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685795",
@@ -2533,7 +2656,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GROSELLAS & NECTARINA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685498",
@@ -2546,7 +2670,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LINO & PEONIAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685504",
@@ -2559,7 +2684,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ARANDANOS & CANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685832",
@@ -2572,7 +2698,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FLOR DE LOTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685528",
@@ -2598,7 +2725,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CLEMENTINA & FLORES BLANCAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685801",
@@ -2611,7 +2739,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FRAMBUESA & ROSAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685849",
@@ -2624,7 +2753,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "POMELO & MENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685566",
@@ -2637,7 +2767,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "AMAPOLA & CEREZO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685825",
@@ -2650,7 +2781,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FRESIAS & BERGAMOTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681834",
@@ -2702,7 +2834,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GREEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681889",
@@ -2715,7 +2848,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681896",
@@ -2767,7 +2901,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANZANACANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681933",
@@ -2780,7 +2915,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ORANGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681940",
@@ -2793,7 +2929,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681957",
@@ -2819,7 +2956,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MIELYLIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681971",
@@ -2871,7 +3009,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PATCHOULY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683920",
@@ -2884,7 +3023,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "EUCALIPTUS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684064",
@@ -2897,7 +3037,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "INCIENSO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684071",
@@ -2910,7 +3051,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MIRRA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684088",
@@ -2923,7 +3065,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NAGCHAMPA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684095",
@@ -2936,7 +3079,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SANDALO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684224",
@@ -2949,7 +3093,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684620",
@@ -2962,7 +3107,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VRINDAVAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684637",
@@ -2975,7 +3121,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NEWDELHI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684965",
@@ -2988,7 +3135,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "AMBER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684972",
@@ -3001,7 +3149,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CINNAMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686648",
@@ -3014,7 +3163,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NIGHTQUEEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686655",
@@ -3040,7 +3190,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ALBAHACAYCANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686679",
@@ -3053,7 +3204,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WHITESAGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686686",
@@ -3066,7 +3218,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FRUTILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686693",
@@ -3079,7 +3232,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686709",
@@ -3092,7 +3246,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "RUDAYROMERO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686716",
@@ -3105,7 +3260,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANGO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686723",
@@ -3118,7 +3274,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ROSAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686730",
@@ -3157,7 +3314,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CEDRO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554823",
@@ -3170,7 +3328,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SOFT LOVE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680226",
@@ -3196,7 +3355,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DANIEL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680240",
@@ -3209,7 +3369,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ETIQUETA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680257",
@@ -3222,7 +3383,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FANTASÍA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680264",
@@ -3248,7 +3410,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680288",
@@ -3274,7 +3437,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANDARINA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184688826",
@@ -3287,7 +3451,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PEONIAS Y CEDRO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553505",
@@ -3300,7 +3465,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LAST SHOT",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680301",
@@ -3313,7 +3479,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MELÒN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680318",
@@ -3326,7 +3493,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680325",
@@ -3352,7 +3520,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PAPAYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680356",
@@ -3365,7 +3534,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PATIO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680363",
@@ -3378,7 +3548,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680370",
@@ -3391,7 +3562,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRUS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680387",
@@ -3404,7 +3576,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "COCO VAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680394",
@@ -3417,7 +3590,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VERBENA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680400",
@@ -3430,7 +3604,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MITO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680417",
@@ -3443,7 +3618,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ORANGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680424",
@@ -3456,7 +3632,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BAMBOO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553512",
@@ -3482,7 +3659,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANZANA - CANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553529",
@@ -3495,7 +3673,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CAPRI SUMMER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680462",
@@ -3521,7 +3700,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VELOCITY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680486",
@@ -3534,7 +3714,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MARACUYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680493",
@@ -3547,7 +3728,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "INDIANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553499",
@@ -3560,7 +3742,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SUNSET FIRE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680516",
@@ -3573,7 +3756,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LOLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680523",
@@ -3586,7 +3770,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GREEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680530",
@@ -3599,7 +3784,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MIEL Y LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680578",
@@ -3612,7 +3798,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ROSAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680585",
@@ -3625,7 +3812,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TILO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680592",
@@ -3638,7 +3826,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VIOLETAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553536",
@@ -3651,7 +3840,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "HEAVEN AND HELL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680615",
@@ -3664,7 +3854,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "TOKYO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680622",
@@ -3690,7 +3881,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LINAH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680646",
@@ -3703,7 +3895,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "HAWAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680653",
@@ -3716,7 +3909,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680660",
@@ -3729,7 +3923,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GUARANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680677",
@@ -3742,7 +3937,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PERAS Y FLORES",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680684",
@@ -3768,7 +3964,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PITANGA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553581",
@@ -3794,7 +3991,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MARINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680851",
@@ -3807,7 +4005,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553550",
@@ -3820,7 +4019,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CRISTAL EDEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184680936",
@@ -3833,7 +4033,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "APPLE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553567",
@@ -3846,7 +4047,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GOLDEN LADY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681070",
@@ -3859,7 +4061,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CAPPUCCINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681254",
@@ -3872,7 +4075,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DAMASCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681445",
@@ -3885,7 +4089,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DUVET",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681469",
@@ -3898,7 +4103,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184681995",
@@ -3911,7 +4117,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LONDON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554830",
@@ -3924,7 +4131,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "ATLANTIS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682077",
@@ -3937,7 +4145,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MERY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682091",
@@ -3963,7 +4172,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MAGNOLIA Y FRESIAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682831",
@@ -3976,7 +4186,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CRISTÓBAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682985",
@@ -3989,7 +4200,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PALO SANTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184682992",
@@ -4002,7 +4214,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FRUTILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683876",
@@ -4015,7 +4228,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NARANJA PIMIENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444553574",
@@ -4028,7 +4242,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CELESTIAL WINGS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684057",
@@ -4041,7 +4256,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NEW YORK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684279",
@@ -4054,7 +4270,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LIMON DULCE Y VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684262",
@@ -4067,7 +4284,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PALACE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684583",
@@ -4093,7 +4311,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "COCO & MARACUYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684606",
@@ -4106,7 +4325,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SANDIA PEPINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684613",
@@ -4119,7 +4339,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MIX TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184684941",
@@ -4145,7 +4366,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BOUQUET FLORAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685689",
@@ -4158,7 +4380,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CIRUELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685696",
@@ -4171,7 +4394,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "BERGAMOTA & NARANJA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685665",
@@ -4184,7 +4408,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "POMELO ROSADO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685641",
@@ -4197,7 +4422,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PERA Y DURAZNO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685658",
@@ -4210,7 +4436,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LAVANDA Y TE VERDE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685672",
@@ -4223,7 +4450,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "VAINILLA TONKA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685719",
@@ -4236,7 +4464,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "NARANJA Y CHOCOLATE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685726",
@@ -4249,7 +4478,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CAFÉ AU CHOCOLAT",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184687010",
@@ -4262,7 +4492,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANGO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686983",
@@ -4275,7 +4506,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CLEAN COTTON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554489",
@@ -4288,7 +4520,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LIFE IN PETALS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554496",
@@ -4301,7 +4534,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "GOSSIP KING",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550962",
@@ -4314,7 +4548,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CARS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550955",
@@ -4327,7 +4562,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MOANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550931",
@@ -4340,7 +4576,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "STICH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550924",
@@ -4353,7 +4590,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "STICH ROSA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550979",
@@ -4366,7 +4604,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WOODY Y JESSIE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550993",
@@ -4379,7 +4618,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WOODY Y BUZZ",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550986",
@@ -4418,7 +4658,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FROZEN ELSA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550894",
@@ -4431,7 +4672,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FROZEN ELSA Y ANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550900",
@@ -4444,7 +4686,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FROZEN LOS 3",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550863",
@@ -4457,7 +4700,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MICKEY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444550870",
@@ -4483,7 +4727,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SPIDERMAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551044",
@@ -4496,7 +4741,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "HULK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551037",
@@ -4509,7 +4755,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "IRON MAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551006",
@@ -4522,7 +4769,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DART VADER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551013",
@@ -4535,7 +4783,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANDALORIAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551020",
@@ -4548,7 +4797,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "R2D2",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551105",
@@ -4561,7 +4811,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "DART VADER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551235",
@@ -4574,7 +4825,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "STICH DOBLE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551082",
@@ -4587,7 +4839,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "LOTSO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551242",
@@ -4600,7 +4853,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "PRINCESA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551075",
@@ -4613,7 +4867,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WOODY Y JESSIE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551136",
@@ -4626,7 +4881,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "IRON MAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551150",
@@ -4639,7 +4895,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "SPIDERMAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551129",
@@ -4652,7 +4909,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "R2D2",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551099",
@@ -4665,7 +4923,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "WODY Y BUZZ",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551143",
@@ -4678,7 +4937,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "HULK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551112",
@@ -4691,7 +4951,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MANDALORIAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551174",
@@ -4704,7 +4965,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MINNIE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551068",
@@ -4717,7 +4979,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "CARS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551228",
@@ -4730,7 +4993,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "STICH ROSA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551211",
@@ -4743,7 +5007,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "STICH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551204",
@@ -4756,7 +5021,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "FROZEN LOS TRES",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551167",
@@ -4769,7 +5035,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "MICKEY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444551259",
@@ -4886,7 +5153,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "REPUESTO LAVANDA FRESH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184688710",
@@ -4899,7 +5167,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "REPUESTO FRUTOS ROJOS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184688734",
@@ -4925,7 +5194,8 @@
       "brand": "SAPHIRUS",
       "catalogName": "REPUESTO MIX CITRICO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683005",
@@ -4938,7 +5208,8 @@
       "brand": "AMBAR",
       "catalogName": "AMOUR",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683012",
@@ -4951,7 +5222,8 @@
       "brand": "AMBAR",
       "catalogName": "ANTITABACO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683029",
@@ -4964,7 +5236,8 @@
       "brand": "AMBAR",
       "catalogName": "BAMBOO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683036",
@@ -4977,7 +5250,8 @@
       "brand": "AMBAR",
       "catalogName": "BEBE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683043",
@@ -4990,7 +5264,8 @@
       "brand": "AMBAR",
       "catalogName": "BUBBLEGUM",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683050",
@@ -5003,7 +5278,8 @@
       "brand": "AMBAR",
       "catalogName": "CITRUS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683067",
@@ -5016,7 +5292,8 @@
       "brand": "AMBAR",
       "catalogName": "COCO VAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683074",
@@ -5029,7 +5306,8 @@
       "brand": "AMBAR",
       "catalogName": "CONY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683081",
@@ -5042,7 +5320,8 @@
       "brand": "AMBAR",
       "catalogName": "DANIEL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683098",
@@ -5055,7 +5334,8 @@
       "brand": "AMBAR",
       "catalogName": "FLORES BLANCAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683104",
@@ -5068,7 +5348,8 @@
       "brand": "AMBAR",
       "catalogName": "FLOWERS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683111",
@@ -5081,7 +5362,8 @@
       "brand": "AMBAR",
       "catalogName": "HAWAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683128",
@@ -5094,7 +5376,8 @@
       "brand": "AMBAR",
       "catalogName": "INDIANA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683135",
@@ -5107,7 +5390,8 @@
       "brand": "AMBAR",
       "catalogName": "INVICTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683142",
@@ -5120,7 +5404,8 @@
       "brand": "AMBAR",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683159",
@@ -5133,7 +5418,8 @@
       "brand": "AMBAR",
       "catalogName": "TOKYO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683166",
@@ -5146,7 +5432,8 @@
       "brand": "AMBAR",
       "catalogName": "LAVANDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683173",
@@ -5159,7 +5446,8 @@
       "brand": "AMBAR",
       "catalogName": "LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683180",
@@ -5172,7 +5460,8 @@
       "brand": "AMBAR",
       "catalogName": "LINAH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683197",
@@ -5185,7 +5474,8 @@
       "brand": "AMBAR",
       "catalogName": "LOLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683203",
@@ -5198,7 +5488,8 @@
       "brand": "AMBAR",
       "catalogName": "MAGNOLIA Y FRESIAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683210",
@@ -5211,7 +5502,8 @@
       "brand": "AMBAR",
       "catalogName": "MERY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683227",
@@ -5224,7 +5516,8 @@
       "brand": "AMBAR",
       "catalogName": "ORANGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683234",
@@ -5237,7 +5530,8 @@
       "brand": "AMBAR",
       "catalogName": "PAPAYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683241",
@@ -5250,7 +5544,8 @@
       "brand": "AMBAR",
       "catalogName": "PATIO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683258",
@@ -5263,7 +5558,8 @@
       "brand": "AMBAR",
       "catalogName": "ROCIO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683265",
@@ -5276,7 +5572,8 @@
       "brand": "AMBAR",
       "catalogName": "TE VERDE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683272",
@@ -5289,7 +5586,8 @@
       "brand": "AMBAR",
       "catalogName": "TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683289",
@@ -5302,7 +5600,8 @@
       "brand": "AMBAR",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683296",
@@ -5315,7 +5614,8 @@
       "brand": "AMBAR",
       "catalogName": "VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798444554540",
@@ -5328,7 +5628,8 @@
       "brand": "AMBAR",
       "catalogName": "ATLANTIS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983480",
@@ -5341,7 +5642,8 @@
       "brand": "AMBAR",
       "catalogName": "BAMBOO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983497",
@@ -5354,7 +5656,8 @@
       "brand": "AMBAR",
       "catalogName": "COCO VAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983503",
@@ -5367,7 +5670,8 @@
       "brand": "AMBAR",
       "catalogName": "FLORES BLANCAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983510",
@@ -5380,7 +5684,8 @@
       "brand": "AMBAR",
       "catalogName": "GREEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983527",
@@ -5393,7 +5698,8 @@
       "brand": "AMBAR",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983534",
@@ -5406,7 +5712,8 @@
       "brand": "AMBAR",
       "catalogName": "LAVANDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983541",
@@ -5419,7 +5726,8 @@
       "brand": "AMBAR",
       "catalogName": "LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983558",
@@ -5432,7 +5740,8 @@
       "brand": "AMBAR",
       "catalogName": "LINAH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983565",
@@ -5445,7 +5754,8 @@
       "brand": "AMBAR",
       "catalogName": "MANZANA CANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983572",
@@ -5458,7 +5768,8 @@
       "brand": "AMBAR",
       "catalogName": "ORANGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983589",
@@ -5471,7 +5782,8 @@
       "brand": "AMBAR",
       "catalogName": "ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983596",
@@ -5484,7 +5796,8 @@
       "brand": "AMBAR",
       "catalogName": "PAPAPYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983602",
@@ -5497,7 +5810,8 @@
       "brand": "AMBAR",
       "catalogName": "MIEL Y LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983619",
@@ -5510,7 +5824,8 @@
       "brand": "AMBAR",
       "catalogName": "VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983626",
@@ -5523,7 +5838,8 @@
       "brand": "AMBAR",
       "catalogName": "PALO SANTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983633",
@@ -5536,7 +5852,8 @@
       "brand": "AMBAR",
       "catalogName": "NARANJA PIMIENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983640",
@@ -5549,7 +5866,8 @@
       "brand": "AMBAR",
       "catalogName": "PATCHOULY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983800",
@@ -5562,7 +5880,8 @@
       "brand": "AMBAR",
       "catalogName": "EUCALIPTUS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983657",
@@ -5575,7 +5894,8 @@
       "brand": "AMBAR",
       "catalogName": "INCIENSO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983664",
@@ -5588,7 +5908,8 @@
       "brand": "AMBAR",
       "catalogName": "MIRRA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983671",
@@ -5601,7 +5922,8 @@
       "brand": "AMBAR",
       "catalogName": "NAG CHAMPA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983688",
@@ -5614,7 +5936,8 @@
       "brand": "AMBAR",
       "catalogName": "SANDALO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983695",
@@ -5627,7 +5950,8 @@
       "brand": "AMBAR",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983701",
@@ -5640,7 +5964,8 @@
       "brand": "AMBAR",
       "catalogName": "MUSK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983718",
@@ -5653,7 +5978,8 @@
       "brand": "AMBAR",
       "catalogName": "VRINDAVAN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983725",
@@ -5666,7 +5992,8 @@
       "brand": "AMBAR",
       "catalogName": "NEW DELHI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983732",
@@ -5679,7 +6006,8 @@
       "brand": "AMBAR",
       "catalogName": "AMBER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "77983749",
@@ -5692,7 +6020,8 @@
       "brand": "AMBAR",
       "catalogName": "CINNAMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685856",
@@ -5705,7 +6034,8 @@
       "brand": "AMBAR",
       "catalogName": "AMOUR",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685863",
@@ -5718,7 +6048,8 @@
       "brand": "AMBAR",
       "catalogName": "ANGEL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685870",
@@ -5731,7 +6062,8 @@
       "brand": "AMBAR",
       "catalogName": "BAMBOO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685887",
@@ -5744,7 +6076,8 @@
       "brand": "AMBAR",
       "catalogName": "BEBE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685894",
@@ -5757,7 +6090,8 @@
       "brand": "AMBAR",
       "catalogName": "BELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685900",
@@ -5770,7 +6104,8 @@
       "brand": "AMBAR",
       "catalogName": "BUBBLEGUM",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685917",
@@ -5783,7 +6118,8 @@
       "brand": "AMBAR",
       "catalogName": "COCO VAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685924",
@@ -5796,7 +6132,8 @@
       "brand": "AMBAR",
       "catalogName": "CONY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685931",
@@ -5809,7 +6146,8 @@
       "brand": "AMBAR",
       "catalogName": "FLORES BLANCAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685948",
@@ -5822,7 +6160,8 @@
       "brand": "AMBAR",
       "catalogName": "FLOWERS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685955",
@@ -5835,7 +6174,8 @@
       "brand": "AMBAR",
       "catalogName": "GREEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685962",
@@ -5848,7 +6188,8 @@
       "brand": "AMBAR",
       "catalogName": "HAWAI",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685979",
@@ -5861,7 +6202,8 @@
       "brand": "AMBAR",
       "catalogName": "INVICTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685986",
@@ -5874,7 +6216,8 @@
       "brand": "AMBAR",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685993",
@@ -5887,7 +6230,8 @@
       "brand": "AMBAR",
       "catalogName": "LAVANDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686006",
@@ -5900,7 +6244,8 @@
       "brand": "AMBAR",
       "catalogName": "LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686013",
@@ -5913,7 +6258,8 @@
       "brand": "AMBAR",
       "catalogName": "LINAH",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686020",
@@ -5926,7 +6272,8 @@
       "brand": "AMBAR",
       "catalogName": "LOLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686037",
@@ -5939,7 +6286,8 @@
       "brand": "AMBAR",
       "catalogName": "MAGNOLIA Y FRESIAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686044",
@@ -5952,7 +6300,8 @@
       "brand": "AMBAR",
       "catalogName": "MERY",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686051",
@@ -5965,7 +6314,8 @@
       "brand": "AMBAR",
       "catalogName": "NINA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686068",
@@ -5978,7 +6328,8 @@
       "brand": "AMBAR",
       "catalogName": "OLYMPIC",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686075",
@@ -5991,7 +6342,8 @@
       "brand": "AMBAR",
       "catalogName": "ONE MILLION",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686082",
@@ -6004,7 +6356,8 @@
       "brand": "AMBAR",
       "catalogName": "PAPAYA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686099",
@@ -6017,7 +6370,8 @@
       "brand": "AMBAR",
       "catalogName": "PAULA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686105",
@@ -6030,7 +6384,8 @@
       "brand": "AMBAR",
       "catalogName": "ROCIO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686112",
@@ -6043,7 +6398,8 @@
       "brand": "AMBAR",
       "catalogName": "TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686129",
@@ -6056,7 +6412,8 @@
       "brand": "AMBAR",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686136",
@@ -6069,7 +6426,8 @@
       "brand": "AMBAR",
       "catalogName": "VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184686143",
@@ -6082,7 +6440,8 @@
       "brand": "AMBAR",
       "catalogName": "WANTED",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683548",
@@ -6095,7 +6454,8 @@
       "brand": "AMBAR",
       "catalogName": "AMBER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683555",
@@ -6108,7 +6468,8 @@
       "brand": "AMBAR",
       "catalogName": "BENZOIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683562",
@@ -6121,7 +6482,8 @@
       "brand": "AMBAR",
       "catalogName": "CANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683579",
@@ -6134,7 +6496,8 @@
       "brand": "AMBAR",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683586",
@@ -6147,7 +6510,8 @@
       "brand": "AMBAR",
       "catalogName": "COCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683593",
@@ -6160,7 +6524,8 @@
       "brand": "AMBAR",
       "catalogName": "COPAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683609",
@@ -6173,7 +6538,8 @@
       "brand": "AMBAR",
       "catalogName": "FRUTILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683616",
@@ -6186,7 +6552,8 @@
       "brand": "AMBAR",
       "catalogName": "INCIENSO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683623",
@@ -6199,7 +6566,8 @@
       "brand": "AMBAR",
       "catalogName": "INCIENSO MIRRA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683630",
@@ -6212,7 +6580,8 @@
       "brand": "AMBAR",
       "catalogName": "JAZMIN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683647",
@@ -6225,7 +6594,8 @@
       "brand": "AMBAR",
       "catalogName": "LAVANDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683654",
@@ -6238,7 +6608,8 @@
       "brand": "AMBAR",
       "catalogName": "LIMON",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683661",
@@ -6251,7 +6622,8 @@
       "brand": "AMBAR",
       "catalogName": "MIRRA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683678",
@@ -6264,7 +6636,8 @@
       "brand": "AMBAR",
       "catalogName": "MUSK",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683685",
@@ -6277,7 +6650,8 @@
       "brand": "AMBAR",
       "catalogName": "NAGCHAMPA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683692",
@@ -6290,7 +6664,8 @@
       "brand": "AMBAR",
       "catalogName": "NIGHT QUEEN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683708",
@@ -6303,7 +6678,8 @@
       "brand": "AMBAR",
       "catalogName": "PALO SANTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683715",
@@ -6329,7 +6705,8 @@
       "brand": "AMBAR",
       "catalogName": "ROSA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683739",
@@ -6342,7 +6719,8 @@
       "brand": "AMBAR",
       "catalogName": "SANDALO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683746",
@@ -6355,7 +6733,8 @@
       "brand": "AMBAR",
       "catalogName": "SANDALO CANELA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683753",
@@ -6368,7 +6747,8 @@
       "brand": "AMBAR",
       "catalogName": "SANDALO ROSA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683760",
@@ -6381,7 +6761,8 @@
       "brand": "AMBAR",
       "catalogName": "VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184683777",
@@ -6394,7 +6775,8 @@
       "brand": "AMBAR",
       "catalogName": "VIOLETA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685146",
@@ -6407,7 +6789,8 @@
       "brand": "AMBAR",
       "catalogName": "DRAGON´S BLOOD",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685153",
@@ -6420,7 +6803,8 @@
       "brand": "AMBAR",
       "catalogName": "WHITE SAGE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685160",
@@ -6433,7 +6817,8 @@
       "brand": "AMBAR",
       "catalogName": "AARUDA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798184685177",
@@ -6446,7 +6831,8 @@
       "brand": "AMBAR",
       "catalogName": "SANDAL AMBER",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201868",
@@ -6459,7 +6845,8 @@
       "brand": "ALGABO",
       "catalogName": "BRUMA CORPORAL CHILL NOT BORING 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201851",
@@ -6472,7 +6859,8 @@
       "brand": "ALGABO",
       "catalogName": "BRUMA CORPORAL GLOW IN PROGRESS 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201875",
@@ -6485,7 +6873,8 @@
       "brand": "ALGABO",
       "catalogName": "BRUMA CORPORAL THE PLOT TWIST 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201936",
@@ -6498,7 +6887,8 @@
       "brand": "ALGABO",
       "catalogName": "MANTECA CORPORAL CHILL NOT BORING 240 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201929",
@@ -6511,7 +6901,8 @@
       "brand": "ALGABO",
       "catalogName": "MANTECA CORPORAL GLOW IN PROGRESS 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201943",
@@ -6524,7 +6915,8 @@
       "brand": "ALGABO",
       "catalogName": "MANTECA CORPORAL THE PLOT TWIST 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201912",
@@ -6537,7 +6929,8 @@
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL ILUMINADORA 240 ML",
       "bulto": 9,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201899",
@@ -6550,7 +6943,8 @@
       "brand": "ALGABO",
       "catalogName": "CREMA CORPORAL CHILL NOT BORING 340 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201882",
@@ -6589,7 +6983,8 @@
       "brand": "ALGABO",
       "catalogName": "SET PARA REGALO CHILL NOT BORING",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201950",
@@ -6602,7 +6997,8 @@
       "brand": "ALGABO",
       "catalogName": "SET PARA REGALO THE PLOT TWIST",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202377",
@@ -6615,7 +7011,8 @@
       "brand": "ALGABO",
       "catalogName": "SET PARA REGALO GLOW IN PROGRESS",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202049",
@@ -6628,7 +7025,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB BLOOM AURA 127 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202032",
@@ -6641,7 +7039,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB VELVET 127 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202018",
@@ -6654,7 +7053,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB ELIXIR 150 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202025",
@@ -6667,7 +7067,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB OCEAN WOOD 150 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201981",
@@ -6680,7 +7081,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB PERFUME BLOOM AURA 100 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201974",
@@ -6693,7 +7095,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB PERFUME VELVET 100 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201998",
@@ -6706,7 +7109,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB PERFUME ELIXIR 100 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202001",
@@ -6719,7 +7123,8 @@
       "brand": "ALGABO",
       "catalogName": "POLO CLUB PERFUME OCEAN WOOD 100 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202063",
@@ -6732,7 +7137,8 @@
       "brand": "ALGABO",
       "catalogName": "SET PARA REGALO POLO EDT + DEO VELVET",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202056",
@@ -6745,7 +7151,8 @@
       "brand": "ALGABO",
       "catalogName": "SET PARA REGALO POLO EDT + DEO ELIXIR",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274001567",
@@ -6758,7 +7165,8 @@
       "brand": "ALGABO",
       "catalogName": "ACEITE PARA BEBE 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200908",
@@ -6771,7 +7179,8 @@
       "brand": "ALGABO",
       "catalogName": "ACEITE PARA BEBE 355 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000119",
@@ -6797,7 +7206,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA PARA BEBE DULCE MIMOS 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274192241",
@@ -6810,7 +7220,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA PARA BEBE SUAVE BRISA 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196546",
@@ -6823,7 +7234,8 @@
       "brand": "ALGABO",
       "catalogName": "FECULA TALCO PARA BEBE 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198557",
@@ -6836,7 +7248,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO TALCO PARA BEBE 200 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200663",
@@ -6888,7 +7301,8 @@
       "brand": "ALGABO",
       "catalogName": "SET PARA REGALO COLONIA + SHAMPOO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200670",
@@ -6901,7 +7315,8 @@
       "brand": "ALGABO",
       "catalogName": "HISOPOS PARA BEBE BOX",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201011",
@@ -6914,7 +7329,8 @@
       "brand": "ALGABO",
       "catalogName": "HISOPOS PARA BEBE PAPEL ECO",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202070",
@@ -6940,7 +7356,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON PARA BEBE EN CAJA 80 GR",
       "bulto": 45,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198434",
@@ -6953,7 +7370,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON PARA BEBE PAQUETE 80 GR",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200151",
@@ -6992,7 +7410,8 @@
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA BEBE MANZANILLA 444 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274192326",
@@ -7005,7 +7424,8 @@
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA BEBE EXTRA SUAVE 444 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200687",
@@ -7018,7 +7438,8 @@
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR PARA BEBE EXTRA SUAVE 444 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200694",
@@ -7031,7 +7452,8 @@
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR PARA BEBE MANZANILLA 444 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000393",
@@ -7044,7 +7466,8 @@
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA BEBE MANZANILLA 755 ML",
       "bulto": 7,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000386",
@@ -7057,7 +7480,8 @@
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA BEBE EXTRA SUAVE 755 ML",
       "bulto": 7,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198243",
@@ -7070,7 +7494,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON LIQUIDO PARA BEBE C/VALBULA 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200700",
@@ -7083,7 +7508,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB LIQ PARA BEBE 200 ML",
       "bulto": 20,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197017",
@@ -7109,7 +7535,8 @@
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS 48 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198786",
@@ -7122,7 +7549,8 @@
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS 3X48 UD",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197031",
@@ -7135,7 +7563,8 @@
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS 80 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199387",
@@ -7148,7 +7577,8 @@
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS 100 UD CON TAPA",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200533",
@@ -7161,7 +7591,8 @@
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS NATURALES 48 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200540",
@@ -7174,7 +7605,8 @@
       "brand": "ALGABO",
       "catalogName": "TOALLITAS HUMEDAS NATURALES 80 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201325",
@@ -7187,7 +7619,8 @@
       "brand": "ALGABO",
       "catalogName": "ALGODON PRECURTADO 100 GR",
       "bulto": 36,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201318",
@@ -7200,7 +7633,8 @@
       "brand": "ALGABO",
       "catalogName": "PAÑITOS DE ALGODON 40 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201400",
@@ -7213,7 +7647,8 @@
       "brand": "ALGABO",
       "catalogName": "PAÑITOS DE ALGODON 50 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202513",
@@ -7226,7 +7661,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES G X 16",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202520",
@@ -7239,7 +7675,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES G X 38",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202537",
@@ -7252,7 +7689,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES M X 16",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202544",
@@ -7265,7 +7703,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES M X 46",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202551",
@@ -7278,7 +7717,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES P X 16",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202568",
@@ -7291,7 +7731,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES XG X 16",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202575",
@@ -7304,7 +7745,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES XG X 30",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202582",
@@ -7317,7 +7759,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES XXG X 16",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202599",
@@ -7330,7 +7773,8 @@
       "brand": "ALGABO",
       "catalogName": "BABY PAÑALES XXG X 28",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274087622",
@@ -7408,7 +7852,8 @@
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR PARA PIOJOS 500 ML",
       "bulto": 11,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199912",
@@ -7421,7 +7866,8 @@
       "brand": "ALGABO",
       "catalogName": "LOCION PARA PIOJOS 100 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274191930",
@@ -7434,7 +7880,8 @@
       "brand": "ALGABO",
       "catalogName": "LOCION POST AFEITADO 120 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197451",
@@ -7447,7 +7894,8 @@
       "brand": "ALGABO",
       "catalogName": "CREMA PARA AFEITAR 150 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200878",
@@ -7460,7 +7908,8 @@
       "brand": "ALGABO",
       "catalogName": "CREMA PARA AFEITAR EN POMO 177 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000928",
@@ -7473,7 +7922,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPUMA DE AFEITAR 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274192883",
@@ -7486,7 +7936,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPUMA DE AFEITAR 415 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198137",
@@ -7499,7 +7950,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO PARA HOMBRE 120 GR",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199622",
@@ -7512,7 +7964,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO PARA HOMBRE 180 GR",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201790",
@@ -7538,7 +7991,8 @@
       "brand": "ALGABO",
       "catalogName": "PREMIUM EXTRA BRILLO 150 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274089190",
@@ -7551,7 +8005,8 @@
       "brand": "ALGABO",
       "catalogName": "PREMIUM EFECTO HUMEDO 150 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274087547",
@@ -7564,7 +8019,8 @@
       "brand": "ALGABO",
       "catalogName": "PREMIUM EXTRA FUERTE 150 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196447",
@@ -7590,7 +8046,8 @@
       "brand": "ALGABO",
       "catalogName": "POMO EFECTO HUMEDO 150 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196454",
@@ -7616,7 +8073,8 @@
       "brand": "ALGABO",
       "catalogName": "POMO EXTRA BRILLO 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274189326",
@@ -7642,7 +8100,8 @@
       "brand": "ALGABO",
       "catalogName": "POMO EXTRA FUERTE 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196294",
@@ -7681,7 +8140,8 @@
       "brand": "ALGABO",
       "catalogName": "POTE EXTRA FUERTE 350 ML",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274189197",
@@ -7694,7 +8154,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL GRANDE EXTRA BRILLO 475 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274189371",
@@ -7707,7 +8168,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL GRANDE EFECTO HUMEDO 475 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274189388",
@@ -7720,7 +8182,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL GRANDE EXTRA FUERTE 475 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274187742",
@@ -7746,7 +8209,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO PARA PIES 200 ML",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196416",
@@ -7772,7 +8236,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO PARA PIES ROSA 100 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200038",
@@ -7798,7 +8263,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO PARA PIES ANTIBACTERIAL 200 ML",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198113",
@@ -7811,7 +8277,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO CORPORAL CLASICO 120 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198045",
@@ -7824,7 +8291,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO CORPORAL CLASICO 180 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198052",
@@ -7837,7 +8305,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO TALCO CORPORAL CLASICO 200 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198120",
@@ -7850,7 +8319,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO CORPORAL SUAVE 120 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198069",
@@ -7863,7 +8333,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO CORPORAL SUAVE 180 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198076",
@@ -7876,7 +8347,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO TALCO CORPORAL SUAVE 200 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274003202",
@@ -7889,7 +8361,8 @@
       "brand": "ALGABO",
       "catalogName": "DESODORANTE PARA CALZADO 153 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000546",
@@ -7902,7 +8375,8 @@
       "brand": "ALGABO",
       "catalogName": "DESODORANTE PARA PIES 153 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200885",
@@ -7915,7 +8389,8 @@
       "brand": "ALGABO",
       "catalogName": "DESODORANTE PARA PIES ANTIBACTERIAL 153 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274003578",
@@ -7928,7 +8403,8 @@
       "brand": "ALGABO",
       "catalogName": "FECULA TALQUERA NATURAL 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274003554",
@@ -7941,7 +8417,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO FECULA TALQUERA NATURAL 250 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274188367",
@@ -7954,7 +8431,8 @@
       "brand": "ALGABO",
       "catalogName": "TALCO PERFUMADO VIOLETAS 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274188350",
@@ -7980,7 +8458,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO TALCO PERFUMADO 200 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196478",
@@ -7993,7 +8472,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO TALCO PERFUMADO 400 ML",
       "bulto": 20,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198793",
@@ -8032,7 +8512,8 @@
       "brand": "ALGABO",
       "catalogName": "HILO DENTAL CON MANGO 25 UDS",
       "bulto": 120,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201592",
@@ -8045,7 +8526,8 @@
       "brand": "ALGABO",
       "catalogName": "HILO DENTAL CON MANGO 50 UDS",
       "bulto": 75,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201660",
@@ -8058,7 +8540,8 @@
       "brand": "ALGABO",
       "catalogName": "SPRAY BUCAL ANTIBACTERIAL 60 ML",
       "bulto": 48,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201653",
@@ -8110,7 +8593,8 @@
       "brand": "ALGABO",
       "catalogName": "ENJUAGUE BUCAL SIN ALCOHOL 500 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199554",
@@ -8123,7 +8607,8 @@
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS COCO Y MIEL 221 ML",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198458",
@@ -8136,7 +8621,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS COCO Y MIEL 221 ML",
       "bulto": 20,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199561",
@@ -8162,7 +8648,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS KARITE Y PALTA 221 ML",
       "bulto": 20,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274193408",
@@ -8188,7 +8675,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS CITRUS 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199516",
@@ -8201,7 +8689,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS CITRUS 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000713",
@@ -8214,7 +8703,8 @@
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS COCONUT 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000737",
@@ -8227,7 +8717,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS COCONUT 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000485",
@@ -8253,7 +8744,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS CREMOSO 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274193415",
@@ -8266,7 +8758,8 @@
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS FLORAL RAIN 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196003",
@@ -8279,7 +8772,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA FLORAL RAIN 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199530",
@@ -8292,7 +8786,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA FLORAL RAIN 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000584",
@@ -8305,7 +8800,8 @@
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS FLOWER MIX 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000492",
@@ -8318,7 +8814,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA FLOWER MIX 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000720",
@@ -8331,7 +8828,8 @@
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS FRUTOS DEL BOSQUE 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000744",
@@ -8344,7 +8842,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA FRUTOS DEL BOSQUE 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274193392",
@@ -8370,7 +8869,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS TE VERDE 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199523",
@@ -8383,7 +8883,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS TE VERDE 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000874",
@@ -8396,7 +8897,8 @@
       "brand": "ALGABO",
       "catalogName": "JAB. LIQ. PARA MANOS ANTIBACTERIAL 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000881",
@@ -8409,7 +8911,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA ANTIBACTERIAL 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199547",
@@ -8422,7 +8925,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO JAB. LIQ. PARA MANOS ANTIBACTERIAL 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196515",
@@ -8435,7 +8939,8 @@
       "brand": "ALGABO",
       "catalogName": "ALCOHOL EN GEL PARA BOLSILLO 75 ML",
       "bulto": 72,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200243",
@@ -8461,7 +8966,8 @@
       "brand": "ALGABO",
       "catalogName": "ALCOHOL EN GEL GRANDE CON DISPENSER 750 ML",
       "bulto": 7,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199288",
@@ -8474,7 +8980,8 @@
       "brand": "ALGABO",
       "catalogName": "ALCOHOL EN GEL EN SPRAY 125 ML",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202148",
@@ -8539,7 +9046,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR GLICERINA FLORAL RAIN X1 UD 90 GR",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202100",
@@ -8552,7 +9060,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR GLICERINA FLORAL RAIN X3 UD 90 GR",
       "bulto": 36,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202094",
@@ -8565,7 +9074,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR GLICERINA TE VERDE X1 UD 90 GR",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202117",
@@ -8578,7 +9088,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON DE TOCADOR GLICERINA TE VERDE X3 UD 90 GR",
       "bulto": 36,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005299",
@@ -8591,7 +9102,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE CON KERATINA 50 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005275",
@@ -8604,7 +9116,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE FORTLECEDOR 50 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005282",
@@ -8617,7 +9130,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE HUMECTANTE 50 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005329",
@@ -8708,7 +9222,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE EXTREME PARA PROFESIONAL 100 ML",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199882",
@@ -8721,7 +9236,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE BLACK 100 ML",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005206",
@@ -8734,7 +9250,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE CON DOSIFICADOR 120 ML",
       "bulto": 10,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005060",
@@ -8747,7 +9264,8 @@
       "brand": "ALGABO",
       "catalogName": "QUITAESMALTE EXPRESS 75 ML",
       "bulto": 30,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201677",
@@ -8760,7 +9278,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPONJA FLOR 1 UD",
       "bulto": 60,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201684",
@@ -8773,7 +9292,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPONJA GUANTE 1 UD",
       "bulto": 60,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201714",
@@ -8786,7 +9306,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPONJA ESPUMA 1 UD",
       "bulto": 60,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201721",
@@ -8812,7 +9333,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPONJA MANOPLA 1 UD",
       "bulto": 60,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201691",
@@ -8825,7 +9347,8 @@
       "brand": "ALGABO",
       "catalogName": "ESPONJA VEGETAL 1 UD",
       "bulto": 60,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198571",
@@ -8838,7 +9361,8 @@
       "brand": "ALGABO",
       "catalogName": "AGUA MICELAR CON DOSIFICADOR 120 ML",
       "bulto": 10,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199943",
@@ -8851,7 +9375,8 @@
       "brand": "ALGABO",
       "catalogName": "AGUA MICELAR 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201110",
@@ -8864,7 +9389,8 @@
       "brand": "ALGABO",
       "catalogName": "AGUA MICELAR 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201295",
@@ -8877,7 +9403,8 @@
       "brand": "ALGABO",
       "catalogName": "AGUA MICLAR GLOW CON VITAMINA C 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201301",
@@ -8890,7 +9417,8 @@
       "brand": "ALGABO",
       "catalogName": "AGUA MICLAR GLOW CON VITAMINA C 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198564",
@@ -8929,7 +9457,8 @@
       "brand": "ALGABO",
       "catalogName": "DISCOS DESMAQUILLANTES 2 X 80 UD",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197710",
@@ -8955,7 +9484,8 @@
       "brand": "ALGABO",
       "catalogName": "POMPONES DE ALGODON 50 UD",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201332",
@@ -8981,7 +9511,8 @@
       "brand": "ALGABO",
       "catalogName": "ALGODON PREMIUM 150 GR",
       "bulto": 60,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005237",
@@ -9020,7 +9551,8 @@
       "brand": "ALGABO",
       "catalogName": "HISOPOS 125 UD",
       "bulto": 42,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005251",
@@ -9033,7 +9565,8 @@
       "brand": "ALGABO",
       "catalogName": "HISOPOS 150 UD",
       "bulto": 30,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201639",
@@ -9046,7 +9579,8 @@
       "brand": "ALGABO",
       "catalogName": "DESODORANTE BOLILLA P/MUJER FRESH 60 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201622",
@@ -9059,7 +9593,8 @@
       "brand": "ALGABO",
       "catalogName": "DESODORANTE BOLILLA P/MUJER SOFT 60 ML",
       "bulto": 24,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005114",
@@ -9072,7 +9607,8 @@
       "brand": "ALGABO",
       "catalogName": "CREMA PARA MANOS Y UÑAS 90 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004407",
@@ -9189,7 +9725,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA LAVANDA 500 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201615",
@@ -9202,7 +9739,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA LILY GARDEN 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201608",
@@ -9215,7 +9753,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA BLUSH PETALS 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202414",
@@ -9228,7 +9767,8 @@
       "brand": "ALGABO",
       "catalogName": "SERUM CORPORAL REVITALIZANTE 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202421",
@@ -9241,7 +9781,8 @@
       "brand": "ALGABO",
       "catalogName": "SERUM CORPORAL HUMECTANTE 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202438",
@@ -9254,7 +9795,8 @@
       "brand": "ALGABO",
       "catalogName": "SERUM CORPORAL REAFIRMANTE 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202506",
@@ -9267,7 +9809,8 @@
       "brand": "ALGABO",
       "catalogName": "SERUM CORPORAL REVITALIZANTE 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202490",
@@ -9280,7 +9823,8 @@
       "brand": "ALGABO",
       "catalogName": "SERUM CORPORAL HUMECTANTE 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202483",
@@ -9293,7 +9837,8 @@
       "brand": "ALGABO",
       "catalogName": "SERUM CORPORAL REAFIRMANTE 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197871",
@@ -9462,7 +10007,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO 0% AVOCADO Y ARGAN 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200571",
@@ -9592,7 +10138,8 @@
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR AGUACATE 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199431",
@@ -9605,7 +10152,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO AGUACATE 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199479",
@@ -9618,7 +10166,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. AGUACATE 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196973",
@@ -9631,7 +10180,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO MANZANILLA 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197000",
@@ -9644,7 +10194,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. MANZANILLA 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198175",
@@ -9657,7 +10208,8 @@
       "brand": "ALGABO",
       "catalogName": "SHAMPOO MANZANILLA 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198205",
@@ -9670,7 +10222,8 @@
       "brand": "ALGABO",
       "catalogName": "ACONDICIONADOR MANZANILLA 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199455",
@@ -9683,7 +10236,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO MANZANILLA 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199493",
@@ -9709,7 +10263,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO COCO Y LECHE 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274196997",
@@ -9722,7 +10277,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. COCO Y LECHE 300 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198168",
@@ -9761,7 +10317,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO SHAMPOO COCO Y LECHE 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199486",
@@ -9774,7 +10331,8 @@
       "brand": "ALGABO",
       "catalogName": "REPUESTO ACOND. COCO Y LECHE 930 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201394",
@@ -9787,7 +10345,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE PARA BEBE EN POMO 100 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197062",
@@ -9800,7 +10359,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE DE BOLSILLO EN SPRAY 60 ML",
       "bulto": 48,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200274",
@@ -9813,7 +10373,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE EN SPRAY 120 ML",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274195952",
@@ -9826,7 +10387,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE EN SPRAY 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198755",
@@ -9839,7 +10401,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE PARA NIÑOS EN SPRAY 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197079",
@@ -9852,7 +10415,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE EXTREME 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200915",
@@ -9865,7 +10429,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE PARA NIÑOS EN CREMA 100 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201479",
@@ -9878,7 +10443,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE DE BOLSILLO EN CREMA 80 ML",
       "bulto": 192,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200175",
@@ -9891,7 +10457,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE EN AEROSOL 140 CC",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201370",
@@ -9904,7 +10471,8 @@
       "brand": "VAIS",
       "catalogName": "REPELENTE EXT EN AEROSOL 140 CC",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197840",
@@ -9917,7 +10485,8 @@
       "brand": "VAIS",
       "catalogName": "PERF. TEXTIL CALIDA PRIMAVERA 250 ML",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197857",
@@ -9956,7 +10525,8 @@
       "brand": "VAIS",
       "catalogName": "REPUESTO PERF. TEXTIL SUAVE BRISA 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000621",
@@ -9969,7 +10539,8 @@
       "brand": "VAIS",
       "catalogName": "PERF. TEXTIL CALIDA PRIMAVERA 500 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000645",
@@ -9982,7 +10553,8 @@
       "brand": "VAIS",
       "catalogName": "PERF. TEXTIL SUAVE BRISA 500 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274088780",
@@ -10060,7 +10632,8 @@
       "brand": "VAIS",
       "catalogName": "REPUESTO ANTIGRASA 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200311",
@@ -10086,7 +10659,8 @@
       "brand": "VAIS",
       "catalogName": "REPUESTO LIMPIADOR DE BAÑO 500 ML",
       "bulto": 20,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200304",
@@ -10099,7 +10673,8 @@
       "brand": "VAIS",
       "catalogName": "REPUESTO LIMPIADOR DE BAÑO 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274088995",
@@ -10125,7 +10700,8 @@
       "brand": "VAIS",
       "catalogName": "REPUESTO APRESTO 500 ML",
       "bulto": 20,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200960",
@@ -10138,7 +10714,8 @@
       "brand": "VAIS",
       "catalogName": "REPUESTO APRESTO 900 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200335",
@@ -10151,7 +10728,8 @@
       "brand": "VAIS",
       "catalogName": "DETERGENTE PARA PLATOS 800 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200328",
@@ -10164,7 +10742,8 @@
       "brand": "VAIS",
       "catalogName": "JABON LIQUIDO PARA ROPA 800 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274192661",
@@ -10190,7 +10769,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA SALLY 100 ML",
       "bulto": 8,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200465",
@@ -10203,7 +10783,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY SALLY 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199813",
@@ -10229,7 +10810,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY PAW PATROL 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274001321",
@@ -10242,7 +10824,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY KITTY 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274001314",
@@ -10255,7 +10838,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY KUROMI 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274005022",
@@ -10268,7 +10852,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY FROZEN 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197970",
@@ -10281,7 +10866,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY SPRIDERMAN 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274002649",
@@ -10307,7 +10893,8 @@
       "brand": "ALGABO",
       "catalogName": "COLONIA EN SPRAY HULK 125 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274002632",
@@ -10333,7 +10920,8 @@
       "brand": "ALGABO",
       "catalogName": "COPA MENSTRUAL S T2 C/POTE",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201554",
@@ -10346,7 +10934,8 @@
       "brand": "ALGABO",
       "catalogName": "COPA MENSTRUAL L T3 C/POTE",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202209",
@@ -10359,7 +10948,8 @@
       "brand": "ALGABO",
       "catalogName": "COPA MENSTRUAL L T3 C/ETUCHE",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202193",
@@ -10372,7 +10962,8 @@
       "brand": "ALGABO",
       "catalogName": "COPA MENSTRUAL S T2 C/ESTUCHE",
       "bulto": 6,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202186",
@@ -10385,7 +10976,8 @@
       "brand": "ALGABO",
       "catalogName": "JABON INTIMO ASANA 250 ML",
       "bulto": 19,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200489",
@@ -10398,7 +10990,8 @@
       "brand": "ALGABO",
       "catalogName": "SHAMPOO PARA PERROS 500 ML",
       "bulto": 11,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274002823",
@@ -10411,7 +11004,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 15 EN POMO 130 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274002830",
@@ -10424,7 +11018,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 30 EN POMO 130 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274002847",
@@ -10437,7 +11032,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 45 EN POMO 130 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274197789",
@@ -10450,7 +11046,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 50 EN POMO 130 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004087",
@@ -10463,7 +11060,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 15 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004094",
@@ -10476,7 +11074,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 30 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004100",
@@ -10489,7 +11088,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 45 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274190216",
@@ -10502,7 +11102,8 @@
       "brand": "ALGABO",
       "catalogName": "ACEITE BRINCEADOR 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274000751",
@@ -10515,7 +11116,8 @@
       "brand": "ALGABO",
       "catalogName": "ACEITE BRONCEADOR CARROT FACTOR 8 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004797",
@@ -10528,7 +11130,8 @@
       "brand": "ALGABO",
       "catalogName": "SPRAY BRONCEADOR FACTOR 15 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004810",
@@ -10541,7 +11144,8 @@
       "brand": "ALGABO",
       "catalogName": "SPRAY BRONCEADOR FACTOR 30 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274200625",
@@ -10554,7 +11158,8 @@
       "brand": "ALGABO",
       "catalogName": "BLOQUEADOR INVISIBLE FACTOR 50 EN SPRAY 120 ML",
       "bulto": 16,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274001956",
@@ -10567,7 +11172,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL POST SOLAR CON ALOE VERA 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274004117",
@@ -10580,7 +11186,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL POST SOLAR CON ALOR VERA 250 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274190230",
@@ -10593,7 +11200,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL POST SOLAR CON ALANTOINA 250 GR",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274190247",
@@ -10606,7 +11214,8 @@
       "brand": "ALGABO",
       "catalogName": "GEL POST SOLAR CON ALOE VERA 440 GR",
       "bulto": 10,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201097",
@@ -10619,7 +11228,8 @@
       "brand": "ALGABO",
       "catalogName": "FACIAL PROT./SOLAR COLOR FACTOR 50 60 ML",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201080",
@@ -10632,7 +11242,8 @@
       "brand": "ALGABO",
       "catalogName": "FACIAL PROT./SOLAR FACTOR 50 60 ML",
       "bulto": 18,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201059",
@@ -10645,7 +11256,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR AEROSOL FACTOR 30 170 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201042",
@@ -10658,7 +11270,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR AEROSOL FACTOR 50 170 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274198892",
@@ -10671,7 +11284,8 @@
       "brand": "ALGABO",
       "catalogName": "FAMILIAR PROT./SOLAR FACTOR 30 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202278",
@@ -10684,7 +11298,8 @@
       "brand": "ALGABO",
       "catalogName": "FAMILIAR PROT./SOLAR FACTOR 50 400 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201837",
@@ -10697,7 +11312,8 @@
       "brand": "ALGABO",
       "catalogName": "BALSAMO LABIAL FACTOR 30 4 GR",
       "bulto": 96,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201844",
@@ -10710,7 +11326,8 @@
       "brand": "ALGABO",
       "catalogName": "DE BOLSILLO PROT. SOLAR FACTOR 50 50 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274199424",
@@ -10723,7 +11340,8 @@
       "brand": "ALGABO",
       "catalogName": "CREMA HIDRATANTE AUTOBRONCEANTE EN POMO 130 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274201219",
@@ -10736,7 +11354,8 @@
       "brand": "ALGABO",
       "catalogName": "PAW PATROL PROT. SOLAR KIDS 120 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202469",
@@ -10749,7 +11368,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 70 EN POMO 100 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202476",
@@ -10762,7 +11382,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT. SOLAR FACTOR 70 EN POMO 200 ML",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202681",
@@ -10775,7 +11396,8 @@
       "brand": "ALGABO",
       "catalogName": "PROT./SOLAR SPORT EN POMO 100 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7791274202674",
@@ -10788,7 +11410,8 @@
       "brand": "ALGABO",
       "catalogName": "AEROSOL SPORT PROT. SOLAR FACGTOR 50 170 ML",
       "bulto": 15,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304134",
@@ -10905,7 +11528,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304059",
@@ -10944,7 +11568,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ANANÁ Y COCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302017",
@@ -11022,7 +11647,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FRUTAS TROPICALES",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356301881",
@@ -11035,7 +11661,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "GLASÉ DE NARANJA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303342",
@@ -11048,7 +11675,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "HOJA DE HIGUERA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304301",
@@ -11126,7 +11754,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "PISTACHO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356301959",
@@ -11139,7 +11768,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "PITANGA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356301942",
@@ -11178,7 +11808,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "TÉ NEGRO Y DAMASCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356301928",
@@ -11191,7 +11822,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303335",
@@ -11230,7 +11862,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ACQUA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302819",
@@ -11243,7 +11876,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ANANA Y COCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302857",
@@ -11256,7 +11890,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "AZAHARES",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302864",
@@ -11269,7 +11904,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "BURBUJAS DE JABÓN",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302871",
@@ -11282,7 +11918,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "COCO Y VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304363",
@@ -11295,7 +11932,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "DURAZNO MENDOCINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302833",
@@ -11308,7 +11946,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLOR DE LOTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302963",
@@ -11321,7 +11960,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLORES CITRICAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302802",
@@ -11334,7 +11974,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FRUTAS TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302970",
@@ -11347,7 +11988,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "GLASE DE NARANJ",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303373",
@@ -11360,7 +12002,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "HOJA DE HIGUERA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304356",
@@ -11373,7 +12016,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "LAVANDA SÁNDALO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302895",
@@ -11386,7 +12030,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "LIMON MANZANILL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302956",
@@ -11399,7 +12044,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MADERAS ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302901",
@@ -11412,7 +12058,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MARINA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302826",
@@ -11425,7 +12072,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "NARANJA PIMIENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303625",
@@ -11451,7 +12099,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "PITANGA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302925",
@@ -11464,7 +12113,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVECHITO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302932",
@@ -11477,7 +12127,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVIDAD FLORAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303380",
@@ -11490,7 +12141,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "TE NEGRO DAMASC",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302949",
@@ -11503,7 +12155,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303366",
@@ -11516,7 +12169,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "VAINILLA ALMEND",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302888",
@@ -11529,7 +12183,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "VERBENA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303113",
@@ -11555,7 +12210,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ANANA Y COCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303755",
@@ -11568,7 +12224,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ALFAJOR",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302079",
@@ -11607,7 +12264,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303663",
@@ -11633,7 +12291,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "DURAZNO MENDOCINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302796",
@@ -11646,7 +12305,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLOR DE LOTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356301904",
@@ -11659,7 +12319,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLORES CITRICAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302765",
@@ -11672,7 +12333,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FRUTAS TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303137",
@@ -11685,7 +12347,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "GLASE DE NARANJ",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303403",
@@ -11698,7 +12361,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "HOJA DE HIGUERA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304332",
@@ -11711,7 +12375,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "LAVANDA SÁNDALO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303687",
@@ -11724,7 +12389,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "LIMÓN MANZANILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302062",
@@ -11737,7 +12403,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MADERAS ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303144",
@@ -11776,7 +12443,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "PISTACHO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303151",
@@ -11789,7 +12457,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "PITANGA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302055",
@@ -11815,7 +12484,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVIDAD FLORAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303410",
@@ -11828,7 +12498,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "TÉ NEGRO Y DAMASCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302048",
@@ -11841,7 +12512,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303397",
@@ -11880,7 +12552,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ANANA Y COCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304394",
@@ -11893,7 +12566,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "BAMBÚ",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303298",
@@ -11906,7 +12580,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "CITRONELLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304387",
@@ -11919,7 +12594,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "COCO Y VAINILLA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304349",
@@ -11932,7 +12608,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "DURAZNO MENDOCINO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302192",
@@ -11945,7 +12622,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLOR DE LOTO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302185",
@@ -11958,7 +12636,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FLORES CITRICAS",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302215",
@@ -11971,7 +12650,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "FRUTAS TROPICAL",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302178",
@@ -11984,7 +12664,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "GLASE DE NARANJA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303311",
@@ -11997,7 +12678,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "HOJA DE HIGUERA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304325",
@@ -12010,7 +12692,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "LAVANDA SÁNDALO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302161",
@@ -12023,7 +12706,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MADERAS ORIENTE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304400",
@@ -12036,7 +12720,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MARINA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302239",
@@ -12049,7 +12734,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MANDARINA DULCE",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302208",
@@ -12062,7 +12748,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "MELON Y MANGO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302246",
@@ -12075,7 +12762,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "NARANJA PIMIENTA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303649",
@@ -12088,7 +12776,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "PISTACHO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302130",
@@ -12101,7 +12790,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "SUAVECHITO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303328",
@@ -12114,7 +12804,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "TE NEGRO DAMASCO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356304417",
@@ -12127,7 +12818,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "UVA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303304",
@@ -12140,7 +12832,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "VAINILLA ALMEND",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356302154",
@@ -12153,7 +12846,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "VERBENA",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303809",
@@ -12166,7 +12860,8 @@
       "brand": "SANDRA MARZZAN",
       "catalogName": "ANANÁ Y MANGO",
       "bulto": 12,
-      "descuentoBulto": 3
+      "descuentoBulto": 3,
+      "deleted": true
     },
     {
       "ean": "7798356303830",
@@ -12176,7 +12871,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303793",
@@ -12186,7 +12882,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303847",
@@ -12196,7 +12893,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303885",
@@ -12206,7 +12904,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303854",
@@ -12216,7 +12915,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303878",
@@ -12226,7 +12926,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303816",
@@ -12236,7 +12937,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303823",
@@ -12246,7 +12948,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303861",
@@ -12256,7 +12959,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302314",
@@ -12279,7 +12983,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302291",
@@ -12315,7 +13020,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303670",
@@ -12325,7 +13031,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302727",
@@ -12335,7 +13042,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302734",
@@ -12358,7 +13066,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303007",
@@ -12368,7 +13077,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302994",
@@ -12378,7 +13088,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303557",
@@ -12388,7 +13099,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302376",
@@ -12398,7 +13110,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302369",
@@ -12408,7 +13121,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302345",
@@ -12418,7 +13132,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302352",
@@ -12441,7 +13156,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302741",
@@ -12451,7 +13167,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302758",
@@ -12461,7 +13178,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303700",
@@ -12471,7 +13189,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303717",
@@ -12481,7 +13200,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303724",
@@ -12491,7 +13211,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303731",
@@ -12501,7 +13222,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303748",
@@ -12511,7 +13233,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302710",
@@ -12521,7 +13244,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302697",
@@ -12531,7 +13255,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302680",
@@ -12541,7 +13266,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302666",
@@ -12551,7 +13277,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303595",
@@ -12561,7 +13288,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302659",
@@ -12571,7 +13299,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356304592",
@@ -12581,7 +13310,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303601",
@@ -12591,7 +13321,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303229",
@@ -12601,7 +13332,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302642",
@@ -12611,7 +13343,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302635",
@@ -12621,7 +13354,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302628",
@@ -12631,7 +13365,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302604",
@@ -12641,7 +13376,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302468",
@@ -12651,7 +13387,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302451",
@@ -12661,7 +13398,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303250",
@@ -12671,7 +13409,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302437",
@@ -12681,7 +13420,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302420",
@@ -12691,7 +13431,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302406",
@@ -12701,7 +13442,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302383",
@@ -12711,7 +13453,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302390",
@@ -12721,7 +13464,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303090",
@@ -12731,7 +13475,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303106",
@@ -12741,7 +13486,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356304608",
@@ -12751,7 +13497,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303212",
@@ -12761,7 +13508,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303236",
@@ -12771,7 +13519,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303243",
@@ -12781,7 +13530,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302581",
@@ -12791,7 +13541,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303960",
@@ -12801,7 +13552,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302567",
@@ -12811,7 +13563,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303588",
@@ -12821,7 +13574,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302529",
@@ -12831,7 +13585,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302512",
@@ -12841,7 +13596,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302505",
@@ -12851,7 +13607,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302482",
@@ -12861,7 +13618,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302444",
@@ -12871,7 +13629,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302413",
@@ -12881,7 +13640,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303182",
@@ -12891,7 +13651,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303175",
@@ -12901,7 +13662,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303199",
@@ -12911,7 +13673,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303205",
@@ -12921,7 +13684,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303946",
@@ -12931,7 +13695,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356302574",
@@ -12941,7 +13706,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303618",
@@ -12951,7 +13717,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303953",
@@ -12961,7 +13728,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303533",
@@ -12971,7 +13739,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303458",
@@ -12981,7 +13750,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300266",
@@ -12991,7 +13761,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300280",
@@ -13001,7 +13772,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303472",
@@ -13011,7 +13783,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303434",
@@ -13021,7 +13794,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7793856300303",
@@ -13031,7 +13805,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303496",
@@ -13041,7 +13816,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303526",
@@ -13051,7 +13827,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303519",
@@ -13061,7 +13838,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303540",
@@ -13084,7 +13862,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300259",
@@ -13094,7 +13873,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300273",
@@ -13104,7 +13884,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303465",
@@ -13114,7 +13895,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303427",
@@ -13124,7 +13906,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300297",
@@ -13134,7 +13917,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303489",
@@ -13144,7 +13928,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300747",
@@ -13167,7 +13952,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303922",
@@ -13177,7 +13963,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303892",
@@ -13187,7 +13974,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303915",
@@ -13197,7 +13985,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303908",
@@ -13207,7 +13996,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356300143",
@@ -13217,7 +14007,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "77988911",
@@ -13227,7 +14018,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "77976178",
@@ -13237,7 +14029,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "77976185",
@@ -13247,7 +14040,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "77988942",
@@ -13257,7 +14051,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "4036000400089",
@@ -13267,7 +14062,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "4036000200078",
@@ -13277,7 +14073,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "77995209",
@@ -13287,7 +14084,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "77995193",
@@ -13297,7 +14095,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "4036000100064",
@@ -13307,7 +14106,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356301270",
@@ -13317,7 +14117,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303779",
@@ -13327,7 +14128,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303564",
@@ -13337,7 +14139,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303571",
@@ -13347,7 +14150,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7798356303786",
@@ -13357,7 +14161,8 @@
       "cat": "Otros",
       "subcat": "",
       "img": "",
-      "brand": "ALGABO"
+      "brand": "ALGABO",
+      "deleted": true
     },
     {
       "ean": "7.798.184.680.769,00",
