@@ -4313,14 +4313,15 @@
     {
       "ean": "7798184682091",
       "name": "PAULA",
+      "desc": "",
       "price": 5600,
       "tab": "saphirus",
       "cat": "AEROSOL",
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-paula.jpg",
       "brand": "SAPHIRUS",
+      "stock": 9,
       "catalogName": "PAULA",
-      "stock": 12,
       "bulto": 12,
       "descuentoBulto": 3
     },
