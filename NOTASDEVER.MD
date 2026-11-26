@@ -513,3 +513,16 @@ Fecha: 2026-11-26
   - Al escanear un código inexistente en **📷 Cargar Stock**, aparece `#scanNotFoundCard` con la opción **➕ Cargar producto ahora** (`#scanQuickAddBox`) que precarga el EAN y la cantidad escaneada (`CODIGO CANTIDAD`).
   - Si el código ya existe en el otro catálogo (por ejemplo en `COMPLETO` mientras se escanea en `EN STOCK`), ofrece además el botón **📋 Cargar con datos de ...** para precargar nombre, precio, pestaña, categoría, subcategoría, bulto, descuento e imagen y guardar directo en GitHub.
 Archivos: index.html, NOTASDEVER.MD
+
+### #039 - Clientes, Cuentas Corrientes, Ventas Admin en Google Sheets y descuento en EN STOCK
+Fecha: 2026-11-26
+- **Backend Apps Script (`apps-script/Code.gs`, `apps-script/INSTRUCCIONES.md`)**:
+  - Web App para pegar en **CATALOGO-DISTRE-BASE** (`Extensiones → Apps Script`) protegido con clave secreta (`API_KEY`).
+  - Mantiene intactas las columnas `A..Q` de `CLIENTES`, agrega columnas automáticas de cuenta corriente (`TOTAL VENTAS`, `TOTAL COBROS`, `DEUDA / SALDO`, `ESTADO` en `R..U`) con fórmulas y crea/administra las hojas `VENTAS`, `VENTAS_DETALLE`, `COBROS`, `MOVIMIENTOS_STOCK` y `STOCK_ACTUAL` (ignorando filas en blanco previas a la fila suelta `BAHIA BLANCA` al insertar clientes).
+- **Gestión de Clientes y Cuentas Corrientes (solo Admin)**:
+  - Nueva configuración en **Admin → General** (`#sheetsApiUrl`, `#sheetsApiKey`, probar conexión, preparar hojas/fórmulas y sincronizar snapshot de `EN STOCK` a `STOCK_ACTUAL`).
+  - Nueva sección **👥 Clientes** (`#adminSectionClients`) con KPIs (`Total clientes`, `Con deuda`, `Deuda total`), búsqueda, filtro por estado de cuenta, creación de clientes (`#clientFormOverlay`) y ficha de cuenta corriente (`#clientDetailOverlay`) con historial de ventas/cobros y registro de cobros parciales o totales.
+- **Cerrar venta desde el Carrito (solo Admin) y descuento exclusivo en `EN STOCK`**:
+  - Cuando el administrador está logueado (`isAdmin`), el encabezado muestra `👤 Admin` (`#adminLoggedPill`) y el carrito muestra `#cartAdminSaleBox` para seleccionar o crear un cliente, ver su deuda actual, elegir condición (`Cuenta corriente`, `Pago total`, `Pago parcial`), medio de pago y cerrar la venta en Google Sheets.
+  - Al cerrar la venta como Admin (con la casilla `#saleDeductStock` activa), descuenta las cantidades vendidas **únicamente del catálogo `EN STOCK`** (`data/stock-products.json`), dejando intacto el catálogo `COMPLETO` y registrando cada baja en `MOVIMIENTOS_STOCK` / `STOCK_ACTUAL`. Los visitantes no logueados como Admin no ven estas opciones ni se descuenta stock al usar el carrito.
+Archivos: apps-script/Code.gs, apps-script/INSTRUCCIONES.md, index.html, NOTASDEVER.MD

@@ -1003,6 +1003,88 @@
     color:#1a1a1a;border:1px solid #5c5c5c;text-shadow:0 1px 0 rgba(255,255,255,.35);
   }
   .pres-btn-email:hover{filter:brightness(1.08);}
+
+  /* ---------- ADMIN LOGGED PILL & CLIENTES / VENTAS / CTA CTE ---------- */
+  .admin-logged-pill{
+    display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;
+    font-size:.72rem;font-weight:800;letter-spacing:.2px;
+    background:rgba(37,211,102,.18);color:#186732;border:1px solid rgba(37,211,102,.45);
+    white-space:nowrap;flex-shrink:0;
+  }
+  [data-tab-theme=""] .admin-logged-pill,[data-tab-theme="oscuro"] .admin-logged-pill{color:#73bd89;}
+  .clients-kpi-grid{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px;
+  }
+  @media(max-width:600px){.clients-kpi-grid{grid-template-columns:1fr;}}
+  .clients-kpi-card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .clients-kpi-lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--text-dim);font-weight:700;}
+  .clients-kpi-val{font-size:1.15rem;font-weight:800;color:var(--text);}
+  .clients-kpi-val.debt{color:var(--danger);}
+  .clients-kpi-val.ok{color:#186732;}
+  [data-tab-theme=""] .clients-kpi-val.ok,[data-tab-theme="oscuro"] .clients-kpi-val.ok{color:#73bd89;}
+  .client-row{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--card);margin-bottom:8px;
+  }
+  .client-row-info{flex:1;min-width:210px;display:flex;flex-direction:column;gap:3px;}
+  .client-row-name{font-size:.92rem;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .client-code-pill{
+    font-family:monospace;font-size:.72rem;font-weight:700;padding:2px 7px;border-radius:6px;
+    background:var(--bg-soft);border:1px solid var(--border);color:var(--text-dim);
+  }
+  .client-row-meta{font-size:.76rem;color:var(--text-dim);line-height:1.35;}
+  .client-row-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .client-debt-badge{
+    font-size:.82rem;font-weight:800;padding:5px 11px;border-radius:999px;white-space:nowrap;
+  }
+  .client-debt-badge.debt{background:rgba(224,85,95,.15);color:var(--danger);border:1px solid rgba(224,85,95,.4);}
+  .client-debt-badge.ok{background:rgba(37,211,102,.15);color:#186732;border:1px solid rgba(37,211,102,.35);}
+  .client-debt-badge.credit{background:rgba(59,130,246,.14);color:#2563eb;border:1px solid rgba(59,130,246,.35);}
+  [data-tab-theme=""] .client-debt-badge.ok,[data-tab-theme="oscuro"] .client-debt-badge.ok{color:#73bd89;}
+  .ledger-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px;}
+  @media(max-width:520px){.ledger-summary-grid{grid-template-columns:1fr;}}
+  .ledger-pay-box{
+    background:var(--bg-soft);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:16px;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .ledger-list{
+    max-height:280px;overflow-y:auto;border:1px solid var(--border);border-radius:12px;background:var(--card);padding:4px 12px;
+  }
+  .ledger-row{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    padding:9px 0;border-bottom:1px solid var(--border);font-size:.8rem;
+  }
+  .ledger-row:last-child{border-bottom:none;}
+  .ledger-type{font-size:.68rem;font-weight:800;padding:2px 7px;border-radius:6px;text-transform:uppercase;}
+  .ledger-type.sale{background:rgba(224,85,95,.15);color:var(--danger);}
+  .ledger-type.payment{background:rgba(37,211,102,.15);color:#186732;}
+  [data-tab-theme=""] .ledger-type.payment,[data-tab-theme="oscuro"] .ledger-type.payment{color:#73bd89;}
+
+  /* ---------- CARRITO: BLOQUE VENTA ADMIN ---------- */
+  .cart-admin-sale{
+    background:var(--bg-soft);border:2px solid var(--accent);border-radius:14px;
+    padding:14px;display:flex;flex-direction:column;gap:10px;
+  }
+  .cart-admin-sale-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+  .cart-admin-sale-head strong{font-size:.9rem;color:var(--text);}
+  .sale-client-row{display:flex;gap:8px;align-items:stretch;}
+  .sale-client-row select{flex:1;min-width:0;}
+  .sale-client-row .btn{margin:0;padding:8px 11px;font-size:.78rem;white-space:nowrap;}
+  .sale-debt-banner{
+    font-size:.78rem;font-weight:700;padding:8px 10px;border-radius:8px;line-height:1.35;
+  }
+  .sale-debt-banner.has-debt{background:rgba(224,85,95,.14);border:1px solid rgba(224,85,95,.4);color:var(--danger);}
+  .sale-debt-banner.clean{background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.35);color:#186732;}
+  [data-tab-theme=""] .sale-debt-banner.clean,[data-tab-theme="oscuro"] .sale-debt-banner.clean{color:#73bd89;}
+  .sale-stock-check{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;cursor:pointer;}
+  .sale-stock-check input{width:16px;height:16px;accent-color:var(--accent);}
+  .sale-stock-preview{
+    font-size:.75rem;color:var(--text-dim);background:var(--card);border:1px solid var(--border);
+    border-radius:8px;padding:8px 10px;line-height:1.4;max-height:110px;overflow-y:auto;
+  }
 </style>
 </head>
 <body>
@@ -1021,6 +1103,7 @@
       <span class="cart-badge" id="cartBadge">0</span>
     </button>
     <div class="counter" id="counter"></div>
+    <span class="admin-logged-pill" id="adminLoggedPill" style="display:none;" title="Sesión de administrador activa">👤 Admin</span>
     <button class="icon-btn" id="adminIconBtn" title="Panel de administración" aria-label="Panel de administración">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
     </button>
@@ -1160,6 +1243,7 @@
       <button class="admin-subnav-btn active" data-section="general">General</button>
       <button class="admin-subnav-btn" data-section="products">Productos</button>
       <button class="admin-subnav-btn" data-section="scanstock">📷 Cargar Stock</button>
+      <button class="admin-subnav-btn" data-section="clients">👥 Clientes</button>
       <button class="admin-subnav-btn" data-section="addproduct">Agregar producto</button>
       <button class="admin-subnav-btn" data-section="tabs">Pestañas</button>
       <button class="admin-subnav-btn" data-section="appearance">🎨 Personalización</button>
@@ -1210,6 +1294,67 @@
           <button class="btn btn-whatsapp btn-auto" id="saveGithubConfig" style="margin-top:12px;">Guardar configuración de GitHub</button>
           <p class="admin-note" style="margin-top:10px;">⚠️ Este token le da permiso de escritura a tu repositorio y queda guardado solo en este navegador. No lo compartas ni lo cargues en un dispositivo que no sea de confianza. Generá un token "fine-grained" (github.com → Settings → Developer settings → Fine-grained tokens) limitado únicamente a este repositorio, con permiso "Contents: Read and write" y nada más.</p>
         </div>
+
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <div class="admin-section-title">Conexión con Google Sheets (Clientes, Cuentas Corrientes y Ventas)</div>
+          <p class="admin-note">Conectá el catálogo con tu planilla <b>CATALOGO-DISTRE-BASE</b> mediante Apps Script (<code>apps-script/Code.gs</code>) para gestionar clientes, cuentas corrientes, cobros, ventas y movimientos de stock.</p>
+          <div class="field"><label for="sheetsApiUrl">URL de la Aplicación Web (Apps Script <code>.../exec</code>)</label>
+            <input type="text" id="sheetsApiUrl" class="price-input" placeholder="https://script.google.com/macros/s/.../exec">
+          </div>
+          <div class="field" style="margin-top:10px;"><label for="sheetsApiKey">Clave secreta (<code>API_KEY</code> configurada en Code.gs)</label>
+            <input type="password" id="sheetsApiKey" class="price-input" placeholder="Tu clave secreta">
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <button type="button" class="btn btn-whatsapp btn-auto" id="saveSheetsConfig">Guardar conexión</button>
+            <button type="button" class="btn btn-gray btn-auto" id="testSheetsConfig">🔌 Probar conexión</button>
+            <button type="button" class="btn btn-gold btn-auto" id="setupSheetsBtn">🛠 Preparar hojas y Cta. Cte.</button>
+            <button type="button" class="btn btn-gray btn-auto" id="syncStockSheetsBtn">📦 Sincronizar stock EN STOCK → Sheets</button>
+          </div>
+          <p class="admin-note" id="sheetsConfigStatus" style="margin-top:10px;"></p>
+        </div>
+      </div>
+
+      <!-- ---------- SECCIÓN CLIENTES Y CUENTAS CORRIENTES ---------- -->
+      <div class="admin-section" id="adminSectionClients" style="display:none;">
+        <div class="toggle-all-row">
+          <div class="admin-section-title" style="margin:0;">Clientes y Cuentas Corrientes</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-gray btn-auto" id="refreshClientsBtn">🔄 Actualizar</button>
+            <button type="button" class="btn btn-gold btn-auto" id="openNewClientBtn">➕ Nuevo cliente</button>
+          </div>
+        </div>
+
+        <div id="clientsNotConfiguredBox" class="scan-notfound-card" style="display:none;margin-bottom:14px;">
+          <div class="scan-notfound-title">Falta conectar Google Sheets (<code>CATALOGO-DISTRE-BASE</code>)</div>
+          <div class="admin-note" style="margin:0;">Configurá la URL del Apps Script y tu clave secreta en <b>General → Conexión con Google Sheets</b> para cargar clientes, deudas y cobros.</div>
+          <div><button type="button" class="btn btn-gold btn-auto" id="goSheetsConfigBtn">Ir a General</button></div>
+        </div>
+
+        <div class="clients-kpi-grid" id="clientsKpiBar" style="display:none;">
+          <div class="clients-kpi-card">
+            <span class="clients-kpi-lbl">Clientes cargados</span>
+            <span class="clients-kpi-val" id="kpiTotalClients">0</span>
+          </div>
+          <div class="clients-kpi-card">
+            <span class="clients-kpi-lbl">Con deuda</span>
+            <span class="clients-kpi-val debt" id="kpiDebtorsCount">0</span>
+          </div>
+          <div class="clients-kpi-card">
+            <span class="clients-kpi-lbl">Deuda total</span>
+            <span class="clients-kpi-val debt" id="kpiTotalDeuda">$ 0</span>
+          </div>
+        </div>
+
+        <div class="admin-toolbar">
+          <input type="text" id="clientsSearchInput" class="price-input" placeholder="🔍 Buscar por nombre, código, localidad, zona o teléfono...">
+          <select id="clientsDebtFilter" class="price-input admin-filter-select" aria-label="Filtrar estado de cuenta">
+            <option value="all">Estado: Todos</option>
+            <option value="debt">Solo con deuda</option>
+            <option value="ok">Al día / a favor</option>
+          </select>
+        </div>
+
+        <div id="clientsList"></div>
       </div>
 
       <!-- ---------- SECCIÓN PRODUCTOS ---------- -->
@@ -1600,6 +1745,89 @@
   </div>
 </div>
 
+<!-- ================= MODAL NUEVO CLIENTE (SOLO ADMIN) ================= -->
+<div class="overlay" id="clientFormOverlay">
+  <div class="modal" style="max-width:560px;">
+    <button class="modal-close" id="cfClose" aria-label="Cerrar">✕</button>
+    <div class="admin-body">
+      <h2>Nuevo cliente</h2>
+      <p class="admin-note">Se guarda directamente en la hoja <code>CLIENTES</code> de Google Sheets y queda habilitado con cuenta corriente.</p>
+      <div class="field"><label for="cfCliente">Cliente / Comercio / Razón social *</label><input type="text" id="cfCliente" class="price-input" placeholder="Ej: AUTOSERVICIO SAN MARTIN"></div>
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label for="cfNombre">Nombre de contacto (opcional)</label><input type="text" id="cfNombre" class="price-input" placeholder="Ej: Juan"></div>
+        <div class="field"><label for="cfTelefono">Teléfono / WhatsApp (opcional)</label><input type="text" id="cfTelefono" class="price-input" placeholder="Ej: 2920..."></div>
+      </div>
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label for="cfLocalidad">Localidad (opcional)</label><input type="text" id="cfLocalidad" class="price-input" placeholder="Ej: VIEDMA"></div>
+        <div class="field"><label for="cfZona">Zona (opcional)</label><input type="text" id="cfZona" class="price-input" placeholder="Ej: P2"></div>
+      </div>
+      <div class="field" style="margin-top:10px;"><label for="cfDireccion">Dirección (opcional)</label><input type="text" id="cfDireccion" class="price-input" placeholder="Calle y altura"></div>
+      <div class="field-row" style="margin-top:10px;">
+        <div class="field"><label for="cfCuit">CUIT (opcional)</label><input type="text" id="cfCuit" class="price-input"></div>
+        <div class="field"><label for="cfMedioPago">Medio de pago habitual (opcional)</label><input type="text" id="cfMedioPago" class="price-input" placeholder="Efectivo / Transferencia"></div>
+      </div>
+      <div class="field" style="margin-top:10px;"><label for="cfRemitoFactura">Remito / Factura (opcional)</label><input type="text" id="cfRemitoFactura" class="price-input" placeholder="REMITO / FACTURA"></div>
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+        <button type="button" class="btn btn-whatsapp btn-auto" id="cfSaveBtn">💾 Guardar cliente</button>
+        <button type="button" class="btn btn-close btn-auto" id="cfCancelBtn">Cancelar</button>
+      </div>
+      <p class="admin-note" id="cfStatus"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL CUENTA CORRIENTE DE CLIENTE (SOLO ADMIN) ================= -->
+<div class="overlay" id="clientDetailOverlay">
+  <div class="modal" style="max-width:640px;">
+    <button class="modal-close" id="cdClose" aria-label="Cerrar">✕</button>
+    <div class="admin-body">
+      <h2 id="cdTitle">Cuenta corriente</h2>
+      <p class="admin-note" id="cdSub" style="margin-bottom:12px;"></p>
+
+      <div class="ledger-summary-grid">
+        <div class="clients-kpi-card">
+          <span class="clients-kpi-lbl">Total ventas</span>
+          <span class="clients-kpi-val" id="cdTotalVentas">$ 0</span>
+        </div>
+        <div class="clients-kpi-card">
+          <span class="clients-kpi-lbl">Total cobros</span>
+          <span class="clients-kpi-val ok" id="cdTotalCobros">$ 0</span>
+        </div>
+        <div class="clients-kpi-card">
+          <span class="clients-kpi-lbl">Saldo / Deuda</span>
+          <span class="clients-kpi-val" id="cdSaldo">$ 0</span>
+        </div>
+      </div>
+
+      <div class="ledger-pay-box">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+          <strong style="font-size:.9rem;">💵 Registrar cobro / entrega</strong>
+          <button type="button" class="btn btn-gray btn-auto" id="cpPayFullBtn" style="padding:5px 10px;font-size:.76rem;">Saldar deuda total</button>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="cpAmount">Monto cobrado ($)</label><input type="number" id="cpAmount" class="price-input" min="1" step="0.01" placeholder="0"></div>
+          <div class="field"><label for="cpMethod">Medio de pago</label>
+            <select id="cpMethod" class="price-input">
+              <option value="Efectivo">Efectivo</option>
+              <option value="Transferencia">Transferencia</option>
+              <option value="Cheque">Cheque</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="cpNote">Nota (opcional)</label><input type="text" id="cpNote" class="price-input" placeholder="Ej: Entrega a cuenta"></div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <button type="button" class="btn btn-whatsapp btn-auto" id="cpSaveBtn">💾 Registrar cobro</button>
+          <span class="admin-note" id="cpStatus" style="margin:0;"></span>
+        </div>
+      </div>
+
+      <div class="admin-section-title" style="margin-bottom:8px;">Movimientos de cuenta corriente</div>
+      <div class="ledger-list" id="cdLedgerList"></div>
+    </div>
+  </div>
+</div>
+
 <!-- ================= MODAL CARRITO ================= -->
 <div class="overlay" id="cartOverlay">
   <div class="modal" style="max-width:560px;">
@@ -1615,6 +1843,56 @@
         <button type="button" class="btn btn-gray cart-export-btn" id="copySheetsBtn">📋 Copiar para Sheets</button>
         <button type="button" class="btn btn-gray cart-export-btn" id="exportPdfBtn">📄 Descargar PDF</button>
       </div>
+      <div class="cart-admin-sale" id="cartAdminSaleBox" style="display:none;">
+        <div class="cart-admin-sale-head">
+          <strong>🧾 Registrar venta y cuenta corriente (Admin)</strong>
+        </div>
+        <div id="saleNotConfiguredHint" class="admin-note" style="display:none;margin:0;color:var(--danger);">
+          ⚠ Conectá Google Sheets en <b>Admin → General</b> para elegir clientes y registrar ventas.
+        </div>
+        <div id="saleControlsWrap">
+          <div class="field"><label for="saleClientSearch">Cliente *</label>
+            <input type="text" id="saleClientSearch" class="price-input" placeholder="🔍 Filtrar cliente por nombre o código..." style="margin-bottom:6px;">
+            <div class="sale-client-row">
+              <select id="saleClientSelect" class="price-input"></select>
+              <button type="button" class="btn btn-gold btn-auto" id="saleNewClientBtn">➕ Nuevo</button>
+              <button type="button" class="btn btn-gray btn-auto" id="saleRefreshClientsBtn" title="Actualizar clientes">🔄</button>
+            </div>
+          </div>
+          <div class="sale-debt-banner clean" id="saleClientDebtBanner" style="display:none;margin-top:8px;"></div>
+          <div class="field-row" style="margin-top:8px;">
+            <div class="field"><label for="salePaymentMode">Condición de pago</label>
+              <select id="salePaymentMode" class="price-input">
+                <option value="cc">Cuenta corriente (fiado / queda deuda)</option>
+                <option value="paid">Pago total ahora</option>
+                <option value="partial">Pago parcial (entrega a cuenta)</option>
+              </select>
+            </div>
+            <div class="field"><label for="salePaymentMethod">Medio de pago</label>
+              <select id="salePaymentMethod" class="price-input">
+                <option value="Cuenta Corriente">Cuenta Corriente</option>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Transferencia">Transferencia</option>
+                <option value="Cheque">Cheque</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" id="salePartialWrap" style="display:none;margin-top:8px;">
+            <label for="salePaidAmount">Monto abonado ahora ($)</label>
+            <input type="number" id="salePaidAmount" class="price-input" min="0" step="0.01" placeholder="0">
+          </div>
+          <div class="field" style="margin-top:8px;">
+            <label for="saleNote">Nota de la venta (opcional)</label>
+            <input type="text" id="saleNote" class="price-input" placeholder="Ej: Entrega jueves">
+          </div>
+          <div style="margin-top:10px;">
+            <label class="sale-stock-check"><input type="checkbox" id="saleDeductStock" checked> Descontar stock automáticamente en catálogo <b>EN STOCK</b></label>
+            <div class="sale-stock-preview" id="saleStockPreview" style="margin-top:6px;"></div>
+          </div>
+          <button type="button" class="btn btn-gold" id="registerSaleBtn" style="margin-top:10px;">✅ Cerrar venta y registrar</button>
+        </div>
+      </div>
+      <p class="admin-note" id="saleStatus" style="margin:0;display:none;"></p>
       <button class="btn btn-close" id="clearCartBtn">Vaciar carrito</button>
     </div>
   </div>
@@ -2139,6 +2417,45 @@ function saveGithubConfigTo(repo, branch, token){
   storageSet('distre_gh_branch', branch || DEFAULT_GH_BRANCH);
   storageSet('distre_gh_token', token);
 }
+function getSheetsConfig(){
+  return {
+    url: (storageGet('distre_sheets_url') || '').trim(),
+    apiKey: (storageGet('distre_sheets_key') || '').trim()
+  };
+}
+function saveSheetsConfigTo(url, apiKey){
+  storageSet('distre_sheets_url', String(url || '').trim());
+  storageSet('distre_sheets_key', String(apiKey || '').trim());
+}
+function isSheetsConfigured(){
+  const cfg = getSheetsConfig();
+  return !!(cfg.url && cfg.apiKey);
+}
+async function sheetsApi(action, payload = {}){
+  if(!isAdmin) throw new Error('Solo disponible en modo administrador.');
+  const { url, apiKey } = getSheetsConfig();
+  if(!url || !apiKey) throw new Error('Configurá la URL y clave de Google Sheets en Admin → General.');
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ apiKey, action, ...payload }),
+    redirect: 'follow'
+  });
+  let data;
+  try{ data = await res.json(); }
+  catch(e){ throw new Error('Respuesta inválida de Google Sheets. Verificá que la URL termine en /exec y esté implementada como "Cualquier persona".'); }
+  if(!res.ok || !data || !data.ok){
+    throw new Error((data && data.error) || `Google Sheets respondió ${res.status}`);
+  }
+  return data;
+}
+function syncAdminAuthUI(){
+  const pill = document.getElementById('adminLoggedPill');
+  if(pill) pill.style.display = isAdmin ? '' : 'none';
+  if(typeof cartOverlay !== 'undefined' && cartOverlay && cartOverlay.classList.contains('open') && typeof renderCartModal === 'function'){
+    renderCartModal();
+  }
+}
 
 function loadState(){
   CATALOG_IDS.forEach(cid => {
@@ -2282,7 +2599,12 @@ function showToast(msg){
   }, 2200);
 }
 function openOverlayEl(el){ el.classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeOverlayEl(el){ el.classList.remove('open'); document.body.style.overflow = ''; }
+function closeOverlayEl(el){
+  el.classList.remove('open');
+  const stillOpen = (typeof adminPage !== 'undefined' && adminPage && adminPage.classList.contains('open'))
+    || (typeof document.querySelector === 'function' && document.querySelector('.overlay.open'));
+  document.body.style.overflow = stillOpen ? 'hidden' : '';
+}
 
 /* ======================================================
    INTEGRACIÓN CON GITHUB (agregar productos / imágenes)
@@ -3003,6 +3325,8 @@ document.getElementById('modalCloseBtn').addEventListener('click', () => closeOv
 const loginOverlay = document.getElementById('loginOverlay');
 const cartOverlay = document.getElementById('cartOverlay');
 const editOverlay = document.getElementById('editOverlay');
+const clientFormOverlay = document.getElementById('clientFormOverlay');
+const clientDetailOverlay = document.getElementById('clientDetailOverlay');
 
 document.getElementById('adminIconBtn').addEventListener('click', () => {
   if(isAdmin){ openAdminPanel(); }
@@ -3019,6 +3343,7 @@ function attemptLogin(){
   const errorEl = document.getElementById('loginError');
   if(u === ADMIN_USER && p === ADMIN_PASS){
     isAdmin = true;
+    syncAdminAuthUI();
     errorEl.style.display = 'none';
     document.getElementById('loginUser').value = '';
     document.getElementById('loginPass').value = '';
@@ -3043,6 +3368,12 @@ function openAdminPanel(){
   document.getElementById('ghRepo').value = gh.repo;
   document.getElementById('ghBranch').value = gh.branch;
   document.getElementById('ghToken').value = gh.token;
+  const sh = getSheetsConfig();
+  const shUrlEl = document.getElementById('sheetsApiUrl');
+  const shKeyEl = document.getElementById('sheetsApiKey');
+  if(shUrlEl) shUrlEl.value = sh.url;
+  if(shKeyEl) shKeyEl.value = sh.apiKey;
+  syncAdminAuthUI();
   syncCatalogUI();
   renderAdminList();
   renderTabs();
@@ -3069,6 +3400,7 @@ document.getElementById('adminBackBtn').addEventListener('click', closeAdminPage
 document.getElementById('logoutBtn').addEventListener('click', () => {
   if(!closeAdminPage()) return;
   isAdmin = false;
+  syncAdminAuthUI();
   showToast('Sesión cerrada');
 });
 
@@ -3077,6 +3409,7 @@ const ADMIN_SECTION_IDS = {
   general: 'adminSectionGeneral',
   products: 'adminSectionProducts',
   scanstock: 'adminSectionScanStock',
+  clients: 'adminSectionClients',
   addproduct: 'adminSectionAddProduct',
   tabs: 'adminSectionTabs',
   appearance: 'adminSectionAppearance',
@@ -3088,6 +3421,10 @@ function switchAdminSection(section){
   document.getElementById(ADMIN_SECTION_IDS[section]).style.display = '';
   if(section === 'appearance') renderAppearancePanel();
   if(section === 'products') renderAdminList();
+  if(section === 'clients' && typeof renderClientsSection === 'function'){
+    renderClientsSection();
+    loadClientsFromSheets(false);
+  }
   if(section === 'scanstock'){
     renderScanLog();
     updateAdminSaveBar();
@@ -4033,6 +4370,669 @@ document.getElementById('saveGithubConfig').addEventListener('click', () => {
   document.getElementById('ghBranch').value = branch;
   populateCategorySelect();
   showToast(token ? 'Configuración de GitHub guardada' : 'Repositorio guardado (falta ingresar el token)');
+});
+
+/* ---------- CLIENTES, CUENTAS CORRIENTES Y VENTAS (GOOGLE SHEETS, SOLO ADMIN) ---------- */
+let clientsCache = [];
+let clientsSummary = { totalClients: 0, debtorsCount: 0, totalDeuda: 0 };
+let clientsLoaded = false;
+let clientsLoading = false;
+let clientsLoadPromise = null;
+let clientFormOnCreated = null;
+let activeDetailClient = null;
+
+function getClientKey(c){
+  if(!c) return '';
+  if(c.codigo) return 'C:' + String(c.codigo);
+  return 'N:' + String(c.rowIndex || '') + ':' + String(c.cliente || '');
+}
+function findClientByKey(key){
+  return clientsCache.find(c => getClientKey(c) === key) || null;
+}
+function recomputeClientsSummary(){
+  let debtorsCount = 0;
+  let totalDeuda = 0;
+  clientsCache.forEach(c => {
+    const s = Number(c.saldo) || 0;
+    if(s > 0){
+      debtorsCount += 1;
+      totalDeuda = Math.round((totalDeuda + s) * 100) / 100;
+    }
+  });
+  clientsSummary = { totalClients: clientsCache.length, debtorsCount, totalDeuda };
+}
+function upsertClientInCache(clientObj){
+  if(!clientObj) return;
+  const cod = String(clientObj.codigo || '').trim();
+  const nom = String(clientObj.cliente || '').trim().toUpperCase();
+  const idx = clientsCache.findIndex(c =>
+    (cod && String(c.codigo || '').trim() === cod)
+    || (!cod && nom && String(c.cliente || '').trim().toUpperCase() === nom)
+    || (clientObj.rowIndex && c.rowIndex === clientObj.rowIndex)
+  );
+  if(idx >= 0) clientsCache[idx] = { ...clientsCache[idx], ...clientObj };
+  else clientsCache.push(clientObj);
+  recomputeClientsSummary();
+}
+function getSheetsInputsAndSave(){
+  const url = document.getElementById('sheetsApiUrl')?.value.trim() || '';
+  const key = document.getElementById('sheetsApiKey')?.value.trim() || '';
+  saveSheetsConfigTo(url, key);
+  return { url, apiKey: key };
+}
+
+document.getElementById('saveSheetsConfig')?.addEventListener('click', () => {
+  const statusEl = document.getElementById('sheetsConfigStatus');
+  const { url, apiKey } = getSheetsInputsAndSave();
+  clientsLoaded = false;
+  if(!url || !apiKey){
+    if(statusEl) statusEl.textContent = '⚠ Pegá tanto la URL de la Aplicación Web como tu clave secreta.';
+    showToast('Faltan datos de conexión de Google Sheets');
+    return;
+  }
+  if(statusEl) statusEl.textContent = '✅ Datos guardados en este navegador. Tocá "Probar conexión" para verificar.';
+  showToast('Conexión de Google Sheets guardada');
+});
+
+document.getElementById('testSheetsConfig')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('sheetsConfigStatus');
+  const btn = document.getElementById('testSheetsConfig');
+  getSheetsInputsAndSave();
+  if(statusEl) statusEl.textContent = 'Conectando con Google Sheets...';
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('ping');
+    if(statusEl) statusEl.textContent = `✅ Conectado a "${res.spreadsheetName || 'CATALOGO-DISTRE-BASE'}" · Hojas: ${(res.sheets || []).join(', ')}`;
+    showToast('Conexión exitosa con Google Sheets');
+  }catch(e){
+    if(statusEl) statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('setupSheetsBtn')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('sheetsConfigStatus');
+  const btn = document.getElementById('setupSheetsBtn');
+  getSheetsInputsAndSave();
+  if(statusEl) statusEl.textContent = 'Preparando hojas y fórmulas de cuenta corriente...';
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('setupSheets');
+    clientsLoaded = false;
+    if(statusEl) statusEl.textContent = `✅ Hojas listas (${(res.sheets || []).join(', ')}). Cuentas corrientes preparadas: ${res.clientsUpdated ?? 0}.`;
+    showToast('Hojas y cuentas corrientes listas');
+  }catch(e){
+    if(statusEl) statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('syncStockSheetsBtn')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('sheetsConfigStatus');
+  const btn = document.getElementById('syncStockSheetsBtn');
+  getSheetsInputsAndSave();
+  const seen = new Set();
+  const items = [];
+  getAllTabs().forEach(t => {
+    getTabProducts(t.id, 'stock').forEach(p => {
+      const eff = getEffective(p, 'stock');
+      if(eff.deleted || seen.has(eff.ean)) return;
+      seen.add(eff.ean);
+      items.push({
+        ean: eff.ean,
+        codigoInterno: eff.codigoInterno || '',
+        brand: eff.brand || t.name,
+        tab: t.id,
+        cat: eff.cat || '',
+        name: eff.name || '',
+        price: eff.price,
+        stock: typeof eff.stock === 'number' ? eff.stock : 0
+      });
+    });
+  });
+  if(statusEl) statusEl.textContent = `Sincronizando ${items.length} producto(s) de EN STOCK con Sheets...`;
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('syncStockSnapshot', { items });
+    if(statusEl) statusEl.textContent = `✅ Sincronizados ${res.count} producto(s) en la hoja STOCK_ACTUAL (${res.fecha || ''}).`;
+    showToast('Stock sincronizado con Google Sheets');
+  }catch(e){
+    if(statusEl) statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+async function loadClientsFromSheets(force = false){
+  if(!isAdmin || !isSheetsConfigured()) return [];
+  if(clientsLoadPromise) return clientsLoadPromise;
+  if(clientsLoaded && !force) return clientsCache;
+  clientsLoading = true;
+  const listEl = document.getElementById('clientsList');
+  if(listEl && !clientsLoaded){
+    listEl.innerHTML = `<div class="admin-empty">Cargando clientes desde Google Sheets...</div>`;
+  }
+  clientsLoadPromise = (async () => {
+    try{
+      const res = await sheetsApi('getClients');
+      clientsCache = Array.isArray(res.clients) ? res.clients : [];
+      if(res.summary) clientsSummary = res.summary;
+      else recomputeClientsSummary();
+      clientsLoaded = true;
+      renderClientsSection();
+      if(typeof populateSaleClientSelect === 'function' && (cartOverlay?.classList.contains('open') || document.getElementById('cartAdminSaleBox')?.style.display === 'flex')){
+        populateSaleClientSelect();
+      }
+      return clientsCache;
+    }catch(e){
+      if(listEl) listEl.innerHTML = `<div class="admin-empty" style="color:var(--danger);">❌ ${escapeHtml(e.message)}</div>`;
+      return [];
+    }finally{
+      clientsLoading = false;
+      clientsLoadPromise = null;
+    }
+  })();
+  return clientsLoadPromise;
+}
+
+function renderClientsSection(){
+  const notCfg = document.getElementById('clientsNotConfiguredBox');
+  const kpiBar = document.getElementById('clientsKpiBar');
+  const listEl = document.getElementById('clientsList');
+  if(!listEl) return;
+
+  if(!isSheetsConfigured()){
+    if(notCfg) notCfg.style.display = 'flex';
+    if(kpiBar) kpiBar.style.display = 'none';
+    listEl.innerHTML = '';
+    return;
+  }
+  if(notCfg) notCfg.style.display = 'none';
+  if(kpiBar) kpiBar.style.display = 'grid';
+
+  document.getElementById('kpiTotalClients').textContent = clientsSummary.totalClients ?? clientsCache.length;
+  document.getElementById('kpiDebtorsCount').textContent = clientsSummary.debtorsCount ?? 0;
+  document.getElementById('kpiTotalDeuda').textContent = formatPrice(clientsSummary.totalDeuda || 0);
+
+  if(!clientsLoaded && clientsLoading){
+    listEl.innerHTML = `<div class="admin-empty">Cargando clientes desde Google Sheets...</div>`;
+    return;
+  }
+
+  const q = (document.getElementById('clientsSearchInput')?.value || '').trim().toLowerCase();
+  const debtFilter = document.getElementById('clientsDebtFilter')?.value || 'all';
+  const filtered = clientsCache.filter(c => {
+    const saldo = Number(c.saldo) || 0;
+    if(debtFilter === 'debt' && !(saldo > 0)) return false;
+    if(debtFilter === 'ok' && saldo > 0) return false;
+    if(!q) return true;
+    return String(c.cliente || '').toLowerCase().includes(q)
+      || String(c.nombre || '').toLowerCase().includes(q)
+      || String(c.codigo || '').toLowerCase().includes(q)
+      || String(c.localidad || '').toLowerCase().includes(q)
+      || String(c.zona || '').toLowerCase().includes(q)
+      || String(c.telefono || '').toLowerCase().includes(q);
+  });
+
+  if(filtered.length === 0){
+    listEl.innerHTML = `<div class="admin-empty">${clientsCache.length === 0 ? 'Todavía no hay clientes cargados.' : 'No hay clientes que coincidan con el filtro.'}</div>`;
+    return;
+  }
+
+  listEl.innerHTML = filtered.map(c => {
+    const key = escapeHtml(getClientKey(c));
+    const saldo = Number(c.saldo) || 0;
+    const badgeClass = saldo > 0 ? 'debt' : (saldo < 0 ? 'credit' : 'ok');
+    const badgeText = saldo > 0
+      ? `Debe ${formatPrice(saldo)}`
+      : (saldo < 0 ? `A favor ${formatPrice(Math.abs(saldo))}` : 'Al día');
+    const metaParts = [];
+    if(c.nombre && c.nombre !== c.cliente) metaParts.push(c.nombre);
+    if(c.localidad) metaParts.push(c.localidad);
+    if(c.zona) metaParts.push('Zona ' + c.zona);
+    if(c.telefono) metaParts.push('Tel ' + c.telefono);
+    if(c.direccion) metaParts.push(c.direccion);
+    const ctaInfo = (c.ventasCount || c.cobrosCount)
+      ? ` · Ventas: ${formatPrice(c.totalVentas || 0)} · Cobros: ${formatPrice(c.totalCobros || 0)}`
+      : '';
+    return `
+    <div class="client-row">
+      <div class="client-row-info">
+        <div class="client-row-name">
+          ${c.codigo ? `<span class="client-code-pill">#${escapeHtml(c.codigo)}</span>` : '<span class="client-code-pill">S/C</span>'}
+          <span>${escapeHtml(c.cliente)}</span>
+        </div>
+        <div class="client-row-meta">${escapeHtml(metaParts.join(' · ') || 'Sin datos extra')}${escapeHtml(ctaInfo)}</div>
+      </div>
+      <div class="client-row-right">
+        <span class="client-debt-badge ${badgeClass}">${badgeText}</span>
+        <button type="button" class="admin-edit-btn" data-client-ledger="${key}">📄 Cuenta corriente</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  listEl.querySelectorAll('[data-client-ledger]').forEach(btn => {
+    btn.addEventListener('click', () => openClientDetailModal(btn.dataset.clientLedger));
+  });
+}
+
+document.getElementById('refreshClientsBtn')?.addEventListener('click', () => loadClientsFromSheets(true));
+document.getElementById('clientsSearchInput')?.addEventListener('input', renderClientsSection);
+document.getElementById('clientsDebtFilter')?.addEventListener('change', renderClientsSection);
+document.getElementById('goSheetsConfigBtn')?.addEventListener('click', () => switchAdminSection('general'));
+document.getElementById('openNewClientBtn')?.addEventListener('click', () => openClientFormModal());
+
+function openClientFormModal(onCreated = null){
+  if(!isAdmin){ showToast('Solo disponible como administrador'); return; }
+  if(!isSheetsConfigured()){ showToast('Primero configurá Google Sheets en Admin → General'); return; }
+  clientFormOnCreated = onCreated;
+  ['cfCliente','cfNombre','cfLocalidad','cfZona','cfDireccion','cfTelefono','cfCuit','cfMedioPago','cfRemitoFactura'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+  const st = document.getElementById('cfStatus');
+  if(st) st.textContent = '';
+  openOverlayEl(clientFormOverlay);
+  setTimeout(() => document.getElementById('cfCliente')?.focus(), 0);
+}
+document.getElementById('cfClose')?.addEventListener('click', () => closeOverlayEl(clientFormOverlay));
+document.getElementById('cfCancelBtn')?.addEventListener('click', () => closeOverlayEl(clientFormOverlay));
+document.getElementById('cfSaveBtn')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('cfStatus');
+  const btn = document.getElementById('cfSaveBtn');
+  const cliente = document.getElementById('cfCliente').value.trim();
+  if(!cliente){ statusEl.textContent = '❌ Ingresá el nombre o comercio del cliente.'; return; }
+  statusEl.textContent = 'Guardando cliente en Google Sheets...';
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('createClient', {
+      client: {
+        cliente,
+        nombre: document.getElementById('cfNombre').value.trim(),
+        telefono: document.getElementById('cfTelefono').value.trim(),
+        localidad: document.getElementById('cfLocalidad').value.trim(),
+        zona: document.getElementById('cfZona').value.trim(),
+        direccion: document.getElementById('cfDireccion').value.trim(),
+        cuit: document.getElementById('cfCuit').value.trim(),
+        medioPago: document.getElementById('cfMedioPago').value.trim(),
+        remitoFactura: document.getElementById('cfRemitoFactura').value.trim(),
+        esCliente: 'SI'
+      }
+    });
+    upsertClientInCache(res.client);
+    clientsLoaded = true;
+    renderClientsSection();
+    const cb = clientFormOnCreated;
+    clientFormOnCreated = null;
+    closeOverlayEl(clientFormOverlay);
+    showToast(`✅ Cliente "${res.client.cliente}" creado (#${res.client.codigo})`);
+    if(typeof cb === 'function') cb(res.client);
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+function renderClientLedger(data){
+  const c = data.client || activeDetailClient || {};
+  document.getElementById('cdTitle').textContent = `${c.codigo ? '#' + c.codigo + ' · ' : ''}${c.cliente || 'Cliente'}`;
+  const subParts = [c.nombre, c.localidad, c.telefono, c.direccion].filter(Boolean);
+  document.getElementById('cdSub').textContent = subParts.join(' · ') || 'Cuenta corriente en CATALOGO-DISTRE-BASE';
+
+  const tv = Number(c.totalVentas) || 0;
+  const tc = Number(c.totalCobros) || 0;
+  const saldo = Number(c.saldo) || 0;
+  document.getElementById('cdTotalVentas').textContent = formatPrice(tv);
+  document.getElementById('cdTotalCobros').textContent = formatPrice(tc);
+  const saldoEl = document.getElementById('cdSaldo');
+  saldoEl.textContent = saldo < 0 ? `-${formatPrice(Math.abs(saldo))} (a favor)` : formatPrice(saldo);
+  saldoEl.className = 'clients-kpi-val ' + (saldo > 0 ? 'debt' : 'ok');
+
+  const payFullBtn = document.getElementById('cpPayFullBtn');
+  if(payFullBtn) payFullBtn.disabled = !(saldo > 0);
+
+  const list = document.getElementById('cdLedgerList');
+  const tl = Array.isArray(data.timeline) ? data.timeline : [];
+  if(tl.length === 0){
+    list.innerHTML = `<div class="admin-empty">Sin ventas ni cobros registrados todavía.</div>`;
+    return;
+  }
+  list.innerHTML = tl.map(item => {
+    const isSale = item.tipo === 'VENTA';
+    const detail = isSale
+      ? `${item.catalogo ? item.catalogo + ' · ' : ''}${item.estado || ''}${item.pagado > 0 ? ' (Abonó ' + formatPrice(item.pagado) + ')' : ''}${item.nota ? ' · ' + item.nota : ''}`
+      : `${item.medioPago || 'Cobro'}${item.refVenta ? ' · Ref ' + item.refVenta : ''}${item.nota ? ' · ' + item.nota : ''}`;
+    return `
+    <div class="ledger-row">
+      <div>
+        <span class="ledger-type ${isSale ? 'sale' : 'payment'}">${isSale ? 'Venta' : 'Cobro'}</span>
+        <b style="margin-left:6px;">${escapeHtml(item.fecha || '')}</b>
+        <span style="color:var(--text-dim);margin-left:6px;">${escapeHtml(item.id || '')}</span>
+        <div style="color:var(--text-dim);font-size:.74rem;margin-top:2px;">${escapeHtml(detail)}</div>
+      </div>
+      <div style="font-weight:800;color:${isSale ? 'var(--danger)' : '#186732'};">${isSale ? '+' : '-'}${formatPrice(item.monto || 0)}</div>
+    </div>`;
+  }).join('');
+}
+
+async function openClientDetailModal(clientKey){
+  if(!isAdmin) return;
+  const client = findClientByKey(clientKey);
+  if(!client) return;
+  activeDetailClient = client;
+  document.getElementById('cpAmount').value = '';
+  document.getElementById('cpNote').value = '';
+  document.getElementById('cpStatus').textContent = '';
+  document.getElementById('cdLedgerList').innerHTML = `<div class="admin-empty">Cargando movimientos...</div>`;
+  renderClientLedger({ client, timeline: [] });
+  openOverlayEl(clientDetailOverlay);
+  try{
+    const data = await sheetsApi('getClientLedger', { codigo: client.codigo, cliente: client.cliente });
+    if(data.client){
+      upsertClientInCache(data.client);
+      activeDetailClient = data.client;
+      renderClientsSection();
+    }
+    renderClientLedger(data);
+  }catch(e){
+    document.getElementById('cdLedgerList').innerHTML = `<div class="admin-empty" style="color:var(--danger);">❌ ${escapeHtml(e.message)}</div>`;
+  }
+}
+document.getElementById('cdClose')?.addEventListener('click', () => closeOverlayEl(clientDetailOverlay));
+document.getElementById('cpPayFullBtn')?.addEventListener('click', () => {
+  if(!activeDetailClient) return;
+  const saldo = Number(activeDetailClient.saldo) || 0;
+  if(saldo > 0) document.getElementById('cpAmount').value = String(saldo);
+});
+document.getElementById('cpSaveBtn')?.addEventListener('click', async () => {
+  if(!activeDetailClient) return;
+  const statusEl = document.getElementById('cpStatus');
+  const btn = document.getElementById('cpSaveBtn');
+  const monto = parseFloat(document.getElementById('cpAmount').value);
+  if(!Number.isFinite(monto) || monto <= 0){ statusEl.textContent = '❌ Ingresá un monto mayor a 0.'; return; }
+  statusEl.textContent = 'Registrando cobro...';
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('registerPayment', {
+      client: { rowIndex: activeDetailClient.rowIndex, codigo: activeDetailClient.codigo, cliente: activeDetailClient.cliente },
+      monto,
+      medioPago: document.getElementById('cpMethod').value,
+      nota: document.getElementById('cpNote').value.trim()
+    });
+    if(res.clientBalance){
+      upsertClientInCache(res.clientBalance);
+      activeDetailClient = res.clientBalance;
+      renderClientsSection();
+    }
+    document.getElementById('cpAmount').value = '';
+    document.getElementById('cpNote').value = '';
+    statusEl.textContent = `✅ Cobro registrado (${res.cobroId})`;
+    const ledger = await sheetsApi('getClientLedger', { codigo: activeDetailClient.codigo, cliente: activeDetailClient.cliente });
+    renderClientLedger(ledger);
+    showToast(`✅ Cobro registrado · Nuevo saldo: ${formatPrice(activeDetailClient.saldo || 0)}`);
+  }catch(e){
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    btn.disabled = false;
+  }
+});
+
+/* ---------- CARRITO: VENTA ADMIN + DESCUENTO EN STOCK ---------- */
+function computeStockDeductionsForEntries(entries){
+  const matched = [];
+  const unmatched = [];
+  entries.forEach(([ean, qty]) => {
+    const stockBase = findBaseProduct(ean, 'stock');
+    if(!stockBase){
+      const curBase = findBaseProduct(ean);
+      unmatched.push({ ean, name: (curBase && curBase.name) || ean, qty });
+      return;
+    }
+    const eff = getEffective(stockBase, 'stock');
+    const prevStock = (typeof eff.stock === 'number' && Number.isFinite(eff.stock)) ? eff.stock : 0;
+    const newStock = Math.max(0, prevStock - qty);
+    matched.push({
+      ean,
+      codigoInterno: eff.codigoInterno || '',
+      brand: eff.brand || '',
+      cat: eff.cat || '',
+      name: eff.name || '',
+      price: eff.price,
+      qty,
+      prevStock,
+      newStock,
+      insufficient: prevStock < qty
+    });
+  });
+  return { matched, unmatched };
+}
+
+function populateSaleClientSelect(selectedKeyOverride = null){
+  const sel = document.getElementById('saleClientSelect');
+  if(!sel) return;
+  const prev = selectedKeyOverride || sel.value;
+  const q = (document.getElementById('saleClientSearch')?.value || '').trim().toLowerCase();
+  const filtered = clientsCache.filter(c => {
+    if(!q) return true;
+    return String(c.cliente || '').toLowerCase().includes(q)
+      || String(c.nombre || '').toLowerCase().includes(q)
+      || String(c.codigo || '').toLowerCase().includes(q)
+      || String(c.localidad || '').toLowerCase().includes(q);
+  });
+  if(filtered.length === 0){
+    sel.innerHTML = `<option value="">${clientsCache.length === 0 ? '— Sin clientes cargados —' : '— Sin coincidencias —'}</option>`;
+  } else {
+    sel.innerHTML = `<option value="">— Seleccioná un cliente (${filtered.length}) —</option>`
+      + filtered.map(c => {
+        const key = escapeHtml(getClientKey(c));
+        const codTxt = c.codigo ? `#${c.codigo} · ` : '';
+        const debtTxt = c.saldo > 0 ? ` [Debe ${formatPrice(c.saldo)}]` : '';
+        return `<option value="${key}">${escapeHtml(codTxt + c.cliente + debtTxt)}</option>`;
+      }).join('');
+    if(prev && filtered.some(c => getClientKey(c) === prev)) sel.value = prev;
+  }
+  updateSaleClientDebtBanner();
+}
+
+function updateSaleClientDebtBanner(){
+  const banner = document.getElementById('saleClientDebtBanner');
+  const sel = document.getElementById('saleClientSelect');
+  if(!banner || !sel) return;
+  const client = findClientByKey(sel.value);
+  if(!client){
+    banner.style.display = 'none';
+    return;
+  }
+  const saldo = Number(client.saldo) || 0;
+  banner.style.display = '';
+  if(saldo > 0){
+    banner.className = 'sale-debt-banner has-debt';
+    banner.textContent = `⚠ Tiene deuda pendiente en cuenta corriente: ${formatPrice(saldo)} (Ventas: ${formatPrice(client.totalVentas || 0)} · Cobros: ${formatPrice(client.totalCobros || 0)})`;
+  } else if(saldo < 0){
+    banner.className = 'sale-debt-banner clean';
+    banner.textContent = `✓ Saldo a favor del cliente: ${formatPrice(Math.abs(saldo))}`;
+  } else {
+    banner.className = 'sale-debt-banner clean';
+    banner.textContent = '✓ Cuenta corriente al día (sin deuda)';
+  }
+}
+
+function updateSaleStockPreview(entries){
+  const box = document.getElementById('saleStockPreview');
+  const chk = document.getElementById('saleDeductStock');
+  if(!box) return;
+  if(!chk || !chk.checked){
+    box.textContent = 'No se descontará stock al registrar esta venta.';
+    return;
+  }
+  const { matched, unmatched } = computeStockDeductionsForEntries(entries);
+  const parts = [];
+  if(matched.length > 0){
+    const lines = matched.slice(0, 6).map(m =>
+      `${escapeHtml(m.name)}: ${m.prevStock} → <b>${m.newStock}</b>${m.insufficient ? ' <span style="color:var(--danger);">(stock insuficiente)</span>' : ''}`
+    );
+    if(matched.length > 6) lines.push(`... y ${matched.length - 6} producto(s) más en EN STOCK.`);
+    parts.push(lines.join('<br>'));
+  }
+  if(unmatched.length > 0){
+    parts.push(`<span style="color:var(--text-dim);">${unmatched.length} producto(s) no figuran en EN STOCK (no modifican stock).</span>`);
+  }
+  box.innerHTML = parts.join('<br>') || 'Sin productos para descontar.';
+}
+
+function renderCartAdminSaleSection(entries){
+  const box = document.getElementById('cartAdminSaleBox');
+  const statusEl = document.getElementById('saleStatus');
+  if(statusEl && !isAdmin){
+    statusEl.textContent = '';
+    statusEl.style.display = 'none';
+  }
+  if(!box) return;
+  if(!isAdmin || !entries || entries.length === 0){
+    box.style.display = 'none';
+    return;
+  }
+  if(statusEl && statusEl.textContent) statusEl.style.display = '';
+  box.style.display = 'flex';
+  const configured = isSheetsConfigured();
+  const hint = document.getElementById('saleNotConfiguredHint');
+  const controls = document.getElementById('saleControlsWrap');
+  if(hint) hint.style.display = configured ? 'none' : '';
+  if(controls) controls.style.display = configured ? '' : 'none';
+  updateSaleStockPreview(entries);
+  if(configured){
+    if(!clientsLoaded && !clientsLoading) loadClientsFromSheets(false);
+    populateSaleClientSelect();
+  }
+}
+
+async function applyEnStockDeductions(matched, saleId){
+  if(!matched || matched.length === 0) return { updated: 0, skippedReason: '' };
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token){
+    return { updated: 0, skippedReason: 'Falta configurar el token de GitHub en Admin → General para actualizar el stock en el catálogo.' };
+  }
+  const updatedEntries = [];
+  const updatedEans = [];
+  await updateCustomProducts(data => {
+    matched.forEach(d => {
+      const idx = data.products.findIndex(p => p.ean === d.ean);
+      const existing = idx >= 0 ? data.products[idx] : null;
+      const entry = buildRepoProductEntry(d.ean, existing, { stock: d.newStock }, 'stock');
+      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+      updatedEntries.push(entry);
+      updatedEans.push(d.ean);
+    });
+    return data;
+  }, `Venta ${saleId} — descontar stock [EN STOCK] (${matched.length} producto(s))`, 3, 'stock');
+
+  clearLocalOverrides(updatedEans, 'stock');
+  updatedEntries.forEach(e => mergeCustomProductLocally(e, 'stock'));
+  syncCatalogUI();
+  buildFilters();
+  renderGrid();
+  if(isAdmin && adminPage.classList.contains('open')) renderAdminList();
+  return { updated: updatedEntries.length, skippedReason: '' };
+}
+
+document.getElementById('saleClientSearch')?.addEventListener('input', () => populateSaleClientSelect());
+document.getElementById('saleClientSelect')?.addEventListener('change', updateSaleClientDebtBanner);
+document.getElementById('saleRefreshClientsBtn')?.addEventListener('click', () => loadClientsFromSheets(true));
+document.getElementById('saleNewClientBtn')?.addEventListener('click', () => {
+  openClientFormModal((newClient) => {
+    populateSaleClientSelect(getClientKey(newClient));
+  });
+});
+document.getElementById('salePaymentMode')?.addEventListener('change', e => {
+  const wrap = document.getElementById('salePartialWrap');
+  if(wrap) wrap.style.display = e.target.value === 'partial' ? '' : 'none';
+});
+document.getElementById('saleDeductStock')?.addEventListener('change', () => updateSaleStockPreview(getCartEntries()));
+
+document.getElementById('registerSaleBtn')?.addEventListener('click', async () => {
+  if(!isAdmin){ showToast('Solo disponible como administrador'); return; }
+  const entries = getCartEntries();
+  if(entries.length === 0){ showToast('Tu carrito está vacío'); return; }
+  const statusEl = document.getElementById('saleStatus');
+  const btn = document.getElementById('registerSaleBtn');
+  const client = findClientByKey(document.getElementById('saleClientSelect')?.value || '');
+  const setSaleStatus = (msg) => {
+    if(!statusEl) return;
+    statusEl.textContent = msg || '';
+    statusEl.style.display = msg ? '' : 'none';
+  };
+
+  if(!client){ setSaleStatus('❌ Seleccioná un cliente o creá uno nuevo.'); return; }
+
+  const order = buildOrderData(entries);
+  const mode = document.getElementById('salePaymentMode')?.value || 'cc';
+  let pagado = 0;
+  let condicion = 'CUENTA CORRIENTE';
+  if(mode === 'paid'){
+    pagado = order.total;
+    condicion = 'CONTADO';
+  } else if(mode === 'partial'){
+    const rawPag = parseFloat(document.getElementById('salePaidAmount')?.value);
+    if(!Number.isFinite(rawPag) || rawPag < 0 || rawPag > order.total){
+      setSaleStatus(`❌ Ingresá un monto abonado entre 0 y ${formatPrice(order.total)}.`);
+      return;
+    }
+    pagado = rawPag;
+    condicion = 'PARCIAL';
+  }
+
+  const deductChecked = !!document.getElementById('saleDeductStock')?.checked;
+  const { matched } = deductChecked ? computeStockDeductionsForEntries(entries) : { matched: [] };
+
+  setSaleStatus('Registrando venta en Google Sheets...');
+  btn.disabled = true;
+  try{
+    const res = await sheetsApi('registerSale', {
+      catalogName: getActiveCatalogInfo().name,
+      client: { rowIndex: client.rowIndex, codigo: client.codigo, cliente: client.cliente },
+      items: order.items,
+      subtotal: order.subtotal,
+      totalSavings: order.totalSavings,
+      total: order.total,
+      pagado,
+      condicion,
+      medioPago: document.getElementById('salePaymentMethod')?.value || 'Cuenta Corriente',
+      nota: document.getElementById('saleNote')?.value.trim() || '',
+      stockDeductions: matched
+    });
+
+    if(res.clientBalance){
+      upsertClientInCache(res.clientBalance);
+      renderClientsSection();
+    }
+
+    let stockNote = '';
+    if(deductChecked && matched.length > 0){
+      setSaleStatus('Venta guardada en Sheets. Descontando stock en EN STOCK...');
+      try{
+        const stRes = await applyEnStockDeductions(matched, res.saleId);
+        stockNote = stRes.skippedReason
+          ? ` ⚠ ${stRes.skippedReason}`
+          : ` Stock descontado en EN STOCK (${stRes.updated} producto/s).`;
+      }catch(ghErr){
+        stockNote = ` ⚠ Venta guardada en Sheets, pero falló el descuento en GitHub: ${ghErr.message}`;
+      }
+    }
+
+    clearCart();
+    document.getElementById('saleNote').value = '';
+    document.getElementById('salePaidAmount').value = '';
+    renderCartModal();
+    setSaleStatus(`✅ Venta ${res.saleId} registrada (${client.cliente}).${stockNote}`);
+    showToast(`✅ Venta ${res.saleId} registrada`);
+  }catch(e){
+    setSaleStatus('❌ ' + e.message);
+  }finally{
+    btn.disabled = false;
+  }
 });
 
 /* ---------- AGREGAR PRODUCTO ---------- */
@@ -5241,8 +6241,11 @@ function renderCartModal(){
     sendBtn.style.pointerEvents = 'none';
     sendBtn.style.opacity = '.5';
     exportBtns.forEach(b => { b.disabled = true; });
+    renderCartAdminSaleSection([]);
     return;
   }
+  const prevSaleStatus = document.getElementById('saleStatus');
+  if(prevSaleStatus){ prevSaleStatus.textContent = ''; prevSaleStatus.style.display = 'none'; }
   sendBtn.style.pointerEvents = '';
   sendBtn.style.opacity = '';
   exportBtns.forEach(b => { b.disabled = false; });
@@ -5313,17 +6316,18 @@ function renderCartModal(){
   });
 
   sendBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildOrderMessage(entries))}`;
+  renderCartAdminSaleSection(entries);
 }
 
 /* ======================================================
    CIERRE GENÉRICO DE MODALES (click afuera / ESC)
    ====================================================== */
-[overlay, loginOverlay, cartOverlay, editOverlay].forEach(ov => {
+[overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay].filter(Boolean).forEach(ov => {
   ov.addEventListener('click', (e) => { if(e.target === ov) closeOverlayEl(ov); });
 });
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape'){
-    [overlay, loginOverlay, cartOverlay, editOverlay].forEach(ov => {
+    [overlay, loginOverlay, cartOverlay, editOverlay, clientFormOverlay, clientDetailOverlay].filter(Boolean).forEach(ov => {
       if(ov.classList.contains('open')) closeOverlayEl(ov);
     });
   }
