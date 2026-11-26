@@ -14833,6 +14833,20 @@
       "catalogName": "POLO GREY",
       "bulto": 12,
       "descuentoBulto": 3
+    },
+    {
+      "ean": "7798444555530",
+      "name": "DIFUSOR PARA AUTO SAPHIRUS - PARAISO ROSE",
+      "desc": "",
+      "price": 3400,
+      "tab": "algabo",
+      "cat": "ASANA",
+      "subcat": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpOuVM6HKXmV-9ojmmRUjUnFsSrOb9UMVEUzFcWqtf8g&s=10",
+      "brand": "ALGABO",
+      "catalogName": "DIFUSOR PARA AUTO SAPHIRUS - PARAISO ROSE",
+      "stock": 24,
+      "bulto": 24
     }
   ]
 }
