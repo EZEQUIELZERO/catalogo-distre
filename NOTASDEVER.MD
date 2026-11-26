@@ -500,3 +500,16 @@ Fecha: 2026-11-24
 - En **Admin** se agregó la barra fija `#adminCatalogBar` (`📚 COMPLETO` / `✅ EN STOCK`) y selectores en **Agregar producto** (`#npCatalog`) e **Importar CSV** (`#csvCatalog`), más badge de catálogo activo en **Productos**, **📷 Cargar Stock** y **Editar producto** (`#editCatalogBadge`), con confirmación para no perder ediciones pendientes al cambiar de catálogo.
 - La subida de imágenes desde admin prefija `stock-` cuando el destino es `EN STOCK` y consulta `githubGetFile` para respetar `sha` previo.
 Archivos: index.html, data/stock-products.json, NOTASDEVER.MD
+
+### #038 - Ocultar sin stock en EN STOCK, filtro categoría/subcategoría en Admin y alta rápida en escáner
+Fecha: 2026-11-26
+- **Visibilidad por stock solo en `EN STOCK`**:
+  - Nuevos helpers `hasPositiveStock` e `isVisibleInCatalog`: en el catálogo público `EN STOCK`, los productos con `stock` vacío (`null`/`undefined`) o `0` quedan ocultos automáticamente en tarjetas, contadores (`getCatalogTotalCount`), filtros (`buildFilters`, `buildSubfilters`), búsquedas y modal (`openModal`), mientras que en `COMPLETO` se siguen mostrando normalmente.
+  - En **Admin → Productos** y **📷 Cargar Stock** siguen visibles para poder cargarles stock; en `EN STOCK` muestran la etiqueta `Sin stock (oculto en EN STOCK)`.
+- **Búsqueda y filtro por categoría y subcategoría en Admin → Productos**:
+  - Agregados los selectores `#adminCatFilter` y `#adminSubcatFilter` en `.admin-toolbar` (`populateAdminCategoryFilters`), con actualización en cascada y reseteo al cambiar de pestaña o catálogo (`setActiveTab`, `setActiveCatalog`).
+  - La búsqueda por texto (`matchesAdminProduct`) también busca por nombre de categoría y subcategoría, y cada fila muestra su categoría/subcategoría en `.p-ean`.
+- **Alta rápida desde escáner si el código no existe**:
+  - Al escanear un código inexistente en **📷 Cargar Stock**, aparece `#scanNotFoundCard` con la opción **➕ Cargar producto ahora** (`#scanQuickAddBox`) que precarga el EAN y la cantidad escaneada (`CODIGO CANTIDAD`).
+  - Si el código ya existe en el otro catálogo (por ejemplo en `COMPLETO` mientras se escanea en `EN STOCK`), ofrece además el botón **📋 Cargar con datos de ...** para precargar nombre, precio, pestaña, categoría, subcategoría, bulto, descuento e imagen y guardar directo en GitHub.
+Archivos: index.html, NOTASDEVER.MD

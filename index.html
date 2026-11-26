@@ -636,6 +636,7 @@
     font-size:.64rem;font-weight:700;background:var(--accent);color:#fff;vertical-align:middle;
   }
   .pending-badge.danger{background:var(--danger);color:#fff;}
+  .pending-badge.warn{background:#b86b00;color:#fff;}
   .admin-row-actions{display:flex;gap:6px;align-items:center;}
   .admin-edit-btn{
     padding:6px 12px;border-radius:6px;border:1px solid #5c5c5c;
@@ -672,6 +673,7 @@
     display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;
   }
   .admin-toolbar .price-input{flex:1;min-width:200px;width:auto;margin:0;}
+  .admin-toolbar .admin-filter-select{flex:0 1 200px;min-width:155px;width:auto;margin:0;}
   .admin-toolbar .btn{margin:0;padding:10px 14px;font-size:.8rem;}
   .admin-bulkbar{
     display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px;
@@ -823,6 +825,28 @@
   .scan-preview-name{font-size:.95rem;font-weight:700;line-height:1.3;}
   .scan-preview-meta{font-size:.76rem;color:var(--text-dim);display:flex;gap:10px;flex-wrap:wrap;}
   .scan-preview-meta b{color:var(--accent);}
+  .scan-notfound-card{
+    display:flex;flex-direction:column;gap:10px;
+    background:var(--card);border:2px solid #d48a18;border-radius:12px;padding:14px 16px;
+  }
+  .scan-notfound-title{font-size:.92rem;font-weight:700;line-height:1.35;}
+  .scan-notfound-hint{
+    font-size:.78rem;color:var(--text-dim);padding:6px 10px;border-radius:8px;
+    background:var(--bg-soft);border:1px solid var(--border);
+  }
+  .scan-notfound-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .scan-notfound-actions .btn{margin:0;padding:8px 14px;font-size:.8rem;}
+  .scan-quickadd-box{
+    background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:16px;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .scan-quickadd-head{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+    padding-bottom:8px;border-bottom:1px solid var(--border);
+  }
+  .scan-quickadd-head strong{font-size:.95rem;}
+  .scan-quickadd-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px;}
+  .scan-quickadd-actions .btn{margin:0;padding:10px 16px;font-size:.84rem;}
   .scan-log-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
   .scan-log{
     border:1px solid var(--border);border-radius:12px;max-height:360px;overflow-y:auto;
@@ -1201,7 +1225,13 @@
         </div>
         <div class="admin-tabs" id="adminTabsRow"></div>
         <div class="admin-toolbar">
-          <input type="text" id="adminSearchInput" class="price-input" placeholder="🔍 Buscar por nombre o EAN...">
+          <input type="text" id="adminSearchInput" class="price-input" placeholder="🔍 Buscar por nombre, EAN, categoría o subcategoría...">
+          <select id="adminCatFilter" class="price-input admin-filter-select" aria-label="Filtrar por categoría">
+            <option value="Todos">Categoría: Todas</option>
+          </select>
+          <select id="adminSubcatFilter" class="price-input admin-filter-select" aria-label="Filtrar por subcategoría">
+            <option value="Todos">Subcategoría: Todas</option>
+          </select>
           <button class="btn btn-gray btn-auto" id="adminSelectAllBtn">☑ Seleccionar todos</button>
           <button class="btn btn-gray btn-auto" id="adminSelectNoneBtn">☐ Deseleccionar todos</button>
         </div>
@@ -1275,6 +1305,64 @@
               <div id="scanProdDisabledNote" style="display:none;font-size:.72rem;color:var(--danger);font-weight:700;">Producto deshabilitado en el catálogo</div>
             </div>
             <button type="button" class="btn btn-close btn-auto" id="scanCancelBtn" style="padding:7px 12px;font-size:.78rem;">✕ Cancelar (Esc)</button>
+          </div>
+
+          <div class="scan-notfound-card" id="scanNotFoundCard" style="display:none;">
+            <div class="scan-notfound-title" id="scanNotFoundMsg"></div>
+            <div class="scan-notfound-hint" id="scanNotFoundOtherHint" style="display:none;"></div>
+            <div class="scan-notfound-actions">
+              <button type="button" class="btn btn-whatsapp btn-auto" id="scanCopyFromOtherBtn" style="display:none;">📋 Cargar con datos de COMPLETO</button>
+              <button type="button" class="btn btn-gold btn-auto" id="scanOpenQuickAddBtn">➕ Cargar producto ahora</button>
+              <button type="button" class="btn btn-close btn-auto" id="scanNotFoundCloseBtn">✕ Ignorar</button>
+            </div>
+          </div>
+
+          <div class="scan-quickadd-box" id="scanQuickAddBox" style="display:none;">
+            <div class="scan-quickadd-head">
+              <strong id="scanQuickAddTitle">Cargar producto nuevo</strong>
+              <button type="button" class="btn btn-close btn-auto" id="sqCloseBtn" style="padding:5px 10px;font-size:.76rem;">✕ Cancelar</button>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="sqEan">Código EAN / Código</label><input type="text" id="sqEan" class="price-input" placeholder="Ej: 7798444550764 o SP200"></div>
+              <div class="field"><label for="sqCodigoInterno">Código interno (opcional)</label><input type="text" id="sqCodigoInterno" class="price-input" placeholder="Ej: SP200"></div>
+            </div>
+            <div class="field"><label for="sqName">Descripción (sistema / pedidos — WhatsApp, Excel, Sheets, PDF)</label><input type="text" id="sqName" class="price-input" placeholder="Ej: AROMATIZANTE TEXTIL SAPHIRUS 250 ML - PISTACHO"></div>
+            <div class="field"><label for="sqCatalogName">Nombre en catálogo (como aparece en la tarjeta, opcional)</label><input type="text" id="sqCatalogName" class="price-input" placeholder="Ej: PISTACHO"></div>
+            <div class="field-row">
+              <div class="field"><label for="sqPrice">Precio (vacío = "Consultar precio")</label><input type="number" id="sqPrice" class="price-input" min="0" step="1"></div>
+              <div class="field"><label for="sqStock">Stock inicial</label><input type="number" id="sqStock" class="price-input" min="0" step="1" placeholder="Sin stock"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="sqBulto">Bulto (unidades por bulto, opcional)</label><input type="number" id="sqBulto" class="price-input" min="1" step="1" placeholder="Ej: 12"></div>
+              <div class="field"><label for="sqBultoDesc">Descuento por bulto % (0–100, opcional)</label><input type="number" id="sqBultoDesc" class="price-input" min="0" max="100" step="0.5" placeholder="Sin descuento"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="sqTab">Proveedor / Pestaña principal</label>
+                <select id="sqTab" class="price-input"></select>
+              </div>
+              <div class="field"><label for="sqBrand">Marca / Proveedor (opcional)</label><input type="text" id="sqBrand" class="price-input" placeholder="Por defecto, nombre de pestaña"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label for="sqCatSelect">Familia / Categoría (sub-pestaña)</label>
+                <select id="sqCatSelect" class="price-input"></select>
+                <input type="text" id="sqCatNew" class="price-input" placeholder="Nombre de la nueva familia / categoría" style="margin-top:8px;display:none;">
+              </div>
+              <div class="field"><label for="sqSubcatSelect">Subcategoría (opcional)</label>
+                <select id="sqSubcatSelect" class="price-input"></select>
+                <input type="text" id="sqSubcatNew" class="price-input" placeholder="Nombre de la nueva subcategoría" style="margin-top:8px;display:none;">
+              </div>
+            </div>
+            <div class="field"><label for="sqDesc">Nota en tarjeta (opcional)</label><input type="text" id="sqDesc" class="price-input" placeholder="Texto secundario opcional debajo del código..."></div>
+            <div class="field">
+              <label for="sqImgUrl">Imagen — pegá una URL o subí un archivo (opcional)</label>
+              <input type="text" id="sqImgUrl" class="price-input" placeholder="https://...">
+              <input type="file" id="sqImgFile" accept="image/*" class="price-input" style="margin-top:8px;padding:8px;">
+            </div>
+            <div class="scan-quickadd-actions">
+              <button type="button" class="btn btn-whatsapp btn-auto" id="sqSaveBtn">💾 Guardar producto y volver al escáner</button>
+              <button type="button" class="btn btn-close btn-auto" id="sqCancelBtn">Cancelar</button>
+            </div>
+            <p class="admin-note" id="sqStatus" style="margin:2px 0 0;"></p>
           </div>
         </div>
 
@@ -1998,7 +2086,7 @@ function getCatalogTotalCount(catalogId = activeCatalog){
   getAllTabs().forEach(t => {
     getTabProducts(t.id, catalogId).forEach(p => {
       const eff = getEffective(p, catalogId);
-      if(eff.enabled && !eff.deleted) seen.add(p.ean);
+      if(isVisibleInCatalog(eff, catalogId)) seen.add(p.ean);
     });
   });
   return seen.size;
@@ -2075,6 +2163,16 @@ function getEffective(p, catalogId = activeCatalog){
   const enabled = typeof o.enabled === 'boolean' ? o.enabled : baseEnabled;
   const deleted = o.deleted === true;
   return { ...p, price, enabled, deleted };
+}
+function hasPositiveStock(p){
+  if(!p || p.stock === null || p.stock === undefined || String(p.stock).trim() === '') return false;
+  const n = Number(p.stock);
+  return Number.isFinite(n) && n > 0;
+}
+function isVisibleInCatalog(eff, catalogId = activeCatalog){
+  if(!eff || !eff.enabled || eff.deleted) return false;
+  if(catalogId === 'stock' && !hasPositiveStock(eff)) return false;
+  return true;
 }
 
 /* ======================================================
@@ -2580,6 +2678,8 @@ function setActiveCatalog(catalogId, opts = {}){
   activeCat = 'Todos';
   activeSubcat = 'Todos';
   searchInput.value = '';
+  if(typeof adminFilterCat !== 'undefined') adminFilterCat = 'Todos';
+  if(typeof adminFilterSubcat !== 'undefined') adminFilterSubcat = 'Todos';
   if(typeof pendingProductChanges !== 'undefined') pendingProductChanges = {};
   if(typeof adminSelected !== 'undefined') adminSelected.clear();
   if(typeof currentScanned !== 'undefined') currentScanned = null;
@@ -2670,7 +2770,7 @@ const subfiltersEl = document.getElementById('subfilters');
 let activeCat = "Todos";
 
 function buildFilters(){
-  const visible = getActiveProducts().map(getEffective).filter(p=>p.enabled && !p.deleted);
+  const visible = getActiveProducts().map(p => getEffective(p)).filter(p => isVisibleInCatalog(p));
   const cats = ["Todos", ...new Set(visible.map(p => p.cat))];
   if(!cats.includes(activeCat)) activeCat = "Todos";
   filtersEl.innerHTML = cats.map(c =>
@@ -2692,7 +2792,7 @@ function buildSubfilters(){
     subfiltersEl.innerHTML = '';
     return;
   }
-  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && !p.deleted && p.cat === activeCat);
+  const visible = getActiveProducts().map(p => getEffective(p)).filter(p => isVisibleInCatalog(p) && p.cat === activeCat);
   const subcats = [...new Set(visible.map(p => p.subcat).filter(s => s && s.trim()))];
   if(subcats.length === 0){
     subfiltersEl.innerHTML = '';
@@ -2715,7 +2815,7 @@ function buildSubfilters(){
 
 function renderGrid(){
   const q = searchInput.value.trim().toLowerCase();
-  const visible = getActiveProducts().map(getEffective).filter(p => p.enabled && !p.deleted);
+  const visible = getActiveProducts().map(p => getEffective(p)).filter(p => isVisibleInCatalog(p));
   const filtered = visible.filter(p => {
     const matchesQuery = matchesProductQuery(p, q);
     const matchesCat = activeCat === "Todos" || p.cat === activeCat;
@@ -2727,7 +2827,7 @@ function renderGrid(){
 
   if(filtered.length === 0){
     const emptyMsg = (!q && activeCatalog === 'stock')
-      ? 'Todavía no hay productos cargados en EN STOCK para esta marca.'
+      ? 'No hay productos con stock disponible en EN STOCK para esta marca.'
       : 'No se encontraron productos para tu búsqueda.';
     grid.innerHTML = `
       <div class="empty-state">
@@ -2823,7 +2923,7 @@ function openModal(ean){
   const base = findBaseProduct(ean);
   if(!base) return;
   const p = getEffective(base);
-  if(!p.enabled || p.deleted) return;
+  if(!isVisibleInCatalog(p)) return;
   currentModalEan = ean;
   const hasPrice = p.price !== null && p.price !== undefined;
   const displayName = getDisplayName(p);
@@ -2959,6 +3059,7 @@ function closeAdminPage(){
   pendingProductChanges = {};
   currentScanned = null;
   scanSessionLog = [];
+  if(typeof hideScanNotFound === 'function') hideScanNotFound();
   updateAdminSaveBar();
   adminPage.classList.remove('open');
   document.body.style.overflow = '';
@@ -2999,7 +3100,45 @@ document.querySelectorAll('.admin-subnav-btn').forEach(btn => {
 
 let adminSelected = new Set();
 let adminSearchQuery = '';
+let adminFilterCat = 'Todos';
+let adminFilterSubcat = 'Todos';
 let pendingProductChanges = {}; // { [ean]: { price?, enabled?, deleted? } }
+
+function populateAdminCategoryFilters(){
+  const catSel = document.getElementById('adminCatFilter');
+  const subSel = document.getElementById('adminSubcatFilter');
+  if(!catSel || !subSel) return;
+  const active = getActiveProducts().filter(p => !getEffective(p).deleted);
+  const cats = [...new Set(active.map(p => String(p.cat || '').trim()).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
+  if(adminFilterCat !== 'Todos' && !cats.includes(adminFilterCat)) adminFilterCat = 'Todos';
+  catSel.innerHTML = `<option value="Todos">Categoría: Todas</option>`
+    + cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+  catSel.value = adminFilterCat;
+
+  const matchingCat = active.filter(p => adminFilterCat === 'Todos' || String(p.cat || '').trim() === adminFilterCat);
+  const subcats = [...new Set(matchingCat.map(p => String(p.subcat || '').trim()).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
+  if(adminFilterSubcat !== 'Todos' && !subcats.includes(adminFilterSubcat)) adminFilterSubcat = 'Todos';
+  if(subcats.length === 0){
+    subSel.innerHTML = `<option value="Todos">Sin subcategorías</option>`;
+    subSel.value = 'Todos';
+    subSel.disabled = true;
+  } else {
+    subSel.disabled = false;
+    subSel.innerHTML = `<option value="Todos">Subcategoría: Todas</option>`
+      + subcats.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+    subSel.value = adminFilterSubcat;
+  }
+}
+
+function matchesAdminProduct(p){
+  if(adminFilterCat !== 'Todos' && String(p.cat || '').trim() !== adminFilterCat) return false;
+  if(adminFilterSubcat !== 'Todos' && String(p.subcat || '').trim() !== adminFilterSubcat) return false;
+  const q = adminSearchQuery.trim().toLowerCase();
+  if(!q) return true;
+  return matchesProductQuery(p, q)
+    || String(p.cat || '').toLowerCase().includes(q)
+    || String(p.subcat || '').toLowerCase().includes(q);
+}
 
 function getPendingCount(){
   return Object.keys(pendingProductChanges).length;
@@ -3090,27 +3229,31 @@ function syncRowDirtyDOM(rowEl, st){
   rowEl.classList.toggle('dirty-row', !st.pendingDelete && st.isDirty);
   const badgeWrap = rowEl.querySelector('.p-ean');
   if(!badgeWrap) return;
-  const oldBadge = badgeWrap.querySelector('.pending-badge');
-  if(oldBadge) oldBadge.remove();
+  badgeWrap.querySelectorAll('.pending-badge').forEach(el => el.remove());
   if(st.pendingDelete){
     badgeWrap.insertAdjacentHTML('beforeend', `<span class="pending-badge danger">Se quitará al guardar</span>`);
-  } else if(st.isDirty){
-    badgeWrap.insertAdjacentHTML('beforeend', `<span class="pending-badge">Sin guardar</span>`);
+  } else {
+    if(st.isDirty) badgeWrap.insertAdjacentHTML('beforeend', `<span class="pending-badge">Sin guardar</span>`);
+    if(activeCatalog === 'stock' && !hasPositiveStock({ stock: st.stock })){
+      badgeWrap.insertAdjacentHTML('beforeend', `<span class="pending-badge warn">Sin stock (oculto en EN STOCK)</span>`);
+    }
   }
 }
 
 function renderAdminList(){
   const list = document.getElementById('adminProductList');
   document.querySelectorAll('.admin-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === activeTab));
+  populateAdminCategoryFilters();
   const activeProducts = getActiveProducts();
   const q = adminSearchQuery.trim().toLowerCase();
   const rows = activeProducts
     .map(p => ({ p, st: getAdminRowState(p) }))
     .filter(({st}) => !st.eff.deleted)
-    .filter(({p}) => matchesProductQuery(p, q));
+    .filter(({p}) => matchesAdminProduct(p));
   updateToggleAllBtnLabel(rows);
   if(rows.length === 0){
-    list.innerHTML = `<div class="admin-empty">${q ? 'No hay productos que coincidan con la búsqueda.' : 'No hay productos en esta pestaña.'}</div>`;
+    const hasFilter = !!(q || adminFilterCat !== 'Todos' || adminFilterSubcat !== 'Todos');
+    list.innerHTML = `<div class="admin-empty">${hasFilter ? 'No hay productos que coincidan con la búsqueda o filtros.' : 'No hay productos en esta pestaña.'}</div>`;
     updateAdminSelCount();
     updateAdminSaveBar();
     return;
@@ -3123,6 +3266,12 @@ function renderAdminList(){
     const badgeHtml = st.pendingDelete
       ? `<span class="pending-badge danger">Se quitará al guardar</span>`
       : (st.isDirty ? `<span class="pending-badge">Sin guardar</span>` : '');
+    const stockWarnHtml = (!st.pendingDelete && activeCatalog === 'stock' && !hasPositiveStock({ stock: st.stock }))
+      ? `<span class="pending-badge warn">Sin stock (oculto en EN STOCK)</span>`
+      : '';
+    const catStr = String(p.cat || '').trim();
+    const subStr = String(p.subcat || '').trim();
+    const catMeta = subStr ? `${catStr} › ${subStr}` : catStr;
     const bultoSummary = (typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1)
       ? ` · Bulto x${Math.round(p.bulto)}${(typeof p.descuentoBulto === 'number' && p.descuentoBulto > 0) ? ` (-${formatDiscountPct(p.descuentoBulto)}%)` : ''}`
       : '';
@@ -3145,7 +3294,7 @@ function renderAdminList(){
             <input type="text" class="price-input admin-prod-catalog" data-ean="${eanSafe}" value="${escapeHtml(st.catalogName)}" placeholder="Opcional — si queda vacío usa Descripción" ${st.pendingDelete ? 'disabled' : ''}>
           </div>
         </div>
-        <div class="p-ean">EAN ${eanSafe}${escapeHtml(bultoSummary)}${badgeHtml}</div>
+        <div class="p-ean">EAN ${eanSafe}${catMeta ? ` · ${escapeHtml(catMeta)}` : ''}${escapeHtml(bultoSummary)}${badgeHtml}${stockWarnHtml}</div>
       </div>
       <div class="admin-num-field">
         <span class="admin-num-lbl">Precio</span>
@@ -3216,7 +3365,7 @@ function renderAdminList(){
       const curRows = getActiveProducts()
         .map(p => ({ p, st: getAdminRowState(p) }))
         .filter(({st}) => !st.eff.deleted)
-        .filter(({p}) => matchesProductQuery(p, q));
+        .filter(({p}) => matchesAdminProduct(p));
       updateToggleAllBtnLabel(curRows);
     });
   });
@@ -3242,13 +3391,21 @@ document.getElementById('adminSearchInput').addEventListener('input', e => {
   adminSearchQuery = e.target.value;
   renderAdminList();
 });
+document.getElementById('adminCatFilter')?.addEventListener('change', e => {
+  adminFilterCat = e.target.value;
+  adminFilterSubcat = 'Todos';
+  renderAdminList();
+});
+document.getElementById('adminSubcatFilter')?.addEventListener('change', e => {
+  adminFilterSubcat = e.target.value;
+  renderAdminList();
+});
 
 document.getElementById('adminSelectAllBtn').addEventListener('click', () => {
-  const q = adminSearchQuery.trim().toLowerCase();
   getActiveProducts()
     .map(p => ({ p, eff: getEffective(p) }))
     .filter(({eff}) => !eff.deleted)
-    .filter(({p}) => matchesProductQuery(p, q))
+    .filter(({p}) => matchesAdminProduct(p))
     .forEach(({p}) => adminSelected.add(p.ean));
   renderAdminList();
 });
@@ -3403,6 +3560,121 @@ document.getElementById('scanSaveProductsBtn').addEventListener('click', savePen
 /* ---------- CARGAR STOCK CON ESCÁNER ---------- */
 let currentScanned = null;
 let scanSessionLog = [];
+let scanNotFoundState = null;
+
+function hideScanQuickAdd(focusCode = false){
+  const box = document.getElementById('scanQuickAddBox');
+  const statusEl = document.getElementById('sqStatus');
+  if(box) box.style.display = 'none';
+  if(statusEl) statusEl.textContent = '';
+  if(focusCode) document.getElementById('scanCodeInput')?.focus();
+}
+function hideScanNotFound(){
+  scanNotFoundState = null;
+  const nf = document.getElementById('scanNotFoundCard');
+  if(nf) nf.style.display = 'none';
+  hideScanQuickAdd(false);
+}
+function populateQuickAddSubcategories(preselectSubcat = ''){
+  const tab = document.getElementById('sqTab')?.value || activeTab;
+  const cat = document.getElementById('sqCatSelect')?.value || '';
+  const sel = document.getElementById('sqSubcatSelect');
+  const newInp = document.getElementById('sqSubcatNew');
+  if(!sel) return;
+  const subSet = new Set();
+  if(cat && cat !== '__new__' && cat !== 'Todos'){
+    CATALOG_IDS.forEach(cid => {
+      getProductsForTab(tab, cid).forEach(p => {
+        if(p.cat === cat && p.subcat && String(p.subcat).trim()){
+          subSet.add(String(p.subcat).trim());
+        }
+      });
+    });
+  }
+  const pre = String(preselectSubcat || '').trim();
+  if(pre) subSet.add(pre);
+  const subcats = [...subSet].sort((a, b) => a.localeCompare(b, 'es'));
+  sel.innerHTML = `<option value="">— Sin subcategoría —</option>`
+    + subcats.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('')
+    + `<option value="__new__">+ Nueva subcategoría...</option>`;
+  sel.value = pre || '';
+  if(newInp){ newInp.value = ''; newInp.style.display = 'none'; }
+}
+function populateQuickAddCategories(preselectCat = '', preselectSubcat = ''){
+  const tab = document.getElementById('sqTab')?.value || activeTab;
+  const sel = document.getElementById('sqCatSelect');
+  const newInp = document.getElementById('sqCatNew');
+  if(!sel) return;
+  const catSet = new Set();
+  CATALOG_IDS.forEach(cid => {
+    getProductsForTab(tab, cid).forEach(p => {
+      if(p.cat && String(p.cat).trim()) catSet.add(String(p.cat).trim());
+    });
+  });
+  const pre = String(preselectCat || '').trim();
+  if(pre && pre !== '__new__' && pre !== 'Todos') catSet.add(pre);
+  const cats = [...catSet].sort((a, b) => a.localeCompare(b, 'es'));
+  sel.innerHTML = cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('')
+    + `<option value="__new__">+ Nueva categoría...</option>`;
+  if(pre && cats.includes(pre)){
+    sel.value = pre;
+  } else if(cats.length > 0){
+    sel.value = cats[0];
+  } else {
+    sel.value = '__new__';
+  }
+  if(newInp){
+    newInp.value = '';
+    newInp.style.display = sel.value === '__new__' ? '' : 'none';
+  }
+  populateQuickAddSubcategories(preselectSubcat);
+}
+function openScanQuickAdd(prefillFromOther = false){
+  if(!scanNotFoundState) return;
+  const { code, inlineQty, otherMatch } = scanNotFoundState;
+  renderTabSelects();
+  const titleEl = document.getElementById('scanQuickAddTitle');
+  if(titleEl) titleEl.textContent = `Cargar producto en ${getActiveCatalogInfo().name}`;
+  ['sqEan','sqCodigoInterno','sqCatalogName','sqName','sqDesc','sqPrice','sqStock','sqBulto','sqBultoDesc','sqBrand','sqCatNew','sqSubcatNew','sqImgUrl'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+  const fileEl = document.getElementById('sqImgFile');
+  if(fileEl) fileEl.value = '';
+  const statusEl = document.getElementById('sqStatus');
+  if(statusEl) statusEl.textContent = '';
+
+  document.getElementById('sqEan').value = code;
+  if(inlineQty !== null && inlineQty !== undefined){
+    document.getElementById('sqStock').value = String(inlineQty);
+  }
+  const sqTabEl = document.getElementById('sqTab');
+  if(prefillFromOther && otherMatch && otherMatch.product){
+    const op = otherMatch.product;
+    document.getElementById('sqCodigoInterno').value = op.codigoInterno || '';
+    document.getElementById('sqName').value = op.name || '';
+    document.getElementById('sqCatalogName').value = op.catalogName || '';
+    document.getElementById('sqDesc').value = op.desc || '';
+    if(op.price !== null && op.price !== undefined) document.getElementById('sqPrice').value = String(op.price);
+    if(typeof op.bulto === 'number' && Number.isFinite(op.bulto)) document.getElementById('sqBulto').value = String(Math.round(op.bulto));
+    if(typeof op.descuentoBulto === 'number' && Number.isFinite(op.descuentoBulto)) document.getElementById('sqBultoDesc').value = String(op.descuentoBulto);
+    document.getElementById('sqBrand').value = op.brand || '';
+    document.getElementById('sqImgUrl').value = op.img || '';
+    if(sqTabEl && otherMatch.tab && getTabById(otherMatch.tab.id)) sqTabEl.value = otherMatch.tab.id;
+    populateQuickAddCategories(op.cat || '', op.subcat || '');
+  } else {
+    if(sqTabEl) sqTabEl.value = getTabById(activeTab) ? activeTab : (getAllTabs()[0]?.id || 'algabo');
+    populateQuickAddCategories('', '');
+  }
+
+  document.getElementById('scanNotFoundCard').style.display = 'none';
+  document.getElementById('scanQuickAddBox').style.display = '';
+  if(prefillFromOther){
+    document.getElementById('sqStock').focus();
+  } else {
+    document.getElementById('sqName').focus();
+  }
+}
 
 function parseScanCodeInput(raw){
   const trimmed = String(raw ?? '').trim();
@@ -3465,6 +3737,7 @@ function setScanFeedback(type, msg){
 }
 function resetScanInputs(focusCode = true, clearFeedback = false){
   currentScanned = null;
+  hideScanNotFound();
   const card = document.getElementById('scanProductCard');
   const codeInp = document.getElementById('scanCodeInput');
   const qtyInp = document.getElementById('scanQtyInput');
@@ -3496,10 +3769,10 @@ function renderScanLog(){
       : `<button type="button" class="admin-edit-btn" data-scan-undo="${item.id}">↺ Deshacer</button>`;
     return `
     <div class="scan-log-row">
-      <img src="${item.img}" alt="" onerror="onImgError(this)">
+      <img src="${escapeHtml(item.img || GENERIC_IMG)}" alt="" onerror="onImgError(this)">
       <div class="scan-log-info">
-        <div class="scan-log-name">${item.name}</div>
-        <div class="scan-log-sub">EAN ${item.ean} · ${item.tabName} · ${item.time}</div>
+        <div class="scan-log-name">${escapeHtml(item.name)}</div>
+        <div class="scan-log-sub">EAN ${escapeHtml(item.ean)} · ${escapeHtml(item.tabName)} · ${escapeHtml(item.time)}</div>
       </div>
       <div class="scan-log-qty">${prevTxt} → ${item.newStock}</div>
       ${rightHtml}
@@ -3528,6 +3801,7 @@ function handleScanCodeSubmit(){
   const applyBtn = document.getElementById('scanApplyBtn');
   if(!codeInp) return;
   const { code, inlineQty } = parseScanCodeInput(codeInp.value);
+  hideScanNotFound();
   if(!code){
     setScanFeedback('', '');
     codeInp.focus();
@@ -3540,8 +3814,31 @@ function handleScanCodeSubmit(){
     qtyInp.value = '';
     qtyInp.disabled = true;
     applyBtn.disabled = true;
+    const otherCatalogId = activeCatalog === 'stock' ? 'completo' : 'stock';
+    const otherMatch = findProductByCode(code, otherCatalogId);
+    scanNotFoundState = { code, inlineQty, otherMatch, otherCatalogId };
+    const msgEl = document.getElementById('scanNotFoundMsg');
+    const hintEl = document.getElementById('scanNotFoundOtherHint');
+    const copyBtn = document.getElementById('scanCopyFromOtherBtn');
+    const nfCard = document.getElementById('scanNotFoundCard');
+    if(msgEl) msgEl.textContent = `El código "${code}" no está cargado en ${getActiveCatalogInfo().name}.`;
+    if(otherMatch){
+      const otherName = CATALOGS[otherCatalogId].name;
+      if(hintEl){
+        hintEl.textContent = `Encontrado en ${otherName}: ${otherMatch.product.name} (${otherMatch.tab.name})`;
+        hintEl.style.display = '';
+      }
+      if(copyBtn){
+        copyBtn.textContent = `📋 Cargar con datos de ${otherName}`;
+        copyBtn.style.display = '';
+      }
+    } else {
+      if(hintEl) hintEl.style.display = 'none';
+      if(copyBtn) copyBtn.style.display = 'none';
+    }
+    if(nfCard) nfCard.style.display = 'flex';
     playScanBeep(false);
-    setScanFeedback('err', `❌ No se encontró ningún producto con código "${code}".`);
+    setScanFeedback('err', `❌ No se encontró ningún producto con código "${code}" en ${getActiveCatalogInfo().name}. Podés cargarlo ahora abajo.`);
     codeInp.focus();
     codeInp.select();
     return;
@@ -3621,6 +3918,84 @@ document.getElementById('scanClearLogBtn').addEventListener('click', () => {
   renderScanLog();
   document.getElementById('scanCodeInput')?.focus();
 });
+document.getElementById('scanOpenQuickAddBtn')?.addEventListener('click', () => openScanQuickAdd(false));
+document.getElementById('scanCopyFromOtherBtn')?.addEventListener('click', () => openScanQuickAdd(true));
+document.getElementById('scanNotFoundCloseBtn')?.addEventListener('click', () => {
+  hideScanNotFound();
+  document.getElementById('scanCodeInput')?.focus();
+});
+document.getElementById('sqCloseBtn')?.addEventListener('click', () => hideScanQuickAdd(true));
+document.getElementById('sqCancelBtn')?.addEventListener('click', () => hideScanQuickAdd(true));
+document.getElementById('sqTab')?.addEventListener('change', () => populateQuickAddCategories('', ''));
+document.getElementById('sqCatSelect')?.addEventListener('change', () => {
+  const newInp = document.getElementById('sqCatNew');
+  if(newInp) newInp.style.display = document.getElementById('sqCatSelect').value === '__new__' ? '' : 'none';
+  populateQuickAddSubcategories('');
+});
+document.getElementById('sqSubcatSelect')?.addEventListener('change', () => {
+  const newInp = document.getElementById('sqSubcatNew');
+  if(newInp) newInp.style.display = document.getElementById('sqSubcatSelect').value === '__new__' ? '' : 'none';
+});
+document.getElementById('scanQuickAddBox')?.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){ e.preventDefault(); hideScanQuickAdd(true); }
+});
+document.getElementById('sqSaveBtn')?.addEventListener('click', async () => {
+  const statusEl = document.getElementById('sqStatus');
+  const saveBtn = document.getElementById('sqSaveBtn');
+  const targetCatalog = activeCatalog;
+  const stock = parseNonNegInt(document.getElementById('sqStock').value);
+  statusEl.textContent = 'Guardando...';
+  saveBtn.disabled = true;
+  try{
+    const { entry, catalogNameLabel } = await createAndSaveProduct({
+      targetCatalog,
+      ean: document.getElementById('sqEan').value.trim().replace(/\s+/g, ''),
+      codigoInterno: document.getElementById('sqCodigoInterno').value.trim(),
+      catalogName: document.getElementById('sqCatalogName').value.trim(),
+      rawName: document.getElementById('sqName').value.trim(),
+      desc: document.getElementById('sqDesc').value.trim(),
+      priceRaw: document.getElementById('sqPrice').value,
+      stock,
+      bulto: parsePositiveInt(document.getElementById('sqBulto').value),
+      descuentoBulto: parseDiscountPct(document.getElementById('sqBultoDesc').value),
+      tab: document.getElementById('sqTab').value,
+      brandInput: document.getElementById('sqBrand').value.trim(),
+      catSel: document.getElementById('sqCatSelect').value,
+      catNew: document.getElementById('sqCatNew').value.trim(),
+      subcatSel: document.getElementById('sqSubcatSelect').value,
+      subcatNew: document.getElementById('sqSubcatNew').value.trim(),
+      imgUrl: document.getElementById('sqImgUrl').value.trim(),
+      imgFile: document.getElementById('sqImgFile').files[0]
+    });
+    populateCategorySelect();
+    scanSessionLog.unshift({
+      id: Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+      ean: entry.ean,
+      name: entry.name,
+      img: entry.img || GENERIC_IMG,
+      tabName: getTabById(entry.tab)?.name || entry.tab,
+      prevStock: null,
+      newStock: stock !== null ? stock : '—',
+      time: new Date().toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit', second:'2-digit' }),
+      saved: true
+    });
+    renderScanLog();
+    hideScanNotFound();
+    const codeInp = document.getElementById('scanCodeInput');
+    if(codeInp) codeInp.value = '';
+    playScanBeep(true);
+    const hiddenNote = (targetCatalog === 'stock' && !(stock > 0))
+      ? ' (Sin stock > 0: no aparecerá en el catálogo público EN STOCK hasta cargar stock.)'
+      : '';
+    setScanFeedback('ok', `✅ Producto creado y guardado en ${catalogNameLabel}: ${entry.name} (EAN ${entry.ean}${stock !== null ? ` · Stock: ${stock}` : ''}).${hiddenNote}`);
+    if(codeInp) codeInp.focus();
+  }catch(e){
+    playScanBeep(false);
+    statusEl.textContent = '❌ ' + e.message;
+  }finally{
+    saveBtn.disabled = false;
+  }
+});
 
 document.getElementById('saveWhatsapp').addEventListener('click', async () => {
   const val = document.getElementById('adminWhatsapp').value.trim().replace(/[^0-9]/g, '');
@@ -3697,73 +4072,92 @@ document.getElementById('npSubcatSelect').addEventListener('change', () => {
   document.getElementById('npSubcatNew').style.display = document.getElementById('npSubcatSelect').value === '__new__' ? '' : 'none';
 });
 
+async function createAndSaveProduct(opts){
+  const {
+    targetCatalog, ean, codigoInterno, catalogName, rawName, desc,
+    priceRaw, stock, bulto, descuentoBulto, tab, brandInput,
+    catSel, catNew, subcatSel, subcatNew, imgUrl, imgFile
+  } = opts;
+  const catalogNameLabel = getActiveCatalogInfo(targetCatalog).name;
+  const name = rawName || catalogName;
+  const parsedPrice = priceRaw === '' ? null : parseInt(priceRaw, 10);
+  const price = (parsedPrice !== null && Number.isFinite(parsedPrice)) ? parsedPrice : null;
+  const brand = brandInput || (getTabById(tab)?.name || tab);
+  const cat = catSel === '__new__' ? (catNew || 'Otros') : (catSel || 'Otros');
+  const subcat = subcatSel === '__new__' ? (subcatNew || '') : (subcatSel || '');
+
+  if(!ean || !/^[A-Za-z0-9._-]{2,32}$/.test(ean)) throw new Error('Ingresá un código EAN / Código válido (mínimo 2 caracteres).');
+  if(!name) throw new Error('Ingresá una descripción o nombre en catálogo.');
+  if(findBaseProduct(ean, targetCatalog)) throw new Error(`Ese EAN / código ya existe en ${catalogNameLabel}. Para editarlo, usá la sección "Productos".`);
+  const gh = getGithubConfig();
+  if(!gh.repo || !gh.token) throw new Error('Primero configurá el repositorio y el token de GitHub en la sección General.');
+
+  let imgPath = imgUrl;
+  if(imgFile){
+    imgPath = await uploadProductImage(ean, imgFile, `Agregar imagen [${catalogNameLabel}] producto ${ean}`, targetCatalog);
+  }
+  const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand }, targetCatalog);
+  if(codigoInterno) entry.codigoInterno = codigoInterno;
+  if(catalogName) entry.catalogName = catalogName;
+  if(stock !== null) entry.stock = stock;
+  if(bulto !== null) entry.bulto = bulto;
+  if(descuentoBulto !== null) entry.descuentoBulto = descuentoBulto;
+
+  await updateCustomProducts((data) => {
+    const idx = data.products.findIndex(p => p.ean === ean);
+    if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
+    return data;
+  }, `Agregar producto [${catalogNameLabel}] ${ean} - ${name}`, 3, targetCatalog);
+
+  if(targetCatalog === activeCatalog) delete pendingProductChanges[ean];
+  clearLocalOverrides([ean], targetCatalog);
+  mergeCustomProductLocally(entry, targetCatalog);
+  syncCatalogUI();
+  buildFilters();
+  renderGrid();
+  renderAdminList();
+  return { entry, catalogNameLabel };
+}
+
 document.getElementById('addProductBtn').addEventListener('click', async () => {
   const statusEl = document.getElementById('addProductStatus');
+  const btn = document.getElementById('addProductBtn');
   const targetCatalog = document.getElementById('npCatalog').value || activeCatalog;
-  const catalogNameLabel = getActiveCatalogInfo(targetCatalog).name;
-  const ean = document.getElementById('npEan').value.trim().replace(/\s+/g, '');
-  const codigoInterno = document.getElementById('npCodigoInterno').value.trim();
-  const catalogName = document.getElementById('npCatalogName').value.trim();
-  const rawName = document.getElementById('npName').value.trim();
-  const name = rawName || catalogName;
-  const desc = document.getElementById('npDesc').value.trim();
-  const priceRaw = document.getElementById('npPrice').value;
-  const price = priceRaw === '' ? null : parseInt(priceRaw, 10);
   const stock = parseNonNegInt(document.getElementById('npStock').value);
-  const bulto = parsePositiveInt(document.getElementById('npBulto').value);
-  const descuentoBulto = parseDiscountPct(document.getElementById('npBultoDesc').value);
-  const tab = document.getElementById('npTab').value;
-  const brandInput = document.getElementById('npBrand').value.trim();
-  const brand = brandInput || (getTabById(tab)?.name || tab);
-  const catSel = document.getElementById('npCatSelect').value;
-  const cat = catSel === '__new__' ? (document.getElementById('npCatNew').value.trim() || 'Otros') : (catSel || 'Otros');
-  const subcatSel = document.getElementById('npSubcatSelect').value;
-  const subcat = subcatSel === '__new__' ? (document.getElementById('npSubcatNew').value.trim() || '') : (subcatSel || '');
-  const imgUrl = document.getElementById('npImgUrl').value.trim();
-  const imgFile = document.getElementById('npImgFile').files[0];
-
-  if(!ean || !/^[A-Za-z0-9._-]{2,32}$/.test(ean)){ statusEl.textContent = '❌ Ingresá un código EAN / Código válido (mínimo 2 caracteres).'; return; }
-  if(!name){ statusEl.textContent = '❌ Ingresá una descripción o nombre en catálogo.'; return; }
-  if(findBaseProduct(ean, targetCatalog)){ statusEl.textContent = `❌ Ese EAN / código ya existe en ${catalogNameLabel}. Para editarlo, usá la sección "Productos".`; return; }
-  const gh = getGithubConfig();
-  if(!gh.repo || !gh.token){ statusEl.textContent = '❌ Primero configurá el repositorio y el token de GitHub en la sección General.'; return; }
-
   statusEl.textContent = 'Guardando...';
-  document.getElementById('addProductBtn').disabled = true;
+  btn.disabled = true;
   try{
-    let imgPath = imgUrl;
-    if(imgFile){
-      imgPath = await uploadProductImage(ean, imgFile, `Agregar imagen [${catalogNameLabel}] producto ${ean}`, targetCatalog);
-    }
-
-    const entry = preservarListas({ ean, name, desc, price, tab, cat, subcat, img: imgPath || '', brand }, targetCatalog);
-    if(codigoInterno) entry.codigoInterno = codigoInterno;
-    if(catalogName) entry.catalogName = catalogName;
-    if(stock !== null) entry.stock = stock;
-    if(bulto !== null) entry.bulto = bulto;
-    if(descuentoBulto !== null) entry.descuentoBulto = descuentoBulto;
-    await updateCustomProducts((data) => {
-      const idx = data.products.findIndex(p => p.ean === ean);
-      if(idx >= 0) data.products[idx] = entry; else data.products.push(entry);
-      return data;
-    }, `Agregar producto [${catalogNameLabel}] ${ean} - ${name}`, 3, targetCatalog);
-
-    if(targetCatalog === activeCatalog) delete pendingProductChanges[ean];
-    clearLocalOverrides([ean], targetCatalog);
-    mergeCustomProductLocally(entry, targetCatalog);
-    syncCatalogUI();
-    buildFilters();
-    renderGrid();
-    renderAdminList();
-
-    statusEl.textContent = `✅ Producto guardado en ${catalogNameLabel} (GitHub). Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.`;
+    const { catalogNameLabel } = await createAndSaveProduct({
+      targetCatalog,
+      ean: document.getElementById('npEan').value.trim().replace(/\s+/g, ''),
+      codigoInterno: document.getElementById('npCodigoInterno').value.trim(),
+      catalogName: document.getElementById('npCatalogName').value.trim(),
+      rawName: document.getElementById('npName').value.trim(),
+      desc: document.getElementById('npDesc').value.trim(),
+      priceRaw: document.getElementById('npPrice').value,
+      stock,
+      bulto: parsePositiveInt(document.getElementById('npBulto').value),
+      descuentoBulto: parseDiscountPct(document.getElementById('npBultoDesc').value),
+      tab: document.getElementById('npTab').value,
+      brandInput: document.getElementById('npBrand').value.trim(),
+      catSel: document.getElementById('npCatSelect').value,
+      catNew: document.getElementById('npCatNew').value.trim(),
+      subcatSel: document.getElementById('npSubcatSelect').value,
+      subcatNew: document.getElementById('npSubcatNew').value.trim(),
+      imgUrl: document.getElementById('npImgUrl').value.trim(),
+      imgFile: document.getElementById('npImgFile').files[0]
+    });
+    const hiddenNote = (targetCatalog === 'stock' && !(stock > 0))
+      ? ' (Sin stock > 0: no aparecerá en el catálogo público EN STOCK hasta cargar stock.)'
+      : '';
+    statusEl.textContent = `✅ Producto guardado en ${catalogNameLabel} (GitHub). Puede tardar uno o dos minutos en verse publicado para el resto de los visitantes.${hiddenNote}`;
     ['npEan','npCodigoInterno','npCatalogName','npName','npDesc','npPrice','npStock','npBulto','npBultoDesc','npBrand','npCatNew','npSubcatNew','npImgUrl'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('npImgFile').value = '';
     populateCategorySelect();
   }catch(e){
-    statusEl.textContent = '❌ Error: ' + e.message;
+    statusEl.textContent = '❌ ' + e.message;
   }finally{
-    document.getElementById('addProductBtn').disabled = false;
+    btn.disabled = false;
   }
 });
 
@@ -4960,16 +5354,20 @@ function renderTabs(){
 function renderTabSelects(){
   const tabs = getAllTabs();
   const npTab = document.getElementById('npTab');
+  const sqTab = document.getElementById('sqTab');
   const csvTab = document.getElementById('csvTab');
   const themeTab = document.getElementById('themeTabSelect');
   const prevNp = npTab.value;
+  const prevSq = sqTab ? sqTab.value : '';
   const prevCsv = csvTab.value;
   const prevTheme = themeTab ? themeTab.value : '';
   const options = tabs.map(t => `<option value="${escapeHtml(t.id)}">${escapeHtml(t.name)}</option>`).join('');
   npTab.innerHTML = options;
+  if(sqTab) sqTab.innerHTML = options;
   csvTab.innerHTML = `<option value="__auto__">Automático (según columna PROVEEDOR)</option>` + options;
   if(themeTab) themeTab.innerHTML = options;
   npTab.value = tabs.some(t => t.id === prevNp) ? prevNp : (tabs[0]?.id || '');
+  if(sqTab) sqTab.value = tabs.some(t => t.id === prevSq) ? prevSq : (tabs[0]?.id || '');
   csvTab.value = (prevCsv === '__auto__' || tabs.some(t => t.id === prevCsv)) ? prevCsv : '__auto__';
   if(themeTab) themeTab.value = tabs.some(t => t.id === prevTheme) ? prevTheme : (tabs[0]?.id || '');
 }
@@ -5317,6 +5715,8 @@ function setActiveTab(tab){
   activeTab = tab;
   activeCat = "Todos";
   activeSubcat = "Todos";
+  if(typeof adminFilterCat !== 'undefined') adminFilterCat = "Todos";
+  if(typeof adminFilterSubcat !== 'undefined') adminFilterSubcat = "Todos";
   applyTabTheme();
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   searchInput.value = '';
