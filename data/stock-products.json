@@ -2935,7 +2935,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_YpJWuq4MvPdPN-AcAZW4mIwTSxtYJWNTHDfTowgzw&s",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 7,
       "catalogName": "BAMBOO",
       "bulto": 12,
       "descuentoBulto": 3
@@ -2965,7 +2965,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb1P0FQjNwpCXl4hZWBnjygxrXdhZE006KPRCXgVrfGA&s",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 3,
       "catalogName": "FLORESBLANCAS",
       "bulto": 12,
       "descuentoBulto": 3
@@ -3095,7 +3095,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSShx_Nb1hxvaSjli2HaysQZaacIra3COm9DQokymK4cA&s=10",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 7,
       "catalogName": "PAPAYA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -3154,7 +3154,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQTBrz-DQ5Kfbw5tJAckGN3ZkZTOoUsej5HXdlWY8Ng&s=10",
       "brand": "SAPHIRUS",
-      "stock": 10,
+      "stock": 4,
       "catalogName": "NARANJAPIMIENTA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -3443,28 +3443,30 @@
     {
       "ean": "7798184686730",
       "name": "BERGAMOTA",
+      "desc": "",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmeU0m755R0exgLWBrEtI-7mPlc7QjZDcdltODfceEWw&s=10",
       "brand": "SAPHIRUS",
+      "stock": 8,
       "catalogName": "BERGAMOTA",
-      "stock": 12,
       "bulto": 12,
       "descuentoBulto": 3
     },
     {
       "ean": "7798184686747",
       "name": "VERBENA",
+      "desc": "",
       "price": 3200,
       "tab": "saphirus",
       "cat": "ACEITE",
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdWFJQa1srky-ySnYk7RvSHspoeRO3et8zHvxkyL_8PQ&s=10",
       "brand": "SAPHIRUS",
+      "stock": 8,
       "catalogName": "VERBENA",
-      "stock": 12,
       "bulto": 12,
       "descuentoBulto": 3
     },
