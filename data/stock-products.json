@@ -39,7 +39,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hTMKp-tLjSjvryFqXxnoQRF6-8DjRbzALBlXmGaK9A&s=10",
       "brand": "SAPHIRUS",
-      "stock": 10,
+      "stock": 6,
       "catalogName": "ERBA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -54,7 +54,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6jeNpT6OArwQx-E5rYC9kYzu_UpshMvySCXoqy6NoKg&s=10",
       "brand": "SAPHIRUS",
-      "stock": 5,
+      "stock": 1,
       "catalogName": "LIMON",
       "bulto": 12,
       "descuentoBulto": 3
@@ -83,7 +83,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-uva-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 10,
+      "stock": 6,
       "catalogName": "UVA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -98,7 +98,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-bubblegum-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 5,
+      "stock": 1,
       "catalogName": "BUBBLEGUM",
       "bulto": 12,
       "descuentoBulto": 3
@@ -127,7 +127,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-flores-blancas-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 19,
+      "stock": 15,
       "catalogName": "FLORES BLANCAS",
       "bulto": 12,
       "descuentoBulto": 3
@@ -156,7 +156,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-cony-fi-feed.jpg.webp",
       "brand": "SAPHIRUS",
-      "stock": 22,
+      "stock": 18,
       "catalogName": "CONY",
       "bulto": 12,
       "descuentoBulto": 3
@@ -171,7 +171,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-lavanda.jpg",
       "brand": "SAPHIRUS",
-      "stock": 10,
+      "stock": 6,
       "catalogName": "LAVANDA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -286,7 +286,7 @@
       "subcat": "",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_d7a8031854c745d7847c29088c3732e3_638826653288907942_0_m.webp",
       "brand": "SAPHIRUS",
-      "stock": 4,
+      "stock": 0,
       "catalogName": "LOLA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -330,7 +330,7 @@
       "subcat": "",
       "img": "https://acdn-us.mitiendanube.com/stores/004/350/781/products/image_1024-cc2d999ba8cfa84cb817308105849049-1024-1024.webp",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 5,
       "catalogName": "HAWAI",
       "bulto": 12,
       "descuentoBulto": 3
@@ -373,7 +373,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWj3eJuOHk7LLlDTAQFHTrZMdddoTMI0vOr8Sx-y-smg&s=10",
       "brand": "SAPHIRUS",
-      "stock": 7,
+      "stock": 3,
       "catalogName": "DANIEL",
       "bulto": 12,
       "descuentoBulto": 3
@@ -402,7 +402,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-linah-fi-feed-1.jpg.webp",
       "brand": "SAPHIRUS",
-      "stock": 12,
+      "stock": 8,
       "catalogName": "LINAH",
       "bulto": 12,
       "descuentoBulto": 3
@@ -417,7 +417,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-bebe.jpg",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 7,
       "catalogName": "BEBE",
       "bulto": 12,
       "descuentoBulto": 3
@@ -544,7 +544,7 @@
       "subcat": "",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_4375b38852d346ecb20c3f23ee63ab20_637986911351028992_0_m.png",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 9,
       "catalogName": "GREEN",
       "bulto": 12,
       "descuentoBulto": 3
@@ -631,7 +631,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQePaWVqpswVktTK0DCIJXTFF6eXFTBMkGfzL7KXsMlMg&s=10",
       "brand": "SAPHIRUS",
-      "stock": 8,
+      "stock": 4,
       "catalogName": "BLOSSOM ROUGE",
       "bulto": 12,
       "descuentoBulto": 3
@@ -661,7 +661,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQElZObgg9JthG0cognX1pKcBsCUZkDZaXxzpIZNMQ2KQ&s=10",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 5,
       "catalogName": "ATLANTIS",
       "bulto": 12,
       "descuentoBulto": 3
@@ -676,7 +676,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS82qT9W5pRqgbro7y4Fooejr2P3arweBQPIOPxA-Haqw&s=10",
       "brand": "SAPHIRUS",
-      "stock": 8,
+      "stock": 4,
       "catalogName": "CELEBRITY SHOES",
       "bulto": 12,
       "descuentoBulto": 3
@@ -719,7 +719,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-man-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 7,
       "catalogName": "MAN",
       "bulto": 12,
       "descuentoBulto": 3
@@ -748,7 +748,7 @@
       "subcat": "",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_7814ab9f976940baa4e9698a32ec6a62_638826662742984017_0_m.webp",
       "brand": "SAPHIRUS",
-      "stock": 5,
+      "stock": 1,
       "catalogName": "MERY",
       "bulto": 12,
       "descuentoBulto": 3
@@ -919,7 +919,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-oriente-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 5,
       "catalogName": "ORIENTE",
       "bulto": 12,
       "descuentoBulto": 3
@@ -934,7 +934,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-marino-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 5,
       "catalogName": "MARINO",
       "bulto": 12,
       "descuentoBulto": 3
@@ -963,7 +963,7 @@
       "subcat": "",
       "img": "https://aromatessen-saphirus.com.ar/wp-content/uploads/2023/11/textil-saphirus-lucy-fi-feed.jpg",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 5,
       "catalogName": "LUCY",
       "bulto": 12,
       "descuentoBulto": 3
@@ -1461,7 +1461,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Nag-Champa-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
-      "stock": 21,
+      "stock": 18,
       "catalogName": "NAG CHAMPA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -1491,7 +1491,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Patchouli-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
-      "stock": 22,
+      "stock": 19,
       "catalogName": "PATCHOULI",
       "bulto": 12,
       "descuentoBulto": 3
@@ -1521,7 +1521,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Sandalo-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
-      "stock": 21,
+      "stock": 18,
       "catalogName": "SANDALWOOD",
       "bulto": 12,
       "descuentoBulto": 3
@@ -1558,14 +1558,15 @@
     {
       "ean": "7798184683531",
       "name": "VRINDAVAN FLOWER",
+      "desc": "",
       "price": 1600,
       "tab": "saphirus",
       "cat": "SAHUMERIO MUSALA",
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/2026_01_02-Sahumerios-Masala-Vrindavan-Flower-Saphirus-fb.webp",
       "brand": "SAPHIRUS",
+      "stock": 21,
       "catalogName": "VRINDAVAN FLOWER",
-      "stock": 24,
       "bulto": 12,
       "descuentoBulto": 3
     },
@@ -1910,7 +1911,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-bubblegum.jpg",
       "brand": "SAPHIRUS",
-      "stock": 6,
+      "stock": 3,
       "catalogName": "BUBBLEGUM",
       "bulto": 12,
       "descuentoBulto": 3
@@ -2024,7 +2025,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-marino.jpg",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 8,
       "catalogName": "MARINO",
       "bulto": 12,
       "descuentoBulto": 3
@@ -2166,7 +2167,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-rocio.jpg",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 8,
       "catalogName": "ROCIO",
       "bulto": 12,
       "descuentoBulto": 3
@@ -2238,7 +2239,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-difusores-naranja-pimienta.jpg",
       "brand": "SAPHIRUS",
-      "stock": 11,
+      "stock": 8,
       "catalogName": "NARANJA PIMIENTA",
       "bulto": 12,
       "descuentoBulto": 3
@@ -2492,7 +2493,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ5aFmEgXiCyKOmrVOiTftkJHEI5OyptR5eVJABlqlQA&s=10",
       "brand": "SAPHIRUS",
-      "stock": 12,
+      "stock": 9,
       "catalogName": "FRUTOS PATAGONICOS",
       "bulto": 12,
       "descuentoBulto": 3
@@ -3589,7 +3590,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/06/saphirus-aerosoles-limon.jpg",
       "brand": "SAPHIRUS",
-      "stock": 7,
+      "stock": 4,
       "catalogName": "LIMÓN",
       "bulto": 12,
       "descuentoBulto": 3
@@ -15116,7 +15117,7 @@
       "subcat": "",
       "img": "",
       "brand": "SAPHIRUS",
-      "stock": 9,
+      "stock": 5,
       "bulto": 12
     },
     {
@@ -15155,7 +15156,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2Wv4XcBjQzS2QQkmDznXf3dg6nHpsqmDAdLD9U5gTw&s=10",
       "brand": "SAPHIRUS",
-      "stock": 6,
+      "stock": 2,
       "bulto": 12
     },
     {
