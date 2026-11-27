@@ -84,7 +84,7 @@
     "headerBg": "#7f7f7f",
     "subHeaderBg": "#b7b7b7",
     "headerText": "#111111",
-    "showMeta": false,
+    "showMeta": true,
     "showClientAddr": false,
     "showUnitPrice": true,
     "showEan": false,
