@@ -301,7 +301,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2022/04/saphirus-textil-rocio.jpg",
       "brand": "SAPHIRUS",
-      "stock": 4,
+      "stock": 3,
       "catalogName": "ROCIO",
       "bulto": 12,
       "descuentoBulto": 3
@@ -544,7 +544,7 @@
       "subcat": "",
       "img": "https://cdn.batitienda.com/baticloud/images/product_picture_4375b38852d346ecb20c3f23ee63ab20_637986911351028992_0_m.png",
       "brand": "SAPHIRUS",
-      "stock": 5,
+      "stock": 1,
       "catalogName": "GREEN",
       "bulto": 12,
       "descuentoBulto": 3
@@ -559,7 +559,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRdcRnsTyrS4nPhgqmTaEnNxEptKHjxzLKMCCvr9T06Q&s=10",
       "brand": "SAPHIRUS",
-      "stock": 3,
+      "stock": 0,
       "catalogName": "BAMBOO",
       "bulto": 12,
       "descuentoBulto": 3
@@ -661,7 +661,7 @@
       "subcat": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQElZObgg9JthG0cognX1pKcBsCUZkDZaXxzpIZNMQ2KQ&s=10",
       "brand": "SAPHIRUS",
-      "stock": 5,
+      "stock": 3,
       "catalogName": "ATLANTIS",
       "bulto": 12,
       "descuentoBulto": 3
@@ -1287,7 +1287,7 @@
       "subcat": "",
       "img": "https://saphirus.com.ar/wp-content/uploads/2025/02/20250220-textil-breeze-sf-saphirus.jpg",
       "brand": "SAPHIRUS",
-      "stock": 7,
+      "stock": 0,
       "catalogName": "BREEZE",
       "bulto": 12,
       "descuentoBulto": 3
