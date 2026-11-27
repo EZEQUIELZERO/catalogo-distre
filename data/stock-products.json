@@ -24,6 +24,7 @@
       "subcat": "",
       "img": "https://mclimp.com.ar/wp-content/uploads/2026/02/20250804-textil-pistacho-caramel-sf-saphirus.jpg",
       "brand": "SAPHIRUS",
+      "enabled": false,
       "stock": 4,
       "catalogName": "PISTACHO",
       "bulto": 12,
