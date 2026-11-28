@@ -3112,6 +3112,28 @@ function getDisplayName(p){
   if(!p) return '';
   return (p.catalogName && String(p.catalogName).trim()) ? String(p.catalogName).trim() : (p.name || '');
 }
+function getSystemDescription(ean, fallback = ''){
+  const cleanEan = String(ean || '').trim();
+  const fb = String(fallback || '').trim();
+  const stockBase = cleanEan ? findBaseProduct(cleanEan, 'stock') : null;
+  const compBase = cleanEan ? findBaseProduct(cleanEan, 'completo') : null;
+  const norm = s => String(s || '').trim().toLowerCase();
+  const isShort = (p, candidate) => {
+    const c = norm(candidate);
+    if(!c || !p) return false;
+    const cn = norm(p.catalogName);
+    return !!(cn && c === cn);
+  };
+  const stockName = stockBase && stockBase.name ? String(stockBase.name).trim() : '';
+  const compName = compBase && compBase.name ? String(compBase.name).trim() : '';
+  const stockIsFull = !!(stockName && !isShort(stockBase, stockName) && !isShort(compBase, stockName));
+  const compIsFull = !!(compName && !isShort(compBase, compName));
+  if(stockIsFull) return stockName;
+  if(compIsFull) return compName;
+  if(stockName) return stockName;
+  if(compName) return compName;
+  return fb || cleanEan;
+}
 function matchesProductQuery(p, q){
   if(!q) return true;
   const needle = String(q).toLowerCase();
@@ -3853,19 +3875,20 @@ function openModal(ean){
   currentModalEan = ean;
   const hasPrice = p.price !== null && p.price !== undefined;
   const displayName = getDisplayName(p);
+  const sysDesc = getSystemDescription(p.ean, p.name);
   const fullNameEl = document.getElementById('modalFullName');
-  const showFullSub = !!(p.catalogName && String(p.catalogName).trim() && String(p.catalogName).trim() !== p.name);
+  const showFullSub = !!(displayName && sysDesc && displayName !== sysDesc);
   const hasBulto = typeof p.bulto === 'number' && Number.isFinite(p.bulto) && p.bulto >= 1;
   const bulto = hasBulto ? Math.round(p.bulto) : 0;
   const hasDesc = hasBulto && typeof p.descuentoBulto === 'number' && Number.isFinite(p.descuentoBulto) && p.descuentoBulto > 0;
   const descPct = hasDesc ? Math.min(100, Math.max(0, p.descuentoBulto)) : 0;
 
   modalImg.src = p.img;
-  modalImg.alt = p.name;
+  modalImg.alt = sysDesc;
   modalImg.onerror = () => onImgError(modalImg);
   modalName.textContent = displayName;
   if(fullNameEl){
-    fullNameEl.textContent = showFullSub ? p.name : '';
+    fullNameEl.textContent = showFullSub ? sysDesc : '';
     fullNameEl.style.display = showFullSub ? '' : 'none';
   }
   modalDesc.textContent = p.desc || '';
@@ -3899,7 +3922,7 @@ function openModal(ean){
   modalBrand.textContent = p.brand;
   modalCat.textContent = p.subcat ? p.cat + ' · ' + p.subcat : p.cat;
 
-  const msg = encodeURIComponent(`Hola, quiero consultar por: ${p.name} (EAN ${p.ean})${hasPrice ? ' - ' + formatPrice(p.price) : ''}`);
+  const msg = encodeURIComponent(`Hola, quiero consultar por: ${sysDesc} (EAN ${p.ean})${hasPrice ? ' - ' + formatPrice(p.price) : ''}`);
   modalWhatsapp.href = `https://wa.me/${whatsappNumber}?text=${msg}`;
 
   document.getElementById('modalCartControls').style.display = hasPrice ? '' : 'none';
@@ -5402,7 +5425,7 @@ function computeStockDeductionsForEntries(entries){
     const stockBase = findBaseProduct(ean, 'stock');
     if(!stockBase){
       const curBase = findBaseProduct(ean);
-      unmatched.push({ ean, name: (curBase && curBase.name) || ean, qty });
+      unmatched.push({ ean, name: getSystemDescription(ean, (curBase && curBase.name) || ean), qty });
       return;
     }
     const eff = getEffective(stockBase, 'stock');
@@ -5413,7 +5436,7 @@ function computeStockDeductionsForEntries(entries){
       codigoInterno: eff.codigoInterno || '',
       brand: eff.brand || '',
       cat: eff.cat || '',
-      name: eff.name || '',
+      name: getSystemDescription(ean, eff.name || ''),
       price: eff.price,
       qty,
       prevStock,
@@ -5718,7 +5741,7 @@ function computePackingStockDeltas(items){
   (items || []).forEach(it => {
     const ean = String(it.ean || '').trim();
     if(!ean) return;
-    if(!grouped[ean]) grouped[ean] = { ean, finalQty: 0, alreadyDeducted: 0, descripcion: it.descripcion || ean };
+    if(!grouped[ean]) grouped[ean] = { ean, finalQty: 0, alreadyDeducted: 0, descripcion: getSystemDescription(ean, it.descripcion || ean) };
     grouped[ean].finalQty += Math.max(0, Math.round(Number(it.cantArmada) || 0));
     grouped[ean].alreadyDeducted += Math.max(0, Math.round(Number(it.cantDescontada) || 0));
   });
@@ -5740,7 +5763,7 @@ function computePackingStockDeltas(items){
       codigoInterno: eff.codigoInterno || '',
       brand: eff.brand || '',
       cat: eff.cat || '',
-      name: eff.name || g.descripcion,
+      name: getSystemDescription(g.ean, eff.name || g.descripcion),
       price: eff.price,
       delta,
       prevStock,
@@ -5986,6 +6009,7 @@ function buildDraftOrderClone(order){
     const hasCustomPrice = (typeof it.precioUnitario === 'number' && it.precioUnitario > 0);
     return {
       ...it,
+      descripcion: getSystemDescription(it.ean, it.descripcion || (base && base.name) || ''),
       cantPedida: Math.max(0, Math.round(Number(it.cantPedida ?? it.cantidad) || 0)),
       cantArmada: Math.max(0, Math.round(Number(it.cantArmada) || 0)),
       cantDescontada: Math.max(0, Math.round(Number(it.cantDescontada ?? it.cantidad) || 0)),
@@ -6170,7 +6194,8 @@ function populateDepCatalogDropdown(){
         const eff = getEffective(p, cid);
         if(eff.deleted || !eff.enabled || seen.has(eff.ean)) return;
         seen.add(eff.ean);
-        all.push({ ...eff, _catOrigin: cid === 'stock' ? 'EN STOCK' : 'COMPLETO', _tabName: t.name });
+        const sysName = getSystemDescription(eff.ean, eff.name);
+        all.push({ ...eff, name: sysName, _catOrigin: cid === 'stock' ? 'EN STOCK' : 'COMPLETO', _tabName: t.name });
       });
     });
   });
@@ -6196,7 +6221,7 @@ function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
     const base = getCatalogLookupInfo(ean) || productObj;
     item = {
       ean,
-      descripcion: productObj.name || productObj.descripcion || ean,
+      descripcion: getSystemDescription(ean, productObj.name || productObj.descripcion || ean),
       catalogo: activeDepOrder.catalogo || 'EN STOCK',
       cantidad: q,
       cantPedida: isNewDraft ? q : 0,
@@ -6210,6 +6235,7 @@ function addOrUpdateOrderItem(productObj, qtyVal, mode = 'add'){
     };
     activeDepOrder.items.push(item);
   } else {
+    item.descripcion = getSystemDescription(ean, item.descripcion || productObj.name || productObj.descripcion || ean);
     item.cantArmada = mode === 'set' ? q : Math.max(0, (Number(item.cantArmada) || 0) + q);
     if(isNewDraft) item.cantPedida = item.cantArmada;
   }
@@ -6290,7 +6316,7 @@ function renderDepWorkspace(){
       return `
       <tr class="${rowCls}">
         <td>
-          <div style="font-weight:700;line-height:1.25;">${escapeHtml(it.descripcion)}</div>
+          <div style="font-weight:700;line-height:1.25;">${escapeHtml(getSystemDescription(it.ean, it.descripcion))}</div>
           <div style="font-size:.7rem;color:var(--text-dim);">EAN ${escapeHtml(it.ean)}${curStockTag}</div>
         </td>
         <td style="text-align:center;font-weight:700;">${ped}</td>
@@ -6548,12 +6574,14 @@ function handleDepScanSubmit(){
   if(orderIdx >= 0){
     const it = activeDepOrder.items[orderIdx];
     const catProd = getCatalogLookupInfo(it.ean) || {};
-    resolved = { source: 'order', ean: it.ean, name: it.descripcion, product: { ...catProd, ean: it.ean, name: it.descripcion } };
+    const sysName = getSystemDescription(it.ean, it.descripcion);
+    resolved = { source: 'order', ean: it.ean, name: sysName, product: { ...catProd, ean: it.ean, name: sysName } };
   } else {
     const inStock = findProductByCode(code, 'stock');
     const inComp = inStock || findProductByCode(code, 'completo');
     if(inComp){
-      resolved = { source: inStock ? 'stock' : 'completo', ean: inComp.product.ean, name: inComp.product.name, product: inComp.product };
+      const sysName = getSystemDescription(inComp.product.ean, inComp.product.name);
+      resolved = { source: inStock ? 'stock' : 'completo', ean: inComp.product.ean, name: sysName, product: { ...inComp.product, name: sysName } };
     }
   }
   if(!resolved){
@@ -6694,7 +6722,7 @@ async function saveNewDepOrder(nextStatus){
       const cantDesc = (deductChecked && stockApplied && inEnStock) ? (it.cantArmada || 0) : 0;
       return {
         ean: it.ean,
-        descripcion: it.descripcion,
+        descripcion: getSystemDescription(it.ean, it.descripcion),
         catalogo: 'EN STOCK',
         cantidad: it.cantArmada || 0,
         cantPedida: it.cantArmada || 0,
@@ -6821,7 +6849,7 @@ async function saveActiveDepOrder(nextStatus){
         : (stockApplied ? (it.cantArmada || 0) : (it.cantDescontada || 0));
       return {
         ean: it.ean,
-        descripcion: it.descripcion,
+        descripcion: getSystemDescription(it.ean, it.descripcion),
         catalogo: it.catalogo || o.catalogo || 'EN STOCK',
         cantPedida: it.cantPedida || 0,
         cantArmada: it.cantArmada || 0,
@@ -6950,7 +6978,7 @@ function buildRemitoSingleCardHtml(order, cfg, copyLabel = '', isHalfBox = false
 
   const rowsHtml = activeItems.map(it => `
     <tr style="height:${rowH};">
-      <td style="padding:${cellPad};border:1px solid #444;font-weight:600;line-height:1.15;">${escapeHtml(it.descripcion)}${cfg.showEan && it.ean ? ` <span style="color:#555;font-weight:400;font-size:.85em;">(${escapeHtml(it.ean)})</span>` : ''}</td>
+      <td style="padding:${cellPad};border:1px solid #444;font-weight:600;line-height:1.15;">${escapeHtml(getSystemDescription(it.ean, it.descripcion))}${cfg.showEan && it.ean ? ` <span style="color:#555;font-weight:400;font-size:.85em;">(${escapeHtml(it.ean)})</span>` : ''}</td>
       <td style="padding:${cellPad};border:1px solid #444;text-align:center;font-weight:600;width:42px;line-height:1.15;">${Number(it.cantArmada) || 0}</td>
       ${cfg.showUnitPrice ? `<td style="padding:${cellPad};border:1px solid #444;text-align:right;white-space:nowrap;width:76px;line-height:1.15;">${formatPrice(it.precioUnitario || 0)}</td>` : ''}
       <td style="padding:${cellPad};border:1px solid #444;text-align:right;font-weight:700;white-space:nowrap;width:88px;line-height:1.15;">${formatPrice(it.total || 0)}</td>
@@ -8059,7 +8087,7 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
       const cat = col(colMap.cat) || defaultCat;
       const subcat = col(colMap.subcat) || '';
 
-      const entry = { ean, name, price, tab: rowTab, cat, subcat, img, brand: rowBrand };
+      const entry = { ean, name, price, tab: rowTab, cat, subcat, img, brand: rowBrand, _rawName: rawName };
       if(catalogName) entry.catalogName = catalogName;
       if(internalRaw) entry.codigoInterno = internalRaw;
       if(stock !== null) entry.stock = stock;
@@ -8091,12 +8119,24 @@ document.getElementById('importCsvBtn').addEventListener('click', async () => {
     }
 
     await updateCustomProducts((data) => {
+      const isShortName = (s, cn) => !!(s && cn && String(s).trim().toLowerCase() === String(cn).trim().toLowerCase());
       newEntries.forEach(entry => {
         let idx = data.products.findIndex(p => p.ean === entry.ean);
         if(idx < 0 && entry.codigoInterno){
           idx = data.products.findIndex(p => p.codigoInterno === entry.codigoInterno || p.ean === entry.codigoInterno);
         }
         const previo = idx >= 0 ? data.products[idx] : null;
+        const rawImportedName = String(entry._rawName || '').trim();
+        delete entry._rawName;
+        const catRef = entry.catalogName || (previo && previo.catalogName) || '';
+        if(!rawImportedName || isShortName(rawImportedName, catRef)){
+          const compMatch = findBaseProduct(entry.ean, 'completo');
+          if(previo && previo.name && !isShortName(previo.name, catRef)){
+            entry.name = previo.name;
+          } else if(compMatch && compMatch.name && !isShortName(compMatch.name, catRef || compMatch.catalogName)){
+            entry.name = compMatch.name;
+          }
+        }
         if(previo && previo.desc && !entry.desc) entry.desc = previo.desc;
         const extra = (previo && Array.isArray(previo.lists)) ? previo.lists : [];
         const todas = Array.from(new Set(extra.filter(id => id !== entry.tab && getTabById(id))));
@@ -8306,7 +8346,7 @@ function buildOrderData(entries = getCartEntries()){
     if(!base) return;
     const eff = getEffective(base);
     const line = calcCartLine(eff, qty);
-    const descripcion = String(eff.name || '').trim();
+    const descripcion = getSystemDescription(ean, eff.name || '');
     const precioUnitario = (line.savings > 0 && qty > 0)
       ? (line.looseUnits === 0
           ? Math.round(line.unitPrice * (1 - line.descPct / 100) * 100) / 100
@@ -8791,7 +8831,7 @@ function collectDepOrderExportRows(order){
   if(!order || !Array.isArray(order.items)) return { rows: [], usedOrderedFallback: false };
   const mapItem = (it, qty) => ({
     ean: String(it.ean || '').trim(),
-    descripcion: String(it.descripcion || it.name || '').trim(),
+    descripcion: getSystemDescription(it.ean, it.descripcion || it.name || ''),
     cantidad: qty,
     precio: (typeof it.precioUnitario === 'number' && Number.isFinite(it.precioUnitario)) ? it.precioUnitario : 0
   });
@@ -9199,7 +9239,7 @@ function renderCartModal(){
     <div class="cart-item" data-ean="${eanSafe}">
       <img src="${escapeHtml(eff.img)}" alt="" onerror="onImgError(this)">
       <div class="cart-item-info">
-        <div class="cart-item-name">${escapeHtml(eff.name)}</div>
+        <div class="cart-item-name">${escapeHtml(getSystemDescription(ean, eff.name))}</div>
         <div class="cart-item-price">${formatPrice(eff.price)} c/u</div>
         ${bultoTagHtml}
         <div class="qty-control">

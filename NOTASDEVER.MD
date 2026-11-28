@@ -617,3 +617,14 @@ Fecha: 2026-11-26
   - Incorporado buscador/selector `#dqImportSearch`, `#dqImportSelect` y botón **📋 Importar de COMPLETO** (`#dqImportBtn`) para traer nombre, precios, bulto, categoría, subcategoría, nota e imagen desde `COMPLETO`.
   - Sumados los campos completos de carga (`#dqCatalog` destino `EN STOCK` / `COMPLETO`, `#dqDesc` nota en tarjeta, `#dqImgUrl` URL de imagen y `#dqImgFile` subida de imagen).
 Archivos: apps-script/Code.gs, index.html, NOTASDEVER.MD
+
+### #048 - Descripción del sistema en Depósito, Remitos, WhatsApp y exports (y reparación de `stock-products.json`)
+Fecha: 2026-11-28
+- **Reparación de `data/stock-products.json`**:
+  - Restaurada la `Descripción` del sistema (`name`) desde `data/custom-products.json` para 248 productos de `EN STOCK` cuyo campo `name` había sido pisado por el nombre corto de catálogo (`catalogName`) en una importación CSV previa, manteniendo intactos `catalogName`, `stock`, `price` y demás campos.
+- **Helper central `getSystemDescription(ean, fallback)` (`index.html`)**:
+  - Resuelve siempre la descripción completa del sistema (prefiriendo la descripción completa de `EN STOCK` o `COMPLETO` incluso para pedidos ya registrados en Google Sheets que guardaron el nombre corto), dejando `getDisplayName(p)` (`catalogName`) exclusivamente para las tarjetas y título del modal del catálogo de venta.
+  - Cableado en Depósito (`buildDraftOrderClone`, `populateDepCatalogDropdown`, `addOrUpdateOrderItem`, `renderDepWorkspace`, `handleDepScanSubmit`, `saveNewDepOrder`, `saveActiveDepOrder`), Remitos (`buildRemitoSingleCardHtml`), WhatsApp (carrito `buildOrderData` / `buildOrderMessage` y consulta de producto `openModal`), Carrito (`renderCartModal`), previsualizaciones de stock y exportaciones (`buildOrderTsv`, `buildOrderXlsxBytes`, `buildOrderPdfBytes`, `collectDepOrderExportRows`).
+- **Protección al importar CSV (`importCsvBtn`)**:
+  - Evita que futuras importaciones CSV sin descripción completa o con nombre igual al `catalogName` pisen la descripción completa existente del producto o de `COMPLETO`.
+Archivos: data/stock-products.json, index.html, NOTASDEVER.MD
